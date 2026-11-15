@@ -1,0 +1,112 @@
+{
+ "path": "accounts/a6.md",
+ "title": "Вкусный выезд",
+ "title_en": "Sourwood Catering Co.",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/a6.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Account A6 as it stood eight months ago: names a fleet contact and an advisor who have both gone.",
+ "serves": [
+  "S1",
+  "operate:contradiction",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 155,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S1: fleet contact and advisor both gone",
+ "differs_from_en": [
+  "STALE ON PURPOSE, as in English: names the old contact (in the role until five months before T) and slot F3 (resigned seven months before T) as the advisor who looks after the account. It contradicts the terms page, which names the new contact.",
+  "Fleet from accounts.json ru: three insulated ГАЗель vans (numbers 1 to 3), Largus vans, a Transit, a Jumper, a Solaris and the director's Vesta (number 10).",
+  "The old contact wrote to the shared number in Telegram."
+ ],
+ "new_facts": [
+  "Slot F3 was A6's named advisor (as in English). Friday-noon deadline; the insulated bodies are not serviced."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Вкусный выезд",
+   "item": "Контакт: Геннадий Павлович, завхоз, транспорт на нём: +7 907 429-58-87. Пишет в Telegram на общий номер, когда машине пора к нам, и на смету отвечает в течение часа."
+  },
+  {
+   "section": "Вкусный выезд",
+   "item": "С нашей стороны «Вкусный выезд» ведёт Вадим. Геннадий Павлович спрашивает именно его. Если Вадима нет — Дмитрий Григорьев."
+  },
+  {
+   "section": "Вкусный выезд",
+   "item": "Марина Александровна — директор и шеф-повар, оплату согласует сама. Счета — ей, а не на кухню."
+  },
+  {
+   "section": "Вкусный выезд",
+   "item": "Всё должно быть готово до полудня пятницы. Их работа — банкеты по выходным. Фургон на подъёмнике в пятницу после обеда — это сорванная свадьба."
+  },
+  {
+   "section": "Вкусный выезд",
+   "item": "Изотермические будки на первых трёх «Газелях» и всё, что в них стоит, — не наше. Мы обслуживаем машину, а не будку."
+  },
+  {
+   "section": "Вкусный выезд",
+   "item": "Водитель согласует до 8 000 ₽ за заезд."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "F3",
+   "written_as": "Вадим",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "F3",
+   "written_as": "Вадима",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A6",
+   "contact": "Геннадий Павлович Лукьянов",
+   "role": "заведующий хозяйством, отвечал за транспорт (прежний контакт)",
+   "written_as": "Геннадий Павлович"
+  },
+  {
+   "account": "A6",
+   "contact": "Марина Александровна Белоусова",
+   "role": "директор, шеф-повар; согласует оплату",
+   "written_as": "Марина Александровна"
+  }
+ ],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "amounts": [
+  8000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

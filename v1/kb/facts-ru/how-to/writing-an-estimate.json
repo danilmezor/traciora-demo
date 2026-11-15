@@ -1,0 +1,130 @@
+{
+ "path": "how-to/writing-an-estimate.md",
+ "title": "Как составить смету",
+ "title_en": "Writing an estimate",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/writing-an-estimate.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Step two of the inspection-to-approval procedure: turning inspection findings into an estimate.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S8",
+  "S12",
+  "S7"
+ ],
+ "length_class": "medium",
+ "words_ru": 270,
+ "links_to": [
+  "shop-floor/courtesy-inspection.md",
+  "prices/price-list.md",
+  "prices/labour-rates-and-fees.md",
+  "how-to/getting-approval.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The inspection states are «в норме», «наблюдать», «менять»; the estimate is «смета».",
+  "The program adds shop supplies; VAT is inside the prices and nothing is added for it; the advisor says the total.",
+  "The second-look threshold is 30 000 RUB."
+ ],
+ "new_facts": [
+  "Second look by the lead above 30 000 RUB (habit, no data footprint)."
+ ],
+ "new_amounts": [
+  {
+   "value": 30000,
+   "why": "порог второго взгляда на смету"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Как составить смету",
+   "item": "Начните с того, зачем клиент приехал. Эта работа — первой строкой, даже если осмотр нашёл что-то серьёзнее."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Каждая строка «Менять» становится работой в смете. Выберите её из справочника. Механик набрал руками работу, которая в справочнике есть, — замените на справочную."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Строки «Наблюдать» работами в смету не идут. Они идут в примечание, с замером: клиент их видит, а мы находим в следующий раз. Исключение — то, что снимается заодно со строкой «Менять». Так и говорим: «раз уж разбираем»."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Цена — из прайс-листа. Больше ниоткуда. Не по памяти, не из прошлого наряда и не со страницы услуги: страницы объясняют работу, и цифра на них может быть старой. Справочную работу программа расценит сама; если сумма выглядит странно, сверьте с прайсом."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Запчасти — стандарт, если клиент не просил иначе. Эконом и премиум держите наготове, но с них не начинайте."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Класс автомобиля. Кроссовер, «Патриот» или «Газель» — не легковая: коэффициенты."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Расставьте работы по важности: безопасность; то, из-за чего машина встанет; то, что подорожает, если тянуть; остальное."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Расходные материалы программа добавит сама; НДС уже в ценах, сверху его не будет. Клиенту называйте итог: платить он будет его."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Запчасти: прежде чем говорить о сроке, узнайте у Паши, на полке они или в рейсе."
+  },
+  {
+   "section": "Как составить смету",
+   "item": "Отправьте смету в тот же рабочий день. Потом — согласование."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паши",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}"
+ ],
+ "amounts": [
+  30000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "step 4 rewritten after the timing-belt complaint (proposed by slot 5, approved by slot 4): \"not from a service page\" added; message: \"Price list only.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Только прайс-лист."
+  }
+ ],
+ "has_history": true
+}

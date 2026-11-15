@@ -1,0 +1,257 @@
+{
+ "path": "services/brakes/pads-and-rotors.md",
+ "title": "Pads and rotors",
+ "first_revision_text": "en/_history/services/brakes/pads-and-rotors.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The main brake job: pads alone or with rotors, the three parts tiers, what to say.",
+ "serves": [
+  "S7",
+  "S6",
+  "S12",
+  "challenge:fact-in-table",
+  "challenge:customer-terms",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "medium",
+ "words_en": 473,
+ "links_to": [
+  "prices/labour-rates-and-fees.md",
+  "parts/brake-pads-we-fit.md",
+  "how-to/a-comeback-at-the-counter.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Four catalogue jobs with hours and the three tier totals (front_pads_rotors, rear_pads_rotors, front_brake_pads, rear_brake_pads), class car.",
+  "Pads alone when rotors measure above minimum thickness and are smooth; otherwise pads and rotors; rotors are not machined.",
+  "Pad lines: Wagner ThermoQuiet (standard), Akebono ProACT (premium), ACDelco Silver (economy).",
+  "Phone rule: a conditional price with the car named, then a time; same-afternoon return from a 7:30 drop when parts are on the shelf.",
+  "Counter rule: photo, price, two times.",
+  "Warranty: work 24/24; pads 12/12 against defects and noise.",
+  "This page is current; services/brakes/brake-questions.md gives the same four jobs at the old labour rate (S12).",
+  "S7: front pads and rotors approved at the standard total; rear shocks declined.",
+  "The competitor figure \"$199\" is a customer's words."
+ ],
+ "tables": [
+  {
+   "section": "What we sell",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Economy / Standard / Premium"
+   ],
+   "rows": [
+    {
+     "On the order": "Replace front brake pads & rotors",
+     "Hours": "1.8",
+     "Economy / Standard / Premium": "$428.00 / $493.00 / $523.76"
+    },
+    {
+     "On the order": "Replace rear brake pads & rotors",
+     "Hours": "1.8",
+     "Economy / Standard / Premium": "$410.50 / $470.27 / $496.84"
+    },
+    {
+     "On the order": "Replace front brake pads, clean & lube hardware",
+     "Hours": "1.1",
+     "Economy / Standard / Premium": "$208.50 / $234.86 / $248.50"
+    },
+    {
+     "On the order": "Replace rear brake pads, clean & lube hardware",
+     "Hours": "1.1",
+     "Economy / Standard / Premium": "$201.00 / $225.77 / $236.96"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "On the phone",
+   "item": "Never a price without the car and without saying \"if\". \"If it needs front pads and rotors, on your Camry that is $493.00. If the rotors measure good, it is $234.86. The inspection tells us which.\""
+  },
+  {
+   "section": "On the phone",
+   "item": "Then a time. Dropped off at 7:30, a brake job is back the same afternoon when the parts are on the shelf, and for the common cars they are."
+  },
+  {
+   "section": "They say",
+   "item": "\"The other shop said $199 for brakes.\" \"Pads only, per axle, with their cheapest pad, and the rotors are extra when they get the wheels off. Ours with the economy pad is $208.50. Do you want me to price it both ways?\""
+  },
+  {
+   "section": "They say",
+   "item": "\"Can you just do the pads?\" \"If the rotors measure good, yes, and I will tell you. If they do not, I would rather you did nothing than waste the pads.\""
+  },
+  {
+   "section": "They say",
+   "item": "\"They are squealing but they were done last year.\" Where? By us: comeback, no charge to look. Elsewhere: inspection."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "hours",
+   "class": "car",
+   "value": 1.8
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 428.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 493.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 523.76
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "hours",
+   "class": "car",
+   "value": 1.8
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 410.5
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 470.27
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 496.84
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "hours",
+   "class": "car",
+   "value": 1.1
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 208.5
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 234.86
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 248.5
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "hours",
+   "class": "car",
+   "value": 1.1
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 201.0
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 225.77
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 236.96
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "The shop does not machine rotors (no catalogue job exists for it)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена передних тормозных дисков и колодок»; проточка дисков is common in Russia: say the shop does not do it or add a catalogue row. Prices in RUB by tier."
+ ]
+}

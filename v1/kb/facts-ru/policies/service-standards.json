@@ -1,0 +1,129 @@
+{
+ "path": "policies/service-standards.md",
+ "title": "Стандарты обслуживания",
+ "title_en": "Service standards",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/service-standards.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "One table of how fast the company promises to answer, call back, estimate and decide; the yardstick for several stories.",
+ "serves": [
+  "S3",
+  "S1",
+  "S6",
+  "S9",
+  "S12",
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 215,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Chat channels: web chat, Telegram, VK, Avito (ledger conv.channels).",
+  "The \"ready\" message goes out no later than 19:00 (closing is 20:00).",
+  "Measured against the stories: flagship call backs median 40 minutes since the fix (met), Kazan 4 h 30 (missed), the second Ulyanovsk shop 45 minutes (met); slot 22 and 23 first chat reply 35 and 40 minutes (missed)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Стандарты обслуживания",
+   "columns": [
+    "Что",
+    "Стандарт"
+   ],
+   "rows": [
+    {
+     "Что": "Звонит телефон",
+     "Стандарт": "Трубку берёт человек до того, как звонок уйдёт на второй стол: за 20 секунд"
+    },
+    {
+     "Что": "Пропущенный звонок",
+     "Стандарт": "Перезваниваем в течение часа; в тот же день — без исключений"
+    },
+    {
+     "Что": "Сообщение, оставленное, когда мы были закрыты",
+     "Стандарт": "Отвечаем в первый час после открытия"
+    },
+    {
+     "Что": "Сообщение в чате на сайте, в Telegram, ВКонтакте или на Авито, в рабочее время",
+     "Стандарт": "Первый ответ за 10 минут"
+    },
+    {
+     "Что": "Смета",
+     "Стандарт": "Уходит клиенту в день дефектовки"
+    },
+    {
+     "Что": "Смета корпоративному клиенту",
+     "Стандарт": "Ответственному по договору — за четыре рабочих часа"
+    },
+    {
+     "Что": "Обещанный звонок",
+     "Стандарт": "В тот день, на который обещан"
+    },
+    {
+     "Что": "«Ваша машина готова»",
+     "Стандарт": "Звонок или сообщение — как только готова, и не позже 19:00"
+    },
+    {
+     "Что": "Жалоба",
+     "Стандарт": "В течение рабочего дня клиент слышит того, кто может решить вопрос"
+    },
+    {
+     "Что": "Возврат",
+     "Стандарт": "Смотрим первым, в день приезда"
+    },
+    {
+     "Что": "График на неделю",
+     "Стандарт": "Опубликован до полудня четверга предыдущей недели"
+    },
+    {
+     "Что": "Предложенная правка базы знаний",
+     "Стандарт": "Решение за пять рабочих дней"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}",
+  "{{@early_desk|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-5mo|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@early_desk|date}}",
+   "what": "missed-call standard tightened from two hours to one when the early desk shift started; message: \"One hour, now that the mornings are covered.\"",
+   "message_ru": "Час, раз утро теперь закрыто двумя."
+  }
+ ],
+ "has_history": true
+}

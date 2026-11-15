@@ -1,0 +1,188 @@
+{
+ "path": "customers/seasonal-tyre-change.md",
+ "title": "Сезонная замена шин и хранение",
+ "title_en": null,
+ "exists_in": "ru only",
+ "english_sheet": null,
+ "first_revision_text": "ru/_history/customers/seasonal-tyre-change.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "15",
+ "purpose": "Public page for the two tyre seasons: when, what it costs by vehicle class, storage, how to book. Exists only in Russian.",
+ "serves": [
+  "S11",
+  "challenge:customer-terms",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 281,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Only in Russian. The English base has no tyre season (0.2 % of orders); in Russia seasonal tyre jobs lead 10.2 % of a year's orders and fill two four-week windows (ledger season.tyre.*)."
+ ],
+ "new_facts": [
+  "Windows are written as the ledger's month-days (13 April to 10 May, 13 October to 9 November): recurring calendar dates, not story dates, so they are not placeholders.",
+  "Storage: tyres are washed, labelled and a receipt with the place number is given; stored sets are brought to the bay on the booking day.",
+  "Duration: about an hour for a changeover, half an hour for wheels (catalogue hours 1.2 and 0.5).",
+  "In season: by booking; a walk-in only if the schedule has a gap.",
+  "Temperature rule of thumb +5…+7 °C (research ru-shop.md, second pass, gap 5)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Сколько стоит",
+   "columns": [
+    "Что делаем",
+    "Легковой",
+    "Кроссовер",
+    "Рамный внедорожник",
+    "«Газель», фургон"
+   ],
+   "rows": [
+    {
+     "Что делаем": "Шиномонтаж четырёх колёс с балансировкой: снять, разбортовать, поставить другую резину, отбалансировать",
+     "Легковой": "3 000 ₽",
+     "Кроссовер": "3 750 ₽",
+     "Рамный внедорожник": "4 350 ₽",
+     "«Газель», фургон": "3 900 ₽"
+    },
+    {
+     "Что делаем": "Замена колёс в сборе, если у вас второй комплект на дисках",
+     "Легковой": "1 200 ₽",
+     "Кроссовер": "1 380 ₽",
+     "Рамный внедорожник": "1 560 ₽",
+     "«Газель», фургон": "1 560 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Когда",
+   "item": "Весной: с середины апреля до майских праздников, с 13 апреля по 10 мая."
+  },
+  {
+   "section": "Когда",
+   "item": "Осенью: с середины октября до начала ноября, с 13 октября по 9 ноября."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "suv",
+   "when": "after_rise",
+   "value": 3750.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 4350.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 3900.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "suv",
+   "when": "after_rise",
+   "value": 1380.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 1560.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 1560.0
+  },
+  {
+   "catalogue_key": "tyre_storage",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "15",
+   "written_as": "Евгений",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "amounts": [
+  1200.0,
+  1380.0,
+  1560.0,
+  3000.0,
+  3750.0,
+  3900.0,
+  4350.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "prices replaced after the rise of the fixed tyre prices; message below",
+   "message_ru": "Цены на шиномонтаж после повышения."
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,92 @@
+{
+ "path": "office/payroll-hours.md",
+ "title": "Payroll hours",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "How attendance becomes payroll hours.",
+ "serves": [
+  "S14",
+  "visibility:middle",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_en": 179,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Two-week pay periods, Sunday to Saturday; pay day the following Friday.",
+  "Hours from Traciora punches, taken the Monday after; corrections must be approved by the planner (slot 4 or 22) before Monday noon.",
+  "Lateness is counted, not docked.",
+  "Flat-rate technicians are paid on sold hours from the shop system (ERP order_labor), not on punches.",
+  "Overtime past 40 hours a week with prior approval.",
+  "Pay rates are stated nowhere (planted gap; staff pay is hidden below senior in the ERP)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Payroll hours",
+   "item": "Hours come from the punches in Traciora. I take them on the Monday after the period ends."
+  },
+  {
+   "section": "Payroll hours",
+   "item": "A punch that is missing or was corrected must be approved by the person who plans that shop's schedule before Monday noon: Greg for East Main and Bonny Oaks, Dale for Charlotte Pike. An unapproved correction is paid as the schedule says and put right the following period."
+  },
+  {
+   "section": "Payroll hours",
+   "item": "Late arrivals do not reduce pay by the minute. They are counted, and the count goes to the planner."
+  },
+  {
+   "section": "Payroll hours",
+   "item": "Flat-rate technicians are paid on the hours sold on their jobs, which I take from the shop system, not from the punches. Their punches are still attendance."
+  },
+  {
+   "section": "Payroll hours",
+   "item": "Hourly staff past 40 hours in a week are paid overtime. Overtime needs the planner's yes beforehand."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "Two-week Sunday-to-Saturday pay period, pay on the following Friday."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian pay twice a month by law (аванс and зарплата); сдельная оплата for mechanics from нормо-часы; табель учёта рабочего времени."
+ ]
+}

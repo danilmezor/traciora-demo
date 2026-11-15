@@ -1,0 +1,166 @@
+{
+ "path": "parts/suppliers.md",
+ "title": "Suppliers",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "Who we buy from, what each delivers, when to order, and the parts manager's own notes on each.",
+ "serves": [
+  "S6",
+  "challenge:fact-in-table",
+  "challenge:kb-does-not-say",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_en": 354,
+ "links_to": [
+  "parts/brake-pads-we-fit.md",
+  "parts/sublet-work.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "V1 Sequoyah Parts Supply: general line; main and east; three runs (order by 8:00, 11:00, 14:00; runs at 8:30, 11:30, 14:30); 30 days; (423) 555-0197.",
+  "V3 Ridge & Valley Import Parts: OE-brand Asian and European; all three shops; order by 10:00 for same-afternoon stocked lines in Chattanooga, else next morning; Nashville next morning; 30 days; (423) 555-0158.",
+  "V4 Hiwassee Battery & Electric: batteries, electrical, A/C; main and east; order by 10:30 for the noon run; 30 days; (423) 555-0165.",
+  "V5 Tellico Tire Distributors: tyres; order by 16:00 the day before; Chattanooga daily, Nashville Tuesday and Friday; 30 days; (423) 555-0177.",
+  "V2 Harpeth Valley Parts Supply: west only; two runs a day; 15 days; (615) 555-0123; unreliable in the parts manager's words (S6: 62 % on the promised day against 93 % for V1; the page gives no percentages).",
+  "Slot 9 does not order for Nashville. The supplier change for west \"is with slot 22\" (S6: the board task three weeks overdue).",
+  "Not stated: who supplies batteries and A/C parts to Charlotte Pike (V4 serves main and east only)."
+ ],
+ "tables": [
+  {
+   "section": "Suppliers",
+   "columns": [
+    "Supplier",
+    "For",
+    "Delivers to",
+    "Order by",
+    "Arrives",
+    "Terms",
+    "Phone"
+   ],
+   "rows": [
+    {
+     "Supplier": "Sequoyah Parts Supply",
+     "For": "General line, domestic and import",
+     "Delivers to": "East Main, Bonny Oaks",
+     "Order by": "8:00 / 11:00 / 2:00",
+     "Arrives": "8:30 / 11:30 / 2:30 run, about 45 minutes",
+     "Terms": "30 days",
+     "Phone": "(423) 555-0197"
+    },
+    {
+     "Supplier": "Ridge & Valley Import Parts",
+     "For": "Original-brand parts, Asian and European",
+     "Delivers to": "All three shops",
+     "Order by": "10:00 for stocked lines",
+     "Arrives": "Same afternoon in Chattanooga if stocked. Otherwise next morning. Nashville always next morning",
+     "Terms": "30 days",
+     "Phone": "(423) 555-0158"
+    },
+    {
+     "Supplier": "Hiwassee Battery & Electric",
+     "For": "Batteries, starters, alternators, A/C parts, refrigerant",
+     "Delivers to": "East Main, Bonny Oaks",
+     "Order by": "10:30",
+     "Arrives": "Noon run",
+     "Terms": "30 days",
+     "Phone": "(423) 555-0165"
+    },
+    {
+     "Supplier": "Tellico Tire Distributors",
+     "For": "Tires, weights, valves",
+     "Delivers to": "All three shops",
+     "Order by": "4:00 the day before",
+     "Arrives": "Chattanooga: every morning. Nashville: Tuesday and Friday only",
+     "Terms": "30 days",
+     "Phone": "(423) 555-0177"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Notes",
+   "item": "Sequoyah Parts Supply: first call for anything. On the truck they said, nine times in ten. When they are out of a part they say so."
+  },
+  {
+   "section": "Notes",
+   "item": "Ridge & Valley Import Parts: dearer. Use for sensors, coils, timing kits, anything where the cheap one comes back. Aisin and Denso come from here."
+  },
+  {
+   "section": "Notes",
+   "item": "Hiwassee Battery & Electric: one run a day. Miss 10:30 and it is tomorrow."
+  },
+  {
+   "section": "Notes",
+   "item": "Tellico Tire Distributors: tires for Nashville come twice a week. Do not tell a Nashville customer \"tomorrow\" on a Wednesday."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V1",
+   "name": "Sequoyah Parts Supply"
+  },
+  {
+   "vendor": "V3",
+   "name": "Ridge & Valley Import Parts"
+  },
+  {
+   "vendor": "V4",
+   "name": "Hiwassee Battery & Electric"
+  },
+  {
+   "vendor": "V5",
+   "name": "Tellico Tire Distributors"
+  },
+  {
+   "vendor": "V2",
+   "name": "Harpeth Valley Parts Supply"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "new_facts": [
+  "Order-by and run times for V1, V3, V4, V5; Nashville tyre days Tuesday and Friday (vendors.json says \"twice a week\"). The ERP purchase orders should show these rhythms."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "Marcus's update: Nashville section rewritten, the sentence about moving Charlotte Pike to Sequoyah added (Marcus is junior rank; published by slot 4); message: \"Marcus's notes on Nashville.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian suppliers from vendors.json ru (eight, same roles); delivery in Russian cities is by the supplier's courier several times a day or pickup from a warehouse; terms in days as in the file. The cheap pad brand is BREMHOF in the catalogue (Ronnex in vendors.json: see the contradiction note)."
+ ]
+}

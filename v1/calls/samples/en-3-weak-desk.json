@@ -1,0 +1,650 @@
+{
+  "format": "seed-call/1",
+  "id": "en-3-weak-desk",
+  "configuration": "en",
+  "title": "The weak desk at the bought shop: a date with nothing behind it, and work he is handed and does not take",
+  "purpose": "Story S6. A customer whose car has waited for a part asks if it is ready. The advisor names a day without having called the supplier, and when the customer asks for more work on the car that is already there, he does not write it up. The second request is what makes the call a new enquiry and gives it a score.",
+  "cast": {
+    "advisor": {
+      "slot": 23,
+      "name": "Chad Binkley",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Curtis Vaughn",
+      "ref": "named_customers.json en.S6_waiting_nine_days",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "west's 4th full open day before T (rule R6; card S06, call 15)",
+    "nominal_offset": "T-4d",
+    "nominal_date": "2026-11-09",
+    "local_start": "15:40",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "302",
+    "ring_s": 21,
+    "caller_phone": "615-555-0115",
+    "repeat_caller": false,
+    "talk_s": 120
+  },
+  "scenario": {
+    "who_calls": "Curtis Vaughn, whose car has stood at the Nashville shop since T-9d waiting for a part.",
+    "vehicle": "2012 Volvo XC60 T6 AWD, BRC-7896",
+    "job": "a remanufactured angle gear (the all-wheel-drive transfer unit), on order from the supplier the shop kept after the purchase; then, asked on the call, rear brake pads",
+    "wants": "to know whether the car is ready; then a price for rear brakes and to have them done while it is there",
+    "what_happens": "Chad says the part comes tomorrow and the car is ready Wednesday, and admits he has not called the supplier today. Asked to add rear pads, he gives a price, says it needs a new estimate and puts it off. The customer drops the brakes and says he will call before he drives over. The car is still there at T.",
+    "facts": {
+      "price_rear_pads_usd": 260.31,
+      "promised_ready": "call+2d",
+      "actually_ready": "not by T",
+      "note": "The wrong promise is the one story S6 names. The price is catalogue.json rear_brake_pads for class suv, standard parts: 260.31; he says 'two-sixty'."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "last Wednesday",
+      "day": "call-5d"
+    },
+    {
+      "word": "Thursday",
+      "day": "call-4d"
+    },
+    {
+      "word": "Friday",
+      "day": "call-3d"
+    },
+    {
+      "word": "Monday",
+      "day": "call"
+    },
+    {
+      "word": "Wednesday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 1.9,
+      "said": "Yeah, this is Curtis Vaughn. Y'all've got my Volvo down there. I'm calling to see if it's ready."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.3,
+      "said": "Volvo... the XC60. Angle gear. Yeah, Mr. Vaughn. No sir, it's not ready. Still waiting on the part."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 19.2,
+      "said": "Still? I dropped that car off last Wednesday."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 23.3,
+      "said": "Yes sir. It's the gear — it's on order."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 27.3,
+      "said": "It was on order Thursday. Fella told me Friday, then he told me Monday. It's Monday."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 34.9,
+      "said": "Yeah. It'll be here tomorrow. You'll have it back Wednesday."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 39.9,
+      "said": "Is that what the parts place told you? Tomorrow?"
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 44.4,
+      "said": "I ain't talked to 'em today. But it's been long enough, it'll be here."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 51.1,
+      "said": "So you don't know. Man, I'm about ready to come get the damn thing and take it somewhere else."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 59.9,
+      "said": "It'll be here tomorrow. Wednesday you're good."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 63.6,
+      "said": "Alright. Well, long as it's sittin' there — I been meanin' to get the back brakes done on it too. What would that run me?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 74.6,
+      "said": "Rear pads? Uh... two-sixty."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 76.9,
+      "said": "Two-sixty. Okay. Can y'all just go ahead and do that while you got it?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 83.6,
+      "said": "I'd have to write up a whole new estimate on it. Let's just get the gear done first, get it out of here."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 94.2,
+      "said": "It's sittin' in your lot, man. It ain't doin' nothing."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 99.2,
+      "said": "Yes sir. We'll see when the part comes in."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 103.7,
+      "said": "...Forget it. I'll think about the brakes."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 107.3,
+      "said": "Alright."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 108.7,
+      "said": "I'm gonna call you Wednesday morning before I drive over there. And it better be done."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 116.3,
+      "said": "Alright."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 117.7,
+      "said": "Alright. Bye."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 119.1,
+      "said": "Bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.69,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the surname differs between the caller's line and the advisor's",
+        "script_turn": 2,
+        "said": "Vaughn",
+        "stored": "Vaughan"
+      },
+      {
+        "rule": "R4",
+        "what": "a trade term replaced by a common word that sounds like it",
+        "script_turn": 3,
+        "said": "Angle gear",
+        "stored": "Angel gear"
+      },
+      {
+        "rule": "R5",
+        "what": "the price as digits",
+        "script_turns": [
+          13,
+          14
+        ]
+      },
+      {
+        "rule": "R11",
+        "what": "the caller's mild profanity is kept as said",
+        "script_turn": 10,
+        "said": "the damn thing",
+        "stored": "the damn thing"
+      },
+      {
+        "rule": "R1",
+        "what": "dropped g's and contractions written out; 'ain't' is kept",
+        "script_turns": [
+          2,
+          9,
+          12,
+          16,
+          20
+        ]
+      }
+    ],
+    "script_words": 242,
+    "stored_words": 246,
+    "strict_word_difference": 0.091
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 269,
+    "duration_s": 120.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, this is Curtis Vaughan. Y'all got my Volvo down there. I'm calling to see if it's ready.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Volvo, the XC60. Angel gear. Yeah, Mr. Vaughn. No, sir, it's not ready. Still waiting on the part.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Still? I dropped that car off last Wednesday.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. It's the gear. It's on order.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It was on order Thursday. Fella told me Friday, then he told me Monday. It's Monday.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. It'll be here tomorrow. You'll have it back Wednesday.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Is that what the parts place told you? Tomorrow?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I ain't talked to them today. But it's been long enough. It'll be here.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So you don't know. Man, I'm about ready to come get the damn thing and take it somewhere else.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It'll be here tomorrow. Wednesday, you're good.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Well, long as it's sitting there, I've been meaning to get the back brakes done on it too. What would that run me?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Rear pads? 260.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "260. Okay. Can y'all just go ahead and do that while you got it?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'd have to write up a whole new estimate on it. Let's just get the gear done first, get it out of here.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's sitting in your lot, man. It ain't doing nothing.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. We'll see when the part comes in.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Forget it. I'll think about the brakes.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm going to call you Wednesday morning before I drive over there. And it better be done.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Bye.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care.",
+        "level": 1,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Rear pads? 260.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Rear pads? 260.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Let's just get the gear done first, get it out of here.",
+        "level": 0,
+        "segment": 14
+      },
+      {
+        "key": "objection",
+        "quote": "Forget it. I'll think about the brakes.",
+        "level": 0,
+        "segment": 17
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager places the car and the job and addresses him as Mr. Vaughn."
+      },
+      {
+        "key": "offered_time",
+        "why": "No visit is needed: the car is already at the shop and the customer asked for the brakes to be done while it is there."
+      },
+      {
+        "key": "recap",
+        "why": "Nothing was agreed: the customer dropped the brakes and said he would call before coming."
+      }
+    ],
+    "auto_fails": [
+      {
+        "key": "wrong_promise",
+        "quote": "It'll be here tomorrow. You'll have it back Wednesday.",
+        "segment": 6
+      }
+    ],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "wrong_promise",
+      "customer_angry",
+      "complaint"
+    ],
+    "strength": {
+      "quote": "No, sir, it's not ready. Still waiting on the part.",
+      "why": "He answered the question straight, without making the customer ask twice.",
+      "segment": 2
+    },
+    "try_next": {
+      "check": "asked_for_booking",
+      "instead_of": "I'd have to write up a whole new estimate on it. Let's just get the gear done first, get it out of here.",
+      "say": "Yes sir, I'll add the rear pads to the ticket right now, 260, and we'll do them the day the gear goes in, so it's one trip for you."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 25.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 0,
+          "segment": 14
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 17
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "offered_time",
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [
+        {
+          "key": "wrong_promise",
+          "segment": 6
+        }
+      ],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted",
+        "wrong_promise",
+        "customer_angry",
+        "complaint"
+      ],
+      "score": 25.0,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 2,
+      "try_next_check": "asked_for_booking",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care",
+        "need_discovery": "Rear pads? 260",
+        "price_with_next_step": "Rear pads? 260",
+        "asked_for_booking": "Let's just get the gear done first, get it out of here",
+        "objection": "Forget it. I'll think about the brakes"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager places the car and the job and addresses him as Mr. Vaughn.",
+        "offered_time": "No visit is needed: the car is already at the shop and the customer asked for the brakes to be done while it is there.",
+        "recap": "Nothing was agreed: the customer dropped the brakes and said he would call before coming."
+      },
+      "auto_fails": {
+        "wrong_promise": "It'll be here tomorrow. You'll have it back Wednesday"
+      },
+      "strength": {
+        "quote": "No, sir, it's not ready. Still waiting on the part",
+        "why": "He answered the question straight, without making the customer ask twice."
+      },
+      "try_next": {
+        "check": "asked_for_booking",
+        "instead_of": "I'd have to write up a whole new estimate on it. Let's just get the gear done first, get it out of here.",
+        "say": "Yes sir, I'll add the rear pads to the ticket right now, 260, and we'll do them the day the gear goes in, so it's one trip for you."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "na",
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": "na",
+      "asked_for_booking": 0,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 25.0
+  },
+  "why": {
+    "call_type": "new_enquiry by the judge's rule 0: a customer with a job already agreed who also asks about new work. Without the brake question this is an existing_job call: only greeting and recap could be scored, two checks is under the three a score needs, and the call would show the auto-fail and no score.",
+    "greeting": "1: the business only.",
+    "name_and_number": "N/A: he places the car and the job and calls the customer by name.",
+    "need_discovery": "1: the car and the job (rear pads) are known; he asks for no circumstance and the customer gives none.",
+    "price_with_next_step": "1: a price with nothing about what it depends on and no step after it.",
+    "offered_time": "N/A: the car is already at the shop.",
+    "asked_for_booking": "0: the customer asks for the work outright and is told it needs a new estimate and can wait.",
+    "recap": "N/A: nothing was agreed. A judge that reads the Wednesday promise as an agreement scores it 0, and the call 22.7.",
+    "objection": "0: 'I'll think about the brakes' is the last doubt and gets 'All right'.",
+    "auto_fails": "wrong_promise: a lead time with no basis, and the next lines show it: he has not talked to the supplier today.",
+    "score": "(1·1 + 2·1 + 2·1 + 3·0 + 2·0) / 2 = 2.5 of 10 weight points = 25.0.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  }
+}

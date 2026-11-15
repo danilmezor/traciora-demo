@@ -1,0 +1,3 @@
+<!-- extends config/sources/chatwoot/public/conversations/annotations.md; appended under "## Demo tenant, notes v1" -->
+
+assignee_id is the owner: the person who first replied (the tenant's ownership rule), or empty. cached_label_list holds the chat's labels as text: filter with a LIKE on the label between commas or at the ends. priority is the level shown now (it rises with the wait); empty when never raised. waiting_since is set while a customer message waits for an answer. first_reply_created_at is Chatwoot's own first reply, the assistant's included: for a person's first reply use traciora.reply_episodes. Open at an instant: status open or pending now says nothing about the past; use resolutions and messages for history.

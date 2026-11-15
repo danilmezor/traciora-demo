@@ -1,0 +1,448 @@
+{
+ "path": "team/who-is-who.md",
+ "title": "Кто есть кто",
+ "title_en": "Who is who",
+ "exists_in": "both",
+ "english_sheet": "facts/team/who-is-who.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The company directory: everyone who works here now, by shop, with role and extension. The page that is right when a shop page is not.",
+ "serves": [
+  "S2",
+  "S14",
+  "challenge:fact-in-table",
+  "operate:contradiction",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_ru": 360,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "29 active people by shop with the cast's Russian roles and extensions. Slot 29 is a full-time advisor.",
+  "Kazan's desk is slots 23 and 24; slot F1 is not listed. This contradicts shops/west/README.md, as in English.",
+  "The seasonal helper is a tyre fitter for six weeks in each tyre season (cast F4).",
+  "REVISIONS DIFFER FROM ENGLISH: the English sheet adds slot 24 four and a half months before T; cast.json says she started ten months before T (before go-live), so the Russian history has no such revision. Four later revisions, not five."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Владельцы и бухгалтерия",
+   "columns": [
+    "Кто",
+    "Должность",
+    "Доб."
+   ],
+   "rows": [
+    {
+     "Кто": "Николай Петрович Ермолаев",
+     "Должность": "Основатель, владелец",
+     "Доб.": "401"
+    },
+    {
+     "Кто": "Екатерина Николаевна Ермолаева",
+     "Должность": "Директор, совладелец",
+     "Доб.": "402"
+    },
+    {
+     "Кто": "Ирина Владимировна Кудашкина",
+     "Должность": "Бухгалтер (Московское шоссе)",
+     "Доб.": "111"
+    },
+    {
+     "Кто": "Сергей Анатольевич Мельников",
+     "Должность": "Руководитель сервиса, Московское шоссе и Инженерный",
+     "Доб.": "104"
+    }
+   ]
+  },
+  {
+   "section": "Московское шоссе, +7 (8422) 10-40-40",
+   "columns": [
+    "Кто",
+    "Должность",
+    "Доб."
+   ],
+   "rows": [
+    {
+     "Кто": "Дмитрий Олегович Григорьев",
+     "Должность": "Старший мастер-приёмщик",
+     "Доб.": "101"
+    },
+    {
+     "Кто": "Алина Рамилевна Хасанова",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "102"
+    },
+    {
+     "Кто": "Никита Ведяшкин",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "103"
+    },
+    {
+     "Кто": "Татьяна Геннадьевна Пахомова",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "105"
+    },
+    {
+     "Кто": "Александр Михайлович Бурмистров",
+     "Должность": "Мастер цеха",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Павел Мещеряков",
+     "Должность": "Менеджер по запчастям, обе ульяновские площадки",
+     "Доб.": "112"
+    },
+    {
+     "Кто": "Андрей Викторович Шубин",
+     "Должность": "Автомеханик-диагност",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Максим Рябов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Алексей Карпов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Ильдар Фаритович Нуруллин",
+     "Должность": "Автоэлектрик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Иван Сурков",
+     "Должность": "Ученик автомеханика",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Евгений Чугунов",
+     "Должность": "Шиномонтажник",
+     "Доб.": ""
+    }
+   ]
+  },
+  {
+   "section": "Инженерный, +7 (8422) 10-40-41",
+   "columns": [
+    "Кто",
+    "Должность",
+    "Доб."
+   ],
+   "rows": [
+    {
+     "Кто": "Светлана Юрьевна Демидова",
+     "Должность": "Старший мастер-приёмщик",
+     "Доб.": "201"
+    },
+    {
+     "Кто": "Артём Николаев",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "202"
+    },
+    {
+     "Кто": "Валерий Геннадьевич Егоров",
+     "Должность": "Старший автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Роман Кудряшов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Антон Блинов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Марат Аюпов",
+     "Должность": "Автомеханик, работает и на Московском шоссе",
+     "Доб.": ""
+    }
+   ]
+  },
+  {
+   "section": "Техническая, +7 (843) 100-40-30",
+   "columns": [
+    "Кто",
+    "Должность",
+    "Доб."
+   ],
+   "rows": [
+    {
+     "Кто": "Ринат Фаридович Галиев",
+     "Должность": "Руководитель СТО",
+     "Доб.": "301"
+    },
+    {
+     "Кто": "Вячеслав Крюков",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "302"
+    },
+    {
+     "Кто": "Камила Шакирова",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "303"
+    },
+    {
+     "Кто": "Фарит Мансурович Зиннатуллин",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Станислав Орехов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Виталий Сомов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Булат Гарипов",
+     "Должность": "Автомеханик, неполная ставка",
+     "Доб.": ""
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович Ермолаев",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "6",
+   "written_as": "Алина Рамилевна Хасанова",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Никита Ведяшкин",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Татьяна Геннадьевна Пахомова",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович Бурмистров",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Андрей Викторович Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "11",
+   "written_as": "Максим Рябов",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Алексей Карпов",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "14",
+   "written_as": "Иван Сурков",
+   "role": "apprentice_technician",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Евгений Чугунов",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Артём Николаев",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Валерий Геннадьевич Егоров",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "19",
+   "written_as": "Роман Кудряшов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "20",
+   "written_as": "Антон Блинов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Марат Аюпов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович Галиев",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "23",
+   "written_as": "Вячеслав Крюков",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "24",
+   "written_as": "Камила Шакирова",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "25",
+   "written_as": "Фарит Мансурович Зиннатуллин",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "26",
+   "written_as": "Станислав Орехов",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Виталий Сомов",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "28",
+   "written_as": "Булат Гарипов",
+   "role": "technician",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-1mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@f1_fired|date}}",
+   "what": "slot F1 removed",
+   "message_ru": "Больше у нас не работает."
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@f2_fired|date}}",
+   "what": "slot F2 removed",
+   "message_ru": "Больше у нас не работает."
+  },
+  {
+   "n": 4,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@newcomers|date}}",
+   "what": "slots 7 and 14 added at the flagship",
+   "message_ru": "Новые люди."
+  },
+  {
+   "n": 5,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-1mo|date}}",
+   "what": "extensions checked against the phone system",
+   "message_ru": "Добавочные сверены с телефонией."
+  }
+ ],
+ "has_history": true
+}

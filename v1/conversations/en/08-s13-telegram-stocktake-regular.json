@@ -1,0 +1,144 @@
+{
+  "format": "seed-conversation/1",
+  "id": "08-s13-telegram-stocktake-regular",
+  "configuration": "en",
+  "number": 8,
+  "story": "S13",
+  "title": "The stocktake afternoon, asked on Telegram: the assistant drafts and the advisor edits and sends",
+  "demonstrates": "A drafts-only channel: the draft is correct and plain; the east shop's lead advisor keeps its facts and rewrites it in her own voice, twice. Both outcomes are sent_edited.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Patsy Greer",
+      "invented": true,
+      "first_time": false,
+      "note": "a regular of the Bonny Oaks shop; 2013 Buick Enclave; rear brakes were recommended at her last visit"
+    },
+    "staff": [
+      {"slot": 16, "name": "Angie Holloway"}
+    ],
+    "named_in_a_line": [
+      {"slot": 17, "name": "Josh Tipton", "role": "the other advisor at Bonny Oaks, offered for the Friday"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A regular who writes to Angie by name.",
+    "vehicle": "2013 Buick Enclave",
+    "what_happens": "She asks to drop the car off on the stocktake afternoon. Angie turns the draft's 'closed' into two times with her on the Wednesday before, or the Friday with Josh (her week off starts on the Thursday), and her second message is the summary.",
+    "facts": {
+      "stocktake": "the Thursday of week W+1: every shop closes at 12:00 (card S13; ledger site.stocktake)",
+      "hours_weekday": "7:30 to 17:30",
+      "booked": "the Wednesday of week W+1, 13:00 at east; ERP appointment, source messenger",
+      "public_pages_used": ["hours and locations, with the dated closure"]
+    }
+  },
+  "days": {
+    "T-1d": {"anchor": "slot 16's last working day before T", "rule": {"kind": "slot_working_day", "slot": 16, "n": -1}, "nominal": "Thu 2026-11-12", "what": "slot 16's last working day before T"},
+    "T+6d": {"anchor": "the Thursday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": -1}, "nominal": "Thu 2026-11-19", "what": "the stocktake: every shop closes at 12:00"},
+    "T+5d": {"anchor": "the Wednesday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": -1}, "nominal": "Wed 2026-11-18", "what": "the day before the stocktake; her appointment"},
+    "T+7d": {"anchor": "the Friday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": -1}, "nominal": "Fri 2026-11-20", "what": "the day after the stocktake; offered with Josh"}
+  },
+  "floating_days": [
+    {"word": "the 19th", "said_on": "T-1d", "day": "T+6d"},
+    {"word": "Thursday the 19th", "said_on": "T-1d", "day": "T+6d"},
+    {"word": "Wednesday the 18th", "said_on": "T-1d", "day": "T+5d"},
+    {"word": "Wednesday at 1", "said_on": "T-1d", "day": "T+5d"},
+    {"word": "Friday the 20th", "said_on": "T-1d", "day": "T+7d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "4503599627371302",
+      "peer": {"id": "4503599627371302", "name": "Patsy Greer"},
+      "contact": {
+        "identifier": "telegram_4503599627371302",
+        "name": "Patsy Greer",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "a white Buick Enclave in a driveway under a carport",
+          "person_in_it": false,
+          "matches_vehicle": "2013 Buick Enclave"
+        }
+      },
+      "opened": {
+        "day": "T-1d",
+        "at": "09:12:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of her one Telegram conversation; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-1d", "at": "09:12:10", "kind": "message", "from": "customer", "text": "Morning Angie! Can I drop the Buick off the 19th after lunch for those back brakes"},
+        {"n": 2, "day": "T-1d", "at": "09:12:55", "kind": "draft", "id": "d1", "text": "Good morning! On Thursday the 19th all our shops close at noon for inventory, so we can't take the car in that afternoon. That morning we're open from 7:30, and the rest of the week is regular hours, 7:30 to 5:30. Would a morning drop-off work for you?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-1d", "at": "09:17:30", "became": 4}},
+        {"n": 3, "day": "T-1d", "at": "09:17:28", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 4, "day": "T-1d", "at": "09:17:30", "kind": "message", "from": "staff", "slot": 16, "text": "Good morning, Patsy! Thursday the 19th we close at noon for inventory, so the afternoon's out. If it were my car I wouldn't put those rear brakes off much longer anyway. I can take the Buick Wednesday the 18th at 7:30 or 1:00, or Josh can have it Friday the 20th at 1:00. Which is easier for you, Patsy?\nAngie"},
+        {"n": 5, "day": "T-1d", "at": "09:25:05", "kind": "message", "from": "customer", "text": "Wednesday at 1 👍"},
+        {"n": 6, "day": "T-1d", "at": "09:25:50", "kind": "draft", "id": "d2", "text": "Thank you, Patsy. Wednesday the 18th at 1:00 works. See you then!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-1d", "at": "09:27:40", "became": 7}},
+        {"n": 7, "day": "T-1d", "at": "09:27:40", "kind": "message", "from": "staff", "slot": 16, "text": "You're all set, Patsy: Wednesday the 18th at 1:00, rear brakes on the Enclave, here at Bonny Oaks. I'll message you when it's ready, should be by 4.\nAngie"},
+        {"n": 8, "day": "T-1d", "at": "09:28:00", "kind": "activity", "what": "label_added", "label": "booking", "by": 16},
+        {"n": 9, "day": "T-1d", "at": "09:28:20", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-1d", "at": "09:17:28", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 5.3},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 16, "working_minutes": 5.3, "wall_minutes": 5.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 16, "working_minutes": 2.6, "wall_minutes": 2.6, "measured_from": "n 5", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 4,
+          "working_minutes": 5.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 2, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-1d", "at": "09:28:20", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "slot 16: first answer 5.3 minutes (her ledger row is 6), two replies, two drafts edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "booked for the day before the stocktake, 13:00, at east; resolved by slot 16",
+    "facts": [
+      "the shop closes at 12:00 on the stocktake day, so the afternoon she asked for is not possible",
+      "slot 16 offered the day before at 7:30 or 1:00 with her, or the Friday at 1:00 with Josh: she books nobody to herself inside the week she has asked off (card S05)",
+      "she chose the Wednesday at 1:00"
+    ],
+    "questions": ["S13.1"]
+  },
+  "why": [
+    "The draft and what Angie sent say the same facts. Hers has the customer's name twice, 'if it were my car', two times to choose from, and her name at the end.",
+    "Her second message is the summary: day, time, work, car, shop."
+  ],
+  "new_facts": [
+    "Patsy Greer, a regular of the Bonny Oaks shop, 2013 Buick Enclave, rear brakes recommended at her last visit; an appointment on the Wednesday of week W+1 at 13:00.",
+    "Angie offers no time of her own inside the week she has asked off (S5): the Wednesday before it with her, or the Friday with Josh (slot 17).",
+    "The contact's picture: a white Buick Enclave under a carport."
+  ]
+}

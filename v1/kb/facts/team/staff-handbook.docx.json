@@ -1,0 +1,61 @@
+{
+ "path": "team/staff-handbook.docx",
+ "title": "Staff handbook",
+ "kind": "binary",
+ "format": "DOCX with heading styles, about 9 pages",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The employee handbook: attendance, pay periods, time off, holidays, allowances, conduct.",
+ "serves": [
+  "S14",
+  "challenge:fact-only-in-attachment",
+  "visibility:worker",
+  "challenge:kb-does-not-say"
+ ],
+ "draft": "en/_binaries.md",
+ "facts": [
+  "Twelve sections: Welcome; Hours and attendance; Pay; Time off; Paid holidays; If you are sick; Appearance; Tools; Training; Customers' cars and customers' money; Phones; Leaving.",
+  "Late = more than five minutes. Ladder over any 30 days: three lates a talk; five a written warning; a second written warning within six months a review that may end the job. Two days absent without a call in twelve months may end employment.",
+  "Paid every second Friday for the two weeks ended the Saturday before.",
+  "Paid time off: none in the first 90 days; 5 days after 90 days; 10 from one year; 15 from five years; 20 from fifteen years. Notice 14 days for a week or more, 7 days for a day or two. One person per counter and two per shop floor off in a week. No carry-over; up to five days paid out in January.",
+  "Six paid holidays (the closed dates of the ledger), after 90 days.",
+  "Three paid sick days; a doctor's note after three days in a row.",
+  "Uniforms supplied (five sets, laundered weekly); boots allowance 100 USD a year; tool allowance 400 USD a year after the first year; ASE test fees paid on a pass; refrigerant certificate course paid.",
+  "Staff parts at cost plus 10 %, own car only, with the foreman's permission.",
+  "Two weeks' notice.",
+  "Seen from junior: technicians (worker rank) and the website assistant cannot read it; the paper binder is their copy."
+ ],
+ "facts_only_in_this_file": [
+  "time-off table",
+  "paid holidays as a staff benefit",
+  "lateness ladder",
+  "allowances",
+  "staff parts price",
+  "notice period"
+ ],
+ "new_facts": [
+  "Every number in the handbook is a new fact: the lateness ladder (3, 5, second warning in six months), no-call rule (two in twelve months), time off 0 / 5 / 10 / 15 / 20 days, notice 14 and 7 days, five days paid out, three sick days, 100 USD boots, 400 USD tools, cost plus 10 %. Reason: a handbook was asked for; the ladder is set so that slot F2 (late four shifts in ten, two written warnings, five absences) is clearly over it and slot 15 (late three shifts in ten, never warned) is over it too, which is the point of his story.",
+  "Leave of slot 10 (two weeks) and slot 16 (a week) fits their length of service (15 and 10 days or more)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive"
+  },
+  {
+   "n": 2,
+   "kind": "new_version",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "the revision the text is dated by, uploaded over the old file two weeks after go-live: the schedule and time-off requests are in Traciora; section 10 gained the sentence \"Nobody takes cash for work that is not on an order.\"; message: \"Revised: the schedule and time off are in Traciora; one line added to section 10.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian handbook is «Правила внутреннего трудового распорядка» and differs by law: 28 calendar days of paid leave for everyone, sick leave by больничный paid by the state fund, pay twice a month, discipline by the Labour Code (замечание, выговор, увольнение; прогул = absence over four hours). Write those; keep allowances as new facts in RUB."
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "path": "parts/fleet-fluid-sheet.pdf",
+ "title": "Fleet fluid sheet (printed copy)",
+ "kind": "binary",
+ "format": "PDF, 1 page landscape, text",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "A one-page print of the fluid sheet: the readable copy.",
+ "serves": [
+  "challenge:fact-only-in-attachment",
+  "challenge:fact-in-table",
+  "S1"
+ ],
+ "draft": "en/_binaries.md",
+ "facts": [
+  "Thirteen rows: vehicle, engine, oil, quarts with filter, coolant, transmission fluid, where seen.",
+  {
+   "rows": [
+    {
+     "vehicle": "Ford Transit-250 Cargo Van",
+     "engine": "3.7L V6",
+     "oil": "5W-20",
+     "quarts_with_filter": "6.0",
+     "coolant": "Orange (Motorcraft)",
+     "transmission_fluid": "Mercon LV",
+     "seen_in": "Nickajack, Millsaps, Cumberland Bend, Sourwood"
+    },
+    {
+     "vehicle": "Ford Transit Connect",
+     "engine": "2.5L 4-cyl",
+     "oil": "5W-20",
+     "quarts_with_filter": "5.7",
+     "coolant": "Orange (Motorcraft)",
+     "transmission_fluid": "Mercon LV",
+     "seen_in": "Nickajack, Moccasin Bend, Sourwood"
+    },
+    {
+     "vehicle": "Ram ProMaster 2500",
+     "engine": "3.6L V6",
+     "oil": "5W-20",
+     "quarts_with_filter": "6.0",
+     "coolant": "Purple (Mopar OAT)",
+     "transmission_fluid": "ATF+4",
+     "seen_in": "Nickajack, Sourwood, Cumberland Bend"
+    },
+    {
+     "vehicle": "Mercedes Sprinter 2500",
+     "engine": "3.0L V6 diesel",
+     "oil": "5W-30, MB 229.52 only",
+     "quarts_with_filter": "13.0",
+     "coolant": "Blue (MB)",
+     "transmission_fluid": "Not serviced by us",
+     "seen_in": "Nickajack ND-34, ND-35"
+    },
+    {
+     "vehicle": "Chevrolet Express 2500",
+     "engine": "6.0L V8",
+     "oil": "5W-30 dexos",
+     "quarts_with_filter": "6.0",
+     "coolant": "Orange (Dex-Cool)",
+     "transmission_fluid": "Dexron VI",
+     "seen_in": "Millsaps, Cumberland Bend, Moccasin Bend MB-8"
+    },
+    {
+     "vehicle": "Ford F-250 Super Duty",
+     "engine": "6.2L V8 gas",
+     "oil": "5W-20",
+     "quarts_with_filter": "7.0",
+     "coolant": "Orange (Motorcraft)",
+     "transmission_fluid": "Mercon LV",
+     "seen_in": "Millsaps M-121 to M-123"
+    },
+    {
+     "vehicle": "Ford F-150",
+     "engine": "5.0L V8 (2017)",
+     "oil": "5W-20",
+     "quarts_with_filter": "7.7",
+     "coolant": "Orange (Motorcraft)",
+     "transmission_fluid": "Mercon LV",
+     "seen_in": "Cumberland Bend E-8"
+    },
+    {
+     "vehicle": "Chevrolet Silverado 2500HD",
+     "engine": "6.0L V8",
+     "oil": "5W-30 dexos",
+     "quarts_with_filter": "6.0",
+     "coolant": "Orange (Dex-Cool)",
+     "transmission_fluid": "Dexron VI",
+     "seen_in": "Cumberland Bend E-11"
+    },
+    {
+     "vehicle": "Toyota Corolla",
+     "engine": "1.8L 4-cyl",
+     "oil": "0W-20",
+     "quarts_with_filter": "4.4",
+     "coolant": "Pink (Toyota SLLC)",
+     "transmission_fluid": "CVT: Toyota CVT FE only",
+     "seen_in": "Missionary Ridge, Moccasin Bend MB-9"
+    },
+    {
+     "vehicle": "Honda Civic",
+     "engine": "2.0L 4-cyl",
+     "oil": "0W-20",
+     "quarts_with_filter": "4.4",
+     "coolant": "Blue (Honda Type 2)",
+     "transmission_fluid": "CVT: Honda HCF-2 only",
+     "seen_in": "Missionary Ridge Car 6"
+    },
+    {
+     "vehicle": "Toyota Camry",
+     "engine": "2.5L 4-cyl",
+     "oil": "0W-20",
+     "quarts_with_filter": "4.6 (bill 5)",
+     "coolant": "Pink (Toyota SLLC)",
+     "transmission_fluid": "Toyota WS",
+     "seen_in": "retail, the most common car we see"
+    },
+    {
+     "vehicle": "Honda CR-V",
+     "engine": "2.4L 4-cyl (2012-2014)",
+     "oil": "0W-20",
+     "quarts_with_filter": "4.4",
+     "coolant": "Blue (Honda Type 2)",
+     "transmission_fluid": "Honda DW-1",
+     "seen_in": "retail"
+    },
+    {
+     "vehicle": "Subaru Outback",
+     "engine": "2.5L (to 2012, timing belt engine)",
+     "oil": "5W-30",
+     "quarts_with_filter": "4.4",
+     "coolant": "Blue (Subaru Super)",
+     "transmission_fluid": "Subaru ATF-HP",
+     "seen_in": "retail"
+    }
+   ]
+  },
+  "Printed T-6 months; older than the spreadsheet by two rows.",
+  "The Sprinter takes 13.0 quarts of MB 229.52 oil, which is not stocked: agrees with the Nickajack page (Sprinters: fluids and filters only, oil ordered with the job)."
+ ],
+ "facts_only_in_this_file": [
+  "every quantity and specification"
+ ],
+ "new_facts": [
+  "All thirteen rows are recalled, not verified."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive"
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Litres; Russian models."
+ ]
+}

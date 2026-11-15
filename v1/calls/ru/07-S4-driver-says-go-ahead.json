@@ -1,0 +1,764 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-07-driver-says-go-ahead",
+  "configuration": "ru",
+  "number": 7,
+  "story": "S4",
+  "title": "A company driver says \"go ahead\" to found work over his limit",
+  "purpose": "Story S4, call 7. A driver of the anchor account asks whether his van is ready. Alina tells him what the mechanic found, 9,500 RUB of work; he says to do it, she asks whether the fleet contact should be called, he waves it off and she goes ahead. By the rubric the call is a good one and carries no auto-fail. The wrinkle is the rule: a company driver cannot approve work over 8,000 RUB, the fleet contact is called. She proposes that rule as a team note the next day.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Фёдор",
+      "role": "driver",
+      "company": "Симбирский гонец",
+      "account": "A1",
+      "invented": true,
+      "company_ref": "accounts.json ru.A1"
+    },
+    "mentioned": [
+      {
+        "name": "Олег Вячеславович Кравцов",
+        "role": "the account's fleet contact",
+        "ref": "accounts.json ru.A1 contacts[0]"
+      }
+    ]
+  },
+  "call": {
+    "day": "slot 6's 2nd working day before T (rule R6; call 7)",
+    "nominal_offset": "T-4d",
+    "nominal_date": "2026-11-09",
+    "local_start": "15:10",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 5,
+    "caller_phone": "+7 907 351-38-85",
+    "repeat_caller": false,
+    "talk_s": 113
+  },
+  "scenario": {
+    "who_calls": "Фёдор, a driver of company account A1, whose van came in that morning for its scheduled service.",
+    "vehicle": "unit 12, ГАЗель Next van, 2022, А867СР73 (accounts.json ru.A1 fleet)",
+    "job": "in progress: fleet maintenance. Found on the inspection: the left lower ball joint has play (replace, then an alignment) and the brake fluid holds over 3 % water (replace)",
+    "wants": "to know when he can take the van; then, told about the found work, to have it done today",
+    "what_happens": "Alina explains the two findings, asks when he needs the van, prices the added work at the contract price and says it can be ready by six. He says to do it. She asks whether Олег Вячеславович should be called; he says the man is in a meeting and he will tell him himself. She goes ahead and promises to ring when the van is ready.",
+    "facts": {
+      "found_work": 9500,
+      "found_work_by_the_catalogue_rub": 9498.1,
+      "driver_limit": 8000,
+      "ready_by": "18:00 the same day",
+      "note": "Company-account prices of catalogue.json, class van: ball_joint 1.3 h x 1 700 + 1 556.10 = 3 766.10; wheel_alignment 3 510; brake_fluid_exchange 1.0 h x 1 700 + 522 = 2 222; together 9 498.10, said as nine five hundred (ledger s4.driver_limit: 9,500 of found work against a limit of 8,000). The fleet maintenance itself is fleet_pm_van at the company price, 8 724.",
+      "prices": [
+        {
+          "job": "ball_joint",
+          "name": "Замена шаровой опоры (1 шт.)",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "company_account",
+          "rub": 3766.1,
+          "labour_hour_rub": 1700
+        },
+        {
+          "job": "wheel_alignment",
+          "name": "Регулировка углов установки колёс (сход-развал), две оси",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "company_account",
+          "rub": 3510.0,
+          "labour_hour_rub": 1700
+        },
+        {
+          "job": "brake_fluid_exchange",
+          "name": "Замена тормозной жидкости с прокачкой системы",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "company_account",
+          "rub": 2222.0,
+          "labour_hour_rub": 1700
+        }
+      ],
+      "ledger": {
+        "s4.driver_limit": 8000
+      }
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, добрый день."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.7,
+      "said": "Алина, здравствуйте, это Фёдор, с «Гонца». Газель моя как там, готова?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.5,
+      "said": "Фёдор, здравствуйте. Двенадцатая, Некст, восемьсот шестьдесят седьмая?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 13.7,
+      "said": "Она, да."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 15.4,
+      "said": "ТО сделали, масло, фильтры — всё. Но мастер на осмотре нашёл: левая шаровая с люфтом, под замену. И тормозная жидкость — по тестеру три с лишним процента воды, тоже менять пора."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 29.8,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 31.4,
+      "said": "Шаровая — это серьёзно? И сколько это всё будет?"
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 36.1,
+      "said": "С люфтом ездить не стоит, тем более гружёной. Вам машина когда нужна?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 43.5,
+      "said": "Завтра с утра рейс на Димитровград. В семь уже грузиться."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 49.7,
+      "said": "Поняла. Тогда, э-э, смотрите: шаровая с работой, после неё сход-развал обязательно, и жидкость с прокачкой — всё вместе девять пятьсот по вашему договору. Сегодня к шести успеваем, я уточнила у мастера."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 64.6,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 66.8,
+      "said": "Девять пятьсот... Ну а куда деваться. Делайте."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 71.9,
+      "said": "А Олегу Вячеславовичу не надо позвонить, согласовать?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 76.0,
+      "said": "Да он на совещании до вечера, не дозвонитесь. Делайте, я ему сам скажу. Мне без машины завтра никак."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 84.6,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 86.8,
+      "said": "Хорошо, Фёдор, тогда делаем. В шесть машина будет готова, я вам на этот номер наберу, как закончим."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 97.2,
+      "said": "Давайте."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 99.5,
+      "said": "Значит, сегодня к шести: шаровая, сход-развал и тормозная жидкость, плюс ТО уже готово. Наберу вас."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 108.2,
+      "said": "Всё, жду. Спасибо."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 110.2,
+      "said": "До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.7,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R3",
+        "what": "the plate's digits as the driver and the advisor say them",
+        "script_turn": 3,
+        "said": "восемьсот шестьдесят седьмая",
+        "stored": "867-я",
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's short name is not heard as a name",
+        "script_turn": 2,
+        "said": "«Гонца»",
+        "stored": "гонца",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "'люфт' heard as 'лифт'",
+        "script_turn": 5,
+        "said": "с люфтом",
+        "stored": "с лифтом",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          3,
+          5,
+          9,
+          10,
+          16,
+          18
+        ],
+        "said": [
+          "Двенадцатая",
+          "три с лишним процента",
+          "В семь",
+          "к шести",
+          "В шесть",
+          "к шести"
+        ],
+        "stored": [
+          "12-я",
+          "3 с лишним процента",
+          "В 7",
+          "к 6",
+          "В 6",
+          "к 6"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "a number split in two by the recogniser",
+        "script_turns": [
+          10
+        ],
+        "said": [
+          "девять пятьсот"
+        ],
+        "stored": [
+          "9 500"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          6,
+          11
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          3
+        ],
+        "said": [
+          "Некст"
+        ],
+        "stored": [
+          "Next"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "'Газель' as a common noun, in lower case",
+        "script_turns": [
+          2
+        ],
+        "said": "Газель",
+        "stored": "газель",
+        "error": true
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          10,
+          12
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          10,
+          12,
+          18,
+          20
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 3,
+        "lost": 2,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 2
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 2
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 8,
+        "as_digits": 8,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 186,
+    "stored_words": 179,
+    "strict_word_difference": 0.118
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 197,
+    "duration_s": 113.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, добрый день.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алина, здравствуйте, это Фёдор, с гонца. Газель моя как там, готова?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Фёдор, здравствуйте. 12-я, Next, 867-я?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Она, да.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "ТО сделали, масло, фильтры, всё. Но мастер на осмотре нашёл: левая шаровая с лифтом, под замену. И тормозная жидкость, по тестеру 3 с лишним процента воды, тоже менять пора.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Шаровая, это серьёзно? И сколько это всё будет?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "С люфтом ездить не стоит, тем более гружёной. Вам машина когда нужна?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Завтра с утра рейс на Димитровград. В 7 уже грузиться.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поняла. Тогда, смотрите: шаровая с работой, после неё сход-развал обязательно, и жидкость с прокачкой, всё вместе 9 500 по вашему договору. Сегодня к 6 успеваем, я уточнила у мастера.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "9500. А куда деваться. Делайте.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А Олегу Вячеславовичу не надо позвонить, согласовать?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да он на совещании до вечера, не дозвонитесь. Делайте, я ему сам скажу. Мне без машины завтра никак.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Угу.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, Фёдор, тогда делаем. В 6 машина будет готова, я вам на этот номер наберу, как закончим.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сегодня к 6: шаровая, сход-развал и тормозная жидкость, плюс ТО уже готово. Наберу вас.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, жду. Спасибо.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, добрый день.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Вам машина когда нужна?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Поняла. Тогда, смотрите: шаровая с работой, после неё сход-развал обязательно, и жидкость с прокачкой, всё вместе 9 500 по вашему договору. Сегодня к 6 успеваем, я уточнила у мастера.",
+        "level": 2,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "В 6 машина будет готова, я вам на этот номер наберу, как закончим.",
+        "level": 2,
+        "segment": 13
+      },
+      {
+        "key": "recap",
+        "quote": "Сегодня к 6: шаровая, сход-развал и тормозная жидкость, плюс ТО уже готово.",
+        "level": 1,
+        "segment": 15
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер обращается к водителю по имени и называет его машину."
+      },
+      {
+        "key": "offered_time",
+        "why": "Визит не нужен: машина уже стоит в сервисе."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "С люфтом ездить не стоит, тем более гружёной. Вам машина когда нужна?",
+      "why": "Сначала сказала, чем грозит ездить с люфтом, и спросила, к какому часу нужна машина. Срок «к шести» назван уже под его рейс.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "Сегодня к 6: шаровая, сход-развал и тормозная жидкость, плюс ТО уже готово.",
+      "say": "Значит, Фёдор: к шести меняем левую шаровую, делаем сход-развал и тормозную жидкость, девять пятьсот по договору. Наряд дополняю, Олегу Вячеславовичу отправляю сумму на согласование. Как закончим, наберу вас на этот номер."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 94.4,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 13
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 15
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "offered_time",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "quoted"
+      ],
+      "score": 94.4,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, добрый день",
+        "need_discovery": "Вам машина когда нужна?",
+        "price_with_next_step": "Поняла. Тогда, смотрите: шаровая с работой, после неё сход-развал обязательно, и жидкость с прокачкой, всё вместе 9 500 по вашему договору. Сегодня к 6 успеваем, я уточнила у мастера",
+        "asked_for_booking": "В 6 машина будет готова, я вам на этот номер наберу, как закончим",
+        "recap": "Сегодня к 6: шаровая, сход-развал и тормозная жидкость, плюс ТО уже готово"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер обращается к водителю по имени и называет его машину.",
+        "offered_time": "Визит не нужен: машина уже стоит в сервисе.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "С люфтом ездить не стоит, тем более гружёной. Вам машина когда нужна?",
+        "why": "Сначала сказала, чем грозит ездить с люфтом, и спросила, к какому часу нужна машина. Срок «к шести» назван уже под его рейс."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "Сегодня к 6: шаровая, сход-развал и тормозная жидкость, плюс ТО уже готово.",
+        "say": "Значит, Фёдор: к шести меняем левую шаровую, делаем сход-развал и тормозную жидкость, девять пятьсот по договору. Наряд дополняю, Олегу Вячеславовичу отправляю сумму на согласование. Как закончим, наберу вас на этот номер."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": "na",
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": "na"
+    },
+    "score": 94.4
+  },
+  "why": {
+    "call_type": "new_enquiry по правилу 0 судьи: у клиента уже есть согласованная работа (ТО), и на звонке появляется новая.",
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "Не применяется: водителя знают, машину назвали по номеру сами.",
+    "need_discovery": "2: какая машина, что нашли и обстоятельство, о котором спросила: к какому часу нужна машина.",
+    "price_with_next_step": "2: сумма, из чего она состоит, и в той же реплике срок: сегодня к шести.",
+    "offered_time": "Не применяется: машина уже в сервисе.",
+    "asked_for_booking": "2: шаг с датой, часом и исполнителем: в шесть машина готова, звонит сама.",
+    "recap": "1: время и работы повторены, адреса и суммы нет.",
+    "objection": "Не применяется: «куда деваться, делайте» — это согласие, а не сомнение.",
+    "the_wrinkle": "По рубрике звонок хороший, автопровалов нет. Ошибка в другом: по странице «Корпоративные клиенты» водитель не согласует работы дороже 8 000 ₽, нужно звонить ответственному за автопарк. Алина спросила про Олега Вячеславовича и приняла «я ему сам скажу». На следующий рабочий день она предлагает это правило как заметку для команды (карточка S04, предложение 3).",
+    "score": "(1·2 + 2·2 + 2·2 + 3·2 + 1·1) / 2 = 8.5 из 9 весовых баллов = 94.4.",
+    "carried_by": [
+      "asked_for_booking",
+      "price_with_next_step"
+    ]
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "kept",
+    "kept_by": "an outbound call from desk 102 to the driver's number at about 17:50 the same day: the van is ready"
+  },
+  "new_facts": [
+    "Фёдор, водитель «Симбирского гонца» (A1), машина № 12 (ГАЗель Next 2022, А867СР73), телефон +7 907 351-38-85.",
+    "В день звонка у A1 открыт наряд на № 12: ТО коммерческого автомобиля по договорной цене (8 724) и добавленные по звонку работы на 9 500: замена левой шаровой опоры, сход-развал, замена тормозной жидкости. Работы согласовал водитель, а не Кравцов.",
+    "Исходящий звонок с 102 на номер водителя около 17:50 того же дня: машина готова (обещанный звонок выполнен)."
+  ]
+}

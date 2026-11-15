@@ -1,0 +1,786 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-01-s4-junior-early",
+  "configuration": "ru",
+  "number": 1,
+  "story": "S4",
+  "copied_from": "calls/samples/ru-1-junior-early.json",
+  "title": "The junior operator early on: a price given, the caller let go",
+  "purpose": "Story S4, month one, in the Russian configuration. Alina is attentive and counts the job out in full, then lets a first-time caller go with 'I'll think and call back': no time offered, no booking asked for, nothing to sum up.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Олег Тарасов",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P1 (rule R6)",
+    "nominal_offset": "T-168d",
+    "nominal_date": "2026-05-29",
+    "local_start": "11:20",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 7,
+    "caller_phone": "+7 907 214-42-17",
+    "repeat_caller": false,
+    "talk_s": 147
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Олег Тарасов, who bought the car last autumn.",
+    "vehicle": "Škoda Octavia A7, 2015, 1.4 TSI, about 118,000 km",
+    "job": "scheduled maintenance: engine oil and oil filter, air and cabin filters; spark plugs are due at 120,000 km",
+    "wants": "a price",
+    "what_happens": "Alina asks the year, the engine, the mileage and when the oil was last changed, counts labour and consumables, answers the question about bringing his own oil, saves the estimate under his name and number, and accepts 'I'll think and call back' without offering a time.",
+    "facts": {
+      "labour_hour_rub": 1760,
+      "labour_rub": {
+        "oil_and_filter": 1232,
+        "air_filter": 352,
+        "cabin_filter": 528,
+        "spark_plugs": 1056
+      },
+      "total_with_consumables_rub": 9722,
+      "note": "The call is before the last price rise (P), so the hour is 1 760. Labour is catalogue.json's at that hour (0.7, 0.2, 0.3 and 0.6 hours); parts at standard list: oil 4 l 4 640, filters 2 970, plugs 2 920. She speaks in round figures: 1 230, 350, 530, 'две сто', 'в районе десяти тысяч'.",
+      "prices": [
+        {
+          "job": "oil_service",
+          "name": "Замена масла в двигателе и масляного фильтра",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 6602.0,
+          "labour_hour_rub": 1760
+        },
+        {
+          "job": "engine_air_filter",
+          "name": "Замена воздушного фильтра двигателя",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 1502.0,
+          "labour_hour_rub": 1760
+        },
+        {
+          "job": "cabin_air_filter",
+          "name": "Замена салонного фильтра",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 1618.0,
+          "labour_hour_rub": 1760
+        },
+        {
+          "job": "spark_plugs",
+          "name": "Замена свечей зажигания (4 шт.)",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 3976.0,
+          "labour_hour_rub": 1760
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, здравствуйте."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.1,
+      "said": "Да, здравствуйте. Девушка, подскажите, а сколько у вас ТО стоит? На Октавию."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.9,
+      "said": "На Октавию... А какого года машина?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 12.6,
+      "said": "Пятнадцатого. А-семь, один и четыре турбо."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 16.2,
+      "said": "Ага, один и четыре ТСИ. А пробег какой у вас сейчас?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 22.5,
+      "said": "Ну, сто восемнадцать где-то. Под сто двадцать."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 26.7,
+      "said": "Так. А последний раз когда ТО делали — масло когда меняли?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 32.4,
+      "said": "Да вот в том-то и дело, что давно. Я её осенью взял, там по книжке на ста пяти меняли. Ну, я и хочу всё сразу — масло, фильтры."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 46.9,
+      "said": "Поняла. Смотрите, значит. По работе: масло с масляным фильтром — тысяча двести тридцать, воздушный фильтр — триста пятьдесят и салонный — пятьсот тридцать. Это две сто получается за работу."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 58.3,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 59.7,
+      "said": "И плюс расходники. Масло туда идёт с допуском, пять-тридцать, литров пять — ну, тысяч пять, если хорошее брать. Фильтры — ещё где-то три. То есть всё вместе — в районе десяти тысяч."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 76.2,
+      "said": "Десять. А если я своё масло привезу?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 80.4,
+      "said": "Можно со своим, да. Тогда, получается, работа и фильтры — ну, тысяч пять. Тут смотря какое масло и что ещё по регламенту подойдёт — у вас на ста двадцати свечи, по-моему, тоже меняются."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 96.9,
+      "said": "А свечи — это сколько?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 99.6,
+      "said": "Свечи — тысяча с небольшим работа и сами свечи, ну, тысячи три, комплект."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 106.8,
+      "said": "Понятно. Не, ну нормально, в принципе."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 110.5,
+      "said": "Давайте я вас в базу занесу, расчёт сохраню, чтобы потом заново не считать. Как вас зовут?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 119.3,
+      "said": "Олег."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 120.7,
+      "said": "Олег, а фамилия?"
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 122.9,
+      "said": "Тарасов."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 124.3,
+      "said": "Тарасов Олег. И телефон — этот, с которого вы звоните? Девятьсот семь, двести четырнадцать, сорок два, семнадцать?"
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 133.1,
+      "said": "Да, да, этот."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 135.2,
+      "said": "Всё, записала."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 136.8,
+      "said": "Ага. Ну ладно, я тогда подумаю ещё и перезвоню."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 142.0,
+      "said": "Хорошо, конечно, звоните! Всего доброго."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 145.2,
+      "said": "Спасибо, до свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.68,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turn": 1,
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "an abbreviation said in Russian letters comes out in Latin; the generation as a letter and a digit",
+        "script_turns": [
+          4,
+          5
+        ],
+        "said": [
+          "А-семь",
+          "ТСИ"
+        ],
+        "stored": [
+          "А7",
+          "TSI"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "the oil grade read as two numbers with a hyphen",
+        "script_turn": 11,
+        "said": "пять-тридцать",
+        "stored": "5-30",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money and mileage as digits, round sums left as words ('тысяч пять', 'тысячи три'); no value is wrong",
+        "script_turns": [
+          6,
+          8,
+          9,
+          11,
+          13,
+          15,
+          21
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the advisor is lost and her two turns become one line",
+        "script_turns": [
+          9,
+          10,
+          11
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "a trailing-off and an opening 'Не' dropped",
+        "script_turns": [
+          3,
+          16
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 1,
+        "lost": 0,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 9,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 0,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 19,
+        "as_digits": 14,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 257,
+    "stored_words": 240,
+    "strict_word_difference": 0.148
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 271,
+    "duration_s": 147.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, здравствуйте. Девушка, подскажите, а сколько у вас ТО стоит на Октавию?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На Октавию. А какого года машина?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Пятнадцатого. А7, 1.4 турбо.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага, 1.4 TSI. А пробег какой у вас сейчас?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну, 118 где-то. Под 120.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так. А последний раз когда ТО делали? Масло когда меняли?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да вот в том-то и дело, что давно. Я её осенью взял, там по книжке на 105 меняли. Ну, я и хочу всё сразу: масло, фильтры.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поняла. Смотрите, значит, по работе: масло с масляным фильтром — 1230, воздушный фильтр — 350 и салонный — 530. Это 2100 получается за работу. И плюс расходники. Масло туда идёт с допуском 5-30, литров пять, ну, тысяч пять, если хорошее брать. Фильтры — ещё где-то три. То есть всё вместе в районе 10 тысяч.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Десять. А если я своё масло привезу?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Можно со своим, да. Тогда, получается, работа и фильтры — ну, тысяч пять. Тут смотря какое масло и что ещё по регламенту подойдёт. У вас на 120 свечи, по-моему, тоже меняются.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А свечи — это сколько?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Свечи — тысяча с небольшим работа и сами свечи, ну, тысячи три, комплект.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно. Ну, нормально, в принципе.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте я вас в базу занесу, расчёт сохраню, чтобы потом заново не считать. Как вас зовут?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Олег.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Олег, а фамилия?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Тарасов.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Тарасов Олег. И телефон этот, с которого вы звоните? 907 214 42 17?",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, да, этот.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, записала.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага. Ну ладно, я тогда подумаю ещё и перезвоню.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, конечно, звоните. Всего доброго.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, до свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "И телефон этот, с которого вы звоните? 907 214 42 17?",
+        "level": 2,
+        "segment": 18
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А последний раз когда ТО делали? Масло когда меняли?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Тут смотря какое масло и что ещё по регламенту подойдёт.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "Давайте я вас в базу занесу, расчёт сохраню, чтобы потом заново не считать.",
+        "level": 0,
+        "segment": 14
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Хорошо, конечно, звоните. Всего доброго.",
+        "level": 0,
+        "segment": 22
+      },
+      {
+        "key": "objection",
+        "quote": "Ну ладно, я тогда подумаю ещё и перезвоню.",
+        "level": 0,
+        "segment": 21
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "На звонке ни о чём не договорились: ни о визите, ни об обратном звонке."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "А последний раз когда ТО делали? Масло когда меняли?",
+      "why": "Спросила про последнее ТО и узнала, что масло перехаживает и клиент хочет сделать всё сразу. От этого и считала.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Давайте я вас в базу занесу, расчёт сохраню, чтобы потом заново не считать.",
+      "say": "Олег, масло у вас уже перехаживает, давайте сразу запишу. Есть завтра в 10 или послезавтра в 14, когда вам удобнее?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 40.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 2,
+          "segment": 18
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 14
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 0,
+          "segment": 22
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 21
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted"
+      ],
+      "score": 40.0,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, здравствуйте",
+        "name_and_number": "И телефон этот, с которого вы звоните? 907 214 42 17?",
+        "need_discovery": "А последний раз когда ТО делали? Масло когда меняли?",
+        "price_with_next_step": "Тут смотря какое масло и что ещё по регламенту подойдёт",
+        "offered_time": "Давайте я вас в базу занесу, расчёт сохраню, чтобы потом заново не считать",
+        "asked_for_booking": "Хорошо, конечно, звоните. Всего доброго",
+        "objection": "Ну ладно, я тогда подумаю ещё и перезвоню"
+      },
+      "na": {
+        "recap": "На звонке ни о чём не договорились: ни о визите, ни об обратном звонке."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "А последний раз когда ТО делали? Масло когда меняли?",
+        "why": "Спросила про последнее ТО и узнала, что масло перехаживает и клиент хочет сделать всё сразу. От этого и считала."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Давайте я вас в базу занесу, расчёт сохраню, чтобы потом заново не считать.",
+        "say": "Олег, масло у вас уже перехаживает, давайте сразу запишу. Есть завтра в 10 или послезавтра в 14, когда вам удобнее?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels: recognition cost this call nothing.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 2,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 0,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 40.0
+  },
+  "why": {
+    "greeting": "2: the company and her own name in the first line.",
+    "name_and_number": "2: she asks the name and surname and reads the caller's number aloud for him to confirm.",
+    "need_discovery": "2: the car, the job (maintenance: oil and filters) and a circumstance she asked for: when the oil was last changed.",
+    "price_with_next_step": "1: the sum and what it depends on (which oil, what else falls due), then no time and no step.",
+    "offered_time": "0: where a time was due she saves the estimate 'so we need not count again'.",
+    "asked_for_booking": "0: she accepts 'подумаю и перезвоню' with 'конечно, звоните'.",
+    "recap": "N/A: nothing was agreed.",
+    "objection": "0: 'подумаю ещё и перезвоню' with no reason is a doubt by the rubric, and it gets no answer.",
+    "score": "(1·2 + 2·2 + 2·2 + 2·1 + 3·0 + 3·0 + 2·0) / 2 = 6 of 15 weight points = 40.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [],
+  "changes_against_the_sample": [
+    "number, story, copied_from; scenario.facts.prices; recognition.counts and an error flag on each applied rule; word counts by the checker's word list; new_facts"
+  ]
+}

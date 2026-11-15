@@ -1,0 +1,54 @@
+{
+ "path": "customers/towing.md",
+ "title": "Towing",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "Public towing arrangement for the Chattanooga shops; Nashville is deliberately thin.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 104,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Chattanooga shops use vendor V8 (not named to customers): hook-up with the first 10 miles to either Chattanooga shop 95 USD, 4 USD per mile after; billed on the repair order as sublet.",
+  "Nashville: no tow partner and no price stated anywhere in the base (vendors.json: V8 serves main and east only): planted gap."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Chattanooga (East Main and Bonny Oaks)",
+   "item": "Hook-up and the first 10 miles to either Chattanooga shop: $95"
+  },
+  {
+   "section": "Chattanooga (East Main and Bonny Oaks)",
+   "item": "Each mile after that: $4"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Tow price: 95 USD including 10 miles, 4 USD per extra mile. Reason: a towing radius and price were asked for; light-duty local rates. The ERP needs matching order_sublet lines for towed cars."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian towing: эвакуатор, a fixed price inside the city and per km outside; the Russian vendors file has the partner. Keep the Kazan gap."
+ ]
+}

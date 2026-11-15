@@ -1,0 +1,139 @@
+{
+  "format": "seed-conversation/1",
+  "id": "10-people-p05-web-puddle-photo",
+  "configuration": "en",
+  "number": 10,
+  "story": "people",
+  "title": "A photo instead of words: a puddle under the car, the assistant, and the lead advisor's comparison",
+  "demonstrates": "A symptom on the web chat. The customer opens with a picture; the assistant reads it, says what it cannot tell, names the test and its price, and hands over. Slot 5 takes it after 15 minutes: one long lower-case line with a time, a warning, a comparison and the price. The assistant's closing draft goes out as it was. He labels and resolves this one.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Kim Arnett",
+      "invented": true,
+      "first_time": true,
+      "note": "2012 Ford Escape; first visit",
+      "phone": "(423) 555-0274"
+    },
+    "staff": [
+      {"slot": 5, "name": "Travis Burnette"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A first-time customer, at lunch, standing in her garage.",
+    "vehicle": "2012 Ford Escape",
+    "what_happens": "A photo of a green puddle, then 'is this bad'. The assistant names the likely fluid without diagnosing, asks the car and the gauge, prices the test, takes her name, number and shop, hands over. Travis offers 2:00 the same day.",
+    "facts": {
+      "public_pages_used": ["price list: cooling system pressure test", "hours and locations"],
+      "booked": "T-60d 14:00 at main",
+      "main_line": "(423) 555-0142",
+      "prices": [
+        {"said": "$67.50", "amount": 67.5, "what": "cooling system pressure test (0.5 h at the posted hour)", "from": {"catalogue": "cooling_pressure_test", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-60d": {"anchor": "the Monday of week T-8", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 8}, "nominal": "Mon 2026-09-14"}
+  },
+  "floating_days": [
+    {"word": "today", "said_on": "T-60d", "day": "T-60d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0010-4e00-8000-00000000e00a",
+      "peer": {"id": "seedv1-browser-en-0318", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0318",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-60d", "at": "12:31:05", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-60d", "at": "12:31:05", "kind": "message", "from": "customer", "text": "", "files": [{"kind": "image", "file": "IMG_2087.jpg", "pool": "puddle-under-car", "shows": "a green puddle on a garage floor under the front bumper of a car"}]},
+        {"n": 2, "day": "T-60d", "at": "12:31:20", "kind": "message", "from": "customer", "text": "is this bad"},
+        {"n": 3, "day": "T-60d", "at": "12:31:45", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. Thanks for the photo. A green puddle under the front of a car is usually coolant, though I can't diagnose it from a picture. If the temperature gauge climbs or a warning light comes on, stop driving. What kind of car is it, and has the gauge moved?"},
+        {"n": 4, "day": "T-60d", "at": "12:32:30", "kind": "message", "from": "customer", "text": "2012 ford escape. gauge is normal so far"},
+        {"n": 5, "day": "T-60d", "at": "12:32:55", "kind": "message", "from": "assistant", "text": "Good. The way to find a leak like that is a cooling system pressure test, which is $67.50. The technician shows you where it's coming from before any repair is priced. Would you like me to ask the shop to get you in?"},
+        {"n": 6, "day": "T-60d", "at": "12:33:20", "kind": "message", "from": "customer", "text": "yes today if they can"},
+        {"n": 7, "day": "T-60d", "at": "12:33:44", "kind": "message", "from": "assistant", "text": "I can't book a time myself, but I'll pass it on. What's your name and the best number to reach you, and which shop: East Main Street or Bonny Oaks Drive?"},
+        {"n": 8, "day": "T-60d", "at": "12:34:15", "kind": "message", "from": "customer", "text": "Kim Arnett 423-555-0274 east main"},
+        {"n": 9, "day": "T-60d", "at": "12:34:40", "kind": "message", "from": "assistant", "text": "Thank you, Kim. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 10, "day": "T-60d", "at": "12:34:41", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Kim Arnett", "phone": "(423) 555-0274", "site": "east main", "context": "2012 Ford Escape. She sent a photo of a green puddle under the front of the car and asked if it is bad; the temperature gauge is normal so far. I named the cooling system pressure test, $67.50, and no repair. She would like to come today, East Main Street."}}, "note": {"from": "assistant", "private": true, "text": "2012 Ford Escape. She sent a photo of a green puddle under the front of the car and asked if it is bad; the temperature gauge is normal so far. I named the cooling system pressure test, $67.50, and no repair. She would like to come today, East Main Street."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-60d 17:30, the day's close"}},
+        {"n": 11, "day": "T-60d", "at": "12:46", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 12, "day": "T-60d", "at": "12:50:08", "kind": "activity", "what": "assigned", "derived": true, "to": 5, "by": 5, "how": "first reply"},
+        {"n": 13, "day": "T-60d", "at": "12:50:10", "kind": "message", "from": "staff", "slot": 5, "text": "Kim this is Travis at east main. bring it on by today, I can get it on the lift at 2. dont top it off with water and dont drive it far, a cooling system is like a pressure cooker, it only works sealed up. test is $67.50. call me if its easier 423 555 0142"},
+        {"n": 14, "day": "T-60d", "at": "12:50:11", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 5, "how": "a manager's reply takes it off"},
+        {"n": 15, "day": "T-60d", "at": "12:50:12", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 16, "day": "T-60d", "at": "12:52:30", "kind": "message", "from": "customer", "text": "ok be there at 2. thanks"},
+        {"n": 17, "day": "T-60d", "at": "12:53:10", "kind": "draft", "id": "d1", "text": "You're welcome, Kim. See you at 2:00 at 2106 East Main Street.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 5, "day": "T-60d", "at": "12:58:40", "became": 18}},
+        {"n": 18, "day": "T-60d", "at": "12:58:40", "kind": "message", "from": "staff", "slot": 5, "text": "You're welcome, Kim. See you at 2:00 at 2106 East Main Street."},
+        {"n": 19, "day": "T-60d", "at": "12:59:10", "kind": "activity", "what": "label_added", "label": "booking", "by": 5},
+        {"n": 20, "day": "T-60d", "at": "12:59:30", "kind": "activity", "what": "resolved", "by": 5}
+      ],
+      "assignee_history": [
+        {"day": "T-60d", "at": "12:50:08", "to": 5, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 5,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 25},
+          {"asked": 4, "answered": 5, "by": "assistant", "wall_seconds": 25},
+          {"asked": 6, "answered": 7, "by": "assistant", "wall_seconds": 24},
+          {"asked": 8, "answered": 9, "by": "assistant", "wall_seconds": 25},
+          {"asked": 10, "answered": 13, "by": 5, "working_minutes": 15.5, "wall_minutes": 15.5, "measured_from": "n 10", "reply": "first"},
+          {"asked": 16, "answered": 18, "by": 5, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 16", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 5,
+          "n": 13,
+          "working_minutes": 15.5,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 6, "assistant": 4, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-60d", "at": "12:59:30", "by": 5}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 5}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 5: his first line 15.5 minutes after the hand-off, two replies, one draft sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "assistant first, handed over (scheduling), slot 5",
+    "outcome": "pressure test booked the same day, 14:00, at main; resolved by slot 5",
+    "facts": [
+      "the customer opened with a photo; the assistant said what it showed and that it could not diagnose",
+      "the only price named is the pressure test, 67.50",
+      "slot 5 replied 15.5 working minutes after the hand-off"
+    ],
+    "questions": []
+  },
+  "why": [
+    "The assistant reads a photo, and stops at 'usually coolant'.",
+    "Travis explains with a kitchen: 'like a pressure cooker, it only works sealed up'.",
+    "His reply is slower than the junior's and nobody would mind: it has a time in it."
+  ],
+  "new_facts": [
+    "Kim Arnett, (423) 555-0274 (tier B of phones.md), 2012 Ford Escape; a cooling system pressure test at main on the Monday of week T-8 at 14:00.",
+    "The photo IMG_2087.jpg (picture pool 'puddle-under-car')."
+  ]
+}

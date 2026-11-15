@@ -1,0 +1,115 @@
+{
+ "_what": "the nine feedback reports from staff",
+ "reports": [
+  {
+   "id": "FB1",
+   "slot": 3,
+   "category": "praise",
+   "severity": "suggestion",
+   "status": "resolved",
+   "sent": "W-12.wed@o+3:10",
+   "status_set": "W-12.thu@o+2:00",
+   "screen": "home",
+   "summary": "Вижу, кто и когда исправил отметку об уходе, не обзванивая площадки. Табель за этот период закрыла вдвое быстрее. Спасибо."
+  },
+  {
+   "id": "FB2",
+   "slot": 15,
+   "category": "notifications",
+   "severity": "annoying",
+   "status": "seen",
+   "sent": "W-7.wed@o+0:20",
+   "status_set": "W-7.thu@o+2:00",
+   "screen": "inbox",
+   "summary": "Когда выходит график на неделю, телефон жужжит пять раз подряд — по разу на каждый день. Мне бы одно сообщение на всю неделю, и хватит!"
+  },
+  {
+   "id": "FB3",
+   "slot": 14,
+   "category": "bug",
+   "severity": "blocks_work",
+   "status": "resolved",
+   "sent": "W-2.wed@o+0:12",
+   "status_set": "W-2.fri@o+3:00",
+   "screen": "home",
+   "summary": "не даёт исправить вчерашний уход. утром вопрос был а как отметился на смену пропал("
+  },
+  {
+   "id": "FB4",
+   "slot": 5,
+   "category": "slow",
+   "severity": "annoying",
+   "status": "resolved",
+   "sent": "W-15.thu>=p5@o+4:30",
+   "status_set": "W-13.mon@o+2:00",
+   "screen": "conversations",
+   "summary": "чат с фотками на компе у стойки открывается по минуте. клиент стоит ждёт а у меня колесо крутится"
+  },
+  {
+   "id": "FB5",
+   "slot": 6,
+   "category": "wrong_answer",
+   "severity": "annoying",
+   "status": "seen",
+   "sent": "W-6.tue>=p6@o+2:40",
+   "status_set": "W-5.mon@o+2:00",
+   "screen": "ask",
+   "summary": "Спросила, сколько стоят передние колодки с дисками, — ответил {ledger:s12.brake_price.stale} со старой страницы про тормоза. В прайсе {ledger:s12.brake_price.now}. Он должен понимать, какая страница — прайс."
+  },
+  {
+   "id": "FB6",
+   "slot": 22,
+   "category": "confusing",
+   "severity": "annoying",
+   "status": "wont_fix",
+   "sent": "W-10.sun@20:55",
+   "status_set": "W-9.wed@o+2:00",
+   "screen": "planner",
+   "summary": "В графике написано: 3 не опубликовано. Какие три — не видно. Дайте распечатать неделю, как раньше."
+  },
+  {
+   "id": "FB7",
+   "slot": 16,
+   "category": "missing_feature",
+   "severity": "suggestion",
+   "status": "open",
+   "sent": "W-4.mon>=p16@o+1:30",
+   "status_set": null,
+   "screen": "calendar",
+   "summary": "Хотелось бы добавлять клиента в запись календаря. Машины «Тёплого контура» приезжают каждый понедельник к открытию, а я могу только вписать название в заголовок."
+  },
+  {
+   "id": "FB8",
+   "slot": 24,
+   "category": "notifications",
+   "severity": "annoying",
+   "status": "open",
+   "sent": "W-1.tue>=p24@o+5:00",
+   "status_set": null,
+   "screen": "conversations",
+   "summary": "Уведомление о новом чате приходит сразу всем, и на этой неделе дважды одному клиенту ответили двое. Можно, чтобы сначала оно шло тому, кто сейчас на приёмке?"
+  },
+  {
+   "id": "FB9",
+   "slot": 4,
+   "category": "missing_feature",
+   "severity": "annoying",
+   "status": "open",
+   "sent": "east-2<=p20@c-1:00",
+   "status_set": null,
+   "screen": "planner",
+   "summary": "Неявка отмечается, а где это увидеть — не нашёл. Что Блинов не вышел, узнал от приёмки в 9:40, а не из программы. Нужно, чтобы это приходило во входящие."
+  }
+ ],
+ "notes": {
+  "s10": "FB1, FB2 and FB3 are card S10's three: the Wednesdays of weeks T-12, T-7 and T-2",
+  "status_by": "slot 2, as the tenant's admin (operations.set_feedback_status); the report itself is written as its reporter",
+  "device": {
+   "FB2": "phone",
+   "FB3": "phone",
+   "FB6": "phone",
+   "FB9": "phone",
+   "others": "desktop"
+  }
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "path": "shops/west/answering-the-phone.md",
+ "title": "Техническая: как мы отвечаем на звонки",
+ "title_en": "Charlotte Pike: answering the phone",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/west/answering-the-phone.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "24",
+ "purpose": "The newest Nashville advisor's page on how the phone is answered there; the bright spot in a thin folder.",
+ "serves": [
+  "S3",
+  "S4",
+  "challenge:near-duplicate",
+  "S9"
+ ],
+ "length_class": "short",
+ "words_ru": 196,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Greeting in slot 24's own words (cast): «Ермак-Сервис, Казань, Камила, здравствуйте».",
+  "The price example is the Russian brake inspection with a time at 9:30.",
+  "«Давайте сделаем так» is her phrase in the cast."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Техническая: как мы отвечаем на звонки",
+   "item": "Имя — и «по этому номеру с вами можно связаться?». Номер повторить вслух."
+  },
+  {
+   "section": "Техническая: как мы отвечаем на звонки",
+   "item": "Машина: марка, модель, год. И что с ней — словами клиента. Один вопрос сверх того, что кажется достаточным."
+  },
+  {
+   "section": "Техническая: как мы отвечаем на звонки",
+   "item": "Спрашивают цену — называем её по прайс-листу и сразу со временем: «Диагностика тормозов — 700 ₽, могу записать вас на завтра на 9:30»."
+  },
+  {
+   "section": "Техническая: как мы отвечаем на звонки",
+   "item": "Предложить два времени. Не «когда вам удобно подъехать»."
+  },
+  {
+   "section": "Техническая: как мы отвечаем на звонки",
+   "item": "Повторить запись: день, время, Техническая, тридцать, что делаем."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 700.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "24",
+   "written_as": "Камила Шакирова",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "24",
+   "written_as": "Камила",
+   "role": "service_advisor",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [
+  700.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-2mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

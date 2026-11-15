@@ -1,0 +1,86 @@
+{
+ "path": "customers/warranty.md",
+ "title": "Our warranty",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Public summary of the 24/24 warranty; the staff page has the full terms.",
+ "serves": [
+  "S12",
+  "S1",
+  "challenge:combine-policy-and-price",
+  "challenge:kb-does-not-say",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "medium",
+ "words_en": 270,
+ "links_to": [
+  "customers/bringing-your-own-parts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "24 months or 24,000 miles, whichever first, parts and labour, repairs with shop-supplied parts; from invoice date and mileage; honoured at all three shops (ledger: warranty on work).",
+  "Commercial-use vehicles: 12 months or 12,000 miles.",
+  "Brake pads and shoes: 12 months or 12,000 miles against defects and noise; wear is not a defect.",
+  "Wiper blades and bulbs: 90 days.",
+  "Batteries and tyres: maker's warranty, the shop handles the claim.",
+  "Sublet work: the subcontractor's warranty, passed on in writing; its length is deliberately stated nowhere in the base.",
+  "Customer-supplied parts: no warranty on part or labour.",
+  "Not covered: accident, overheating or low oil after the repair, off-road or racing, another shop's work on the same repair, towing, rental.",
+  "Over 25 miles from any shop: call first; cover up to the price of the original repair."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Shorter or different cover",
+   "item": "Vehicles used for business (delivery, service, hire): 12 months or 12,000 miles."
+  },
+  {
+   "section": "Shorter or different cover",
+   "item": "Brake pads and shoes: 12 months or 12,000 miles against defects and noise. Pads wearing out with use is not a defect."
+  },
+  {
+   "section": "Shorter or different cover",
+   "item": "Wiper blades and bulbs: 90 days."
+  },
+  {
+   "section": "Shorter or different cover",
+   "item": "Batteries and tires: the maker's warranty. We handle the claim for you."
+  },
+  {
+   "section": "Shorter or different cover",
+   "item": "Work by a specialist we use (transmission rebuilds, glass): the specialist's own warranty, which we pass on to you in writing with the job."
+  },
+  {
+   "section": "Shorter or different cover",
+   "item": "Parts you bring: no warranty on the part or on our labour. See Bringing your own parts."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@warranty_2424|date}}",
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [
+  "In force from {{@warranty_2424}} = T-26 months: before the two years of ERP history, so every order in the data is under 24/24.",
+  "Commercial 12/12, pads 12/12, blades and bulbs 90 days, 25-mile rule, cap at the original repair price: designed after the network terms in us-shop.md (TechNet 24/24, Certified Auto Repair commercial 12/12, the 25-mile rule). ERP comeback orders of type warranty must respect these windows."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian terms (ledger): 30 days on mechanical and electrical work; parts carry the maker's or seller's warranty; work with the customer's parts: on the work only, never on the part. No mileage rule and no 25-mile rule. The old page beside the current one must then differ in another way: for example 14 days before, 30 days now."
+ ]
+}

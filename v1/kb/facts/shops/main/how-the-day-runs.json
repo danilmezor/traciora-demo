@@ -1,0 +1,122 @@
+{
+ "path": "shops/main/how-the-day-runs.md",
+ "title": "East Main: how the day runs",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "The flagship's local habits: the morning rush, lunch cover, diagnostics queue, Thursday.",
+ "serves": [
+  "S3",
+  "S5",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_en": 276,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "The rush is 7:30 to 10:00; about four cars in ten arrive by 9:00 (mix.json hour curve: 16 % at 7:30 plus 24 % at 8:00).",
+  "Since {{@early_desk}} two advisors cover the desk in those hours: one for the counter, one for the phone only (S3: required cover raised from one to two).",
+  "Mondays are the worst morning (S3: still 19 % missed).",
+  "The foreman hands out work at 7:30.",
+  "Diagnostics go to slot 10, about four a day; overflow to slot 18 at Bonny Oaks (S5: eleven orders moved to east during his leave).",
+  "Lunch staggered 11:30-13:30; parts land about 9:15, 12:15, 15:15; ready calls by 16:30.",
+  "Slot 1 is in on Thursday mornings and his prices do not count."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "East Main: how the day runs",
+   "item": "Mondays are the worst morning. If you are the phone person on a Monday, you do not leave the desk until 10:00, for anything."
+  },
+  {
+   "section": "East Main: how the day runs",
+   "item": "Randy hands out the work at 7:30 from the day's appointments. A car that was not booked goes to him before you promise it to anyone."
+  },
+  {
+   "section": "East Main: how the day runs",
+   "item": "Diagnostics go to Kevin and he takes about four a day. Book check-engine and electrical jobs into his column, not \"any tech\". When his column is full it is full: offer the next day, or Bonny Oaks, where Andre takes overflow."
+  },
+  {
+   "section": "East Main: how the day runs",
+   "item": "Lunch is staggered between 11:30 and 1:30. The desk is never empty and the phone is never on voicemail in opening hours."
+  },
+  {
+   "section": "East Main: how the day runs",
+   "item": "Parts runs land about 9:15, 12:15 and 3:15. Call customers about \"is my car ready\" after a run, not before."
+  },
+  {
+   "section": "East Main: how the day runs",
+   "item": "Ready calls go out by 4:30. After 5:00 people are driving and do not answer."
+  },
+  {
+   "section": "East Main: how the day runs",
+   "item": "Thursday mornings Ray is in the waiting room with a coffee, talking to whoever is there. Customers like it. If he quotes anybody a price, it does not count; he knows."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "new_facts": [
+  "Slot 10 takes about four diagnostic jobs a day. Reason: gives his leave a capacity to be missed; the ERP's diagnostic orders per day at main should fit."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "Travis's rewrite of the first paragraph for the early desk (proposed by slot 5, approved by slot 4); message: \"Two at the desk in the morning.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Rush 9:00-11:30 (design S3). Arrival curve from mix.json ru."
+ ]
+}

@@ -1,0 +1,388 @@
+{
+ "_meta": {
+  "what": "rows another part proposed, as accepted into the ledger in fix pass A (2026-11-14): a frozen copy, so a later edit of the proposing file does not move the ledger",
+  "assistant": "assistant/ledger_rows.json"
+ },
+ "assistant": [
+  {
+   "key": "ask.threads",
+   "value": 180,
+   "unit": "Ask threads of managers since G, both configurations",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "design 4.6; a thread is a planted instance, so the small size keeps all of them"
+  },
+  {
+   "key": "ask.threads_per_person",
+   "value": {
+    "4": 40,
+    "2": 30,
+    "6": 25,
+    "1": 10,
+    "5": 10,
+    "16": 9,
+    "7": 9,
+    "3": 8,
+    "24": 8,
+    "9": 7,
+    "17": 6,
+    "22": 5,
+    "29": 5,
+    "8": 5,
+    "23": 3
+   },
+   "unit": "threads by owner slot; sums to ask.threads",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "design 4.6 gives the first four; the other eleven share 75 by how each person uses a keyboard (cast.json voices)"
+  },
+  {
+   "key": "ask.handwritten",
+   "value": 15,
+   "unit": "threads written by hand per language",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "S2 three, S3 one, S4 nine (six note threads, three proposal threads), S8 one, S12 one"
+  },
+  {
+   "key": "ask.messages_per_thread",
+   "value": {
+    "min": 2,
+    "max": 12,
+    "mean": 5.2
+   },
+   "unit": "messages (a question and its answer are two)",
+   "class": "designed",
+   "mark": "rate",
+   "tolerance": 0.6,
+   "min_count": 165,
+   "reasoning": "design 4.6: two to twelve turns; background threads draw one to four exchanges with weights 30, 40, 20, 10 %"
+  },
+  {
+   "key": "ask.kind_mix",
+   "value": {
+    "admin": {
+     "shop_system": 55,
+     "calls": 15,
+     "roster": 0,
+     "board": 5,
+     "knowledge": 5,
+     "draft": 10,
+     "planning": 5,
+     "customer": 0,
+     "product": 5
+    },
+    "senior": {
+     "shop_system": 20,
+     "calls": 15,
+     "roster": 25,
+     "board": 15,
+     "knowledge": 5,
+     "draft": 10,
+     "planning": 5,
+     "customer": 0,
+     "product": 5
+    },
+    "middle": {
+     "shop_system": 30,
+     "calls": 10,
+     "roster": 5,
+     "board": 10,
+     "knowledge": 15,
+     "draft": 15,
+     "planning": 5,
+     "customer": 5,
+     "product": 5
+    },
+    "junior": {
+     "shop_system": 15,
+     "calls": 15,
+     "roster": 5,
+     "board": 10,
+     "knowledge": 20,
+     "draft": 20,
+     "planning": 3,
+     "customer": 10,
+     "product": 2
+    }
+   },
+   "unit": "% of a person's background exchanges by kind of question, by rank; refusals and 'cannot tell' are drawn inside their kind",
+   "class": "designed",
+   "mark": "rate",
+   "tolerance": 8,
+   "min_count": 25,
+   "reasoning": "what each rank can read and is asked to do; no measurement exists"
+  },
+  {
+   "key": "ask.refusals",
+   "value": {
+    "refusal": 9,
+    "cannot_tell": 4
+   },
+   "unit": "background exchanges that end in a refusal by rank or site, or in 'the data cannot tell'",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "planted instances: every refusal pattern at least twice, each 'cannot tell' pattern twice"
+  },
+  {
+   "key": "ask.feedback",
+   "value": {
+    "up_pct": 6.0,
+    "down_pct": 1.5
+   },
+   "unit": "% of assistant answers that carry a thumb",
+   "class": "designed",
+   "mark": "rate",
+   "tolerance": 2,
+   "min_count": 400,
+   "reasoning": "few people rate answers; a thumb down sits on the answer a correction follows. Range 3 to 10 and 0.5 to 3"
+  },
+  {
+   "key": "ask.patterns",
+   "value": {
+    "shop_system": 10,
+    "calls": 6,
+    "roster": 5,
+    "board": 4,
+    "knowledge": 4,
+    "draft": 5,
+    "planning": 3,
+    "customer": 2,
+    "product": 3,
+    "refusal": 4,
+    "cannot_tell": 2
+   },
+   "unit": "patterns per kind in a language's bank (48)",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "one person uses a pattern at most three times, never with the same parameters; the senior's 40 threads need at least 8 patterns in his largest kind"
+  },
+  {
+   "key": "mem.personal_live",
+   "value": {
+    "all": 56,
+    "active": 52,
+    "dormant": 4
+   },
+   "unit": "personal notes live at T",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "design 4.5: about 60 with the ended ones"
+  },
+  {
+   "key": "mem.personal_ended",
+   "value": {
+    "all": 6,
+    "replaced_in_chat": 1,
+    "changed_on_page": 1,
+    "tightened_by_night": 1,
+    "deleted_by_owner": 3
+   },
+   "unit": "archived personal rows kept as history",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "every way a personal row ends that the product can show in Changes, except 'unused': a note needs 180 days without use and the product is 175 days old"
+  },
+  {
+   "key": "mem.personal_per_person",
+   "value": {
+    "4": 9,
+    "2": 8,
+    "6": 6,
+    "5": 5,
+    "16": 5,
+    "7": 4,
+    "3": 4,
+    "9": 4,
+    "24": 4,
+    "17": 3,
+    "22": 2,
+    "1": 2
+   },
+   "unit": "live personal notes by owner slot: twelve holders; slots 8, 23 and 29 hold none",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "design 4.5; S4 fixes slot 6's six"
+  },
+  {
+   "key": "mem.team_notes",
+   "value": {
+    "all": 14,
+    "active": 13,
+    "unverified": 1,
+    "visible_from": {
+     "junior": 11,
+     "middle": 2,
+     "senior": 1
+    }
+   },
+   "unit": "team notes live at T",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "design 4.5; three are fixed by cards and kb/CROSS-STORE.md"
+  },
+  {
+   "key": "mem.proposals",
+   "value": {
+    "all": 19,
+    "approved": 14,
+    "declined": 2,
+    "withdrawn": 1,
+    "waiting": 2,
+    "designed_in_4_5": 11
+   },
+   "unit": "platform.proposal rows",
+   "class": "derived",
+   "mark": "fixed",
+   "formula": "[mem.team_notes]['all'] approved (every team note is published by an approved proposal) + 2 declined + 1 withdrawn + 2 waiting",
+   "reasoning": "design 4.5 counts six approved; the product cannot hold fourteen team notes on six approvals (commands/memory.py:194-298)"
+  },
+  {
+   "key": "mem.retest_days",
+   "value": 90,
+   "unit": "days between checks of a team note (tenant setting TRACIORA_MEMORY_RETEST_DAYS; shipped 180)",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "at 180 no note comes due inside 175 days of product, so the state 'unverified' and the Keep and Remove answers could not exist in history"
+  },
+  {
+   "key": "mem.reviews",
+   "value": {
+    "kept": 5,
+    "waiting_at_t": 1
+   },
+   "unit": "team notes that came due for their check since G",
+   "class": "derived",
+   "mark": "fixed",
+   "formula": "team notes approved more than [mem.retest_days] days before T"
+  },
+  {
+   "key": "mem.nightly",
+   "value": {
+    "subject_en": "Prices source",
+    "subject_ru": "Откуда брать цены",
+    "holders": [
+     5,
+     6,
+     7
+    ],
+    "raised": "the first nightly pass after slot 5's last working day before T",
+    "visible_from": "middle"
+   },
+   "unit": "the one proposal the nightly pass raised",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "card S04; the product takes the highest holder's rank (dream.py:84)"
+  },
+  {
+   "key": "mem.inbox_lines",
+   "value": {
+    "memory.proposed": 72,
+    "memory.decided": 16,
+    "memory.unverified": 24
+   },
+   "unit": "pushed Inbox lines since G",
+   "class": "derived",
+   "mark": "fixed",
+   "formula": "proposed: 4 deciders (slots 1, 2, 4, 22) less the proposer when the proposer is one of them, per proposal; decided: one per approval or decline of a person's proposal; unverified: 4 per note that came due"
+  },
+  {
+   "key": "sched.brief_jobs",
+   "value": 15,
+   "unit": "hidden brief jobs: one per manager of junior rank or above who has opened Home",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "home.md: the brief is made on a manager's first Home visit; card S10 counts four"
+  },
+  {
+   "key": "sched.brief_times",
+   "value": {
+    "no_shift": [
+     "06:40",
+     "10:40",
+     "14:40",
+     "18:40"
+    ],
+    "with_shift": "five minutes before the first shift, a third and two thirds of the way, an hour before the end",
+    "kept_rows": 200
+   },
+   "unit": "when a brief is written (the product's rule, home zone or the shift's site zone)",
+   "class": "measured",
+   "mark": "fixed",
+   "source": "apps/backend/src/traciora/core/tools/workspace/brief.py:47-50, tasks.py:74 (2026-11-13)"
+  },
+  {
+   "key": "sched.brief_reads",
+   "value": {
+    "1": 1,
+    "2": 2,
+    "4": 3,
+    "6": 2,
+    "others": 1
+   },
+   "unit": "briefs of a working day a person opens Home in time to read; every later time of the day is written 'skipped'",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "decides how many of a day's four times run: the founder reads the morning one, the senior lives on Home"
+  },
+  {
+   "key": "sched.run_wordings",
+   "value": {
+    "yesterday-three-numbers": 3,
+    "accounts-this-week": 3,
+    "discounts-over-10": 2,
+    "charlotte-pike-against-plan": 3,
+    "missed-calls-today": 3,
+    "tomorrows-gaps": 2,
+    "my-call-backs": 2
+   },
+   "unit": "wordings of a task's commonest case; neighbouring runs never share one",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "a reader sees a task's last three runs on its row"
+  },
+  {
+   "key": "sched.runs",
+   "value": "one run per due time from the task's creation to T: daily tasks about 175, weekly about 25, the discounts task about 23; plus the one failed run and its rerun",
+   "unit": "cron_runs rows of the seven tasks",
+   "class": "derived",
+   "mark": "scales",
+   "formula": "due times of [s10.tasks] between creation and T; emitted per build"
+  },
+  {
+   "key": "sched.created",
+   "value": {
+    "discounts-over-10": "@discount_rule",
+    "others": "G"
+   },
+   "unit": "",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "card S02: the Friday list runs since the rule; card S10 says every task is defined on G"
+  },
+  {
+   "key": "s10.west_plan",
+   "en": {
+    "orders": 60,
+    "revenue": 29000
+   },
+   "ru": {
+    "orders": 57,
+    "revenue": 650000
+   },
+   "unit": "the weekly plan for the bought shop, written in the prompt of the task 'west against plan': closed orders and money before tax",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "no store of the product holds a plan. en: the shop runs at 74 % of plan (ledger volume.norm.west): 44 orders a week / 0.74. ru: 123 against 140 to 150 gives about 85 %: 49 / 0.85"
+  },
+  {
+   "key": "s10.failure_reason",
+   "en": "The shop system could not be reached, so the report had nothing to read. Run it again when the connection is back.",
+   "ru": "Учётная программа была недоступна, поэтому отчёту нечего было читать. Запустите его ещё раз, когда связь восстановится.",
+   "unit": "cron_runs.error_text of the failed run",
+   "class": "designed",
+   "mark": "fixed",
+   "reasoning": "question S10.1 expects the cause; an exception-shaped reason is replaced by a generic sentence (tasks.py:144-149)"
+  }
+ ]
+}

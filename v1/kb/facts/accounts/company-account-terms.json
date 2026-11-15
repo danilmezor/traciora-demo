@@ -1,0 +1,288 @@
+{
+ "path": "accounts/company-account-terms.md",
+ "title": "Company accounts",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The terms every company account is served on: payment days, price class, priority, who may approve work. Story S1's page.",
+ "serves": [
+  "S1",
+  "S4",
+  "S16",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "operate:contradiction",
+  "challenge:policy-vs-team-note"
+ ],
+ "length_class": "medium",
+ "words_en": 604,
+ "links_to": [
+  "accounts/small-business-customers.md",
+  "accounts/a1.md",
+  "accounts/a2.md",
+  "accounts/a3.md",
+  "accounts/a4.md",
+  "accounts/a5.md",
+  "accounts/a6.md",
+  "policies/warranty.md",
+  "accounts/opening-a-company-account.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Six accounts with home shop and payment days as in accounts.json: A1 main 30, A2 east 30, A3 main 15, A4 east 15, A5 west 30, A6 main 30.",
+  "Price class \"company rate\" (121.50 an hour, 10 % off parts list, menu jobs 10 % under menu) is held by A1 and A2 only (catalogue company_account_terms).",
+  "Approvers: A1 Lonnie Coffey; A2 Tina Ragsdale up to 1,000 USD a vehicle, Hal Millsaps above; A3 Yolanda Fitch; A4 Rob Atchley up to 500, Denise Atchley above; A5 Wade Carlisle; A6 Erin Castillo (the new contact, since T-5 months).",
+  "One driver limit for every account: 300 USD per visit; above it the fleet contact is called (ledger s4.driver_limit).",
+  "A1 needs its purchase-order number on every order (design S1).",
+  "Statements issued the first working day of the month for the month before, listing invoices by unit number; due 30 or 15 days from the statement date.",
+  "Interest 1.5 % a month on balances over 30 days overdue, at slot 2's discretion.",
+  "Priority: a company vehicle that cannot work is seen the day it arrives; A2 has a standing slot Monday 7:30 at east for five vans and comes first on Monday mornings (ledger acct.A2.weekly_slot).",
+  "Approval order: booked work; driver up to the limit for the whole visit; above it the named approver; unreachable: booked work only and an estimate within four working hours; unsafe vehicles are not released on a driver's word.",
+  "Warranty 12/12; no storage; complaints to slot 4 the same day.",
+  "This page names Erin Castillo for A6; the account's own page still names Bobby Shadden: planted contradiction between two pages.",
+  "Slot 6's waiting team note \"a company driver cannot approve work over 300 USD; call the fleet contact\" repeats what this page says."
+ ],
+ "tables": [
+  {
+   "section": "The six accounts",
+   "columns": [
+    "Account",
+    "Home shop",
+    "Pays in",
+    "Prices",
+    "Approves work",
+    "Purchase-order number"
+   ],
+   "rows": [
+    {
+     "Account": "Nickajack Delivery",
+     "Home shop": "East Main",
+     "Pays in": "30 days",
+     "Prices": "Company rate",
+     "Approves work": "Lonnie Coffey, fleet manager",
+     "Purchase-order number": "Required on every order"
+    },
+    {
+     "Account": "Millsaps Heating & Plumbing",
+     "Home shop": "Bonny Oaks",
+     "Pays in": "30 days",
+     "Prices": "Company rate",
+     "Approves work": "Tina Ragsdale, dispatcher, up to $1,000 a vehicle; Hal Millsaps above that",
+     "Purchase-order number": "Not used"
+    },
+    {
+     "Account": "Moccasin Bend Janitorial Services",
+     "Home shop": "East Main",
+     "Pays in": "15 days",
+     "Prices": "List",
+     "Approves work": "Yolanda Fitch",
+     "Purchase-order number": "Not used"
+    },
+    {
+     "Account": "Missionary Ridge Driving School",
+     "Home shop": "Bonny Oaks",
+     "Pays in": "15 days",
+     "Prices": "List",
+     "Approves work": "Rob Atchley up to $500; Denise Atchley above that",
+     "Purchase-order number": "Not used"
+    },
+    {
+     "Account": "Cumberland Bend Electric",
+     "Home shop": "Charlotte Pike",
+     "Pays in": "30 days",
+     "Prices": "List",
+     "Approves work": "Wade Carlisle",
+     "Purchase-order number": "Not used"
+    },
+    {
+     "Account": "Sourwood Catering Co.",
+     "Home shop": "East Main",
+     "Pays in": "30 days",
+     "Prices": "List",
+     "Approves work": "Erin Castillo",
+     "Purchase-order number": "Not used"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Payment",
+   "item": "Donna issues each account's statement on the first working day of the month, for the month before. It lists every invoice by vehicle unit number."
+  },
+  {
+   "section": "Payment",
+   "item": "It is due 30 or 15 days from the statement date, as in the table."
+  },
+  {
+   "section": "Payment",
+   "item": "Nothing is collected at the counter and no deposit is taken."
+  },
+  {
+   "section": "Payment",
+   "item": "Interest of 1.5 % a month may be charged on a balance more than 30 days overdue. Whether it is charged is Claire's decision, not the counter's."
+  },
+  {
+   "section": "Priority",
+   "item": "A company vehicle that cannot work is looked at the day it arrives, ahead of retail cars that are waiting. Say so to the retail customer plainly if they ask; do not hide it."
+  },
+  {
+   "section": "Priority",
+   "item": "Millsaps Heating & Plumbing has a standing slot every Monday at 7:30 at Bonny Oaks for five vans, and its vans come first on Monday mornings."
+  },
+  {
+   "section": "Priority",
+   "item": "Routine fleet maintenance is booked like any appointment."
+  },
+  {
+   "section": "Who may approve work",
+   "item": "Work the fleet contact booked is approved when it is booked."
+  },
+  {
+   "section": "Who may approve work",
+   "item": "Anything found beyond it: a driver may say yes up to $300, for the whole visit, not per job. Above $300 a driver cannot approve work: call the person in the \"Approves work\" column. Write who approved on the order."
+  },
+  {
+   "section": "Who may approve work",
+   "item": "If you cannot reach them, do the booked work, put the rest on an estimate and send it. The four-hour estimate standard applies."
+  },
+  {
+   "section": "Who may approve work",
+   "item": "A vehicle that is unsafe to drive is not released on a driver's say-so. Call the fleet contact and then Greg."
+  },
+  {
+   "section": "Also",
+   "item": "Every order carries the unit number and the mileage in."
+  },
+  {
+   "section": "Also",
+   "item": "Company vehicles are in business use: warranty is 12 months or 12,000 miles (Warranty)."
+  },
+  {
+   "section": "Also",
+   "item": "No storage charges. A fleet vehicle sitting more than a week: tell Greg."
+  },
+  {
+   "section": "Also",
+   "item": "A complaint from a company account goes to Greg the same day, whichever shop it came to."
+  },
+  {
+   "section": "Also",
+   "item": "New accounts: Opening a company account. Credit limits and overdue balances are the office's."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "configurations.en.labour_rate.company_account.after_rise",
+   "what": "labour hour",
+   "value": 121.5
+  },
+  {
+   "catalogue_key": "configurations.en.labour_rate.standard.after_rise",
+   "what": "labour hour",
+   "value": 135.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Nickajack Delivery"
+  },
+  {
+   "account": "A2",
+   "name": "Millsaps Heating & Plumbing"
+  },
+  {
+   "account": "A3",
+   "name": "Moccasin Bend Janitorial Services"
+  },
+  {
+   "account": "A4",
+   "name": "Missionary Ridge Driving School"
+  },
+  {
+   "account": "A5",
+   "name": "Cumberland Bend Electric"
+  },
+  {
+   "account": "A6",
+   "name": "Sourwood Catering Co."
+  }
+ ],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [
+  "The two-step approvers for A2 (the dispatcher up to 1,000 USD a vehicle, the president above) and A4 (the lead instructor up to 500, the owner above). Reason: the design asks for \"who may approve work\"; the ledger fixes only the driver limit.",
+  "Statement on the first working day of the month; interest 1.5 % a month at discretion (no interest is charged in the data)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "company rate 112.50 to 121.50; message: \"New prices from today.\""
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "added the purchase-order column and the Monday priority for Millsaps, moved here from team notes; message: \"Customer facts belong on the account pages, not in notes.\""
+  },
+  {
+   "n": 4,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "Sourwood's approver changed from Bobby Shadden to Erin Castillo; message: \"New fleet contact at Sourwood.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian accounts are billed per order with closing documents (акт, счёт-фактура or УПД) and pay by bank transfer within the contract's days (30 or 14); no monthly statement, so \"Payment\" is rewritten (R11). The purchase-order number becomes «номер заявки» of the customer. Contract hour 1 700 RUB. Interest: пеня по договору."
+ ]
+}

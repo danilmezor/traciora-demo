@@ -1,0 +1,124 @@
+{
+ "path": "office/month-end-close.md",
+ "title": "Month-end close",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "The bookkeeper's month-end checklist; the check that caught the missing money.",
+ "serves": [
+  "S2",
+  "S15",
+  "visibility:middle",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_en": 275,
+ "links_to": [
+  "office/statements-and-receivables.md",
+  "office/payroll-hours.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Close in the first three working days of the next month; nine ordered steps.",
+  "Open orders need a reason; over 60 days are reported to slot 2 (ERP mess kind 4: one order at west open five months, two more over sixty days).",
+  "Till differences are summed by shop and by closer (how the 19 short days of slot F1 showed).",
+  "Void list with voider and payment; discounts over 10 % have an approver; no cash orders on the Walk-in customer; supplier credits; statements on the first working day; payroll hours; sales tax by the 20th.",
+  "Steps 2 to 5 were added or tightened in the month of {{@discount_rule}}.",
+  "Seen from middle rank."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Month-end close",
+   "item": "Open orders. Every order still open from before the last week of the month is either finished and invoiced, or has a reason. I ask each shop manager for the reasons. An order open more than 60 days is reported to Claire."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Till counts. For each shop: every day has a count, and the differences for the month are added up by shop and by the person who closed. A few dollars either way is ordinary. I look for the same name short again and again."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Voids. The list of every voided order, with who voided it and whether a payment had been taken. Since {{@discount_rule|date}}, a paid order voided by anyone but a shop manager is reported the same day."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Discounts. Every bill with more than 10 % off has an approver. Claire receives the same list each Friday."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Cash orders on the Walk-in customer. There should be none."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Supplier statements against what we received: credits for returns and cores are there, or I ask Marcus."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Company-account statements go out on the first working day: Statements and receivables."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Payroll hours for the last period: Payroll hours."
+  },
+  {
+   "section": "Month-end close",
+   "item": "Sales tax return, filed and paid by the 20th."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}",
+  "{{@discount_rule|date}}",
+  "{{@discount_rule|month}}"
+ ],
+ "new_facts": [
+  "Orders open more than 60 days are reported to slot 2 (matches the \"over sixty days\" of S15 kind 4).",
+  "Sales tax return by the 20th of the following month (Tennessee's due date as generally known; to be re-read on the state's page with the tax rows of the ledger)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "Donna's steps 2 to 5 (proposed by slot 3, approved by slot 2); message: \"Till by person, voids, discounts, walk-in.\"",
+   "proposer_slot": "3",
+   "approver_slot": "2"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian month end: закрытие месяца в 1С, акты сверки with suppliers, НДС 5 % (УСН) and the cash book; no sales tax."
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "path": "services/transmission/transmission-rebuild.md",
+ "title": "Transmission rebuild",
+ "first_revision_text": "en/_history/services/transmission/transmission-rebuild.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The sublet rebuild: what we do, what the specialist does, price, time, deposit, warranty.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 223,
+ "links_to": [
+  "policies/deposits.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job transmission_rebuild: 7.5 h removal and refitting (labour 1,012.50) plus the sublet rebuild at 3,400.00 by vendor V6; total 4,412.50.",
+  "Five working days; deposit 1,700.00 (policies/deposits.md).",
+  "Warranty on the rebuild is the specialist's, per the card; its length is stated nowhere: the honest answer to \"how long is a rebuild warrantied\" is that the base does not say and slot 4 has the card.",
+  "Road test and scan before recommending a rebuild.",
+  "Charlotte Pike's arrangement is not stated."
+ ],
+ "tables": [
+  {
+   "section": "Transmission rebuild",
+   "columns": [
+    "",
+    ""
+   ],
+   "rows": [
+    [
+     "Our labour, 7.5 hours",
+     "$1,012.50"
+    ],
+    [
+     "The rebuild",
+     "$3,400.00"
+    ],
+    [
+     "Total",
+     "$4,412.50"
+    ]
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Transmission rebuild",
+   "item": "Time: allow five working days. It is not a job to promise tighter."
+  },
+  {
+   "section": "Transmission rebuild",
+   "item": "Deposit: $1,700.00 before the transmission leaves the building. Deposits."
+  },
+  {
+   "section": "Transmission rebuild",
+   "item": "Warranty: the rebuild is covered by the specialist's own warranty, and their card comes back with the unit. Our 24 months covers our part: taking it out and putting it back. Ask Greg for the card before you tell a customer how long the rebuild is covered."
+  },
+  {
+   "section": "Transmission rebuild",
+   "item": "Before any of this: a road test by the foreman and a scan. Plenty of \"it needs a transmission\" is a sensor, a solenoid or low fluid."
+  },
+  {
+   "section": "Transmission rebuild",
+   "item": "It is a decision about the car. Know what the car is worth before the conversation. Some customers should hear \"I would not\"."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "transmission_rebuild",
+   "what": "hours",
+   "class": "car",
+   "value": 7.5
+  },
+  {
+   "catalogue_key": "transmission_rebuild",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1012.5
+  },
+  {
+   "catalogue_key": "transmission_rebuild",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4412.5
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V6",
+   "name": "Coulter Transmission & Driveline"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Ремонт АКПП у специализированной организации»; sublet price from the Russian catalogue."
+ ]
+}

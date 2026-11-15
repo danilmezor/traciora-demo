@@ -1,0 +1,85 @@
+{
+ "path": "shop-floor/clocking-in-and-out.md",
+ "title": "Отметки прихода и ухода",
+ "title_en": "Clocking in and out",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/clocking-in-and-out.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "How technicians punch, the location check, what to do after a forgotten clock-out.",
+ "serves": [
+  "S14",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_ru": 136,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The check-in radius is given in metres (ledger geo.checkin_radius_m).",
+  "Job time in the shop system matters more in Russian: clocked job time against sold hours is one of the three signatures of story S2."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Отметки прихода и ухода",
+   "item": "Приход отмечайте с телефона, когда вы уже в сервисе, а не по дороге. Приложение видит, где вы находитесь. Отметка дальше 150 метров от сервиса помечается и приходит мне."
+  },
+  {
+   "section": "Отметки прихода и ухода",
+   "item": "Смена начинается во время, которое стоит в графике. Через 5 минут после него это опоздание, и в отметке оно видно."
+  },
+  {
+   "section": "Отметки прихода и ухода",
+   "item": "Уходите — отметьте уход. Забыли — утром на Главной появится вопрос: поставьте время, когда на самом деле ушли, и отправьте. Согласую в тот же день."
+  },
+  {
+   "section": "Отметки прихода и ухода",
+   "item": "Не просите отметить вас и не отмечайте других."
+  },
+  {
+   "section": "Отметки прихода и ухода",
+   "item": "Отметка — это явка. Время по заказ-наряду ведётся отдельно, в программе сервиса: взяли работу — запустили, закончили — остановили. По каждой работе, как всегда."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-5.5mo|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "added the sentence about a punch from down the road after the two flagged punches at Charlotte Pike; message: \"Clock in at the shop.\"",
+   "message_ru": "Отмечаемся в сервисе, а не с дороги."
+  }
+ ],
+ "has_history": true
+}

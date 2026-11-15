@@ -1,0 +1,95 @@
+{
+ "path": "services/brakes/brake-inspection.md",
+ "title": "Brake inspection",
+ "first_revision_text": "en/_history/services/brakes/brake-inspection.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The inspection every brake complaint starts with.",
+ "serves": [
+  "S7",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 171,
+ "links_to": [
+  "policies/diagnostic-fees.md",
+  "customers/towing.md",
+  "services/brakes/pads-and-rotors.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job brake_inspection: menu 49.95, 0.5 h; wheels off, measurements in mm, hoses, slides, fluid, road test, photos.",
+  "Thin pads seen during the courtesy inspection carry no inspection charge.",
+  "The fee is not credited.",
+  "S7: the customer's first visit began with this job."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Brake inspection",
+   "item": "If the car is already in for a service and the technician sees thin pads through the wheel, that is the free courtesy inspection doing its job. There is no inspection charge for that."
+  },
+  {
+   "section": "Brake inspection",
+   "item": "The fee is not taken off the repair. Why."
+  },
+  {
+   "section": "Brake inspection",
+   "item": "Grinding, a pedal that sinks, or a brake warning light: tell the customer not to drive it far, and offer the tow."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Диагностика тормозной системы», 700 RUB."
+ ]
+}

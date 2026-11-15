@@ -1,0 +1,2401 @@
+{
+  "format": "bank-en/skeletons/1",
+  "kind": "existing_job",
+  "about": "Thirty skeletons of calls about a job already in the shop or just finished: ten kinds, three each. Rubric type existing_job: greeting and recap are the only checks (recap when something is agreed). Advisor lines are tiered by the advisor's tier (exact, warm, curt) and take the advisor's tokens; customer lines take the voice's opener, filler and tail. {tech_name} is never slot 11 in a complaint or comeback.",
+  "skeletons": [
+    {
+      "id": "EJ01",
+      "kind": "ready",
+      "title": "Is it ready? It is",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm calling to see if my {car_model}'s ready",
+            "just checking on my {car_model}, is it done yet?",
+            "y'all have my {car_model}, I was seeing if it's ready"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It is. {tech_name} finished it a little while ago — {job_said}, and it's {bill_total} out the door. We're here till {closing_time}.",
+              "{a_yes}, it's ready. We did the {job_said}, it road-tested fine, and you're at {bill_total} with tax."
+            ],
+            "warm": [
+              "{a_yes}! It's all done, it's ready whenever you are. It came to {bill_total} with tax.",
+              "Oh, good timing — it just got done! It's {bill_total}, and it's parked right out front."
+            ],
+            "curt": [
+              "Yeah, it's done. {bill_total}.",
+              "It's ready. {bill_total}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, good. I can be there {time_chosen}",
+            "alright. I'll come get it {time_chosen}",
+            "okay, I'll swing by {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ02",
+      "kind": "ready",
+      "title": "Ready, but the caller can't come before closing",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "first thing in the morning",
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "is my car done? I don't get off till after y'all close",
+            "hey, is the {car_model} ready? 'Cause I'm stuck at work late"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It's done. If you can't make it by {closing_time}, it stays locked up inside tonight, no charge, and you can get it first thing.",
+              "{a_yes}, it's ready. It's fine to leave it overnight — it goes inside when we close, and you get it at opening."
+            ],
+            "warm": [
+              "It's ready! Oh — if you can't make it, that's okay, it'll be right here inside.",
+              "{a_yes}, it's all done! And don't worry, it'll be safe inside if you can't get here."
+            ],
+            "curt": [
+              "It's done. We close at {closing_time}.",
+              "Yeah, it's ready. Close at {closing_time}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "can't somebody stay a few minutes late?",
+            "is there any way to leave the key out for me?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I can't promise anybody past close, and we don't leave keys out. Call me on your way, though, and if I'm still here, I'll wait.",
+              "{a_sorry}, we can't leave it out with a key, it's not safe. But first thing in the morning it's out front waiting on you."
+            ],
+            "warm": [
+              "Oh, um — we can't leave the key out. I'm sorry! But it'll be right here first thing.",
+              "{a_sorry}, I don't think we can. But it's ready the minute we open!"
+            ],
+            "curt": [
+              "Nope. Can't do that.",
+              "No. Get it in the morning."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, I'll get it in the morning then",
+            "okay. I'll come {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ03",
+      "kind": "ready",
+      "title": "Ready: what all did y'all do?",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "somebody called and said it's ready — what all did y'all end up doing?",
+            "y'all left me a message my car's done. What'd it need?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "We did the {job_said}, and the {found_job_said} you okayed. Out the door it's {bill_total}, and the old parts are in a box if you want to see them.",
+              "{a_ok}, so — {job_said}, plus the {found_job_said}. It comes to {bill_total} with everything, and I'll walk you through the invoice when you get here."
+            ],
+            "warm": [
+              "So we did the {job_said}, and it came to {bill_total}! It's ready whenever you are.",
+              "{a_ok}, so it was the {job_said}, and then the {found_job_said} too. It's {bill_total}!"
+            ],
+            "curt": [
+              "{job_said}. {bill_total}.",
+              "Did the {job_said}. It's {bill_total}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "is that with the tax?",
+            "and that's everything, nothing else on there?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's with tax and shop supplies, everything. Nothing else gets added.",
+              "{a_yes}, that's the whole thing. What I told you is what you pay."
+            ],
+            "warm": [
+              "Um, I think so — yes, that's with tax!",
+              "Yep, that's everything, I promise!"
+            ],
+            "curt": [
+              "Yeah.",
+              "That's it."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay. I'll be there {time_chosen}",
+            "alright, I'll come by {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ04",
+      "kind": "not_ready",
+      "title": "Not ready yet; an honest time",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "just checking on my {car_model}",
+            "hey, how's my car coming along?",
+            "wanted to see where y'all are at on the {car_model}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It's not done yet. {tech_name}'s on it now, he had to wait on a lift this morning. I'll have it {ready_time}, and I'll call you the minute it's finished.",
+              "{a_ok}, it's on the lift right now. Realistically it's {ready_time}, and I'd rather tell you that and beat it."
+            ],
+            "warm": [
+              "Oh, it's not quite done yet! They're working on it right now, it should be ready {ready_time}.",
+              "{a_ok}, so it's in the bay now! I'm thinking {ready_time}, I'll double-check."
+            ],
+            "curt": [
+              "Not yet. Should be {ready_time}.",
+              "They're on it. {ready_time}, maybe."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I was hoping to have it by lunch",
+            "that's later than I figured"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I hear you. I'd rather tell you {ready_time} and beat it than tell you lunch and miss it.",
+              "{a_sorry}. If something changes and it's sooner, you're my first call."
+            ],
+            "warm": [
+              "I know, I'm so sorry! I'll go push them a little.",
+              "I totally get it. I'll see if they can hurry it up!"
+            ],
+            "curt": [
+              "Can't do it before then.",
+              "Yeah. It's a busy day."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, just call me",
+            "okay. Call me when it's done"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ05",
+      "kind": "not_ready",
+      "title": "Not started: the car got pushed back",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [
+        "repeat_caller"
+      ],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I dropped it off {drop_day}, is it done?",
+            "y'all have had my {car_model} since {drop_day}, what's going on?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "No, and that's on us. We got backed up and it hasn't gone in yet. It's next on {tech_name}'s lift, and I'll have it done {ready_time}.",
+              "{a_sorry}, it hasn't been started. That's my fault for not calling you. It goes in next, and you'll have it {ready_time}."
+            ],
+            "warm": [
+              "Oh no, it — it hasn't gone back yet, I'm so sorry. We got really busy. It should be done {ready_time}.",
+              "{a_sorry}! It's been crazy here. It's next, I promise, and it should be ready {ready_time}."
+            ],
+            "curt": [
+              "Not yet. They ain't got to it.",
+              "Hasn't gone in yet."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "y'all have had it since {drop_day}",
+            "and nobody thought to call me?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "You're right. I'll stay on it myself, and if you need a ride anywhere in the meantime, tell me.",
+              "You should have heard from us. I'm putting a note on it, and I'll call you myself when it's done."
+            ],
+            "warm": [
+              "I know, I totally understand. I'll make sure it's next.",
+              "You're right, we should've called. I'm sorry!"
+            ],
+            "curt": [
+              "Yeah. We're backed up.",
+              "We're short a guy."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "just call me when it's done",
+            "alright. {ready_time}, then"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ06",
+      "kind": "not_ready",
+      "title": "Almost: on the road test now",
+      "outcome": "visit_agreed",
+      "agreed": false,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "6-8",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm on my lunch break, is my car done?",
+            "is it about ready? I'm close by"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It's out on the road test now. Give us a few minutes and you're good — come on and wait inside if you want.",
+              "{a_ok}, it's being road-tested as we speak. By the time you get here, it'll be parked out front."
+            ],
+            "warm": [
+              "Almost! They're just taking it for a quick drive. Come on over!",
+              "{a_yes}, it's just about done, he's driving it now!"
+            ],
+            "curt": [
+              "Almost.",
+              "He's driving it. Few minutes."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay, I'll head that way",
+            "alright, I'll wait"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ07",
+      "kind": "part_late",
+      "title": "The part is late; the advisor called the supplier",
+      "outcome": "callback_promised",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "recap_kind": "callback",
+      "tags": [
+        "repeat_caller"
+      ],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "did that part ever come in for my {car_model}?",
+            "I'm calling about the part y'all were waiting on"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Not yet. I called the parts house this morning and they show it on the truck for {part_eta}. When it lands, it's {job_duration} of work, and I'll call you either way.",
+              "{a_ok}, I checked with {vendor_name} myself, and the {part_name} is due {part_eta}. I'll call you the minute it's in the building."
+            ],
+            "warm": [
+              "Not yet! It should be here {part_eta}, I think. I'll call you when it comes in!",
+              "{a_sorry}, it's not here yet. They said {part_eta}!"
+            ],
+            "curt": [
+              "Not yet. Should be here {part_eta}.",
+              "Still on order. {part_eta}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "that's what y'all said last time",
+            "it's been on order forever"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I know. That's why I called them myself instead of guessing. If it slips again, I'll look for it somewhere else.",
+              "{a_sorry}. I've asked them to put it on the first run, and if it isn't on it, I'll find another supplier."
+            ],
+            "warm": [
+              "I know, I'm so sorry. I'll call them again today.",
+              "Ugh, I know. I'll stay on them, I promise."
+            ],
+            "curt": [
+              "Yeah. It's on order.",
+              "Can't make it come faster."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright. Call me when it's in",
+            "okay, let me know"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ08",
+      "kind": "part_late",
+      "title": "The part came in wrong",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "y'all said my part would be in today",
+            "is my car gonna be done? The part was supposed to come"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It came in, but it's the wrong one — they sent the part for the other engine. The right one's coming {part_eta}, and I've asked them to put it on the first run.",
+              "{a_sorry} — the {part_name} came, but it doesn't fit, it's for a different model year. The right one's due {part_eta}."
+            ],
+            "warm": [
+              "So — it came in, but it was the wrong one, ugh. The right one should be here {part_eta}!",
+              "{a_ok}, so they sent us the wrong part! The right one's coming {part_eta}."
+            ],
+            "curt": [
+              "Came in wrong. Next one's {part_eta}.",
+              "Wrong part. {part_eta} now."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "can I drive it till then?",
+            "so what do I do in the meantime?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "You can — {tech_name} put it back together so it's safe to drive. Come get it, and when the part's here it's a short visit.",
+              "{a_yes}, it's back together and fine to drive. I'll call you when the part's in and we'll book you back."
+            ],
+            "warm": [
+              "Um, I think so! Let me check with the guys — yeah, he says it's fine to drive.",
+              "{a_yes}, you can take it! We'll call you when the right one comes."
+            ],
+            "curt": [
+              "Yeah, you can drive it.",
+              "Come get it if you want."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay, I'll come get it {time_chosen}",
+            "alright. I'll be by {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ09",
+      "kind": "part_late",
+      "title": "Back-ordered: two choices",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "what's the holdup on my car?",
+            "is there any news on my {car_model}? It's been a while"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "The part's back-ordered from the maker. Two choices: we wait for the factory part, they're saying {part_eta}, or I can get an aftermarket one {ready_time}, a little cheaper, with our {warranty}. Which would you like?",
+              "{a_ok}, the factory {part_name} is on back order till {part_eta}. There's a good aftermarket one I can have {ready_time}. Your call."
+            ],
+            "warm": [
+              "So the part's on back order — they're saying {part_eta}. I'm so sorry! I can ask if there's another one?",
+              "{a_sorry}, the part's back-ordered! Do you want me to see if somebody else has one?"
+            ],
+            "curt": [
+              "Back-ordered. {part_eta}, they said.",
+              "Part's on back order."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "get whichever's quicker",
+            "I just need my car back. Whatever's fastest",
+            "the quicker one, I need it for work",
+            "do the aftermarket one if it's got a warranty",
+            "whatever gets it back to me this week"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay, I'm ordering the aftermarket one now, and you'll have it {ready_time}.",
+              "{a_yes}. I'll order it right after we hang up and call you when it's done."
+            ],
+            "warm": [
+              "Okay! I'll ask parts to find one today.",
+              "Okay, I'll get on it!"
+            ],
+            "curt": [
+              "Alright. I'll see.",
+              "I'll ask."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ10",
+      "kind": "extra_work",
+      "title": "Returning the call about found work: approved",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "somebody left me a message about my {car_model}?",
+            "I missed a call from y'all, something about my car"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_yes}, that was me. While it was up, {tech_name} found {found_reason}. I'd do the {found_job_said}; it's {found_price} plus tax, and if you okay it now it's done today. I can text you a picture.",
+              "{a_ok}, so — {tech_name} found {found_reason} while he had it apart. The {found_job_said} is {found_price}, and I'd recommend it."
+            ],
+            "warm": [
+              "{a_yes}! So, um, while they had it up, they found {found_reason}. It's {found_price} to do it.",
+              "Oh, hi! Yeah, so they found {found_reason}, and the {found_job_said} would be {found_price}."
+            ],
+            "curt": [
+              "Yeah. They found {found_reason}. {found_price}.",
+              "{found_job_said}. {found_price} to do it."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "does it have to be done now?",
+            "is that something that can wait?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It won't strand you this week, but it's past where I'd leave it, and doing it while it's apart saves you a visit.",
+              "If it were mine, I'd do it now. I'll show you the old part when you pick it up."
+            ],
+            "warm": [
+              "I mean, I would! But it's totally up to you.",
+              "Honestly I'd do it, but no pressure!"
+            ],
+            "curt": [
+              "Up to you.",
+              "Your call."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "go ahead and do it, then",
+            "alright, yeah, do it while it's there"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay, I'll add it. That means it's ready {ready_time}, and the total's {bill_total}.",
+              "{a_yes}. It'll be ready {ready_time}, {bill_total} out the door, and I'll call you."
+            ],
+            "warm": [
+              "Perfect! I'll let them know. It'll be ready {ready_time}!",
+              "Okay! I'll tell the guys."
+            ],
+            "curt": [
+              "Alright.",
+              "Okay. {ready_time}."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ11",
+      "kind": "extra_work",
+      "title": "What actually has to be done? Declined for now",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "y'all called about some more stuff on my car — what actually has to be done?",
+            "I got the list y'all sent. What's the must-do on there?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Fair question. The one I'd do now is the {found_job_said}, because {found_reason}. Everything else can wait till your next oil change, and I'll note it.",
+              "{a_ok}, the only one I'd call urgent is the {found_job_said} — {found_reason}. The rest is keep-an-eye-on-it."
+            ],
+            "warm": [
+              "So the big one is the {found_job_said}, they said {found_reason}. The rest can probably wait!",
+              "{a_ok}, so the main thing is {found_reason}. The other stuff isn't urgent."
+            ],
+            "curt": [
+              "{found_job_said}. Rest can wait.",
+              "The {found_job_said}. That's the one."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I can't do it this week. Just finish what I brought it in for",
+            "not right now. Just do the {job_said}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's fine. I'll finish the {job_said} and put the {found_job_said} on your paperwork with the price, {found_price}. It'll be ready {ready_time}.",
+              "{a_yes}. Just the {job_said}, then, ready {ready_time}, and the rest is written down for when you're ready."
+            ],
+            "warm": [
+              "Okay, totally! I'll just finish the {job_said}, it'll be ready {ready_time}.",
+              "No problem at all! Just the {job_said} then."
+            ],
+            "curt": [
+              "Okay.",
+              "Alright. Just that."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ12",
+      "kind": "extra_work",
+      "title": "I want to see it before I say yes",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "{ready_time}",
+      "tags": [],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "y'all said I need {found_job_said}. I'd like to see it before I say yes",
+            "before I okay that other thing, can I come look at it?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Absolutely. It's still on the lift — come by before {closing_time} and {tech_name} will show you, or I can text you a picture right now.",
+              "{a_yes}, please do. It's up in the air, and I'll have {tech_name} walk you through it."
+            ],
+            "warm": [
+              "Oh, totally! You can come look at it, it's still up.",
+              "{a_yes}, come on by! They'll show you."
+            ],
+            "curt": [
+              "It's on the lift. Come look.",
+              "Come look at it."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'll come by {time_chosen}",
+            "okay, I can get there {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ13",
+      "kind": "booking_moved",
+      "title": "The caller needs to move the appointment",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I've got an appointment {old_time} and I need to move it",
+            "I'm supposed to come in {old_time}, and something came up"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "No problem. I've got you {old_time} for the {job_said}. I can move you to {time_1}, or {time_2}.",
+              "{a_ok}, I see you. I can do {time_1} or {time_2} instead."
+            ],
+            "warm": [
+              "Oh, sure! Let me look — I have {time_1}, or {time_2}?",
+              "{a_yes}, no problem! Would {time_1} or {time_2} work?"
+            ],
+            "curt": [
+              "Yeah. When?",
+              "When you want to come?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "respond_offer",
+          "force": "pick_of_two"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Done, you're moved, and the old time's off the book.",
+              "{a_yes}, I've changed it."
+            ],
+            "warm": [
+              "Okay, you're all set!",
+              "Perfect, got you moved!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ14",
+      "kind": "booking_moved",
+      "title": "Calling to confirm, and the shop has to move it",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "just calling to make sure y'all still have me down for {old_time}",
+            "I wanted to check my appointment, it's {old_time}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "You're on, and I'm glad you called — the part we need won't be here till {part_eta}, so I'd rather move you than have you sit. Could you do {time_1} or {time_2}?",
+              "{a_sorry}, I was about to call you. The {part_name} won't be in till {part_eta}. Can we do {time_1} or {time_2}?"
+            ],
+            "warm": [
+              "{a_yes}! Oh — wait, um, it looks like your part won't be here yet. Can we move you?",
+              "{a_ok}, so — I'm so sorry, the part's late. Could you come another day?"
+            ],
+            "curt": [
+              "Yeah. Well — part ain't here. You'll have to come another day.",
+              "Part's not in. Have to move you."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I already took off work for it",
+            "well, I wish somebody'd called me"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_sorry}. If you want to keep the day, we can do the inspection then and the rest when the part lands — your call.",
+              "That's fair, and I should have called sooner. I'll give you the first slot after the part's here."
+            ],
+            "warm": [
+              "Oh no, I'm so sorry! Um — I'll see what I can do.",
+              "I know, I totally understand. I'm sorry!"
+            ],
+            "curt": [
+              "Can't help that.",
+              "Yeah, well."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "respond_offer",
+          "force": "pick_of_two"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ15",
+      "kind": "booking_moved",
+      "title": "Running late for the appointment",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm supposed to be there {old_time} and I'm running late",
+            "hey, I've got an appointment {old_time}, I'm stuck in traffic"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's okay. If you're here by {time_1}, I'll still get you in; if it's later than that, I'll slide you to {time_2}.",
+              "{a_ok}, thanks for calling. Come on — if you're here by {time_1} you keep your spot."
+            ],
+            "warm": [
+              "Oh, no worries! Just come when you can!",
+              "{a_ok}, totally fine, drive safe!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay. Come on."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm a little ways out still, but I'm coming",
+            "okay, I'll make it by then"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ16",
+      "kind": "pick_up",
+      "title": "Can I get it after closing?",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "agreed_time": "first thing in the morning",
+      "tags": [],
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "can I pick my car up after y'all close?",
+            "what if I can't get there before y'all close?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "We don't leave cars out with the keys in them, but if you can't make it by {closing_time}, it stays inside tonight and you get it at opening, no charge.",
+              "{a_sorry}, there's no after-hours pickup. It'll be safe inside overnight, though, and ready at opening."
+            ],
+            "warm": [
+              "Hmm, I don't think so — but it'll be safe inside overnight!",
+              "We can't leave keys out, I'm sorry! But it's right here first thing."
+            ],
+            "curt": [
+              "No. We close at {closing_time}.",
+              "Nope. Get it in the morning."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, I'll come first thing",
+            "okay, I'll get it first thing in the morning"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ17",
+      "kind": "pick_up",
+      "title": "Somebody else is picking it up",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "my husband's gonna pick up my car, is that okay?",
+            "my son's coming to get my {car_model}, I wanted y'all to know"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's fine. Tell him to bring his license, and I'll put a note on it. Is it paid, or will he pay at pickup?",
+              "{a_yes}, I'll note it on the ticket. Is he paying when he comes, or are you taking care of it?"
+            ],
+            "warm": [
+              "{a_yes}, totally fine! Just have him ask for me.",
+              "Oh, sure! I'll put a note on it."
+            ],
+            "curt": [
+              "Yeah. Have him bring the money.",
+              "That's fine."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "he'll pay when he gets there",
+            "I'll pay over the phone if I can"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay, it's {bill_total} out the door. We're here till {closing_time}.",
+              "{a_ok}, it comes to {bill_total}. He's got till {closing_time}."
+            ],
+            "warm": [
+              "Okay! It's {bill_total}.",
+              "Perfect, it's {bill_total} total!"
+            ],
+            "curt": [
+              "{bill_total}.",
+              "It's {bill_total}."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ18",
+      "kind": "pick_up",
+      "title": "Can somebody come get me?",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "can somebody come get me so I can pick up my car?",
+            "y'all said it's done — any way somebody could come pick me up?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "We can, if you're close. Where are you? I'll have somebody there {ready_time}.",
+              "{a_yes}, we run a shuttle when we can. Give me the address and I'll send somebody {ready_time}."
+            ],
+            "warm": [
+              "Um, let me check if somebody's free — I think so!",
+              "Oh, sure, let me see who's around!"
+            ],
+            "curt": [
+              "Maybe. We're short today.",
+              "Depends who's here."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm at work, it's not far, off the main road",
+            "I'm at the house, not far from y'all"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay, that works. Somebody'll be there {ready_time}, and I'll call you when they leave.",
+              "{a_ok}, I've got it down. Look for us {ready_time}."
+            ],
+            "warm": [
+              "Okay! Somebody'll come get you {ready_time}!",
+              "Perfect, we'll be there {ready_time}!"
+            ],
+            "curt": [
+              "Alright. {ready_time}.",
+              "Okay. {ready_time}."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ19",
+      "kind": "bill",
+      "title": "The bill is more than the quote",
+      "outcome": "callback_promised",
+      "agreed": true,
+      "recap_kind": "callback",
+      "tags": [
+        "price_objection"
+      ],
+      "turns": "12-18",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I got my bill and it's more than what I was told",
+            "the invoice don't match what y'all quoted me"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Let me look at it with you. Your estimate was {price} for the {job_said}; the bill's {bill_total}. The difference is {bill_line} and the tax. Did anybody tell you about the shop supplies?",
+              "{a_ok}, I've got both in front of me. The {job_said} is the price you were quoted; what's on top is {bill_line} and sales tax."
+            ],
+            "warm": [
+              "Oh no, okay — so it looks like it's, um, the tax and the shop supplies, I think.",
+              "{a_ok}, so — I think the difference is the tax? Let me look."
+            ],
+            "curt": [
+              "It's got tax on it.",
+              "That's tax and supplies."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "nobody said nothing about that",
+            "well, I wish somebody'd told me up front"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Then that's on us for not saying it. I'm writing it up for {manager_name}, and he'll call you {callback_time}.",
+              "You're right, it should have been said. I'll take it to {manager_name} today and you'll hear back {callback_time}."
+            ],
+            "warm": [
+              "{a_sorry}! I'll ask {manager_name} about it and call you back.",
+              "I totally understand. Let me talk to {manager_name}."
+            ],
+            "curt": [
+              "That's just how it's billed.",
+              "It's on every ticket."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright. I'll be waiting on that call",
+            "okay. {callback_time}, then"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ20",
+      "kind": "bill",
+      "title": "An itemized copy for the office",
+      "outcome": "callback_promised",
+      "agreed": false,
+      "tags": [],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I need a copy of the invoice, itemized, for my boss",
+            "can y'all send me the bill with the parts and labor split out?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Sure. I'll email it with parts and labor separate. What's the best email?",
+              "{a_yes}, I can do that. What email do you want it at?"
+            ],
+            "warm": [
+              "{a_yes}! What's your email?",
+              "Oh, sure, I can email that! What's the address?"
+            ],
+            "curt": [
+              "I can send it. Email?",
+              "Yeah. What's the email?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "it's {customer_email_said}",
+            "send it to {customer_email_said}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{customer_email_said}. You'll have it {callback_time}.",
+              "Got it — {customer_email_said}. It'll be in your inbox {callback_time}."
+            ],
+            "warm": [
+              "Okay, got it! I'll send it right now.",
+              "Perfect! Sending it over."
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ21",
+      "kind": "bill",
+      "title": "A charge the customer never approved",
+      "outcome": "callback_promised",
+      "agreed": true,
+      "recap_kind": "callback",
+      "tags": [
+        "customer_angry"
+      ],
+      "turns": "12-16",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "there's a charge on here I never okayed",
+            "I'm looking at my bill and there's stuff on it I didn't approve"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Which line is it? ... Okay, the {bill_line}. Let me check the notes for who approved it. ... I don't see an okay from you on that, so I'm taking it to {manager_name} today, and you'll hear from one of us {callback_time}.",
+              "{a_ok}, that's the {bill_line}. I don't have an approval on it in the notes, and you don't pay for what you didn't okay. I'll have it straightened out {callback_time}."
+            ],
+            "warm": [
+              "Oh! Um, let me find out who put that on there.",
+              "{a_sorry}! Which one is it? I'll ask about it."
+            ],
+            "curt": [
+              "Somebody okayed it.",
+              "It's on the ticket."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I want it off",
+            "well, I didn't okay it, and I'm not paying for it"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Understood. I'll call you {callback_time} with the corrected total.",
+              "{a_yes}. If nobody has your okay, it comes off, and I'll call you {callback_time}."
+            ],
+            "warm": [
+              "Okay, I totally understand. I'll call you back!",
+              "I'll get it figured out, I promise."
+            ],
+            "curt": [
+              "I'll have to ask.",
+              "I'll see."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ22",
+      "kind": "complaint",
+      "title": "A long wait for a short job",
+      "outcome": "callback_promised",
+      "agreed": true,
+      "recap_kind": "callback",
+      "tags": [
+        "complaint"
+      ],
+      "turns": "12-16",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I sat in your lobby half the day for a — for an oil change",
+            "I waited forever in there this morning and nobody said a word to me"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_sorry}. That shouldn't happen on a short job. We had a car come in on a tow, and somebody should have told you. I'm letting {manager_name} know, and he'll call you {callback_time}.",
+              "You're right to call. Nobody should sit that long without hearing from us. I'll write it up for {manager_name}, and next time call me and I'll have a bay open."
+            ],
+            "warm": [
+              "Oh my gosh, I'm so sorry! That's — I totally understand.",
+              "{a_sorry}, that's not okay. I'll tell {manager_name}!"
+            ],
+            "curt": [
+              "We were busy.",
+              "Had a lot of cars."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I took off work for that",
+            "that's my whole morning gone"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I know. I'll make sure {manager_name} calls you {callback_time}, and I'll tell him what you told me.",
+              "{a_sorry}. {manager_name} will call you {callback_time}, and I'll put a note on your file."
+            ],
+            "warm": [
+              "I know, I'm really sorry. I'll make sure he calls you.",
+              "I'll tell him, I promise."
+            ],
+            "curt": [
+              "Yeah. Sorry.",
+              "Won't happen again."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ23",
+      "kind": "complaint",
+      "title": "Grease on the seat",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [
+        "complaint"
+      ],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "y'all got grease all over my seat",
+            "there's black handprints on my steering wheel and my seat"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_sorry}. Bring it by and we'll get it cleaned properly, at our cost. Could you do {time_1} or {time_2}?",
+              "That's not how it should come back. We'll have it detailed, on us. Would {time_1} or {time_2} work?"
+            ],
+            "warm": [
+              "Oh no! I'm so sorry. Bring it back and we'll clean it!",
+              "{a_sorry}! We'll fix that, bring it by anytime!"
+            ],
+            "curt": [
+              "Bring it back, we'll wipe it.",
+              "Bring it by."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "respond_offer",
+          "force": "pick_of_two"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ24",
+      "kind": "complaint",
+      "title": "Nobody called when it was done",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [
+        "complaint",
+        "repeat_caller"
+      ],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "nobody called me when it was done, and I've been calling and nobody picks up",
+            "I've been waiting on a call all day about my {car_model}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_sorry}. You should have had a call from me. It's ready now — it's {bill_total}, and we're here till {closing_time}.",
+              "That's on us. It's been done a while and somebody should have called. It's {bill_total}, ready when you are."
+            ],
+            "warm": [
+              "Oh no, I'm so sorry! It's ready!",
+              "{a_sorry}, it's been a crazy day! It's all done."
+            ],
+            "curt": [
+              "Phone's been busy.",
+              "It's done."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright. I'll be there {time_chosen}",
+            "fine. I'm coming {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ25",
+      "kind": "comeback",
+      "title": "The same noise came back",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [
+        "complaint",
+        "warranty"
+      ],
+      "turns": "10-14",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "y'all did my {job_said} and it's doing the same thing again",
+            "I was just in there for the {job_said}, and it's back"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_sorry}. Bring it back and we'll look at it at no charge — if it's our work, it's covered, {warranty}. Can you do {time_1} or {time_2}?",
+              "That shouldn't be. I'll have {tech_name} look at it himself. Could you bring it {time_1} or {time_2}?"
+            ],
+            "warm": [
+              "Oh no! Okay, bring it back and they'll look at it!",
+              "{a_sorry}! Bring it in and we'll figure it out."
+            ],
+            "curt": [
+              "Bring it by.",
+              "Bring it back, we'll look."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm not paying for it twice",
+            "and this better not cost me anything"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "You won't. If it's what we fixed, it's on us.",
+              "{a_yes}, understood. If it's our repair, there's no charge."
+            ],
+            "warm": [
+              "No, no, we'll take care of you!",
+              "I'm sure it'll be covered!"
+            ],
+            "curt": [
+              "We'll see what it is.",
+              "Depends what it is."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "respond_offer",
+          "force": "pick_of_two"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ26",
+      "kind": "comeback",
+      "title": "The light came back on",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [
+        "warranty"
+      ],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "the check engine light come right back on",
+            "that light's back on, the one y'all just fixed"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "lookup"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. Did it come on the same day, or a few days later? If it's the same code, we stand behind it — bring it in and {tech_name} will scan it again, no charge.",
+              "{a_ok}. Is it steady or flashing? If it's steady, drive it in and we'll rescan it, no charge for the scan."
+            ],
+            "warm": [
+              "Oh no. Um — bring it in and we'll scan it again!",
+              "{a_sorry}! Can you bring it back by?"
+            ],
+            "curt": [
+              "Bring it in, we'll scan it.",
+              "Bring it by."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "it's steady. Came on yesterday",
+            "it's just on, not flashing"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Then let's get it rescanned. I can take it {time_1} or {time_2}.",
+              "{a_ok}, steady's fine to drive. Bring it {time_1}, or {time_2} if that's easier."
+            ],
+            "warm": [
+              "Okay! Could you bring it {time_1}, or {time_2}?",
+              "{a_ok}, I can do {time_1} or {time_2}!"
+            ],
+            "curt": [
+              "Bring it {time_1}. Or {time_2}.",
+              "{time_1} or {time_2}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "respond_offer",
+          "force": "pick_of_two"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ27",
+      "kind": "comeback",
+      "title": "A leak since the service",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [
+        "warranty"
+      ],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "there's oil on my driveway since y'all changed it",
+            "it's leaking since I picked it up"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Don't drive it far. Check the dipstick — if it's on the stick, bring it straight here and we'll put it up the moment you pull in.",
+              "{a_sorry}. Is it a few drops, or a puddle? Either way, bring it right in and I'll have {tech_name} put it up first thing."
+            ],
+            "warm": [
+              "Oh no! Um, bring it back and we'll look!",
+              "{a_sorry}! Can you bring it by today?"
+            ],
+            "curt": [
+              "Bring it back.",
+              "Bring it in."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "it's a few drops, it's not a puddle",
+            "it's a pretty good spot"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Then come on over {time_chosen}, and I'll have it up as soon as you're here.",
+              "{a_ok}, come {time_chosen}, and it goes right on the lift."
+            ],
+            "warm": [
+              "Okay! Come by {time_chosen}!",
+              "Okay, just bring it {time_chosen}!"
+            ],
+            "curt": [
+              "Bring it {time_chosen}.",
+              "{time_chosen}, then."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ28",
+      "kind": "lost_item",
+      "title": "Something left in the car, found",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I think I left my {lost_item} in the car when I dropped it off",
+            "did anybody see my {lost_item}? I can't find it"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Let me walk out and look... Okay, it's here, in the door pocket. I'll put it at the counter with your name on it.",
+              "Hang on, I'll go check the car... {a_yes}, got it. It'll be up front for you."
+            ],
+            "warm": [
+              "Oh! Let me go check! ... Found it!",
+              "Hold on one sec — {a_yes}! It's here!"
+            ],
+            "curt": [
+              "Lemme look... yeah, it's here.",
+              "It's here."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, thank goodness. I'll grab it {time_chosen}",
+            "okay, good. I'll come by {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ29",
+      "kind": "lost_item",
+      "title": "Something missing since the visit",
+      "outcome": "callback_promised",
+      "agreed": true,
+      "recap_kind": "callback",
+      "tags": [
+        "complaint"
+      ],
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "my {lost_item} is gone out of my truck since I got it back",
+            "I can't find my {lost_item} since y'all had my car"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_sorry}. Let me check the bay and the lot, and I'll ask {tech_name} if he moved it. I'll call you back {callback_time} either way.",
+              "I'll go look myself — the bay, the shelf where we put things, the lot. You'll hear from me {callback_time}."
+            ],
+            "warm": [
+              "Oh no, okay — I'll ask the guys!",
+              "{a_sorry}! Let me check and call you back."
+            ],
+            "curt": [
+              "I'll ask around.",
+              "Didn't see it."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay, call me",
+            "alright. Let me know"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "EJ30",
+      "kind": "lost_item",
+      "title": "The wheel-lock key",
+      "outcome": "visit_agreed",
+      "agreed": true,
+      "tags": [],
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I can't find my wheel lock key — did y'all leave it out somewhere?",
+            "the little key for my lug nuts, is it still there?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It might still be in the bay. Hang on... {a_yes}, {tech_name} has it, it was on his cart. I'll put it in an envelope at the counter.",
+              "Let me ask... {a_ok}, found it. {sir_maam}, it'll be at the front desk with your name on it."
+            ],
+            "warm": [
+              "Oh! Let me ask... yes! They have it!",
+              "Hang on — {a_yes}, it's here, sorry about that!"
+            ],
+            "curt": [
+              "Lemme look... yeah, it's here.",
+              "It's on the bench."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "good. I'll pick it up {time_chosen}",
+            "alright, I'll swing by {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    }
+  ],
+  "callback_recap": {
+    "about": "The recap of an agreed call back (outcome callback_promised): who calls, when, about what. Level 2 names all three, level 1 part of it, level 0 none. Spoken in the advisor's own fillers and address by the generator.",
+    "0": [
+      "Alright. Talk to you.",
+      "Okay, then.",
+      "Alright, we'll be in touch.",
+      "Okay. Bye for now."
+    ],
+    "1": [
+      "So you'll hear from us {callback_time}.",
+      "Somebody'll call you {callback_time}.",
+      "Okay, we'll call you back.",
+      "I'll get back to you {callback_time}."
+    ],
+    "2": [
+      "So: {manager_name} calls you {callback_time}, at this number, about the {bill_line}.",
+      "Okay — you'll get a call {callback_time} at this number, and it'll be about the {car_model}.",
+      "So I'll call you {callback_time} on this number with what I find out on the {car_model}.",
+      "Let me say it back: a call {callback_time}, at this number, about the {job_said} on the {car_model}."
+    ]
+  }
+}

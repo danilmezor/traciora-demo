@@ -1,0 +1,213 @@
+{
+ "path": "shops/README.md",
+ "title": "Три наших сервиса",
+ "title_en": "Our three shops",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The three shops side by side: bays, people, hours, time zone, who runs each.",
+ "serves": [
+  "S9",
+  "S13",
+  "S15",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate-shop-pages",
+  "operate:contradiction"
+ ],
+ "length_class": "medium",
+ "words_ru": 334,
+ "links_to": [
+  "shops/main/README.md",
+  "shops/east/README.md",
+  "shops/west/README.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Bays 6 / 4 / 4 (ledger site.bays ru); mechanics 6 / 4 / 4; advisors 4 / 2 / 2 (the flagship has a fourth advisor, slot 29, because desks run two on, two off: rule R12).",
+  "All three open every day 9:00-20:00; Kazan is on Moscow time, an hour behind; about 225 km by the Р-241, three and a half hours by road (ledger geo.distance, kb.shops.apart). Times on Kazan's pages and orders are Moscow time; the phone system shows each call in the reader's own time (S15.4: calls are stored as instants).",
+  "The two Ulyanovsk shops are on opposite banks of the Volga: half an hour over the bridge (the cast names the Президентский мост).",
+  "The Monday meeting at 8:15 Ulyanovsk time is 7:15 in Kazan, an hour and three quarters before it opens (ledger s9.meeting): the page gives the fact, not the conclusion.",
+  "A line on the two-on, two-off desks: one advisor a day at the two smaller shops."
+ ],
+ "new_facts": [
+  "Half an hour between the two Ulyanovsk shops, bridge permitting; about three and a half hours to Kazan (ledger kb.shops.apart)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Road distance Ulyanovsk to Kazan \"about 240 km\" is unverified in the research (snippets give 209 to 240).",
+   "outcome": "corrected",
+   "note": "Measured, and the page and the ledger changed: about 225 km by the Р-241, three and a half hours (ledger geo.distance, kb.shops.apart). OSRM routing on OpenStreetMap, 2026-11-14: city centre to centre 225.7 km, 3 h 31 min (Р-241 for 179 km, then the М-7); shop to shop 223.1 km. The earlier 240 km was too long; the 243 and 250.9 km of the first pass were a travel site and a coach route between bus stations. Verify pass, section 7.",
+   "url": "https://router.project-osrm.org/route/v1/driving/"
+  }
+ ],
+ "tables": [
+  {
+   "section": "Три наших сервиса",
+   "columns": [
+    "",
+    "Московское шоссе",
+    "Инженерный",
+    "Техническая"
+   ],
+   "rows": [
+    [
+     "Город",
+     "Ульяновск",
+     "Ульяновск, Заволжье",
+     "Казань"
+    ],
+    [
+     "Наш с",
+     "Николай Петрович открыл его 30 лет назад",
+     "Открыли 11 лет назад",
+     "Купили: {{@purchase|month}}"
+    ],
+    [
+     "Постов",
+     "6",
+     "4",
+     "4"
+    ],
+    [
+     "Механиков",
+     "6",
+     "4",
+     "4"
+    ],
+    [
+     "Мастеров-приёмщиков",
+     "4",
+     "2",
+     "2"
+    ],
+    [
+     "Руководит",
+     "Сергей Анатольевич Мельников, руководитель сервиса",
+     "Сергей Анатольевич Мельников; приёмку ведёт Светлана Юрьевна Демидова",
+     "Ринат Фаридович Галиев, руководитель СТО"
+    ],
+    [
+     "Часы",
+     "ежедневно 9:00–20:00",
+     "ежедневно 9:00–20:00",
+     "ежедневно 9:00–20:00"
+    ],
+    [
+     "Время",
+     "ульяновское",
+     "ульяновское",
+     "московское"
+    ],
+    [
+     "Телефон",
+     "+7 (8422) 10-40-40",
+     "+7 (8422) 10-40-41",
+     "+7 (843) 100-40-30"
+    ],
+    [
+     "Страницы",
+     "Московское шоссе",
+     "Инженерный",
+     "Техническая"
+    ]
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Что из этой таблицы следует",
+   "item": "Казань отстаёт на час. Когда в Ульяновске 10:00, там 9:00. Их открытие в 9:00 — это наши 10:00. Любое время на их страницах и в их нарядах — их собственное, московское; звонки телефония показывает по вашему времени."
+  },
+  {
+   "section": "Что из этой таблицы следует",
+   "item": "Московское шоссе и Инженерный — одна бригада в двух зданиях на разных берегах Волги: полчаса через Президентский мост, если он не стоит. Сергей Анатольевич составляет оба графика как один, Марат Аюпов работает на обеих площадках, мастера-приёмщика могут отправить на день через мост. Павел Мещеряков закупает запчасти для обеих, а бухгалтерия на Московском шоссе ведёт все три сервиса."
+  },
+  {
+   "section": "Что из этой таблицы следует",
+   "item": "До Технической около 225 километров по трассе Р-241, три с половиной часа на машине. Там свой график, свой заказ запчастей и свои привычки, записанные на их страницах. Если их страница расходится с правилом компании, действует правило, а страница устарела."
+  },
+  {
+   "section": "Что из этой таблицы следует",
+   "item": "Гибриды, новый хладагент для кондиционеров и сложная диагностика — только на Московском шоссе."
+  },
+  {
+   "section": "Что из этой таблицы следует",
+   "item": "Мастера-приёмщики везде работают два через два. На Инженерном и на Технической на приёмке каждый день один человек, на Московском шоссе — двое."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович Галиев",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "21",
+   "written_as": "Марат Аюпов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}",
+  "{{@purchase|month}}",
+  "{{@purchase+1mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

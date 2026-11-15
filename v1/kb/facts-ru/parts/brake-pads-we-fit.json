@@ -1,0 +1,125 @@
+{
+ "path": "parts/brake-pads-we-fit.md",
+ "title": "Какие колодки мы ставим",
+ "title_en": "Brake pads we fit",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/brake-pads-we-fit.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "The pad lines by tier and the parts manager's warning about the Nashville supplier's house brand (S6).",
+ "serves": [
+  "S6",
+  "S1",
+  "challenge:combine-kb-and-data",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 155,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Pad set prices of the Russian catalogue (reference Hyundai Solaris): premium TRW 3 770, standard Sangsin Hi-Q 2 660, economy Marshall 1 720.",
+  "The cheap pad is BREMHOF (ledger s6.brand), 1 250 RUB a set, the house brand of V2, fitted in Kazan only; the economy pad costs 470 RUB more."
+ ],
+ "new_facts": [
+  "The 470 RUB difference is arithmetic on catalogue prices."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Какие колодки мы ставим",
+   "columns": [
+    "Категория",
+    "Колодки",
+    "Комплект"
+   ],
+   "rows": [
+    {
+     "Категория": "Премиум",
+     "Колодки": "TRW",
+     "Комплект": "3 770 ₽"
+    },
+    {
+     "Категория": "Стандарт",
+     "Колодки": "Sangsin Hi-Q",
+     "Комплект": "2 660 ₽"
+    },
+    {
+     "Категория": "Эконом",
+     "Колодки": "Marshall",
+     "Комплект": "1 720 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "part list price each: Колодки тормозные передние, комплект",
+   "tier": "premium",
+   "qty": 1,
+   "unit": "к-т",
+   "brand": "TRW",
+   "value": 3770
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "part list price each: Колодки тормозные передние, комплект",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "к-т",
+   "brand": "Sangsin Hi-Q",
+   "value": 2660
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "part list price each: Колодки тормозные передние, комплект",
+   "tier": "economy",
+   "qty": 1,
+   "unit": "к-т",
+   "brand": "Marshall",
+   "value": 1720
+  }
+ ],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V2",
+   "name": "Казань-АвтоСнаб"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "amounts": [
+  470.0,
+  1250.0,
+  1720.0,
+  2660.0,
+  3770.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

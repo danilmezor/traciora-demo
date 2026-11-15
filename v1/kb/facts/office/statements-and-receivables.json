@@ -1,0 +1,100 @@
+{
+ "path": "office/statements-and-receivables.md",
+ "title": "Statements and receivables",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "How company-account statements are issued and payments applied.",
+ "serves": [
+  "S1",
+  "S16",
+  "S15",
+  "visibility:middle"
+ ],
+ "length_class": "short",
+ "words_en": 222,
+ "links_to": [
+  "accounts/credit/credit-limits-and-collections.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "One statement per account on the first working day for the previous month (ERP statement).",
+  "A1's invoices need the purchase-order number before the statement goes; A2 gets paper by post; others by e-mail.",
+  "Payments are applied to the statement, not to single orders (design 2.4; ERP mess kind 6).",
+  "Short payments are applied, noted and queried the same day; disputed invoices go to slot 4.",
+  "Receivables are reviewed every Monday against the four collection steps.",
+  "Days-to-pay is in the data (statement issued and paid dates), not on the page."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Issuing",
+   "item": "First working day of the month, one statement per account, for every invoice of the month before."
+  },
+  {
+   "section": "Issuing",
+   "item": "Before Nickajack Delivery's statement goes: every invoice has their purchase-order number. One without it is held back and I ask the advisor who wrote it. Their accounts payable returns the whole statement otherwise."
+  },
+  {
+   "section": "Issuing",
+   "item": "Millsaps Heating & Plumbing receives theirs on paper, by post, with the invoices attached. Everyone else by e-mail to the address on the account."
+  },
+  {
+   "section": "Applying payments",
+   "item": "A payment is applied to the statement, not to single orders. One check commonly pays twenty invoices."
+  },
+  {
+   "section": "Applying payments",
+   "item": "A short payment: apply it, note which invoices were left out, and ask why the same day. It is usually a missing purchase-order number or a disputed line."
+  },
+  {
+   "section": "Applying payments",
+   "item": "A disputed invoice goes to Greg with the order number the day it is raised. The rest of the statement stays due."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Nickajack Delivery"
+  },
+  {
+   "account": "A2",
+   "name": "Millsaps Heating & Plumbing"
+  }
+ ],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: акты and счета per order; акт сверки quarterly; payments by платёжное поручение naming the invoice numbers."
+ ]
+}

@@ -1,0 +1,1255 @@
+{
+ "_what": "the 64 shift change requests since G (ledger s14.requests)",
+ "requests": [
+  {
+   "id": "R01",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-23.thu",
+   "reason": "court thing for the boys at 8. in by 9:30",
+   "status": "approved",
+   "proposed": {
+    "start": "09:30",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "19:42"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R02",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-21.fri",
+   "reason": "need fri off. got the kids",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "20:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:35",
+    "note": "Two are already off that Friday. I can't spare a third."
+   }
+  },
+  {
+   "id": "R03",
+   "slot": "11",
+   "kind": "change_date",
+   "shift": "W-22.sat",
+   "reason": "cant do this sat. swap w luis, he said ok",
+   "status": "approved",
+   "proposed": {
+    "date": "W-21.sat"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "12:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:00",
+    "note": null
+   },
+   "saturday_turn": true
+  },
+  {
+   "id": "R04",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-17.tue",
+   "reason": "my trucks at the body shop till 9. start 9:30?",
+   "status": "declined",
+   "proposed": {
+    "start": "09:30",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 4,
+    "at": "21:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Third late start this month. 7:30."
+   }
+  },
+  {
+   "id": "R05",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-14.mon",
+   "reason": "need tmrw off. kid sick",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 1,
+    "at": "21:40"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R06",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-11.wed",
+   "reason": "boys start at the new school, drop off at 8. in by 8:45",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "18:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:45",
+    "note": null
+   }
+  },
+  {
+   "id": "R07",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-9.fri",
+   "reason": "long weekend w the boys",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "19:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Kevin is on leave both weeks. Nobody else comes off the floor."
+   }
+  },
+  {
+   "id": "R08",
+   "slot": "11",
+   "kind": "change_date",
+   "shift": "W-8.sat",
+   "reason": "cant sat. swap w luis?",
+   "status": "declined",
+   "proposed": {
+    "date": "W-7.sat"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "13:02"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:50",
+    "note": "Luis worked your last two. Ask Terry, or work it."
+   },
+   "saturday_turn": true
+  },
+  {
+   "id": "R09",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-4.thu",
+   "reason": "parent teacher thing at 7:45. in by 9",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "20:48"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R10",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-2.fri",
+   "reason": "taking the kids to their grandmas fri",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 3,
+    "at": "17:55"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:25",
+    "note": "Three days' notice. The rule is seven."
+   }
+  },
+  {
+   "id": "R11",
+   "slot": "F2",
+   "kind": "change_time",
+   "shift": "W-22.wed",
+   "reason": "running behind this week. can I do 9 to 5:30 wed",
+   "status": "declined",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 2,
+    "at": "22:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "No. 7:30, like everyone."
+   }
+  },
+  {
+   "id": "R12",
+   "slot": "F2",
+   "kind": "remove",
+   "shift": "W-19.mon",
+   "reason": "not gonna make it tomorrow",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 1,
+    "at": "23:10"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R13",
+   "slot": "15",
+   "kind": "change_time",
+   "shift": "W-21.mon",
+   "reason": "Daycare doesn't open till 7 on Mondays this month. Could I do 8 to 4:30 that day? I'll stay late!",
+   "status": "approved",
+   "proposed": {
+    "start": "08:00",
+    "end": "16:30"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "16:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:50",
+    "note": null
+   }
+  },
+  {
+   "id": "R14",
+   "slot": "15",
+   "kind": "change_time",
+   "shift": "W-16.thu",
+   "reason": "School picture day, I drop her at 7:45. 8:15 start ok? Sorry!!",
+   "status": "approved",
+   "proposed": {
+    "start": "08:15",
+    "end": "16:45"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "16:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R15",
+   "slot": "15",
+   "kind": "remove",
+   "shift": "W-10.fri",
+   "reason": "Taking my girl to her grandma's in Dayton for the long weekend",
+   "status": "withdrawn",
+   "filed": {
+    "days_before_shift": 10,
+    "at": "16:30"
+   },
+   "withdrawn": {
+    "days_after_filing": 2,
+    "at": "07:10"
+   }
+  },
+  {
+   "id": "R16",
+   "slot": "15",
+   "kind": "change_time",
+   "shift": "W-3.wed",
+   "reason": "Hwy 27 is down to one lane all week. 8:00 start till it's done? I'll make it up!",
+   "status": "declined",
+   "proposed": {
+    "start": "08:00",
+    "end": "16:30"
+   },
+   "filed": {
+    "days_before_shift": 5,
+    "at": "16:12"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Leave ten minutes earlier, Cody. 7:30."
+   }
+  },
+  {
+   "id": "R17",
+   "slot": "12",
+   "kind": "remove",
+   "shift": "W-18.fri",
+   "reason": "My cousin's wedding is Friday in Dalton. I can work that Saturday if it helps.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 14,
+    "at": "12:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R18",
+   "slot": "12",
+   "kind": "change_time",
+   "shift": "W-6.tue",
+   "reason": "Dentist at 3. Could I leave at 2:30?",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "14:30"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "12:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:10",
+    "note": null
+   }
+  },
+  {
+   "id": "R19",
+   "slot": "13",
+   "kind": "change_time",
+   "shift": "W-13.wed",
+   "reason": "Revival week at church, and I am due there by four on the Wednesday. I would like to leave at three.",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "15:00"
+   },
+   "filed": {
+    "days_before_shift": 12,
+    "at": "16:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R20",
+   "slot": "13",
+   "kind": "remove",
+   "shift": "W-5.mon",
+   "reason": "My wife has her eye surgery Monday morning and I am her ride there and back.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 11,
+    "at": "16:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:35",
+    "note": null
+   }
+  },
+  {
+   "id": "R21",
+   "slot": "14",
+   "kind": "change_time",
+   "shift": "W-9.thu",
+   "reason": "registration thing at chatt state thurs at 8, can i come in at 10",
+   "status": "approved",
+   "proposed": {
+    "start": "10:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "21:14"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:45",
+    "note": null
+   }
+  },
+  {
+   "id": "R22",
+   "slot": "14",
+   "kind": "remove",
+   "shift": "W-1.thu",
+   "reason": "my buddys moving thurs, could i get it off",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 3,
+    "at": "20:50"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "The diagnostic bay is backed up and Luis needs you. Next time give me a week."
+   }
+  },
+  {
+   "id": "R23",
+   "slot": "19",
+   "kind": "remove",
+   "shift": "W-12.fri",
+   "reason": "Band has a paying gig in Knoxville Friday night, load-in is at 2.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 10,
+    "at": "17:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R24",
+   "slot": "19",
+   "kind": "change_time",
+   "shift": "W-3.mon",
+   "reason": "Late gig Sunday. 9 start Monday?",
+   "status": "declined",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 4,
+    "at": "17:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": "No. Monday morning is the Millsaps vans."
+   }
+  },
+  {
+   "id": "R25",
+   "slot": "20",
+   "kind": "change_time",
+   "shift": "W-19.tue",
+   "reason": "Need to leave at 3 Tuesday. Appointment.",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "15:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "22:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:10",
+    "note": null
+   }
+  },
+  {
+   "id": "R26",
+   "slot": "20",
+   "kind": "remove",
+   "shift": "W-11.mon",
+   "reason": "Truck's at the dealer Monday, no ride.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 7,
+    "at": "23:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R27",
+   "slot": "20",
+   "kind": "change_time",
+   "shift": "W-6.fri",
+   "reason": "Could I do 9 to 5:30 Friday. Late night Thursday.",
+   "status": "declined",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 3,
+    "at": "23:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:05",
+    "note": "That is not a reason, Austin."
+   }
+  },
+  {
+   "id": "R28",
+   "slot": "20",
+   "kind": "change_time",
+   "shift": "W-2.thu",
+   "reason": "can i come in at 9 tmrw. didnt sleep",
+   "status": "expired",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 1,
+    "at": "23:50"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R29",
+   "slot": "21",
+   "kind": "remove",
+   "shift": "W-22.fri",
+   "reason": "My son's team has a tournament in Cleveland on Friday, first game at noon.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "18:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R30",
+   "slot": "21",
+   "kind": "change_time",
+   "shift": "W-18.fri",
+   "reason": "Game at 3 on Friday. Could I go at 1:30? I'm at 6340 Bonny Oaks that day.",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "13:30"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "18:02"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R31",
+   "slot": "21",
+   "kind": "remove",
+   "shift": "W-13.fri",
+   "reason": "All-star game Friday, would love to be there for all of it.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 8,
+    "at": "18:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:35",
+    "note": "You had the last two Fridays, and Andre is off this one."
+   }
+  },
+  {
+   "id": "R32",
+   "slot": "21",
+   "kind": "change_time",
+   "shift": "W-9.fri",
+   "reason": "First game of the new season is Friday at 4. Out by 2?",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "14:00"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "18:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R33",
+   "slot": "21",
+   "kind": "remove",
+   "shift": "W-5.fri",
+   "reason": "Playoffs, Friday at 1 in Ooltewah. Could I have the day? Happy to take a Saturday for it.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 10,
+    "at": "18:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R34",
+   "slot": "21",
+   "kind": "change_time",
+   "shift": "W-1.fri",
+   "reason": "Last game of the season, Friday at 4. Leave at 2?",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "14:00"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "18:00"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R35",
+   "slot": "9",
+   "kind": "remove",
+   "shift": "W-8.mon",
+   "reason": "Jury duty Monday, Hamilton County. Summons is on Donna's desk.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 12,
+    "at": "08:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "o+2:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R36",
+   "slot": "6",
+   "kind": "change_time",
+   "shift": "W-20.wed",
+   "reason": "Dentist at 8, back by 10. Could I work 10 to 5:30 that day?",
+   "status": "approved",
+   "proposed": {
+    "start": "10:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "12:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R37",
+   "slot": "6",
+   "kind": "remove",
+   "shift": "W-14.fri",
+   "reason": "My sister graduates in Atlanta on the Friday and I'd love to be there!",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 15,
+    "at": "12:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:20",
+    "note": null
+   }
+  },
+  {
+   "id": "R38",
+   "slot": "6",
+   "kind": "change_time",
+   "shift": "W-7.mon",
+   "reason": "Signing my new lease at 4:30. Could I take the early shift that day?",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "16:00"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "12:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:45",
+    "note": null
+   }
+  },
+  {
+   "id": "R39",
+   "slot": "6",
+   "kind": "remove",
+   "shift": "W-3.thu",
+   "reason": "A friend is flying in Thursday and I was hoping for a long weekend.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "12:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:50",
+    "note": "That is the first week of the early desk. I need all three of you on it."
+   }
+  },
+  {
+   "id": "R40",
+   "slot": "7",
+   "kind": "change_time",
+   "shift": "W-10.tue",
+   "reason": "DMV appointment at 4:15, it was the only slot they had. Could I leave at 3:45?",
+   "status": "declined",
+   "proposed": {
+    "start": "07:30",
+    "end": "15:45"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "17:35"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": "Tuesday afternoons you are the only one on the late phones. Book the DMV for a Saturday."
+   }
+  },
+  {
+   "id": "R41",
+   "slot": "7",
+   "kind": "change_date",
+   "shift": "W-5.sat",
+   "reason": "Could I take the Saturday before instead? Family thing on mine.",
+   "status": "approved",
+   "proposed": {
+    "date": "W-6.sat"
+   },
+   "filed": {
+    "days_before_shift": 14,
+    "at": "17:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": null
+   },
+   "saturday_turn": true
+  },
+  {
+   "id": "R42",
+   "slot": "29",
+   "kind": "remove",
+   "shift": "W-16.sat",
+   "reason": "It is our anniversary, and Ron has the boat booked on Chickamauga Lake.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 16,
+    "at": "10:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-2:00",
+    "note": null
+   },
+   "saturday_turn": true
+  },
+  {
+   "id": "R43",
+   "slot": "29",
+   "kind": "change_time",
+   "shift": "W-9.tue",
+   "reason": "I have the eye doctor at 3:30. Could I come 7:30 to 3:00 instead?",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "15:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "10:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R44",
+   "slot": "29",
+   "kind": "remove",
+   "shift": "W-2.sat",
+   "reason": "The grandchildren are in town that weekend.",
+   "status": "withdrawn",
+   "filed": {
+    "days_before_shift": 12,
+    "at": "10:20"
+   },
+   "withdrawn": {
+    "days_after_filing": 3,
+    "at": "09:30"
+   },
+   "saturday_turn": true
+  },
+  {
+   "id": "R45",
+   "slot": "17",
+   "kind": "change_time",
+   "shift": "W-21.thu",
+   "reason": "Cable guy's window is 8 to 10 Thursday. In by 10?",
+   "status": "approved",
+   "proposed": {
+    "start": "10:00",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "17:45"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:20",
+    "note": null
+   }
+  },
+  {
+   "id": "R46",
+   "slot": "17",
+   "kind": "remove",
+   "shift": "W-12.fri",
+   "reason": "Buddy's bachelor weekend in Gatlinburg, we leave Friday morning.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 11,
+    "at": "17:50"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:20",
+    "note": "Angie is off that Friday. One from a counter at a time."
+   }
+  },
+  {
+   "id": "R47",
+   "slot": "17",
+   "kind": "remove",
+   "shift": "W-8.wed",
+   "reason": "Moving apartments Wednesday, the truck's booked.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 7,
+    "at": "17:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": "Angie is at the dentist that morning and I am at East Main. Move on the weekend."
+   }
+  },
+  {
+   "id": "R48",
+   "slot": "17",
+   "kind": "change_time",
+   "shift": "W-4.tue",
+   "reason": "Parent night at my kid's daycare starts at 4. Out by 3:30?",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "15:30"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "17:42"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:20",
+    "note": null
+   }
+  },
+  {
+   "id": "R49",
+   "slot": "16",
+   "kind": "remove",
+   "shift": "W-7.fri",
+   "reason": "My mother's knee surgery is that Friday in Dalton and I'm driving her. Josh has my call-backs and the two estimates that are still out.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "16:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R50",
+   "slot": "16",
+   "kind": "remove",
+   "shift": "S5>=p16",
+   "reason": "I've marked the week unavailable: our daughter's wedding is that Saturday in Savannah and we drive down on the first day. This shift was already published. Josh knows, and my customers for these days are on the list by the phone.",
+   "status": "open",
+   "filed": {
+    "at": "p16-3@o+1:05"
+   }
+  },
+  {
+   "id": "R51",
+   "slot": "16",
+   "kind": "remove",
+   "shift": "S5>=p16>p16",
+   "reason": "Same week, the second published day. I would rather hand over properly than call in.",
+   "status": "open",
+   "filed": {
+    "at": "p16-3@o+1:08"
+   }
+  },
+  {
+   "id": "R52",
+   "slot": "23",
+   "kind": "remove",
+   "shift": "W-20.mon",
+   "reason": "Need Monday off. Doctor's appointment in Franklin.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 4,
+    "at": "17:10"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 0,
+    "at": "c-0:40",
+    "note": "ok"
+   }
+  },
+  {
+   "id": "R53",
+   "slot": "23",
+   "kind": "change_time",
+   "shift": "W-12.thu",
+   "reason": "Kid's school thing Thursday at 8. In by 9:30.",
+   "status": "expired",
+   "proposed": {
+    "start": "09:30",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 5,
+    "at": "17:20"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R54",
+   "slot": "23",
+   "kind": "remove",
+   "shift": "W-4.fri",
+   "reason": "Hunting weekend, want to get to camp Friday.",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 6,
+    "at": "17:05"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R55",
+   "slot": "24",
+   "kind": "change_time",
+   "shift": "W-15.wed",
+   "reason": "Dental cleaning at 7:40 a.m., the only opening for two months. I would work 9:30 to 5:30 and close.",
+   "status": "approved",
+   "proposed": {
+    "start": "09:30",
+    "end": "17:30"
+   },
+   "filed": {
+    "days_before_shift": 12,
+    "at": "12:15"
+   },
+   "decided": {
+    "by": 2,
+    "at": "W-15.tue@11:20",
+    "note": "Approved. Sorry this sat for a week."
+   }
+  },
+  {
+   "id": "R56",
+   "slot": "24",
+   "kind": "remove",
+   "shift": "W-6.mon",
+   "reason": "Jury summons for Monday, Davidson County. I will know Friday whether I'm excused.",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 11,
+    "at": "12:30"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R57",
+   "slot": "26",
+   "kind": "change_time",
+   "shift": "W-14.fri",
+   "reason": "leaving at 2 fri. got tickets to the game",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "14:00"
+   },
+   "filed": {
+    "days_before_shift": 2,
+    "at": "06:55"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 0,
+    "at": "o+1:00",
+    "note": "ok"
+   }
+  },
+  {
+   "id": "R58",
+   "slot": "26",
+   "kind": "remove",
+   "shift": "W-3.mon",
+   "reason": "long weekend. camp",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 5,
+    "at": "16:20"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R59",
+   "slot": "27",
+   "kind": "change_time",
+   "shift": "W-18.tue",
+   "reason": "Got my boys ball team at 4 on Tuesdays thru June, can I get off at 3 this Tues",
+   "status": "approved",
+   "proposed": {
+    "start": "07:30",
+    "end": "15:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "16:30"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "fine"
+   }
+  },
+  {
+   "id": "R60",
+   "slot": "27",
+   "kind": "remove",
+   "shift": "W-9.fri",
+   "reason": "District tournament friday in Murfreesboro, Im coaching",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 8,
+    "at": "16:35"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 2,
+    "at": "o+0:30",
+    "note": "ok"
+   }
+  },
+  {
+   "id": "R61",
+   "slot": "28",
+   "kind": "change_date",
+   "shift": "W-20.wed",
+   "reason": "exam wednesday at 9. could i work thursday that week instead? sorry if thats a pain",
+   "status": "expired",
+   "proposed": {
+    "date": "W-20.thu"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "21:30"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R62",
+   "slot": "28",
+   "kind": "change_date",
+   "shift": "W-14.fri",
+   "reason": "exam week, my last one is friday. could i do tuesday instead?",
+   "status": "approved",
+   "proposed": {
+    "date": "W-14.tue"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "21:10"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 3,
+    "at": "o+0:40",
+    "note": "ok"
+   }
+  },
+  {
+   "id": "R63",
+   "slot": "28",
+   "kind": "remove",
+   "shift": "W-14.mon",
+   "reason": "exam week, the engine performance exam is monday at 8. i asked about friday already, this is the other one",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 6,
+    "at": "21:15"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": "Can't lose you two days that week."
+   }
+  },
+  {
+   "id": "R64",
+   "slot": "28",
+   "kind": "change_date",
+   "shift": "W-4.wed",
+   "reason": "electrical exam wed morning. thursday ok instead? i checked, mr gary is fine with it",
+   "status": "expired",
+   "proposed": {
+    "date": "W-4.thu"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "21:25"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  }
+ ]
+}

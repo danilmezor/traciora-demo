@@ -1,0 +1,103 @@
+{
+ "path": "office/statements-and-receivables.md",
+ "title": "Счета, акты и дебиторка",
+ "title_en": "Statements and receivables",
+ "exists_in": "both",
+ "english_sheet": "facts/office/statements-and-receivables.json",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "How company-account statements are issued and payments applied.",
+ "serves": [
+  "S1",
+  "S16",
+  "S15",
+  "visibility:middle"
+ ],
+ "length_class": "short",
+ "words_ru": 222,
+ "links_to": [
+  "accounts/credit/credit-limits-and-collections.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "One invoice with its closing document per order, issued when the order closes (ledger acct.ru_documents, acct.A1.days_to_pay.ru); a reconciliation act quarterly and on request. No monthly statement.",
+  "A payment is applied to the invoices named in the payment order; one payment often closes several (ledger s15.mess: a payment covering several orders).",
+  "A1's documents wait for the request number; A2 gets paper originals weekly with a driver."
+ ],
+ "new_facts": [
+  "A reconciliation act to every account once a quarter (S16's attachment is A1's latest reconciliation)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Выставление",
+   "item": "По каждому закрытому наряду корпоративного клиента — счёт и УПД, либо акт со счётом-фактурой, как в договоре. В день закрытия наряда или на следующий рабочий день."
+  },
+  {
+   "section": "Выставление",
+   "item": "«Симбирский гонец»: прежде чем отправить документы, проверяю, что в наряде стоит номер их заявки. Нет номера — документы не уходят, а я спрашиваю мастера-приёмщика, который вёл наряд. Иначе их бухгалтерия вернёт счёт неоплаченным."
+  },
+  {
+   "section": "Выставление",
+   "item": "«Тёплый контур» получает оригиналы на бумаге, раз в неделю, с водителем. Остальным отправляю через ЭДО или на почту бухгалтерии."
+  },
+  {
+   "section": "Оплаты",
+   "item": "Оплату разношу по тем счетам, которые названы в платёжном поручении. Одной платёжкой нередко закрывают десяток счетов."
+  },
+  {
+   "section": "Оплаты",
+   "item": "Заплатили меньше, чем выставлено, — разношу, отмечаю, какие счета остались, и в тот же день спрашиваю почему. Обычно дело в номере заявки или в спорной строке."
+  },
+  {
+   "section": "Оплаты",
+   "item": "Спорный счёт в тот же день передаю Сергею Анатольевичу, с номером наряда. Остальные счета остаются к оплате."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Симбирский гонец"
+  },
+  {
+   "account": "A2",
+   "name": "Тёплый контур"
+  }
+ ],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

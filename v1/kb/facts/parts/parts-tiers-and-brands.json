@@ -1,0 +1,148 @@
+{
+ "path": "parts/parts-tiers-and-brands.md",
+ "title": "Parts tiers and brands",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "The three tiers and which brand we quote in each, by line.",
+ "serves": [
+  "S6",
+  "challenge:fact-in-table",
+  "challenge:customer-terms"
+ ],
+ "length_class": "medium",
+ "words_en": 271,
+ "links_to": [
+  "prices/price-list.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Default quote is the standard tier; premium offered to long-term keepers; economy on request.",
+  "Brand table by line and tier, taken from the catalogue's brands and part options (pads ACDelco Silver / Wagner ThermoQuiet / Akebono ProACT; rotors Centric C-TEK / Bosch QuietCast / Centric Premium; struts FCS, Gabriel / Monroe / KYB; chassis Mevotech / Moog / original; filters ECOGARD / WIX / original; belts and kits Dayco, GMB / Gates / Aisin; ignition and sensors Autolite, Delphi, Bosch / NGK-NTK, Standard Motor Products / Denso; batteries Interstate MT / MTP / MTX; oil blend / full synthetic / Mobil 1; tyres Milestar / Hankook / Michelin).",
+  "Tier is per job; no mixing inside an axle or pair; stop-start cars take AGM.",
+  "A brand not in the table was not chosen: substitution needs a call to slot 9 (the cheap Nashville pad is not in the table)."
+ ],
+ "tables": [
+  {
+   "section": "Parts tiers and brands",
+   "columns": [
+    "Line",
+    "Economy",
+    "Standard",
+    "Premium"
+   ],
+   "rows": [
+    {
+     "Line": "Brake pads",
+     "Economy": "ACDelco Silver",
+     "Standard": "Wagner ThermoQuiet",
+     "Premium": "Akebono ProACT"
+    },
+    {
+     "Line": "Rotors",
+     "Economy": "Centric C-TEK",
+     "Standard": "Bosch QuietCast",
+     "Premium": "Centric Premium"
+    },
+    {
+     "Line": "Struts and shocks",
+     "Economy": "FCS, Gabriel",
+     "Standard": "Monroe",
+     "Premium": "KYB"
+    },
+    {
+     "Line": "Chassis (links, ball joints, tie rods, arms)",
+     "Economy": "Mevotech",
+     "Standard": "Moog",
+     "Premium": "Original (Toyota Genuine, Motorcraft)"
+    },
+    {
+     "Line": "Filters",
+     "Economy": "ECOGARD",
+     "Standard": "WIX",
+     "Premium": "Original"
+    },
+    {
+     "Line": "Belts, timing kits, water pumps",
+     "Economy": "Dayco, GMB",
+     "Standard": "Gates",
+     "Premium": "Aisin"
+    },
+    {
+     "Line": "Plugs, coils, sensors",
+     "Economy": "Autolite, Delphi, Bosch",
+     "Standard": "NGK / NTK, Standard Motor Products",
+     "Premium": "Denso"
+    },
+    {
+     "Line": "Batteries",
+     "Economy": "Interstate MT",
+     "Standard": "Interstate MTP",
+     "Premium": "Interstate MTX (AGM)"
+    },
+    {
+     "Line": "Engine oil",
+     "Economy": "Synthetic blend (bulk)",
+     "Standard": "Full synthetic (bulk)",
+     "Premium": "Mobil 1 Extended Performance"
+    },
+    {
+     "Line": "Tires",
+     "Economy": "Milestar",
+     "Standard": "Hankook",
+     "Premium": "Michelin"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Parts tiers and brands",
+   "item": "The tier is per job, not per order. Premium pads and economy wipers on one bill is fine."
+  },
+  {
+   "section": "Parts tiers and brands",
+   "item": "Do not mix tiers inside an axle or a pair."
+  },
+  {
+   "section": "Parts tiers and brands",
+   "item": "Original parts on anything electronic that failed twice with aftermarket."
+  },
+  {
+   "section": "Parts tiers and brands",
+   "item": "Stop-start cars get the AGM battery. Not a choice."
+  },
+  {
+   "section": "Parts tiers and brands",
+   "item": "A brand that is not in this table is not one we chose. If a supplier substitutes, call me before it is fitted."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian tiers and brands from catalogue ru (for example BIG Filter / MANN / original; Лукойл Люкс / Genesis / Shell). Mark-ups differ and are on the management page."
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "path": "policies/estimates-and-approvals.md",
+ "title": "Смета и согласование работ",
+ "title_en": "Estimates and approvals",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/estimates-and-approvals.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Staff rules for estimates: how fast, what is on them, how approval is recorded, what happens to declined work.",
+ "serves": [
+  "S1",
+  "S7",
+  "S8",
+  "challenge:three-page-procedure",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 284,
+ "links_to": [
+  "customers/estimates-and-approvals.md",
+  "accounts/company-account-terms.md",
+  "how-to/getting-approval.md",
+  "policies/voids-and-refunds.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Valid 14 days; an unanswered estimate closes as declined after 14 days (English: 30).",
+  "A phone approval is read back, written with the name, confirmed by a message and signed for in the completion act at pick-up.",
+  "The driver limit is 8 000 RUB a visit (ledger s4.driver_limit).",
+  "\"Inspection\" before quoting is «дефектовка»; extra work is «допработы»."
+ ],
+ "new_facts": [
+  "Company-account estimates within four working hours (as in English).",
+  "Unanswered estimates close as declined after 14 days: the ERP's estimate-to-declined transition uses this window in the Russian configuration."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Written consent to extra paid work under the consumer-protection law: only an unverified snippet in the research (gap 9).",
+   "outcome": "verified",
+   "note": "Stands.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-i/statja-16/",
+   "sentence": "ст. 16 п. 3.1: согласие потребителя на дополнительные платные работы «оформляется продавцом (исполнителем, владельцем агрегатора) в письменной форме, если иное не предусмотрено законом». ст. 33: при существенном превышении приблизительной сметы исполнитель обязан «своевременно предупредить об этом потребителя»."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Смета",
+   "item": "Ремонта без сметы в заказ-наряде не бывает. Со слов клиента можно начать только осмотр или диагностику."
+  },
+  {
+   "section": "Смета",
+   "item": "Одна работа — одна строка, из справочника. Запчасти по стандарту, если клиент не просил иначе. Расходные материалы показаны отдельной строкой; итог — с НДС."
+  },
+  {
+   "section": "Смета",
+   "item": "Смета уходит клиенту в тот же рабочий день, когда закончена дефектовка. Корпоративному клиенту — ответственному по договору, в течение четырёх рабочих часов."
+  },
+  {
+   "section": "Смета",
+   "item": "Смета действует 14 дней."
+  },
+  {
+   "section": "Согласование",
+   "item": "По каждой работе отдельно. Отмечайте «согласовано» или «отказ» в каждой строке; наряд целиком не согласуем."
+  },
+  {
+   "section": "Согласование",
+   "item": "Записывайте, кто согласовал, как (на приёмке, по телефону, сообщением) и когда. По телефону: назовите работу и сумму ещё раз, запишите имя того, кто сказал «да», и попросите подтвердить сообщением. При выдаче клиент подписывает акт, где эти работы уже стоят."
+  },
+  {
+   "section": "Согласование",
+   "item": "Автомобиль организации: водитель согласует допработы только до 8 000 ₽ за заезд. Выше — ответственный по договору: Корпоративные клиенты."
+  },
+  {
+   "section": "Согласование",
+   "item": "Молчание клиента — не согласие. Дозванивайтесь: Как согласовать работы."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-26mo|date}}",
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [
+  8000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

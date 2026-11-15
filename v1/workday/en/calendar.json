@@ -1,0 +1,656 @@
+{
+ "_what": "the hand-written series, entries and notes",
+ "series": [
+  {
+   "id": "S09-managers-meeting",
+   "story": "S09",
+   "kind": "meeting",
+   "organiser": 2,
+   "site": null,
+   "repeat": "weekly",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO",
+   "starts": "G>=mon",
+   "written_through": "T>+14d",
+   "start": "06:45",
+   "end": "07:15",
+   "zone": "home",
+   "title": "Monday managers' meeting",
+   "agenda": "Last week's numbers by shop, this week's roster, one open item each. Thirty minutes.",
+   "invitees": [
+    {
+     "slot": 4,
+     "role": "required",
+     "rule": "accepts and comes to every occurrence that is held"
+    },
+    {
+     "slot": 3,
+     "role": "required",
+     "rule": "accepts and comes to every occurrence that is held"
+    },
+    {
+     "slot": 5,
+     "role": "required",
+     "rule": "accepts and comes"
+    },
+    {
+     "slot": 16,
+     "role": "required",
+     "rule": "accepts and comes, except her days off (declined)"
+    },
+    {
+     "slot": 22,
+     "role": "required",
+     "rule": "ledger s9.pattern: the cycle of eleven over the regular occurrences, in order; the moved week accepted and came; both future occurrences unanswered",
+     "answers_at": "the Sunday evening before, 20:40 his time, when he publishes his roster"
+    }
+   ],
+   "exceptions": [
+    {
+     "occurrence": "S9cancel",
+     "action": "cancel",
+     "by": 2,
+     "at": "S9cancel>-3d@o+2:00",
+     "why": "called off by the organiser (card S09)"
+    },
+    {
+     "occurrence": "every Monday that is a closed date (en)",
+     "action": "cancel",
+     "by": 2,
+     "why": "holiday Mondays are cancelled occurrences, written when the series is made"
+    },
+    {
+     "occurrence": "W-5.mon",
+     "action": "replace",
+     "start": "10:00",
+     "end": "10:30",
+     "by": 2,
+     "at": "W-6.thu@o+3:00",
+     "why": "the one week it was moved (card S09)"
+    }
+   ],
+   "future": {
+    "answered": [
+     4,
+     3,
+     5,
+     16
+    ],
+    "unanswered": [
+     22
+    ]
+   },
+   "notes": "no occurrence carries a note, a comment or a reason about its hour (question S9.4 is 'nothing')"
+  },
+  {
+   "id": "COACH-6",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "invitees": [
+    {
+     "slot": 6,
+     "role": "required"
+    }
+   ],
+   "repeat": "weekly",
+   "rrule": "FREQ=WEEKLY;BYDAY=WE",
+   "starts": "W-23.wed",
+   "when": "Wednesday 14:00-14:30",
+   "title": "Call review: Maya",
+   "notes_from": "coaching_notes below on the last occurrence of each score period; the bank on the others"
+  },
+  {
+   "id": "COACH-7",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "invitees": [
+    {
+     "slot": 7,
+     "role": "required"
+    }
+   ],
+   "repeat": "weekly",
+   "rrule": "FREQ=WEEKLY;BYDAY=WE",
+   "starts": "W-13.wed",
+   "when": "Wednesday 14:30-15:00",
+   "title": "Call review: Caleb",
+   "notes_from": "the bank"
+  },
+  {
+   "id": "COACH-17",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "east",
+   "invitees": [
+    {
+     "slot": 17,
+     "role": "required"
+    }
+   ],
+   "repeat": "weekly",
+   "rrule": "FREQ=WEEKLY;BYDAY=TH",
+   "starts": "W-23.thu",
+   "when": "Thursday 14:00-14:30 (slot 4 is at Bonny Oaks on Tuesdays and Thursdays)",
+   "title": "Call review: Josh",
+   "notes_from": "the bank"
+  },
+  {
+   "id": "COACH-29",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "invitees": [
+    {
+     "slot": 29,
+     "role": "required"
+    }
+   ],
+   "repeat": null,
+   "starts": "W-23.mon",
+   "when": "none: she is part-time; one single entry on the first Saturday of each score period, 12:30-13:00, on a Saturday slot 4 comes in for",
+   "title": "Call review: Brenda",
+   "notes_from": "the bank"
+  },
+  {
+   "id": "STANDUP-main",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 8,
+   "site": "main",
+   "invitees": [],
+   "repeat": "weekdays",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
+   "starts": "G>=open",
+   "start": "07:20",
+   "end": "07:30",
+   "title": "Morning huddle: East Main",
+   "notes_from": "the bank: three lines, one each from three themes; the story days below"
+  },
+  {
+   "id": "STANDUP-east",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 18,
+   "site": "east",
+   "invitees": [],
+   "repeat": "weekdays",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
+   "starts": "G>=open",
+   "start": "07:20",
+   "end": "07:30",
+   "title": "Morning huddle: Bonny Oaks",
+   "notes_from": "as main"
+  },
+  {
+   "id": "STANDUP-west",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 22,
+   "site": "west",
+   "invitees": [],
+   "repeat": "weekdays",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
+   "starts": "G>=open",
+   "start": "07:20",
+   "end": "07:30",
+   "zone": "west",
+   "title": "Morning huddle: Charlotte Pike",
+   "notes_from": "as main; slot 22 writes a note on one day in three"
+  }
+ ],
+ "standup_notes": [
+  {
+   "series": "STANDUP-east",
+   "on": "east-2",
+   "by": 18,
+   "body": "- Austin is not in and has not called; Jordan is coming over from East Main\n- Two waiters before nine, both oil services\n- Rack is booked until two: no walk-in alignments"
+  },
+  {
+   "series": "STANDUP-main",
+   "on": "W-3.mon",
+   "by": 8,
+   "body": "- Early desk starts today: two at the counter from open, phones first\n- Kevin has the hybrid until noon; Terry takes the two charging checks\n- Parts land 9:15, 12:15, 3:15 as usual"
+  },
+  {
+   "series": "STANDUP-main",
+   "on": "W-10.mon",
+   "by": 8,
+   "body": "- Kevin is out two weeks from today: diagnostics cut to what Terry can take\n- Overflow goes to Andre at Bonny Oaks; Travis books it there, not here\n- No hybrid work until he is back"
+  },
+  {
+   "series": "STANDUP-west",
+   "on": "west-1",
+   "by": 22,
+   "body": "- Volvo's angle gear: supplier says tomorrow, again\n- Four cars waiting on parts; do the walk-ins first\n- Tyler starts late tomorrow, class in the morning"
+  }
+ ],
+ "coaching_notes_slot_6": [
+  {
+   "period": 1,
+   "body": "- Greeting and vehicle details: every call, keep it\n- You name the price and wait. Next week: two times first, price second\n- Average this period: {ledger:p06.score_path.1}"
+  },
+  {
+   "period": 2,
+   "body": "- You now ask when they can come: good\n- Don't ask, offer: two times, your own words\n- Average: {ledger:p06.score_path.2}"
+  },
+  {
+   "period": 3,
+   "body": "- You take the booking when they name a time\n- Still no recap. Day, time, job, before you hang up\n- Average: {ledger:p06.score_path.3}"
+  },
+  {
+   "period": 4,
+   "body": "- Recap on most calls now; add the address for a new customer\n- On 'that's a lot' you sympathise. Answer it: what the price includes\n- Average: {ledger:p06.score_path.4}"
+  },
+  {
+   "period": 5,
+   "body": "- Two times before the price, and you take the booking: this is the standard\n- A doubt: say what happens if they wait, then offer the time again\n- Average: {ledger:p06.score_path.5}"
+  },
+  {
+   "period": 6,
+   "body": "- Best period so far; the Nickajack driver call was right by the rubric\n- The driver's limit you found is proposed as a team note: good catch\n- Still the weak one: answering a doubt. One line of what the price includes, every time"
+  }
+ ],
+ "entries": [
+  {
+   "id": "S16-meeting",
+   "story": "S16",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "S16meet@10:00",
+   "end": "S16meet@11:00",
+   "booked": "W-1.mon@o+1:20",
+   "title": "Nickajack Delivery: quarterly review",
+   "agenda": "Lonnie Coffey and Stuart Haney come to East Main. Maya presents the page; Claire raises the payment days.",
+   "invitees": [
+    {
+     "slot": 6,
+     "response": "accepted",
+     "at": "W-1.mon>=p6@o+5:35"
+    },
+    {
+     "slot": 2,
+     "response": "accepted",
+     "at": "W-1.mon@o+2:06"
+    }
+   ]
+  },
+  {
+   "id": "S16-block",
+   "story": "S16",
+   "kind": "block",
+   "organiser": 6,
+   "site": "main",
+   "show_as": "busy",
+   "card": "S16-review",
+   "start": "p6+1@14:00",
+   "end": "p6+1@15:30",
+   "booked": "p6-1@o+6:00",
+   "title": "Review prep: Nickajack Delivery",
+   "invitees": []
+  },
+  {
+   "id": "S05-leave-10",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 10,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-10.mon",
+   "end": "W-9.fri",
+   "booked": "W-14.mon@o+0:10",
+   "title": "On leave",
+   "invitees": [],
+   "with_it": "availability 'unavailable' on each date and no shift (leave has no record of its own)"
+  },
+  {
+   "id": "S05-week-off-16",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "S5",
+   "end": "S5>+6d",
+   "booked": "p16-3@o+1:00",
+   "title": "Away: family wedding",
+   "invitees": [],
+   "with_it": "availability 'unavailable' on the seven dates; the two published shifts stand, each with an open request"
+  },
+  {
+   "id": "S13-stocktake",
+   "story": "S13",
+   "kind": "meeting",
+   "organiser": 9,
+   "site": "main",
+   "show_as": "busy",
+   "start": "stock@12:00",
+   "end": "stock@16:00",
+   "booked": "W-1.thu@o+5:20",
+   "title": "Stocktake: count from noon",
+   "agenda": "Shops close at 12:00. Teams of two, sheets back to Marcus before four.",
+   "invitees": [
+    {
+     "slot": 4,
+     "response": "accepted",
+     "at": "W-1.thu@o+5:40"
+    },
+    {
+     "slot": 8,
+     "response": "accepted",
+     "at": "W-1.fri@o+0:30"
+    },
+    {
+     "slot": 3,
+     "response": "accepted",
+     "at": "W-1.fri@o+2:10"
+    }
+   ]
+  },
+  {
+   "id": "TRN-hybrid-10",
+   "story": null,
+   "kind": "personal",
+   "organiser": 10,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-21.wed",
+   "end": "W-21.wed",
+   "booked": "W-23.mon@o+0:15",
+   "title": "Hybrid battery service class (off site)",
+   "invitees": [],
+   "with_it": "no shift that day; not an absence"
+  },
+  {
+   "id": "TRN-lifts",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 8,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-13.thu@07:30",
+   "end": "W-13.thu@08:00",
+   "booked": "W-14.fri@o+2:00",
+   "title": "Lift safety and jack-stand check: all technicians",
+   "invitees": [
+    {
+     "slot": 10,
+     "response": "by_rota"
+    },
+    {
+     "slot": 11,
+     "response": "by_rota"
+    },
+    {
+     "slot": 12,
+     "response": "by_rota"
+    },
+    {
+     "slot": 13,
+     "response": "by_rota"
+    },
+    {
+     "slot": 14,
+     "response": "by_rota"
+    },
+    {
+     "slot": 15,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "SUP-home-supplier",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 9,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-12.wed@o+3:00",
+   "end": "W-12.wed@o+3:45",
+   "booked": "W-13.mon@o+2:00",
+   "title": "Sequoyah Parts Supply: fall stocking order and returns",
+   "invitees": [
+    {
+     "slot": 4,
+     "response": "accepted",
+     "attended": true,
+     "at": "W-13.mon@o+4:00"
+    }
+   ]
+  },
+  {
+   "id": "SUP-tyres",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 9,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-8.tue@o+2:30",
+   "end": "W-8.tue@o+3:15",
+   "booked": "W-9.wed@o+1:00",
+   "title": "Tellico Tire Distributors: winter fitments and the Nashville run",
+   "invitees": [
+    {
+     "slot": 4,
+     "response": "accepted",
+     "attended": true,
+     "at": "W-9.wed@o+3:00"
+    },
+    {
+     "slot": 8,
+     "response": "accepted",
+     "attended": true,
+     "at": "W-9.thu@o+0:20"
+    }
+   ]
+  },
+  {
+   "id": "INT-tech-1",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-19.tue@c-1:15",
+   "end": "W-19.tue@c-0:30",
+   "booked": "W-19.tue>-7d@o+2:00",
+   "title": "Interview: apprentice technician (1 of 3)",
+   "invitees": [
+    {
+     "slot": 8,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-tech-2",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-19.thu@c-1:15",
+   "end": "W-19.thu@c-0:30",
+   "booked": "W-19.thu>-7d@o+2:00",
+   "title": "Interview: apprentice technician (2 of 3)",
+   "invitees": [
+    {
+     "slot": 8,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-tech-3",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-18.wed@c-1:15",
+   "end": "W-18.wed@c-0:30",
+   "booked": "W-18.wed>-7d@o+2:00",
+   "title": "Interview: apprentice technician (3 of 3)",
+   "invitees": [
+    {
+     "slot": 8,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-adv-1",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-18.thu@c-1:15",
+   "end": "W-18.thu@c-0:30",
+   "booked": "W-18.thu>-7d@o+2:00",
+   "title": "Interview: service advisor (1 of 3)",
+   "invitees": [
+    {
+     "slot": 5,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-adv-2",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-17.tue@c-1:15",
+   "end": "W-17.tue@c-0:30",
+   "booked": "W-17.tue>-7d@o+2:00",
+   "title": "Interview: service advisor (2 of 3)",
+   "invitees": [
+    {
+     "slot": 5,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-adv-3",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-17.thu@c-1:15",
+   "end": "W-17.thu@c-0:30",
+   "booked": "W-17.thu>-7d@o+2:00",
+   "title": "Interview: service advisor (3 of 3)",
+   "invitees": [
+    {
+     "slot": 5,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "S05-day-off-16-1",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-17.fri",
+   "end": "W-17.fri",
+   "booked": "W-19.mon@o+2:00",
+   "title": "Day off",
+   "invitees": [],
+   "with_it": "availability 'unavailable' and no shift; the Friday of week T-7 was published first and came off by request R49"
+  },
+  {
+   "id": "S05-day-off-16-2",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-16.mon",
+   "end": "W-16.mon",
+   "booked": "W-19.mon@o+2:00",
+   "title": "Day off",
+   "invitees": [],
+   "with_it": "availability 'unavailable' and no shift; the Friday of week T-7 was published first and came off by request R49"
+  },
+  {
+   "id": "S05-day-off-16-3",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-12.fri",
+   "end": "W-12.fri",
+   "booked": "W-14.mon@o+2:00",
+   "title": "Day off",
+   "invitees": [],
+   "with_it": "availability 'unavailable' and no shift; the Friday of week T-7 was published first and came off by request R49"
+  },
+  {
+   "id": "S05-day-off-16-4",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-11.mon",
+   "end": "W-11.mon",
+   "booked": "W-14.mon@o+2:00",
+   "title": "Day off",
+   "invitees": [],
+   "with_it": "availability 'unavailable' and no shift; the Friday of week T-7 was published first and came off by request R49"
+  },
+  {
+   "id": "S05-day-off-16-5",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-7.fri",
+   "end": "W-7.fri",
+   "booked": "W-8.mon@o+2:00",
+   "title": "Day off",
+   "invitees": [],
+   "with_it": "availability 'unavailable' and no shift; the Friday of week T-7 was published first and came off by request R49"
+  },
+  {
+   "id": "S05-day-off-16-6",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-6.mon",
+   "end": "W-6.mon",
+   "booked": "W-8.mon@o+2:00",
+   "title": "Day off",
+   "invitees": [],
+   "with_it": "availability 'unavailable' and no shift; the Friday of week T-7 was published first and came off by request R49"
+  }
+ ]
+}

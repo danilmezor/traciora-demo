@@ -1,0 +1,107 @@
+{
+ "path": "parts/stock-we-keep.md",
+ "title": "Что держим на складе",
+ "title_en": "Stock we keep",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/stock-we-keep.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "What is on the shelf at the home shops, and how stock is counted.",
+ "serves": [
+  "S13",
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 235,
+ "links_to": [
+  "how-to/stocktake-day.md",
+  "parts/fluids-and-capacities.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Stocked lines of a Russian shop: draught oils 5W-30 and 5W-40, diesel 10W-40 for the ГАЗель vans, batteries 60 and 75 А·ч, antifreeze G11 and G12, DOT-4, bulbs H4, H7, H1, W5W, P21W; tyre-storage bags and tags in season.",
+  "R1234yf is kept at the flagship only (the same planted join with the A/C page)."
+ ],
+ "new_facts": [
+  "R1234yf at the flagship only: ERP stock_level shows none at east or west."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что держим на складе",
+   "item": "Масло на розлив: 5W-30 и 5W-40, эконом и стандарт. Премиум — в канистрах. Дизельное 10W-40 для «Газелей»."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "Масляные фильтры на двадцать самых ходовых моделей. Воздушные и салонные — на десять."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "Щётки, ходовые лампы (H4, H7, H1, W5W, P21W)."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "Аккумуляторы: 60 А·ч прямой и обратной полярности, 75 А·ч."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "Колодки стандарта на двенадцать самых ходовых моделей. Диски приезжают следующим рейсом."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "Тормозная жидкость DOT-4, антифриз G11 и G12, масло для АКПП трёх ходовых типов, трансмиссионное 75W-85."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "R134a — на обеих площадках. R1234yf — только на Московском шоссе. Новая машина, которой нужна заправка кондиционера на Инженерном, либо едет на Московское шоссе, либо ждёт баллон с рейсом в 13:00."
+  },
+  {
+   "section": "Что держим на складе",
+   "item": "Грибки, вентили, грузики. В сезон — пакеты и бирки для шин на хранение."
+  },
+  {
+   "section": "Пересчёт",
+   "item": "Каждую неделю выборочно пересчитываю десять позиций."
+  },
+  {
+   "section": "Пересчёт",
+   "item": "Полная инвентаризация — два раза в год. В этот день все три сервиса работают до 12:00 и считают все: День инвентаризации."
+  },
+  {
+   "section": "Пересчёт",
+   "item": "Пересчёт не сходится, когда с полки взяли и не провели по наряду. Взял с полки — проведи: по наряду клиента или по внутреннему."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-6mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

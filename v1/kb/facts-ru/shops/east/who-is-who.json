@@ -1,0 +1,157 @@
+{
+ "path": "shops/east/who-is-who.md",
+ "title": "Инженерный: кто есть кто",
+ "title_en": "Bonny Oaks: who is who",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/east/who-is-who.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "People at Bonny Oaks.",
+ "serves": [
+  "S5",
+  "challenge:near-duplicate-shop-pages",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 165,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Two on, two off: the two advisors are never on shift together (ledger s5.east_with_16.ru: she is the only advisor that day)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Инженерный: кто есть кто",
+   "columns": [
+    "Кто",
+    "Должность",
+    "Доб."
+   ],
+   "rows": [
+    {
+     "Кто": "Светлана Юрьевна Демидова",
+     "Должность": "Старший мастер-приёмщик",
+     "Доб.": "201"
+    },
+    {
+     "Кто": "Артём Николаев",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "202"
+    },
+    {
+     "Кто": "Валерий Геннадьевич Егоров",
+     "Должность": "Старший автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Роман Кудряшов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Антон Блинов",
+     "Должность": "Автомеханик",
+     "Доб.": ""
+    },
+    {
+     "Кто": "Марат Аюпов",
+     "Должность": "Автомеханик, у нас и на Московском шоссе",
+     "Доб.": ""
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Артём Николаев",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Валерий Геннадьевич Егоров",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "19",
+   "written_as": "Роман Кудряшов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "20",
+   "written_as": "Антон Блинов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Марат Аюпов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Валерий Геннадьевич",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Артёмом",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "6",
+   "written_as": "Алина",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

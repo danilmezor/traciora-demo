@@ -1,0 +1,104 @@
+{
+ "path": "customers/air-conditioning.md",
+ "title": "Air conditioning not cold",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Public page for the summer season: what the A/C check is, what a recharge costs for each refrigerant.",
+ "serves": [
+  "S11",
+  "challenge:customer-terms",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 213,
+ "links_to": [
+  "customers/maintenance-by-mileage.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Season: May to August (design S11).",
+  "Customer words \"freon\", \"recharge\" = catalogue jobs ac_recharge / ac_recharge_1234yf \"A/C evacuate & recharge\".",
+  "R-134a: most cars up to about 2016; R-1234yf: most from about 2017 (rule of thumb; the under-hood label decides).",
+  "An empty system has a leak; the advisor must say so before selling a recharge."
+ ],
+ "tables": [
+  {
+   "section": "Recharge",
+   "columns": [
+    "Your car uses",
+    "Typical cars",
+    "Price"
+   ],
+   "rows": [
+    {
+     "Your car uses": "R-134a",
+     "Typical cars": "Most cars up to about 2016",
+     "Price": "$207.40"
+    },
+    {
+     "Your car uses": "R-1234yf",
+     "Typical cars": "Most cars from about 2017 on",
+     "Price": "$278.80"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "ac_recharge",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 207.4
+  },
+  {
+   "catalogue_key": "ac_recharge_1234yf",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 278.8
+  },
+  {
+   "catalogue_key": "ac_evaporator_cleaning",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 84.95
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "The 2016/2017 rule of thumb for refrigerant is a designed simplification; the reference vehicles in the catalogue are a 2015 Camry (R-134a) and a 2019 CR-V (R-1234yf)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian season May to August as well (curve in catalogue.md). Customers say «заправить кондиционер», «фреон»."
+ ]
+}

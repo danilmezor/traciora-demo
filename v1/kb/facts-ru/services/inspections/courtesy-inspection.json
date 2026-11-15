@@ -1,0 +1,79 @@
+{
+ "path": "services/inspections/courtesy-inspection.md",
+ "title": "Осмотр по чек-листу",
+ "title_en": "Courtesy inspection",
+ "exists_in": "both",
+ "english_sheet": "facts/services/inspections/courtesy-inspection.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The free inspection from the counter's side: how the result is presented.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S7",
+  "S5"
+ ],
+ "length_class": "short",
+ "words_ru": 220,
+ "links_to": [
+  "shop-floor/courtesy-inspection.md",
+  "how-to/writing-an-estimate.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Free with seven orders in ten; work is recommended on six orders in ten (ledger mix.orders_with_rec 60 %).",
+  "The round figure is a figure of speech, in words."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Осмотр по чек-листу",
+   "item": "Зелёный: в порядке. Скажите это вслух. Людям приятно слышать, что большая часть машины в порядке, и после этого они верят остальному."
+  },
+  {
+   "section": "Осмотр по чек-листу",
+   "item": "Жёлтый: изношено, но пока безопасно. Назовите замер и примерное «когда»: «Задние колодки четыре миллиметра. До следующей замены масла доходят, дальше смотрим»."
+  },
+  {
+   "section": "Осмотр по чек-листу",
+   "item": "Красный: нужно делать. Это идёт в смету."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

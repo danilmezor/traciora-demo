@@ -1,0 +1,90 @@
+{
+ "path": "policies/cancellations-and-no-shows.md",
+ "title": "Cancellations and no-shows",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What happens when a booked customer does not come.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 216,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "About one booking in eight is not kept (ledger: appointments not kept 12 %).",
+  "Confirmation the day before by 15:00; confirmed bookings are marked confirmed (ERP appointment status).",
+  "30 minutes late without word = no-show (ERP appointment no_show).",
+  "One call to a no-show the same day.",
+  "Two no-shows in twelve months: drop-off only, noted on the customer.",
+  "No fee and no deposit for appointments.",
+  "Parts ordered for a no-show are reported to slot 9 the same day."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Cancellations and no-shows",
+   "item": "Confirm the day before. A call or a text for every timed appointment, by 3:00. A confirmed booking is marked confirmed."
+  },
+  {
+   "section": "Cancellations and no-shows",
+   "item": "Thirty minutes. A customer more than 30 minutes late with no word loses the slot. Mark the appointment no-show and give the bay to the next car. If they turn up later, they wait like a walk-in, and we are nice about it."
+  },
+  {
+   "section": "Cancellations and no-shows",
+   "item": "Call a no-show once, the same day: \"We missed you this morning, do you want another time?\" Half of them rebook."
+  },
+  {
+   "section": "Cancellations and no-shows",
+   "item": "Two no-shows in twelve months: no more timed appointments for that customer. They are welcome to drop the car off in the morning and we get to it when we can. Put it in the customer notes so the next advisor knows."
+  },
+  {
+   "section": "Cancellations and no-shows",
+   "item": "No fee. We do not charge for a missed appointment and we do not take deposits to hold one."
+  },
+  {
+   "section": "Cancellations and no-shows",
+   "item": "A customer who cancels is thanked for calling. Offer the next time before they hang up."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "Confirmation by 15:00; the 30-minute rule; two strikes in twelve months. Reason: a no-show policy was asked for."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian no-show share 10 % (ledger). Confirmation by messenger is the norm."
+ ]
+}

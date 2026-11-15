@@ -1,0 +1,723 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-4-good-call-damaged",
+  "configuration": "ru",
+  "title": "The all-star books a company van; the recognition loses part of what she did",
+  "purpose": "Stories S5 and S1 in the Russian configuration. A model call: every check that applies is done in full. In the stored transcript the second time she offered and the address in her summary are gone under shop noise, three turns carry the wrong speaker, and the plate, a part and the price come out wrong.",
+  "cast": {
+    "advisor": {
+      "slot": 16,
+      "name": "Светлана Юрьевна Демидова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Рамиль",
+      "company": "Тёплый контур",
+      "account": "A2",
+      "invented": true,
+      "company_ref": "accounts.json ru.A2"
+    },
+    "mentioned": [
+      {
+        "name": "Ильдус",
+        "role": "the account's driver",
+        "invented": true
+      }
+    ]
+  },
+  "call": {
+    "day": "slot 16's first working day on or after the Wednesday of week T-2 (rule R6; call 25)",
+    "nominal_offset": "T-14d",
+    "nominal_date": "2026-10-30",
+    "local_start": "09:12",
+    "site": "east",
+    "direction": "inbound",
+    "line": "200",
+    "answered_by": "201",
+    "ring_s": 4,
+    "caller_phone": "+7 907 471-16-40",
+    "repeat_caller": false,
+    "talk_s": 170
+  },
+  "scenario": {
+    "who_calls": "Рамиль, who looks after the vehicles of company account A2 (heating and plumbing).",
+    "vehicle": "unit Т-17, ГАЗель Next van, 2019, Н358НЕ173 (accounts.json ru.A2 fleet)",
+    "job": "clutch replacement as a set (cover, disc, release bearing); the flywheel only if it is found scored",
+    "wants": "the van booked and back before a large installation on Monday; asks what it will cost",
+    "what_happens": "Svetlana finds the van on the contract, asks how the pedal behaves and whether it smells burnt, tells him not to drive it loaded, gives the contract price and what could raise it, offers two times, books the first, takes the request number and sums up with the address.",
+    "facts": {
+      "contract_price_rub": 30992,
+      "request_number": "118/11",
+      "offered": [
+        "call+1d 09:00",
+        "call+2d 09:00"
+      ],
+      "booked": "call+1d 09:00",
+      "note": "The company, the van and its plate are accounts.json's; the caller is an invented employee of the account. The price is catalogue.json clutch_kit for class van at the company-account price class: 30 992."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "в воскресенье",
+      "day": "call+2d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "в среду",
+      "day": "call+5d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "к среде",
+      "day": "call+5d",
+      "form": "к + dative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис на Инженерном, Светлана, здравствуйте."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.2,
+      "said": "Светлана, добрый день, это Рамиль, «Тёплый контур»."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 7.4,
+      "said": "Рамиль, здравствуйте! Слушаю вас, что случилось?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 11.0,
+      "said": "Да Газель у нас опять. Водитель жалуется — сцепление буксует, в горку гружёная вообще не тянет."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 19.3,
+      "said": "Так. А какая Газель? У вас их три на договоре."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 25.1,
+      "said": "Некст, фургон. Которая белая."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 27.7,
+      "said": "Сейчас открою... Это номер эн триста пятьдесят восемь эн-е?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 32.9,
+      "said": "Щас, секунду, у меня путёвка тут... Да. Эн триста пятьдесят восемь эн-е, она."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 40.2,
+      "said": "Четыреста семьдесят два о-ка, вижу. Это на которой мы весной рессору меняли."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 46.9,
+      "said": "Да-да, она. На ней Ильдус ездит."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 50.6,
+      "said": "Понятно. А педаль как себя ведёт — в самом верху схватывает? И запаха нет, горелым не пахнет?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 59.4,
+      "said": "Говорит, в самом конце берёт, да. И воняло вчера, когда на Верхнюю Террасу с котлами поднимался."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 68.2,
+      "said": "Ну всё, это диск уже всё, под замену. Я бы её гружёной больше не гоняла — встанет где-нибудь на трассе. Вам когда машина нужна обратно?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 81.1,
+      "said": "В том и дело — у меня в среду монтаж большой, она мне к среде кровь из носу нужна. По деньгам что там будет?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 93.5,
+      "said": "Сцепление в сборе — корзина, диск, выжимной — по вашему договору это тридцать девятьсот девяносто два с запчастями. Если маховик задран — будет дороже, но я вам тогда сначала позвоню, без вас не делаем. Могу взять её завтра к девяти или в воскресенье к девяти. И так и так вечером того же дня заберёте."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 119.8,
+      "said": "Давайте завтра к девяти. Ильдус по дороге закинет."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 124.5,
+      "said": "Отлично. Записала: Газель, завтра, девять ноль-ноль, принимаю сама. Счёт как обычно, на организацию?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 131.7,
+      "said": "Да, как обычно. Заявку я вам на почту кину, номер — сто восемнадцать дробь одиннадцать."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 139.5,
+      "said": "Сто восемнадцать дробь одиннадцать, хорошо. Рамиль, и если Ильдус сам не доедет — наберите мне, я эвакуатор организую."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 148.8,
+      "said": "Да доедет, куда он денется. Спасибо, Светлана."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 153.0,
+      "said": "Не за что. Значит, ещё раз: Газель, завтра в девять, Десятый Инженерный проезд, тридцать, замена сцепления. Если что-то сверх вылезет — сначала звоню вам."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 165.4,
+      "said": "Договорились."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 166.8,
+      "said": "Всё, до завтра, Рамиль."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 169.5,
+      "said": "До свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.44,
+    "restoration_tier": "medium",
+    "noise": "an impact wrench and a compressor behind the advisor's desk; the caller is on a mobile in a workshop yard",
+    "applied": [
+      {
+        "rule": "R8",
+        "what": "three turns in a row carry the wrong speaker",
+        "script_turns": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "rule": "R3",
+        "what": "the plate comes out three ways: right, with эм heard as эн, and with 'о-ка' heard as 'окей'",
+        "script_turns": [
+          7,
+          8,
+          9
+        ],
+        "said": "эн триста пятьдесят восемь эн-е",
+        "stored": [
+          "Н358НЕ",
+          "М358НЕ",
+          "358, не"
+        ]
+      },
+      {
+        "rule": "R3",
+        "what": "the request number is wrong in the caller's line and right in the advisor's",
+        "script_turn": 18,
+        "said": "сто восемнадцать дробь одиннадцать",
+        "stored": "180/11"
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name is not heard as a name; the driver's name is spelled two ways; a district name in lower case",
+        "script_turns": [
+          2,
+          10,
+          12
+        ],
+        "said": [
+          "«Тёплый контур»",
+          "Ильдус",
+          "Верхнюю Террасу"
+        ],
+        "stored": [
+          "тёплый контур",
+          "Ильдуз",
+          "верхнюю террасу"
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a part replaced by a word that sounds the same; the model's name in Latin; 'Газель' as a common noun",
+        "script_turns": [
+          15,
+          6,
+          4
+        ],
+        "said": [
+          "маховик",
+          "Некст",
+          "Газель"
+        ],
+        "stored": [
+          "моховик",
+          "Next",
+          "газель"
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "the price split in two numbers",
+        "script_turn": 15,
+        "said": "тридцать девятьсот девяносто два",
+        "stored": "30 900 92"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: two uncertain spans marked",
+        "script_turns": [
+          12,
+          13
+        ],
+        "stored": [
+          "{?likely: И воняло вчера}",
+          "{?likely: встанет где-нибудь на трассе}"
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the second time she offered is gone; 'И так и так' is left with nothing to refer to",
+        "script_turn": 15,
+        "said": "или в воскресенье к девяти",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the address in her summary is gone",
+        "script_turn": 21,
+        "said": "Десятый Инженерный проезд, тридцать",
+        "stored": ""
+      }
+    ],
+    "script_words": 306,
+    "stored_words": 285,
+    "strict_word_difference": 0.157
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 309,
+    "duration_s": 170.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис на Инженерном, Светлана, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Светлана, добрый день, это Рамиль, тёплый контур.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Рамиль, здравствуйте. Слушаю вас, что случилось?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да газель у нас опять. Водитель жалуется, сцепление буксует, в горку гружёная вообще не тянет.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так. А какая газель? У вас их три на договоре.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Next, фургон. Которая белая.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сейчас открою. Это номер Н358НЕ?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сейчас, секунду, у меня путёвка тут. Да, М358НЕ, она.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "358, не, вижу. Это на которой мы весной рессору меняли.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, она. На ней Ильдуз ездит.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно. А педаль как себя ведёт, в самом верху схватывает? И запаха нет, горелым не пахнет?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Говорит, в самом конце берёт, да. {?likely: И воняло вчера}, когда на верхнюю террасу с котлами поднимался.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну всё, это диск уже всё, под замену. Я бы её гружёной больше не гоняла, {?likely: встанет где-нибудь на трассе}. Вам когда машина нужна обратно?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "В том-то и дело, у меня в среду монтаж большой, она мне к среде кровь из носу нужна. По деньгам что там будет?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сцепление в сборе: корзина, диск, выжимной. По вашему договору это 30 900 92 с запчастями. Если моховик задран, будет дороже, но я вам тогда сначала позвоню, без вас не делаем. Могу взять её завтра к 9. И так и так вечером того же дня заберёте.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте завтра к 9. Ильдус по дороге закинет.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Отлично. Записала: газель, завтра, 9:00, принимаю сама. Счёт как обычно, на организацию?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, как обычно. Заявку я вам на почту кину, номер 180/11.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "118/11, хорошо. Рамиль, и если Ильдус сам не доедет, наберите мне, я эвакуатор организую.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да доедет, куда он денется. Спасибо, Светлана.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Не за что. Значит, ещё раз: газель, завтра в 9, замена сцепления. Если что-то сверх вылезет, сначала звоню вам.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Договорились.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, до завтра, Рамиль.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис на Инженерном, Светлана, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А педаль как себя ведёт, в самом верху схватывает? И запаха нет, горелым не пахнет?",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Если моховик задран, будет дороже, но я вам тогда сначала позвоню, без вас не делаем. Могу взять её завтра к 9.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "offered_time",
+        "quote": "Могу взять её завтра к 9.",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записала: газель, завтра, 9:00, принимаю сама.",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, ещё раз: газель, завтра в 9, замена сцепления.",
+        "level": 1,
+        "segment": 20
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер здоровается по имени и открывает его договор."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Я бы её гружёной больше не гоняла",
+      "why": "Сразу сказала, чем грозит ездить дальше, и тут же спросила, к какому дню нужна машина. Под этот срок и предложила время.",
+      "segment": 12
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Могу взять её завтра к 9.",
+      "say": "Могу взять её завтра к девяти или в воскресенье к девяти. Как вам удобнее?"
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 83.3,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "200",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 20
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 83.3,
+      "applicable": 6,
+      "asr_quality": "poor",
+      "strength_segment": 12,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис на Инженерном, Светлана, здравствуйте",
+        "need_discovery": "А педаль как себя ведёт, в самом верху схватывает? И запаха нет, горелым не пахнет?",
+        "price_with_next_step": "Если моховик задран, будет дороже, но я вам тогда сначала позвоню, без вас не делаем. Могу взять её завтра к 9",
+        "offered_time": "Могу взять её завтра к 9",
+        "asked_for_booking": "Записала: газель, завтра, 9:00, принимаю сама",
+        "recap": "Значит, ещё раз: газель, завтра в 9, замена сцепления"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер здоровается по имени и открывает его договор.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Я бы её гружёной больше не гоняла",
+        "why": "Сразу сказала, чем грозит ездить дальше, и тут же спросила, к какому дню нужна машина. Под этот срок и предложила время."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Могу взять её завтра к 9.",
+        "say": "Могу взять её завтра к девяти или в воскресенье к девяти. Как вам удобнее?"
+      }
+    }
+  },
+  "truth": {
+    "note": "What the clean script earns. The stored lines support less: the second option and the address were said and are not in the transcript, so offered_time and recap come out at 1, and the coaching line asks her to say what she said. 16.7 points are lost to recognition, and asr_quality 'poor' is the product's only sign of it.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 100.0
+  },
+  "why": {
+    "greeting": "2: the company, the site (by its street) and her name in the first line.",
+    "name_and_number": "N/A: a known company contact, greeted by name.",
+    "need_discovery": "2: which van, the clutch slipping under load, how the pedal bites and the burnt smell, and the deadline.",
+    "price_with_next_step": "2: the price is split into two numbers but a price it is, with what would raise it and a time in the same line.",
+    "offered_time": "1 on the transcript, 2 in truth: the noise took 'или в воскресенье к девяти'.",
+    "asked_for_booking": "2: a day, an hour and who receives the van.",
+    "recap": "1 on the transcript, 2 in truth: the time and the work are there, the address is not.",
+    "objection": "N/A: no doubt was voiced.",
+    "speaker_swap": "Turns 7 to 9 hold no check's only evidence, so the swap changes no level. Put on the turn that offers the times, it would leave offered_time unverified: a quote for level 1 or 2 has to sit on a manager's line (judge.py:243).",
+    "asr_quality": "poor: two uncertainty markers, a customer who 'opens the contract', three plates, a mushroom for a flywheel and a price of '30 900 92'.",
+    "score": "(1·2 + 2·2 + 2·2 + 3·1 + 3·2 + 1·1) / 2 = 10 of 12 weight points = 83.3. On the clean script: 12 of 12 = 100.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  }
+}

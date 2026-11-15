@@ -1,0 +1,133 @@
+{
+ "path": "services/engine/ignition-sensors-and-fuel-pump.md",
+ "title": "Ignition, sensors and fuel pump",
+ "first_revision_text": "en/_history/services/engine/ignition-sensors-and-fuel-pump.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "10",
+ "purpose": "The repairs that most often follow a check-engine diagnosis.",
+ "serves": [
+  "challenge:fact-in-table",
+  "smoke"
+ ],
+ "length_class": "medium",
+ "words_en": 265,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs ignition_coil (0.5 h), oxygen_sensor (0.8 h), fuel_pump (2.2 h), standard totals.",
+  "Coil: swap test; one coil unless past 120,000 miles with a second failure.",
+  "Oxygen sensor: tested first; Denso or NTK.",
+  "Fuel pump: pressure measured; tank usually lowered; a quarter tank or less is asked for.",
+  "Electrical parts are not returnable once fitted."
+ ],
+ "tables": [
+  {
+   "section": "Ignition, sensors and fuel pump",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Standard"
+   ],
+   "rows": [
+    {
+     "On the order": "Replace ignition coil (one cylinder)",
+     "Hours": "0.5",
+     "Standard": "$153.86"
+    },
+    {
+     "On the order": "Replace oxygen / air-fuel sensor",
+     "Hours": "0.8",
+     "Standard": "$226.18"
+    },
+    {
+     "On the order": "Replace fuel pump module",
+     "Hours": "2.2",
+     "Standard": "$633.36"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "ignition_coil",
+   "what": "hours",
+   "class": "car",
+   "value": 0.5
+  },
+  {
+   "catalogue_key": "ignition_coil",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 153.86
+  },
+  {
+   "catalogue_key": "oxygen_sensor",
+   "what": "hours",
+   "class": "car",
+   "value": 0.8
+  },
+  {
+   "catalogue_key": "oxygen_sensor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 226.18
+  },
+  {
+   "catalogue_key": "fuel_pump",
+   "what": "hours",
+   "class": "car",
+   "value": 2.2
+  },
+  {
+   "catalogue_key": "fuel_pump",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 633.36
+  }
+ ],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Kevin Lawson",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена катушки зажигания», «датчика кислорода (лямбда-зонда)», «топливного насоса»."
+ ]
+}

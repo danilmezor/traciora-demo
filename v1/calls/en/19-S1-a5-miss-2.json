@@ -1,0 +1,95 @@
+{
+  "format": "seed-call/1",
+  "id": "en-19-S1-a5-miss-2",
+  "configuration": "en",
+  "number": 19,
+  "story": "S1",
+  "title": "A5's manager rings again, 6 days after the complaint call, and nobody answers",
+  "purpose": "Story S1. One of the three unanswered calls from Wade Carlisle's number in the nine days after call 17. No recording, no transcript and no verdict: the call log's legs and a missed_call row that stays waiting. It is older than the callback queue's seven days at T, so it is on no screen and is found by a query (question S1.5); it has no person, only the desk it rang first (question S1.6).",
+  "cast": {
+    "advisor": null,
+    "customer": {
+      "name": "Wade Carlisle",
+      "ref": "accounts.json en.A5 contacts[0]",
+      "company": "Cumberland Bend Electric",
+      "account": "A5",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "6 calendar days after call 17, which is on the Tuesday of week T-19 (rule R6; card S01, call 19)",
+    "nominal_offset": "T-130d",
+    "nominal_date": "2026-07-06",
+    "local_start": "13:40",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered": false,
+    "answered_by": null,
+    "first_desk": "303",
+    "disposition": "no_answer",
+    "legs": [
+      {
+        "stage": 1,
+        "extension": "303",
+        "status": "no_answer",
+        "ring_s": 20
+      },
+      {
+        "stage": 2,
+        "extension": "301",
+        "status": "no_answer",
+        "ring_s": 15
+      },
+      {
+        "stage": 2,
+        "extension": "302",
+        "status": "no_answer",
+        "ring_s": 15
+      },
+      {
+        "stage": 2,
+        "extension": "303",
+        "status": "no_answer",
+        "ring_s": 15
+      }
+    ],
+    "ring_s": 35,
+    "talk_s": 0,
+    "caller_phone": "615-555-0134",
+    "repeat_caller": true,
+    "note": "Central time, inside opening hours. The public line rings one desk for 20 s, then every desk for 15 s (calls/DESIGN.md section 2)."
+  },
+  "scenario": {
+    "who_calls": "Wade Carlisle, operations manager of company account A5, waiting for the call back promised in call 17.",
+    "what_happens": "The line rings out. He leaves no message; the seed has no voicemail.",
+    "facts": {
+      "note": "Ledger s1.a5: three misses 1, 6 and 9 calendar days after the complaint call, first desks 302, 303, 302; no answered call to or from the number afterwards."
+    }
+  },
+  "floating_days": [],
+  "script": [],
+  "recognition": null,
+  "transcript": null,
+  "judge_answer": null,
+  "verdict": null,
+  "missed_call": {
+    "state": "waiting",
+    "out_of_hours": false,
+    "attempts": 0,
+    "resolved_by": null,
+    "claimed": false,
+    "dismissed": false,
+    "on_to_call_back_screen_at_t": false,
+    "why_not_on_screen": "the queue shows seven days; this miss is months old"
+  },
+  "truth": {
+    "note": "Nobody answered and nobody called back. A missed call has no person: the data gives the desk it rang first and who was rostered, not who missed it."
+  },
+  "why": {
+    "verdict": "None: an unanswered call has no recording, no transcript and no scorecard row."
+  },
+  "new_facts": [
+    "The time of this miss: 13:40 Central on its day; 35 seconds of ringing; the first desk 303, then desks 301, 302 and 303 together."
+  ]
+}

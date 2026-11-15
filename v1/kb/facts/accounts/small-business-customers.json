@@ -1,0 +1,82 @@
+{
+ "path": "accounts/small-business-customers.md",
+ "title": "Small business customers",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Businesses with a few vehicles and no account: how they differ from an account.",
+ "serves": [
+  "S1",
+  "challenge:near-duplicate",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 146,
+ "links_to": [
+  "accounts/opening-a-company-account.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "About thirty small business customers with one to three vehicles (accounts.json: 30).",
+  "They pay at pick-up at list prices; no statement; vehicle under the business name.",
+  "The person at the counter approves unless the customer notes say otherwise.",
+  "Deposits and storage as for private customers; warranty 12/12 (business use).",
+  "Same-day turnaround is attempted, not promised.",
+  "\"Lost or losing\" questions are asked of accounts billed on terms only (design 7.2): this page draws that line."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Small business customers",
+   "item": "They pay at pick-up like anyone else. List prices. No statement, no terms."
+  },
+  {
+   "section": "Small business customers",
+   "item": "The vehicle goes under the business's name, not the driver's, so the history stays with the truck when the driver changes."
+  },
+  {
+   "section": "Small business customers",
+   "item": "Whoever is standing at the counter approves the work, unless the owner has told us otherwise; then it is in the customer notes."
+  },
+  {
+   "section": "Small business customers",
+   "item": "Deposits and storage apply as for private customers."
+  },
+  {
+   "section": "Small business customers",
+   "item": "The warranty is the business-use one: 12 months or 12,000 miles."
+  },
+  {
+   "section": "Small business customers",
+   "item": "A work truck that is their only truck: we try to turn it the same day. We do not promise it."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian small businesses often pay by bank transfer on an invoice (безнал) even without a contract; say so."
+ ]
+}

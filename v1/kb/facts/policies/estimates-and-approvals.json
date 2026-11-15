@@ -1,0 +1,102 @@
+{
+ "path": "policies/estimates-and-approvals.md",
+ "title": "Estimates and approvals",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Staff rules for estimates: how fast, what is on them, how approval is recorded, what happens to declined work.",
+ "serves": [
+  "S1",
+  "S7",
+  "S8",
+  "challenge:three-page-procedure",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 287,
+ "links_to": [
+  "customers/estimates-and-approvals.md",
+  "accounts/company-account-terms.md",
+  "how-to/getting-approval.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "No repair without a written estimate; inspection and diagnosis may start on the customer's word.",
+  "One line per catalogue job; standard tier by default; supplies and tax shown.",
+  "Estimate sent the same working day as the inspection; company accounts within four working hours (account A6's estimates waited two days and more: the story breaks this standard).",
+  "Valid 30 days; unanswered after 30 days closes as declined (ERP repair_order status declined).",
+  "Approval per job with who, how and when (ERP order_job: how and when approved).",
+  "Drivers approve found work only up to 300 USD per visit (ledger s4.driver_limit).",
+  "Never exceed the approved amount; unapproved work done is the shop's cost.",
+  "Declined work marked deferred raises a reminder (ERP service_reminder) and is printed on the invoice."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "The estimate",
+   "item": "No repair without a written estimate on the order. An inspection or a diagnosis may start on the customer's word; nothing else."
+  },
+  {
+   "section": "The estimate",
+   "item": "One line per job, from the catalogue. Parts at the standard tier unless the customer asked otherwise. Shop supplies and tax shown."
+  },
+  {
+   "section": "The estimate",
+   "item": "It goes to the customer the same working day the car was inspected. A company account's estimate goes to its fleet contact within four working hours."
+  },
+  {
+   "section": "The estimate",
+   "item": "It is good for 30 days."
+  },
+  {
+   "section": "The approval",
+   "item": "Per job. Mark each job approved or declined; never approve the order as a lump."
+  },
+  {
+   "section": "The approval",
+   "item": "Record who approved, how (counter, phone, text, e-mail) and when. A phone approval: read the job and the amount back and write the name of the person who said yes."
+  },
+  {
+   "section": "The approval",
+   "item": "A company vehicle: the driver approves found work only up to $300 for the visit. Above it, the fleet contact: Company accounts."
+  },
+  {
+   "section": "The approval",
+   "item": "No answer from the customer is not an approval. Chase it: Getting approval."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-26mo|date}}",
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "Company-account estimates within four working hours. Reason: gives the A6 story a measurable standard.",
+  "Unanswered estimates close as declined after 30 days: the ERP's estimate-to-declined transition should use this window."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian trade: extra work is agreed by phone and written into the заказ-наряд; the customer signs the order and the act. Keep \"same day\" and the per-job approval."
+ ]
+}

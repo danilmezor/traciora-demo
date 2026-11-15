@@ -1,0 +1,832 @@
+# Скелеты для чата на сайте: ассистент отвечает первым.
+# = причина | каналы | чем кончается | что происходит | условия
+# C клиент, A ассистент, H передача заявки, S сотрудник, N заметка, V строка активности, U место для непонятного клиента, E конец.
+# {price_move}, {advice_move}, {towing_move} берутся из блока работы и сервиса; «| текст» — свои формулировки хода.
+
+# ------------------------------------------------------------ цена
+= price | w | alone | цена есть в прайсе, клиент благодарит | kinds=menu,class,list,range
+U vague,wrong,reversed
+C price.open
+A greet+{price_move}
+C generic.close p=.8
+A closing p=.5
+E inactivity
+
+= price | w | alone | цена, потом «это с НДС?» | kinds=menu,class,list
+U vague,wrong
+C price.open burst=.45
+A greet+{price_move}
+C price.vat
+A price_extras
+C generic.ok p=.7
+E inactivity
+
+= price | w | alone | цена из прайс-листа и свои запчасти | kinds=list
+C price.open
+A greet+price_list
+C price.own_parts
+A own_parts+own_parts_price
+C price.more p=.7
+A closing_think p=.6
+E inactivity
+
+= price | w | alone | «с запчастями?» и «сколько по времени?» | kinds=list
+C price.open
+A greet+price_list
+C price.incl
+A price_incl
+C price.how_long
+A price_how_long
+C generic.close p=.8
+A closing p=.5
+E inactivity
+
+= price | w | handed_over | цена зависит от осмотра: первый шаг, клиент хочет приехать | kinds=depends,range,depends_ac
+U vague,wrong,two
+C price.open burst=.45
+A greet+{price_move}+offer_handoff
+C price.want_book
+A cannot_book+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling price
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.close p=.6
+V label_added запись
+E person
+
+= price | w | handed_over | машина крупнее легковой: точную цену считает человек | kinds=menu,list bigger=1
+C price.open
+A greet+{price_move}
+C price.bigger
+A price_bigger+offer_handoff
+C generic.yes
+A ask_number
+C generic.give_number
+A handoff_done_q
+H escalation price
+S reply=pickup+price.quote
+C price.want_book
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added цена
+E person
+
+= price | w | alone | «дороговато»: ассистент не торгуется | kinds=menu,class,list,range
+U wrong
+C price.open
+A greet+{price_move}
+C price.dear
+A price_other_shop
+C generic.no p=.6
+A closing_think p=.7
+E inactivity
+
+= price | w | declined | цена и «когда можно»: от передачи заявки отказывается | kinds=menu,class,list two=1
+C price.open two=1
+A greet+{price_move}+cannot_book+ask_number
+C generic.decline_handoff
+A declined_ok_all
+E inactivity
+
+= price | w | abandoned | хочет точную сумму, номер не оставляет | kinds=range,depends,list
+U vague,wrong
+C price.open
+A greet+{price_move}
+C price.want_exact
+A exact_needs_person
+C generic.ok p=.3
+E inactivity
+
+= price | w | handed_over | хочет смету заранее, оставляет номер | kinds=list,range,depends
+C price.open
+A greet+{price_move}
+C price.want_exact
+A exact_needs_person
+C generic.give_number+generic.give_car
+A handoff_done_q
+H escalation price
+S reply=pickup+price.quote file=estimate-pdf
+C price.more
+S draft=generic.thanks reply=close p=.5
+V label_added цена
+E person
+
+# ------------------------------------------------------------ запись
+= booking | w | handed_over | запись: имя, телефон, сервис, мастер предлагает два времени
+U vague,two,reversed
+C booking.open burst=.45
+A greet+cannot_book+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling booking
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+X address,pay p=.5
+C generic.close p=.8
+S draft=generic.thanks reply=close p=.6
+V label_added запись
+E person
+
+= booking | w | handed_over | ассистент сначала спрашивает машину
+U vague,wrong
+C booking.open
+A greet+cannot_book+ask_car
+C generic.give_car
+A ask_number+ask_shop
+C generic.give_number
+C generic.give_shop
+A handoff_done+anything_else
+C generic.no p=.6
+H scheduling booking
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+= booking | w | handed_over | сезон: переобуться, цена, размер шин, хранение | jobs=seasonal_tyres,wheel_swap
+C booking.open burst=.45
+A greet+{price_move}+cannot_book+tyre_ask
+C generic.give_tyres
+A ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling booking
+S reply=pickup+booking.offer
+C generic.pick_time
+C
+  | и ещё вопрос: резину на хранение берёте?
+  | а колёса до весны у вас оставить можно? балкон не резиновый)
+  | и сколько стоит хранение? негде держать
+  | а старый комплект можно у вас оставить на сезон?
+S draft=tyres.storage reply=tyres.storage
+C generic.ok
+S draft=generic.close_echo reply=booking.confirm
+V label_added шины
+E person
+
+= booking | w | declined | от передачи заявки отказывается: позвонит сам
+C booking.open
+A greet+cannot_book+ask_number
+C generic.decline_handoff
+A declined_ok_all
+E inactivity
+
+= booking | w | alone | «без записи можно?»: ответ со страницы
+C booking.walk_in
+A greet+walk_in+offer_handoff
+C generic.no
+A closing p=.7
+E inactivity
+
+= booking | w | alone | сезон: «без записи примете?» | jobs=seasonal_tyres,wheel_swap
+C booking.walk_in
+A greet+walk_in_tyres+tyre_time
+C generic.close p=.8
+A closing p=.5
+E inactivity
+
+= booking | w | handed_over | вместо номера спрашивает, можно ли подождать
+C booking.open
+A greet+cannot_book+ask_number+ask_shop
+C booking.wait
+A wait+ask_number
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling booking
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+= booking | w | handed_over | прислал только номер: ассистент спрашивает имя
+U vague
+C booking.open
+A greet+cannot_book+ask_number
+C generic.give_phone
+A ask_name+ask_shop
+C generic.give_name+generic.give_shop
+A handoff_done
+H scheduling booking
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.close p=.6
+E person
+
+= booking | w | abandoned | запись и цена: после просьбы о номере молчит | two=1
+C booking.open two=1
+A greet+{price_move}+cannot_book+ask_number
+C generic.ok p=.35
+E inactivity
+
+# ------------------------------------------------------------ часы, адрес, берётесь ли
+= hours | w | alone | часы работы
+C hours.open kind=time
+A greet+hours_daily
+C generic.close p=.7
+A closing p=.4
+E inactivity
+
+= hours | w | alone | часы, потом «а в праздники?»
+C hours.open kind=time
+A greet+hours_daily
+C
+  | а в праздники?
+  | а на новый год как?
+  | в праздничные дни тоже?
+  | а четвёртого ноября работаете?
+A hours_holidays
+C generic.close p=.7
+E inactivity
+
+= hours | w | alone | часы, потом «это по какому времени?»
+C hours.open kind=time
+A greet+hours_daily
+C
+  | а в казани так же?
+  | это по какому времени, по местному?
+  | в казани тоже до восьми?
+  | у вас же ещё в казани сервис. там какие часы?
+A hours_kazan
+C generic.ok p=.7
+E inactivity
+
+= hours | w | alone | адрес: три сервиса, потом один
+C hours.open kind=address
+A greet+address_all
+C generic.give_shop
+A address_one
+C generic.close p=.7
+A closing p=.4
+E inactivity
+
+= hours | w | alone | берётесь ли за такую машину: да
+C hours.open kind=do_yes
+A greet+we_do+offer_handoff
+C
+  | пока нет, просто узнаю
+  | не, я пока приценяюсь
+  | позже, спасибо
+  | не надо, сам заеду
+  | пока нет. спасибо за ответ
+A closing
+E inactivity
+
+= hours | w | alone | кузовной, покраска: нет
+C hours.open kind=do_no
+A greet+we_dont
+C hours.more p=.6
+A closing p=.5
+E inactivity
+
+= hours | w | alone | стёкла, АКПП, рейка: через подрядчика
+C hours.open kind=do_sublet
+A greet+sublet
+C generic.ok p=.7
+A closing p=.4
+E inactivity
+
+= hours | w | alone | гибриды и электромобили
+C hours.open kind=do_hybrid
+A greet+hybrids
+C generic.close p=.7
+E inactivity
+
+= hours | w | alone | как платить
+C hours.open kind=pay
+A greet+payment
+C generic.close p=.7
+A closing p=.4
+E inactivity
+
+= hours | w | declined | вопрос, на который страницы не отвечают
+C
+  | здравствуйте. подменную машину на время ремонта даёте?
+  | {hello_lc}! а подарочный сертификат на то у вас можно купить?
+  | здравствуйте, выездной мастер есть? машина во дворе не заводится
+  | а детская комната у вас есть? с ребёнком приеду
+  | здравствуйте. ремонт в кредит оформляете?
+A greet+not_stated
+C generic.decline_handoff
+A declined_ok_all
+E inactivity
+
+# ------------------------------------------------------------ симптом
+= symptom | w | handed_over | симптом, совет со страницы, первый шаг, запись | advice=1
+U vague,wrong,two
+C symptom.open burst=.45
+A greet+{advice_move}+price_depends+offer_handoff
+C generic.yes+booking.day_time
+A cannot_book+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling symptom
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+= symptom | w | alone | фото панели или лужи и два слова | advice=1 photo=1
+C symptom.open photo=1
+A greet+photo_seen+{advice_move}
+C symptom.serious
+A serious_unknown+price_depends+offer_handoff
+C generic.no p=.7
+A closing_think p=.6
+E inactivity
+
+= symptom | w | alone | перегрев: глушить и эвакуатор | jobs=coolant_leak
+C symptom.open
+A greet+advice_overheat+ask_shop
+C generic.give_shop
+A {towing_move}
+C generic.close p=.8
+A closing p=.4
+E inactivity
+
+= symptom | w | alone | «это серьёзно?»: совет, первый шаг, клиент подумает | advice=1
+U vague,wrong
+C symptom.open
+A greet+{advice_move}
+C symptom.serious
+A serious_unknown+price_depends+offer_handoff
+C price.more
+A closing_think
+E inactivity
+
+= symptom | w | alone | вялый стартер: проверка без записи, цена аккумулятора | jobs=battery
+C symptom.open
+A greet+advice_battery+price_depends
+C
+  | а новый аккумулятор сколько стоит?
+  | если под замену, во сколько встанет?
+  | а сам аккумулятор почём у вас
+  | и сколько новый, если этот всё?
+A price_range
+C generic.close p=.8
+E inactivity
+
+= symptom | w | abandoned | симптом, совет, на вопрос о номере не отвечает | advice=1
+U vague,wrong,two
+C symptom.open
+A greet+{advice_move}+price_depends+offer_handoff
+C generic.yes
+A cannot_book+ask_number+ask_shop
+C generic.ok p=.25
+E inactivity
+
+= symptom | w | declined | аудиофайл: ассистент не слышит, клиент пишет текстом | advice=1
+C symptom.open stub=1
+A greet+voice_cannot
+C symptom.open voice=fragment
+A {advice_move}+price_depends+offer_handoff
+C generic.decline_handoff
+A declined_ok_all
+E inactivity
+
+= symptom | w | handed_over | симптом и «можно ли сегодня» | advice=1 two=1
+C symptom.open two=1
+A greet+{advice_move}+price_depends+cannot_book+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling symptom
+S reply=pickup+symptom.advise
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.close p=.6
+V label_added запись
+E person
+
+= symptom | w | handed_over | после фото хочет показать машину | advice=1 photo=1
+C symptom.open photo=1
+A greet+photo_seen+{advice_move}+price_depends+offer_handoff
+C generic.yes
+A cannot_book+ask_number+ask_shop
+C generic.give_number
+C generic.give_shop
+A handoff_done
+H scheduling symptom
+S reply=pickup+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+# ------------------------------------------------------------ готова ли машина
+= status | w | handed_over | готова ли: ассистент не видит наряд, мастер отвечает «готова»
+C status.open
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation status
+S reply=pickup+status.ready
+C generic.coming
+S draft=generic.close reply=close p=.6
+V label_added статус
+E person
+
+= status | w | handed_over | ещё не готова
+C status.open
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation status
+S reply=pickup+status.not_yet
+C generic.ok
+V label_added статус
+E person
+
+= status | w | handed_over | пришла ли запчасть
+C status.open kind=part burst=.45
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation status
+S reply=pickup+status.part
+C generic.ok p=.7
+E person
+
+= status | w | handed_over | пишет ещё раз, пока никто не ответил: «а после восьми забрать можно?»
+C status.open
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number
+C generic.give_shop
+A handoff_done_q
+H escalation status
+C status.pickup_late
+S draft=status.pickup_after reply=pickup+status.not_yet
+C generic.ok p=.6
+E person
+
+= status | w | abandoned | номер не оставляет: «просто скажите, готова или нет»
+C status.open
+A greet+cannot_see+ask_number
+C
+  | да что ж такое. просто скажите готова или нет
+  | зачем вам мой номер, он у вас в наряде есть
+  | мне не надо перезванивать, мне надо знать когда забирать
+  | вы же сервис, посмотрите у себя
+A cannot_see+need_number
+E inactivity
+
+= status | w | handed_over | ждёт запчасть не первый день и раздражён
+C status.open kind=part burst=.6
+C generic.nudge p=.5
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation status
+S reply=pickup+sorry+status.part
+C complaint.more p=.5
+N to_manager p=.4
+E person
+
+= status | w | handed_over | готова ли и сколько платить | two=1
+C status.open two=1
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation status
+S reply=pickup+status.ready
+C generic.close
+V label_added статус
+E person
+
+= status | w | handed_over | имя и машину назвал сразу, ассистент спрашивает только номер
+C status.open voice=polite
+A greet+cannot_see+ask_number
+C generic.give_phone
+A ask_name+ask_shop
+C generic.give_name+generic.give_shop
+A handoff_done_q
+H escalation status
+S reply=pickup+status.not_yet
+C status.more
+S draft=status.sorry_wait reply=status.not_yet p=.5
+E person
+
+# ------------------------------------------------------------ найденные работы
+= found | w | handed_over | согласует всё
+C found.open kind=yes
+A greet+relay_approval+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H escalation found
+S reply=pickup+found.confirm
+C generic.ok p=.7
+V label_added согласование
+E person
+
+= found | w | handed_over | одно делать, другое нет
+C found.open kind=one
+A greet+relay_approval+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H escalation found
+S reply=pickup+found.confirm
+C found.total p=.5
+S draft=found.total reply=found.confirm p=.5
+V label_added согласование
+E person
+
+= found | w | handed_over | «это срочно?»: объясняет мастер
+C found.open kind=ask
+A greet+approval_rules+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation found
+S reply=pickup+found.why
+C
+  | ладно, делайте
+  | ну раз так, меняйте
+  | хорошо, тогда согласен @@ g=m
+  | уговорили, делайте)
+S draft=found.ack reply=found.confirm
+V label_added согласование
+E person
+
+= found | w | handed_over | отказывается от дополнительных работ
+C found.open kind=no
+A greet+relay_approval+approval_rules+ask_number
+C generic.give_number
+A handoff_done
+H escalation found
+S reply=pickup+found.declined
+C generic.ok p=.6
+E person
+
+= found | w | handed_over | по телефону назвали две работы: просит прислать письменно
+C
+  | здравствуйте. мне звонили, сказали нашли что-то ещё. можно это письменно, с ценами?
+  | {hello_lc}. по телефону назвали две работы сверху, я не [[запомнил|запомнила]]. пришлите смету
+  | здравствуйте. мастер звонил про доп работы, связь была плохая. напишите, что там и сколько
+  | машина у вас с утра. сказали что-то ещё менять надо, а что и почём, не [[понял|поняла]]
+A greet+cannot_see+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation found
+S reply=pickup+found.two file={finding_photo}
+C found.open kind=one voice=fragment
+S draft=found.ack_one reply=found.confirm
+V label_added согласование
+E person
+
+# ------------------------------------------------------------ перенос и отмена
+= moving | w | handed_over | перенести запись
+U reversed
+C moving.open kind=move
+A greet+relay_move+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling moving
+S reply=pickup+moving.moved
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+= moving | w | handed_over | отменить запись
+C moving.open kind=cancel
+A greet+relay_move+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done
+H scheduling moving
+S reply=pickup+moving.cancelled
+C generic.close p=.5
+E person
+
+= moving | w | handed_over | опаздывает
+C moving.open kind=late
+A greet+relay_move+ask_number
+C generic.give_number
+A handoff_done
+H scheduling moving
+S reply=pickup+moving.late
+C generic.coming p=.5
+E person
+
+= moving | w | abandoned | «просто передайте, что не приду»
+C moving.open kind=cancel
+A greet+relay_move+ask_number
+C
+  | да просто передайте что не приду
+  | зачем номер, я же отменяю а не записываюсь
+  | без номера никак? ну тогда всё
+  | передайте и всё, некогда мне
+A need_number
+E inactivity
+
+= moving | w | handed_over | перенос: первое время не подошло
+C moving.open kind=move burst=.45
+A greet+relay_move+ask_number+ask_shop
+C generic.give_number
+C generic.give_shop
+A handoff_done+anything_else
+C generic.no p=.6
+H scheduling moving
+S reply=pickup+moving.moved
+C
+  | не, в это время работаю. а попозже?
+  | не подходит. вечером есть что-нибудь?
+  | а в другой день никак?
+  | не успею. есть после шести?
+S draft=moving.other_time reply=booking.offer reroll=1
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+# ------------------------------------------------------------ жалоба
+= complaint | w | handed_over | после ремонта то же самое: гарантия, осмотр вне очереди
+C complaint.open kind=comeback burst=.45
+A greet+relay_complaint+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation complaint
+V priority high p=.5
+S reply=pickup+complaint.first
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added жалоба
+E person
+
+= complaint | w | handed_over | сумма больше, чем называли
+C complaint.open kind=bill
+A greet+bill_general+ask_number
+C generic.give_number
+A handoff_done_q
+H escalation complaint
+S reply=pickup+complaint.bill
+C
+  | могли бы сразу сказать. ладно
+  | ясно. в следующий раз называйте итог сразу
+  | понятно. но осадок остался
+  | ок, вопрос снят
+  | теперь понятно, спасибо
+V label_added жалоба
+E person
+
+= complaint | w | handed_over | обещали перезвонить и не перезвонили
+C complaint.open kind=service
+A greet+relay_complaint+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation complaint
+S reply=pickup+sorry+status.not_yet
+C complaint.more p=.5
+N to_manager p=.5
+V label_added жалоба
+E person
+
+= complaint | w | handed_over | царапина или грязь после сервиса
+C complaint.open kind=damage
+A greet+relay_complaint+ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation complaint
+V priority high p=.6
+N to_manager p=.7
+S reply=pickup+complaint.first
+C generic.ok p=.6
+V label_added жалоба
+E person
+
+= complaint | w | declined | хочет говорить с руководителем
+C complaint.open kind=comeback
+A greet+relay_complaint+ask_number
+C
+  | хочу поговорить с руководителем, а не с роботом
+  | мне нужен начальник. как с ним связаться
+  | дайте телефон директора
+  | с кем можно поговорить из старших?
+A ask_manager
+C generic.ok p=.5
+E inactivity
+
+= complaint | w | handed_over | вопрос о гарантии: что покрывает
+C
+  | здравствуйте. меняли у вас деталь два месяца назад, опять сломалась. это по гарантии?
+  | {hello_lc}. гарантия на ремонт какая? прошло три недели, проблема та же
+  | здравствуйте, а на запчасти гарантия есть? поставили у вас, уже шумит
+  | после ремонта месяц не прошёл, а оно опять. переделаете бесплатно?
+A greet+warranty+offer_handoff
+C generic.yes
+A ask_number+ask_shop
+C generic.give_number+generic.give_shop
+A handoff_done_q
+H escalation complaint
+S reply=pickup+complaint.first
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added жалоба
+E person
+
+# ------------------------------------------------------------ организации
+= fleet | w | handed_over | заявка на две машины
+C fleet.open kind=units
+A greet+relay_fleet+ask_number
+C generic.give_number
+A handoff_done_q
+H escalation fleet
+S reply=pickup+fleet.confirm
+C fleet.more p=.7
+V label_added юрлицо
+E person
+
+= fleet | w | handed_over | закрывающие документы
+C fleet.open kind=docs
+A greet+relay_fleet+ask_number
+C generic.give_number
+A handoff_done_q
+H escalation fleet
+S reply=pickup+fleet.docs
+C generic.close p=.6
+V label_added юрлицо
+E person
+
+= fleet | w | handed_over | хотят договор: сколько машин и какие
+C
+  | Здравствуйте. У нас семь машин, хотим обслуживаться по договору. Как это оформить?
+  | {Hello}. Организация, парк из Ларгусов и ГАЗелей. Интересует договор на обслуживание с отсрочкой.
+  | Здравствуйте! Ищем сервис для служебных автомобилей, оплата по счёту. С кем обсудить условия?
+  | {Hello}. ИП, три машины в доставке. Работаете с такими, документы даёте?
+A greet+relay_fleet+ask_number
+C generic.give_number
+A handoff_done_q
+H escalation fleet
+V priority high p=.4
+S reply=pickup+fleet.contract
+C fleet.more p=.5
+V label_added юрлицо
+E person
+
+= fleet | w | handed_over | смета до ремонта, с разбивкой
+C
+  | {Hello}. {company}. Нужна смета на {unit} до записи, с разбивкой на работы и запчасти: {job_said}.
+  | Здравствуйте. {company}, {contact_first}. Посчитайте, пожалуйста, {job_said_acc} на {unit}. Директор согласует расходы.
+  | {Hello}. Просим смету по {unit}: {job_said}. Работы и запчасти отдельно.
+  | Здравствуйте. {company}. До ремонта нужна смета на {unit}, {job_said}. Без неё заявку не подпишут.
+A greet+relay_fleet+ask_number
+C generic.give_number
+A handoff_done_q
+H escalation fleet
+S reply=pickup+price.quote file=estimate-pdf
+C
+  | Получили, спасибо. Передаю директору.
+  | Спасибо, смета у нас. Ответим после согласования.
+  | Принято. Согласуем и вернёмся с заявкой.
+  | Спасибо. Жду решения директора.
+V label_added юрлицо
+E person
+
+= fleet | w | abandoned | спрашивают про договор, телефон не оставляют
+C fleet.open kind=docs voice=business
+A greet+relay_fleet+ask_number
+C
+  | Телефон в договоре указан. Жду ответа на почту.
+  | Номер у вас есть. Просто пришлите документы.
+  | Ответьте, пожалуйста, на официальную почту.
+A need_number
+E inactivity
+
+# ------------------------------------------------------------ спам и не туда
+= spam | w | alone | продают продвижение, масла, ветошь
+C spam.open kind=seller
+A seller
+C spam.more p=.3
+E inactivity
+
+= spam | w | alone | ошиблись адресом
+C spam.open kind=wrong
+A greet+wrong_business
+C spam.more p=.5
+A closing p=.4
+E inactivity
+
+= spam | w | alone | ищут работу
+C spam.open kind=job
+A greet+job_seeker
+C generic.ok p=.5
+E inactivity
+
+= spam | w | alone | «тест», точка, случайные буквы
+C spam.open kind=noise
+A noise
+E inactivity
+
+= spam | w | alone | продавец настаивает
+C spam.open kind=seller
+A seller
+C
+  | а кому тогда написать?
+  | дайте почту директора
+  | а телефон отдела закупок?
+  | с кем можно обсудить?
+A not_stated_short
+E inactivity

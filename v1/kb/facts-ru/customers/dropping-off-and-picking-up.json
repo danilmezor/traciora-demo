@@ -1,0 +1,67 @@
+{
+ "path": "customers/dropping-off-and-picking-up.md",
+ "title": "Как сдать и забрать автомобиль",
+ "title_en": "Dropping off, waiting, shuttle and pick-up",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/dropping-off-and-picking-up.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "6",
+ "purpose": "Public logistics: key drop, waiting room, shuttle, after-hours pick-up.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_ru": 216,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "No key drop box, no shuttle, no lock box: the car is taken and handed back by a person against signed documents (ПП № 780: the car is released against the act).",
+  "Shops are open until 20:00 every day, so after-hours pick-up is \"come in the morning\".",
+  "Loaner cars (подменный автомобиль) are mentioned on no page: the planted gap is kept."
+ ],
+ "new_facts": [
+  "A car can be left the evening before until 20:00 and is checked in at once; cars stand overnight on a closed lot.",
+  "No shuttle: the advisor calls a taxi at the customer's cost.",
+  "Another person may collect the car if the customer named them to the advisor beforehand.",
+  "What to bring: registration certificate, key, wheel-lock key, service book.",
+  "Five free days of parking after the car is ready (the storage policy)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Приёмка",
+   "item": "По записи. Приезжайте к своему времени. Мастер-приёмщик обойдёт машину вместе с вами, запишет пробег, уровень топлива и то, что видно на кузове, а жалобу — вашими словами. Вы подписываете заказ-наряд и акт приёма-передачи, один экземпляр остаётся у вас."
+  },
+  {
+   "section": "Приёмка",
+   "item": "С собой: свидетельство о регистрации, ключ, «секретку» от колёс, сервисную книжку, если она есть."
+  },
+  {
+   "section": "Приёмка",
+   "item": "Вечером накануне. Можно поставить машину до 20:00, оформим её сразу. Ночью машины стоят на закрытой территории."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,126 @@
+{
+ "path": "services/maintenance/scheduled-maintenance.md",
+ "title": "ТО по регламенту",
+ "title_en": "Scheduled maintenance: 30K, 60K, 90K",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/scheduled-maintenance.json",
+ "first_revision_text": "ru/_history/services/maintenance/scheduled-maintenance.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The mileage service: what the labour covers and what is priced separately.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 253,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Russian service intervals are 15 000 km; the table is by 15 000 / 30 000 / 60 000 / 90 000 km.",
+  "The customer's word is «сделать ТО» (the Russian twin of C6.1).",
+  "A full quote for the 30 000 km service must be added up from the price list (labour, oil service, both filters, brake fluid).",
+  "On new cars under the maker's warranty the page gives no legal advice: it points to the service book."
+ ],
+ "new_facts": [
+  "The table of typical extras by mileage."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "ТО по регламенту",
+   "columns": [
+    "Пробег",
+    "Что обычно ещё положено"
+   ],
+   "rows": [
+    {
+     "Пробег": "15 000 км",
+     "Что обычно ещё положено": "Масло с фильтром, воздушный и салонный фильтры"
+    },
+    {
+     "Пробег": "30 000 км",
+     "Что обычно ещё положено": "То же и тормозная жидкость"
+    },
+    {
+     "Пробег": "60 000 км",
+     "Что обычно ещё положено": "То же, плюс свечи и масло в автоматической коробке; спросить про ремень ГРМ"
+    },
+    {
+     "Пробег": "90 000 км",
+     "Что обычно ещё положено": "Как на 30 000, плюс антифриз, если не меняли"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "ТО по регламенту",
+   "item": "Клиент говорит «сделать ТО» и чаще всего имеет в виду масло с фильтрами. Спросите пробег и что написано в сервисной книжке: по ней и считаем."
+  },
+  {
+   "section": "ТО по регламенту",
+   "item": "Регламент смотрите для конкретной машины. Таблица — ориентир, а не правило."
+  },
+  {
+   "section": "ТО по регламенту",
+   "item": "Спрашивают, можно ли обслуживать гарантийную машину не у дилера. Отвечаем аккуратно: условия гарантии записаны в сервисной книжке, посмотрите её. Заказ-наряд, акт и чеки мы выдаём полные."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "scheduled_maintenance",
+   "what": "hours",
+   "class": "car",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "scheduled_maintenance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2850.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  2850.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

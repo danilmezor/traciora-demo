@@ -1,0 +1,72 @@
+{
+ "path": "shop-floor/courtesy-inspection.md",
+ "title": "The courtesy inspection",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "Step one of the inspection-to-approval procedure: what the technician checks and records.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S7",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_en": 205,
+ "links_to": [
+  "how-to/writing-an-estimate.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Step 1 of 3 (then how-to/writing-an-estimate.md, then how-to/getting-approval.md).",
+  "Done on every car unless the order says no inspection (mix: 80 % of orders).",
+  "Three states: Good, Watch, Bad (ERP inspection_item); Watch and Bad need a measurement; Bad needs a photo.",
+  "Each Watch or Bad line is tied to a catalogue job (ERP inspection_item.recommended job).",
+  "Technicians give no prices and start nothing unapproved.",
+  "The link to how-to/ is above worker rank: a worker (and the public assistant) sees the text but cannot open the target."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "How to mark it",
+   "item": "Good: nothing to do."
+  },
+  {
+   "section": "How to mark it",
+   "item": "Watch: worn but safe. Write the measurement: \"front pads 4 mm\", not \"pads getting low\"."
+  },
+  {
+   "section": "How to mark it",
+   "item": "Bad: needs doing now. Measurement and a photo. No photo, the advisor cannot sell it and I will send you back to take one."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Ten minutes; tread in 32nds; photo required for Bad."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian inspection is «осмотр по чек-листу»; free with service in 70 % of orders. Tread depth in mm."
+ ]
+}

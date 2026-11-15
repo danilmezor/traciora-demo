@@ -1,0 +1,620 @@
+{
+  "format": "seed-call/1",
+  "id": "en-29-people-mechanic-11-alignment",
+  "configuration": "en",
+  "number": 29,
+  "story": "people",
+  "title": "A customer about slot 11's rushed work: a control arm changed and nobody checked the alignment",
+  "purpose": "People, slot 11, the first of the two complaints. The clunk is gone and the steering wheel sits crooked: the last check was skipped. The customer quotes what the mechanic said to him at pick-up. Travis does not defend it, books the recheck for the same day at no charge and sums it up. An existing-job call: no score.",
+  "cast": {
+    "advisor": {
+      "slot": 5,
+      "name": "Travis Burnette",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Phil Cantrell",
+      "invented": true,
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Dustin Swafford",
+        "slot": 11,
+        "role": "did the job; named by the customer from his ticket"
+      },
+      {
+        "name": "Randy Elrod",
+        "slot": 8,
+        "role": "the foreman who will recheck it"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Friday of week T-10 (rule R6; people, call 29)",
+    "nominal_offset": "T-70d",
+    "nominal_date": "2026-09-04",
+    "local_start": "11:30",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "101",
+    "ring_s": 7,
+    "caller_phone": "423-555-0161",
+    "repeat_caller": false,
+    "talk_s": 149
+  },
+  "scenario": {
+    "who_calls": "Phil Cantrell, who had his car in three days earlier.",
+    "vehicle": "2014 Chevrolet Malibu",
+    "job": "front lower control arm, driver's side, replaced on the Tuesday; no alignment was done or checked",
+    "wants": "the steering wheel straight, without paying for an alignment he should have had",
+    "what_happens": "He says the wheel sits crooked and the car drifts, that there is no alignment on his ticket, and what the mechanic told him at pick-up. Travis says it should have been checked, apologises, books the car for two o'clock that day at no charge with the foreman rechecking the arm, and sums up with the address.",
+    "facts": {
+      "first_order": "call-3d (the Tuesday of week T-10): lower control arm, 393.41",
+      "comeback_booked": "the call's day, 14:00, no charge",
+      "note": "Design 1.4.1: two customers complained on the phone about slot 11. catalogue.json lower_control_arm, class car, standard: 393.41; no price is said on the call.",
+      "prices": [
+        {
+          "what": "the first order's job; not said on the call",
+          "job": "lower_control_arm",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 393.41
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Tuesday",
+      "day": "call-3d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Travis."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.1,
+      "said": "Travis, Phil Cantrell. I had — I had my Malibu in there Tuesday."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.6,
+      "said": "Yes sir, Mr. Cantrell. Lower control arm, driver's side. What's going on?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 15.0,
+      "said": "Well, the clunk's gone, I'll give you that. But ever since I picked it up my steerin' wheel sits crooked. I'm — I'm goin' straight down the road with the wheel cocked over to the right."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 29.5,
+      "said": "Okay. Is it pulling on you, or does it track straight with the wheel off?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 36.6,
+      "said": "It drifts left a little. And I — and I looked at my ticket, and I don't see an alignment on it anywhere."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 46.5,
+      "said": "Uh... no sir, there's not one on here. There should've been. You can't swap a control arm and not at least check it."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 56.5,
+      "said": "That's what my brother-in-law said. I asked — I asked the fella about it when I picked it up — Dustin, it says on here — and he told me it was fixed and he didn't know what else to tell me."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 70.9,
+      "said": "Yeah.",
+      "overlap": true
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 72.7,
+      "said": "He said that to you?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 75.7,
+      "said": "Word for word."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 78.2,
+      "said": "Okay. Well, I know what else to tell you. That's on us, and I'm — I'm sorry you had to call. Bring it back and we'll put it on the alignment rack, no charge, and I'll have Randy, our shop foreman, go back over that arm himself."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 95.2,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 97.6,
+      "said": "I don't wanna pay for an alignment I shoulda got the first time."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 103.8,
+      "said": "You're not paying for anything. It's like getting a new door hung and nobody checked that it shuts — that's part of the job. Can you get it here today at two?"
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 116.1,
+      "said": "I can do two."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 119.3,
+      "said": "Okay. It's about an hour. You can wait, or I'll run you back to work."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 126.5,
+      "said": "I'll wait on it."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 128.8,
+      "said": "Alright. So that's today at two, here at twenty-one-oh-six East Main. Randy rechecks the control arm, we align it, and there's no charge for any of it."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 138.9,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 140.8,
+      "said": "Alright, Travis. I appreciate you makin' it right."
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 144.9,
+      "said": "Yes sir. Ask for me when you get here."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.72,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          12,
+          14,
+          15,
+          19,
+          21,
+          22
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          15,
+          19
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a few words replaced by a plausible wrong phrase",
+        "script_turn": 11,
+        "said": "Word for word.",
+        "stored": "Word for it."
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a few words replaced by a plausible wrong phrase",
+        "script_turn": 15,
+        "said": "that it shuts",
+        "stored": "that at shuts"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          9,
+          20
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 7,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 4,
+        "as_digits": 3,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 3,
+        "lost": 2,
+        "joined": 0
+      },
+      "noise_bursts": 2,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 332,
+    "stored_words": 324,
+    "strict_word_difference": 0.081
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 343,
+    "duration_s": 149.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Travis.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Travis, Phil Cantrell. I had my Malibu in there Tuesday.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir, Mr. Cantrell. Lower control arm, driver's side. What's going on?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The clunk's gone, I'll give you that. But ever since I picked it up my steering wheel sits crooked. I'm going straight down the road with the wheel cocked over to the right.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Is it pulling on you, or does it track straight with the wheel off?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It drifts left a little. And I looked at my ticket, and I don't see an alignment on it anywhere.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, sir, there's not one on here. There should've been. You can't swap a control arm and not at least check it.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "That's what my brother-in-law said. I asked the fella about it when I picked it up, Dustin, it says on here, and he told me it was fixed and he didn't know what else to tell me.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "He said that to you?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Word for it.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Well, I know what else to tell you. That's on us, and I'm sorry you had to call. Bring it back and we'll put it on the alignment rack, no charge, and I'll have Randy, our shop foreman, go back over that arm himself.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. I don't want to pay for an alignment I should have got the first time.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You're not paying for anything. It's like getting a new door hung and nobody checked that at shuts, that's part of the job. Can you get it here today at 2?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I can do two.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. It's about an hour. You can wait, or I'll run you back to work.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'll wait on it.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. So that's today at 2, here at 2106 East Main. Randy rechecks the control arm, we align it, and there's no charge for any of it.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right, Travis. I appreciate you making it right.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. Ask for me when you get here.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Travis.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "So that's today at 2, here at 2106 East Main. Randy rechecks the control arm, we align it, and there's no charge for any of it.",
+        "level": 2,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint",
+      "warranty"
+    ],
+    "strength": {
+      "quote": "There should've been. You can't swap a control arm and not at least check it.",
+      "why": "He looked at the ticket and said the customer was right before the customer had to argue it.",
+      "segment": 6
+    },
+    "try_next": null,
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "complaint",
+        "warranty"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": null,
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Travis",
+        "recap": "So that's today at 2, here at 2106 East Main. Randy rechecks the control arm, we align it, and there's no charge for any of it"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "There should've been. You can't swap a control arm and not at least check it",
+        "why": "He looked at the ticket and said the customer was right before the customer had to argue it."
+      },
+      "try_next": null
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. No score: two checks apply to a call about a job already done.",
+    "what_follows": "A comeback order at main the same day pointing at Tuesday's order: alignment out after the control arm; no charge. It counts among slot 11's comebacks.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 2,
+      "objection": "not_applicable"
+    },
+    "score": null,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "complaint",
+      "warranty"
+    ]
+  },
+  "why": {
+    "call_type": "existing_job: a complaint about work done three days before.",
+    "greeting": "2: the business and his own name.",
+    "recap": "2: the time, the address and the work, and that it costs nothing.",
+    "not_applicable": "The six checks that apply to new enquiries only are not asked of this call.",
+    "tags": "complaint and warranty: the recheck and the alignment are the shop's to put right at no charge. The customer is firm, not angry.",
+    "try_next": "None: both scored checks are at level 2.",
+    "score": "No score: 2 scored checks (greeting, recap), under the three a score needs.",
+    "carried_by": []
+  },
+  "day_report": {
+    "in_report": true,
+    "candidate": null,
+    "says": "Travis's report of that day can quote this call's summary under what went well ('today at 2, here at 2106 East Main...'). It is no highlight and adds no score."
+  },
+  "new_facts": [
+    "A customer of main, Phil Cantrell, 423-555-0161, 2014 Chevrolet Malibu: an order on the Tuesday of week T-10 for a front lower control arm (technician slot 11, no alignment on it), and a comeback order on the Friday of week T-10 pointing at it (alignment, no charge, rechecked by slot 8).",
+    "At pick-up slot 11 told him 'it's fixed, I don't know what else to tell you'."
+  ]
+}

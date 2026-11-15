@@ -1,0 +1,180 @@
+{
+  "format": "seed-conversation/1",
+  "id": "04-s1-web-fleet-quote-waited",
+  "configuration": "en",
+  "number": 4,
+  "story": "S1",
+  "title": "The fading account's new fleet contact asks for a quote in the website chat; two days to a person's first reply",
+  "demonstrates": "A hand-over that nobody takes. The assistant will not price fleet work, takes a number and hands over at 10:14 on Tuesday. The lead advisor reads it at 16:02 and passes it on in a private note; the newcomer answers 'on it' in another note. A note answers nobody: the customer's follow-up on Wednesday gets a draft that sits. Thursday at 10:41 the newcomer sends that draft as it was, promises 'today', answers one of her two questions, and the quote arrives at 16:47. The assistant's last draft answers the question he skipped, and he sends it untouched.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "ref": "accounts.json en.A6 contacts[1]",
+      "name": "Erin Castillo",
+      "company": "Sourwood Catering Co.",
+      "role": "Operations Coordinator, the fleet contact since P",
+      "phone": "(423) 555-0106",
+      "first_time": false
+    },
+    "named_in_a_line": [
+      {
+        "name": "Marianne Tolliver",
+        "ref": "accounts.json en.A6 contacts[2]",
+        "role": "owner; signs off the spending"
+      }
+    ],
+    "staff": [
+      {"slot": 5, "name": "Travis Burnette"},
+      {"slot": 7, "name": "Caleb Sutton", "weeks_in_the_job": 10}
+    ]
+  },
+  "scenario": {
+    "who_writes": "The contact who took the vans over from the man who used to ring the lead advisor directly. She types at a desk, in full sentences, and is comparing shops.",
+    "vehicles": ["SC-4, 2019 Ram ProMaster 2500, BRC-4958", "SC-9, 2017 Chevrolet Express 3500 cutaway, BRC-6984"],
+    "wants": "An itemized quote on two vehicles before she schedules anything, in time for the owner's sign-off on Friday morning.",
+    "what_happens": "Tuesday 10:12 she asks. Travis leaves a note for Caleb at 16:02. Wednesday she follows up. Thursday 10:41 Caleb sends the waiting draft; the quote goes out at 16:47, list prices. Friday she takes it to the owner. Nothing is booked; Chatwoot resolves the chat a week later.",
+    "facts": {
+      "price_class": "list: medium accounts are not on the company-account rate (catalogue.json company_account_terms)",
+      "terms": "net 30 (accounts.json)",
+      "first_person_reply_after": "two days: Tuesday 10:14 to Thursday 10:41",
+      "saturday": "main is open Saturday 08:00 to 13:00 (ledger site.open_days)",
+      "public_pages_used": ["hours and locations"],
+      "note": "This is the chat of card S01's wrinkle, 'a chat that waited two days'. Call 22 (the quote promised and sent two days late) is another event, on the Tuesday of week T-9 (SC-4's front and rear brakes, SC-5's PM service); this chat says only that SC-4's brakes were quoted before and not booked. Both estimates are among A6's five slow estimates (ledger s1.a6).",
+      "prices": [
+        {"said": "$640.91", "amount": 640.91, "what": "front brake pads and rotors, class van, standard parts, list (in the PDF)", "from": {"catalogue": "front_pads_rotors", "class": "van", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$304.45", "amount": 304.45, "what": "battery replaced, class van, list (in the PDF)", "from": {"catalogue": "battery_replace", "class": "van", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "net 30", "what": "the account's payment terms in days (accounts.json, ledger acct.A6.terms_days)"}
+      ]
+    }
+  },
+  "days": {
+    "T-31d": {"anchor": "the Tuesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 4}, "nominal": "Tue 2026-10-13", "what": "the quote request (card S01; ledger s1.dates.a6_chat_waited_two_days)"},
+    "T-30d": {"anchor": "1 calendar day after the Tuesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 4, "plus_days": 1}, "nominal": "Wed 2026-10-14", "what": "her follow-up; a draft, no reply"},
+    "T-29d": {"anchor": "2 calendar days after the Tuesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 4, "plus_days": 2}, "nominal": "Thu 2026-10-15", "what": "the first reply by a person, the quote"},
+    "T-28d": {"anchor": "3 calendar days after the Tuesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 4, "plus_days": 3}, "nominal": "Fri 2026-10-16", "what": "she takes it to the owner"},
+    "T-21d": {"anchor": "10 calendar days after the Tuesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 4, "plus_days": 10}, "nominal": "Fri 2026-10-23", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "Friday morning", "said_on": "T-31d", "day": "T-28d"},
+    {"word": "yesterday", "said_on": "T-30d", "day": "T-31d"},
+    {"word": "today", "said_on": "T-29d", "day": "T-29d"},
+    {"word": "tomorrow morning", "said_on": "T-29d", "day": "T-28d"},
+    {"word": "a Saturday", "said_on": "T-29d", "day": "any Saturday"},
+    {"word": "this morning", "said_on": "T-28d", "day": "T-28d"},
+    {"word": "Saturdays", "said_on": "T-28d", "day": "any Saturday"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0004-4e00-8000-00000000e004",
+      "peer": {"id": "seedv1-browser-en-0207", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0207",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-31d", "at": "10:12:20", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-31d", "at": "10:12:20", "kind": "message", "from": "customer", "text": "Hello, this is Erin Castillo with Sourwood Catering. We have an account with your East Main shop."},
+        {"n": 2, "day": "T-31d", "at": "10:13:05", "kind": "message", "from": "customer", "text": "I need an itemized quote on two of our vehicles before I schedule anything. SC-4 (the 2019 ProMaster): front brakes, pads and rotors. You quoted its brakes about a month ago and we did not go ahead. SC-9 (the 2017 box truck): a new battery. Parts and labor separate, please. Our owner signs off on these Friday morning."},
+        {"n": 3, "day": "T-31d", "at": "10:13:31", "kind": "message", "from": "assistant", "text": "Hello Erin, I'm the assistant for Brennan Auto Care. I can't prepare a quote for specific fleet vehicles from here, and I don't want to give you list prices that may not match your account. I'll pass your request to the service advisors at East Main so they can send an itemized quote. What's the best phone number for you?"},
+        {"n": 4, "day": "T-31d", "at": "10:14:02", "kind": "message", "from": "customer", "text": "(423) 555-0106"},
+        {"n": 5, "day": "T-31d", "at": "10:14:25", "kind": "message", "from": "assistant", "text": "Thank you, Erin. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 6, "day": "T-31d", "at": "10:14:26", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Erin Castillo", "phone": "(423) 555-0106", "site": "East Main", "context": "Erin Castillo, Sourwood Catering (company account, East Main). She asks for an itemized quote, parts and labor separate, before scheduling: SC-4, 2019 ProMaster, front brake pads and rotors; SC-9, 2017 box truck, a new battery. Their owner signs off on Friday morning. I gave no prices."}}, "note": {"from": "assistant", "private": true, "text": "Erin Castillo, Sourwood Catering (company account, East Main). She asks for an itemized quote, parts and labor separate, before scheduling: SC-4, 2019 ProMaster, front brake pads and rotors; SC-9, 2017 box truck, a new battery. Their owner signs off on Friday morning. I gave no prices."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "main", "owner": null, "due": "T-31d 17:30, the day's close"}},
+        {"n": 7, "day": "T-31d", "at": "10:26", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-31d", "at": "10:50", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 9, "day": "T-31d", "at": "16:02:40", "kind": "note", "from": "staff", "slot": 5, "mentions": [7], "text": "@Caleb Sutton can u work up a quote for sourwood on these 2. list price, there not on the fleet rate. im slammed at the counter"},
+        {"n": 10, "day": "T-31d", "at": "16:09:15", "kind": "note", "from": "staff", "slot": 7, "text": "Yes sir, on it!"},
+        {"n": 11, "day": "T-30d", "at": "10:22:15", "kind": "message", "from": "customer", "text": "Good morning. Following up on the quote I asked for yesterday."},
+        {"n": 12, "day": "T-30d", "at": "10:22:55", "kind": "draft", "id": "d1", "text": "Good morning, Erin. I'm sorry for the wait. Your request for an itemized quote on SC-4 and SC-9 is with our service advisors, and you'll have it from us. If you can send the plate or VIN for each, the quote will be exact.", "why_a_draft": "the chat carries handoff, so the assistant no longer sends", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-29d", "at": "10:41:20", "became": 14}},
+        {"n": 13, "day": "T-29d", "at": "10:41:18", "kind": "activity", "what": "assigned", "derived": true, "to": 7, "by": 7, "how": "first reply"},
+        {"n": 14, "day": "T-29d", "at": "10:41:20", "kind": "message", "from": "staff", "slot": 7, "text": "Good morning, Erin. I'm sorry for the wait. Your request for an itemized quote on SC-4 and SC-9 is with our service advisors, and you'll have it from us. If you can send the plate or VIN for each, the quote will be exact.", "late": "story: the two days of card S01 (ledger s1.a6.quote_chat_waited_days)"},
+        {"n": 15, "day": "T-29d", "at": "10:41:21", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 7, "how": "a manager's reply takes it off"},
+        {"n": 16, "day": "T-29d", "at": "10:41:22", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 17, "day": "T-29d", "at": "10:42:00", "kind": "message", "from": "staff", "slot": 7, "text": "Working on it now, should have it over to you today!"},
+        {"n": 18, "day": "T-29d", "at": "10:50:10", "kind": "message", "from": "customer", "text": "Plates are BRC-4958 and BRC-6984. Thank you. I do need it today: Marianne signs off tomorrow morning."},
+        {"n": 19, "day": "T-29d", "at": "10:50:35", "kind": "message", "from": "customer", "text": "Two questions while I have you: are we still on net 30, and can SC-9 come in on a Saturday? It's on the road every weekday."},
+        {"n": 20, "day": "T-29d", "at": "10:51:15", "kind": "draft", "id": "d2", "text": "Thanks, Erin, that's what we needed. I'll confirm the terms and a Saturday drop-off and answer both with the quote today.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 7, "day": "T-29d", "at": "10:58:00", "because": "he sent his own text (n 21)"}},
+        {"n": 21, "day": "T-29d", "at": "10:58:00", "kind": "message", "from": "staff", "slot": 7, "text": "Yes still net 30!"},
+        {"n": 22, "day": "T-29d", "at": "10:58:30", "kind": "activity", "what": "label_added", "label": "fleet", "by": 7},
+        {"n": 23, "day": "T-29d", "at": "16:47:05", "kind": "message", "from": "staff", "slot": 7, "text": "Hi Erin, here's the quote for both! Let me know when you'd like to bring them in", "files": [{"kind": "file", "file": "Sourwood_quote_SC4_SC9.pdf", "pool": "estimate-pdf", "shows": "a two-vehicle estimate at list prices: SC-4 front brake pads and rotors $640.91; SC-9 battery $304.45; shop supplies and tax on their own lines"}]},
+        {"n": 24, "day": "T-28d", "at": "08:05:30", "kind": "message", "from": "customer", "text": "Received, thank you. I'll take it to Marianne this morning and let you know."},
+        {"n": 25, "day": "T-28d", "at": "08:06:10", "kind": "draft", "id": "d3", "text": "You're welcome, Erin. And to your second question: yes, East Main is open Saturdays from 8:00 to 1:00, so SC-9 can come in on a Saturday.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-28d", "at": "08:19:40", "became": 26}},
+        {"n": 26, "day": "T-28d", "at": "08:19:40", "kind": "message", "from": "staff", "slot": 7, "text": "You're welcome, Erin. And to your second question: yes, East Main is open Saturdays from 8:00 to 1:00, so SC-9 can come in on a Saturday."},
+        {"n": 27, "day": "T-21d", "at": "08:19", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-29d", "at": "10:41:18", "to": 7, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 7,
+        "labels": ["fleet"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 26},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 26},
+          {"asked": 4, "answered": 5, "by": "assistant", "wall_seconds": 23},
+          {"asked": 11, "answered": 14, "by": 7, "working_minutes": 1226.9, "wall_minutes": 2906.9, "measured_from": "n 6", "reply": "first", "late": "story: the two days of card S01 (ledger s1.a6.quote_chat_waited_days)"},
+          {"asked": 18, "answered": 21, "by": 7, "working_minutes": 7.8, "wall_minutes": 7.8, "measured_from": "n 18", "reply": "later"},
+          {"asked": 24, "answered": 26, "by": 7, "working_minutes": 14.2, "wall_minutes": 14.2, "measured_from": "n 24", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 7,
+          "n": 14,
+          "working_minutes": 1226.9,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 7, "assistant": 2, "manager": 5, "note": 3},
+        "resolutions": [
+          {"day": "T-21d", "at": "08:19", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 7},
+          {"draft": "d2", "outcome": "discarded", "manager": 7},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 7}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 7: his first line two days after the hand-off, four replies, two drafts sent as they were and one discarded, nothing resolved; slot 5: a note and no reply"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "company account: weekly bookings, quotes, documents",
+    "handled": "assistant first, handed over (escalation); slot 5's note; slot 7",
+    "outcome": "quote sent two days after it was asked for; nothing booked; resolved by 7 silent days",
+    "facts": [
+      "asked on the Tuesday of week T-4 at 10:12; handed over at 10:14",
+      "the first line by a person came on Thursday at 10:41: two days",
+      "slot 5 read it the same afternoon and passed it to slot 7 in a private note",
+      "the quote, at list prices, went out on Thursday at 16:47",
+      "of her two questions slot 7 answered one; the other was answered by the assistant's draft, sent as it was",
+      "no visit followed"
+    ],
+    "questions": ["S1.3"]
+  },
+  "why": [
+    "Erin stays in full sentences and her lines get shorter: an introduction, 'Following up', 'I do need it today', 'Received, thank you.' Nobody is rude.",
+    "Travis writes to a colleague, not to the customer, slowly and with the typos left in.",
+    "Caleb: 'should', an exclamation mark on a late answer, the first of two questions, and two drafts sent untouched, the second of which does his job for him.",
+    "For S1 an agent finds here: the hand-off instant, the two notes, the first human line two days later."
+  ],
+  "new_facts": [
+    "The quote is for SC-4 (front brake pads and rotors, 640.91 at list) and SC-9 (battery, 304.45 at list); it was asked for the owner's sign-off on the Friday of week T-4.",
+    "ERP: the estimate made from this chat is proposed as one of A6's five slow estimates (ledger s1.a6), expired; no order followed.",
+    "The file Sourwood_quote_SC4_SC9.pdf (picture pool 'estimate-pdf').",
+    "SC-4's brakes were quoted once before, after call 22 (the Tuesday of week T-9), and not booked; this quote, front pads and rotors only, is A6's second estimate on SC-4."
+  ]
+}

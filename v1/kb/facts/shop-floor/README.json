@@ -1,0 +1,92 @@
+{
+ "path": "shop-floor/README.md",
+ "title": "Shop floor",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "Index for technicians; what a worker-rank person can read.",
+ "serves": [
+  "visibility:worker",
+  "challenge:kb-does-not-say",
+  "S14"
+ ],
+ "length_class": "tiny",
+ "words_en": 59,
+ "links_to": [
+  "shop-floor/clocking-in-and-out.md",
+  "shop-floor/shift-changes-and-time-off.md",
+  "shop-floor/courtesy-inspection.md",
+  "shop-floor/before-a-car-leaves.md",
+  "shop-floor/when-a-car-comes-back.md",
+  "shop-floor/safety.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Six pages for technicians.",
+  "The staff handbook is not visible at worker rank: the page sends technicians to the paper binder and to slot 3.",
+  "Product fact: the customers' assistant reads at worker rank, so this folder is readable by it too; nothing here is confidential."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Shop floor",
+   "item": "Clocking in and out"
+  },
+  {
+   "section": "Shop floor",
+   "item": "Shift changes and time off"
+  },
+  {
+   "section": "Shop floor",
+   "item": "The courtesy inspection"
+  },
+  {
+   "section": "Shop floor",
+   "item": "Before a car leaves your bay"
+  },
+  {
+   "section": "Shop floor",
+   "item": "When a car comes back"
+  },
+  {
+   "section": "Shop floor",
+   "item": "Safety"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "A paper handbook binder in each break room. Reason: the handbook file is staff (junior) rank, because anything at worker rank is readable by the website assistant."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same six pages."
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "path": "prices/how-prices-change.md",
+ "title": "Как меняются цены",
+ "title_en": "How prices change",
+ "exists_in": "both",
+ "english_sheet": "facts/prices/how-prices-change.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The rule written after S8: who changes a price, which page changes first, and what happens to service pages and open estimates.",
+ "serves": [
+  "S12",
+  "S8",
+  "operate:find-what-changed",
+  "operate:contradiction"
+ ],
+ "length_class": "medium",
+ "words_ru": 265,
+ "links_to": [
+  "prices/price-list.md",
+  "prices/labour-rates-and-fees.md",
+  "customers/prices-for-common-services.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The record has three rows: the Russian shop raised the hour three times in two years (design R11, ledger price.hour.history).",
+  "An open estimate is honoured for its 14 days."
+ ],
+ "new_facts": [
+  "Fixed prices rose by the same percentage as the hour at the two earlier rises (8 % and 8.6 %); the catalogue holds only the last step."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Что и когда менялось",
+   "columns": [
+    "Дата",
+    "Что изменилось"
+   ],
+   "rows": [
+    {
+     "Дата": "{{@price_rise_1|date}}",
+     "Что изменилось": "Нормо-час 1 500 ₽ → 1 620 ₽. Договорной 1 350 ₽ → 1 460 ₽. Фиксированные цены +8 %"
+    },
+    {
+     "Дата": "{{@price_rise_2|date}}",
+     "Что изменилось": "Нормо-час 1 620 ₽ → 1 760 ₽. Договорной 1 460 ₽ → 1 580 ₽. Фиксированные цены +8,6 %"
+    },
+    {
+     "Дата": "{{@price_rise|date}}",
+     "Что изменилось": "Нормо-час 1 760 ₽ → 1 900 ₽. Договорной 1 580 ₽ → 1 700 ₽. Фиксированные цены +7,95 %. Запчасти не менялись"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Как меняются цены",
+   "item": "Прайс-лист и страница про нормо-час меняются в то же утро, до открытия."
+  },
+  {
+   "section": "Как меняются цены",
+   "item": "Страница цен для клиентов — в то же утро."
+  },
+  {
+   "section": "Как меняются цены",
+   "item": "Каждую страницу услуг, на которой есть сумма в рублях, в течение пяти рабочих дней проверяет тот, кто её ведёт. Дмитрий Григорьев ведёт страницы услуг Московского шоссе, Светлана Демидова — тормоза и подвеску."
+  },
+  {
+   "section": "Как меняются цены",
+   "item": "Смета, которую клиент уже получил, действует по своей цене свои 14 дней."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Светлана Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергеем Анатольевичем",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}",
+  "{{@price_rise|date}}",
+  "{{@price_rise_1|date}}",
+  "{{@price_rise_2|date}}"
+ ],
+ "amounts": [
+  1350.0,
+  1460.0,
+  1500.0,
+  1580.0,
+  1620.0,
+  1700.0,
+  1760.0,
+  1900.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

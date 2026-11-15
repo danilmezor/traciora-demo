@@ -1,0 +1,100 @@
+{
+ "path": "customers/warranty.md",
+ "title": "Наша гарантия",
+ "title_en": "Our warranty",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/warranty.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Public summary of the 24/24 warranty; the staff page has the full terms.",
+ "serves": [
+  "S12",
+  "S1",
+  "challenge:combine-policy-and-price",
+  "challenge:kb-does-not-say",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "short",
+ "words_ru": 222,
+ "links_to": [
+  "customers/bringing-your-own-parts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Terms follow ledger s12.warranty.ru: 30 days on mechanical and electrical work; no mileage limit; from the day the completion act is signed.",
+  "No business-use tier, no 25-mile rule, no cap: the Russian page has none of them.",
+  "Parts carry the maker's warranty; after day 30 the part is replaced under it and the labour is paid, which is why a repeat after day 30 is a paid order (ledger comeback.definition).",
+  "Customer parts: warranty on the work only (English: none on part or labour)."
+ ],
+ "new_facts": [
+  "Wear parts (pads, blades, bulbs, plugs, filters): factory defects only.",
+  "After day 30 and inside the maker's term: the part is replaced, the labour is charged.",
+  "Diagnosis and inspection carry no warranty term.",
+  "Sublet work (gearbox rebuild, steering rack, glass): the subcontractor's warranty in writing; its length is stated nowhere in the base, as in English."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "\"Body work\" here: the catalogue has no body job and the public scope page says body repair and paint are not done; an earlier ledger row gave 6 months on body work.",
+   "outcome": "corrected",
+   "note": "The six-month term is gone from the ledger row s12.warranty and from the pages: the company does no body work and the catalogue has no body job. Source: catalogue.json."
+  },
+  {
+   "item": "The sentence that the shop's own warranty does not limit the consumer's rights under the consumer-protection law is ordinary wording; the periods the law itself gives for claims on work are not in the research and are not stated.",
+   "outcome": "verified",
+   "note": "The sentence stands. The law's own periods are still not stated on the page; they are longer than the shop's 30 days, which is why the sentence is there.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-29/",
+   "sentence": "ст. 29 п. 3: потребитель вправе предъявлять требования, «если они обнаружены в течение гарантийного срока», «а при его отсутствии в разумный срок, в пределах двух лет со дня принятия выполненной работы (оказанной услуги)»; п. 5: когда гарантийный срок «составляет менее двух лет» и «недостатки работы (услуги) обнаружены потребителем по истечении гарантийного срока, но в пределах двух лет», требования предъявляются, если потребитель докажет, что недостатки возникли до принятия работы."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Где условия другие",
+   "item": "Запчасти, купленные у нас: гарантия производителя, её срок указан в заказ-наряде. Если деталь отказала позже 30 дней, но в срок производителя, меняем её по гарантии, а работа по замене оплачивается."
+  },
+  {
+   "section": "Где условия другие",
+   "item": "Колодки, щётки, лампы, свечи, фильтры: гарантия только на заводской брак. Износ от езды — не брак."
+  },
+  {
+   "section": "Где условия другие",
+   "item": "Аккумуляторы и шины: гарантия производителя по талону. Обращение оформляем мы."
+  },
+  {
+   "section": "Где условия другие",
+   "item": "Работы подрядчиков (капитальный ремонт АКПП, ремонт рулевой рейки, стёкла): гарантия подрядчика. Передаём её вам письменно вместе с работой."
+  },
+  {
+   "section": "Где условия другие",
+   "item": "Ваши запчасти: гарантия только на нашу работу, на саму деталь её нет. Подробнее: Ремонт со своими запчастями."
+  },
+  {
+   "section": "Где условия другие",
+   "item": "Диагностика и осмотр: гарантийного срока нет, это заключение, а не ремонт."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@warranty_2424|date}}",
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

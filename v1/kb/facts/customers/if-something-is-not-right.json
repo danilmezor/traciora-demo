@@ -1,0 +1,79 @@
+{
+ "path": "customers/if-something-is-not-right.md",
+ "title": "If something isn't right",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "Public complaints route.",
+ "serves": [
+  "S8",
+  "S1"
+ ],
+ "length_class": "short",
+ "words_en": 114,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Complaints go to slot 4 (main, east) or slot 22 (west); reply within one working day.",
+  "A returning car is looked at first and the look is free.",
+  "Escalation: slot 2 by e-mail cbrennan@brennanautocare.example (pattern in phones.md).",
+  "Account A5's manager called three times in nine days and was never called back: the story breaks this page's promise on purpose."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "If something isn't right",
+   "item": "Call the shop that did the work and ask for the service manager: Greg Whitaker for East Main and Bonny Oaks, Dale Hutchins for Charlotte Pike. Or tell any advisor and they will get him."
+  },
+  {
+   "section": "If something isn't right",
+   "item": "You will hear back within one working day, from a person who can fix it."
+  },
+  {
+   "section": "If something isn't right",
+   "item": "If the car needs to come back, we look at it first, ahead of the day's other work, and it does not cost you anything to have it looked at."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale Hutchins",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Reply within one working day. Reason: gives stories S1 and S8 a stated standard to be measured against."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "In Russia a written claim (претензия) has legal weight under the consumer law; say that a written claim is answered within 10 days by law and by phone the same day by the shop's own rule. Record as new facts."
+ ]
+}

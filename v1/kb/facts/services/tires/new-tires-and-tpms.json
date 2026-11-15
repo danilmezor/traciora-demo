@@ -1,0 +1,192 @@
+{
+ "path": "services/tires/new-tires-and-tpms.md",
+ "title": "New tires and tire-pressure sensors",
+ "first_revision_text": "en/_history/services/tires/new-tires-and-tpms.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Selling and fitting tires; the fees; TPMS sensors.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_en": 267,
+ "links_to": [
+  "services/tires/alignment.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job new_tyres_fitted: menu labour 100.00 for four; tyres 215/55R17 by tier (Milestar, Hankook Kinergy, Michelin Defender); fees 19.40 included.",
+  "Other sizes are priced by slot 9 (not on the page).",
+  "Sold in pairs or fours; alignment offered; customer tyres over six years old refused.",
+  "Arrival: next morning in Chattanooga; Tuesdays and Fridays in Nashville (contradicts the public tyres page's \"most sizes arrive the next morning\" for Nashville callers).",
+  "TPMS sensor: 0.5 h; batteries last about ten years.",
+  "Seasonal changeover and storage exist and are rare (under 0.2 % of orders)."
+ ],
+ "tables": [
+  {
+   "section": "New tires",
+   "columns": [
+    "Tier",
+    "Tire",
+    "Each",
+    "Set of four, fitted"
+   ],
+   "rows": [
+    {
+     "Tier": "Economy",
+     "Tire": "Milestar",
+     "Each": "$100.00",
+     "Set of four, fitted": "$519.40"
+    },
+    {
+     "Tier": "Standard",
+     "Tire": "Hankook Kinergy",
+     "Each": "$143.59",
+     "Set of four, fitted": "$693.76"
+    },
+    {
+     "Tier": "Premium",
+     "Tire": "Michelin Defender",
+     "Each": "$220.51",
+     "Set of four, fitted": "$1,001.44"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "New tires",
+   "item": "Read the size off the sidewall, not off the door sticker; cars get re-shod."
+  },
+  {
+   "section": "New tires",
+   "item": "We sell tires in pairs or fours, not singles, unless the other three are nearly new."
+  },
+  {
+   "section": "New tires",
+   "item": "Offer the alignment. Say why."
+  },
+  {
+   "section": "New tires",
+   "item": "Tires arrive next morning in Chattanooga. In Nashville they come Tuesdays and Fridays."
+  },
+  {
+   "section": "New tires",
+   "item": "We do not fit tires the customer brings if they are more than six years old by the date code."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 100.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "part list price each: Tire 215/55R17",
+   "tier": "economy",
+   "qty": 4,
+   "unit": "ea",
+   "brand": "Milestar",
+   "value": 100.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 519.4
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "part list price each: Tire 215/55R17",
+   "tier": "standard",
+   "qty": 4,
+   "unit": "ea",
+   "brand": "Hankook",
+   "value": 143.59
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 693.76
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "part list price each: Tire 215/55R17",
+   "tier": "premium",
+   "qty": 4,
+   "unit": "ea",
+   "brand": "Michelin",
+   "value": 220.51
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1001.44
+  },
+  {
+   "catalogue_key": "tpms_sensor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 128.86
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Write the Russian tyre pages from the Russian catalogue: шиномонтаж 4 колёс 3 000, сезонное хранение 3 000 за сезон; two seasons at six times the yearly mean."
+ ]
+}

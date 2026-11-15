@@ -1,0 +1,123 @@
+{
+ "path": "management/what-we-found-at-west.md",
+ "title": "What we found at Charlotte Pike",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: the managing owner's memo on the discounts, voids and till shortages (S2) and what was changed.",
+ "serves": [
+  "S2",
+  "visibility:senior",
+  "challenge:combine-kb-and-data",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_en": 370,
+ "links_to": [
+  "policies/discounts.md",
+  "policies/voids-and-refunds.md",
+  "shops/west/opening-and-closing.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Design S2 facts, unchanged: slot F1, T-11 to T-5 months; 22 % of his cash orders discounted (15 to 30 %) against 3 % for everyone else; 14 voids in six months against one or two; till short on 19 of the days he closed; the Walk-in record has a couple of hundred orders (240 at full size; worded so that a smaller build agrees); total 11,400 USD.",
+  "Per design 7.2: the total is the sum of three components and the true loss is not in the data; the memo says so.",
+  "Found by slot 3 at the month-end check at T-5.5 months, totalling the till by closer; fired at T-5 months (@discount_rule is the same day or days after).",
+  "Changes: discount rule, void rule, two-person count and daily banking at west, monthly till totals by person, the Friday report.",
+  "West's discounted share of cash orders fell from 13.4 % to 2.4 % (ledger s2.west.discount_share_before and _after: 13.42 and 2.44); it stopped the week he left.",
+  "The section \"Since\" is dated: it was added on the Monday of week T-2, after the first Friday list that showed an unapproved discount. \"The odd bill over 10 % with no approver\" = slot 23's 12 % of the Wednesday of week T-3 (not named); his second, in week T-1, came after the section was written.",
+  "Seen from senior: slots 1, 4, 22 and 2 read it; a junior asking \"what happened at Charlotte Pike\" gets the policy pages only."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What happened",
+   "item": "Discounts nobody approved. 22 % of his cash orders carried a discount, of 15 to 30 %. For every other advisor in the company it is 3 %."
+  },
+  {
+   "section": "What happened",
+   "item": "Orders voided after the customer had paid. 14 in six months. Any other advisor has one or two."
+  },
+  {
+   "section": "What happened",
+   "item": "A short till. The drawer was short on 19 of the days he closed it."
+  },
+  {
+   "section": "What we changed",
+   "item": "Discount policy: over 10 % needs the shop manager, on the order."
+  },
+  {
+   "section": "What we changed",
+   "item": "Voids and refunds: a paid order is not voided at the counter."
+  },
+  {
+   "section": "What we changed",
+   "item": "The till at Charlotte Pike is counted by two people and banked daily."
+  },
+  {
+   "section": "What we changed",
+   "item": "Donna totals till differences by person every month."
+  },
+  {
+   "section": "What we changed",
+   "item": "I get a list of discounts over 10 % every Friday."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}",
+  "{{@leak_start|month}}",
+  "{{@f1_fired|month}}",
+  "{{@money_found|month}}",
+  "{{@f1_fired|date}}",
+  "{{@early_desk+1w|date}}"
+ ],
+ "new_facts": [
+  "The memo exists and names slot F1 to senior rank. Its numbers must equal the golden answers of S2 in the ERP, whatever the ledger finally fixes.",
+  "NEW IN FIX PASS B: the section \"Since\" was added by slot 2 on {{@early_desk+1w}} (the Monday of week T-2). Reason: the memo is dated the next full open day after the firing and could not state what followed; the date is the first Monday after a Friday list showed an unapproved discount (stories/S02: the Wednesday of week T-3)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@early_desk+1w|date}}",
+   "what": "section \"Since\" added: the share of discounted cash orders before and since, and the Friday list; message: \"What has happened since.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian signature of the leak (R11): work done past the order and parts written off with no sale, plus discounts; the Russian amounts are their own ledger rows. Slot F1 is Артур Назаров."
+ ]
+}

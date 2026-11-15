@@ -1,0 +1,126 @@
+{
+ "path": "shops/main/how-the-day-runs.md",
+ "title": "Московское шоссе: как проходит день",
+ "title_en": "East Main: how the day runs",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/main/how-the-day-runs.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "The flagship's local habits: the morning rush, lunch cover, diagnostics queue, Thursday.",
+ "serves": [
+  "S3",
+  "S5",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 250,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The rush is 9:00 to 11:30: a third of arrivals (mix.json ru: 32 % in the first two and a half hours) and the call peak (ledger calls.morning_share 28.5 %).",
+  "The worst morning is Tuesday (ledger calls.busiest_mornings_since_fix.ru).",
+  "A second peak from 17:00 to 19:00 (mix.json ru hour curve).",
+  "Lunch 13:00 to 15:00; parts land about 11:00, 14:00, 17:00; ready messages by 19:00."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "Самое тяжёлое утро — вторник. Если во вторник телефон на вас, до 11:30 вы от стола не отходите. Ни за чем."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "Второй пик — с пяти до семи, когда люди едут с работы забирать машины и «заскочить на пять минут»."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "Михалыч раздаёт работу в 9:00, по записям на день. Машину без записи сначала показываем ему, потом обещаем время клиенту."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "Диагностика — к Шубину, он берёт около четырёх машин в день. «Чек» и электрику записывайте в его колонку, а не «любому механику». Колонка заполнена — значит, заполнена: предлагайте следующий день или Инженерный, там лишнее берёт Егоров."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "Обедаем по очереди, с 13:00 до 15:00. Стойка не пустует, телефон в рабочее время на автоответчик не уходит."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "Запчасти приезжают около 11:00, 14:00 и 17:00. Клиенту, который спрашивает «готова ли машина», звоним после рейса, а не до."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "О готовности сообщаем до 19:00."
+  },
+  {
+   "section": "Московское шоссе: как проходит день",
+   "item": "По четвергам с утра Николай Петрович сидит в зоне ожидания с кофе и разговаривает со всеми подряд. Клиентам нравится. Если он кому-то назвал цену — она не считается, и он это знает."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Михалыч",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубину",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Егоров",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "Travis's rewrite of the first paragraph for the early desk (proposed by slot 5, approved by slot 4); message: \"Two at the desk in the morning.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Утром на приёмке двое."
+  }
+ ],
+ "has_history": true
+}

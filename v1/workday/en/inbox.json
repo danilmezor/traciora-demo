@@ -1,0 +1,215 @@
+{
+ "_what": "the two operators' Inbox at T, line by line",
+ "junior": {
+  "slot": 6,
+  "zone": "home",
+  "opened_today": "she opened the tray at o+0:10 and tapped one line: slot 4's comment on the review card (read)",
+  "lines": [
+   {
+    "half": "needs",
+    "source": "due",
+    "verb": "due_today",
+    "about": "card J-estimate",
+    "key": "due:<card>:<T's date>",
+    "at": "T@15:00"
+   },
+   {
+    "half": "needs",
+    "source": "due",
+    "verb": "due_today",
+    "about": "card J-confirm",
+    "key": "due:<card>:<T's date>",
+    "at": "T@15:00"
+   },
+   {
+    "half": "update",
+    "item": 1,
+    "source": "activity",
+    "verb": "assigned",
+    "about": "card S16-review, given by slot 4",
+    "key": "the activity row",
+    "at": "W-1.mon@o+1:10"
+   },
+   {
+    "half": "update",
+    "item": 2,
+    "source": "notice",
+    "type": "memory.decided",
+    "about": "her note proposal 2, declined by slot 4",
+    "key": "the pushed row",
+    "at": "W-3.mon>=p6>p4@o+1:00",
+    "text": "Read the booking back before hanging up — declined: the page 'Booking a visit' already says this; propose the wording there"
+   },
+   {
+    "half": "update",
+    "item": 3,
+    "source": "rota",
+    "verb": "shift_published",
+    "about": "her shifts of week W+1, one line a shift",
+    "key": "each shift's id",
+    "at": "W0.thu@11:40",
+    "lines": 5,
+    "which": "Monday to Friday of W+1"
+   },
+   {
+    "half": "update",
+    "item": 4,
+    "source": "diary",
+    "verb": "invited",
+    "state": "accepted",
+    "about": "entry S16-meeting",
+    "key": "her participant row",
+    "at": "W-1.mon>=p6@o+5:35"
+   },
+   {
+    "half": "update",
+    "item": 5,
+    "source": "activity",
+    "verb": "mentioned",
+    "about": "slot 5's comment on card M-chats-cover",
+    "key": "the activity row",
+    "at": "p5-1@c-0:28"
+   },
+   {
+    "half": "update",
+    "item": 6,
+    "source": "notice",
+    "type": "conversation.message",
+    "about": "S7's return chat, which she owns",
+    "key": "the pushed row",
+    "at": "T@T-0:30",
+    "text": "Rachel Dunlap: anything wed or thurs, early? and whats my total with tax"
+   },
+   {
+    "half": "update",
+    "item": 7,
+    "source": "notice",
+    "type": "scheduled_task.ran",
+    "about": "her task 'My call backs' / «Мои перезвоны»",
+    "key": "task_run:<task>:<finished at>",
+    "at": "T@07:30",
+    "text": "{n} waiting at East Main; the oldest has waited {days} days.",
+    "computed": "n = the queue at main less today's misses (calls.queue_at_t: 4 - 2 = 2); days from the oldest"
+   }
+  ],
+  "counts": {
+   "needs": 2,
+   "update_items": 7,
+   "update_lines": 11
+  }
+ },
+ "senior": {
+  "slot": 4,
+  "zone": "home",
+  "lines": [
+   {
+    "half": "needs",
+    "source": "handover",
+    "verb": "handover_requested",
+    "about": "card H-east-waiting",
+    "key": "handover:<card>",
+    "at": "T@T-0:40"
+   },
+   {
+    "half": "needs",
+    "source": "due",
+    "verb": "due_today",
+    "about": "card G-listen-calls",
+    "key": "due:<card>:<T's date>",
+    "at": "W0.fri@c-0:30",
+    "only_if": "T's date is the Friday of W0 (the nominal T)"
+   },
+   {
+    "half": "needs",
+    "source": "due",
+    "verb": "due_today",
+    "about": "card G-weekly-callers",
+    "key": "due:<card>:<T's date>",
+    "at": "W0.fri@c-0:30",
+    "only_if": "T's date is the Friday of W0 (the nominal T)"
+   },
+   {
+    "half": "needs",
+    "source": "rota_news",
+    "verb": "change_requested",
+    "about": "request R50 (slot 16, remove)",
+    "key": "the activity row",
+    "at": "p16-3@o+1:05"
+   },
+   {
+    "half": "needs",
+    "source": "rota_news",
+    "verb": "change_requested",
+    "about": "request R51 (slot 16, remove)",
+    "key": "the activity row",
+    "at": "p16-3@o+1:08"
+   },
+   {
+    "half": "needs",
+    "source": "notice",
+    "type": "memory.proposed",
+    "about": "slot 6's proposal 3 (the company driver's limit)",
+    "key": "the pushed row",
+    "at": "p6-1@o+6:30",
+    "text": "A company driver cannot approve work over 300 USD; call the fleet contact"
+   },
+   {
+    "half": "needs",
+    "source": "notice",
+    "type": "memory.proposed",
+    "about": "the nightly proposal, three holders (5, 6, 7)",
+    "key": "the pushed row",
+    "at": "T@03:30",
+    "text": "Prices source: Take prices from the price list page, never from a service page"
+   },
+   {
+    "half": "needs",
+    "source": "notice",
+    "type": "knowledge.proposed",
+    "about": "slot 5's correction to the timing-belt page",
+    "key": "knowledge:<proposal id>",
+    "at": "p7-4>p5>p4>p5@o+2:00",
+    "text": "ids only; the engine words it when the tray is read"
+   },
+   {
+    "half": "needs",
+    "source": "notice",
+    "type": "board.quiet",
+    "about": "card Q-04-rack",
+    "key": "quiet:<card>:<since>",
+    "at": "W-2.thu@05:30"
+   },
+   {
+    "half": "update",
+    "item": 1,
+    "source": "notice",
+    "type": "punch.corrected",
+    "about": "slot 14 fixed the clock-out he forgot",
+    "key": "the pushed row",
+    "at": "p14-1@o+0:02",
+    "context": {
+     "business_day": "p14-2",
+     "left_at_local": "16:05",
+     "site": "main"
+    }
+   },
+   {
+    "half": "update",
+    "item": 2,
+    "source": "notice",
+    "type": "scheduled_task.ran",
+    "about": "his task 'Tomorrow's gaps in cover' / «Завтрашние пробелы в графике»",
+    "key": "task_run:<task>:<finished at>",
+    "at": "T>-1d@16:30",
+    "text": "No gaps tomorrow at East Main or Bonny Oaks.",
+    "computed": "from the cover of T's date against the rules in force"
+   }
+  ],
+  "counts": {
+   "needs": 9,
+   "update_items": 2,
+   "update_lines": 2
+  },
+  "not_a_line": "the flagged no-show of card S14: the product writes a shift.no_show event and no tray line reads it (DESIGN.md section 10)"
+ }
+}

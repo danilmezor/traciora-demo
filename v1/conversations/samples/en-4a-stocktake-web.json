@@ -1,0 +1,99 @@
+{
+  "format": "seed-conversation/1",
+  "id": "07-s13-web-stocktake-question",
+  "configuration": "en",
+  "number": 7,
+  "story": "S13",
+  "title": "The stocktake afternoon, asked on the website: the assistant answers alone",
+  "demonstrates": "Web chat, assistant sends: two customer lines, two answers from the dated hours, no person. The chat stays the assistant's: pending at T, in All with the Agent mark, owed nothing.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {"name": "Website visitor", "invented": true, "first_time": true},
+    "staff": []
+  },
+  "scenario": {
+    "who_writes": "Somebody who wants an oil change on a particular afternoon.",
+    "what_happens": "He asks whether the shop is open on the afternoon of the stocktake day. The assistant says no, why, and what is open; offers a hand-over for a morning time; does not push when it is declined.",
+    "facts": {
+      "stocktake": "the Thursday of week W+1: every shop closes at 12:00 (card S13; ledger site.stocktake). Nominal: Thursday 2026-11-19.",
+      "hours_weekday": "7:30 to 17:30",
+      "public_pages_used": ["hours and locations, with the dated closure"]
+    }
+  },
+  "days": {
+    "T-4d": {"anchor": "the Monday of week W0", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 0}, "nominal": "Mon 2026-11-09", "what": "the customer's question (card S13: the Monday of week W0 when it is before T)"},
+    "T+6d": {"anchor": "the Thursday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": -1}, "nominal": "Thu 2026-11-19", "what": "the stocktake: every shop closes at 12:00"}
+  },
+  "floating_days": [
+    {"word": "thursday the 19th", "said_on": "T-4d", "day": "T+6d"},
+    {"word": "Thursday the 19th", "said_on": "T-4d", "day": "T+6d"},
+    {"word": "friday", "said_on": "T-4d", "day": "not fixed: he may mean either Friday, and the assistant does not guess"},
+    {"word": "Fridays", "said_on": "T-4d", "day": "any Friday"}
+  ],
+  "disagrees_with": "DESIGN.md section 6 puts this chat on the 2nd full open day before T; card S13 puts it on the Monday of week W0 when that day is before T. The card is followed. The card's footprint says 'resolved'; the ledger (conv.open_at_t) and the design name it as pending at T, and it is pending here: under seven silent days have passed.",
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0007-4e00-8000-00000000e007",
+      "peer": {"id": "seedv1-browser-en-0412", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0412",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-4d", "at": "12:47:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-4d", "at": "12:47:10", "kind": "message", "from": "customer", "text": "are yall open thursday the 19th in the afternoon? need an oil change"},
+        {"n": 2, "day": "T-4d", "at": "12:47:31", "kind": "message", "from": "assistant", "text": "Hi! On Thursday the 19th all three Brennan Auto Care shops close at noon for our twice-a-year inventory count, so there's no afternoon service that day. That morning we're open from 7:30, and every other weekday it's the usual 7:30 to 5:30. Would you like me to ask the shop to set up a morning time for you?"},
+        {"n": 3, "day": "T-4d", "at": "12:48:40", "kind": "message", "from": "customer", "text": "nah mornings dont work. ill just come friday. thx"},
+        {"n": 4, "day": "T-4d", "at": "12:49:02", "kind": "message", "from": "assistant", "text": "Sounds good. Fridays are regular hours, 7:30 to 5:30. Have a good one!"}
+      ],
+      "assignee_history": [],
+      "state_at_t": {
+        "status": "pending",
+        "owner": null,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "shown_as": "in All with the Agent mark; not in the Queue: nobody is owed an answer",
+        "later": "Chatwoot resolves it after 7 silent days, three days after T: not in the data"
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 21},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 21},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 22}
+        ],
+        "message_kinds": {"customer": 2, "assistant": 2, "manager": 0, "note": 0},
+        "resolutions": [],
+        "draft_outcomes": [],
+        "operator_credit": "nobody: the assistant is not an operator"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "hours, address, do you work on this",
+    "handled": "the assistant alone",
+    "outcome": "answered; pending at T, the assistant's",
+    "facts": [
+      "no: every shop closes at 12:00 that day for the stocktake",
+      "the morning is open from 7:30",
+      "a hand-over for a morning time was offered and declined"
+    ],
+    "questions": ["S13.1", "S13.3"]
+  },
+  "why": [
+    "It is as short as these really are.",
+    "The assistant offers a hand-over for a morning time and does not push when it is declined.",
+    "The answer to 'are we open that afternoon' is here in the assistant's words and in file 08 in a person's."
+  ],
+  "new_facts": []
+}

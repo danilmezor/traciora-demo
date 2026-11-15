@@ -1,0 +1,133 @@
+{
+ "path": "customers/brake-noise.md",
+ "title": "Скрип и скрежет при торможении",
+ "title_en": "Brake noise",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/brake-noise.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "6",
+ "purpose": "What a customer with a brake noise is told, what the inspection costs and what a typical repair costs. The page the assistant answers S7 from.",
+ "serves": [
+  "S7",
+  "challenge:customer-terms"
+ ],
+ "length_class": "medium",
+ "words_ru": 274,
+ "links_to": [
+  "customers/prices-for-common-services.md",
+  "customers/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Customers' words: «скрип», «свист», «скрежет», «железом по железу», «бьёт в руль»; the order line is «Замена передних тормозных дисков и колодок».",
+  "Brake inspection is «Диагностика тормозной системы», 0.4 н/ч at a fixed price.",
+  "Opening is 9:00."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Что обычно значит звук",
+   "columns": [
+    "Что вы слышите или чувствуете",
+    "Что это обычно",
+    "Как срочно"
+   ],
+   "rows": [
+    {
+     "Что вы слышите или чувствуете": "Тонкий скрип или свист, который пропадает, когда нажимаешь на педаль",
+     "Что это обычно": "Индикатор износа: металлическая пластинка касается диска, когда колодки почти стёрлись",
+     "Как срочно": "На этой неделе"
+    },
+    {
+     "Что вы слышите или чувствуете": "Скрежет, «железом по железу»",
+     "Что это обычно": "Колодки стёрлись до металла и режут диск",
+     "Как срочно": "Сейчас. Каждое торможение портит диск"
+    },
+    {
+     "Что вы слышите или чувствуете": "Скрип на первых торможениях сырым утром",
+     "Что это обычно": "Налёт ржавчины на дисках, проходит сам",
+     "Как срочно": "Ехать не нужно"
+    },
+    {
+     "Что вы слышите или чувствуете": "Бьёт в педаль или в руль при торможении",
+     "Что это обычно": "Диски изношены неравномерно",
+     "Как срочно": "В ближайшие дни"
+    },
+    {
+     "Что вы слышите или чувствуете": "При торможении машину тянет в сторону",
+     "Что это обычно": "Закисший суппорт или тормозной шланг",
+     "Как срочно": "В ближайшие дни"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 700.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 9640.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 16030.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "6",
+   "written_as": "Алина",
+   "role": "service_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "amounts": [
+  700.0,
+  9640.0,
+  16030.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "added the table of noises on Maya's draft; message: \"Maya's table. Customers ask this every day.\"",
+   "message_ru": "Таблица Алины. Клиенты спрашивают это каждый день."
+  }
+ ],
+ "has_history": true
+}

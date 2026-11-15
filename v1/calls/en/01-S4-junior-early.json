@@ -1,0 +1,705 @@
+{
+  "format": "seed-call/1",
+  "id": "en-01-S4-junior-early",
+  "configuration": "en",
+  "number": 1,
+  "story": "S4",
+  "title": "The junior operator early on: a price given, the caller let go",
+  "purpose": "Story S4, month one. Maya is friendly and thorough about the car and the price, then lets a first-time caller leave with nothing agreed: no time offered, no booking asked for, and so nothing to sum up.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Sharon Kessler",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P1 (rule R6)",
+    "nominal_offset": "T-168d",
+    "nominal_date": "2026-05-29",
+    "local_start": "10:42",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 9,
+    "caller_phone": "423-555-0174",
+    "repeat_caller": false,
+    "talk_s": 138
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Sharon Kessler, on her mobile from work.",
+    "vehicle": "2016 Nissan Altima",
+    "job": "front brakes: pads, and rotors if they are scored",
+    "wants": "a price",
+    "what_happens": "Maya asks about the car, the noise and how long it has been there, quotes pads alone and pads with rotors, says what decides between them, saves the quote under the caller's name and number, and accepts 'I'll call y'all back' without offering a time or asking for the booking.",
+    "facts": {
+      "labour_rate_usd": 125,
+      "price_pads_only_usd": 223.86,
+      "price_pads_and_rotors_usd": 475.0,
+      "note": "The call is before the price rise (P), so the hour is 125. Prices are catalogue.json's for class car, standard parts, at that hour: front pads 223.86 (she says 'about two twenty-five'), front pads and rotors 475.00.",
+      "prices": [
+        {
+          "what": "Replace front brake pads, clean & lube hardware",
+          "job": "front_brake_pads",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 125.0,
+          "usd": 223.86,
+          "said": "about two twenty-five",
+          "said_usd": 225,
+          "said_as": "before tax"
+        },
+        {
+          "what": "Replace front brake pads & rotors",
+          "job": "front_pads_rotors",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 125.0,
+          "usd": 475.0,
+          "said": "closer to four seventy-five",
+          "said_usd": 475,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Maya, how can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 5.4,
+      "said": "Hey, uh — yeah, I was just calling to see how much y'all charge for brakes."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 12.5,
+      "said": "Sure! Um, what kind of car is it?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 16.6,
+      "said": "It's a sixteen Altima. Nissan."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 19.4,
+      "said": "Okay, twenty-sixteen Altima. And is it the front or the back, do you know?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 26.0,
+      "said": "Front, I think? It's — when I'm coming up to a red light it's making this grinding. Like metal."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 34.5,
+      "said": "Ooh, okay. Yeah, grinding's usually — that's usually the pads are all the way down. How long's it been doing that?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 43.8,
+      "said": "About a week. My husband said don't drive it but I gotta get to work, so."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 51.3,
+      "said": "Right, no, I get it. Okay, so, um — on an Altima, front pads by themselves is about two twenty-five. But if it's been grinding, a lot of times the rotors are chewed up too, and then it's — pads and rotors is closer to four seventy-five. Plus tax."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 71.5,
+      "said": "Four seventy-five."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 72.9,
+      "said": "Yeah. It just depends on the rotors. We'd have to measure 'em to know for sure."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 80.4,
+      "said": "Okay. Hm. And how long does that take?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 84.5,
+      "said": "Oh, not long, like — an hour and a half, maybe two hours? You can wait on it, we've got a waiting room."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 94.3,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 95.7,
+      "said": "Can I get your name? I'll save this quote in the system so it's here when you call back."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 104.5,
+      "said": "Sharon. Kessler. K-E-S-S-L-E-R."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 106.5,
+      "said": "Kessler, okay. And a good phone number for you, Ms. Kessler?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 111.8,
+      "said": "Four two three, five five five, oh one seven four."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 116.8,
+      "said": "Four two three, five five five, oh one seven four. Perfect, got it."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 123.0,
+      "said": "Alright. Well, let me talk to my husband and I'll call y'all back."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 129.3,
+      "said": "Okay, sounds good! Thanks for calling Brennan, y'all have a good one."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 135.1,
+      "said": "You too. Bye."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 137.0,
+      "said": "Bye-bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.71,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations (uh, um, hm, ooh) and two restarts dropped",
+        "script_turns": [
+          2,
+          3,
+          6,
+          7,
+          9,
+          12
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "model name misheard once, right the second time",
+        "script_turn": 4,
+        "said": "Altima",
+        "stored": "Ultima"
+      },
+      {
+        "rule": "R2",
+        "what": "surname spelled right by the caller, written wrong in the advisor's line",
+        "script_turn": 17,
+        "said": "Kessler",
+        "stored": "Kesler"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          4,
+          5,
+          9,
+          10,
+          18,
+          19
+        ]
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the advisor is lost and her two turns become one line",
+        "script_turns": [
+          13,
+          14,
+          15
+        ]
+      }
+    ],
+    "script_words": 288,
+    "stored_words": 260,
+    "strict_word_difference": 0.154,
+    "counts": {
+      "hesitations": {
+        "said": 4,
+        "dropped": 4
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 2
+      },
+      "first_names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 11,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 1,
+        "lost": 1,
+        "joined": 1
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    }
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 281,
+    "duration_s": 138.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Maya, how can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, yeah, I was just calling to see how much y'all charge for brakes.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sure! What kind of car is it?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's a 16 Ultima. Nissan.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, 2016 Altima. And is it the front or the back, do you know?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Front, I think. When I'm coming up to a red light it's making this grinding, like metal.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Yeah, grinding is usually the pads are all the way down. How long's it been doing that?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "About a week. My husband said don't drive it, but I got to get to work, so.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Right, no, I get it. Okay, so on an Altima, front pads by themselves is about 225. But if it's been grinding, a lot of times the rotors are chewed up too, and then pads and rotors is closer to 475, plus tax.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "475.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. It just depends on the rotors. We'd have to measure them to know for sure.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And how long does that take?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, not long, like an hour and a half, maybe two hours. You can wait on it, we've got a waiting room. Can I get your name? I'll save this quote in the system so it's here when you call back.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sharon Kessler. K-E-S-S-L-E-R.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Kesler, okay. And a good phone number for you, Ms. Kesler?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0174.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0174. Perfect, got it.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Well, let me talk to my husband and I'll call y'all back.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, sounds good. Thanks for calling Brennan, y'all have a good one.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You too. Bye.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Bye-bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Maya",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "423-555-0174. Perfect, got it.",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "need_discovery",
+        "quote": "How long's it been doing that?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "It just depends on the rotors. We'd have to measure them to know for sure.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "You can wait on it, we've got a waiting room.",
+        "level": 0,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Okay, sounds good. Thanks for calling Brennan",
+        "level": 0,
+        "segment": 18
+      },
+      {
+        "key": "objection",
+        "quote": "let me talk to my husband and I'll call y'all back",
+        "level": 0,
+        "segment": 17
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Nothing was agreed on the call: no visit, no callback."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "How long's it been doing that?",
+      "why": "She asked how long the grinding had been there, which is what told her the rotors were likely gone and set up the two prices.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "You can wait on it, we've got a waiting room.",
+      "say": "With it grinding I'd like to see it soon. I have tomorrow at 8 or at 1 open. Which is better for you?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 40.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 0,
+          "segment": 18
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 17
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted"
+      ],
+      "score": 40.0,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Maya",
+        "name_and_number": "423-555-0174. Perfect, got it",
+        "need_discovery": "How long's it been doing that?",
+        "price_with_next_step": "It just depends on the rotors. We'd have to measure them to know for sure",
+        "offered_time": "You can wait on it, we've got a waiting room",
+        "asked_for_booking": "Okay, sounds good. Thanks for calling Brennan",
+        "objection": "let me talk to my husband and I'll call y'all back"
+      },
+      "na": {
+        "recap": "Nothing was agreed on the call: no visit, no callback."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "How long's it been doing that?",
+        "why": "She asked how long the grinding had been there, which is what told her the rotors were likely gone and set up the two prices."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "You can wait on it, we've got a waiting room.",
+        "say": "With it grinding I'd like to see it soon. I have tomorrow at 8 or at 1 open. Which is better for you?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels: recognition cost this call nothing.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 2,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 0,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 40.0,
+    "outcome": "customer_will_call",
+    "tags": [
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name in the first line.",
+    "name_and_number": "2: she takes the name, asks for a number and says the number back.",
+    "need_discovery": "2: the car, the job (front brakes) and a circumstance she asked for: grinding for about a week.",
+    "price_with_next_step": "1: two prices and what decides between them, then nothing: no time and no step follows the price.",
+    "offered_time": "0: she says how long the job takes and that there is a waiting room, and never offers a time or asks when suits.",
+    "asked_for_booking": "0: she accepts 'I'll call y'all back' and offers nothing. Saving the quote is not a step agreed with the caller.",
+    "recap": "N/A: nothing was agreed, so there is nothing to repeat.",
+    "objection": "0: 'let me talk to my husband' is the last doubt and gets 'Okay, sounds good'.",
+    "score": "(1·2 + 2·2 + 2·2 + 2·1 + 3·0 + 3·0 + 2·0) / 2 = 6 of 15 weight points = 40.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Sharon Kessler, 423-555-0174, 2016 Nissan Altima; a saved quote and no order."
+  ],
+  "brought_into_line": [
+    "script turns 18 and 19: the caller's number in words was the one the reconcile pass replaced (…0142, the flagship's own line); it now reads …0174, as the stored lines and call.caller_phone already did"
+  ],
+  "sample_of": "calls/samples/en-1-junior-early.json"
+}

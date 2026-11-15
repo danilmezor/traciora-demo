@@ -1,0 +1,88 @@
+{
+ "path": "how-to/checking-a-car-in.md",
+ "title": "Checking a car in",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "The counter's part of receiving a car: walk-round, mileage, the complaint, keys.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S15",
+  "S7"
+ ],
+ "length_class": "short",
+ "words_en": 230,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Nine steps: walk-round with four corner photos; mileage from the dash (ERP mess kind 3); complaint in the customer's words with conditions; \"anything else\"; contact and who else may approve; the free inspection; keys tagged, wheel-lock key asked for; a time for the first call; order opened from the appointment with car and customer checked (mess kind 8).",
+  "No completion time is promised at check-in; a call time is."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Checking a car in",
+   "item": "Walk round it with the customer. Dents, scratches, cracked glass, warning lights on the dash: say them out loud and note them. Take four photos, one per corner."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "Mileage off the dash, typed, not guessed. If it is lower than last time, look again; you have probably dropped a digit."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "The complaint in their words, and when it happens: cold, hot, braking, turning, at speed. If they can, ride with the technician for the noise."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "What they are not asking for. \"Anything else it is doing?\" You would be surprised."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "How to reach them today, and until when. Text or call. Who else may approve work."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "The inspection: tell them it is free and that they will get photos. Almost nobody says no."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "Keys: tag with the order number, on the board. Wheel-lock key? Ask now, not when the wheels are coming off."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "A time for the first call from us. \"You will hear from me by eleven with what we found.\" Then they do."
+  },
+  {
+   "section": "Checking a car in",
+   "item": "Open the order from the appointment. Check it is the right car on the right customer."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: акт приёма-передачи автомобиля signed with damage noted; mileage in km."
+ ]
+}

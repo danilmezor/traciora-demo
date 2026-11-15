@@ -1,0 +1,127 @@
+{
+ "path": "parts/sublet-work.md",
+ "title": "Sublet work",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "Work we send out or bring in: transmission rebuilds, glass, towing. How it is ordered and billed.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price",
+  "S6"
+ ],
+ "length_class": "short",
+ "words_en": 258,
+ "links_to": [
+  "prices/price-list.md",
+  "policies/deposits.md",
+  "services/transmission/transmission-fluid-service.md",
+  "customers/towing.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Sublet work is billed as a sublet line, never as a part (ERP order_sublet).",
+  "V6 Coulter Transmission & Driveline, (423) 555-0134, main and east: rebuild takes five working days door to door; deposit before it leaves; warranty per the card returned with the unit (length not stated anywhere).",
+  "V7 Walden Auto Glass, (423) 555-0130, on site at main and east, booked a day ahead; one hour cure; camera recalibration by them; no list price for glass.",
+  "V8 Mowbray Towing & Recovery, (423) 555-0139, Chattanooga only; monthly billing; prices on the public towing page.",
+  "Nashville's sublet partners are not stated."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Transmissions: Coulter Transmission & Driveline",
+   "item": "(423) 555-0134. East Main and Bonny Oaks."
+  },
+  {
+   "section": "Transmissions: Coulter Transmission & Driveline",
+   "item": "We remove the transmission. They collect it, rebuild it and bring it back. Five working days door to door is normal; do not promise less."
+  },
+  {
+   "section": "Transmissions: Coulter Transmission & Driveline",
+   "item": "Customer price for the rebuild is on the price list with our removal and refitting labour. Deposit before it leaves: Deposits."
+  },
+  {
+   "section": "Transmissions: Coulter Transmission & Driveline",
+   "item": "Their warranty card comes back with the unit. Staple it to the invoice. The customer's cover on the rebuild is what that card says."
+  },
+  {
+   "section": "Transmissions: Coulter Transmission & Driveline",
+   "item": "A transmission that only needs fluid is ours: Transmission fluid service."
+  },
+  {
+   "section": "Glass: Walden Auto Glass",
+   "item": "(423) 555-0130. They come to East Main and Bonny Oaks. Book them a day ahead; the car stays put for an hour after for the adhesive."
+  },
+  {
+   "section": "Glass: Walden Auto Glass",
+   "item": "Cars with a camera behind the windshield need recalibrating. They do it. It adds time; ask them how long when you book."
+  },
+  {
+   "section": "Glass: Walden Auto Glass",
+   "item": "We bill what they bill us plus our handling. Get their figure before quoting; there is no list price for glass."
+  },
+  {
+   "section": "Towing: Mowbray Towing & Recovery",
+   "item": "(423) 555-0139. Chattanooga side only."
+  },
+  {
+   "section": "Towing: Mowbray Towing & Recovery",
+   "item": "Prices are on the public Towing page. The tow goes on the repair order as a sublet line."
+  },
+  {
+   "section": "Towing: Mowbray Towing & Recovery",
+   "item": "They bill us monthly."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V6",
+   "name": "Coulter Transmission & Driveline"
+  },
+  {
+   "vendor": "V7",
+   "name": "Walden Auto Glass"
+  },
+  {
+   "vendor": "V8",
+   "name": "Mowbray Towing & Recovery"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "new_facts": [
+  "Five working days for a rebuild; one hour cure for glass. Reason: promise times need a number; the ERP's waiting_sublet durations should centre on five working days."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian subcontractors from vendors.json ru (АКПП, стёкла, эвакуатор)."
+ ]
+}

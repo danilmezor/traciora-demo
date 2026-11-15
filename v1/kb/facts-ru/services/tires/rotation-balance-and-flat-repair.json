@@ -1,0 +1,141 @@
+{
+ "path": "services/tires/rotation-balance-and-flat-repair.md",
+ "title": "Балансировка, перестановка и ремонт прокола",
+ "title_en": "Rotation, balance and flat repair",
+ "exists_in": "both",
+ "english_sheet": "facts/services/tires/rotation-balance-and-flat-repair.json",
+ "first_revision_text": "ru/_history/services/tires/rotation-balance-and-flat-repair.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The three small tire jobs.",
+ "serves": [
+  "smoke",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 178,
+ "links_to": [
+  "services/brakes/brake-inspection.md",
+  "services/tires/new-tires-and-tpms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Rotation is rare in Russia (0.5 % of orders) and priced by the hour; balance and puncture repair are fixed prices.",
+  "A shake at 90 to 120 km/h."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Балансировка, перестановка и ремонт прокола",
+   "columns": [
+    "Работа",
+    "Время",
+    "Цена"
+   ],
+   "rows": [
+    {
+     "Работа": "Балансировка колёс (4 шт.)",
+     "Время": "35 минут",
+     "Цена": "1 200 ₽"
+    },
+    {
+     "Работа": "Ремонт прокола бескамерной шины (грибок) с балансировкой",
+     "Время": "20 минут",
+     "Цена": "800 ₽"
+    },
+    {
+     "Работа": "Перестановка колёс по схеме (4 шт.)",
+     "Время": "25 минут",
+     "Цена": "760 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Балансировка, перестановка и ремонт прокола",
+   "item": "Балансировка — когда бьёт в руль на 90–120 км/ч. Бьёт только при торможении — это диски, а не балансировка: Диагностика тормозов."
+  },
+  {
+   "section": "Балансировка, перестановка и ремонт прокола",
+   "item": "Ремонт прокола — только в протекторе, только отверстие тоньше карандаша, только грибком изнутри. Жгут снаружи — это доехать до сервиса, а не ремонт. Боковину и плечо не ремонтируем. Если шину починить нельзя, показываем клиенту почему, и дальше — Новые шины."
+  },
+  {
+   "section": "Балансировка, перестановка и ремонт прокола",
+   "item": "Шина, на которой хоть сколько-то проехали спущенной, обычно изнутри уже убита. Сначала посмотрите, потом обещайте ремонт."
+  },
+  {
+   "section": "Балансировка, перестановка и ремонт прокола",
+   "item": "Перестановку спрашивают редко: при сезонной замене колёса и так меняются местами. Она нужна тем, кто ездит круглый год на одном комплекте. Считается по нормо-часу, остальные две цены фиксированные."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "wheel_balance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "tyre_repair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  },
+  {
+   "catalogue_key": "tyre_rotation",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 760.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  760.0,
+  800.0,
+  1200.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

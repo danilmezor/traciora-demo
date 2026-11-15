@@ -1,0 +1,137 @@
+{
+ "path": "how-to/stocktake-day.md",
+ "title": "Stocktake day",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "What happens on the half-yearly stocktake afternoon (S13).",
+ "serves": [
+  "S13",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_en": 285,
+ "links_to": [
+  "customers/hours-and-locations.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Twice a year; all three shops close to customers at 12:00 noon on {{@stocktake}} (the Thursday of week W+1, ledger site.stocktake).",
+  "Announced on the public hours page and the door two weeks ahead.",
+  "No appointment after 10:30 that day; nothing over two hours.",
+  "Pick-ups before noon or the next day; key drop stays open; phones on the closed message.",
+  "No desk shifts: everyone is scheduled as stocktake (design S13: no desk shifts that afternoon).",
+  "Pairs count; nobody counts their own bay; lines differing by more than 50 USD are recounted.",
+  "Done about 16:00; west counts on its own clock and sends sheets by 17:00 Central.",
+  "Differences reported to slots 3 and 2 within the week (ERP stock_movement: adjustments).",
+  "The public page gained its notice on the Monday of week W-1, seventeen days ahead of the Thursday of week W+1."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Before the day",
+   "item": "The date goes on the public hours page and on the door two weeks ahead."
+  },
+  {
+   "section": "Before the day",
+   "item": "No appointment is booked that day after 10:30. Nothing over two hours is booked at all."
+  },
+  {
+   "section": "Before the day",
+   "item": "Cars finished that morning are picked up before noon or the next day. Tell customers when they book and again on the ready call."
+  },
+  {
+   "section": "Before the day",
+   "item": "I order nothing that morning that is not for a car in a bay."
+  },
+  {
+   "section": "On the day",
+   "item": "12:00: doors locked, phones to the closed message. The key drop stays open."
+  },
+  {
+   "section": "On the day",
+   "item": "Nobody is on the desk. Everybody is on the schedule as stocktake and everybody counts, advisors too."
+  },
+  {
+   "section": "On the day",
+   "item": "Pairs: one counts, one writes. Never count alone and never count your own bay."
+  },
+  {
+   "section": "On the day",
+   "item": "Count sheets are by shelf. Count what is there, not what the sheet says should be."
+  },
+  {
+   "section": "On the day",
+   "item": "Parts already pulled for a car in a bay get a tag with the order number and are counted as issued."
+  },
+  {
+   "section": "On the day",
+   "item": "No part leaves a shelf during the count. A car that needs one waits."
+  },
+  {
+   "section": "On the day",
+   "item": "Any line that differs by more than $50 is counted again by a different pair."
+  },
+  {
+   "section": "On the day",
+   "item": "We are done about 4:00."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@stocktake|day}}"
+ ],
+ "new_facts": [
+  "No appointments after 10:30 on the day; the 50 USD recount rule. ERP appointments on the stocktake day must stop at 10:30."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@stocktake_notice|date}}",
+   "what": "date of the next count filled in (Marcus's page, published by slot 4); message: \"Stocktake date.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Инвентаризация; Russian shops close at 14:00 or as the Russian design sets it; the Russian rule on recount in RUB."
+ ]
+}

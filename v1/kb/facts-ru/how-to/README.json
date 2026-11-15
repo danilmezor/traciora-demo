@@ -1,0 +1,109 @@
+{
+ "path": "how-to/README.md",
+ "title": "Как мы работаем",
+ "title_en": "How we do things",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Index of the counter procedures, in the order a job passes through them.",
+ "serves": [
+  "operate:overview",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_ru": 104,
+ "links_to": [
+  "how-to/taking-a-call.md",
+  "how-to/price-objections.md",
+  "how-to/booking-a-visit.md",
+  "how-to/checking-a-car-in.md",
+  "how-to/company-vehicle-at-the-counter.md",
+  "shop-floor/courtesy-inspection.md",
+  "how-to/writing-an-estimate.md",
+  "how-to/getting-approval.md",
+  "parts/ordering-parts.md",
+  "how-to/handing-a-car-back.md",
+  "how-to/closing-the-till.md",
+  "how-to/a-comeback-at-the-counter.md",
+  "policies/complaints.md",
+  "how-to/missed-calls-and-call-backs.md",
+  "how-to/chats-and-messages.md",
+  "how-to/tyre-season.md",
+  "how-to/stocktake-day.md",
+  "how-to/using-this-knowledge-base.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Same nine steps; one more side page, the tyre season, which exists only in Russian."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Как мы работаем",
+   "item": "Как принять звонок, а если клиент сомневается: Возражения по цене"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Запись на ремонт"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Приёмка автомобиля. Если машина организации — ещё и это"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Осмотр по чек-листу, его делает механик"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Как составить смету"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Как согласовать работы"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Запчасти: Как заказать запчасть под работу"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Выдача автомобиля"
+  },
+  {
+   "section": "Как мы работаем",
+   "item": "Закрытие смены и кассы"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

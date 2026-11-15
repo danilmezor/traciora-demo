@@ -1,0 +1,171 @@
+{
+ "path": "prices/counter-price-sheet.pdf",
+ "title": "Прайс для стойки",
+ "title_en": "Counter price sheet",
+ "exists_in": "both",
+ "english_sheet": "facts/prices/counter-price-sheet.pdf.json",
+ "kind": "binary",
+ "format": "PDF, 2 pages, text",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Printed price sheet for the counters: menu services on page 1, prices by vehicle class on page 2.",
+ "serves": [
+  "S12",
+  "challenge:fact-only-in-attachment",
+  "challenge:fact-in-table"
+ ],
+ "draft": "ru/_binaries.md",
+ "russian_form": "the printed price sheet, A4, two pages",
+ "facts": [
+  {
+   "by_class_table": [
+    {
+     "catalogue_key": "front_pads_rotors",
+     "car": 12520.0,
+     "suv": 16218.0,
+     "truck": 19916.0,
+     "van": 16276.0
+    },
+    {
+     "catalogue_key": "rear_pads_rotors",
+     "car": 11260.0,
+     "suv": 14517.0,
+     "truck": 17774.0,
+     "van": 14638.0
+    },
+    {
+     "catalogue_key": "front_brake_pads",
+     "car": 4560.0,
+     "suv": 5776.0,
+     "truck": 6992.0,
+     "van": 5928.0
+    },
+    {
+     "catalogue_key": "front_struts_pair",
+     "car": 18580.0,
+     "suv": 23943.0,
+     "truck": 29306.0,
+     "van": 24154.0
+    },
+    {
+     "catalogue_key": "rear_shocks_pair",
+     "car": 11720.0,
+     "suv": 15214.0,
+     "truck": 18708.0,
+     "van": 15236.0
+    },
+    {
+     "catalogue_key": "wheel_bearing",
+     "car": 6360.0,
+     "suv": 7902.0,
+     "truck": 9444.0,
+     "van": 8268.0
+    },
+    {
+     "catalogue_key": "wheel_alignment",
+     "car": 3000.0,
+     "suv": 3450.0,
+     "truck": 3900.0,
+     "van": 3900.0
+    },
+    {
+     "catalogue_key": "seasonal_tyre_change",
+     "car": 3000.0,
+     "suv": 3750.0,
+     "truck": 4350.0,
+     "van": 3900.0
+    },
+    {
+     "catalogue_key": "seasonal_wheel_swap",
+     "car": 1200.0,
+     "suv": 1380.0,
+     "truck": 1560.0,
+     "van": 1560.0
+    },
+    {
+     "catalogue_key": "alternator",
+     "car": 24740.0,
+     "suv": 32791.0,
+     "truck": 40842.0,
+     "van": 32162.0
+    },
+    {
+     "catalogue_key": "starter",
+     "car": 19460.0,
+     "suv": 25739.0,
+     "truck": 32018.0,
+     "van": 25298.0
+    },
+    {
+     "catalogue_key": "water_pump",
+     "car": 10520.0,
+     "suv": 13366.0,
+     "truck": 16212.0,
+     "van": 13676.0
+    },
+    {
+     "catalogue_key": "radiator",
+     "car": 16160.0,
+     "suv": 21056.0,
+     "truck": 25952.0,
+     "van": 21008.0
+    },
+    {
+     "catalogue_key": "spark_plugs",
+     "car": 4060.0,
+     "suv": 5310.0,
+     "truck": 7244.0,
+     "van": 5164.0
+    },
+    {
+     "catalogue_key": "timing_belt_kit",
+     "car": 16000.0,
+     "suv": 20688.0,
+     "truck": 25984.0,
+     "van": 20192.0
+    },
+    {
+     "catalogue_key": "clutch_kit",
+     "car": 26550.0,
+     "suv": 33762.0,
+     "truck": 40955.0,
+     "van": 34515.0
+    }
+   ]
+  }
+ ],
+ "facts_only_in_this_file": [
+  "every crossover, body-on-frame and van price (the Markdown pages give multipliers and one worked example only)"
+ ],
+ "differs_from_en": [
+  "Page 1: nineteen fixed-price and common jobs at the current list (class car), the hour at 1 900, prices with VAT at 5 % inside, shop supplies 3 % up to 500 RUB, tyre disposal 400 RUB a set.",
+  "Page 2: sixteen jobs priced for car, crossover, body-on-frame and van with the Russian multipliers (hours 1 / 1.15 / 1.3 / 1.3 on heavy jobs; parts 1 / 1.35 / 1.7 / 1.3). It adds the two seasonal tyre jobs, the timing belt and the clutch to the English list.",
+  "Spark plugs by class are the catalogue's own totals (four plugs with the class multipliers); the English sheet counts 6 and 8 plugs.",
+  "No battery-test-is-free line: the test costs 300 RUB."
+ ],
+ "new_facts": [
+  "The page-2 rows chosen for the Russian sheet."
+ ],
+ "to_verify": [],
+ "settled": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "new_version",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "the sheet reprinted at the new prices and uploaded over the old file",
+   "message_ru": "Новые цены с сегодняшнего дня."
+  }
+ ],
+ "has_history": true
+}

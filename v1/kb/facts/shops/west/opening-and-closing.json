@@ -1,0 +1,73 @@
+{
+ "path": "shops/west/opening-and-closing.md",
+ "title": "Charlotte Pike: opening and closing",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "Charlotte Pike's short checklist, with the till rule the managing owner changed after S2.",
+ "serves": [
+  "S2",
+  "challenge:near-duplicate-shop-pages",
+  "operate:find-what-changed"
+ ],
+ "length_class": "short",
+ "words_en": 114,
+ "links_to": [
+  "how-to/closing-the-till.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Opens 7:30; first in unlocks and empties the key box; float 150 USD; closes 17:30.",
+  "Since {{@discount_rule}}: the till is counted by two people daily, both initial; differences over 5 USD are written with a reason and reported to the office the same evening; the deposit is banked every working day by slot 22.",
+  "The history shows what it said before: \"Whoever closes counts the drawer. Bank Monday and Thursday.\" (the arrangement under which slot F1 closed the till short on 19 days).",
+  "All times are Central."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "new_facts": [
+  "Before the change: one person counted and the bank run was Monday and Thursday. After: two counts and daily banking. ERP cash_drawer_close rows at west after T-5 months should show small differences only.",
+  "Float 150 USD at Charlotte Pike."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "replaced \"Whoever closes counts the drawer. Bank Monday and Thursday.\" with the two-person count and daily banking; message: \"Two counts, every day. Deposit daily.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same change. Russian cash handling: Z-отчёт at the register at closing, инкассация daily."
+ ]
+}

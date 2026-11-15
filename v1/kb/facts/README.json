@@ -1,0 +1,188 @@
+{
+ "path": "README.md",
+ "title": "Brennan Auto Care knowledge base",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Front page for staff: what each folder holds, who owns it, and the two house rules (prices, corrections).",
+ "serves": [
+  "S12",
+  "operate:overview"
+ ],
+ "length_class": "medium",
+ "words_en": 359,
+ "links_to": [
+  "customers/README.md",
+  "services/README.md",
+  "prices/price-list.md",
+  "policies/README.md",
+  "accounts/company-account-terms.md",
+  "how-to/README.md",
+  "parts/suppliers.md",
+  "shops/README.md",
+  "team/who-is-who.md",
+  "shop-floor/README.md",
+  "how-to/using-this-knowledge-base.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Ten staff folders are listed with what they hold and who keeps them; office and management folders exist and are rank-limited.",
+  "Rule 1: prices are quoted from prices/price-list.md only; a price on a service page may be old.",
+  "Rule 2: lead advisors and above (middle rank) can propose a correction; slots 4, 22 and 2 publish; others tell their lead.",
+  "The website assistant reads customers/, shop-floor/, services/ and the price list (ledger s12.pages).",
+  "kb_overview reads this file as the README of the root for staff; it is hidden from the public reader (seen_from junior on the file)."
+ ],
+ "tables": [
+  {
+   "section": "Where things are",
+   "columns": [
+    "Folder",
+    "What is in it",
+    "Who keeps it"
+   ],
+   "rows": [
+    {
+     "Folder": "customers",
+     "What is in it": "Answers we give the public. The website assistant quotes these pages word for word, so they are written for customers. It also reads the service pages and the price list.",
+     "Who keeps it": "Claire"
+    },
+    {
+     "Folder": "services",
+     "What is in it": "What each job is, when a car needs it, what to ask, what customers push back on.",
+     "Who keeps it": "Travis and Angie"
+    },
+    {
+     "Folder": "prices",
+     "What is in it": "The price list and the labour rates. The only place a price comes from.",
+     "Who keeps it": "Claire"
+    },
+    {
+     "Folder": "policies",
+     "What is in it": "Discounts, warranty, estimates, deposits, complaints.",
+     "Who keeps it": "Claire"
+    },
+    {
+     "Folder": "accounts",
+     "What is in it": "Company accounts: terms, who may approve work, what each fleet expects.",
+     "Who keeps it": "Greg"
+    },
+    {
+     "Folder": "how-to",
+     "What is in it": "How we do the counter jobs: a call, a booking, an estimate, handing a car back, the till.",
+     "Who keeps it": "Greg"
+    },
+    {
+     "Folder": "parts",
+     "What is in it": "Suppliers, ordering, returns, what we stock.",
+     "Who keeps it": "Marcus"
+    },
+    {
+     "Folder": "shops",
+     "What is in it": "Each shop's own pages: hours, who is who, keys and alarms, local habits.",
+     "Who keeps it": "each shop"
+    },
+    {
+     "Folder": "team",
+     "What is in it": "Who is who across the company, the staff handbook, first weeks for new people.",
+     "Who keeps it": "Claire"
+    },
+    {
+     "Folder": "shop-floor",
+     "What is in it": "For technicians: clocking in, inspections, checks before a car leaves.",
+     "Who keeps it": "Randy"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Two rules",
+   "item": "Quote from the price list. A price on a service page is there to explain the job. It may be old. The price list is never old, because it is the page I change when a price changes."
+  },
+  {
+   "section": "Two rules",
+   "item": "If a page is wrong, say so the same day. Lead advisors and above can propose a correction from the page itself; Greg, Dale or I publish it. Everybody else: tell your lead. How: Using and fixing this knowledge base."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}"
+ ],
+ "new_facts": [
+  "Folder owners: customers 2; services 5 and 16; prices 2; policies 2; accounts 4; how-to 4; parts 9; team 2; shop-floor 8 (designed, follows the cast biographies)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the section \"Two rules\" after the timing-belt complaint (S8); message: \"Prices come from the price list. Said it twice now.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same structure. The Russian base has the same folders; name the owners by the same slots."
+ ]
+}

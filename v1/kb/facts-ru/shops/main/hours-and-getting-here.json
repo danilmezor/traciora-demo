@@ -1,0 +1,85 @@
+{
+ "path": "shops/main/hours-and-getting-here.md",
+ "title": "Московское шоссе: часы и как проехать",
+ "title_en": "East Main: hours and getting here",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/main/hours-and-getting-here.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "East Main's hours, parking, shuttle and key drop for staff to tell customers.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S13"
+ ],
+ "length_class": "short",
+ "words_ru": 142,
+ "links_to": [
+  "customers/hours-and-locations.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Hours: every day 9:00-20:00, closed 1 and 2 January.",
+  "No key drop box and no shuttle. The planted small difference between the two near-identical pages is where a car is left before opening: to the right of the gate, under the camera, here; to the left of the entrance, under the lamp, at the second shop.",
+  "A tyre-season line: the changeover queue enters from the yard."
+ ],
+ "new_facts": [
+  "Six parking spaces in front; fleet vans to bay six in the yard; blue gates; \"on the right when driving from the centre\" (to be checked against the real address).",
+  "Where to leave a car before opening at each shop."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Московское шоссе: часы и как проехать",
+   "item": "Телефон: +7 (8422) 10-40-40. Почта: main@ermak-service.example."
+  },
+  {
+   "section": "Московское шоссе: часы и как проехать",
+   "item": "Клиентская парковка — шесть мест перед входом. Фургоны организаций заезжают во двор, к шестому посту. Говорите это водителям, иначе они загораживают вход."
+  },
+  {
+   "section": "Московское шоссе: часы и как проехать",
+   "item": "Приехали до открытия — машину ставят справа от ворот, под камерой."
+  },
+  {
+   "section": "Московское шоссе: часы и как проехать",
+   "item": "В сезон шиномонтажа очередь на переобувку заезжает со двора, а не с фасада."
+  },
+  {
+   "section": "Московское шоссе: часы и как проехать",
+   "item": "Эвакуаторы разгружаются у боковых ворот, не на шоссе."
+  },
+  {
+   "section": "Московское шоссе: часы и как проехать",
+   "item": "Ночью машины клиентов стоят в боксах или на закрытой территории. Ворота запирает тот, кто закрывает приёмку."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

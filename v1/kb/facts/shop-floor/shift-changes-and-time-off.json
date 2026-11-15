@@ -1,0 +1,87 @@
+{
+ "path": "shop-floor/shift-changes-and-time-off.md",
+ "title": "Shift changes and time off",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "How a technician asks for a shift change or a day off; what the planner needs.",
+ "serves": [
+  "S14",
+  "S5",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_en": 147,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Requests are made in the app on the shift; every request needs a written reason (design 7.2 S14).",
+  "Notice: 7 days; the product has no swap (stories/S14: change of time, change of date, removal): a change of date is asked for and the reason names who takes the shift.",
+  "The week's roster is published by Thursday noon of the week before (slot 22 publishes late: his character).",
+  "Sick: call the shop line before 7:00.",
+  "Slot 4 plans main and east; slot 22 plans west."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Shift changes and time off",
+   "item": "Ask in the app, on the shift you want changed. Not by text, not through somebody else."
+  },
+  {
+   "section": "Shift changes and time off",
+   "item": "Write the reason. A request with no reason is not looked at."
+  },
+  {
+   "section": "Shift changes and time off",
+   "item": "Ask at least 7 days ahead. Inside 7 days I will try, and the answer is usually no unless you bring me someone who will take the shift."
+  },
+  {
+   "section": "Shift changes and time off",
+   "item": "There is no swap in the app. Ask for a change of date and name who takes the shift. \"He said he would\" is not a yes: I ask him."
+  },
+  {
+   "section": "Shift changes and time off",
+   "item": "The schedule for a week is published by Thursday noon the week before. Once it is published it is the schedule."
+  },
+  {
+   "section": "Shift changes and time off",
+   "item": "Sick: call the shop line before 7:00. A text to a friend is not calling in."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "7 days' notice; publish by Thursday noon; sick call before 7:00. Reason: the roster stories (late publishing, declined requests) need a stated rule; the shift planner's data must not contradict it."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-5.5mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian mechanics work 5/2 with staggered days off, advisors 2/2: the page says so. Sick leave is a legal document (больничный): say to call before the shift and bring the sheet."
+ ]
+}

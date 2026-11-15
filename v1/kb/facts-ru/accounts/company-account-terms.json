@@ -1,0 +1,385 @@
+{
+ "path": "accounts/company-account-terms.md",
+ "title": "Корпоративные клиенты",
+ "title_en": "Company accounts",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/company-account-terms.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The terms every company account is served on: payment days, price class, priority, who may approve work. Story S1's page.",
+ "serves": [
+  "S1",
+  "S4",
+  "S16",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "operate:contradiction",
+  "challenge:policy-vs-team-note"
+ ],
+ "length_class": "medium",
+ "words_ru": 649,
+ "links_to": [
+  "accounts/small-business-customers.md",
+  "accounts/a1.md",
+  "accounts/a2.md",
+  "accounts/a3.md",
+  "accounts/a4.md",
+  "accounts/a5.md",
+  "accounts/a6.md",
+  "policies/warranty.md",
+  "accounts/opening-a-company-account.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Six accounts with home shop and days as in accounts.json ru: A1 30, A2 30, A3 14, A4 14, A5 30, A6 30.",
+  "Billing per order: an invoice and a closing document (УПД, or an act with a счёт-фактура) when the order closes; due 30 or 14 days from the invoice; a reconciliation act on request and quarterly (ledger acct.ru_documents, acct.A1.days_to_pay). No monthly statement.",
+  "Contract hour 1 700 RUB, 10 % off parts and fixed prices, held by A1 and A2; like the list it is the amount to pay, VAT inside (ledger price.hour.company, tax.ru_price_basis). The счёт and the УПД show the amount before VAT, the VAT at 5 % and the total as separate figures; the invoice is due within five calendar days by law (ledger kb.documents) and goes out the same or the next working day.",
+  "One driver limit: 8 000 RUB a visit (ledger s4.driver_limit).",
+  "The purchase-order number is the customer's request number («номер заявки клиента»), required for A1.",
+  "Warranty: the same 30 days as private customers (English: 12/12 for business use).",
+  "A2's standing slot is Monday 9:00 (ledger acct.A2.weekly_slot).",
+  "This page names the new contact of A6; the account's own page still names the old one: the planted contradiction is kept."
+ ],
+ "new_facts": [
+  "Approvers above the driver limit: A2's dispatcher up to 25 000 RUB a vehicle, the director above; A4's senior instructor up to 12 000 RUB, the director above.",
+  "A late-payment penalty of 0.1 % a day by contract, at slot 2's discretion (none is charged in the data).",
+  "Drivers sign by a power of attorney; the list is on the customer record."
+ ],
+ "new_amounts": [
+  {
+   "value": 25000,
+   "why": "лимит согласования диспетчера A2 на одну машину"
+  },
+  {
+   "value": 12000,
+   "why": "лимит согласования старшего мастера A4"
+  }
+ ],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "УПД or act with счёт-фактура for a contractor on the simplified system with VAT at 5 %: ordinary, not in the research.",
+   "outcome": "verified",
+   "note": "Stands. A company on the simplified system that pays VAT issues invoices, on the work and on an advance, within five calendar days. The page now says the five days and that the счёт and the УПД show the amount before VAT, the VAT at 5 % and the total as separate figures (ledger kb.documents). Read in the verify pass (demo-seed-research/verify-pass.md, section 1). Not read on a primary page: the УПД form itself, a combined form the tax service recommends (search summaries only).",
+   "url": "https://www.nalog.gov.ru/rn05/taxation/taxes/nds_usn/ ; https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-168/",
+   "sentence": "ФНС, «НДС при УСН» (обновлено 05.08.2026): «при получении авансов выставляются соответствующие счета-фактуры не позднее 5 календарных дней»; «возникает обязанность вести книгу продаж и представить налоговую декларацию по НДС». НК ст. 168 п. 3: счета-фактуры выставляются «не позднее пяти календарных дней»."
+  }
+ ],
+ "tables": [
+  {
+   "section": "Шесть клиентов",
+   "columns": [
+    "Клиент",
+    "Сервис",
+    "Отсрочка",
+    "Цены",
+    "Кто согласует работы",
+    "Номер заявки клиента"
+   ],
+   "rows": [
+    {
+     "Клиент": "«Симбирский гонец»",
+     "Сервис": "Московское шоссе",
+     "Отсрочка": "30 дней",
+     "Цены": "Договорной нормо-час",
+     "Кто согласует работы": "Олег Вячеславович, начальник транспортного отдела",
+     "Номер заявки клиента": "Обязателен в каждом наряде"
+    },
+    {
+     "Клиент": "«Тёплый контур»",
+     "Сервис": "Инженерный",
+     "Отсрочка": "30 дней",
+     "Цены": "Договорной нормо-час",
+     "Кто согласует работы": "Лариса Геннадьевна, диспетчер, — до 25 000 ₽ на машину; выше — Виктор Семёнович, директор",
+     "Номер заявки клиента": "Не нужен"
+    },
+    {
+     "Клиент": "«Чистый Венец»",
+     "Сервис": "Московское шоссе",
+     "Отсрочка": "14 дней",
+     "Цены": "По прайсу",
+     "Кто согласует работы": "Гульнара Наилевна",
+     "Номер заявки клиента": "Не нужен"
+    },
+    {
+     "Клиент": "Автошкола «Первая передача»",
+     "Сервис": "Инженерный",
+     "Отсрочка": "14 дней",
+     "Цены": "По прайсу",
+     "Кто согласует работы": "Юрий Николаевич — до 12 000 ₽; выше — Елена Анатольевна, директор",
+     "Номер заявки клиента": "Не нужен"
+    },
+    {
+     "Клиент": "«Идель-Электромонтаж»",
+     "Сервис": "Техническая",
+     "Отсрочка": "30 дней",
+     "Цены": "По прайсу",
+     "Кто согласует работы": "Рустем Ильгизович",
+     "Номер заявки клиента": "Не нужен"
+    },
+    {
+     "Клиент": "«Вкусный выезд»",
+     "Сервис": "Московское шоссе",
+     "Отсрочка": "30 дней",
+     "Цены": "По прайсу",
+     "Кто согласует работы": "Дарья Олеговна",
+     "Номер заявки клиента": "Не нужен"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Оплата и документы",
+   "item": "По каждому закрытому заказ-наряду Ирина Владимировна выставляет счёт и закрывающий документ — УПД или акт со счётом-фактурой, как записано в договоре. В день закрытия наряда или на следующий рабочий день; по закону на счёт-фактуру есть пять календарных дней. В документах указаны госномер и гаражный номер машины."
+  },
+  {
+   "section": "Оплата и документы",
+   "item": "В счёте и УПД сумма без НДС, НДС 5 % и итог указаны отдельно; сверху ничего не добавляется."
+  },
+  {
+   "section": "Оплата и документы",
+   "item": "Срок оплаты — 30 или 14 дней со дня счёта, как в таблице."
+  },
+  {
+   "section": "Оплата и документы",
+   "item": "На приёмке с корпоративного клиента ничего не берём, предоплаты нет."
+  },
+  {
+   "section": "Оплата и документы",
+   "item": "Акт сверки делаем по запросу бухгалтерии клиента и сами — раз в квартал."
+  },
+  {
+   "section": "Оплата и документы",
+   "item": "За просрочку больше 30 дней по договору можно начислить пеню, 0,1 % в день. Начислять ли её, решает Екатерина Николаевна, а не приёмка."
+  },
+  {
+   "section": "Очерёдность",
+   "item": "Машину организации, которая встала и не может работать, смотрим в день приезда, раньше частных клиентов, которые ждут. Если частный клиент спросит — скажите прямо, не прячьте."
+  },
+  {
+   "section": "Очерёдность",
+   "item": "У «Тёплого контура» постоянное окно: каждый понедельник в 9:00 на Инженерном, пять машин. В понедельник утром их машины идут первыми."
+  },
+  {
+   "section": "Очерёдность",
+   "item": "Плановое ТО парка записывается как любая запись."
+  },
+  {
+   "section": "Кто согласует работы",
+   "item": "Работы, которые заявил ответственный по договору, согласованы самой заявкой."
+  },
+  {
+   "section": "Кто согласует работы",
+   "item": "Всё, что нашли сверх заявки: водитель может согласиться на сумму до 8 000 ₽ — за весь заезд, а не за каждую работу. Больше 8 000 ₽ водитель не согласует: звоните тому, кто указан в столбце «Кто согласует работы». Кто согласовал, записывайте в наряд."
+  },
+  {
+   "section": "Кто согласует работы",
+   "item": "Не дозвонились — делаем заявленное, остальное оформляем сметой и отправляем. Стандарт тот же: четыре рабочих часа."
+  },
+  {
+   "section": "Кто согласует работы",
+   "item": "Машину, на которой опасно ехать, под слово водителя не выпускаем. Звоните ответственному, потом Сергею Анатольевичу."
+  },
+  {
+   "section": "Ещё",
+   "item": "В каждом наряде — госномер, гаражный номер и пробег при приёмке."
+  },
+  {
+   "section": "Ещё",
+   "item": "Водитель подписывает заказ-наряд и акт по доверенности. Список тех, на кого она выдана, лежит в карточке клиента."
+  },
+  {
+   "section": "Ещё",
+   "item": "Гарантия та же, что у частных клиентов: Гарантия."
+  },
+  {
+   "section": "Ещё",
+   "item": "За хранение не берём. Машина организации стоит больше недели — скажите Сергею Анатольевичу."
+  },
+  {
+   "section": "Ещё",
+   "item": "Жалоба корпоративного клиента в тот же день уходит Сергею Анатольевичу, в какой бы сервис она ни пришла."
+  },
+  {
+   "section": "Ещё",
+   "item": "Новый договор: Как заключить договор с организацией. Лимиты задолженности и просрочка — дело бухгалтерии."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "configurations.ru.labour_rate.company_account.after_rise",
+   "what": "labour hour",
+   "value": 1700
+  },
+  {
+   "catalogue_key": "configurations.ru.labour_rate.standard.after_rise",
+   "what": "labour hour",
+   "value": 1900
+  }
+ ],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Симбирский гонец"
+  },
+  {
+   "account": "A1",
+   "contact": "Олег Вячеславович Кравцов",
+   "role": "начальник транспортного отдела",
+   "written_as": "Олег Вячеславович"
+  },
+  {
+   "account": "A2",
+   "name": "Тёплый контур"
+  },
+  {
+   "account": "A2",
+   "contact": "Лариса Геннадьевна Шишкина",
+   "role": "диспетчер (записывает машины на еженедельное окно)",
+   "written_as": "Лариса Геннадьевна"
+  },
+  {
+   "account": "A2",
+   "contact": "Виктор Семёнович Агафонов",
+   "role": "директор",
+   "written_as": "Виктор Семёнович"
+  },
+  {
+   "account": "A3",
+   "name": "Чистый Венец"
+  },
+  {
+   "account": "A3",
+   "contact": "Гульнара Наилевна Садыкова",
+   "role": "управляющая",
+   "written_as": "Гульнара Наилевна"
+  },
+  {
+   "account": "A4",
+   "name": "Автошкола «Первая передача»"
+  },
+  {
+   "account": "A4",
+   "contact": "Юрий Николаевич Тюрин",
+   "role": "старший мастер производственного обучения, отвечает за автомобили",
+   "written_as": "Юрий Николаевич"
+  },
+  {
+   "account": "A4",
+   "contact": "Елена Анатольевна Мартьянова",
+   "role": "директор",
+   "written_as": "Елена Анатольевна"
+  },
+  {
+   "account": "A5",
+   "name": "Идель-Электромонтаж"
+  },
+  {
+   "account": "A5",
+   "contact": "Рустем Ильгизович Фаттахов",
+   "role": "заместитель директора по производству (тот, кому не перезвонили)",
+   "written_as": "Рустем Ильгизович"
+  },
+  {
+   "account": "A6",
+   "name": "Вкусный выезд"
+  },
+  {
+   "account": "A6",
+   "contact": "Дарья Олеговна Вершинина",
+   "role": "менеджер по логистике (новый контакт)",
+   "written_as": "Дарья Олеговна"
+  },
+  {
+   "account": "A1",
+   "name": "Симбирский гонец",
+   "written_as": "«Симбирского гонца»"
+  },
+  {
+   "account": "A2",
+   "name": "Тёплый контур",
+   "written_as": "«Тёплого контура»"
+  }
+ ],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [
+  1700.0,
+  1900.0,
+  8000.0,
+  12000.0,
+  25000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "company rate 112.50 to 121.50; message: \"New prices from today.\"",
+   "message_ru": "Новые цены с сегодняшнего дня."
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "added the purchase-order column and the Monday priority for Millsaps, moved here from team notes; message: \"Customer facts belong on the account pages, not in notes.\"",
+   "message_ru": "То, что касается клиента, должно быть на странице клиента, а не в заметках."
+  },
+  {
+   "n": 4,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "Sourwood's approver changed from Bobby Shadden to Erin Castillo; message: \"New fleet contact at Sourwood.\"",
+   "message_ru": "У «Вкусного выезда» новый ответственный."
+  }
+ ],
+ "has_history": true
+}

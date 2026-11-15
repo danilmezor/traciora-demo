@@ -1,0 +1,159 @@
+{
+  "format": "seed-conversation/1",
+  "id": "26-r13-telegram-two-questions",
+  "configuration": "ru",
+  "number": 26,
+  "story": "R13",
+  "title": "Непонятно, и понятно только после двух вопросов: «мне бы то же самое, что весной»",
+  "demonstrates": "Rule R13 on a drafts channel, with the flagship's fourth advisor. The clarifying question is the draft; she writes her own over it, slowly and correctly. The first answer («ну колёса») does not settle it, because in the spring there were two jobs. She asks again by naming both, and the answer is: both. The last draft goes out as it was, and she adds one line of her own. Booked, labelled, resolved; the address is not in it.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Николай Иванович Кузьмин",
+      "invented": true,
+      "first_time": false,
+      "note": "пожилой постоянный клиент сервиса на Московском шоссе; Toyota Corolla 2010; в апреле менял шины на летние, в мае делал сход-развал"
+    },
+    "staff": [
+      {"slot": 29, "name": "Татьяна Геннадьевна Пахомова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Постоянный клиент, который уверен, что Татьяна помнит.",
+    "vehicle": "Toyota Corolla 2010",
+    "what_happens": "Два вопроса, прежде чем просьба становится ясной; потом запись на обе работы на следующий день.",
+    "facts": {
+      "history": "в апреле — сезонная замена шин на летние; в мае — сход-развал",
+      "booked": "четверг недели T-6, 11:00, main: сезонная замена шин и сход-развал",
+      "alignment": "сход-развал на две оси — тоже 3 000 (catalogue.json wheel_alignment)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "3 000 ₽", "amount": 3000.0, "what": "сезонная замена шин с балансировкой, класс car; и сход-развал на две оси: обе работы стоят по 3 000", "from": {"catalogue": "seasonal_tyre_change", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    },
+    "unclear": {
+      "kind": "two requests in one: «то же самое, что весной» is two jobs, and he wants both",
+      "loops": 2,
+      "resolved": true,
+      "how": "Татьяна спрашивает, какую работу он имеет в виду; ответ — «ну колёса». Она называет обе весенние работы и спрашивает, какая нужна; оказывается, обе: переобуть и чтобы не тянуло вправо."
+    }
+  },
+  "days": {
+    "T-44d": {"anchor": "the Wednesday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 6}, "nominal": "Wed 2026-09-30", "what": "the Wednesday of week T-6 (DESIGN.md section 6, row 26); a working day of slot 29"},
+    "T-43d": {"anchor": "the Thursday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 6}, "nominal": "Thu 2026-10-01", "what": "«завтра, четверг»"},
+    "T-40d": {"anchor": "the Sunday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Sun", "week": 6}, "nominal": "Sun 2026-10-04", "what": "«на воскресенье»"}
+  },
+  "floating_days": [
+    {"word": "весной", "said_on": "T-44d", "day": "April and May", "form": "instrumental"},
+    {"word": "Весной", "said_on": "T-44d", "day": "April and May", "form": "instrumental"},
+    {"word": "В апреле", "said_on": "T-44d", "day": "April", "form": "в + prepositional"},
+    {"word": "в мае", "said_on": "T-44d", "day": "May", "form": "в + prepositional"},
+    {"word": "на завтра на 11:00", "said_on": "T-44d", "day": "the Thursday of week T-6", "form": "на + accusative"},
+    {"word": "на воскресенье на 10:00", "said_on": "T-44d", "day": "the Sunday of week T-6", "form": "на + accusative"},
+    {"word": "завтра в 11", "said_on": "T-44d", "day": "the Thursday of week T-6", "form": "adverb"},
+    {"word": "Завтра в 11:00", "said_on": "T-44d", "day": "the Thursday of week T-6", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "4503599627373147",
+      "peer": {"id": "4503599627373147", "name": "Николай Иванович"},
+      "contact": {
+        "identifier": "telegram_4503599627373147",
+        "name": "Николай Иванович",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "opened": {
+        "day": "T-44d",
+        "at": "10:20:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-44d", "at": "10:20:10", "kind": "message", "from": "customer", "text": "Татьяна, здравствуйте. Мне бы то же самое сделать, что весной делали"},
+        {"n": 2, "day": "T-44d", "at": "10:20:55", "kind": "draft", "id": "d1", "text": "Здравствуйте! Подскажите, пожалуйста, какую именно работу вы имеете в виду?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 29, "day": "T-44d", "at": "10:32:30", "because": "she sent her own text (n 5)"}},
+        {"n": 3, "day": "T-44d", "at": "10:32", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-44d", "at": "10:32:28", "kind": "activity", "what": "assigned", "derived": true, "to": 29, "by": 29, "how": "first reply"},
+        {"n": 5, "day": "T-44d", "at": "10:32:30", "kind": "message", "from": "staff", "slot": 29, "text": "Николай Иванович, здравствуйте. Подскажите, пожалуйста, какую именно работу вы имеете в виду? Весной вы были у нас дважды."},
+        {"n": 6, "day": "T-44d", "at": "10:32:32", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-44d", "at": "10:36:15", "kind": "message", "from": "customer", "text": "ну колёса"},
+        {"n": 8, "day": "T-44d", "at": "10:36:55", "kind": "draft", "id": "d2", "text": "Уточните, пожалуйста: вам нужно поменять шины на зимние или что-то ещё по колёсам?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 29, "day": "T-44d", "at": "10:44:10", "because": "she sent her own text (n 9)"}},
+        {"n": 9, "day": "T-44d", "at": "10:44:10", "kind": "message", "from": "staff", "slot": 29, "text": "Уточню, чтобы записать вас правильно. В апреле мы меняли вам шины на летние, а в мае делали сход-развал. Сейчас нужно поставить зимние шины или снова проверить развал?"},
+        {"n": 10, "day": "T-44d", "at": "10:49:30", "kind": "message", "from": "customer", "text": "зимние поставить. и чтоб вправо не тянуло, а то опять ведёт"},
+        {"n": 11, "day": "T-44d", "at": "10:50:10", "kind": "draft", "id": "d3", "text": "Понятно, спасибо. Сезонная замена шин с балансировкой стоит 3 000 ₽. Если машину ведёт вправо, стоит проверить углы установки колёс: сход-развал на две оси стоит 3 000 ₽. Когда вам удобно подъехать?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 29, "day": "T-44d", "at": "10:58:40", "became": 12}},
+        {"n": 12, "day": "T-44d", "at": "10:58:40", "kind": "message", "from": "staff", "slot": 29, "text": "Теперь понятно, Николай Иванович: нужно и то и другое. Сезонная замена шин с балансировкой стоит 3 000 ₽, сход-развал на две оси — ещё 3 000 ₽. Развал лучше делать сразу после замены шин. Могу записать вас на завтра на 11:00 или на воскресенье на 10:00, обе работы займут около двух часов. Какой день вам подходит?"},
+        {"n": 13, "day": "T-44d", "at": "11:03:20", "kind": "message", "from": "customer", "text": "завтра в 11"},
+        {"n": 14, "day": "T-44d", "at": "11:04:00", "kind": "draft", "id": "d4", "text": "Хорошо, Николай Иванович. Завтра в 11:00 ждём вас.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 29, "day": "T-44d", "at": "11:12:15", "became": 15}},
+        {"n": 15, "day": "T-44d", "at": "11:12:15", "kind": "message", "from": "staff", "slot": 29, "text": "Хорошо, Николай Иванович. Завтра в 11:00 ждём вас."},
+        {"n": 16, "day": "T-44d", "at": "11:13:40", "kind": "message", "from": "staff", "slot": 29, "text": "Зимние шины, пожалуйста, привезите с собой."},
+        {"n": 17, "day": "T-44d", "at": "11:14:00", "kind": "activity", "what": "label_added", "label": "шины", "by": 29},
+        {"n": 18, "day": "T-44d", "at": "11:14:20", "kind": "activity", "what": "resolved", "by": 29}
+      ],
+      "assignee_history": [
+        {"day": "T-44d", "at": "10:32:28", "to": 29, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 29,
+        "labels": ["шины"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 29, "working_minutes": 12.3},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 29, "working_minutes": 12.3, "wall_minutes": 12.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 29, "working_minutes": 7.9, "wall_minutes": 7.9, "measured_from": "n 7", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 29, "working_minutes": 9.2, "wall_minutes": 9.2, "measured_from": "n 10", "reply": "later"},
+          {"asked": 13, "answered": 15, "by": 29, "working_minutes": 8.9, "wall_minutes": 8.9, "measured_from": "n 13", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 29,
+          "n": 5,
+          "working_minutes": 12.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 4, "assistant": 0, "manager": 5, "note": 0},
+        "resolutions": [
+          {"day": "T-44d", "at": "11:14:20", "by": 29}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 29},
+          {"draft": "d2", "outcome": "discarded", "manager": 29},
+          {"draft": "d3", "outcome": "sent_edited", "manager": 29},
+          {"draft": "d4", "outcome": "sent_as_is", "manager": 29}
+        ],
+        "operator_credit": "slot 29: first answer 12.3 minutes (her ledger row is 12), five replies, two drafts discarded, one edited and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "slot 29; the assistant drafts",
+    "outcome": "сезонная замена шин и сход-развал на следующий день, 11:00, main; закрыт слотом 29",
+    "facts": [
+      "unclear first message; clear after two questions by slot 29",
+      "what he asked for («то же, что весной») was two jobs; he wanted both",
+      "each job is 3 000"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Второй черновик ассистента угадывает одну работу; Татьяна называет две, которые были на самом деле.",
+    "Полные предложения, ни одного смайлика, «Николай Иванович» в каждой второй реплике.",
+    "В подтверждении есть день, время и работа; адреса нет: его она обычно забывает (cast.json)."
+  ],
+  "new_facts": [
+    "Николай Иванович Кузьмин (в Telegram «Николай Иванович»), Toyota Corolla 2010, постоянный клиент main: в апреле сезонная замена шин, в мае сход-развал; запись на четверг недели T-6, 11:00: сезонная замена шин и сход-развал.",
+    "У контакта нет картинки."
+  ]
+}

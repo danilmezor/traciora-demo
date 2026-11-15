@@ -1,0 +1,185 @@
+{
+ "path": "services/electrical/battery.md",
+ "title": "Аккумулятор",
+ "title_en": "Battery",
+ "exists_in": "both",
+ "english_sheet": "facts/services/electrical/battery.json",
+ "first_revision_text": "ru/_history/services/electrical/battery.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Battery test and replacement; the November rush; bulbs.",
+ "serves": [
+  "S11",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 249,
+ "links_to": [
+  "services/electrical/alternator-and-starter.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The battery test is a paid job (300 RUB) when it is the reason for the visit; at the checklist inspection the battery is looked at for free.",
+  "Reference battery 60 А·ч, reverse polarity: Тюмень / АКОМ EFB / VARTA. Labour by the hour (0.2 н/ч).",
+  "Rush with the first frosts (December to February).",
+  "Bulbs: factory defects only (English: 90 days)."
+ ],
+ "new_facts": [
+  "At the checklist inspection the battery is tested free; the paid test line is used when the customer came for it."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Замена",
+   "columns": [
+    "Категория",
+    "Аккумулятор",
+    "С установкой"
+   ],
+   "rows": [
+    {
+     "Категория": "Эконом",
+     "Аккумулятор": "Тюменский аккумуляторный завод",
+     "С установкой": "7 000 ₽"
+    },
+    {
+     "Категория": "Стандарт",
+     "Аккумулятор": "АКОМ",
+     "С установкой": "8 760 ₽"
+    },
+    {
+     "Категория": "Премиум",
+     "Аккумулятор": "VARTA Blue Dynamic",
+     "С установкой": "13 380 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Замена",
+   "item": "Полярность и размер смотрим по старому аккумулятору, а не по каталогу. На машине может стоять не родной."
+  },
+  {
+   "section": "Замена",
+   "item": "Машинам со «старт-стоп» — EFB или AGM. Это не допродажа, это правильная деталь."
+  },
+  {
+   "section": "Замена",
+   "item": "На части новых машин аккумулятор нужно прописать сканером. Это входит в работу."
+  },
+  {
+   "section": "Замена",
+   "item": "Старый аккумулятор забираем на утилизацию. Клиент за это не платит."
+  },
+  {
+   "section": "Замена",
+   "item": "Гарантия — производителя, по талону. Обращение оформляем мы."
+  },
+  {
+   "section": "Замена",
+   "item": "Аккумулятор исправен, а стартер всё равно крутит вяло: Генератор и стартер."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "battery_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 300.0
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 380.0
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 7000.0
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 8760.0
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 13380.0
+  },
+  {
+   "catalogue_key": "headlight_bulb",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  300.0,
+  380.0,
+  800.0,
+  7000.0,
+  8760.0,
+  13380.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

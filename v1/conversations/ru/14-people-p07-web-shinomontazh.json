@@ -1,0 +1,141 @@
+{
+  "format": "seed-conversation/1",
+  "id": "14-people-p07-web-shinomontazh",
+  "configuration": "ru",
+  "number": 14,
+  "story": "people",
+  "title": "Сезон: переобуться на зиму. Ассистент называет цену и передаёт заявку, новичок записывает «на сегодня»",
+  "demonstrates": "A booking on the web chat inside the autumn tyre window. The assistant gives the public price, cannot book, hands over. Slot 7 answers in nine minutes: «Да-да», a time today, «должны успеть». A question about storage is answered by the draft, sent as it was; so is the closing line. He labels and resolves.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Денис",
+      "invented": true,
+      "first_time": true,
+      "note": "Kia Rio, колёса R15; в сервисе впервые",
+      "phone": "+7 907 215-63-08"
+    },
+    "staff": [
+      {"slot": 7, "name": "Никита Ведяшкин", "weeks_in_the_job": 11}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Новый клиент в разгар шинного сезона.",
+    "vehicle": "Kia Rio",
+    "what_happens": "Цена из прайса, передача заявки, «сегодня к 18:00». Про хранение отвечает черновик.",
+    "facts": {
+      "booked": "T-22d 18:00, main",
+      "season": "осеннее шинное окно: 13 октября — 9 ноября (catalogue.md)",
+      "public_pages_used": ["прайс: шиномонтаж и хранение шин", "часы работы и адреса"],
+      "prices": [
+        {"said": "3 000 ₽", "amount": 3000.0, "what": "сезонная замена шин: шиномонтаж 4 колёс с балансировкой, класс car", "from": {"catalogue": "seasonal_tyre_change", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "3 000 ₽ за сезон", "amount": 3000.0, "what": "сезонное хранение комплекта шин", "from": {"catalogue": "tyre_storage", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-22d": {"anchor": "slot 7's first working day on or after the Tuesday of week T-3", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 3, "on_or_after_for_slot": 7}, "nominal": "Thu 2026-10-22"}
+  },
+  "floating_days": [
+    {"word": "сегодня вечером или завтра", "said_on": "T-22d", "day": "the day and the next", "form": "adverb"},
+    {"word": "сегодня", "said_on": "T-22d", "day": "T-22d", "form": "adverb"},
+    {"word": "к 6", "said_on": "T-22d", "day": "T-22d", "form": "к + dative"},
+    {"word": "сегодня к 18:00", "said_on": "T-22d", "day": "T-22d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0014-4e00-8000-00000000a00e",
+      "peer": {"id": "seedv1-browser-ru-0512", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0512",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-22d", "at": "14:20:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-22d", "at": "14:20:10", "kind": "message", "from": "customer", "text": "здравствуйте, переобуться на зиму сколько стоит и когда можно"},
+        {"n": 2, "day": "T-22d", "at": "14:20:34", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Сезонная замена шин, шиномонтаж четырёх колёс с балансировкой, стоит 3 000 ₽ для легкового автомобиля. Сам записать я не могу, но передам заявку мастеру-приёмщику. Какая у вас машина и на какой день хотите?"},
+        {"n": 3, "day": "T-22d", "at": "14:21:15", "kind": "message", "from": "customer", "text": "киа рио, r15. лучше сегодня вечером или завтра"},
+        {"n": 4, "day": "T-22d", "at": "14:21:40", "kind": "message", "from": "assistant", "text": "Понял. Напишите, пожалуйста, как к вам обращаться и номер телефона. И в какой сервис удобнее: на Московском шоссе или в Новом городе?"},
+        {"n": 5, "day": "T-22d", "at": "14:22:10", "kind": "message", "from": "customer", "text": "Денис 8 907 215 63 08, московское"},
+        {"n": 6, "day": "T-22d", "at": "14:22:34", "kind": "message", "from": "assistant", "text": "Спасибо, Денис. Заявку передал, с вами свяжутся в ближайшее время."},
+        {"n": 7, "day": "T-22d", "at": "14:22:35", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Денис", "phone": "+7 907 215-63-08", "site": "московское", "context": "Денис, Kia Rio, колёса R15. Хочет сезонную замену шин на зимние сегодня вечером или завтра, Московское шоссе. Я назвал цену из прайса, 3 000 ₽."}}, "note": {"from": "assistant", "private": true, "text": "Денис, Kia Rio, колёса R15. Хочет сезонную замену шин на зимние сегодня вечером или завтра, Московское шоссе. Я назвал цену из прайса, 3 000 ₽."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-22d 20:00, закрытие дня"}},
+        {"n": 8, "day": "T-22d", "at": "14:31:48", "kind": "activity", "what": "assigned", "derived": true, "to": 7, "by": 7, "how": "first reply"},
+        {"n": 9, "day": "T-22d", "at": "14:31:50", "kind": "message", "from": "staff", "slot": 7, "text": "Денис, здравствуйте, это Никита, Московское шоссе. Да-да, сегодня можно, приезжайте к 18:00! За час должны успеть"},
+        {"n": 10, "day": "T-22d", "at": "14:31:51", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 7, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-22d", "at": "14:34:20", "kind": "message", "from": "customer", "text": "ок. а летние колёса у вас оставить на хранение можно?"},
+        {"n": 12, "day": "T-22d", "at": "14:35:00", "kind": "draft", "id": "d1", "text": "Да, сезонное хранение комплекта шин стоит 3 000 ₽ за сезон. Оформить можно при приёме машины.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-22d", "at": "14:40:30", "became": 13}},
+        {"n": 13, "day": "T-22d", "at": "14:40:30", "kind": "message", "from": "staff", "slot": 7, "text": "Да, сезонное хранение комплекта шин стоит 3 000 ₽ за сезон. Оформить можно при приёме машины."},
+        {"n": 14, "day": "T-22d", "at": "14:42:10", "kind": "message", "from": "customer", "text": "хорошо, буду к 6"},
+        {"n": 15, "day": "T-22d", "at": "14:42:50", "kind": "draft", "id": "d2", "text": "Ждём вас сегодня к 18:00: Московское шоссе, 40.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-22d", "at": "14:47:40", "became": 16}},
+        {"n": 16, "day": "T-22d", "at": "14:47:40", "kind": "message", "from": "staff", "slot": 7, "text": "Ждём вас сегодня к 18:00: Московское шоссе, 40."},
+        {"n": 17, "day": "T-22d", "at": "14:48:00", "kind": "activity", "what": "label_added", "label": "шины", "by": 7},
+        {"n": 18, "day": "T-22d", "at": "14:48:20", "kind": "activity", "what": "resolved", "by": 7}
+      ],
+      "assignee_history": [
+        {"day": "T-22d", "at": "14:31:48", "to": 7, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 7,
+        "labels": ["шины"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 25},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 24},
+          {"asked": 7, "answered": 9, "by": 7, "working_minutes": 9.2, "wall_minutes": 9.2, "measured_from": "n 7", "reply": "first"},
+          {"asked": 11, "answered": 13, "by": 7, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 11", "reply": "later"},
+          {"asked": 14, "answered": 16, "by": 7, "working_minutes": 5.5, "wall_minutes": 5.5, "measured_from": "n 14", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 7,
+          "n": 9,
+          "working_minutes": 9.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 3, "manager": 3, "note": 1},
+        "resolutions": [
+          {"day": "T-22d", "at": "14:48:20", "by": 7}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 7},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 7}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 7: his first line 9.2 minutes after the hand-off, three replies, two drafts sent as they were, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "assistant first, handed over (scheduling), slot 7",
+    "outcome": "шиномонтаж в тот же день, 18:00, main; закрыт слотом 7",
+    "facts": [
+      "the price given is 3 000 for four wheels",
+      "storage is 3 000 a season",
+      "slot 7 promised an hour: «должны успеть»"
+    ],
+    "questions": []
+  },
+  "why": [
+    "«Да-да, сегодня можно» и «должны успеть» в одной реплике: обещает то, на что надеется, в день, когда сервис работает в полтора раза плотнее обычного.",
+    "Оба черновика ушли без правки.",
+    "Ярлык «шины» он поставил: в сезон это половина его чатов."
+  ],
+  "new_facts": [
+    "Денис, +7 907 215-63-08, Kia Rio R15: сезонная замена шин на main в первый рабочий день слота 7 начиная со вторника недели T-3, 18:00; спросил про хранение летних колёс (3 000 за сезон)."
+  ]
+}

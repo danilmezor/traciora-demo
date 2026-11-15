@@ -1,0 +1,223 @@
+{
+ "path": "customers/prices-for-common-services.md",
+ "title": "Prices for common services",
+ "first_revision_text": "en/_history/customers/prices-for-common-services.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Menu prices a customer may be told without seeing the car; public version of the price list.",
+ "serves": [
+  "S7",
+  "S8",
+  "S12",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 252,
+ "links_to": [
+  "customers/estimates-and-approvals.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "The table repeats the current list (after the rise) for vehicle class car, standard tier unless stated.",
+  "Sales tax on parts and labour, 9.25 % at the two Chattanooga shops and 9.75 % at Charlotte Pike (ledger tax.rate.main, .east, .west); shop supplies 5 % of hourly labour, cap 35.00 USD per bill; menu-priced services carry none (catalogue configurations.en).",
+  "No repair is quoted unseen: the public page gives menu services only."
+ ],
+ "tables": [
+  {
+   "section": "Prices for common services",
+   "columns": [
+    "Service",
+    "Price"
+   ],
+   "rows": [
+    {
+     "Service": "Full synthetic oil and filter change, up to 5 quarts",
+     "Price": "$90.95"
+    },
+    {
+     "Service": "Same service with synthetic-blend oil",
+     "Price": "$65.95"
+    },
+    {
+     "Service": "Tire rotation",
+     "Price": "$25.00"
+    },
+    {
+     "Service": "Balance four wheels",
+     "Price": "$60.00"
+    },
+    {
+     "Service": "Four-wheel alignment",
+     "Price": "$119.95"
+    },
+    {
+     "Service": "Flat repair (patch-plug and rebalance)",
+     "Price": "$31.00"
+    },
+    {
+     "Service": "Brake inspection",
+     "Price": "$49.95"
+    },
+    {
+     "Service": "Steering and suspension inspection (noise or vibration)",
+     "Price": "$49.95"
+    },
+    {
+     "Service": "Check engine light diagnosis, first hour",
+     "Price": "$135.00"
+    },
+    {
+     "Service": "Air-conditioning performance check",
+     "Price": "$49.95"
+    },
+    {
+     "Service": "Battery, starting and charging test",
+     "Price": "Free"
+    },
+    {
+     "Service": "Pre-purchase inspection with road test and written report",
+     "Price": "$149.95"
+    },
+    {
+     "Service": "Courtesy inspection with any service",
+     "Price": "Free"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "What is added to a bill",
+   "item": "Tennessee sales tax on parts and labour: 9.25 % at East Main and Bonny Oaks, 9.75 % at Charlotte Pike."
+  },
+  {
+   "section": "What is added to a bill",
+   "item": "Shop supplies on repair work: 5 % of the labour, never more than $35.00 on one bill. Menu services in the table above carry none."
+  },
+  {
+   "section": "What is added to a bill",
+   "item": "New tires carry a disposal fee and the state tire fee."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 90.95
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 65.95
+  },
+  {
+   "catalogue_key": "tyre_rotation",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 25.0
+  },
+  {
+   "catalogue_key": "wheel_balance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 60.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 119.95
+  },
+  {
+   "catalogue_key": "tyre_repair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 31.0
+  },
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "suspension_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 135.0
+  },
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "pre_purchase_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 149.95
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "every price replaced with the new list; message: \"New prices from today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian menu: fixed prices exist for tyre fitting, alignment and diagnostics; oil service is priced by the hour there (catalogue ru). VAT 5 % is inside every Russian price and nothing is added on top (ledger tax.ru_price_basis); say so once.",
+  "Shop supplies in Russia: 3 % of hourly work, at most 500 RUB."
+ ]
+}

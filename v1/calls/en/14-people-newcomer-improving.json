@@ -1,0 +1,644 @@
+{
+  "format": "seed-call/1",
+  "id": "en-14-people-newcomer-improving",
+  "configuration": "en",
+  "number": 14,
+  "story": "people",
+  "title": "The newcomer three months in: the price from the price list, one time, the booking; a doubt stepped over",
+  "purpose": "People, slot 7, the afternoon of the day the timing-belt customer argued at his counter. He will not say a price or a time he has not looked up. He takes a name, offers a time, books and repeats it. He still asks nothing about the car and still answers 'that's more than I was hoping' with 'yes ma'am'.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Caleb Sutton",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Kayla Thornton",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 7's 3rd working day before T (rule R6; people, call 14)",
+    "nominal_offset": "T-3d",
+    "nominal_date": "2026-11-10",
+    "local_start": "15:50",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 6,
+    "caller_phone": "423-555-0109",
+    "repeat_caller": false,
+    "talk_s": 82
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Kayla Thornton, who has been told by a friend that her rear brakes are gone.",
+    "vehicle": "2017 Nissan Rogue",
+    "job": "rear brake pads and rotors",
+    "wants": "a price",
+    "what_happens": "Caleb reads the price off the price list, steps over 'that's more than I was hoping', offers Thursday at eight, takes her name, books, declines to guess how long the job takes, and repeats the time.",
+    "facts": {
+      "booked": "call+2d 08:00",
+      "note": "catalogue.json rear_pads_rotors, class car, standard parts: 470.27. The price is right and read to the cent.",
+      "prices": [
+        {
+          "what": "Replace rear brake pads & rotors",
+          "job": "rear_pads_rotors",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 470.27,
+          "said": "four seventy, twenty-seven",
+          "said_usd": 470.27,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Thursday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Caleb."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.7,
+      "said": "Hi. I need a price on rear brakes. Pads and rotors. It's a twenty-seventeen Nissan Rogue."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 11.3,
+      "said": "Yes ma'am. Seventeen Rogue, rear pads and rotors. Give me one second — I wanna pull it off the price list so I tell you right."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 22.4,
+      "said": "Sure."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 23.8,
+      "said": "Okay. That's four seventy, twenty-seven, before tax."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 28.1,
+      "said": "Four seventy. Hm. That's more than I was hopin'."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 33.0,
+      "said": "Yes ma'am. Uh — I could get you in Thursday morning, at eight?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 38.2,
+      "said": "Thursday... I mean, yeah. I could do Thursday."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 43.0,
+      "said": "Okay. Can I get your name?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 46.7,
+      "said": "Kayla Thornton."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 49.1,
+      "said": "Kayla Thornton. Got it. So I've got you down for Thursday at eight, and I'll be the one checking you in. Just ask for Caleb."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 58.4,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 60.9,
+      "said": "How long will y'all need it?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 64.6,
+      "said": "Uh — let me not guess. I'll ask the tech in the morning and tell you for sure when you drop it off."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 72.8,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 74.1,
+      "said": "So that's Thursday at eight."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 76.7,
+      "said": "Okay. Thank you."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 78.6,
+      "said": "Thank you! Have a good one."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.44,
+    "restoration_tier": "medium",
+    "noise": "an air hammer in the bay behind the counter; the caller is outdoors",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          3,
+          6,
+          7,
+          14
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 2,
+        "said": "Rogue",
+        "stored": "rogue"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          16
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "a number split, merged or changed",
+        "script_turn": 6,
+        "said": "Four seventy",
+        "stored": "4.70"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 3,
+        "said": "I wanna pull it off the price list",
+        "stored": "{?likely: I want to pull it off the price list}"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the caller's first words are gone",
+        "script_turn": 8,
+        "said": "Thursday... I mean,",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 14,
+        "said": "I'll ask the tech in the morning",
+        "stored": "{?likely: I'll ask the tech in the morning}"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost; two turns of one speaker become one line",
+        "script_turns": [
+          15,
+          16
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 3,
+        "dropped": 3
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 8,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 7,
+        "as_digits": 7,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 1
+      },
+      "noise_bursts": 3,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 161,
+    "stored_words": 154,
+    "strict_word_difference": 0.149
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 169,
+    "duration_s": 82.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Caleb.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi. I need a price on rear brakes. Pads and rotors. It's a 2017 Nissan rogue.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am. '17 Rogue, rear pads and rotors. Give me one second, {?likely: I want to pull it off the price list} so I tell you right.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sure.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. That's $470.27, before tax.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "4.70. That's more than I was hoping.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am. I could get you in Thursday morning, at 8?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. I could do Thursday.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Can I get your name?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Kayla Thornton.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Kayla Thornton. Got it. So I've got you down for Thursday at 8, and I'll be the one checking you in. Just ask for Caleb.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. How long will y'all need it?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Let me not guess. {?likely: I'll ask the tech in the morning} and tell you for sure when you drop it off. So that's Thursday at 8.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Thank you.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you! Have a good one.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Caleb.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Can I get your name?",
+        "level": 1,
+        "segment": 8
+      },
+      {
+        "key": "need_discovery",
+        "quote": "'17 Rogue, rear pads and rotors.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "That's $470.27, before tax.",
+        "level": 1,
+        "segment": 4
+      },
+      {
+        "key": "offered_time",
+        "quote": "I could get you in Thursday morning, at 8?",
+        "level": 1,
+        "segment": 6
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "So I've got you down for Thursday at 8, and I'll be the one checking you in.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "recap",
+        "quote": "So that's Thursday at 8.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "objection",
+        "quote": "That's more than I was hoping.",
+        "level": 0,
+        "segment": 5
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "Let me not guess.",
+      "why": "Asked how long the job takes, he said he would find out instead of naming a time, which is the lesson of that morning.",
+      "segment": 12
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "I could get you in Thursday morning, at 8?",
+      "say": "I hear you. Were you hoping for pads only? If the rotors measure good it's 225.77; we'll measure them and show you before we decide."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 56.2,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 8
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 4
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 6
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 5
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 56.2,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 12,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Caleb",
+        "name_and_number": "Can I get your name?",
+        "need_discovery": "'17 Rogue, rear pads and rotors",
+        "price_with_next_step": "That's $470.27, before tax",
+        "offered_time": "I could get you in Thursday morning, at 8?",
+        "asked_for_booking": "So I've got you down for Thursday at 8, and I'll be the one checking you in",
+        "recap": "So that's Thursday at 8",
+        "objection": "That's more than I was hoping"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Let me not guess",
+        "why": "Asked how long the job takes, he said he would find out instead of naming a time, which is the lesson of that morning."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "I could get you in Thursday morning, at 8?",
+        "say": "I hear you. Were you hoping for pads only? If the rotors measure good it's 225.77; we'll measure them and show you before we decide."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Three spans were hit by shop noise; none of them holds a check's evidence, so the verdict is the script's and the quality is ok.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": 0
+    },
+    "score": 56.2,
+    "score_exact": 56.25,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "price_objection"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and his own name.",
+    "name_and_number": "1: he asks for the name now; he still takes no number.",
+    "need_discovery": "1: the car and the job, as the caller gave them; he asks nothing.",
+    "price_with_next_step": "1: the right price, bare; the doubt comes before the time.",
+    "offered_time": "1: one specific option, Thursday at eight.",
+    "asked_for_booking": "2: the day, the hour and who checks her in.",
+    "recap": "1: the time only.",
+    "objection": "0: 'that's more than I was hoping' is the only doubt and it gets 'yes ma'am' and a time.",
+    "asr_quality": "ok: two marked spans and a lost opening in seventeen turns, none on a line a check quotes.",
+    "score": "(1·2 + 2·1 + 2·1 + 2·1 + 3·1 + 3·2 + 1·1 + 2·0) / 2 = 9 of 16 weight points = 56.2. Exactly 56.25; the product rounds a score to one decimal.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Kayla Thornton, 423-555-0109, 2017 Nissan Rogue: an appointment at main on call+2d at 08:00 for rear pads and rotors (the day before T for the nominal T)."
+  ]
+}

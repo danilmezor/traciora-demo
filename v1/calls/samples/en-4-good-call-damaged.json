@@ -1,0 +1,711 @@
+{
+  "format": "seed-call/1",
+  "id": "en-4-good-call-damaged",
+  "configuration": "en",
+  "title": "The all-star books a company van; the recognition loses part of what she did",
+  "purpose": "Stories S5 and S1. A model call: every check that applies is done in full. The stored transcript is not the call: shop noise drops the second time she offered and the address in her summary, three turns carry the wrong speaker, and a plate, a part and a price come out wrong. The verdict says what the lines support and marks the quality.",
+  "cast": {
+    "advisor": {
+      "slot": 16,
+      "name": "Angie Holloway",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Hal Millsaps",
+      "ref": "accounts.json en.A2 contacts[1], President",
+      "company": "Millsaps Heating & Plumbing",
+      "account": "A2",
+      "invented": false
+    },
+    "mentioned": [
+      {
+        "name": "Darnell",
+        "role": "the account's driver",
+        "invented": true
+      }
+    ]
+  },
+  "call": {
+    "day": "the Wednesday of week T-2 (rule R6; call 25)",
+    "nominal_offset": "T-16d",
+    "nominal_date": "2026-10-28",
+    "local_start": "09:12",
+    "site": "east",
+    "direction": "inbound",
+    "line": "200",
+    "answered_by": "201",
+    "ring_s": 4,
+    "caller_phone": "423-555-0163",
+    "repeat_caller": false,
+    "talk_s": 173
+  },
+  "scenario": {
+    "who_calls": "Hal Millsaps, president of company account A2 (heating and plumbing), who looks after its vans himself, from a truck cab.",
+    "vehicle": "unit M-112, a 2019 Ford Transit-250 cargo van, BRC-7445 (accounts.json en.A2 fleet)",
+    "job": "front brake pads and rotors; a caliper only if it is found seized",
+    "wants": "the van booked and back before an install on Monday; asks what it will cost",
+    "what_happens": "Angie finds the van on the account, asks where the noise is and since when, tells him the driver should not keep driving it, gives the fleet price and what could raise it, offers two times, books the first, takes the purchase-order number and sums up with the address.",
+    "facts": {
+      "fleet_price_usd": 576.81,
+      "po_number": "4471B",
+      "offered": [
+        "call+1d 07:30",
+        "call+2d 13:00"
+      ],
+      "booked": "call+1d 07:30",
+      "note": "The company, the van and its plate are accounts.json's. The price is catalogue.json front_pads_rotors for class van at the company-account price class: 576.81 before tax; she says 'five seventy-seven'."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Friday",
+      "day": "call+2d"
+    },
+    {
+      "word": "Monday",
+      "day": "call+5d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care on Bonny Oaks, this is Angie."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.5,
+      "said": "Hey Angie, it's Hal over at Millsaps Heating and Plumbing."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.5,
+      "said": "Hey, Hal! How are you? What's going on?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 13.5,
+      "said": "Oh, I'm alright. Listen, I got a van that needs to come see you. One of my guys says the brakes are grinding on him."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 25.0,
+      "said": "Uh-oh. Okay. Which van is it?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 28.2,
+      "said": "Unit one-twelve. It's the Transit."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 31.0,
+      "said": "Okay, let me pull you up... I've got two 'nineteen Transits on your account. Is one-twelve the white two-fifty, tag ending seven-four-four-five?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 40.7,
+      "said": "Uh, hang on, I got the sheet right here... yeah. Seven-four-four-five. That's it."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 47.0,
+      "said": "Seven-four-four-five, got it. And that's the one we did the front struts on back in the summer."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 55.0,
+      "said": "Yeah, that's the one. Darnell drives it."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 58.6,
+      "said": "Okay. So tell me about the grinding. Front, back, does he know?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 64.4,
+      "said": "He says front. Says it started yesterday, and this morning the brake light came on on the dash."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 72.9,
+      "said": "Okay. If the light's on and it's grinding, he's metal to metal — I don't want him driving that any more than he's got to. When do you need it back?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 86.5,
+      "said": "That's the thing, I've got an install Monday and I need that van on it. What am I looking at, money-wise?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 96.2,
+      "said": "If it's pads and rotors on the front, at your fleet rate that's five seventy-seven plus tax. If a caliper's hanging up it'd be more, and I'd call you before we touch it. I can take it tomorrow morning at seven-thirty, or Friday at one. Either way you'd have it back the same day."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 120.3,
+      "said": "Tomorrow, seven-thirty. Let's do that. Darnell can drop it on his way in."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 126.6,
+      "said": "Perfect. I've got unit one-twelve down for tomorrow at seven-thirty, and I'll write it up myself. Do you want a PO on this one?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 137.6,
+      "said": "Yeah, put it on, uh — four-four-seven-one-B."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 140.8,
+      "said": "Four-four-seven-one-B. Okay. And Hal, if Darnell can't get it here, call me and I'll send the truck for it."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 149.7,
+      "said": "Nah, he'll make it. 'Preciate you, Angie."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 153.3,
+      "said": "You bet. So that's unit one-twelve, tomorrow at seven-thirty, here at sixty-three-forty Bonny Oaks Drive, front brakes — and I'll call you with the numbers before we do anything past pads and rotors."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 167.4,
+      "said": "Sounds good."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 168.9,
+      "said": "Alright. Talk to you tomorrow, Hal."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 172.1,
+      "said": "Alright. Bye."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.47,
+    "restoration_tier": "medium",
+    "noise": "an impact wrench and a compressor behind the advisor's desk; the caller is on a mobile in a truck cab",
+    "applied": [
+      {
+        "rule": "R8",
+        "what": "three turns in a row carry the wrong speaker",
+        "script_turns": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "rule": "R3",
+        "what": "the plate comes out three ways",
+        "script_turns": [
+          7,
+          8,
+          9
+        ],
+        "said": "seven-four-four-five",
+        "stored": [
+          "7445",
+          "7455",
+          "7-4-4-5"
+        ]
+      },
+      {
+        "rule": "R3",
+        "what": "the purchase-order number is wrong in the caller's line and right in the advisor's",
+        "script_turn": 18,
+        "said": "four-four-seven-one-B",
+        "stored": "4417B"
+      },
+      {
+        "rule": "R2",
+        "what": "the company name loses its last sound; the driver's name is spelled two ways",
+        "script_turns": [
+          2,
+          10
+        ],
+        "said": [
+          "Millsaps",
+          "Darnell"
+        ],
+        "stored": [
+          "Millsap",
+          "Darnel"
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a part name replaced by a word that sounds like it",
+        "script_turn": 15,
+        "said": "caliper",
+        "stored": "caliber"
+      },
+      {
+        "rule": "R5",
+        "what": "the price split by a decimal point",
+        "script_turn": 15,
+        "said": "five seventy-seven",
+        "stored": "$5.77"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: two uncertain spans marked; the ends of two of the caller's sentences clipped",
+        "script_turns": [
+          4,
+          12,
+          13
+        ],
+        "stored": [
+          "{?likely: Says it started yesterday}",
+          "{?likely: he's metal to metal}"
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the second time she offered is gone; 'Either way' is left with nothing to refer to",
+        "script_turn": 15,
+        "said": "or Friday at one",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the address in her summary is gone",
+        "script_turn": 21,
+        "said": "here at sixty-three-forty Bonny Oaks Drive",
+        "stored": ""
+      },
+      {
+        "rule": "R1",
+        "what": "'Uh-oh' and 'uh' dropped",
+        "script_turns": [
+          5,
+          8,
+          18
+        ]
+      }
+    ],
+    "script_words": 368,
+    "stored_words": 360,
+    "strict_word_difference": 0.142
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 384,
+    "duration_s": 173.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, Angie, it's Hal over at Millsap Heating and Plumbing.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, Hal. How are you? What's going on?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, I'm all right. Listen, I got a van that needs to come see you. One of my guys says the brakes are grinding.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Which van is it?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Unit 112. It's the Transit.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, let me pull you up. I've got two '19 Transits on your account. Is 112 the white 250, tag ending 7445?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hang on, I got the sheet right here. Yeah, 7455. That's it.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "7-4-4-5, got it. And that's the one we did the front struts on back in the summer.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, that's the one. Darnel drives it.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So tell me about the grinding. Front, back, does he know?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "He says front. {?likely: Says it started yesterday}, and this morning the brake light came on.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. If the light's on and it's grinding, {?likely: he's metal to metal}. I don't want him driving that any more than he's got to. When do you need it back?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "That's the thing. I've got an install Monday and I need that van on it. What am I looking at, money wise?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "If it's pads and rotors on the front, at your fleet rate that's $5.77 plus tax. If a caliber's hanging up, it'd be more, and I'd call you before we touch it. I can take it tomorrow morning at 7:30. Either way, you'd have it back the same day.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Tomorrow, 7:30. Let's do that. Darnell can drop it on his way in.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Perfect. I've got unit 112 down for tomorrow at 7:30, and I'll write it up myself. Do you want a PO on this one?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, put it on 4417B.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "4471B. Okay. And Hal, if Darnell can't get it here, call me and I'll send a truck for it.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, he'll make it. Appreciate you, Angie.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You bet. So that's unit 112, tomorrow at 7:30, front brakes, and I'll call you with the numbers before we do anything past pads and rotors.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sounds good.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Talk to you tomorrow, Hal.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "So tell me about the grinding. Front, back, does he know?",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "If a caliber's hanging up, it'd be more, and I'd call you before we touch it. I can take it tomorrow morning at 7:30.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "offered_time",
+        "quote": "I can take it tomorrow morning at 7:30.",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I've got unit 112 down for tomorrow at 7:30, and I'll write it up myself.",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "recap",
+        "quote": "So that's unit 112, tomorrow at 7:30, front brakes",
+        "level": 1,
+        "segment": 20
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager greets him by name and opens his account."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "I don't want him driving that any more than he's got to. When do you need it back?",
+      "why": "She named the risk and asked for his deadline in one breath, which is what the booking was then built around.",
+      "segment": 12
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "I can take it tomorrow morning at 7:30.",
+      "say": "I can take it tomorrow at 7:30 or Friday at 1. Which is better for you?"
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 83.3,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "200",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 20
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 83.3,
+      "applicable": 6,
+      "asr_quality": "poor",
+      "strength_segment": 12,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care on Bonny Oaks, this is Angie",
+        "need_discovery": "So tell me about the grinding. Front, back, does he know?",
+        "price_with_next_step": "If a caliber's hanging up, it'd be more, and I'd call you before we touch it. I can take it tomorrow morning at 7:30",
+        "offered_time": "I can take it tomorrow morning at 7:30",
+        "asked_for_booking": "I've got unit 112 down for tomorrow at 7:30, and I'll write it up myself",
+        "recap": "So that's unit 112, tomorrow at 7:30, front brakes"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager greets him by name and opens his account.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "I don't want him driving that any more than he's got to. When do you need it back?",
+        "why": "She named the risk and asked for his deadline in one breath, which is what the booking was then built around."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "I can take it tomorrow morning at 7:30.",
+        "say": "I can take it tomorrow at 7:30 or Friday at 1. Which is better for you?"
+      }
+    }
+  },
+  "truth": {
+    "note": "What the clean script earns. The stored lines support less: the second option and the address were said and are not in the transcript, so offered_time and recap come out at 1, and the coaching line asks her to say what she said. 16.7 points are lost to recognition, and asr_quality 'poor' is the product's only sign of it.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 100.0
+  },
+  "why": {
+    "greeting": "2: the business, the site and her name in the first line.",
+    "name_and_number": "N/A: a known company contact, greeted by name.",
+    "need_discovery": "2: which van, front brakes grinding since yesterday with the warning light on, and the deadline. The questions sit on lines that kept their speaker.",
+    "price_with_next_step": "2: the price is garbled ($5.77) but a price it is, with what would raise it and a time in the same line.",
+    "offered_time": "1 on the transcript, 2 in truth: the noise took 'or Friday at one'.",
+    "asked_for_booking": "2: a day, an hour and who writes it up.",
+    "recap": "1 on the transcript, 2 in truth: the time and the work are there, the address is not.",
+    "objection": "N/A: no doubt was voiced.",
+    "speaker_swap": "Turns 7 to 9 hold no check's only evidence, so the swap changes no level. Put on the turn that offers the times, it would leave offered_time unverified: a quote for level 1 or 2 has to sit on a manager's line (judge.py:243).",
+    "asr_quality": "poor: an uncertainty marker, a customer who 'pulls up the account', three plates and a five-dollar brake job.",
+    "score": "(1·2 + 2·2 + 2·2 + 3·1 + 3·2 + 1·1) / 2 = 10 of 12 weight points = 83.3. On the clean script: 12 of 12 = 100.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  }
+}

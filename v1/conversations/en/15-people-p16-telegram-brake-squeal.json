@@ -1,0 +1,135 @@
+{
+  "format": "seed-conversation/1",
+  "id": "15-people-p16-telegram-brake-squeal",
+  "configuration": "en",
+  "number": 15,
+  "story": "people",
+  "title": "A complaint to the all-star: brakes that squeal a week after the job",
+  "demonstrates": "Slot 16 in writing: the customer's name twice, 'if it were my car', two times to choose from, a summary, her name at the end. She raises the chat to High herself, books a free check under the warranty, and after it tells the customer what was wrong in plain words, including that it was the shop's doing. Two drafts edited, one written over; labelled and resolved.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Gloria Yancey",
+      "invented": true,
+      "first_time": false,
+      "note": "a regular of the Bonny Oaks shop; 2014 Toyota Highlander; front brakes done the week before"
+    },
+    "staff": [
+      {"slot": 16, "name": "Angie Holloway"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A regular who does not like to complain.",
+    "vehicle": "2014 Toyota Highlander",
+    "what_happens": "The brakes fitted last week squeal at every stop. Angie thanks her for saying so, offers today at 1:00 or tomorrow at 7:30, no charge. In the afternoon the customer asks what it was: an anti-rattle clip not seated on one side.",
+    "facts": {
+      "warranty": "24 months or 24,000 miles on parts and labour (ledger s12.warranty)",
+      "found": "an anti-rattle clip not fully seated; both sides reseated, road tested",
+      "public_pages_used": []
+    }
+  },
+  "days": {
+    "T-107d": {"anchor": "the Wednesday of week T-15", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 15}, "nominal": "Wed 2026-07-29"}
+  },
+  "floating_days": [
+    {"word": "last week", "said_on": "T-107d", "day": "the week T-16"},
+    {"word": "today at 1:00", "said_on": "T-107d", "day": "T-107d"},
+    {"word": "tomorrow at 7:30", "said_on": "T-107d", "day": "the Thursday of week T-15"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "4503599627371919",
+      "peer": {"id": "4503599627371919", "name": "Gloria Yancey"},
+      "contact": {
+        "identifier": "telegram_4503599627371919",
+        "name": "Gloria Yancey",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "view",
+          "shows": "sunrise over a lake with fog on the water",
+          "person_in_it": false
+        }
+      },
+      "opened": {"day": "T-107d", "at": "08:05:20", "status": "open", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-107d", "at": "08:05:20", "kind": "message", "from": "customer", "text": "Angie I hate to complain but the brakes yall put on last week are squealing every time I stop"},
+        {"n": 2, "day": "T-107d", "at": "08:05:50", "kind": "message", "from": "customer", "text": "it wasnt doing that before"},
+        {"n": 3, "day": "T-107d", "at": "08:06:30", "kind": "draft", "id": "d1", "text": "Good morning, Gloria. I'm sorry about the noise. New brake pads sometimes squeal while they bed in, but it should be checked. We'd like to look at it. Which day works for you?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-107d", "at": "08:11:10", "became": 5}},
+        {"n": 4, "day": "T-107d", "at": "08:11:08", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 5, "day": "T-107d", "at": "08:11:10", "kind": "message", "from": "staff", "slot": 16, "text": "Good morning, Gloria, and please don't apologize, I'm glad you told me. That's not how I want you leaving here. New pads can squeal until they seat, but if it were my car I'd want it looked at, not guessed at. Bring the Highlander by today at 1:00 or tomorrow at 7:30 and we'll pull the wheels while you wait. No charge, Gloria: it's under our warranty.\nAngie"},
+        {"n": 6, "day": "T-107d", "at": "08:11:40", "kind": "activity", "what": "priority", "from": "normal", "to": "high", "by": 16, "how": "set by a manager: the base level"},
+        {"n": 7, "day": "T-107d", "at": "08:14:30", "kind": "message", "from": "customer", "text": "today at 1 is fine. thank you"},
+        {"n": 8, "day": "T-107d", "at": "08:15:10", "kind": "draft", "id": "d2", "text": "Thank you, Gloria. Today at 1:00 works. See you then.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-107d", "at": "08:17:00", "became": 9}},
+        {"n": 9, "day": "T-107d", "at": "08:17:00", "kind": "message", "from": "staff", "slot": 16, "text": "You're all set, Gloria: today at 1:00, here at Bonny Oaks, a brake noise check on the Highlander, no charge. I'll walk out to the car with you myself.\nAngie"},
+        {"n": 10, "day": "T-107d", "at": "08:17:20", "kind": "activity", "what": "label_added", "label": "complaint", "by": 16},
+        {"n": 11, "day": "T-107d", "at": "14:20:15", "kind": "message", "from": "customer", "text": "all quiet now 🙌 what was it"},
+        {"n": 12, "day": "T-107d", "at": "14:20:55", "kind": "draft", "id": "d3", "text": "I'm glad it's quiet now, Gloria! I don't have the technician's notes in front of me; I'll find out what it was and let you know.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 16, "day": "T-107d", "at": "14:25:30", "because": "she sent her own text (n 13)"}},
+        {"n": 13, "day": "T-107d", "at": "14:25:30", "kind": "message", "from": "staff", "slot": 16, "text": "So glad, Gloria! The pads were fine. One of the little anti-rattle clips wasn't seated all the way, and that's on us. They reseated both sides and road tested it. Any noise at all, you message me.\nAngie"},
+        {"n": 14, "day": "T-107d", "at": "14:26:00", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-107d", "at": "08:11:08", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["complaint"],
+        "priority": {"base": "high", "shown": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 5.8},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 16, "working_minutes": 5.8, "wall_minutes": 5.8, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 16, "working_minutes": 2.5, "wall_minutes": 2.5, "measured_from": "n 7", "reply": "later"},
+          {"asked": 11, "answered": 13, "by": 16, "working_minutes": 5.2, "wall_minutes": 5.2, "measured_from": "n 11", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 5,
+          "working_minutes": 5.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 4, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-107d", "at": "14:26:00", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d3", "outcome": "discarded", "manager": 16}
+        ],
+        "operator_credit": "slot 16: first answer 5.8 minutes (her ledger row is 6), three replies, two drafts edited and one discarded, a base priority of High set by her, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "complaint, comeback, the bill",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "checked the same day at no charge; an anti-rattle clip reseated; resolved by slot 16",
+    "facts": [
+      "a brake noise a week after a brake job at east",
+      "slot 16 set the priority to High and booked a free check the same day",
+      "the cause was a clip not seated at the first job; she said so"
+    ],
+    "questions": []
+  },
+  "why": [
+    "She does not defend the job and does not blame the pads: she books the look.",
+    "'That's on us' is in writing.",
+    "The draft that could not know the answer is the one she wrote over."
+  ],
+  "new_facts": [
+    "Gloria Yancey, 2014 Toyota Highlander: front brakes at east in week T-16; a no-charge brake noise check on the Wednesday of week T-15 at 13:00 (an anti-rattle clip reseated): a warranty order pointing at the first one.",
+    "The contact's picture: sunrise over a lake."
+  ]
+}

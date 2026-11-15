@@ -1,0 +1,75 @@
+{
+ "path": "customers/battery.md",
+ "title": "Battery and starting trouble",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Public page: free battery test, replacement price range, the cold-weeks rush.",
+ "serves": [
+  "S11",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 140,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Battery test is free (catalogue battery_test, 0.1 h, price 0).",
+  "Replacement range = economy to premium totals of battery_replace (group 24F reference).",
+  "Battery rush: first cold weeks, November (design S11, curve battery).",
+  "Battery warranty: the maker's free-replacement period on the label (policies/warranty.md)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Battery and starting trouble",
+   "item": "Test: free, ten minutes, no appointment. We test the battery, the starter draw and the alternator output and give you the printout."
+  },
+  {
+   "section": "Battery and starting trouble",
+   "item": "Replacement: $198.28 to $334.95 installed, for the common size. The price depends on the grade; cars with stop-start need the AGM type, which is the top of that range. We clean the terminals and recycle the old battery."
+  },
+  {
+   "section": "Battery and starting trouble",
+   "item": "Not the battery? If the battery tests good and the car still will not start, it is the starter, the alternator or a drain. An advisor will explain what the test showed."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 198.28
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 334.95
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "In Russia the battery test is a paid 300 RUB job (catalogue ru battery_test). Rush months: December to February."
+ ]
+}

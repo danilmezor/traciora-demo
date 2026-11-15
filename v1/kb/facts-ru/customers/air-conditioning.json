@@ -1,0 +1,111 @@
+{
+ "path": "customers/air-conditioning.md",
+ "title": "Кондиционер не холодит",
+ "title_en": "Air conditioning not cold",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/air-conditioning.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Public page for the summer season: what the A/C check is, what a recharge costs for each refrigerant.",
+ "serves": [
+  "S11",
+  "challenge:customer-terms",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 195,
+ "links_to": [
+  "customers/maintenance-by-mileage.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Customers' words: «заправить кондиционер», «фреон»; the order line is «Заправка кондиционера с вакуумированием».",
+  "Refrigerant is priced per gram in the Russian catalogue (500 g a charge)."
+ ],
+ "new_facts": [
+  "The 2017/2018 rule of thumb for the refrigerant (the catalogue's R1234yf reference car is a 2019 Kia Sportage)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Заправка",
+   "columns": [
+    "Хладагент",
+    "На каких машинах",
+    "Цена"
+   ],
+   "rows": [
+    {
+     "Хладагент": "R134a",
+     "На каких машинах": "Большинство машин примерно до 2017 года выпуска",
+     "Цена": "3 800 ₽"
+    },
+    {
+     "Хладагент": "R1234yf",
+     "На каких машинах": "Большинство машин с 2018 года",
+     "Цена": "10 800 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 900.0
+  },
+  {
+   "catalogue_key": "ac_recharge",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3800.0
+  },
+  {
+   "catalogue_key": "ac_recharge_1234yf",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 10800.0
+  },
+  {
+   "catalogue_key": "ac_evaporator_cleaning",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2290.0
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  900.0,
+  2290.0,
+  3800.0,
+  10800.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

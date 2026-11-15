@@ -1,0 +1,74 @@
+{
+ "path": "customers/bringing-your-own-parts.md",
+ "title": "Bringing your own parts",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "1",
+ "purpose": "Public version of the customer-supplied parts policy, in the founder's words.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 147,
+ "links_to": [
+  "customers/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Customer parts are fitted at the posted labour rate.",
+  "No warranty on part or labour; redo labour is charged again.",
+  "Refused: brake hydraulic parts (calipers, hoses, master cylinders), airbag and seat-belt parts, tyres older than six years.",
+  "A technician may decline a plainly wrong or poor part.",
+  "Signed by the founder (slot 1): one of his hobby-horses."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Bringing your own parts",
+   "item": "We fit parts you bring at our normal labour rate."
+  },
+  {
+   "section": "Bringing your own parts",
+   "item": "There is no warranty on the part or on our labour. If the part is wrong, does not fit or fails next month, the labour to do the job again is charged again."
+  },
+  {
+   "section": "Bringing your own parts",
+   "item": "We will not fit customer-supplied brake hydraulic parts (calipers, hoses, master cylinders), airbag or seat-belt parts, or tires more than six years old. Those we supply ourselves or not at all."
+  },
+  {
+   "section": "Bringing your own parts",
+   "item": "If the part in the box is plainly the wrong one or plainly junk, the technician will say so and may decline."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "1",
+   "written_as": "Ray Brennan",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "The three refused groups and the six-year tyre age. Reason: a customer-supplied parts policy was asked for; these are the safety items shops usually refuse."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Very common in Russia (ledger open row: customers bringing their own parts). Russian rule: warranty on the work only, never on the part; many shops add a higher hour for customer parts. If a surcharge is chosen, it is a new price and needs a catalogue row."
+ ]
+}

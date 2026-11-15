@@ -1,0 +1,94 @@
+{
+ "path": "services/maintenance/fuel-system-service.md",
+ "title": "Fuel system service",
+ "first_revision_text": "en/_history/services/maintenance/fuel-system-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Induction cleaning and the fuel filter: when it helps and when it is snake oil.",
+ "serves": [
+  "challenge:customer-terms",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 148,
+ "links_to": [
+  "services/diagnostics/check-engine-light.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs fuel_system_cleaning (0.8 h) and fuel_filter (0.7 h; reference vehicle a 2010 F-150).",
+  "Cleaning is for direct-injection engines past 60,000 miles with symptoms; not sold to a car that runs fine.",
+  "Serviceable fuel filters are on older trucks and some imports; most cars since about 2010 have none.",
+  "A drivability complaint gets a diagnosis first."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "fuel_system_cleaning",
+   "what": "hours",
+   "class": "car",
+   "value": 0.8
+  },
+  {
+   "catalogue_key": "fuel_system_cleaning",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 151.18
+  },
+  {
+   "catalogue_key": "fuel_filter",
+   "what": "hours",
+   "class": "car",
+   "value": 0.7
+  },
+  {
+   "catalogue_key": "fuel_filter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 121.77
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Промывка форсунок», «замена топливного фильтра» (common on Russian parc: many cars still have a serviceable filter)."
+ ]
+}

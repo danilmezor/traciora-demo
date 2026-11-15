@@ -1,0 +1,190 @@
+{
+ "path": "README.md",
+ "title": "База знаний «Ермак-Сервиса»",
+ "title_en": "Brennan Auto Care knowledge base",
+ "exists_in": "both",
+ "english_sheet": "facts/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Front page for staff: what each folder holds, who owns it, and the two house rules (prices, corrections).",
+ "serves": [
+  "S12",
+  "operate:overview"
+ ],
+ "length_class": "medium",
+ "words_ru": 333,
+ "links_to": [
+  "customers/README.md",
+  "services/README.md",
+  "prices/price-list.md",
+  "policies/README.md",
+  "accounts/company-account-terms.md",
+  "how-to/README.md",
+  "parts/suppliers.md",
+  "shops/README.md",
+  "team/who-is-who.md",
+  "shop-floor/README.md",
+  "how-to/using-this-knowledge-base.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Folder display names are Russian; the keys are the English ones.",
+  "Rank words: lead advisors and above = «старшие мастера-приёмщики и руководители»."
+ ],
+ "new_facts": [
+  "Folder display names (see OUTLINE-ru.md)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Что где лежит",
+   "columns": [
+    "Раздел",
+    "Что в нём",
+    "Кто ведёт"
+   ],
+   "rows": [
+    {
+     "Раздел": "Клиентам",
+     "Что в нём": "Ответы, которые мы даём клиентам. Помощник на сайте цитирует эти страницы дословно, поэтому они написаны для клиента. Ещё он читает страницы услуг и прайс-лист.",
+     "Кто ведёт": "Екатерина Николаевна"
+    },
+    {
+     "Раздел": "Услуги",
+     "Что в нём": "Что входит в работу, когда она нужна машине, что спросить, на чём клиенты спорят.",
+     "Кто ведёт": "Дмитрий Григорьев и Светлана Демидова"
+    },
+    {
+     "Раздел": "Цены",
+     "Что в нём": "Прайс-лист и нормо-час. Цена берётся только отсюда.",
+     "Кто ведёт": "Екатерина Николаевна"
+    },
+    {
+     "Раздел": "Правила",
+     "Что в нём": "Скидки, гарантия, согласование работ, предоплата, жалобы.",
+     "Кто ведёт": "Екатерина Николаевна"
+    },
+    {
+     "Раздел": "Корпоративные клиенты",
+     "Что в нём": "Договоры, отсрочка, кто у клиента согласует работы, что нужно каждому парку.",
+     "Кто ведёт": "Сергей Анатольевич"
+    },
+    {
+     "Раздел": "Как мы работаем",
+     "Что в нём": "Работа приёмки по шагам: звонок, запись, приёмка, смета, выдача, касса.",
+     "Кто ведёт": "Сергей Анатольевич"
+    },
+    {
+     "Раздел": "Запчасти",
+     "Что в нём": "Поставщики, заказ, возвраты, что держим на складе.",
+     "Кто ведёт": "Павел Мещеряков"
+    },
+    {
+     "Раздел": "Площадки",
+     "Что в нём": "Страницы каждого сервиса: часы, кто есть кто, ключи и сигнализация, местные привычки.",
+     "Кто ведёт": "каждый сервис сам"
+    },
+    {
+     "Раздел": "Команда",
+     "Что в нём": "Кто есть кто по компании, правила внутреннего распорядка, первые недели новичка.",
+     "Кто ведёт": "Екатерина Николаевна"
+    },
+    {
+     "Раздел": "Цех",
+     "Что в нём": "Для механиков: отметки, осмотр по чек-листу, проверка перед выдачей.",
+     "Кто ведёт": "Александр Михайлович"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Два правила",
+   "item": "Цену называем по прайс-листу. Цена на странице услуги стоит там, чтобы объяснить работу. Она может устареть. Прайс-лист не устаревает: когда меняется цена, первой я меняю именно эту страницу."
+  },
+  {
+   "section": "Два правила",
+   "item": "Увидели ошибку на странице — скажите в тот же день. Старшие мастера-приёмщики и руководители могут предложить правку прямо со страницы; публикуем её Сергей Анатольевич, Ринат Фаридович или я. Остальные говорят своему старшему. Как это делается: Как пользоваться базой знаний и исправлять её."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Светлана Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the section \"Two rules\" after the timing-belt complaint (S8); message: \"Prices come from the price list. Said it twice now.\"",
+   "message_ru": "Цены — только из прайс-листа. Говорю второй раз."
+  }
+ ],
+ "has_history": true
+}

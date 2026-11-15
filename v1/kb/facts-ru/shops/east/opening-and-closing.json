@@ -1,0 +1,123 @@
+{
+ "path": "shops/east/opening-and-closing.md",
+ "title": "Инженерный: открытие и закрытие",
+ "title_en": "Bonny Oaks: opening and closing",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/east/opening-and-closing.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Opening and closing at Bonny Oaks: different float and deposit route from East Main.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S2",
+  "S1"
+ ],
+ "length_class": "short",
+ "words_ru": 138,
+ "links_to": [
+  "how-to/closing-the-till.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Float 3 000 RUB (flagship 5 000). The sealed bag goes into the safe under the desk and travels to the flagship with the parts manager's 13:00 run on the next weekday.",
+  "The lot is left clear on Sunday night for A2's five vehicles on Monday at 9:00."
+ ],
+ "new_facts": [
+  "Float 3 000 RUB at the second shop; the bag log signed by slot 9."
+ ],
+ "new_amounts": [
+  {
+   "value": 3000,
+   "why": "размен в кассе, Инженерный"
+  },
+  {
+   "value": 3000,
+   "why": "размен в кассе, Инженерный"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Открытие",
+   "item": "Снять с сигнализации."
+  },
+  {
+   "section": "Открытие",
+   "item": "Автоответчик, чаты, потом список пропущенных."
+  },
+  {
+   "section": "Открытие",
+   "item": "Открыть смену на кассе, пересчитать размен: 3 000 ₽."
+  },
+  {
+   "section": "Открытие",
+   "item": "Свет, кофе, дверь."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Машины в боксах или заперты. Ключи в шкафу."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Закрыть кассу: Закрытие смены и кассы. 3 000 ₽ остаются в ящике."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Сейф-пакет — в сейф под стойкой. Бухгалтерии у нас нет. Паша забирает пакеты на Московское шоссе своим рейсом в 13:00, в ближайший будний день, и расписывается в журнале. Ирина Владимировна сдаёт их в банк вместе со своими."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Ворота, компрессор, свет, сигнализация."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Валерий Геннадьевич",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паша",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [
+  3000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

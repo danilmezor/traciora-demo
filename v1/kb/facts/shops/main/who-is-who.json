@@ -1,0 +1,272 @@
+{
+ "path": "shops/main/who-is-who.md",
+ "title": "East Main: who is who",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "People at the flagship with what each does and their extension.",
+ "serves": [
+  "challenge:fact-in-table",
+  "S3",
+  "S8",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "medium",
+ "words_en": 312,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Fourteen people at main with role and extension from cast.json: 104, 101, 102, 103, 105, 111, 112; the foreman and technicians have none.",
+  "Slot 6 and slot 12 speak Spanish (cast biographies).",
+  "Ring plan: the next desk, then all three (calls design).",
+  "Slot 21 is at main two or three days most weeks.",
+  "Owners: slot 1 ext. 401, in on Thursdays; slot 2 ext. 402.",
+  "Slot 29 is the part-time fourth advisor: Saturday mornings and cover days (cast)."
+ ],
+ "tables": [
+  {
+   "section": "East Main: who is who",
+   "columns": [
+    "Who",
+    "Job",
+    "Ext.",
+    "Ask them about"
+   ],
+   "rows": [
+    {
+     "Who": "Greg Whitaker",
+     "Job": "Service manager, both Chattanooga shops",
+     "Ext.": "104",
+     "Ask them about": "Schedules, discounts over 10 %, complaints, company accounts"
+    },
+    {
+     "Who": "Travis Burnette",
+     "Job": "Lead advisor",
+     "Ext.": "101",
+     "Ask them about": "Estimates, anything at the counter, pricing a job that is not on the list"
+    },
+    {
+     "Who": "Maya Torres",
+     "Job": "Service advisor",
+     "Ext.": "102",
+     "Ask them about": "Chats and messages; she speaks Spanish"
+    },
+    {
+     "Who": "Caleb Sutton",
+     "Job": "Service advisor",
+     "Ext.": "103",
+     "Ask them about": "New this quarter. Be kind, and check his quotes"
+    },
+    {
+     "Who": "Brenda Pickett",
+     "Job": "Service advisor, part-time",
+     "Ext.": "105",
+     "Ask them about": "Saturdays and cover days. Seventeen years here: ask her about any regular"
+    },
+    {
+     "Who": "Donna Ledford",
+     "Job": "Office manager, bookkeeper",
+     "Ext.": "111",
+     "Ask them about": "Bills, statements, refunds, payroll hours"
+    },
+    {
+     "Who": "Marcus Gaines",
+     "Job": "Parts manager",
+     "Ext.": "112",
+     "Ask them about": "Parts for East Main and Bonny Oaks"
+    },
+    {
+     "Who": "Randy Elrod",
+     "Job": "Shop foreman",
+     "Ext.": "",
+     "Ask them about": "Who works on what, comebacks, road tests"
+    },
+    {
+     "Who": "Kevin Lawson",
+     "Job": "Diagnostic technician",
+     "Ext.": "",
+     "Ask them about": "Check engine, electrical, hybrids"
+    },
+    {
+     "Who": "Terry Dotson",
+     "Job": "Electrical technician",
+     "Ext.": "",
+     "Ask them about": "Charging, wiring, A/C"
+    },
+    {
+     "Who": "Dustin Swafford",
+     "Job": "Technician",
+     "Ext.": "",
+     "Ask them about": "Brakes, suspension, heavy line work"
+    },
+    {
+     "Who": "Luis Herrera",
+     "Job": "Technician",
+     "Ext.": "",
+     "Ask them about": "Maintenance, brakes, cooling, timing belts; he also speaks Spanish"
+    },
+    {
+     "Who": "Hunter Varnell",
+     "Job": "Apprentice",
+     "Ext.": "",
+     "Ask them about": "Works under Luis"
+    },
+    {
+     "Who": "Cody Gann",
+     "Job": "Lube and tire",
+     "Ext.": "",
+     "Ask them about": "Oil services, tires, the shuttle"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "6",
+   "written_as": "Maya Torres",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Caleb Sutton",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Brenda Pickett",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy Elrod",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin Lawson",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Terry Dotson",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "11",
+   "written_as": "Dustin Swafford",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Luis Herrera",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "14",
+   "written_as": "Hunter Varnell",
+   "role": "apprentice_technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Luis",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Cody Gann",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan Akins",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray Brennan",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-1mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@newcomers|date}}",
+   "what": "Caleb Sutton and Hunter Varnell added, Wes Tate removed; message: \"New people.\""
+  },
+  {
+   "n": 3,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-1mo|date}}",
+   "what": "Travis's update (middle rank: proposed by slot 5, approved by slot 4): the \"Ask them about\" column; message: \"So new people know who to ask.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian names by slot. In the Russian configuration the flagship has a fourth advisor (slot 29) because desks run 2/2 (R12)."
+ ]
+}

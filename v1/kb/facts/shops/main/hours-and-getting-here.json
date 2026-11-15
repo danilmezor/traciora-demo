@@ -1,0 +1,70 @@
+{
+ "path": "shops/main/hours-and-getting-here.md",
+ "title": "East Main: hours and getting here",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "East Main's hours, parking, shuttle and key drop for staff to tell customers.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S13"
+ ],
+ "length_class": "short",
+ "words_en": 142,
+ "links_to": [
+  "customers/hours-and-locations.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Hours Mon-Fri 7:30-17:30, Sat 8:00-13:00; the public hours page is the maintained one.",
+  "Phone (423) 555-0142; main@brennanautocare.example.",
+  "Six customer spaces in front; fleet vans at the back by bay 8; key drop right of the office door; shuttle from the front door at 7:45 and 8:45, driven by the lube technician (slot 15) or the summer helper (F4); tows unload at the side gate.",
+  "Phone directions: about a mile east of downtown, on the left, blue bay doors."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "East Main: hours and getting here",
+   "item": "Phone: (423) 555-0142. E-mail: main@brennanautocare.example."
+  },
+  {
+   "section": "East Main: hours and getting here",
+   "item": "Customer parking is the six spaces in front. Fleet vans go round the back by bay 8; tell drivers, or they block the front."
+  },
+  {
+   "section": "East Main: hours and getting here",
+   "item": "The key drop box is to the right of the office door."
+  },
+  {
+   "section": "East Main: hours and getting here",
+   "item": "The shuttle leaves from the front door at 7:45 and 8:45. Whoever is on the lube bay drives it; in summer the helper does."
+  },
+  {
+   "section": "East Main: hours and getting here",
+   "item": "Tow trucks unload at the side gate, not on the street."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Six parking spaces, blue bay doors, the side gate, \"about a mile east of downtown\" (to be checked against the real address before it is fixed)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Directions for Московское шоссе in local terms."
+ ]
+}

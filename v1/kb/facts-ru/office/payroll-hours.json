@@ -1,0 +1,105 @@
+{
+ "path": "office/payroll-hours.md",
+ "title": "Табель и зарплата",
+ "title_en": "Payroll hours",
+ "exists_in": "both",
+ "english_sheet": "facts/office/payroll-hours.json",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "How attendance becomes payroll hours.",
+ "serves": [
+  "S14",
+  "visibility:middle",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_ru": 163,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Pay twice a month: the advance on the 25th, the balance on the 10th; the timesheet closes on the 15th and on the last day of the month (English: two-week periods).",
+  "Mechanics on piece rate are paid on sold нормо-часы from the shop system.",
+  "A line on time clocked above sold hours."
+ ],
+ "new_facts": [
+  "Pay days 25th and 10th; timesheet closes on the 15th and the last day.",
+  "Time clocked on an order above the sold hours is not paid and is the manager's to sort out."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Pay at least twice a month is a Labour Code rule (the English writer's note); it is not in the research. The page states the company's days only.",
+   "outcome": "verified",
+   "note": "Stands. The page states the company's two pay days only. Read in the verify pass (section 4; the Labour Code on legalacts.ru, ред. от 25.05.2026).",
+   "sentence": "ТК ст. 136: «Заработная плата выплачивается не реже чем каждые полмесяца.»; «не позднее 15 календарных дней со дня окончания периода, за который она начислена»."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Табель и зарплата",
+   "item": "Часы беру из отметок в Traciora. Табель закрываю 15-го и в последний день месяца."
+  },
+  {
+   "section": "Табель и зарплата",
+   "item": "Пропущенная или исправленная отметка должна быть согласована до закрытия табеля тем, кто составляет график сервиса: Сергей Анатольевич — Московское шоссе и Инженерный, Ринат Фаридович — Техническая. Несогласованное исправление оплачивается по графику и поправляется в следующем периоде."
+  },
+  {
+   "section": "Табель и зарплата",
+   "item": "За опоздание по минутам не вычитаем. Опоздания считаем и передаём тому, кто составляет график."
+  },
+  {
+   "section": "Табель и зарплата",
+   "item": "Механики на сдельной получают за проданные нормо-часы своих работ. Их я беру из программы сервиса, а не из отметок. Отметки для них — всё равно явка."
+  },
+  {
+   "section": "Табель и зарплата",
+   "item": "Время, отмеченное по наряду сверх проданных нормо-часов, не оплачивается. С ним разбирается руководитель."
+  },
+  {
+   "section": "Табель и зарплата",
+   "item": "Работа сверх графика — только если тот, кто составляет график, согласился заранее."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

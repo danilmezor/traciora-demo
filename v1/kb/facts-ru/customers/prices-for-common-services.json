@@ -1,0 +1,281 @@
+{
+ "path": "customers/prices-for-common-services.md",
+ "title": "Цены на частые услуги",
+ "title_en": "Prices for common services",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/prices-for-common-services.json",
+ "first_revision_text": "ru/_history/customers/prices-for-common-services.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Menu prices a customer may be told without seeing the car; public version of the price list.",
+ "serves": [
+  "S7",
+  "S8",
+  "S12",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 308,
+ "links_to": [
+  "customers/estimates-and-approvals.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The Russian menu: fixed prices for tyre fitting, alignment and the diagnostics; oil service is priced by the hour (0.7 н/ч), so it carries расходные материалы.",
+  "The battery test is a paid job (300 RUB), not free.",
+  "List prices include VAT at 5 %: nothing is added on top, the order, the act and the receipt show the total and «в том числе НДС 5 %» (ledger kb.vat_in_list_prices, tax.ru_price_basis); shop supplies 3 % of hourly work up to 500 RUB are added.",
+  "Three seasonal tyre rows that the English page does not have."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Prices are shown to private customers before VAT, with VAT added on the order (this follows ledger s7.bill and s8.paid_with_tax). A Russian consumer price is ordinarily the final price; whether a price list \"без НДС\" for private customers is acceptable is to be checked by the owner.",
+   "outcome": "corrected",
+   "note": "The pages said «без НДС» with 5 % added on the order. The Tax Code says the opposite for sales to the public, and the owner's decision D2 (as amended on 2026-11-14) follows it for every customer: the table price is what is paid, VAT inside, nothing on top; a private customer's order, act and receipt show the total and «в том числе НДС 5 %», an account's счёт and УПД the amount before VAT, the VAT and the total. The price pages, the documents page and the ledger (tax.ru_price_basis, kb.vat_in_list_prices, s7.bill) were changed. Read in the verify pass (section 1).",
+   "url": "https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-168/",
+   "sentence": "НК ст. 168 п. 6: «соответствующая сумма налога включается в указанные цены (тарифы)»; «на ярлыках товаров и ценниках, выставляемых продавцами, сумма налога не выделяется»."
+  }
+ ],
+ "tables": [
+  {
+   "section": "Цены на частые услуги",
+   "columns": [
+    "Услуга",
+    "Цена"
+   ],
+   "rows": [
+    {
+     "Услуга": "Замена масла в двигателе и масляного фильтра: работа, 4 литра масла, фильтр",
+     "Цена": "6 700 ₽"
+    },
+    {
+     "Услуга": "То же с маслом попроще",
+     "Цена": "4 760 ₽"
+    },
+    {
+     "Услуга": "Сезонная замена шин: шиномонтаж четырёх колёс с балансировкой",
+     "Цена": "3 000 ₽"
+    },
+    {
+     "Услуга": "Сезонная замена колёс в сборе (четыре колеса)",
+     "Цена": "1 200 ₽"
+    },
+    {
+     "Услуга": "Хранение комплекта шин, один сезон",
+     "Цена": "3 000 ₽"
+    },
+    {
+     "Услуга": "Балансировка четырёх колёс",
+     "Цена": "1 200 ₽"
+    },
+    {
+     "Услуга": "Ремонт прокола (грибок) с балансировкой",
+     "Цена": "800 ₽"
+    },
+    {
+     "Услуга": "Сход-развал, две оси",
+     "Цена": "3 000 ₽"
+    },
+    {
+     "Услуга": "Диагностика тормозной системы",
+     "Цена": "700 ₽"
+    },
+    {
+     "Услуга": "Диагностика ходовой части",
+     "Цена": "800 ₽"
+    },
+    {
+     "Услуга": "Компьютерная диагностика двигателя",
+     "Цена": "1 200 ₽"
+    },
+    {
+     "Услуга": "Диагностика кондиционера",
+     "Цена": "900 ₽"
+    },
+    {
+     "Услуга": "Проверка аккумулятора и системы зарядки",
+     "Цена": "300 ₽"
+    },
+    {
+     "Услуга": "Комплексная диагностика перед покупкой, с пробной поездкой и письменным заключением",
+     "Цена": "3 000 ₽"
+    },
+    {
+     "Услуга": "Осмотр автомобиля по чек-листу при любом ремонте",
+     "Цена": "бесплатно"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Что добавляется к сумме",
+   "item": "Расходные материалы: 3 % от стоимости работ, которые считаются по нормо-часу, но не больше 500 ₽ на один заказ-наряд. На работы с фиксированной ценой (шиномонтаж, сход-развал, диагностика) они не начисляются. Замена масла считается по нормо-часу, поэтому к ней добавляется 39,90 ₽."
+  },
+  {
+   "section": "Что добавляется к сумме",
+   "item": "При покупке новых шин — утилизация старых, 400 ₽ за комплект."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 6700.0
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4760.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "tyre_storage",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "wheel_balance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "tyre_repair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 700.0
+  },
+  {
+   "catalogue_key": "suspension_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  },
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 900.0
+  },
+  {
+   "catalogue_key": "battery_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 300.0
+  },
+  {
+   "catalogue_key": "pre_purchase_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "fee: Утилизация старых шин (4 шт.)",
+   "value": 400
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}"
+ ],
+ "amounts": [
+  39.9,
+  300.0,
+  400.0,
+  500.0,
+  700.0,
+  800.0,
+  900.0,
+  1200.0,
+  3000.0,
+  4760.0,
+  6700.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "every price replaced with the new list; message: \"New prices from today.\"",
+   "message_ru": "Новые цены с сегодняшнего дня."
+  }
+ ],
+ "has_history": true
+}

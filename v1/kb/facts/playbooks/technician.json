@@ -1,0 +1,196 @@
+{
+ "path": "playbooks/technician.md",
+ "title": "Playbook: technicians",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Worker rank: what a technician does in Traciora and what the assistant will and will not answer.",
+ "serves": [
+  "S14",
+  "visibility:administrator"
+ ],
+ "length_class": "short",
+ "words_en": 225,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Worker rank screens: Home, Shifts, Ask, Calendar, Inbox bell (design 1.4).",
+  "Workers have no data tools, board or knowledge screen; the assistant reads the worker-visible folders for them.",
+  "Listed for the fourteen technicians by slot.",
+  "The assistant can open a shift request and cannot approve it."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What you have",
+   "item": "Home: today's shift, the clock-in button, anything waiting for you (a forgotten clock-out, an answer to a request)."
+  },
+  {
+   "section": "What you have",
+   "item": "Shifts: your week, two weeks ahead. Ask for a change on the shift itself, with a reason."
+  },
+  {
+   "section": "What you have",
+   "item": "Ask: the assistant. For you it knows your own schedule and what is written in Shop floor."
+  },
+  {
+   "section": "What you have",
+   "item": "Calendar: your own. Meetings you are invited to; say yes or no."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"When do I work next week?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Who is on with me Saturday?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"I forgot to clock out yesterday, what do I do?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Can I move my Thursday shift?\" It will open the request for you: a change of date, with who takes the shift. It cannot approve it."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"What do I check before a car leaves?\""
+  },
+  {
+   "section": "It will not",
+   "item": "Show you anyone else's hours, punches or lateness."
+  },
+  {
+   "section": "It will not",
+   "item": "Show you prices, customers, orders or the board. That is the counter's."
+  },
+  {
+   "section": "It will not",
+   "item": "Tell you pay or time-off balances. See Donna."
+  },
+  {
+   "section": "It will not",
+   "item": "Approve anything."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "11",
+   "written_as": "Dustin",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Luis",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Terry",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "14",
+   "written_as": "Hunter",
+   "role": "apprentice_technician",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Cody",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "19",
+   "written_as": "Brandon",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "20",
+   "written_as": "Austin",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "25",
+   "written_as": "Gary",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "26",
+   "written_as": "Shane",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Derek",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "28",
+   "written_as": "Tyler",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@newcomers|date}}",
+   "what": "the list of technicians at the head gained the apprentice, who started the week before; message: \"Hunter is on the list.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same playbook for the same rank; examples from the Russian stories and channels. The product pins the playbooks folder at administrator in both configurations."
+ ]
+}

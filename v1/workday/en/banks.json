@@ -1,0 +1,640 @@
+{
+ "_how": {
+  "card": "a manager's task is a title of one line; about one in three has a description, one in four a 'why now'",
+  "pick": "a pattern is not used twice for one owner inside 30 days; slots make the rest of the difference",
+  "voice": "patterns marked with a slot number are that person's; unmarked ones fit anybody of the role"
+ },
+ "templates": {
+  "Missed call callback": {
+   "title": "Call back {number}",
+   "reason": "Rang {line} at {time} · waited {waited}"
+  },
+  "Customer handover": {
+   "title": "{customer} asked for a person",
+   "description": "{customer} asked to be put through to somebody. In their words: {context}\n\nRing them on {number}.",
+   "reason": "Asked for a person in the assistant ({type}); nobody has called back yet."
+  }
+ },
+ "callback_comments": [
+  "Reached him. Booked {day} {time}, {job}.",
+  "Got her on the second try. She only wanted the price; quoted from the list.",
+  "No answer twice, left a message with our number.",
+  "Wrong shop: he wanted the tire place next door. Closed.",
+  "Booked. He'll drop the {car} the night before, key in the box.",
+  "She'd already gotten through to {name}. Nothing to do.",
+  "Voicemail full. Texted the number instead.",
+  "Called back, he is price shopping. Gave the out-the-door number and two times.",
+  "It was {vendor} about a delivery. Passed to Marcus.",
+  "Reached her. Car is making the noise again; booked a recheck, no charge until we look.",
+  "No answer. Will try once more after lunch.",
+  "Spoke to his wife; he'll call when he is off work.",
+  "Booked for {day}. Wants a ride back to work at 8.",
+  "Number is a fax line or dead. Nothing more to do."
+ ],
+ "handover_contexts": {
+  "scheduling": [
+   "Can I bring it in {day}? I need it back by five.",
+   "I need an oil change and a tire rotation this week, mornings only.",
+   "Do you have anything Saturday morning for brakes?",
+   "My check engine light is on, when can someone look at it?",
+   "I want to book the same thing as last time for my {car}.",
+   "Can somebody call me to set up a time? I can't type at work.",
+   "The A/C quit. Earliest you have, please.",
+   "I need two cars done the same day if that's possible.",
+   "Need an alignment after new tires. Thursday or Friday?",
+   "Is there a loaner or a ride if I leave it all day?"
+  ],
+  "escalation": [
+   "I'd rather talk to a person.",
+   "I picked my car up yesterday and the noise is still there.",
+   "I was told it would be ready today and nobody has called.",
+   "This bill is more than the estimate. I want someone to explain it.",
+   "You did my brakes last month and they squeal. Who do I talk to?",
+   "I have a question about my warranty and the bot keeps sending me a page.",
+   "Can a manager call me? It's about how I was spoken to at the counter.",
+   "I need a person. It's about a company account."
+  ]
+ },
+ "handover_comments": [
+  "Called. Booked {day} {time}.",
+  "Took it. She wants a call after four, not before.",
+  "Booked and confirmed by phone. Closed.",
+  "He's coming in today as a waiter; told the bay.",
+  "Spoke to her. This one is for Greg: she wants the bill explained.",
+  "Rang twice, no answer. Left a message and answered in the chat.",
+  "Quoted from the price list and offered two times. She'll write back.",
+  "It was the wrong shop: sent him the Bonny Oaks number.",
+  "Done. Car is in for {day}, {job}.",
+  "Recheck booked, no charge until Randy has looked.",
+  "Customer answered in the chat before I rang. Booked there.",
+  "Not ours: he wants body work. Told him so, closed."
+ ],
+ "manager_tasks": [
+  {
+   "to": "advisor",
+   "title": "Call {customer} with the estimate on the {car}",
+   "why": "Car is on the lift."
+  },
+  {
+   "to": "advisor",
+   "title": "Send {account} the estimate before noon",
+   "desc": "Standard parts. Their limit without a call is on the account page."
+  },
+  {
+   "to": "advisor",
+   "title": "Chase {customer}: found work on the {car}, no answer since morning"
+  },
+  {
+   "to": "advisor",
+   "title": "{customer} wants the old parts back: bag them and tag the order"
+  },
+  {
+   "to": "advisor",
+   "title": "Ring {customer} when the {part} lands",
+   "why": "Promised a call the minute it is here."
+  },
+  {
+   "to": "advisor",
+   "title": "Second look on {order} before it goes out: it is over the limit",
+   "desc": "Anything over a thousand gets a second pair of eyes."
+  },
+  {
+   "to": "advisor",
+   "title": "Tell {customer} the {car} is ready, and before 4:30"
+  },
+  {
+   "to": "advisor",
+   "title": "Estimate {order} expires {day}: one more call, then close it"
+  },
+  {
+   "to": "advisor",
+   "title": "Fix the mileage on {order}",
+   "desc": "It reads lower than the last visit."
+  },
+  {
+   "to": "advisor",
+   "title": "Purchase-order number missing on {order} for {account}"
+  },
+  {
+   "to": "advisor",
+   "title": "{customer} no-showed twice: note it and ask for a card on the next booking"
+  },
+  {
+   "to": "advisor",
+   "title": "Book {account}'s next two vans for {day}"
+  },
+  {
+   "to": "advisor",
+   "title": "Read your last five call summaries and pick one to redo with me"
+  },
+  {
+   "to": "advisor",
+   "title": "Clean up yesterday's open estimates: decline or book each one"
+  },
+  {
+   "to": "advisor",
+   "title": "Photo of the leaking {part} to {customer} with the estimate"
+  },
+  {
+   "to": "advisor",
+   "title": "Confirm tomorrow's drop-offs by three"
+  },
+  {
+   "to": "advisor",
+   "title": "Key tag missing for the {car}: find it before the customer does"
+  },
+  {
+   "to": "advisor",
+   "title": "{customer}: declined {job} last visit, mention it when she calls for pick-up"
+  },
+  {
+   "to": "advisor",
+   "title": "Waiting room: restock the water and wipe the coffee station by ten"
+  },
+  {
+   "to": "advisor",
+   "title": "Write up the comeback on the {car} as goodwill and point it at the first order"
+  },
+  {
+   "to": "foreman",
+   "title": "Look again: {car}, {customer} says the noise is back",
+   "why": "Second visit for the same complaint."
+  },
+  {
+   "to": "foreman",
+   "title": "Road-test the {car} before {customer} picks up at {time}"
+  },
+  {
+   "to": "foreman",
+   "title": "Torque check on the {car}: wheels were off twice this week"
+  },
+  {
+   "to": "foreman",
+   "title": "Bay 3 lift is creeping down: tag it out and call the service company"
+  },
+  {
+   "to": "foreman",
+   "title": "Pair Hunter with Luis on the {car}: timing set",
+   "desc": "He watches the first one and does the second."
+  },
+  {
+   "to": "foreman",
+   "title": "Used-oil tank is at three quarters: book the pick-up"
+  },
+  {
+   "to": "foreman",
+   "title": "Who takes the {job} on the {car} while Kevin is on the hybrid?"
+  },
+  {
+   "to": "foreman",
+   "title": "Scan tool update on the shop tablet before Monday"
+  },
+  {
+   "to": "foreman",
+   "title": "Comeback on {order}: tell me what was missed, one line"
+  },
+  {
+   "to": "foreman",
+   "title": "Check the alignment rack calibration: two cars came off it pulling"
+  },
+  {
+   "to": "parts",
+   "title": "Chase {vendor}: {part} for the {car} promised yesterday"
+  },
+  {
+   "to": "parts",
+   "title": "Return the wrong {part} to {vendor} and get the credit on this month"
+  },
+  {
+   "to": "parts",
+   "title": "Price and availability: {part} for {account}'s vans, six sets"
+  },
+  {
+   "to": "parts",
+   "title": "Core returns are stacking up: box them for {vendor}'s Thursday run"
+  },
+  {
+   "to": "parts",
+   "title": "Count the wiper and bulb wall and reorder to the minimums"
+  },
+  {
+   "to": "parts",
+   "title": "{part} on {order} was billed at the old cost: correct the line"
+  },
+  {
+   "to": "parts",
+   "title": "Find a second source for the {part}: {vendor} is out till next week"
+  },
+  {
+   "to": "parts",
+   "title": "Special-order {part} for the {car}: deposit is taken, order today"
+  },
+  {
+   "to": "office",
+   "title": "Statement for {account}: lines sent back for a missing purchase-order number"
+  },
+  {
+   "to": "office",
+   "title": "Deposit slip for {day} is short of the till report by {amount}: find it"
+  },
+  {
+   "to": "office",
+   "title": "Send {account} the copies of the three open invoices they asked for"
+  },
+  {
+   "to": "office",
+   "title": "Punch corrections for the pay period: list them for Greg to initial"
+  },
+  {
+   "to": "office",
+   "title": "New-hire paperwork for {name} before Friday"
+  },
+  {
+   "to": "office",
+   "title": "{vendor} statement does not match our receipts: two deliveries"
+  },
+  {
+   "to": "manager",
+   "title": "Next week's roster for {site}: draft by Wednesday, out Thursday before noon"
+  },
+  {
+   "to": "manager",
+   "title": "Talk to {name} about the late mornings",
+   "desc": "Three this month. A talk, per the handbook."
+  },
+  {
+   "to": "manager",
+   "title": "Cover for {name} on {day}"
+  },
+  {
+   "to": "manager",
+   "title": "Comebacks by technician for the month: who is over three percent"
+  },
+  {
+   "to": "manager",
+   "title": "Decide on {customer}'s goodwill request",
+   "desc": "{amount} asked. Order {order}."
+  },
+  {
+   "to": "manager",
+   "title": "Ride along on {name}'s counter for an hour and write three notes"
+  },
+  {
+   "to": "manager",
+   "title": "{account}: who signs for work over their limit now? Update the account page"
+  },
+  {
+   "to": "manager",
+   "title": "Fire extinguisher tags are due at {site} this month"
+  },
+  {
+   "to": "manager",
+   "title": "Shuttle van: oil service and a look at the rear tires"
+  },
+  {
+   "to": "manager",
+   "title": "Answer the review from {customer} on the {job}"
+  },
+  {
+   "to": "west",
+   "title": "Charlotte Pike: send me the open orders older than two weeks, with a line on each"
+  },
+  {
+   "to": "west",
+   "title": "Charlotte Pike: discounts over ten percent need your initials on the order"
+  },
+  {
+   "to": "west",
+   "title": "Charlotte Pike: till count sheet for {day} is missing"
+  },
+  {
+   "to": "west",
+   "title": "Chad: call {customer} today with a real date for the {car}"
+  },
+  {
+   "to": "west",
+   "title": "Jasmine: your saved chat replies go to the other two shops, send me the file"
+  },
+  {
+   "to": "west",
+   "title": "Charlotte Pike: the roster for next week by Thursday noon"
+  }
+ ],
+ "assistant_tasks": [
+  {
+   "title": "Call {customer} back about the {job} quote",
+   "desc": "Asked in Ask: who has an estimate out more than two days. This is the oldest."
+  },
+  {
+   "title": "Follow up with {account}: no visit in 30 days"
+  },
+  {
+   "title": "Check {order}: mileage lower than the previous visit"
+  },
+  {
+   "title": "Book {customer}'s declined {job} from the last visit"
+  },
+  {
+   "title": "Ask {vendor} for a delivery date on the {part}"
+  },
+  {
+   "title": "Review yesterday's two weakest calls with {name}"
+  },
+  {
+   "title": "Remind {customer} of the {day} appointment"
+  },
+  {
+   "title": "Send {customer} the photo of the worn {part}"
+  },
+  {
+   "title": "Close or renew the estimate on the {car}: it expires {day}"
+  },
+  {
+   "title": "Look at {name}'s three open cards past due"
+  },
+  {
+   "title": "Add the purchase-order number to {order}"
+  },
+  {
+   "title": "Call {customer}: the {car} has been ready since {day}"
+  },
+  {
+   "title": "Draft the roster change for {day}: one short at the desk"
+  },
+  {
+   "title": "List callers from this week who were never called back"
+  },
+  {
+   "title": "Compare this week's sold recommendations with last week's for {site}"
+  },
+  {
+   "title": "Check why {order} has been open for more than two weeks"
+  },
+  {
+   "title": "Prepare the numbers for {account}'s review"
+  },
+  {
+   "title": "Ask {name} for the missing clock-out on {day}"
+  }
+ ],
+ "comments_progress": [
+  "On it.",
+  "Called, no answer. Trying again at two.",
+  "Waiting on {vendor}.",
+  "Half done: the estimate is out, no reply yet.",
+  "Part is here. Car goes on the lift after lunch.",
+  "Customer wants to think about it till {day}.",
+  "Left a message.",
+  "Sent. She has it in her email.",
+  "Talked to {name}; he'll have it by {time}.",
+  "Pushed to tomorrow, the {car} isn't here yet.",
+  "Found it. It was filed under the wife's name.",
+  "Two of three done.",
+  "Need the VIN to order. Asked the customer.",
+  "{vendor} says {day}. I'll believe it when it's on the dock.",
+  "He approved the {job}, declined the rest.",
+  "Checked: it's on the order, just not on the printout.",
+  "Looked at it. Not what the customer described; calling her.",
+  "Still open because the car hasn't come back.",
+  "Estimate went out at {time}.",
+  "Asked twice. No answer from Charlotte Pike.",
+  "Done on my side, waiting for the customer.",
+  "Rack is free at {time}; it goes on then.",
+  "Spoke to their office. The person who signs is back {day}.",
+  "Photo attached to the order."
+ ],
+ "comments_done": [
+  "Done.",
+  "Done. Booked {day} {time}.",
+  "Closed: customer picked up and paid.",
+  "Fixed and road-tested.",
+  "Sent and confirmed.",
+  "Done, credit is on this month's statement.",
+  "Done. Told {name}.",
+  "Handled. She's happy.",
+  "Corrected on the order.",
+  "Counted and reordered.",
+  "Closed: declined, noted on the record.",
+  "Done. It was a loose heat shield.",
+  "All three confirmed.",
+  "Done. Nothing was wrong with it; showed him."
+ ],
+ "comments_blocked": [
+  "Can't close this: {vendor} hasn't delivered.",
+  "Blocked. Need a manager to approve the discount.",
+  "Customer isn't answering. Third try.",
+  "Waiting for the purchase-order number from their office.",
+  "The car left before I could look. Rebooked for {day}.",
+  "No lift free until {time}.",
+  "I don't have access to that order; it's at {site}.",
+  "Needs Kevin, and he's on the hybrid all day.",
+  "The part that came is wrong. Reordered, {day}.",
+  "She wants to talk to the person who did the work."
+ ],
+ "mention_comments": [
+  "@{name}, can you take this one? I'm at the counter till three.",
+  "@{name}, this is the customer I told you about.",
+  "@{name}, the part is yours to chase.",
+  "@{name}, is the {car} still on your lift?",
+  "@{name}, need your eyes on this before it goes out.",
+  "@{name}, did she call you back?",
+  "@{name}, yours when you're in tomorrow.",
+  "@{name}, two minutes at the counter when you can."
+ ],
+ "calendar_titles": {
+  "meeting": [
+   "Parts walk-through with {vendor}",
+   "Counter catch-up: open estimates",
+   "{account}: fleet check-in call",
+   "Comebacks of the month",
+   "New hire: first-day walk-round with {name}",
+   "Tool truck visit",
+   "Waste-oil and filter pick-up",
+   "Fire-safety inspection",
+   "Roster for next week: fifteen minutes",
+   "Vendor lunch: {vendor}",
+   "Shop clean-up hour",
+   "Scan-tool training with {vendor}",
+   "{name}: three-month check-in",
+   "Price list read-through after the change",
+   "Saturday crew: who is in",
+   "Phone review: yesterday's missed calls"
+  ],
+  "block": [
+   "Work on: {card}",
+   "Estimates",
+   "Call-backs",
+   "Roster",
+   "Month-end with Donna",
+   "Parts order",
+   "Listen to calls",
+   "Write-ups"
+  ]
+ },
+ "standup_lines": {
+  "people": [
+   "{name} is out today; {name2} covers",
+   "{name} leaves at two",
+   "Everybody in",
+   "{name} is at Bonny Oaks today",
+   "{name} starts at nine",
+   "New week: Saturday crew is {name}, {name2} and Brenda at the counter",
+   "{name} is with the apprentice on the {job}",
+   "Two off today: nothing over three hours after one o'clock",
+   "{name} has the early desk with {name2}",
+   "Short one at the counter until ten",
+   "{name} back from leave",
+   "Kevin takes four diagnostic jobs today and not a fifth"
+  ],
+  "cars": [
+   "Eleven cars booked, two waiters",
+   "The {car} from yesterday goes out first",
+   "{account}'s vans from opening: five of them",
+   "Comeback on the {car} gets looked at first",
+   "Three drop-offs before eight",
+   "The {car} stays overnight: parts tomorrow",
+   "Light morning, heavy afternoon: brakes at one and at two",
+   "The {car} is promised for noon",
+   "Last drop-off slot is 8:30; after that it's waiters",
+   "Two alignments back to back on the rack",
+   "The {car} needs a road test before it leaves",
+   "Walk-ins get told two hours",
+   "A/C machine is booked ten to twelve",
+   "The hybrid is Kevin's until lunch"
+  ],
+  "parts": [
+   "Parts land 9:15, 12:15 and 3:15",
+   "{part} for the {car} is on the first run",
+   "{vendor} is a day behind on everything this week",
+   "Wrong {part} went back yesterday; the right one is on the noon run",
+   "Check your returns bin: the driver takes them at 12:15",
+   "No {part} in town: tomorrow morning at the earliest",
+   "Special orders need a deposit first, no exceptions",
+   "Oil filters for the vans came in, top shelf",
+   "Tire run is this afternoon",
+   "Out of the 0W-20 in bulk until Thursday: use the quarts"
+  ],
+  "desk": [
+   "Phones first until ten",
+   "Four estimates are still out from yesterday: chase them before lunch",
+   "Read the booking back: day, time, job",
+   "Prices come off the price list, nowhere else",
+   "Two callers waiting from last night",
+   "Customers get the call when the car is ready, and before 4:30",
+   "Chat is busy: Maya has it, Travis takes the phone",
+   "Anything over a thousand gets a second look",
+   "Purchase-order number on every Nickajack ticket",
+   "Declined work goes on the record, with the reason"
+  ],
+  "safety": [
+   "Jack stands under anything that stays up",
+   "Bay 2 floor is slick: absorbent is down, leave it",
+   "Glasses on at the grinder",
+   "Torque sticks are not a torque wrench",
+   "Battery charger stays off the bench",
+   "Exhaust hose on if it runs inside"
+  ]
+ },
+ "coaching_lines": {
+  "strength": {
+   "greeting": [
+    "Greeting with the shop and your name: every call",
+    "You sound glad they called"
+   ],
+   "name_and_number": [
+    "Name and number before anything else",
+    "You repeated the number back: keep it"
+   ],
+   "need_discovery": [
+    "You asked what the car is doing before you priced it",
+    "Good second question when he was vague"
+   ],
+   "price_with_next_step": [
+    "Out-the-door number, then straight to a time",
+    "You said what the price includes"
+   ],
+   "offered_time": [
+    "Two times offered, your words",
+    "You offered the time before he asked"
+   ],
+   "asked_for_booking": [
+    "You asked for the booking and got it",
+    "'Shall I put you down?' works: keep it"
+   ],
+   "recap": [
+    "Day, time, job read back",
+    "Recap with the address for a new customer"
+   ],
+   "objection": [
+    "You answered the doubt instead of agreeing with it",
+    "Said what happens if it waits, then offered the time again"
+   ]
+  },
+  "try_next": {
+   "greeting": [
+    "Say the shop's name first, then yours",
+    "Slow the first sentence down"
+   ],
+   "name_and_number": [
+    "Get the name in the first half minute",
+    "Read the number back, digit by digit"
+   ],
+   "need_discovery": [
+    "One more question before the price: when does it do it?",
+    "Ask what was done last time"
+   ],
+   "price_with_next_step": [
+    "Don't stop at the price: 'and I have tomorrow at 8'",
+    "Price from the list, never from memory"
+   ],
+   "offered_time": [
+    "Offer two times; don't ask when they're free",
+    "Have the two times ready before you pick up"
+   ],
+   "asked_for_booking": [
+    "Ask for it: 'shall I put you down for 8?'",
+    "Don't accept 'I'll call back' without one try"
+   ],
+   "recap": [
+    "Read it back before you hang up",
+    "Add what to bring: the key and the wheel-lock"
+   ],
+   "objection": [
+    "On 'that's a lot': what it includes, then the time",
+    "Don't soothe. Answer"
+   ]
+  },
+  "number": [
+   "Average this week: {score}",
+   "{n} scored calls, average {score}",
+   "Booked {n} of the new enquiries",
+   "Best call of the week: {score}"
+  ]
+ },
+ "diary_personal": [
+  "Dentist",
+  "Eye doctor",
+  "Pick up Ellie",
+  "Truck to the tire shop",
+  "Lunch with Ray",
+  "Bank",
+  "Parent-teacher conference",
+  "Church: Wednesday supper",
+  "Ball game",
+  "Vet",
+  "DMV",
+  "Call the landlord",
+  "Physical therapy",
+  "Band practice",
+  "Leave early: recital",
+  "School pick-up",
+  "Class",
+  "Haircut",
+  "Insurance adjuster",
+  "Day off",
+  "Half day",
+  "Doctor",
+  "Drive to Nashville",
+  "Coffee with Randy"
+ ]
+}

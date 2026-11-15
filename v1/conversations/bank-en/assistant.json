@@ -1,0 +1,1262 @@
+{
+  "format": "bank-en/assistant/1",
+  "about": "The customer assistant: one writer on purpose, tidy, short. It answers from public pages only and names the page each fact rests on. It cannot book, cannot see a repair order, an appointment or a bill, does not guess a price that depends on the car and never says when a car will be ready. Its one way to a person is the hand-over, after a name and a number.",
+  "greetings": {
+    "in_hours": [
+      {
+        "text": "Hi! I'm the assistant for Brennan Auto Care."
+      },
+      {
+        "text": "Hi there, this is Brennan Auto Care's assistant."
+      },
+      {
+        "text": "Hello! I'm the Brennan Auto Care assistant."
+      },
+      {
+        "text": "Good morning! I'm the assistant for Brennan Auto Care."
+      }
+    ],
+    "after_hours": [
+      {
+        "text": "Hi! I'm the assistant for Brennan Auto Care. The shops are closed right now and open at {next_open}, but I can help in the meantime.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "Hello, this is Brennan Auto Care's assistant. We're closed for the night and open again at {next_open}; I can answer what I can until then.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "Hi there! I'm the Brennan Auto Care assistant. The shops open at {next_open}, and in the meantime I'm happy to help.",
+        "page": "customers/hours-and-locations"
+      }
+    ],
+    "returning": [
+      {
+        "text": "Hi {first_name}, welcome back!"
+      },
+      {
+        "text": "Welcome back, {first_name}!"
+      },
+      {
+        "text": "Hi again, {first_name}."
+      }
+    ]
+  },
+  "sends": {
+    "price_menu": [
+      {
+        "text": "{page_item} is {page_price} on our price list, before tax. That's for a car or small crossover.",
+        "page": "{job_page}"
+      },
+      {
+        "text": "Our {page_item} is {page_price} before tax, for a car or small crossover. Would you like me to ask the shop to set up a time?",
+        "page": "{job_page}"
+      },
+      {
+        "text": "Yes, we do. {page_item} is {page_price} before tax. Larger SUVs, pickups and vans can cost more.",
+        "page": "{job_page}"
+      },
+      {
+        "text": "Sure. On our price list, {page_item} is {page_price} before shop supplies and tax, for a car like yours. The service desk has the exact figure for your {model}.",
+        "page": "{job_page}"
+      }
+    ],
+    "price_range": [
+      {
+        "text": "Our page puts {page_item} at {page_low} to {page_high}, depending on the parts. The exact figure for your car comes after the technician looks at it.",
+        "page": "{job_page}"
+      },
+      {
+        "text": "For a typical car, {page_item} runs from {page_low} to {page_high} before tax. Where yours falls depends on the parts it takes, so I can't give you one number from here.",
+        "page": "{job_page}"
+      },
+      {
+        "text": "It ranges from {page_low} to {page_high} for {page_item}, depending on the brand and grade. An advisor can price yours exactly.",
+        "page": "{job_page}"
+      }
+    ],
+    "price_depends": [
+      {
+        "text": "A price for that depends on what your car needs, so we look first. The first step is the {page_item}, which is {page_price}, and the technician shows you what they find before any repair is priced.",
+        "page": "{job_page}"
+      },
+      {
+        "text": "I can't price that repair without the car being looked at; it depends on what's worn and the parts it takes. What I can tell you is that the {page_item} is {page_price}, and nothing else is done until you approve it.",
+        "page": "{job_page}"
+      },
+      {
+        "text": "That one depends on the car, so I won't guess. The shop starts with the {page_item} at {page_price}, then gives you a written estimate with each job priced separately.",
+        "page": "{job_page}"
+      }
+    ],
+    "price_depends_engine": [
+      {
+        "text": "That depends on the engine, and not every engine has one: many have a timing chain that isn't serviced. An advisor can tell you whether yours does and what it costs.",
+        "page": "customers/maintenance-by-mileage"
+      },
+      {
+        "text": "I can't give a price for that from here. Whether your car has a belt at all depends on the engine, and the price follows the engine too. I can pass it to an advisor who can look it up for your {model}.",
+        "page": "customers/maintenance-by-mileage"
+      },
+      {
+        "text": "Prices for that vary a lot by engine, and some engines have a chain instead. The service desk can check yours and price it.",
+        "page": "customers/maintenance-by-mileage"
+      }
+    ],
+    "price_bigger_vehicle": [
+      {
+        "text": "Those figures are for a car or small crossover. Larger SUVs, pickups and vans can cost more, so the service desk would price your {model}.",
+        "page": "customers/prices-for-common-services"
+      },
+      {
+        "text": "Our listed prices are for cars and small crossovers; a truck like yours can come out higher. An advisor can give you the figure for it.",
+        "page": "customers/prices-for-common-services"
+      },
+      {
+        "text": "For a pickup or a larger SUV the price can be more than the list shows, so I'd rather an advisor give you the exact number.",
+        "page": "customers/prices-for-common-services"
+      }
+    ],
+    "price_extras": [
+      {
+        "text": "That's before tax. Tennessee sales tax of {page_term} is added on parts and labor, and repair work also carries shop supplies, never more than {page_price} on one bill. Menu services carry no shop supplies.",
+        "page": "customers/prices-for-common-services",
+        "item": "Shop supplies"
+      },
+      {
+        "text": "The listed price is before tax. On the bill you'll see Tennessee sales tax, {page_term}, and on repairs a small shop supplies charge, capped at {page_price}.",
+        "page": "customers/prices-for-common-services",
+        "item": "Shop supplies"
+      },
+      {
+        "text": "Not quite: tax of {page_term} goes on top, and repairs billed by the hour add shop supplies up to {page_price}. The service desk can tell you your exact total.",
+        "page": "customers/prices-for-common-services",
+        "item": "Shop supplies"
+      }
+    ],
+    "price_other_shop": [
+      {
+        "text": "I can't speak for another shop's price. With every service here you also get a free courtesy inspection with photos, so you see what the car needs before you decide.",
+        "page": "customers/maintenance-by-mileage"
+      },
+      {
+        "text": "I don't know what the other shop includes, so I can't compare. Ours is the price on the list, and every repair comes with our written warranty.",
+        "page": "customers/warranty"
+      },
+      {
+        "text": "Prices do differ between shops. Ours includes a free courtesy inspection with any service, and you approve each job before it's done.",
+        "page": "customers/estimates-and-approvals"
+      }
+    ],
+    "quote_needs_look": [
+      {
+        "text": "We don't quote a repair we haven't looked at. After an inspection you get a written estimate, each job priced separately, and nothing is done until you approve it.",
+        "page": "customers/estimates-and-approvals"
+      },
+      {
+        "text": "A price for a repair comes after the car is looked at, not before. You'd get it in writing and approve it job by job.",
+        "page": "customers/estimates-and-approvals"
+      },
+      {
+        "text": "The shop looks first and then gives you a written estimate; you can say yes to one job and no to another.",
+        "page": "customers/estimates-and-approvals"
+      }
+    ],
+    "own_parts": [
+      {
+        "text": "You can bring your own parts, and we fit them at our normal labor rate. There's no warranty on the part or our labor then, and some parts, like brake hydraulics, we don't fit.",
+        "page": "customers/bringing-your-own-parts"
+      },
+      {
+        "text": "Yes, with a catch: parts you bring carry no warranty, on the part or the labor. We don't fit customer brake hydraulic parts, airbag parts or tires more than six years old.",
+        "page": "customers/bringing-your-own-parts"
+      },
+      {
+        "text": "We can fit them at the normal labor rate, but without a warranty. If the part is plainly the wrong one, the technician may decline it.",
+        "page": "customers/bringing-your-own-parts"
+      }
+    ],
+    "hours_today": [
+      {
+        "text": "{shop} is open {open_time} to {close_time} on weekdays.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "We're open {open_time} to {close_time}, Monday to Friday, at all three shops. Charlotte Pike in Nashville keeps the same hours on Central time.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "Today we close at {close_time}. Weekdays we're open from {open_time}.",
+        "page": "customers/hours-and-locations"
+      }
+    ],
+    "hours_saturday": [
+      {
+        "text": "Only East Main is open on Saturday, {sat_hours}. Bonny Oaks and Charlotte Pike are closed Saturdays.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "On Saturday it's East Main only, {sat_hours}. The other two shops open again on Monday.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "East Main is open Saturday mornings, {sat_hours}; Bonny Oaks and Charlotte Pike are weekdays only.",
+        "page": "customers/hours-and-locations"
+      }
+    ],
+    "hours_closed_days": [
+      {
+        "text": "All three shops are closed on Sundays and on the main holidays: New Year's Day, Memorial Day, Independence Day, Labor Day, Thanksgiving and Christmas.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "We're closed that day. When a holiday falls on a weekend we close on the nearest weekday, and the key drop stays open.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "Sundays we're closed at every shop. On holidays too; the full list is New Year's, Memorial Day, the Fourth, Labor Day, Thanksgiving and Christmas.",
+        "page": "customers/hours-and-locations"
+      }
+    ],
+    "address": [
+      {
+        "text": "{shop} is at {shop_address}. The phone there is {shop_phone}.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "We have two shops in Chattanooga, on East Main Street and on Bonny Oaks Drive, and one in Nashville on Charlotte Pike. {shop} is at {shop_address}.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "You'll find {shop} at {shop_address}.",
+        "page": "customers/hours-and-locations"
+      }
+    ],
+    "we_do": [
+      {
+        "text": "Yes, we do. We're a general repair and maintenance shop for cars, SUVs, pickups and work vans.",
+        "page": "customers/what-we-do"
+      },
+      {
+        "text": "We do. Maintenance, brakes, tires and alignment, diagnosis, suspension, A/C, batteries and more, at all three shops.",
+        "page": "customers/what-we-do"
+      },
+      {
+        "text": "That's something we do every day. If it turns out to be something we send out, we'll tell you.",
+        "page": "customers/what-we-do"
+      }
+    ],
+    "we_dont": [
+      {
+        "text": "That's one we don't do: we don't do body and paint work, diesel engine overhauls, motorcycles, RVs or anything over one ton. If we can't do it, we'll tell you who can.",
+        "page": "customers/what-we-do"
+      },
+      {
+        "text": "Sorry, we don't do that. Body and paint work, motorcycles and RVs are outside what we work on.",
+        "page": "customers/what-we-do"
+      },
+      {
+        "text": "That's outside what we do, I'm afraid: no body and paint, no diesel engine overhauls, no motorcycles or RVs. If you're not sure about something, ask and we'll tell you who can.",
+        "page": "customers/what-we-do"
+      }
+    ],
+    "drop_box": [
+      {
+        "text": "Every shop has a key drop box by the office door. Fill in the envelope with your name, phone and what's wrong, put the key in it and drop it in the slot.",
+        "page": "customers/dropping-off-and-picking-up"
+      },
+      {
+        "text": "You can drop it after hours: there's a key drop by the office door at each shop, with envelopes for your name, number and what's going on.",
+        "page": "customers/dropping-off-and-picking-up"
+      },
+      {
+        "text": "Yes. Use the key drop by the office door; the envelope asks for your name, phone and what the car is doing, and the shop calls you once they've looked at it.",
+        "page": "customers/dropping-off-and-picking-up"
+      }
+    ],
+    "wait_shuttle": [
+      {
+        "text": "You're welcome to wait for an oil service, a rotation, a flat repair or an inspection; there's coffee and Wi-Fi. For anything longer it's best to leave the car.",
+        "page": "customers/dropping-off-and-picking-up"
+      },
+      {
+        "text": "East Main and Bonny Oaks run a free shuttle for customers within {page_term} of the shop, morning and afternoon. Charlotte Pike doesn't run one.",
+        "page": "customers/dropping-off-and-picking-up",
+        "item": "within 5 miles"
+      },
+      {
+        "text": "For a short job you can wait in the shop. For a longer one, the Chattanooga shops have a free shuttle; just mention it when the desk confirms your time.",
+        "page": "customers/dropping-off-and-picking-up"
+      }
+    ],
+    "payment": [
+      {
+        "text": "We take credit and debit cards and cash. Payment is due when you pick up the car; personal checks we don't take.",
+        "page": "customers/payment"
+      },
+      {
+        "text": "Cards or cash, at pick-up. Checks only from businesses with an account.",
+        "page": "customers/payment"
+      },
+      {
+        "text": "Credit, debit or cash. There's no discount for cash; the price is the price.",
+        "page": "customers/payment"
+      }
+    ],
+    "warranty": [
+      {
+        "text": "Repairs we do with parts we supply carry our warranty: {page_term}, parts and labor, good at all three shops.",
+        "page": "customers/warranty",
+        "item": "whichever comes first"
+      },
+      {
+        "text": "Our warranty is {page_term} on parts and labor for repairs with our parts. Bring the car and the invoice to any of our shops.",
+        "page": "customers/warranty",
+        "item": "whichever comes first"
+      },
+      {
+        "text": "Brake pads are covered against defects and noise, not normal wear. The details are on our warranty page, and an advisor can look at your invoice.",
+        "page": "customers/warranty"
+      }
+    ],
+    "towing": [
+      {
+        "text": "If it can't be driven in Chattanooga, the shop sends the tow company it works with, and the tow goes on your repair bill: the hook-up and the first ten miles to either Chattanooga shop are {page_term}.",
+        "page": "customers/towing",
+        "item": "Hook-up",
+        "for_shops": [
+          "main",
+          "east"
+        ]
+      },
+      {
+        "text": "In Nashville, the Charlotte Pike shop gives you the number of a tow company near you; call them at {shop_phone}.",
+        "page": "customers/towing",
+        "item": "(615) 555-0119",
+        "for_shops": [
+          "west"
+        ]
+      },
+      {
+        "text": "Please don't drive it. In Chattanooga the shop can send a tow truck, and after hours the driver can leave the car on our lot.",
+        "page": "customers/towing",
+        "for_shops": [
+          "main",
+          "east"
+        ]
+      }
+    ],
+    "advice_brakes": [
+      {
+        "text": "I can't diagnose a car over chat, but a grinding, metal-on-metal sound usually means the pads are worn through, and every stop is damaging the disc. I wouldn't put many miles on it. The first step is a brake inspection at {page_price}.",
+        "page": "customers/brake-noise",
+        "item": "brake inspection"
+      },
+      {
+        "text": "A high squeal that goes away when you press the pedal is usually the wear indicator, which means the pads are nearly gone; that's worth a visit this week. A brake inspection is {page_price}, with photos and measurements.",
+        "page": "customers/brake-noise",
+        "item": "brake inspection"
+      },
+      {
+        "text": "A squeal on the first few stops on a damp morning is usually surface rust and clears itself. If it stays, or it grinds, a brake inspection is {page_price}.",
+        "page": "customers/brake-noise",
+        "item": "brake inspection"
+      },
+      {
+        "text": "If the pedal or the steering wheel shakes when you brake, the discs are usually worn unevenly; that should be looked at soon. The brake inspection is {page_price}.",
+        "page": "customers/brake-noise",
+        "item": "brake inspection"
+      }
+    ],
+    "advice_check_engine": [
+      {
+        "text": "If the light is steady and the car drives normally, it's safe to drive; book a diagnosis within a week or two, and check that the gas cap is tight. If it's flashing, the engine is misfiring: drive as little as you can.",
+        "page": "customers/check-engine-light"
+      },
+      {
+        "text": "Is it steady or flashing? Steady and driving normally is fine for a week or two. Flashing means a misfire, and that can ruin the catalytic converter, so drive it as little as possible.",
+        "page": "customers/check-engine-light"
+      },
+      {
+        "text": "Our diagnosis is {page_price} for an hour of a technician's time: scan, test, and tell you what failed and what it costs to fix. Reading the code alone only tells us where to look.",
+        "page": "customers/check-engine-light",
+        "item": "$135.00"
+      }
+    ],
+    "advice_overheat": [
+      {
+        "text": "Please stop the engine. With the temperature gauge high, the safe thing is not to drive it further.",
+        "page": "customers/check-engine-light"
+      },
+      {
+        "text": "If the gauge is high or the oil light is on, stop the engine and don't drive it further. Let it sit; the shop can help you get it in.",
+        "page": "customers/check-engine-light"
+      },
+      {
+        "text": "With the temperature that high, pull over and switch it off. I can pass this to the shop so they can help you get it in.",
+        "page": "customers/check-engine-light"
+      }
+    ],
+    "advice_leak": [
+      {
+        "text": "A green puddle under the front is usually coolant, though I can't diagnose it from a picture. If the temperature gauge climbs or a warning light comes on, stop driving. The way to find a leak like that is a cooling system pressure test, {page_price}.",
+        "page": "prices/price-list",
+        "item": "Cooling system pressure test"
+      },
+      {
+        "text": "I can't tell from a photo what's leaking, and I won't guess. If the temperature gauge goes high or the oil light comes on, stop the engine and call the shop or have it towed.",
+        "page": "customers/check-engine-light"
+      },
+      {
+        "text": "From the picture I can't say what it is. Keep an eye on the temperature gauge and the oil light; if either one comes on, stop the car rather than drive it in.",
+        "page": "customers/check-engine-light"
+      }
+    ],
+    "advice_ac": [
+      {
+        "text": "The place to start is an A/C performance check, {page_price}: we measure the vent temperature and pressures and look for leaks with a UV light.",
+        "page": "customers/air-conditioning",
+        "item": "A/C performance check"
+      },
+      {
+        "text": "The first step is the A/C performance check, {page_price}. It tells whether the system is just low or something has failed.",
+        "page": "customers/air-conditioning",
+        "item": "A/C performance check"
+      },
+      {
+        "text": "We'd start with an A/C performance check at {page_price}: vent temperature, system pressures and a leak check with a UV light.",
+        "page": "customers/air-conditioning",
+        "item": "A/C performance check"
+      }
+    ],
+    "advice_battery": [
+      {
+        "text": "A slow crank on a cold morning is usually the battery nearly done. The battery, starting and charging test is free, takes about ten minutes, and needs no appointment.",
+        "page": "customers/battery"
+      },
+      {
+        "text": "The test is free and you can just come by: we test the battery, the starter draw and the alternator and give you the printout. If it needs a battery, replacement runs {page_low} to {page_high} installed.",
+        "page": "customers/battery",
+        "item": "Replacement"
+      },
+      {
+        "text": "The battery, starting and charging test is free. If the battery tests good and the car still won't start, it's usually the starter, the alternator or a drain, and an advisor will explain what the test showed.",
+        "page": "customers/battery"
+      }
+    ],
+    "advice_tire": [
+      {
+        "text": "A nail in the tread can usually be repaired with a patch-plug from the inside and a rebalance, {page_price}. A hole in the sidewall or the shoulder can't be repaired safely.",
+        "page": "customers/tires",
+        "item": "patch-plug"
+      },
+      {
+        "text": "A bubble on the sidewall means the tire is damaged inside and can fail; I'd put the spare on rather than drive on it. That tire can't be repaired.",
+        "page": "customers/tires"
+      },
+      {
+        "text": "If the tire pressure light stays on after you set the pressures, a sensor in one wheel has probably died. Replacing one sensor is about {page_price}.",
+        "page": "customers/tires",
+        "item": "one sensor"
+      }
+    ],
+    "advice_shake": [
+      {
+        "text": "If the steering wheel shakes at highway speed, balancing all four wheels is the thing to ask for; it's {page_price}.",
+        "page": "customers/tires",
+        "item": "Balancing four wheels"
+      },
+      {
+        "text": "If the car drifts or the steering wheel sits off-center, a four-wheel alignment is {page_price}.",
+        "page": "customers/tires",
+        "item": "four-wheel alignment"
+      },
+      {
+        "text": "Noises and shakes from the front end start with the steering and suspension inspection, {page_price}; the technician finds the cause before anything is priced.",
+        "page": "customers/prices-for-common-services",
+        "item": "Steering and suspension inspection"
+      }
+    ],
+    "photo_thanks": [
+      {
+        "text": "Thank you for the photo."
+      },
+      {
+        "text": "Thanks, the picture helps."
+      },
+      {
+        "text": "Got the photo, thank you."
+      }
+    ],
+    "voice_cannot": [
+      {
+        "text": "I'm sorry, I can't listen to voice messages here. Could you type what you need?"
+      },
+      {
+        "text": "I can't play voice messages, I'm afraid. If you type it out, I'll help right away."
+      },
+      {
+        "text": "Your voice message came through, but I can't hear it. Could you write it in a line or two?"
+      }
+    ],
+    "cannot_book": [
+      {
+        "text": "I can't book a time myself, but I'll pass your request to the service desk and they'll confirm it with you."
+      },
+      {
+        "text": "I'm not able to book appointments, but I can send your request to an advisor, who will confirm a time with you."
+      },
+      {
+        "text": "Booking is handled by the service desk, not by me. I'll pass it on so they can set it up with you."
+      }
+    ],
+    "ask_number": [
+      {
+        "text": "What's your name and the best number to reach you?"
+      },
+      {
+        "text": "Could I get your name and a phone number for the desk?"
+      },
+      {
+        "text": "Who should they ask for, and what's the best number?"
+      },
+      {
+        "text": "What's the best number for the desk to reach you?"
+      }
+    ],
+    "ask_shop": [
+      {
+        "text": "And which shop works better: East Main Street or Bonny Oaks Drive?"
+      },
+      {
+        "text": "Which shop is easier for you: East Main, Bonny Oaks, or Charlotte Pike in Nashville?"
+      },
+      {
+        "text": "Is that for one of the Chattanooga shops or for Charlotte Pike in Nashville?"
+      }
+    ],
+    "offer_handoff": [
+      {
+        "text": "Would you like me to ask the shop to get you in?"
+      },
+      {
+        "text": "Want me to pass this to the service desk so they can set up a time?"
+      },
+      {
+        "text": "I can ask an advisor to contact you about it. Would that help?"
+      }
+    ],
+    "cannot_see": [
+      {
+        "text": "I can't see the shop's repair orders from here, so I don't have the status of your car. I'll pass your question to the service desk so they can answer you."
+      },
+      {
+        "text": "I don't have access to the shop's system, so I can't tell you where your car is. The service desk can, and I'll send them your question."
+      },
+      {
+        "text": "I'm not able to look up repair orders. I'll get your question to an advisor at the shop, who can check on the {model}."
+      }
+    ],
+    "relay_approval": [
+      {
+        "text": "I can't see or change repair orders from here, so I'll pass your answer to the service desk right away so they hear it from you."
+      },
+      {
+        "text": "Thank you. I'm not able to approve work myself, but I'll get your answer to the advisor working on your car."
+      },
+      {
+        "text": "Got it. I'll pass that to the service desk; they'll confirm with you before anything changes."
+      }
+    ],
+    "relay_move": [
+      {
+        "text": "I can't see or change appointments from here, but I'll pass this to the service desk so they can move it."
+      },
+      {
+        "text": "I'm not able to change bookings, but an advisor can. I'll send them your request."
+      },
+      {
+        "text": "Thanks for letting us know. I'll pass this to the desk, and they'll confirm with you."
+      }
+    ],
+    "relay_complaint": [
+      {
+        "text": "I'm sorry about that. I can't see your repair or your bill from here, but I'll pass this to the shop so a person who can fix it gets back to you."
+      },
+      {
+        "text": "I'm sorry. This should go to the service manager, {manager_first}, and I'll make sure it does.",
+        "page": "customers/if-something-is-not-right"
+      },
+      {
+        "text": "Thank you for telling us, and I'm sorry. I'll pass this on now so a person at the shop can sort it out."
+      },
+      {
+        "text": "I'm sorry to hear that. If the car needs to come back, the shop looks at it first and it costs you nothing to have it looked at. I'll pass this on now.",
+        "page": "customers/if-something-is-not-right",
+        "for_skeletons": [
+          "complaint.web.1",
+          "complaint.web.5"
+        ]
+      }
+    ],
+    "relay_fleet": [
+      {
+        "text": "I can't prepare a quote for specific fleet vehicles from here, and I don't want to give you list prices that may not match your account. I'll pass your request to the service advisors."
+      },
+      {
+        "text": "Company vehicles are handled by the advisors, who keep each vehicle's history under your company name. I'll send this to them."
+      },
+      {
+        "text": "A business with five or more vehicles can apply for an account and pay on a monthly statement. To set one up, our page says to call Greg Whitaker, the service manager, at {page_term}.",
+        "page": "customers/company-vehicles",
+        "item": "Greg Whitaker",
+        "for_skeletons": [
+          "fleet.web.1"
+        ]
+      }
+    ],
+    "declined_ok": [
+      {
+        "text": "Of course. {shop} is at {shop_phone}, open {open_time} to {close_time} on weekdays.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "No problem. The number for {shop} is {shop_phone}.",
+        "page": "customers/hours-and-locations"
+      },
+      {
+        "text": "That's fine. You can reach {shop} at {shop_phone}; they open at {next_open}.",
+        "page": "customers/hours-and-locations"
+      }
+    ],
+    "not_stated": [
+      {
+        "text": "Our pages don't say, so I won't guess. I'll pass your question to an advisor."
+      },
+      {
+        "text": "I don't have that information, and I'd rather not give you a wrong answer. An advisor can tell you."
+      },
+      {
+        "text": "That's a question for the service desk; I don't have it in front of me."
+      }
+    ],
+    "off_topic": [
+      {
+        "text": "This chat is for questions about car service at Brennan Auto Care, so I can't help with that here."
+      },
+      {
+        "text": "Thanks, but we're not interested. This chat is for our customers' car questions."
+      },
+      {
+        "text": "I can only help with questions about servicing a car at our shops."
+      }
+    ],
+    "wrong_business": [
+      {
+        "text": "We're a repair and maintenance shop, so that's not something we do. If it's about servicing your car, I'm happy to help.",
+        "page": "customers/what-we-do"
+      },
+      {
+        "text": "Sorry, you've reached Brennan Auto Care, a car repair shop. We don't do body work or sell cars.",
+        "page": "customers/what-we-do"
+      },
+      {
+        "text": "I'm afraid we can't help with that; we repair and maintain cars, SUVs, pickups and work vans.",
+        "page": "customers/what-we-do"
+      }
+    ],
+    "hello_back": [
+      {
+        "text": "How can I help you today?"
+      },
+      {
+        "text": "What can I help you with?"
+      },
+      {
+        "text": "Is there something I can help with about your car?"
+      }
+    ],
+    "clarify_plain": [
+      {
+        "text": "Happy to help. Could you tell me a bit more about what you need?"
+      },
+      {
+        "text": "What's the car doing, and what kind of car is it?"
+      },
+      {
+        "text": "So I point you to the right service: is a warning light on, or is the car doing something it shouldn't?"
+      }
+    ],
+    "clarify_two": [
+      {
+        "text": "One more so I get it right: is it when you're braking, or while you're just driving?"
+      },
+      {
+        "text": "Just to be sure: are you asking about a price, or about getting it in this week?"
+      },
+      {
+        "text": "Is it a noise, a warning light, or something you feel when you drive?"
+      }
+    ],
+    "handoff_done": [
+      {
+        "text": "Thank you, {first_name}. Your request is with the team now, and somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Thanks, {first_name}. I've passed it to the service desk, and somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Thank you. Your question is with the team now, and somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Got it, {first_name}. It's with the shop now; somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Thank you. It's with the service desk now, and somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Thank you. I've sent your request to the service desk; somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Got it, thanks. The team has your message now, and somebody will get back to you as soon as possible."
+      },
+      {
+        "text": "Thanks for that. Your request is with the shop, and somebody will get back to you as soon as possible."
+      }
+    ],
+    "closing": [
+      {
+        "text": "You're welcome! Anything else I can help with?"
+      },
+      {
+        "text": "Sounds good. Have a good one!"
+      },
+      {
+        "text": "Glad I could help. Take care!"
+      },
+      {
+        "text": "You're welcome, {first_name}. Have a good night!"
+      },
+      {
+        "text": "Anytime. Drive safe!"
+      }
+    ],
+    "advice_ac_recharge": [
+      {
+        "text": "If it needs a recharge, the price depends on the refrigerant your car takes: {page_low} for most older cars, {page_high} for most newer ones. The label under the hood says which. A system that was empty has a leak, and the shop tells you so before you pay.",
+        "page": "customers/air-conditioning",
+        "item": "Recharge"
+      },
+      {
+        "text": "A recharge is priced by the refrigerant: {page_low} on most older cars, {page_high} on most newer ones, which use a refrigerant that costs several times more. If the system was empty, it has a leak.",
+        "page": "customers/air-conditioning",
+        "item": "Recharge"
+      },
+      {
+        "text": "Customers call it freon; on the bill it's an evacuate and recharge, {page_low} or {page_high} depending on the refrigerant. A recharge without finding a leak lasts weeks, not years.",
+        "page": "customers/air-conditioning",
+        "item": "Recharge"
+      }
+    ],
+    "advice_ac_smell": [
+      {
+        "text": "A sour smell when the A/C starts is usually growth on the evaporator. A cleaning service is {page_price}, and a fresh cabin air filter usually goes with it.",
+        "page": "customers/air-conditioning",
+        "item": "cleaning service"
+      },
+      {
+        "text": "That musty smell when the A/C starts is usually growth on the evaporator. The cleaning service is {page_price}.",
+        "page": "customers/air-conditioning",
+        "item": "cleaning service"
+      },
+      {
+        "text": "For a sour smell from the vents there's an evaporator cleaning service, {page_price}; most people do a fresh cabin air filter with it.",
+        "page": "customers/air-conditioning",
+        "item": "cleaning service"
+      }
+    ],
+    "we_dont_hybrid": [
+      {
+        "text": "For hybrids we do the ordinary service, oil, brakes, tires, suspension and the small battery, and that's at East Main only. We don't repair the high-voltage battery, the inverter or the drive motor.",
+        "page": "customers/hybrids-and-electric-cars"
+      },
+      {
+        "text": "We do the ordinary service on hybrids, like oil, filters, brakes, tires and the small battery, at East Main only. The high-voltage battery, the inverter and the drive motor we don't repair; for those we'd point you to a dealer.",
+        "page": "customers/hybrids-and-electric-cars"
+      },
+      {
+        "text": "On a hybrid we can do the regular maintenance at East Main. Repairs to the high-voltage system go to a dealer; we don't do those.",
+        "page": "customers/hybrids-and-electric-cars"
+      }
+    ]
+  },
+  "handoff_notes": {
+    "price": [
+      "Asks a price, in the customer's words: '{customer_words}'. I gave only what the public price page states and no price for this car.",
+      "Price question: '{customer_words}'. I named the public figure or the first step and said the desk has the exact price.",
+      "'{customer_words}'. I quoted nothing beyond the public pages; wants a person to price it."
+    ],
+    "booking": [
+      "Wants a time: '{customer_words}'. I booked nothing.",
+      "Booking request in the customer's words: '{customer_words}'. I said the desk confirms the time.",
+      "'{customer_words}'. Asks to come in; I can't book, so nothing is set."
+    ],
+    "hours": [
+      "Asked what we work on, then wants a time: '{customer_words}'. I booked nothing.",
+      "'{customer_words}'. Answered from the hours and services pages; wants to come in."
+    ],
+    "symptom": [
+      "What the car does, in the customer's words: '{customer_words}'. I gave the public page's general advice and did not diagnose.",
+      "'{customer_words}'. I named the first step only, no repair and no repair price.",
+      "Warning sign: '{customer_words}'. Told the customer not to drive it if the gauge or a light says stop. Wants a call."
+    ],
+    "status": [
+      "Asks about a car at the shop: '{customer_words}'. I can't see the repair order, so I gave no status and no time.",
+      "'{customer_words}'. Status question; I gave no date and no total."
+    ],
+    "found_work": [
+      "Answer to the estimate, in the customer's words: '{customer_words}'. I changed nothing and approved nothing.",
+      "'{customer_words}'. About work found on the car; I gave no advice on this car."
+    ],
+    "moving": [
+      "About an existing booking: '{customer_words}'. I can't see appointments, so I changed nothing.",
+      "'{customer_words}'. Wants the booking changed; nothing changed by me."
+    ],
+    "complaint": [
+      "Complaint, in the customer's words: '{customer_words}'. I said sorry and passed it on; I promised nothing.",
+      "'{customer_words}'. Unhappy after a visit. I can't see the order or the bill; I quoted only the public pages."
+    ],
+    "fleet": [
+      "Company vehicle: '{customer_words}'. I gave no account prices.",
+      "'{customer_words}'. Company account question; passed to the advisors."
+    ],
+    "spam": [
+      "Not a customer: '{customer_words}'. No hand-over needed."
+    ]
+  },
+  "drafts": {
+    "price": {
+      "quote_list": [
+        {
+          "text": "Hi {first_name}! On our price list, {page_item} is {page_price} before tax for a car or small crossover. Would you like to set up a time?",
+          "page": "{job_page}"
+        },
+        {
+          "text": "Hi {first_name}. {page_item} is {page_price} before shop supplies and tax on a car like yours. Which day works for you?",
+          "page": "{job_page}"
+        },
+        {
+          "text": "Thanks for asking, {first_name}. Our listed price for {page_item} is {page_price} before tax; the exact figure for the {model} comes on the estimate.",
+          "page": "{job_page}"
+        }
+      ],
+      "depends": [
+        {
+          "text": "Hi {first_name}. That price depends on what the {model} needs, so we'd look first: the {page_item} is {page_price}, and you'd see what we find before anything is priced.",
+          "page": "{job_page}"
+        },
+        {
+          "text": "Hi {first_name}! I can't price that without looking at the car. We'd start with the {page_item}, {page_price}. Would you like to bring it in?",
+          "page": "{job_page}"
+        },
+        {
+          "text": "Good question, {first_name}. It depends on the parts the {model} takes; the first step is the {page_item} at {page_price}.",
+          "page": "{job_page}"
+        }
+      ],
+      "extras": [
+        {
+          "text": "Good question, {first_name}. That's the price of the job; shop supplies and sales tax are added on the bill, so the total will be a little higher.",
+          "page": "customers/prices-for-common-services"
+        },
+        {
+          "text": "{first_name}, that figure is before tax. Tennessee sales tax of {page_term} is added, plus shop supplies on repair work.",
+          "page": "customers/prices-for-common-services",
+          "item": "Shop supplies"
+        },
+        {
+          "text": "It's before tax and shop supplies, {first_name}. I'll confirm the exact total for you.",
+          "page": "customers/prices-for-common-services",
+          "defers": true
+        }
+      ],
+      "objection": [
+        {
+          "text": "I understand, {first_name}. I can't speak for another shop's price, but I'm glad to tell you what ours covers."
+        },
+        {
+          "text": "Fair question, {first_name}. Ours includes a free courtesy inspection with photos, and nothing is done without your approval.",
+          "page": "customers/estimates-and-approvals"
+        },
+        {
+          "text": "I hear you, {first_name}. Prices differ; ours is the listed price, and our repairs carry a written warranty.",
+          "page": "customers/warranty"
+        }
+      ],
+      "quote_range": [
+        {
+          "text": "Hi {first_name}! For a typical car, {page_item} runs {page_low} to {page_high} before tax, depending on the parts. We'd give you the exact figure for the {model} after a look.",
+          "page": "{job_page}"
+        },
+        {
+          "text": "Hi {first_name}. Our page puts {page_item} at {page_low} to {page_high}; where the {model} falls depends on the parts it takes.",
+          "page": "{job_page}"
+        },
+        {
+          "text": "Good question, {first_name}. It ranges from {page_low} to {page_high} for {page_item}. Want us to take a look and price it exactly?",
+          "page": "{job_page}"
+        }
+      ],
+      "no_figure": [
+        {
+          "text": "Hi {first_name}. That one depends on the engine in the {model}, so I'll look it up and get back to you with a price.",
+          "defers": true
+        },
+        {
+          "text": "Good question, {first_name}. The price follows the engine; let me check the {model} and send you the figure.",
+          "defers": true
+        },
+        {
+          "text": "Hi {first_name}! I'll need to look up the {model}'s engine for that one. I'll message you the price shortly.",
+          "defers": true
+        }
+      ]
+    },
+    "booking": {
+      "ask_day": [
+        {
+          "text": "Hi {first_name}! We'd be glad to take care of the {model}. Which day works best for you? I'll confirm a time.",
+          "defers": true
+        },
+        {
+          "text": "Hi {first_name}. Would a morning or an afternoon suit you better? I'll confirm the exact time.",
+          "defers": true
+        },
+        {
+          "text": "Thanks, {first_name}. What day were you thinking? I'll check what we have and confirm a time.",
+          "defers": true
+        }
+      ],
+      "saturday": [
+        {
+          "text": "Hi {first_name}. On Saturdays only East Main is open, {sat_hours}. Would a weekday work, or East Main on Saturday?",
+          "page": "customers/hours-and-locations"
+        },
+        {
+          "text": "{first_name}, our Saturday hours are at East Main only, {sat_hours}. Which would be easier for you?",
+          "page": "customers/hours-and-locations"
+        },
+        {
+          "text": "Hi! The {shop} shop is open weekdays {open_time} to {close_time}; on Saturday it's East Main, {sat_hours}.",
+          "page": "customers/hours-and-locations"
+        }
+      ],
+      "confirm_echo": [
+        {
+          "text": "Thank you, {first_name}. {day_agreed} at {time_agreed} works. See you then!",
+          "echo": true
+        },
+        {
+          "text": "You're all set for {day_agreed} at {time_agreed}, {first_name}.",
+          "echo": true
+        },
+        {
+          "text": "Thank you, {first_name}. See you {day_agreed} at {time_agreed} at {shop_address}.",
+          "echo": true,
+          "page": "customers/hours-and-locations"
+        }
+      ]
+    },
+    "hours": {
+      "answer": [
+        {
+          "text": "Hi {first_name}! We're open {open_time} to {close_time} on weekdays; East Main is also open Saturday, {sat_hours}.",
+          "page": "customers/hours-and-locations"
+        },
+        {
+          "text": "Hi {first_name}. {shop} is at {shop_address}, open weekdays {open_time} to {close_time}.",
+          "page": "customers/hours-and-locations"
+        },
+        {
+          "text": "We're closed Sundays and on the main holidays, {first_name}; otherwise weekdays {open_time} to {close_time}.",
+          "page": "customers/hours-and-locations"
+        }
+      ],
+      "drop_box": [
+        {
+          "text": "Yes, {first_name}: the key drop is by the office door. Fill in the envelope with your name, phone and what's wrong, and we'll call you once we've looked at it.",
+          "page": "customers/dropping-off-and-picking-up"
+        },
+        {
+          "text": "Of course, {first_name}. Use the key drop by the office door after hours; the envelope asks for your name, number and what the car is doing.",
+          "page": "customers/dropping-off-and-picking-up"
+        },
+        {
+          "text": "The key drop by the office door is open after hours, {first_name}. We'll call you when we've looked at the {model}.",
+          "page": "customers/dropping-off-and-picking-up"
+        }
+      ],
+      "we_do": [
+        {
+          "text": "Hi {first_name}! Yes, we do. Would you like to set up a time?",
+          "page": "customers/what-we-do"
+        },
+        {
+          "text": "We do, {first_name}. We work on cars, SUVs, pickups and work vans. Which day works for you?",
+          "page": "customers/what-we-do"
+        },
+        {
+          "text": "Yes, {first_name}, that's something we do every day. When would you like to bring it in?",
+          "page": "customers/what-we-do"
+        }
+      ]
+    },
+    "symptom": {
+      "advise": [
+        {
+          "text": "Hi {first_name}. I'm sorry to hear that. That should be checked soon. Would you like to bring the {model} in?"
+        },
+        {
+          "text": "Thanks for letting us know, {first_name}. I can't tell from here what it is, but we'd like to take a look. Which day works for you?"
+        },
+        {
+          "text": "Hi {first_name}! A {page_item} is {page_price}, and we'll show you what we find before anything is done. When could you bring it by?",
+          "page": "{job_page}"
+        }
+      ],
+      "voice": [
+        {
+          "text": "Thanks for the voice message, {first_name}. Could you type the main points so I get it right?"
+        },
+        {
+          "text": "Hi {first_name}, I can't play voice messages here. Could you write it out?"
+        },
+        {
+          "text": "Got your voice message, {first_name}. Could you send it as text?"
+        }
+      ]
+    },
+    "status": {
+      "dont_have": [
+        {
+          "text": "Hi {first_name}. I don't have the status of the {model} in front of me. I'll check with the shop and message you right back.",
+          "defers": true
+        },
+        {
+          "text": "Hi {first_name}! I don't have the status in front of me; I'll check with the technician and let you know.",
+          "defers": true
+        },
+        {
+          "text": "Thanks for checking in, {first_name}. Let me find out where the {model} is and get back to you.",
+          "defers": true
+        }
+      ],
+      "pickup_after_hours": [
+        {
+          "text": "If you need to come after we close, {first_name}, you can pay by phone before closing and we'll leave the key in the lock box and text you the code.",
+          "page": "customers/dropping-off-and-picking-up"
+        },
+        {
+          "text": "We're open until {close_time}, {first_name}. After that we can leave the key in the lock box once it's paid by phone.",
+          "page": "customers/dropping-off-and-picking-up"
+        },
+        {
+          "text": "No problem, {first_name}. Pay by phone before {close_time} and the key will be in the lock box.",
+          "page": "customers/dropping-off-and-picking-up"
+        }
+      ]
+    },
+    "found_work": {
+      "ack": [
+        {
+          "text": "Thank you, {first_name}. We'll go ahead with the {finding_item} and hold the rest. We'll message you when it's ready."
+        },
+        {
+          "text": "Got it, {first_name}: yes to the {finding_item}, no to the rest for now. I'll note the rest on your record."
+        },
+        {
+          "text": "Thank you for the quick answer, {first_name}. We'll get started on the {finding_item}."
+        }
+      ],
+      "total": [
+        {
+          "text": "Thank you, {first_name}. I'll confirm the total with shop supplies and tax.",
+          "defers": true
+        },
+        {
+          "text": "Good question, {first_name}. Let me get you the exact total with tax.",
+          "defers": true
+        },
+        {
+          "text": "I'll put the total together for you, {first_name}, with tax and shop supplies, and send it right over.",
+          "defers": true
+        }
+      ],
+      "can_wait": [
+        {
+          "text": "That's a fair question, {first_name}. I'll ask the technician how urgent it is and let you know.",
+          "page": "customers/estimates-and-approvals",
+          "defers": true
+        },
+        {
+          "text": "{first_name}, work you put off is noted on the car's record and we'll remind you. I'll check how soon it should be done.",
+          "page": "customers/estimates-and-approvals"
+        },
+        {
+          "text": "No pressure, {first_name}. I'll find out from the technician whether it can wait.",
+          "defers": true
+        }
+      ],
+      "decline_ack": [
+        {
+          "text": "Understood, {first_name}. We'll leave the {finding_item} for now and note it on your record.",
+          "page": "customers/estimates-and-approvals"
+        },
+        {
+          "text": "No problem, {first_name}. Nothing extra will be done; work you put off is noted and we'll remind you.",
+          "page": "customers/estimates-and-approvals"
+        },
+        {
+          "text": "Got it, {first_name}. We'll finish the original work only."
+        }
+      ]
+    },
+    "moving": {
+      "ack": [
+        {
+          "text": "No problem, {first_name}. I'll move it and confirm a new time with you. Which days work?"
+        },
+        {
+          "text": "Thanks for letting us know, {first_name}. What day would suit you better?"
+        },
+        {
+          "text": "Of course, {first_name}. I'll find another time; mornings or afternoons?"
+        }
+      ],
+      "cancel": [
+        {
+          "text": "No problem, {first_name}. I'll cancel it. Just message us when you'd like to come in."
+        },
+        {
+          "text": "Thanks for the heads-up, {first_name}. It's cancelled on our end once I've updated it; message us any time."
+        },
+        {
+          "text": "Understood, {first_name}. We'll be here whenever you're ready."
+        }
+      ],
+      "late": [
+        {
+          "text": "Thanks for letting us know, {first_name}. See you when you get here."
+        },
+        {
+          "text": "No worries, {first_name}. Drive safe."
+        },
+        {
+          "text": "Thank you, {first_name}. I'll let the shop know you're on the way."
+        }
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        {
+          "text": "Good morning, {first_name}. I'm sorry about that. We'd like to look at it. Which day works for you?"
+        },
+        {
+          "text": "I'm sorry, {first_name}. That's not how it should be. If the car needs to come back, we look at it first and there's no charge to have it looked at.",
+          "page": "customers/if-something-is-not-right"
+        },
+        {
+          "text": "{first_name}, thank you for telling us, and I'm sorry. Could you bring the {model} by so we can see it?"
+        }
+      ],
+      "bill": [
+        {
+          "text": "I'm sorry it wasn't explained, {first_name}. Shop supplies is a small charge on repairs billed by the hour, never more than {page_price} on one bill.",
+          "page": "customers/prices-for-common-services",
+          "item": "Shop supplies"
+        },
+        {
+          "text": "{first_name}, I'm sorry for the surprise. I'll go through the bill line by line and message you.",
+          "defers": true
+        },
+        {
+          "text": "You're right to ask, {first_name}. I'll check the bill against the estimate and get back to you.",
+          "defers": true
+        }
+      ]
+    },
+    "fleet": {
+      "list_ack": [
+        {
+          "text": "Got it, {contact_first}: {unit} and {unit_b} for {day_said}. We'll message you as each one is ready."
+        },
+        {
+          "text": "Thank you, {contact_first}. {unit} and {unit_b} noted for {day_said}."
+        },
+        {
+          "text": "Thanks, {contact_first}. We have {unit} and {unit_b} on the list for {day_said}; anything past the service we run by you first."
+        }
+      ],
+      "paperwork": [
+        {
+          "text": "Good morning, {contact_first}. I'll have a copy of the invoice for {unit} sent to you."
+        },
+        {
+          "text": "Thanks, {contact_first}. I'll ask the office for that copy and send it over."
+        },
+        {
+          "text": "Of course, {contact_first}. I'll get that paperwork for {unit} to you."
+        }
+      ],
+      "po_ack": [
+        {
+          "text": "Thank you, {contact_first}. PO {po} noted for {unit}."
+        },
+        {
+          "text": "Got it, {contact_first}: PO {po} on {unit}."
+        },
+        {
+          "text": "Thanks, {contact_first}. We'll put PO {po} on the order for {unit}."
+        }
+      ]
+    },
+    "generic": {
+      "close": [
+        {
+          "text": "You're welcome, {first_name}!"
+        },
+        {
+          "text": "See you soon, {first_name}."
+        },
+        {
+          "text": "Thank you, {first_name}. Have a good day."
+        },
+        {
+          "text": "Anytime, {first_name}."
+        }
+      ],
+      "after_handoff_thanks": [
+        {
+          "text": "You're welcome, {first_name}. Have a good night!"
+        },
+        {
+          "text": "You're welcome! Somebody from the shop will be in touch."
+        },
+        {
+          "text": "Thank you, {first_name}. Take care."
+        }
+      ],
+      "ack": [
+        {
+          "text": "No problem, {first_name}. Just let us know."
+        },
+        {
+          "text": "Sounds good, {first_name}. We're here when you're ready."
+        },
+        {
+          "text": "Of course, {first_name}. Message us anytime."
+        }
+      ]
+    }
+  }
+}

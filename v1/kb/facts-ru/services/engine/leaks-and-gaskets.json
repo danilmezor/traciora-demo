@@ -1,0 +1,103 @@
+{
+ "path": "services/engine/leaks-and-gaskets.md",
+ "title": "Течи и прокладки",
+ "title_en": "Leaks and gaskets",
+ "exists_in": "both",
+ "english_sheet": "facts/services/engine/leaks-and-gaskets.json",
+ "first_revision_text": "ru/_history/services/engine/leaks-and-gaskets.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Oil leaks, and the one gasket on the price list.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 198,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Замена прокладки клапанной крышки», 1.2 н/ч; the heavy case is × 1.8 on body-on-frame vehicles (V6).",
+  "Russian grades: «запотевание», «течь».",
+  "Sump gasket, rear main seal and front cover have no list price (planted)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Течи и прокладки",
+   "item": "Запотевание: влажно, но не капает. Наблюдаем. В осмотре — запись и фото, чтобы в следующий раз было с чем сравнить."
+  },
+  {
+   "section": "Течи и прокладки",
+   "item": "Течь: капли на асфальте, уровень масла падает от замены до замены. Найти и посчитать."
+  },
+  {
+   "section": "Течи и прокладки",
+   "item": "Течёт на что-то: на выпуск (запах, дым), на ремни (проскальзывают и разрушаются), на резиновые втулки (разбухают). Делать."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "valve_cover_gasket",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "valve_cover_gasket",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3370.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Диму",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  3370.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

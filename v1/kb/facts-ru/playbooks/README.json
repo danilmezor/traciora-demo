@@ -1,0 +1,84 @@
+{
+ "path": "playbooks/README.md",
+ "title": "Памятки по должностям",
+ "title_en": "Playbooks",
+ "exists_in": "both",
+ "english_sheet": "facts/playbooks/README.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Index of the rank playbooks; states plainly that only the administrator can open them.",
+ "serves": [
+  "visibility:administrator",
+  "operate:overview"
+ ],
+ "length_class": "short",
+ "words_ru": 91,
+ "links_to": [
+  "playbooks/technician.md",
+  "playbooks/advisor.md",
+  "playbooks/lead-and-office.md",
+  "playbooks/manager.md",
+  "playbooks/owner.md",
+  "shop-floor/README.md",
+  "how-to/README.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Same five playbooks; the folder is «Памятки по должностям»."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Памятки по должностям",
+   "item": "Механики"
+  },
+  {
+   "section": "Памятки по должностям",
+   "item": "Мастера-приёмщики"
+  },
+  {
+   "section": "Памятки по должностям",
+   "item": "Старшие мастера-приёмщики и бухгалтерия"
+  },
+  {
+   "section": "Памятки по должностям",
+   "item": "Руководители"
+  },
+  {
+   "section": "Памятки по должностям",
+   "item": "Владелец и администратор"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@golive+2w|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,665 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-23-a1-no-request-number",
+  "configuration": "ru",
+  "number": 23,
+  "story": "S1",
+  "title": "The anchor account books a van; nobody asks for the request number",
+  "purpose": "Story S1, call 23. The fleet contact of account A1 books a van for its service. Alina knows him and the van, gives the contract price, asks when it suits and books. She does not ask for the request number the account's bills need, asks nothing about the van and sums nothing up.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Олег Вячеславович Кравцов",
+      "company": "Симбирский гонец",
+      "account": "A1",
+      "ref": "accounts.json ru.A1 contacts[0]",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "slot 6's first working day on or after the Wednesday of week T-17 (rule R6; card S01, call 23; for the nominal T that Wednesday is her day off)",
+    "nominal_offset": "T-120d",
+    "nominal_date": "2026-07-16",
+    "local_start": "16:10",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 6,
+    "caller_phone": "+7 907 346-93-67",
+    "repeat_caller": false,
+    "talk_s": 71
+  },
+  "scenario": {
+    "who_calls": "Олег Вячеславович Кравцов, head of the transport department of account A1, from the depot yard.",
+    "vehicle": "unit 07, ГАЗель Next van, 2020, Т198ОК73 (accounts.json ru.A1 fleet)",
+    "job": "fleet maintenance at the contract price",
+    "wants": "the van serviced tomorrow",
+    "what_happens": "He names the unit. Alina finds it, confirms \"the usual\", gives the contract price when asked, asks when it suits him, books tomorrow at nine with her own name and says goodbye.",
+    "facts": {
+      "fleet_pm_van_company_rub": 8724,
+      "booked": "call+1d 09:00",
+      "request_number": "not asked for",
+      "note": "catalogue.json fleet_pm_van at the company-account price: 1.5 h x 1 700 + oil and filters at 10 % off = 8 724; she says 8 720. The staff page \"Company accounts\" says the account's bills need its request number.",
+      "prices": [
+        {
+          "job": "fleet_pm_van",
+          "name": "ТО коммерческого автомобиля: замена масла и фильтров, смазка, осмотр по чек-листу",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "company_account",
+          "rub": 8724.0,
+          "labour_hour_rub": 1700,
+          "said": "восемь семьсот двадцать",
+          "said_rub": 8720
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, добрый день."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.8,
+      "said": "Алина, день добрый, Кравцов, «Симбирский гонец»."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 6.6,
+      "said": "Олег Вячеславович, здравствуйте!"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 8.9,
+      "said": "Мне седьмую надо на ТО загнать. Некст, сто девяносто восьмая."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 15.3,
+      "said": "Седьмая... Тэ сто девяносто восемь о-ка, вижу. ТО как обычно — масло, фильтры?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 23.0,
+      "said": "Как обычно. Сколько там сейчас по деньгам выходит? А то бухгалтерия спрашивает, цены же подняли."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 30.0,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 31.6,
+      "said": "По вашему договору ТО — восемь семьсот двадцать."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 36.1,
+      "said": "Восемь семьсот двадцать. Ладно."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 38.7,
+      "said": "Когда вам удобно её пригнать?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 42.7,
+      "said": "Завтра с утра. Водитель к девяти подъедет."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 47.3,
+      "said": "Хорошо, записала: завтра, девять утра, принимаю я."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 52.2,
+      "said": "Добро. И акт мне потом на почту, как всегда, на транспортный отдел."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 59.1,
+      "said": "Да, конечно, акт и счёт отправлю на транспортный отдел."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 64.5,
+      "said": "Всё, до связи."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 67.1,
+      "said": "Всё, ждём. До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.43,
+    "restoration_tier": "medium",
+    "noise": "the caller stands in a depot yard: engines idling, a reversing alarm",
+    "applied": [
+      {
+        "rule": "R3",
+        "what": "the plate's letters 'о-ка' heard as 'окей'",
+        "script_turn": 5,
+        "said": "Тэ сто девяносто восемь о-ка",
+        "stored": "Т198, окей",
+        "error": true
+      },
+      {
+        "rule": "R3",
+        "what": "a spelled string rendered right",
+        "script_turn": 4,
+        "said": "сто девяносто восьмая",
+        "stored": "198-я",
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the surname with one vowel off",
+        "script_turn": 2,
+        "said": "Кравцов",
+        "stored": "Кравцев",
+        "error": true
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name heard as plain words",
+        "script_turn": 2,
+        "said": "«Симбирский гонец»",
+        "stored": "симбирский гонец",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          5,
+          12
+        ],
+        "said": [
+          "Седьмая",
+          "девять утра"
+        ],
+        "stored": [
+          "7-я",
+          "9 утра"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the unit number marked as uncertain",
+        "script_turn": 4,
+        "said": "Мне седьмую надо на ТО загнать.",
+        "stored": "Мне {?likely: 7-ю} надо на ТО загнать.",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a sentence gone without a trace",
+        "script_turn": 6,
+        "said": " А то бухгалтерия спрашивает, цены же подняли.",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a word replaced by a plausible wrong one",
+        "script_turn": 11,
+        "said": "Водитель к девяти подъедет.",
+        "stored": "Водитель к 9 подойдёт.",
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          7
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          8,
+          9
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          3,
+          5,
+          16
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 1,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 2
+      },
+      "first_names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 4,
+        "as_digits": 4,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 3,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 1
+    },
+    "script_words": 109,
+    "stored_words": 94,
+    "strict_word_difference": 0.284
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 110,
+    "duration_s": 71.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, добрый день.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алина, день добрый, Кравцев, симбирский гонец.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Олег Вячеславович, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Мне {?likely: 7-ю} надо на ТО загнать. Некст, 198-я.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "7-я. Т198, окей, вижу. ТО как обычно, масло, фильтры?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Как обычно. Сколько там сейчас по деньгам выходит?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "По вашему договору ТО — 8720.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "8720. Ладно.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Когда вам удобно её пригнать?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Завтра с утра. Водитель к 9 подойдёт.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, записала: завтра, 9 утра, принимаю я.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добро. И акт мне потом на почту, как всегда, на транспортный отдел.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, конечно, акт и счёт отправлю на транспортный отдел.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, до связи.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, ждём. До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, добрый день.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "ТО как обычно, масло, фильтры?",
+        "level": 1,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "По вашему договору ТО — 8720.",
+        "level": 1,
+        "segment": 6
+      },
+      {
+        "key": "offered_time",
+        "quote": "Когда вам удобно её пригнать?",
+        "level": 1,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Хорошо, записала: завтра, 9 утра, принимаю я.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "recap",
+        "quote": "Всё, ждём. До свидания.",
+        "level": 0,
+        "segment": 14
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер обращается к нему по имени и отчеству и находит его машину."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Т198, окей, вижу.",
+      "why": "По одному слову «седьмая» нашла машину и назвала её номер. Клиенту не пришлось ничего диктовать.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "Всё, ждём. До свидания.",
+      "say": "Олег Вячеславович, значит: завтра в девять, седьмая Газель, ТО по договору, восемь семьсот двадцать. И продиктуйте номер заявки, чтобы счёт ушёл сразу с ним."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 62.5,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 6
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 14
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 62.5,
+      "applicable": 6,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, добрый день",
+        "need_discovery": "ТО как обычно, масло, фильтры?",
+        "price_with_next_step": "По вашему договору ТО — 8720",
+        "offered_time": "Когда вам удобно её пригнать?",
+        "asked_for_booking": "Хорошо, записала: завтра, 9 утра, принимаю я",
+        "recap": "Всё, ждём. До свидания"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер обращается к нему по имени и отчеству и находит его машину.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Т198, окей, вижу",
+        "why": "По одному слову «седьмая» нашла машину и назвала её номер. Клиенту не пришлось ничего диктовать."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "Всё, ждём. До свидания.",
+        "say": "Олег Вячеславович, значит: завтра в девять, седьмая Газель, ТО по договору, восемь семьсот двадцать. И продиктуйте номер заявки, чтобы счёт ушёл сразу с ним."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 0,
+      "objection": "na"
+    },
+    "score": 62.5
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "Не применяется: клиента знают.",
+    "need_discovery": "1: машина и работа известны. Про пробег, жалобы водителя, срок она не спросила.",
+    "price_with_next_step": "1: договорная цена одной строкой; что может добавиться и когда приезжать, в этой и следующей реплике нет.",
+    "offered_time": "1: спросила, когда удобно; своего времени не назвала.",
+    "asked_for_booking": "2: день, час и кто принимает.",
+    "recap": "0: «Всё, ждём».",
+    "objection": "Не применяется.",
+    "request_number": "Чего рубрика не видит: номер заявки не спрошен. По странице «Корпоративные клиенты» счета «Симбирского гонца» без него не принимаются. В звонке 24 она спрашивает его первым делом.",
+    "score": "(1·2 + 2·1 + 2·1 + 3·1 + 3·2 + 1·0) / 2 = 7.5 из 12 весовых баллов = 62.5.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "У A1 наряд на машину № 07 (Т198ОК73) на следующий день после звонка: ТО коммерческого автомобиля по договорной цене 8 724, без номера заявки клиента."
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "format": "seed-call/1",
+  "id": "en-26-S5-price-doubt-answered",
+  "configuration": "en",
+  "number": 26,
+  "story": "S5",
+  "title": "The all-star and a lower quote from down the road: the doubt found out and answered",
+  "purpose": "Story S5. What the shop leans on. A first-time caller wants a price for struts and has a cheaper one. Angie asks what the car is doing, says what she would do if it were hers, gives the price and two times, asks what the other quote is for, explains the difference, tells him to take it if it is like for like, and books the inspection.",
+  "cast": {
+    "advisor": {
+      "slot": 16,
+      "name": "Angie Holloway",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Gerald Massengill",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "the Monday of week T-8 (rule R6; card S05, call 26)",
+    "nominal_offset": "T-60d",
+    "nominal_date": "2026-09-14",
+    "local_start": "10:20",
+    "site": "east",
+    "direction": "inbound",
+    "line": "200",
+    "answered_by": "201",
+    "ring_s": 4,
+    "caller_phone": "423-555-0170",
+    "repeat_caller": false,
+    "talk_s": 220
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Gerald Massengill, retired, who has already had a price from another shop.",
+    "vehicle": "2014 Toyota Highlander, 161,000 miles",
+    "job": "front strut assemblies (pair) and a four-wheel alignment, after a steering and suspension inspection",
+    "wants": "a price for front struts",
+    "what_happens": "Angie takes his name, asks what the car is doing, its mileage and whether the struts are original, proposes an inspection first, gives the strut price with the alignment and two times, asks what the 600-dollar quote covers, explains complete assemblies against reused mounts, takes his number and books tomorrow at 7:30 with a full summary.",
+    "facts": {
+      "offered": [
+        "call+1d 07:30",
+        "call+2d 13:00"
+      ],
+      "booked": "call+1d 07:30",
+      "other_quote_usd": 600,
+      "note": "catalogue.json, class suv, standard parts: front_struts_pair 968.19 (complete assemblies), wheel_alignment 119.95, suspension_diag 49.95 (menu prices do not change with the class here).",
+      "prices": [
+        {
+          "what": "Replace front strut assemblies (pair)",
+          "job": "front_struts_pair",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 968.19,
+          "said": "nine sixty-eight",
+          "said_usd": 968,
+          "said_as": "before tax"
+        },
+        {
+          "what": "Four-wheel alignment",
+          "job": "wheel_alignment",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 119.95,
+          "said": "one nineteen ninety-five",
+          "said_usd": 119.95,
+          "said_as": "before tax"
+        },
+        {
+          "what": "Steering & suspension inspection - noise / vibration",
+          "job": "suspension_diag",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 49.95,
+          "said": "forty-nine ninety-five",
+          "said_usd": 49.95,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Wednesday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care on Bonny Oaks, this is Angie."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.4,
+      "said": "Yes ma'am. I'm callin' to see what y'all charge to put front struts on a Highlander."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 11.7,
+      "said": "I can sure help you with that. Who am I speaking with?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 16.9,
+      "said": "Gerald Massengill."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 18.8,
+      "said": "Mr. Massengill, thank you. What year is your Highlander?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 23.3,
+      "said": "It's a twenty-fourteen."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 25.1,
+      "said": "Okay. And tell me what it's doing, Mr. Massengill. What made you think struts?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 30.9,
+      "said": "Well, it's bouncin'. You go over the railroad tracks and it just keeps on goin'. And there's a clunk on the passenger side."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 40.7,
+      "said": "Mm-hm. How many miles are on it?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 45.1,
+      "said": "Hundred and sixty-one thousand."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 48.2,
+      "said": "And those are the originals, as far as you know?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 53.2,
+      "said": "Far as I know. I've had it since ninety thousand."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 57.9,
+      "said": "Okay. Then I'd say you got your money's worth out of them. Here's what I'd do if it were my car, Mr. Massengill. I'd have a technician drive it and put it on the lift first, because a clunk can be a strut mount or it can be a sway bar link, and one of those is a lot cheaper than the other. That inspection is forty-nine ninety-five."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 82.9,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 85.3,
+      "said": "And if it is the struts?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 88.4,
+      "said": "If it's the struts, both fronts on a Highlander are nine sixty-eight, and you'd want an alignment after, which is one nineteen ninety-five. I could look at it tomorrow morning at seven-thirty, or Wednesday at one."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 103.1,
+      "said": "Nine sixty-eight. Whoo. Fella down the road told me he'd do it for six hundred."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 110.6,
+      "said": "I believe it. Can I ask you — did he say six hundred for the complete assemblies, or for the struts by themselves?"
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 120.3,
+      "said": "I don't know what the difference is, to tell you the truth."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 125.4,
+      "said": "That's alright, most people don't. The cheaper way, they take your old spring and your old mount off and put them on a new strut. My number is a complete assembly on each side: new strut, new spring, new mount, new boot, all one piece. On a car with a hundred and sixty thousand miles, it's usually the mount that's making your clunk. So if he reuses yours, you could pay six hundred and still have the noise."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 154.0,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 155.6,
+      "said": "Huh. He didn't say nothin' about that."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 159.8,
+      "said": "It's worth asking him. And if he is quoting complete assemblies with an alignment for six hundred, Mr. Massengill, you should take it, and I mean that."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 171.6,
+      "said": "No, I 'spect he ain't. Alright. Let's do tomorrow mornin'."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 176.6,
+      "said": "Tomorrow at seven-thirty. I've got you down, and I'll check you in myself. What's a good number for you?"
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 184.4,
+      "said": "Four two three, five five five, oh one seven oh."
+    },
+    {
+      "n": 27,
+      "who": "advisor",
+      "at_s": 188.9,
+      "said": "Perfect. And if it turns out to be a link and not the struts, I'll call you with that price before we do anything."
+    },
+    {
+      "n": 28,
+      "who": "customer",
+      "at_s": 197.9,
+      "said": "That's fair.",
+      "overlap": true
+    },
+    {
+      "n": 29,
+      "who": "advisor",
+      "at_s": 200.2,
+      "said": "So that's tomorrow at seven-thirty, here at sixty-three-forty Bonny Oaks Drive. We're inspecting the front end on your Highlander, and I'll call you with what we find before any work starts."
+    },
+    {
+      "n": 30,
+      "who": "customer",
+      "at_s": 212.9,
+      "said": "Yes ma'am. Thank you."
+    },
+    {
+      "n": 31,
+      "who": "advisor",
+      "at_s": 215.6,
+      "said": "Thank you, Mr. Massengill. See you in the morning."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.73,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          8,
+          9,
+          18,
+          20,
+          22,
+          24,
+          30
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "the surname heard as a neighbour in sound, once in five mentions",
+        "script_turn": 13,
+        "said": "Massengill",
+        "stored": "Massengale"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          6,
+          10,
+          13,
+          16,
+          18,
+          23,
+          25,
+          26,
+          29
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "a number split, merged or changed",
+        "script_turn": 17,
+        "said": "Nine sixty-eight",
+        "stored": "9.68"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a few words gone without a trace",
+        "script_turn": 20,
+        "said": "new boot,",
+        "stored": ""
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost; two turns of one speaker become one line",
+        "script_turns": [
+          28,
+          29
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 8,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 22,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 14,
+        "as_digits": 12,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 3,
+        "lost": 1,
+        "joined": 1
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 501,
+    "stored_words": 478,
+    "strict_word_difference": 0.098
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 505,
+    "duration_s": 220.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am. I'm calling to see what y'all charge to put front struts on a Highlander.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I can sure help you with that. Who am I speaking with?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Gerald Massengill.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Mr. Massengill, thank you. What year is your Highlander?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's a 2014.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And tell me what it's doing, Mr. Massengill. What made you think struts?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's bouncing. You go over the railroad tracks and it just keeps on going. And there's a clunk on the passenger side.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "How many miles are on it?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "161,000.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "And those are the originals, as far as you know?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Far as I know. I've had it since ninety thousand.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Then I'd say you got your money's worth out of them. Here's what I'd do if it were my car, Mr. Massengale. I'd have a technician drive it and put it on the lift first, because a clunk can be a strut mount or it can be a sway bar link, and one of those is a lot cheaper than the other. That inspection is $49.95.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And if it is the struts?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "If it's the struts, both fronts on a Highlander are $968, and you'd want an alignment after, which is $119.95. I could look at it tomorrow morning at 7:30, or Wednesday at 1.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "9.68. Whoo. Fella down the road told me he'd do it for six hundred.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I believe it. Can I ask you, did he say 600 for the complete assemblies, or for the struts by themselves?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I don't know what the difference is, to tell you the truth.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "That's all right, most people don't. The cheaper way, they take your old spring and your old mount off and put them on a new strut. My number is a complete assembly on each side: new strut, new spring, new mount, all one piece. On a car with a hundred and sixty thousand miles, it's usually the mount that's making your clunk. So if he reuses yours, you could pay six hundred and still have the noise.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh-huh. Huh. He didn't say nothing about that.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's worth asking him. And if he is quoting complete assemblies with an alignment for 600, Mr. Massengill, you should take it, and I mean that.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, I 'spect he ain't. All right. Let's do tomorrow morning.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Tomorrow at 7:30. I've got you down, and I'll check you in myself. What's a good number for you?",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0170.",
+        "confidence": null
+      },
+      {
+        "sequence": 24,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Perfect. And if it turns out to be a link and not the struts, I'll call you with that price before we do anything. So that's tomorrow at 7:30, here at 6340 Bonny Oaks Drive. We're inspecting the front end on your Highlander, and I'll call you with what we find before any work starts.",
+        "confidence": null
+      },
+      {
+        "sequence": 25,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am. Thank you.",
+        "confidence": null
+      },
+      {
+        "sequence": 26,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you, Mr. Massengill. See you in the morning.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "What's a good number for you?",
+        "level": 1,
+        "segment": 22
+      },
+      {
+        "key": "need_discovery",
+        "quote": "And tell me what it's doing, Mr. Massengill. What made you think struts?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "If it's the struts, both fronts on a Highlander are $968, and you'd want an alignment after, which is $119.95. I could look at it tomorrow morning at 7:30, or Wednesday at 1.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "offered_time",
+        "quote": "I could look at it tomorrow morning at 7:30, or Wednesday at 1.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Tomorrow at 7:30. I've got you down, and I'll check you in myself.",
+        "level": 2,
+        "segment": 22
+      },
+      {
+        "key": "recap",
+        "quote": "So that's tomorrow at 7:30, here at 6340 Bonny Oaks Drive. We're inspecting the front end on your Highlander",
+        "level": 2,
+        "segment": 24
+      },
+      {
+        "key": "objection",
+        "quote": "did he say 600 for the complete assemblies, or for the struts by themselves?",
+        "level": 2,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "And if he is quoting complete assemblies with an alignment for 600, Mr. Massengill, you should take it, and I mean that.",
+      "why": "Having explained what her price holds, she told him when the other quote would be the better one. He booked with her.",
+      "segment": 20
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "Perfect.",
+      "say": "Let me read that back to you: 423-555-0170. Perfect."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 93.8,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "200",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 22
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 22
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 24
+        },
+        {
+          "key": "objection",
+          "level": 2,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 93.8,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 20,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care on Bonny Oaks, this is Angie",
+        "name_and_number": "What's a good number for you?",
+        "need_discovery": "And tell me what it's doing, Mr. Massengill. What made you think struts?",
+        "price_with_next_step": "If it's the struts, both fronts on a Highlander are $968, and you'd want an alignment after, which is $119.95. I could look at it tomorrow morning at 7:30, or Wednesday at 1",
+        "offered_time": "I could look at it tomorrow morning at 7:30, or Wednesday at 1",
+        "asked_for_booking": "Tomorrow at 7:30. I've got you down, and I'll check you in myself",
+        "recap": "So that's tomorrow at 7:30, here at 6340 Bonny Oaks Drive. We're inspecting the front end on your Highlander",
+        "objection": "did he say 600 for the complete assemblies, or for the struts by themselves?"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "And if he is quoting complete assemblies with an alignment for 600, Mr. Massengill, you should take it, and I mean that",
+        "why": "Having explained what her price holds, she told him when the other quote would be the better one. He booked with her."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "Perfect.",
+        "say": "Let me read that back to you: 423-555-0170. Perfect."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": 2
+    },
+    "score": 93.8,
+    "score_exact": 93.75,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "price_objection"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business, the shop and her own name.",
+    "name_and_number": "1: the name and the number are taken, and the number gets 'perfect', not a read-back. It is the one thing on the call she does not finish.",
+    "need_discovery": "2: the car, the job and what she asked for: it bounces, a clunk on the passenger side, 161,000 miles on the original struts.",
+    "price_with_next_step": "2: the inspection and why it comes first, the strut price with the alignment, and two times in the same line.",
+    "offered_time": "2: tomorrow at 7:30 or Wednesday at one.",
+    "asked_for_booking": "2: the day, the hour and who checks him in.",
+    "recap": "2: the time, the address and the work, with the promise of a call before any work.",
+    "objection": "2: she asks what the 600 is for, explains complete assemblies against a reused mount, and says when to take the other offer.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·2 + 3·2 + 1·2 + 2·2) / 2 = 15 of 16 weight points = 93.8. Exactly 93.75; the product rounds a score to one decimal.",
+    "carried_by": [
+      "objection",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Gerald Massengill, 423-555-0170, 2014 Toyota Highlander: an appointment at east on call+1d at 07:30 for a steering and suspension inspection."
+  ]
+}

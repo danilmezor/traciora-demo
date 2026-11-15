@@ -1,0 +1,1261 @@
+{
+ "_what": "the 64 shift change requests since G (ledger s14.requests)",
+ "requests": [
+  {
+   "id": "R01",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-23.mon",
+   "reason": "в пн с утра в опеку с документами. приду к 11",
+   "status": "approved",
+   "proposed": {
+    "start": "11:00",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "20:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R02",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-21.sat",
+   "reason": "в сб не выйду пацаны у меня",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "21:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:25",
+    "note": "В субботу без тебя остаёмся втроём. Нет."
+   }
+  },
+  {
+   "id": "R03",
+   "slot": "11",
+   "kind": "change_date",
+   "shift": "W-20.sun",
+   "reason": "в вс не могу. выйду в ср вместо",
+   "status": "approved",
+   "proposed": {
+    "date": "W-20.wed"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "13:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R04",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-17.tue",
+   "reason": "машина в покраске до 10. начну в 10:30?",
+   "status": "declined",
+   "proposed": {
+    "start": "10:30",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 4,
+    "at": "21:50"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Третий раз за месяц с опозданием. В 9:00."
+   }
+  },
+  {
+   "id": "R05",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-14.mon",
+   "reason": "завтра не выйду. мелкий заболел",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 1,
+    "at": "21:40"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R06",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-11.tue",
+   "reason": "у старшего собрание в школе в 9. буду к 11",
+   "status": "approved",
+   "proposed": {
+    "start": "11:00",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "19:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R07",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-9.fri",
+   "reason": "в пт заберу пацанов на выходные. нужен день",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "20:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Шубин в отпуске обе недели. С поста никого не снимаю."
+   }
+  },
+  {
+   "id": "R08",
+   "slot": "11",
+   "kind": "change_date",
+   "shift": "W-7.sat",
+   "reason": "в сб не могу. выйду в ср. с лёхой договорился",
+   "status": "declined",
+   "proposed": {
+    "date": "W-7.wed"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "13:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:50",
+    "note": "Карпов за тебя уже два раза выходил. В субботу работаешь."
+   }
+  },
+  {
+   "id": "R09",
+   "slot": "11",
+   "kind": "change_time",
+   "shift": "W-4.mon",
+   "reason": "в пн к 8:30 в школу к директору. буду к 10:30",
+   "status": "approved",
+   "proposed": {
+    "start": "10:30",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "21:02"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R10",
+   "slot": "11",
+   "kind": "remove",
+   "shift": "W-2.fri",
+   "reason": "в пт нужен выходной. пацанов везу к матери",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 3,
+    "at": "18:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:25",
+    "note": "За три дня не снимаю. Правило — за семь."
+   }
+  },
+  {
+   "id": "R11",
+   "slot": "F2",
+   "kind": "change_time",
+   "shift": "W-22.wed",
+   "reason": "задерживаюсь на этой неделе. можно в среду с 10 до 19?",
+   "status": "declined",
+   "proposed": {
+    "start": "10:00",
+    "end": "19:00"
+   },
+   "filed": {
+    "days_before_shift": 2,
+    "at": "23:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Нет. С девяти, как все."
+   }
+  },
+  {
+   "id": "R12",
+   "slot": "F2",
+   "kind": "remove",
+   "shift": "W-20.fri",
+   "reason": "завтра не выйду",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 1,
+    "at": "23:20"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R13",
+   "slot": "15",
+   "kind": "change_time",
+   "shift": "W-21.mon",
+   "reason": "Садик в понедельник открывают с 8, а мост стоит. Можно в этот день с 9:30 до 18:30? Отработаю!",
+   "status": "approved",
+   "proposed": {
+    "start": "09:30",
+    "end": "18:30"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "18:25"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R14",
+   "slot": "15",
+   "kind": "change_time",
+   "shift": "W-16.thu",
+   "reason": "Утренник у дочки в 9, в четверг буду к 10:30. Простите!!",
+   "status": "approved",
+   "proposed": {
+    "start": "10:30",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "18:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R15",
+   "slot": "15",
+   "kind": "remove",
+   "shift": "W-10.sun",
+   "reason": "В воскресенье везу дочку к бабушке в Димитровград",
+   "status": "withdrawn",
+   "filed": {
+    "days_before_shift": 10,
+    "at": "18:35"
+   },
+   "withdrawn": {
+    "days_after_filing": 2,
+    "at": "08:20"
+   }
+  },
+  {
+   "id": "R16",
+   "slot": "15",
+   "kind": "change_time",
+   "shift": "W-3.wed",
+   "reason": "На мосту ремонт, одна полоса всю неделю. Можно пока с 9:30? Вечером отработаю!",
+   "status": "declined",
+   "proposed": {
+    "start": "09:30",
+    "end": "18:30"
+   },
+   "filed": {
+    "days_before_shift": 5,
+    "at": "18:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Выезжай на десять минут раньше, Женя. С девяти."
+   }
+  },
+  {
+   "id": "R17",
+   "slot": "12",
+   "kind": "change_date",
+   "shift": "W-18.sat",
+   "reason": "У двоюродного брата свадьба в субботу в Димитровграде. Отработаю во вторник.",
+   "status": "approved",
+   "proposed": {
+    "date": "W-17.tue"
+   },
+   "filed": {
+    "days_before_shift": 14,
+    "at": "14:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:10",
+    "note": null
+   }
+  },
+  {
+   "id": "R18",
+   "slot": "12",
+   "kind": "change_time",
+   "shift": "W-6.thu",
+   "reason": "К зубному на 16:00. Отпустите в 15:30.",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "15:30"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "14:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:10",
+    "note": null
+   }
+  },
+  {
+   "id": "R19",
+   "slot": "13",
+   "kind": "change_time",
+   "shift": "W-13.fri",
+   "reason": "Прошу в пятницу поставить меня с 13:00: с утра везу мать в больницу на обследование, после намаза буду на месте.",
+   "status": "approved",
+   "proposed": {
+    "start": "13:00",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 12,
+    "at": "18:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R20",
+   "slot": "13",
+   "kind": "remove",
+   "shift": "W-5.mon",
+   "reason": "В понедельник у жены операция на глазу, отвожу её и забираю. Прошу освободить от смены.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 11,
+    "at": "18:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:35",
+    "note": null
+   }
+  },
+  {
+   "id": "R21",
+   "slot": "14",
+   "kind": "change_time",
+   "shift": "W-9.thu",
+   "reason": "в чт надо в колледж за дипломом к 9, можно прийти к 11?)",
+   "status": "approved",
+   "proposed": {
+    "start": "11:00",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "22:14"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:45",
+    "note": null
+   }
+  },
+  {
+   "id": "R22",
+   "slot": "14",
+   "kind": "remove",
+   "shift": "W-1.fri",
+   "reason": "в пт друг переезжает, просил помочь. можно выходной?",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 3,
+    "at": "21:50"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "Диагностика забита, Карпову без тебя никак. В следующий раз проси за неделю."
+   }
+  },
+  {
+   "id": "R23",
+   "slot": "19",
+   "kind": "remove",
+   "shift": "W-12.fri",
+   "reason": "В пятницу с мужиками на Волгу с ночёвкой, судак пошёл. Прошу отгул за свой счёт.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 10,
+    "at": "19:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R24",
+   "slot": "19",
+   "kind": "change_time",
+   "shift": "W-3.mon",
+   "reason": "В воскресенье поздно вернусь с рыбалки. В понедельник с 10:30?",
+   "status": "declined",
+   "proposed": {
+    "start": "10:30",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 4,
+    "at": "19:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": "Нет. В понедельник с утра «Тёплый контур»."
+   }
+  },
+  {
+   "id": "R25",
+   "slot": "20",
+   "kind": "change_time",
+   "shift": "W-19.tue",
+   "reason": "Во вторник запись в МФЦ на 16:30. Уйду в 16:00.",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "16:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "23:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:10",
+    "note": null
+   }
+  },
+  {
+   "id": "R26",
+   "slot": "20",
+   "kind": "remove",
+   "shift": "W-11.mon",
+   "reason": "Машина на кузовном до вторника, в понедельник не на чем доехать.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 7,
+    "at": "23:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R27",
+   "slot": "20",
+   "kind": "change_time",
+   "shift": "W-6.sat",
+   "reason": "В субботу можно с 11? Поздно лягу.",
+   "status": "declined",
+   "proposed": {
+    "start": "11:00",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 3,
+    "at": "23:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:05",
+    "note": "Это не причина, Антон."
+   }
+  },
+  {
+   "id": "R28",
+   "slot": "20",
+   "kind": "change_time",
+   "shift": "W-2.tue",
+   "reason": "завтра можно с 11? не выспался",
+   "status": "expired",
+   "proposed": {
+    "start": "11:00",
+    "end": "18:00"
+   },
+   "filed": {
+    "days_before_shift": 1,
+    "at": "23:50"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R29",
+   "slot": "21",
+   "kind": "remove",
+   "shift": "W-22.fri",
+   "reason": "В пятницу у сына турнир в Димитровграде, первая игра в 12. Прошу освободить.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "19:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R30",
+   "slot": "21",
+   "kind": "change_time",
+   "shift": "W-18.fri",
+   "reason": "В пятницу у сына тренировка в 16:00. Можно уйти в 15:00? Я в этот день на Инженерном, 10-й проезд, 30.",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "15:00"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "19:02"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R31",
+   "slot": "21",
+   "kind": "remove",
+   "shift": "W-13.fri",
+   "reason": "В пятницу у сына сборы, хотел бы отвезти и остаться.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 8,
+    "at": "19:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:35",
+    "note": "Две прошлые пятницы ты уже брал. В эту у Блинова выходной."
+   }
+  },
+  {
+   "id": "R32",
+   "slot": "21",
+   "kind": "change_date",
+   "shift": "W-9.fri",
+   "reason": "В пятницу у сына игра на выезде. Отработаю в среду, в свой выходной.",
+   "status": "approved",
+   "proposed": {
+    "date": "W-9.wed"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "19:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R33",
+   "slot": "21",
+   "kind": "change_date",
+   "shift": "W-5.fri",
+   "reason": "В пятницу финал городского первенства, начало в 13:00. Выйду вместо пятницы в понедельник.",
+   "status": "approved",
+   "proposed": {
+    "date": "W-5.mon"
+   },
+   "filed": {
+    "days_before_shift": 10,
+    "at": "19:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R34",
+   "slot": "21",
+   "kind": "change_time",
+   "shift": "W-1.fri",
+   "reason": "Последняя игра сезона в пятницу в 16:00. Уйду в 14:30?",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "14:30"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "19:00"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R35",
+   "slot": "9",
+   "kind": "remove",
+   "shift": "W-8.mon",
+   "reason": "В понедельник вызывают в суд свидетелем по ДТП. Повестка у Ирины Владимировны.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 12,
+    "at": "09:35"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "o+2:30",
+    "note": null
+   }
+  },
+  {
+   "id": "R36",
+   "slot": "6",
+   "kind": "change_time",
+   "shift": "W-20.mon>=p6",
+   "reason": "К стоматологу на 9:00, раньше записи нет. Буду к 11 и отработаю до закрытия.",
+   "status": "approved",
+   "proposed": {
+    "start": "11:00",
+    "end": "20:00"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "14:20"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R37",
+   "slot": "6",
+   "kind": "change_date",
+   "shift": "W-14.thu>=p6",
+   "reason": "У сестры в этот день выпускной в Самаре. Можно я выйду в свой выходной вместо этой смены?",
+   "status": "approved",
+   "proposed": {
+    "date": "W-14.thu>=p6>!p6"
+   },
+   "filed": {
+    "days_before_shift": 15,
+    "at": "14:05"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-1:20",
+    "note": null
+   }
+  },
+  {
+   "id": "R38",
+   "slot": "6",
+   "kind": "change_time",
+   "shift": "W-7.mon>=p6",
+   "reason": "В 18:00 подписываю договор на квартиру. Можно уйти в 17:00?",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "17:00"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "14:30"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-0:45",
+    "note": null
+   }
+  },
+  {
+   "id": "R39",
+   "slot": "6",
+   "kind": "remove",
+   "shift": "W-3.thu>=p6",
+   "reason": "Подруга прилетает, хотела взять день за свой счёт.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 9,
+    "at": "14:10"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:50",
+    "note": "Это первая неделя, когда утром на приёмке двое. Вы мне нужны обе."
+   }
+  },
+  {
+   "id": "R40",
+   "slot": "7",
+   "kind": "change_time",
+   "shift": "W-10.tue>=p7",
+   "reason": "В ГИБДД на 16:15 менять права, другого окна не было. Можно уйти в 15:30?",
+   "status": "declined",
+   "proposed": {
+    "start": "09:00",
+    "end": "15:30"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "19:35"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": "После обеда приёмка на вас двоих. Запишитесь на свой выходной."
+   }
+  },
+  {
+   "id": "R41",
+   "slot": "7",
+   "kind": "change_date",
+   "shift": "W-5.sat>=p7",
+   "reason": "У родителей в этот день юбилей. Могу выйти в свой выходной вместо этой смены.",
+   "status": "approved",
+   "proposed": {
+    "date": "W-5.sat>=p7>!p7"
+   },
+   "filed": {
+    "days_before_shift": 14,
+    "at": "19:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": null
+   }
+  },
+  {
+   "id": "R42",
+   "slot": "29",
+   "kind": "remove",
+   "shift": "W-16.sat>=p29",
+   "reason": "У нас с мужем годовщина, уезжаем на два дня на турбазу. Прошу освободить от смены.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 16,
+    "at": "12:15"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R43",
+   "slot": "29",
+   "kind": "change_time",
+   "shift": "W-9.tue>=p29",
+   "reason": "К окулисту на 16:30. Прошу отпустить в 15:30.",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "15:30"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "12:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 0,
+    "at": "c-2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R44",
+   "slot": "29",
+   "kind": "remove",
+   "shift": "W-2.sat>=p29",
+   "reason": "На эти дни приезжают внуки.",
+   "status": "withdrawn",
+   "filed": {
+    "days_before_shift": 12,
+    "at": "12:20"
+   },
+   "withdrawn": {
+    "days_after_filing": 3,
+    "at": "10:30"
+   }
+  },
+  {
+   "id": "R45",
+   "slot": "17",
+   "kind": "change_time",
+   "shift": "W-21.thu>=p17",
+   "reason": "Мастер по интернету придёт с 9 до 11. Буду к 11.",
+   "status": "approved",
+   "proposed": {
+    "start": "11:00",
+    "end": "20:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "20:45"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": "До одиннадцати на приёмке постою сам."
+   }
+  },
+  {
+   "id": "R46",
+   "slot": "17",
+   "kind": "remove",
+   "shift": "W-12.fri>=p17",
+   "reason": "Мальчишник у друга, с утра уезжаем в Казань.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 11,
+    "at": "20:50"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": "Вы в этот день на приёмке один. Заменить некем."
+   }
+  },
+  {
+   "id": "R47",
+   "slot": "17",
+   "kind": "remove",
+   "shift": "W-8.wed>=p17",
+   "reason": "Переезжаю, машина заказана на этот день.",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 7,
+    "at": "20:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": "Один на приёмке — не отпущу. Поменяйтесь со Светланой и подайте заново."
+   }
+  },
+  {
+   "id": "R48",
+   "slot": "17",
+   "kind": "change_time",
+   "shift": "W-4.tue>=p17",
+   "reason": "Собрание в садике в 17:00. Можно уйти в 16:30?",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "16:30"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "20:42"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": "С 16:30 на приёмке будет Демидова, она согласна."
+   }
+  },
+  {
+   "id": "R49",
+   "slot": "16",
+   "kind": "change_date",
+   "shift": "W-7.fri>=p16",
+   "reason": "Маме в этот день оперируют колено в Димитровграде, везу её сама. Отработаю в свой выходной; Артём согласен выйти за меня.",
+   "status": "approved",
+   "proposed": {
+    "date": "W-7.fri>=p16>!p16"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "19:40"
+   },
+   "decided": {
+    "by": 4,
+    "working_days_after_filing": 1,
+    "at": "o+2:00",
+    "note": null
+   }
+  },
+  {
+   "id": "R50",
+   "slot": "16",
+   "kind": "remove",
+   "shift": "S5>=p16",
+   "reason": "Отметила всю неделю как недоступную: у дочери свадьба в Самаре, выезжаем в первый же день. Эта смена уже была опубликована. Артём в курсе, список моих клиентов на эти дни лежит у телефона.",
+   "status": "open",
+   "filed": {
+    "at": "p16-3@o+1:05"
+   }
+  },
+  {
+   "id": "R51",
+   "slot": "16",
+   "kind": "remove",
+   "shift": "S5>=p16>p16",
+   "reason": "Та же неделя, вторая опубликованная смена. Хочу передать дела нормально, а не отпрашиваться в последний день.",
+   "status": "open",
+   "filed": {
+    "at": "p16-3@o+1:08"
+   }
+  },
+  {
+   "id": "R52",
+   "slot": "23",
+   "kind": "remove",
+   "shift": "W-20.mon>=p23",
+   "reason": "К врачу. Запись на этот день.",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 4,
+    "at": "19:10"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": "ок"
+   }
+  },
+  {
+   "id": "R53",
+   "slot": "23",
+   "kind": "change_time",
+   "shift": "W-12.thu>=p23",
+   "reason": "С утра в школу к классной. Буду к 10:30.",
+   "status": "expired",
+   "proposed": {
+    "start": "10:30",
+    "end": "20:00"
+   },
+   "filed": {
+    "days_before_shift": 5,
+    "at": "19:20"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R54",
+   "slot": "23",
+   "kind": "remove",
+   "shift": "W-4.fri>=p23",
+   "reason": "На рыбалку с ночёвкой, давно собирались.",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 6,
+    "at": "19:05"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R55",
+   "slot": "24",
+   "kind": "change_time",
+   "shift": "W-15.wed>=p24",
+   "reason": "К стоматологу на 8:40, ближайшая запись только через два месяца. Приду к 10:30 и закрою смену.",
+   "status": "approved",
+   "proposed": {
+    "start": "10:30",
+    "end": "20:00"
+   },
+   "filed": {
+    "days_before_shift": 12,
+    "at": "13:15"
+   },
+   "decided": {
+    "by": 2,
+    "at": "W-15.tue@12:20",
+    "note": "Согласовано. Извините, что неделю не было ответа."
+   }
+  },
+  {
+   "id": "R56",
+   "slot": "24",
+   "kind": "remove",
+   "shift": "W-6.mon>=p24",
+   "reason": "У брата защита диплома в КАИ, обещала быть.",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 11,
+    "at": "13:30"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R57",
+   "slot": "26",
+   "kind": "change_time",
+   "shift": "W-14.fri",
+   "reason": "в пт уйду в 16 на дачу надо",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "16:00"
+   },
+   "filed": {
+    "days_before_shift": 2,
+    "at": "08:25"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 0,
+    "at": "o+1:00",
+    "note": "ок"
+   }
+  },
+  {
+   "id": "R58",
+   "slot": "26",
+   "kind": "remove",
+   "shift": "W-3.tue",
+   "reason": "на охоту на три дня",
+   "status": "expired",
+   "filed": {
+    "days_before_shift": 5,
+    "at": "18:20"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R59",
+   "slot": "27",
+   "kind": "change_time",
+   "shift": "W-18.tue",
+   "reason": "По вторникам у пацанов тренировка в 16:30, я тренер. Можно в этот вторник до 16:00",
+   "status": "approved",
+   "proposed": {
+    "start": "09:00",
+    "end": "16:00"
+   },
+   "filed": {
+    "days_before_shift": 6,
+    "at": "18:30"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 1,
+    "at": "o+0:30",
+    "note": "давай"
+   }
+  },
+  {
+   "id": "R60",
+   "slot": "27",
+   "kind": "remove",
+   "shift": "W-9.fri",
+   "reason": "В пятницу турнир на Кубок двора, везу команду. Прошу отгул",
+   "status": "approved",
+   "filed": {
+    "days_before_shift": 8,
+    "at": "18:35"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 2,
+    "at": "o+0:30",
+    "note": "ок"
+   }
+  },
+  {
+   "id": "R61",
+   "slot": "28",
+   "kind": "change_date",
+   "shift": "W-22.fri",
+   "reason": "в пятницу с утра экзамен. можно я выйду в четверг вместо пятницы? извините если неудобно",
+   "status": "expired",
+   "proposed": {
+    "date": "W-22.thu"
+   },
+   "filed": {
+    "days_before_shift": 8,
+    "at": "22:30"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  },
+  {
+   "id": "R62",
+   "slot": "28",
+   "kind": "change_date",
+   "shift": "W-21.fri",
+   "reason": "экзамены, последний в пятницу. можно во вторник вместо?",
+   "status": "approved",
+   "proposed": {
+    "date": "W-21.tue"
+   },
+   "filed": {
+    "days_before_shift": 9,
+    "at": "22:10"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 3,
+    "at": "o+0:40",
+    "note": "ок"
+   }
+  },
+  {
+   "id": "R63",
+   "slot": "28",
+   "kind": "remove",
+   "shift": "W-21.sat",
+   "reason": "в понедельник последний экзамен, в субботу надо готовиться. про пятницу уже просил, это второй день",
+   "status": "declined",
+   "filed": {
+    "days_before_shift": 7,
+    "at": "22:15"
+   },
+   "decided": {
+    "by": 22,
+    "working_days_after_filing": 1,
+    "at": "o+0:40",
+    "note": "Два дня на одной неделе не отдам."
+   }
+  },
+  {
+   "id": "R64",
+   "slot": "28",
+   "kind": "change_date",
+   "shift": "W-4.fri",
+   "reason": "в пятницу с утра защита курсовой. можно в четверг вместо? Фарит абый не против",
+   "status": "expired",
+   "proposed": {
+    "date": "W-4.thu"
+   },
+   "filed": {
+    "days_before_shift": 7,
+    "at": "22:25"
+   },
+   "expired": {
+    "at": "the daily pass on the day after the shift",
+    "note": "The shift passed before anyone answered"
+   }
+  }
+ ]
+}

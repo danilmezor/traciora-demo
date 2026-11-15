@@ -1,0 +1,326 @@
+{
+ "format": "bank-en/labels-and-notes/1",
+ "about": "Staff talking to staff inside a chat, and the small lines labels and priority leave. A note is private, short, written by a person at the counter; the assistant's hand-over note is in assistant.json. Writers: any person who handles chats, unless 'by' narrows it; a writer in an advisor file uses their own notes first.",
+ "notes": [
+  {
+   "key": "price.check_figure",
+   "reasons": [
+    "price"
+   ],
+   "text": "@{colleague_first} is {job_price} still right for the {job} on a {model}? customer asking in chat"
+  },
+  {
+   "key": "price.truck_class",
+   "reasons": [
+    "price"
+   ],
+   "text": "@{colleague_first} its a pickup, the list price wont hold. can you price it before I answer"
+  },
+  {
+   "key": "price.other_shop",
+   "reasons": [
+    "price"
+   ],
+   "text": "customer says another shop quoted {heard_price}. I didnt match it, told her what ours includes"
+  },
+  {
+   "key": "price.wants_itemized",
+   "reasons": [
+    "price",
+    "fleet"
+   ],
+   "text": "@{colleague_first} he wants parts and labor separate on the estimate, please send it that way"
+  },
+  {
+   "key": "booking.squeeze_in",
+   "reasons": [
+    "booking"
+   ],
+   "text": "@{tech_first} can you take a {job} at {time_a} {day_a}? I told her I'd confirm"
+  },
+  {
+   "key": "booking.full_morning",
+   "reasons": [
+    "booking"
+   ],
+   "text": "@{colleague_first} morning is full, I offered {time_a} and {time_b}. if one opens up let me know"
+  },
+  {
+   "key": "booking.shuttle",
+   "reasons": [
+    "booking"
+   ],
+   "text": "needs the shuttle home at drop-off. put her on the first run"
+  },
+  {
+   "key": "booking.called_instead",
+   "reasons": [
+    "booking"
+   ],
+   "text": "Called her instead, easier. Booked {day_agreed} {time_agreed}."
+  },
+  {
+   "key": "symptom.road_test",
+   "reasons": [
+    "symptom"
+   ],
+   "text": "@{tech_first} customer says it only does it after the car warms up, take it out for a good drive before you call it"
+  },
+  {
+   "key": "symptom.photo_lamp",
+   "reasons": [
+    "symptom"
+   ],
+   "text": "photo in the chat is a flashing engine light. told him not to drive it far. @{colleague_first} can we fit him in today"
+  },
+  {
+   "key": "symptom.overheat_tow",
+   "reasons": [
+    "symptom"
+   ],
+   "text": "@{manager_first} overheated on the interstate, asking about a tow. number is in the chat"
+  },
+  {
+   "key": "status.part_eta",
+   "reasons": [
+    "status"
+   ],
+   "text": "@{colleague_first} supplier says {eta_day} for the {model} part. nobody has told the customer yet"
+  },
+  {
+   "key": "status.wants_by",
+   "reasons": [
+    "status"
+   ],
+   "text": "@{tech_first} she needs the {model} back {time_said}, kids. can we make it"
+  },
+  {
+   "key": "status.repeat_ask",
+   "reasons": [
+    "status"
+   ],
+   "text": "second time she has asked today. @{colleague_first} please answer before lunch"
+  },
+  {
+   "key": "found.approved",
+   "reasons": [
+    "found_work"
+   ],
+   "text": "@{tech_first} approved: the {finding_item}. not the rest. go ahead"
+  },
+  {
+   "key": "found.declined",
+   "reasons": [
+    "found_work"
+   ],
+   "text": "declined the {finding_item} for now. noted on the car for next visit"
+  },
+  {
+   "key": "found.husband",
+   "reasons": [
+    "found_work"
+   ],
+   "text": "waiting on a yes from home on the {finding_item}. dont start it yet"
+  },
+  {
+   "key": "found.po_cap",
+   "reasons": [
+    "found_work",
+    "fleet"
+   ],
+   "text": "@{colleague_first} PO {po} covers the service only. anything over, call {contact_first} first"
+  },
+  {
+   "key": "moving.rebooked",
+   "reasons": [
+    "moving"
+   ],
+   "text": "moved from {appt_day} to {day_agreed} {time_agreed}. old slot is open"
+  },
+  {
+   "key": "moving.no_show_risk",
+   "reasons": [
+    "moving"
+   ],
+   "text": "this is the second time she has moved it. @{colleague_first} call her the day before"
+  },
+  {
+   "key": "moving.add_job",
+   "reasons": [
+    "moving"
+   ],
+   "text": "added {job} to the visit on {day_agreed}. parts need ordering, @{colleague_first} can you"
+  },
+  {
+   "key": "complaint.comeback",
+   "reasons": [
+    "complaint"
+   ],
+   "text": "@{manager_first} comeback on the {model}, work done {visit_day}. customer is calm but wants it looked at today"
+  },
+  {
+   "key": "complaint.bill",
+   "reasons": [
+    "complaint"
+   ],
+   "text": "@{manager_first} customer questions the shop supplies on the invoice. I explained it. heads up if she calls"
+  },
+  {
+   "key": "complaint.no_callback",
+   "reasons": [
+    "complaint"
+   ],
+   "text": "@{colleague_first} we told him we'd call yesterday and didnt. can you call him now, I'm with a customer"
+  },
+  {
+   "key": "complaint.warranty",
+   "reasons": [
+    "complaint"
+   ],
+   "text": "@{manager_first} looks like warranty on the {job} from {visit_day}. ok to look at no charge?"
+  },
+  {
+   "key": "complaint.manager_reply",
+   "reasons": [
+    "complaint"
+   ],
+   "by": [
+    4,
+    22
+   ],
+   "text": "I'll call her myself this afternoon."
+  },
+  {
+   "key": "fleet.list_in",
+   "reasons": [
+    "fleet"
+   ],
+   "text": "@{tech_first} {company} list for {day_said}: {unit}, {unit_b}. service on both"
+  },
+  {
+   "key": "fleet.quote_late",
+   "reasons": [
+    "fleet"
+   ],
+   "text": "@{colleague_first} {company} quote still not sent. can you get it out today"
+  },
+  {
+   "key": "fleet.statement",
+   "reasons": [
+    "fleet"
+   ],
+   "text": "{contact_first} at {company} needs the invoice for {unit} for their statement. sent to the office"
+  },
+  {
+   "key": "any.reply_ack",
+   "reasons": [
+    "any"
+   ],
+   "text": "on it"
+  },
+  {
+   "key": "any.covering",
+   "reasons": [
+    "any"
+   ],
+   "text": "@{colleague_first} I'm off tomorrow, this one is yours. customer knows"
+  },
+  {
+   "key": "any.slow_typer",
+   "reasons": [
+    "any"
+   ],
+   "by": [
+    5,
+    29
+   ],
+   "text": "@{colleague_first} can you answer this one for me, I'm faster on the phone"
+  }
+ ],
+ "labels": {
+  "available": [
+   "booking",
+   "price",
+   "status",
+   "approval",
+   "complaint",
+   "fleet",
+   "tires"
+  ],
+  "product": "handoff",
+  "by_reason": {
+   "price": "price",
+   "booking": "booking",
+   "hours": null,
+   "symptom": "booking",
+   "status": "status",
+   "found_work": "approval",
+   "moving": "booking",
+   "complaint": "complaint",
+   "fleet": "fleet",
+   "spam": null
+  },
+  "tires_instead": "when the job block is new_tires, flat, alignment, balance, rotation or tpms, 'tires' replaces 'price' or 'booking'",
+  "when": "added by the person who handles the chat, after their reply and before they resolve it; a symptom chat is labelled booking only when a time was set; the advisor's label_share in the sheet decides whether it happens",
+  "handoff": "the product adds 'handoff' with the hand-over and a person's reply takes it off; the bank never adds or removes it by hand"
+ },
+ "priority": {
+  "base_shares": {
+   "high": 4,
+   "urgent": 0.5,
+   "low": 1
+  },
+  "patterns": [
+   {
+    "level": "high",
+    "reasons": [
+     "complaint"
+    ],
+    "when": "a person sets it when they first read a complaint",
+    "note_with_it": "complaint.comeback"
+   },
+   {
+    "level": "high",
+    "reasons": [
+     "fleet"
+    ],
+    "when": "a company vehicle off the road; the page says it is looked at ahead of the line",
+    "note_with_it": "fleet.list_in"
+   },
+   {
+    "level": "high",
+    "reasons": [
+     "status"
+    ],
+    "when": "the customer has asked twice and the car is past its promised time",
+    "note_with_it": "status.repeat_ask"
+   },
+   {
+    "level": "urgent",
+    "reasons": [
+     "symptom",
+     "fleet"
+    ],
+    "when": "a car stopped on the road, overheating, or a work van with a driver waiting",
+    "note_with_it": "symptom.overheat_tow"
+   },
+   {
+    "level": "low",
+    "reasons": [
+     "price",
+     "booking"
+    ],
+    "when": "the customer said they will come next month, or is comparing shops and asked for nothing more",
+    "note_with_it": "price.other_shop"
+   },
+   {
+    "level": "normal",
+    "reasons": [
+     "any"
+    ],
+    "when": "a person sets it back once the chat is answered and the matter is handled"
+   }
+  ],
+  "by_wait": "everything else moves by the wait, as the product computes it; the bank writes no line for that"
+ }
+}

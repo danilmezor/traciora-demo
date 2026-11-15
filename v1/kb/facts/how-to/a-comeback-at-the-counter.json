@@ -1,0 +1,121 @@
+{
+ "path": "how-to/a-comeback-at-the-counter.md",
+ "title": "A comeback at the counter",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What an advisor does and says when a customer returns with the same problem.",
+ "serves": [
+  "S6",
+  "S1",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 303,
+ "links_to": [
+  "shop-floor/when-a-car-comes-back.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Six counter steps; the new order is of type warranty tied to the original (design 2.3).",
+  "Outcome table: our fault inside warranty = free; outside warranty = goodwill decided by slot 4 or 22; a different fault = estimate, no charge for the look; customer's part = labour charged again; unsure = slot 4 the same day.",
+  "A comeback inspection is never charged.",
+  "A second comeback on the same repair goes to slot 4 or slot 22 with both orders (A5's two vans came back at west: S1, S6)."
+ ],
+ "tables": [
+  {
+   "section": "After the foreman has looked",
+   "columns": [
+    "What he found",
+    "What happens"
+   ],
+   "rows": [
+    {
+     "What he found": "Our work or our part, inside the warranty",
+     "What happens": "Fixed at no charge. Say so before they ask. Offer the shuttle"
+    },
+    {
+     "What he found": "Our work, outside the warranty",
+     "What happens": "Greg or Dale decides. Usually we fix it: goodwill order"
+    },
+    {
+     "What he found": "A different fault with the same symptom",
+     "What happens": "Explain with the old part or a photo. Estimate like any job. No charge for the look"
+    },
+    {
+     "What he found": "The customer's own part",
+     "What happens": "Labour is charged again. This was said at the start; say it kindly"
+    },
+    {
+     "What he found": "Not sure",
+     "What happens": "It is Greg's call, not yours. The same day"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "A comeback at the counter",
+   "item": "\"Thank you for bringing it straight back.\" Mean it. The ones who do not come back are the ones we lose."
+  },
+  {
+   "section": "A comeback at the counter",
+   "item": "Find the first order. Read what was done and who did it before you say anything about the cause."
+  },
+  {
+   "section": "A comeback at the counter",
+   "item": "Open a new order, type warranty, tied to the first one. Do not reopen the old order and do not write it up as a new customer-pay job \"until we know\"."
+  },
+  {
+   "section": "A comeback at the counter",
+   "item": "It goes to the front of the line. The foreman looks first: When a car comes back."
+  },
+  {
+   "section": "A comeback at the counter",
+   "item": "Tell the customer when they will hear: today, with a time."
+  },
+  {
+   "section": "A comeback at the counter",
+   "item": "Do not guess the cause at the counter and do not blame the part, the technician or the customer. \"We will find out and I will call you by two.\""
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [
+  "The look at a comeback is free; second comebacks escalate."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same; the window is 30 days."
+ ]
+}

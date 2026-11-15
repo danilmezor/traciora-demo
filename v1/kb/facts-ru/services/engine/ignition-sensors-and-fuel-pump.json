@@ -1,0 +1,139 @@
+{
+ "path": "services/engine/ignition-sensors-and-fuel-pump.md",
+ "title": "Зажигание, датчики и бензонасос",
+ "title_en": "Ignition, sensors and fuel pump",
+ "exists_in": "both",
+ "english_sheet": "facts/services/engine/ignition-sensors-and-fuel-pump.json",
+ "first_revision_text": "ru/_history/services/engine/ignition-sensors-and-fuel-pump.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "10",
+ "purpose": "The repairs that most often follow a check-engine diagnosis.",
+ "serves": [
+  "challenge:fact-in-table",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 244,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Замена катушки зажигания», «Замена датчика кислорода (лямбда-зонда)», «Замена топливного насоса (в баке)».",
+  "On most cars of the Russian parc the pump is reached through a hatch under the rear seat, not by lowering the tank."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Зажигание, датчики и бензонасос",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Стандарт"
+   ],
+   "rows": [
+    {
+     "В наряде": "Замена катушки зажигания (1 шт.)",
+     "Н/ч": "0,3",
+     "Стандарт": "3 930 ₽"
+    },
+    {
+     "В наряде": "Замена датчика кислорода (лямбда-зонда)",
+     "Н/ч": "0,6",
+     "Стандарт": "6 180 ₽"
+    },
+    {
+     "В наряде": "Замена топливного насоса (в баке)",
+     "Н/ч": "1,4",
+     "Стандарт": "9 520 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "ignition_coil",
+   "what": "hours",
+   "class": "car",
+   "value": 0.3
+  },
+  {
+   "catalogue_key": "ignition_coil",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3930.0
+  },
+  {
+   "catalogue_key": "oxygen_sensor",
+   "what": "hours",
+   "class": "car",
+   "value": 0.6
+  },
+  {
+   "catalogue_key": "oxygen_sensor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 6180.0
+  },
+  {
+   "catalogue_key": "fuel_pump",
+   "what": "hours",
+   "class": "car",
+   "value": 1.4
+  },
+  {
+   "catalogue_key": "fuel_pump",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 9520.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Андрей Викторович Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  3930.0,
+  6180.0,
+  9520.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

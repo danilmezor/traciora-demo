@@ -1,0 +1,93 @@
+{
+ "path": "policies/customer-supplied-parts.md",
+ "title": "Запчасти клиента",
+ "title_en": "Customer-supplied parts",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/customer-supplied-parts.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Staff rules for fitting parts the customer brings.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "S15"
+ ],
+ "length_class": "short",
+ "words_ru": 223,
+ "links_to": [
+  "customers/bringing-your-own-parts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Three things said before taking the keys: the normal hour, warranty on the work only, repeat work is paid again.",
+  "The customer's part is a hand-typed line with what it is, the maker and the price the customer states; the line's own price is zero.",
+  "The note printed in the act: «Запасные части предоставлены заказчиком. Гарантия распространяется только на работы по установке».",
+  "A sixth step: advise the customer to keep the box and the receipt."
+ ],
+ "new_facts": [
+  "The wording of the note printed in the act."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Запчасти клиента",
+   "item": "До того как взять ключи, скажите три вещи: нормо-час обычный; гарантия только на нашу работу, на деталь её нет; если деталь не подойдёт или откажет, повторная работа оплачивается снова. Получите «да»."
+  },
+  {
+   "section": "Запчасти клиента",
+   "item": "В заказ-наряд запчасть клиента вносится отдельной строкой: «запчасть клиента», что это, чьего производства, сколько стоит со слов клиента. Цена в строке нулевая, каталожного номера у неё не будет. Это единственный случай, когда строка запчасти, набранная руками, — правильная."
+  },
+  {
+   "section": "Запчасти клиента",
+   "item": "В примечании к наряду: «Запасные части предоставлены заказчиком. Гарантия распространяется только на работы по установке». Примечание печатается в акте."
+  },
+  {
+   "section": "Запчасти клиента",
+   "item": "Привезённые тормозные шланги, суппорты и главные цилиндры, подушки и ремни безопасности, шины старше шести лет и детали тормозов и рулевого с разборки не ставим. На приёмке исключений нет; хочет спорить — к Сергею Анатольевичу или Ринату Фаридовичу."
+  },
+  {
+   "section": "Запчасти клиента",
+   "item": "Расходные материалы начисляются, как на любую работу по нормо-часу."
+  },
+  {
+   "section": "Запчасти клиента",
+   "item": "Посоветуйте сохранить упаковку и чек на деталь. Если она окажется с браком, возвращать её продавцу будет клиент, а не мы."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринату Фаридовичу",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

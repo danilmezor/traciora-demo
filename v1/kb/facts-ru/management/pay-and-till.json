@@ -1,0 +1,157 @@
+{
+ "path": "management/pay-and-till.md",
+ "title": "Оплата труда и касса",
+ "title_en": "Pay and till",
+ "exists_in": "both",
+ "english_sheet": "facts/management/pay-and-till.json",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: how each job is paid, without amounts, and who sees the till counts. The page a junior is refused (stories S12.5).",
+ "serves": [
+  "visibility:senior",
+  "S12",
+  "S2",
+  "challenge:kb-does-not-say",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 341,
+ "links_to": [
+  "how-to/closing-the-till.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Pay types in Russian terms: mechanics on piece rate (сдельно) by sold нормо-часы; advisors on salary with a monthly bonus on sold hours. The ERP pay types are the same as in English.",
+  "A line that ties piece rate to the Russian leak: work past the order pays the mechanic in hand.",
+  "Till: the threshold is 100 RUB.",
+  "Ledger s12.pages names this page for the refusal by rank (S12.5), as in English."
+ ],
+ "new_facts": [],
+ "new_amounts": [
+  {
+   "value": 100,
+   "why": "порог расхождения кассы"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Оплата труда",
+   "columns": [
+    "Кто",
+    "Как оплачивается"
+   ],
+   "rows": [
+    {
+     "Кто": "Автомеханики",
+     "Как оплачивается": "Сдельно: за проданные нормо-часы по своим работам"
+    },
+    {
+     "Кто": "Диагност и автоэлектрик",
+     "Как оплачивается": "Оклад и квартальная премия"
+    },
+    {
+     "Кто": "Ученик, шиномонтажники, механик на неполной ставке, сезонные",
+     "Как оплачивается": "Почасовая"
+    },
+    {
+     "Кто": "Мастера-приёмщики",
+     "Как оплачивается": "Оклад и ежемесячная премия от проданных нормо-часов"
+    },
+    {
+     "Кто": "Старшие мастера-приёмщики, мастер цеха, менеджер по запчастям",
+     "Как оплачивается": "Оклад и квартальная премия"
+    },
+    {
+     "Кто": "Бухгалтер, руководитель сервиса, руководитель СТО",
+     "Как оплачивается": "Оклад"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Оплата труда",
+   "item": "Возврат механик переделывает в своё время, без оплаты. Поэтому они спорят, чей это возврат, и поэтому решает мастер цеха, а не приёмка."
+  },
+  {
+   "section": "Оплата труда",
+   "item": "Механик, который ждёт запчасть, ничего не зарабатывает. Опоздавшая деталь бьёт по нему раньше, чем по нам."
+  },
+  {
+   "section": "Оплата труда",
+   "item": "Премия мастера-приёмщика считается от проданных нормо-часов, а не от того, что он не дал скидку. Для скидок есть отдельное правило."
+  },
+  {
+   "section": "Оплата труда",
+   "item": "Сдельщику выгодно сделать работу, которой нет в наряде, и получить за неё на руки. Вечерняя сверка времени с нарядами существует именно поэтому, а не из недоверия к конкретному человеку."
+  },
+  {
+   "section": "Касса",
+   "item": "В каждом сервисе ящик пересчитывают при закрытии смены, и пересчёт есть в программе: сколько ожидалось, сколько насчитали, расхождение. Мастер-приёмщик видит свой пересчёт в тот же день. История пересчётов, по сервисам и по людям, — для руководителей и Ирины Владимировны."
+  },
+  {
+   "section": "Касса",
+   "item": "Расхождение больше 100 ₽ доходит до вас в тот же вечер: Закрытие смены и кассы. Спрашивайте о нём на следующее утро, а не на закрытии месяца."
+  },
+  {
+   "section": "Касса",
+   "item": "Ирина Владимировна каждый месяц складывает расхождения по тем, кто закрывал смену. Если одна фамилия раз за разом в минусе, она говорит мне, а я — вам. Своё расследование не начинайте."
+  },
+  {
+   "section": "Касса",
+   "item": "На Технической ящик пересчитывают двое. Так будет, пока я не скажу иначе."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирины Владимировны",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "amounts": [
+  100.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "section \"Till\" added; the page, until then \"Pay plans\", renamed \"Pay and till\"; message: \"Till counts: who sees what.\"",
+   "message_ru": "Касса: кто что видит."
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,4445 @@
+{
+ "seed_version": "v1",
+ "file": "parc",
+ "about": {
+  "what": "The cars this company's customers drive, per configuration, so that a generator can draw a customer's car.",
+  "how_to_draw": [
+   "draw a model by share (shares sum to 1 over the listed models and include the vehicles of company accounts)",
+   "draw an age from age_weights (uniform inside a band), keeping only ages whose model year, reference_year minus age, lies between year_from and year_to; so no car is older than its model",
+   "draw an engine among those whose own years contain the model year (an engine without years is offered for the whole run)",
+   "timing: belt | chain | no_belt (chain or gears, not told apart) | none (electric). The timing-belt job applies only to belt engines.",
+   "the named vehicles of the six company accounts and of the story customers are fixed in accounts.json and named_customers.json and are not drawn"
+  ]
+ },
+ "vehicle_classes": {
+  "car": {
+   "en": "Passenger cars and compact crossovers, mostly four-cylinder (Camry, Civic, RAV4, Equinox)",
+   "ru": "Легковые автомобили классов B, C, D и универсалы (Granta, Solaris, Logan, Camry)"
+  },
+  "suv": {
+   "en": "Mid-size and large crossovers and minivans, mostly V6 (Explorer, Highlander, Odyssey, Grand Cherokee)",
+   "ru": "Кроссоверы и внедорожники с несущим кузовом (Duster, Creta, RAV4, Niva, Jolion)"
+  },
+  "truck": {
+   "en": "Pickups and body-on-frame SUVs (F-150, Silverado, Tacoma, Tahoe)",
+   "ru": "Рамные внедорожники и пикапы (УАЗ Patriot, Land Cruiser Prado, Pajero, Hover)"
+  },
+  "van": {
+   "en": "Commercial cargo and passenger vans (Transit, ProMaster, Express, Sprinter)",
+   "ru": "Лёгкий коммерческий транспорт (ГАЗель, Соболь, Largus фургон, Ducato, Transit)"
+  }
+ },
+ "configurations": {
+  "en": {
+   "reference_year": 2026,
+   "age_weights": [
+    {
+     "age_from": 0,
+     "age_to": 3,
+     "weight": 0.03
+    },
+    {
+     "age_from": 4,
+     "age_to": 6,
+     "weight": 0.07
+    },
+    {
+     "age_from": 7,
+     "age_to": 9,
+     "weight": 0.115
+    },
+    {
+     "age_from": 10,
+     "age_to": 12,
+     "weight": 0.155
+    },
+    {
+     "age_from": 13,
+     "age_to": 15,
+     "weight": 0.18
+    },
+    {
+     "age_from": 16,
+     "age_to": 19,
+     "weight": 0.225
+    },
+    {
+     "age_from": 20,
+     "age_to": 24,
+     "weight": 0.165
+    },
+    {
+     "age_from": 25,
+     "age_to": 30,
+     "weight": 0.06
+    }
+   ],
+   "models": [
+    {
+     "make": "Ford",
+     "model": "F-150",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.4L Triton V8",
+       "timing": "chain",
+       "year_from": 2004,
+       "year_to": 2010
+      },
+      {
+       "engine": "5.0L Coyote V8",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      },
+      {
+       "engine": "3.5L EcoBoost V6",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      },
+      {
+       "engine": "2.7L EcoBoost V6",
+       "timing": "chain",
+       "year_from": 2015,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.04584,
+     "wmi": "1FT"
+    },
+    {
+     "make": "Ford",
+     "model": "Escape",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.3L / 2.5L I4",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2019
+      },
+      {
+       "engine": "3.0L Duratec V6",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2012
+      },
+      {
+       "engine": "1.6L / 1.5L EcoBoost I4",
+       "timing": "belt",
+       "year_from": 2013,
+       "year_to": 2019
+      },
+      {
+       "engine": "2.0L EcoBoost I4",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01831,
+     "wmi": "1FM"
+    },
+    {
+     "make": "Ford",
+     "model": "Explorer",
+     "year_from": 2006,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "4.0L SOHC V6",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2010
+      },
+      {
+       "engine": "3.5L Ti-VCT V6",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2019
+      },
+      {
+       "engine": "2.3L EcoBoost I4",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01602,
+     "wmi": "1FM"
+    },
+    {
+     "make": "Ford",
+     "model": "Fusion",
+     "year_from": 2006,
+     "year_to": 2020,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.3L / 2.5L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.5L EcoBoost I4",
+       "timing": "belt",
+       "year_from": 2014,
+       "year_to": 2020
+      },
+      {
+       "engine": "2.0L EcoBoost I4",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01716,
+     "wmi": "1FA"
+    },
+    {
+     "make": "Ford",
+     "model": "Focus",
+     "year_from": 2005,
+     "year_to": 2018,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L Duratec I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01373,
+     "wmi": "1FA"
+    },
+    {
+     "make": "Ford",
+     "model": "Edge",
+     "year_from": 2007,
+     "year_to": 2024,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.5L V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2018
+      },
+      {
+       "engine": "2.0L EcoBoost I4",
+       "timing": "chain",
+       "year_from": 2012,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "1FM"
+    },
+    {
+     "make": "Ford",
+     "model": "Expedition",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.4L Triton V8",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2014
+      },
+      {
+       "engine": "3.5L EcoBoost V6",
+       "timing": "chain",
+       "year_from": 2015,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "1FM"
+    },
+    {
+     "make": "Ford",
+     "model": "F-250 Super Duty",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.4L V8 / 6.2L V8 gas",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "6.7L Power Stroke diesel",
+       "timing": "no_belt",
+       "year_from": 2011,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01144,
+     "wmi": "1FT"
+    },
+    {
+     "make": "Ford",
+     "model": "Transit 150 / 250 / 350",
+     "year_from": 2015,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "3.7L V6",
+       "timing": "chain",
+       "year_from": 2015,
+       "year_to": 2019
+      },
+      {
+       "engine": "3.5L PFDi V6",
+       "timing": "chain",
+       "year_from": 2020,
+       "year_to": null
+      },
+      {
+       "engine": "3.5L EcoBoost V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01831,
+     "wmi": "1FT",
+     "names": [
+      {
+       "name": "Transit 150"
+      },
+      {
+       "name": "Transit 250"
+      },
+      {
+       "name": "Transit 350"
+      }
+     ]
+    },
+    {
+     "make": "Ford",
+     "model": "Transit Connect",
+     "year_from": 2010,
+     "year_to": 2023,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.0L Duratec I4",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2013
+      },
+      {
+       "engine": "2.5L I4",
+       "timing": "chain",
+       "year_from": 2014,
+       "year_to": 2023
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00686,
+     "wmi": "1FT"
+    },
+    {
+     "make": "Ford",
+     "model": "E-250 Econoline",
+     "year_from": 2000,
+     "year_to": 2014,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "4.6L / 5.4L Triton V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00572,
+     "wmi": "1FT"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Silverado 1500",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.3L V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "4.8L V8",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2013
+      },
+      {
+       "engine": "4.3L V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.03661,
+     "wmi": "1GC"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Equinox",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "3.4L V6",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2009
+      },
+      {
+       "engine": "2.4L Ecotec I4",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2017
+      },
+      {
+       "engine": "1.5L turbo I4",
+       "timing": "chain",
+       "year_from": 2018,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02059,
+     "wmi": "1GN"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Malibu",
+     "year_from": 2004,
+     "year_to": 2025,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L / 2.5L Ecotec I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.5L turbo I4",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": 2025
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01602,
+     "wmi": "1G1"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Tahoe / Suburban",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.3L V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01487,
+     "wmi": "1GN",
+     "names": [
+      {
+       "name": "Tahoe"
+      },
+      {
+       "name": "Suburban"
+      }
+     ]
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Cruze",
+     "year_from": 2011,
+     "year_to": 2019,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.4L turbo I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.8L I4",
+       "timing": "belt",
+       "year_from": 2011,
+       "year_to": 2015
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "1G1"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Impala",
+     "year_from": 2006,
+     "year_to": 2020,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "3.5L / 3.9L V6",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2011
+      },
+      {
+       "engine": "3.6L V6",
+       "timing": "chain",
+       "year_from": 2012,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "1G1"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Traverse",
+     "year_from": 2009,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.6L V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "1GN"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Colorado",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "2.8L / 2.9L I4, 3.5L / 3.7L I5",
+       "timing": "chain",
+       "year_from": 2004,
+       "year_to": 2012
+      },
+      {
+       "engine": "3.6L V6",
+       "timing": "chain",
+       "year_from": 2015,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.7L turbo I4",
+       "timing": "chain",
+       "year_from": 2023,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "1GC"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Express 2500",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "4.8L / 6.0L V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "4.3L V6",
+       "timing": "chain",
+       "year_from": 2018,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.0103,
+     "wmi": "1GC"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Silverado 2500HD",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "6.0L V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "6.6L Duramax diesel",
+       "timing": "no_belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00686,
+     "wmi": "1GC"
+    },
+    {
+     "make": "GMC",
+     "model": "Sierra 1500",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.3L V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "4.8L V8",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2013
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01602,
+     "wmi": "1GT"
+    },
+    {
+     "make": "GMC",
+     "model": "Acadia",
+     "year_from": 2007,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.6L V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "1GK"
+    },
+    {
+     "make": "GMC",
+     "model": "Terrain",
+     "year_from": 2010,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L Ecotec I4",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2017
+      },
+      {
+       "engine": "1.5L turbo I4",
+       "timing": "chain",
+       "year_from": 2018,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "1GK"
+    },
+    {
+     "make": "Toyota",
+     "model": "Camry",
+     "year_from": 2002,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L 2AZ-FE I4",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2009
+      },
+      {
+       "engine": "2.5L 2AR-FE / A25A I4",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": null
+      },
+      {
+       "engine": "3.5L 2GR V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2024
+      },
+      {
+       "engine": "3.0L / 3.3L V6",
+       "timing": "belt",
+       "year_from": 2002,
+       "year_to": 2006
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.03432,
+     "wmi": "4T1"
+    },
+    {
+     "make": "Toyota",
+     "model": "Corolla",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.8L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0L I4",
+       "timing": "chain",
+       "year_from": 2019,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02632,
+     "wmi": "JTD"
+    },
+    {
+     "make": "Toyota",
+     "model": "RAV4",
+     "year_from": 2001,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L / 2.4L I4",
+       "timing": "chain",
+       "year_from": 2001,
+       "year_to": 2008
+      },
+      {
+       "engine": "2.5L I4",
+       "timing": "chain",
+       "year_from": 2009,
+       "year_to": null
+      },
+      {
+       "engine": "3.5L V6",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2012
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02288,
+     "wmi": "JTM"
+    },
+    {
+     "make": "Toyota",
+     "model": "Tacoma",
+     "year_from": 2001,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "3.4L 5VZ-FE V6",
+       "timing": "belt",
+       "year_from": 2001,
+       "year_to": 2004
+      },
+      {
+       "engine": "2.7L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "4.0L 1GR V6",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2015
+      },
+      {
+       "engine": "3.5L V6",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": 2023
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01831,
+     "wmi": "5TF"
+    },
+    {
+     "make": "Toyota",
+     "model": "Highlander",
+     "year_from": 2001,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.0L / 3.3L V6",
+       "timing": "belt",
+       "year_from": 2001,
+       "year_to": 2007
+      },
+      {
+       "engine": "3.5L V6",
+       "timing": "chain",
+       "year_from": 2008,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.4L turbo I4",
+       "timing": "chain",
+       "year_from": 2023,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01373,
+     "wmi": "5TD"
+    },
+    {
+     "make": "Toyota",
+     "model": "Tundra",
+     "year_from": 2000,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "4.7L 2UZ-FE V8",
+       "timing": "belt",
+       "year_from": 2000,
+       "year_to": 2009
+      },
+      {
+       "engine": "5.7L 3UR-FE V8",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2021
+      },
+      {
+       "engine": "3.4L twin-turbo V6",
+       "timing": "chain",
+       "year_from": 2022,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "5TF"
+    },
+    {
+     "make": "Toyota",
+     "model": "Sienna",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.3L 3MZ-FE V6",
+       "timing": "belt",
+       "year_from": 2004,
+       "year_to": 2006
+      },
+      {
+       "engine": "3.5L 2GR V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2020
+      },
+      {
+       "engine": "2.5L hybrid I4",
+       "timing": "chain",
+       "year_from": 2021,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00915,
+     "wmi": "5TD"
+    },
+    {
+     "make": "Toyota",
+     "model": "4Runner",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "4.0L 1GR V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "4.7L 2UZ-FE V8",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2009
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00801,
+     "wmi": "JTE"
+    },
+    {
+     "make": "Toyota",
+     "model": "Prius",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5L / 1.8L hybrid I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "note": "hybrid: basic service only",
+     "share": 0.00686,
+     "wmi": "JTD"
+    },
+    {
+     "make": "Honda",
+     "model": "Accord",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L K24 I4",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2017
+      },
+      {
+       "engine": "1.5L turbo I4",
+       "timing": "chain",
+       "year_from": 2018,
+       "year_to": null
+      },
+      {
+       "engine": "3.0L / 3.5L J-series V6",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2017
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02746,
+     "wmi": "1HG"
+    },
+    {
+     "make": "Honda",
+     "model": "Civic",
+     "year_from": 2001,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.7L D17 I4",
+       "timing": "belt",
+       "year_from": 2001,
+       "year_to": 2005
+      },
+      {
+       "engine": "1.8L R18 I4",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2015
+      },
+      {
+       "engine": "2.0L / 1.5L turbo I4",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02517,
+     "wmi": "1HG"
+    },
+    {
+     "make": "Honda",
+     "model": "CR-V",
+     "year_from": 2002,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L K24 I4",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2016
+      },
+      {
+       "engine": "1.5L turbo I4",
+       "timing": "chain",
+       "year_from": 2017,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02403,
+     "wmi": "5FN"
+    },
+    {
+     "make": "Honda",
+     "model": "Odyssey",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.5L J35 V6",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01144,
+     "wmi": "5FN"
+    },
+    {
+     "make": "Honda",
+     "model": "Pilot",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.5L J35 V6",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01144,
+     "wmi": "5FN"
+    },
+    {
+     "make": "Honda",
+     "model": "Ridgeline",
+     "year_from": 2006,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.5L J35 V6",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00343,
+     "wmi": "5FN"
+    },
+    {
+     "make": "Nissan",
+     "model": "Altima",
+     "year_from": 2002,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.5L QR25DE I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "3.5L VQ35DE V6",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2018
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02746,
+     "wmi": "1N4"
+    },
+    {
+     "make": "Nissan",
+     "model": "Rogue",
+     "year_from": 2008,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.5L I4",
+       "timing": "chain",
+       "year_from": 2008,
+       "year_to": 2021
+      },
+      {
+       "engine": "1.5L VC-Turbo I3",
+       "timing": "chain",
+       "year_from": 2022,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01945,
+     "wmi": "5N1"
+    },
+    {
+     "make": "Nissan",
+     "model": "Sentra",
+     "year_from": 2007,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L / 1.8L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01373,
+     "wmi": "1N4"
+    },
+    {
+     "make": "Nissan",
+     "model": "Versa",
+     "year_from": 2007,
+     "year_to": 2025,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.8L / 1.6L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "1N4"
+    },
+    {
+     "make": "Nissan",
+     "model": "Frontier",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "4.0L VQ40DE V6",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2019
+      },
+      {
+       "engine": "3.8L V6",
+       "timing": "chain",
+       "year_from": 2020,
+       "year_to": null
+      },
+      {
+       "engine": "2.5L I4",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2019
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00801,
+     "wmi": "1N6"
+    },
+    {
+     "make": "Nissan",
+     "model": "Pathfinder",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "4.0L V6",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2012
+      },
+      {
+       "engine": "3.5L V6",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "5N1"
+    },
+    {
+     "make": "Jeep",
+     "model": "Grand Cherokee",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.7L V6",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2010
+      },
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      },
+      {
+       "engine": "5.7L Hemi V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01602,
+     "wmi": "1C4"
+    },
+    {
+     "make": "Jeep",
+     "model": "Wrangler",
+     "year_from": 2007,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.8L V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2011
+      },
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": 2012,
+       "year_to": null
+      },
+      {
+       "engine": "2.0L turbo I4",
+       "timing": "chain",
+       "year_from": 2018,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01373,
+     "wmi": "1C4"
+    },
+    {
+     "make": "Jeep",
+     "model": "Cherokee",
+     "year_from": 2014,
+     "year_to": 2023,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L Tigershark I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "3.2L Pentastar V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00801,
+     "wmi": "1C4"
+    },
+    {
+     "make": "Ram",
+     "model": "1500",
+     "year_from": 2002,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "5.7L Hemi V8",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": null
+      },
+      {
+       "engine": "4.7L V8",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2013
+      },
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02517,
+     "wmi": "1C6"
+    },
+    {
+     "make": "Ram",
+     "model": "ProMaster 1500 / 2500",
+     "year_from": 2014,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01144,
+     "wmi": "3C6",
+     "names": [
+      {
+       "name": "ProMaster 1500"
+      },
+      {
+       "name": "ProMaster 2500"
+      }
+     ]
+    },
+    {
+     "make": "Dodge",
+     "model": "Grand Caravan",
+     "year_from": 2001,
+     "year_to": 2020,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.3L / 3.8L V6",
+       "timing": "chain",
+       "year_from": 2001,
+       "year_to": 2010
+      },
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01144,
+     "wmi": "2C4"
+    },
+    {
+     "make": "Dodge",
+     "model": "Charger",
+     "year_from": 2006,
+     "year_to": 2023,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "3.5L SOHC V6",
+       "timing": "belt",
+       "year_from": 2006,
+       "year_to": 2010
+      },
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2023
+      },
+      {
+       "engine": "5.7L Hemi V8",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "2C3"
+    },
+    {
+     "make": "Chrysler",
+     "model": "Town & Country / Pacifica",
+     "year_from": 2008,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.8L V6",
+       "timing": "chain",
+       "year_from": 2008,
+       "year_to": 2010
+      },
+      {
+       "engine": "4.0L SOHC V6",
+       "timing": "belt",
+       "year_from": 2008,
+       "year_to": 2010
+      },
+      {
+       "engine": "3.6L Pentastar V6",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00801,
+     "wmi": "2C4",
+     "names": [
+      {
+       "name": "Town & Country",
+       "year_to": 2016
+      },
+      {
+       "name": "Pacifica",
+       "year_from": 2017
+      }
+     ]
+    },
+    {
+     "make": "Hyundai",
+     "model": "Elantra",
+     "year_from": 2007,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L Beta II I4",
+       "timing": "belt",
+       "year_from": 2007,
+       "year_to": 2010
+      },
+      {
+       "engine": "1.8L / 2.0L Nu I4",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01602,
+     "wmi": "5NP"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Sonata",
+     "year_from": 2006,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L Theta I4",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2019
+      },
+      {
+       "engine": "3.3L Lambda V6",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.5L Smartstream I4",
+       "timing": "chain",
+       "year_from": 2020,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01487,
+     "wmi": "5NP"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Santa Fe",
+     "year_from": 2007,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.7L Mu V6",
+       "timing": "belt",
+       "year_from": 2007,
+       "year_to": 2009
+      },
+      {
+       "engine": "3.3L / 3.5L Lambda V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.4L Theta I4",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "5NM"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Tucson",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L Beta I4",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2009
+      },
+      {
+       "engine": "2.7L Delta V6",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2009
+      },
+      {
+       "engine": "2.0L / 2.4L I4",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00915,
+     "wmi": "5NM"
+    },
+    {
+     "make": "Kia",
+     "model": "Optima / K5",
+     "year_from": 2006,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.4L Theta I4",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2020
+      },
+      {
+       "engine": "1.6L turbo I4",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01144,
+     "wmi": "5XX",
+     "names": [
+      {
+       "name": "Optima",
+       "year_to": 2020
+      },
+      {
+       "name": "K5",
+       "year_from": 2021
+      }
+     ]
+    },
+    {
+     "make": "Kia",
+     "model": "Sorento",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.5L Sigma V6",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2006
+      },
+      {
+       "engine": "3.3L / 3.8L Lambda V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": null
+      },
+      {
+       "engine": "2.4L Theta I4",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "5XY"
+    },
+    {
+     "make": "Kia",
+     "model": "Soul",
+     "year_from": 2010,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L Beta II I4",
+       "timing": "belt",
+       "year_from": 2010,
+       "year_to": 2011
+      },
+      {
+       "engine": "1.6L Gamma I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0L Nu I4",
+       "timing": "chain",
+       "year_from": 2012,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "5XX"
+    },
+    {
+     "make": "Kia",
+     "model": "Forte",
+     "year_from": 2010,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00801,
+     "wmi": "5XX"
+    },
+    {
+     "make": "Subaru",
+     "model": "Outback",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.5L EJ253 H4",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2012
+      },
+      {
+       "engine": "2.5L FB25 H4",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": null
+      },
+      {
+       "engine": "3.6L EZ36 H6",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2019
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01144,
+     "wmi": "4S4"
+    },
+    {
+     "make": "Subaru",
+     "model": "Forester",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.5L EJ253 H4",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.5L FB25 H4",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "JF2"
+    },
+    {
+     "make": "Subaru",
+     "model": "Impreza / Crosstrek",
+     "year_from": 2008,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.5L EJ253 H4",
+       "timing": "belt",
+       "year_from": 2008,
+       "year_to": 2011
+      },
+      {
+       "engine": "2.0L FB20 H4",
+       "timing": "chain",
+       "year_from": 2012,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "4S3",
+     "names": [
+      {
+       "name": "Impreza"
+      },
+      {
+       "name": "Crosstrek"
+      }
+     ]
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Jetta",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.5L I5",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2014
+      },
+      {
+       "engine": "2.0L 8-valve I4",
+       "timing": "belt",
+       "year_from": 2011,
+       "year_to": 2015
+      },
+      {
+       "engine": "1.4L / 1.5L TSI I4",
+       "timing": "belt",
+       "year_from": 2016,
+       "year_to": null
+      },
+      {
+       "engine": "1.8T TSI I4",
+       "timing": "chain",
+       "year_from": 2014,
+       "year_to": 2018
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01144,
+     "wmi": "3VW"
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Passat",
+     "year_from": 2006,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0T FSI I4",
+       "timing": "belt",
+       "year_from": 2006,
+       "year_to": 2008
+      },
+      {
+       "engine": "2.5L I5",
+       "timing": "chain",
+       "year_from": 2012,
+       "year_to": 2014
+      },
+      {
+       "engine": "1.8T / 2.0T TSI I4",
+       "timing": "chain",
+       "year_from": 2014,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.0L TDI diesel",
+       "timing": "belt",
+       "year_from": 2012,
+       "year_to": 2015
+      }
+     ],
+     "fleet_use": false,
+     "note": "built in Chattanooga 2012-2022",
+     "share": 0.00915,
+     "wmi": "1VW"
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Tiguan",
+     "year_from": 2009,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0T TSI I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00572,
+     "wmi": "3VW"
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Atlas",
+     "year_from": 2018,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.6L VR6",
+       "timing": "chain",
+       "year_from": 2018,
+       "year_to": 2023
+      },
+      {
+       "engine": "2.0T TSI I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "note": "built in Chattanooga",
+     "share": 0.00458,
+     "wmi": "1VW"
+    },
+    {
+     "make": "Mazda",
+     "model": "Mazda3",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L / 2.3L / 2.5L I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00915,
+     "wmi": "JM1"
+    },
+    {
+     "make": "Mazda",
+     "model": "CX-5",
+     "year_from": 2013,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0L / 2.5L Skyactiv-G I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0103,
+     "wmi": "JM3"
+    },
+    {
+     "make": "Buick",
+     "model": "Enclave",
+     "year_from": 2008,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.6L V6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00572,
+     "wmi": "5GA"
+    },
+    {
+     "make": "Lexus",
+     "model": "RX 330 / RX 350",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.3L 3MZ-FE V6",
+       "timing": "belt",
+       "year_from": 2004,
+       "year_to": 2006
+      },
+      {
+       "engine": "3.5L 2GR V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.4L turbo I4",
+       "timing": "chain",
+       "year_from": 2023,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00915,
+     "wmi": "2T2",
+     "names": [
+      {
+       "name": "RX 330",
+       "year_to": 2006
+      },
+      {
+       "name": "RX 350",
+       "year_from": 2007
+      }
+     ]
+    },
+    {
+     "make": "Lexus",
+     "model": "ES 330 / ES 350",
+     "year_from": 2004,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "3.3L 3MZ-FE V6",
+       "timing": "belt",
+       "year_from": 2004,
+       "year_to": 2006
+      },
+      {
+       "engine": "3.5L 2GR V6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "JTH",
+     "names": [
+      {
+       "name": "ES 330",
+       "year_to": 2006
+      },
+      {
+       "name": "ES 350",
+       "year_from": 2007
+      }
+     ]
+    },
+    {
+     "make": "Acura",
+     "model": "MDX",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.5L / 3.7L J-series V6",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00686,
+     "wmi": "5J8"
+    },
+    {
+     "make": "BMW",
+     "model": "3 Series",
+     "year_from": 2006,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "3.0L I6 / 2.0L turbo I4",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00801,
+     "wmi": "WBA"
+    },
+    {
+     "make": "Mercedes-Benz",
+     "model": "Sprinter 2500",
+     "year_from": 2010,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "3.0L V6 diesel OM642",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2021
+      },
+      {
+       "engine": "2.1L I4 diesel OM651",
+       "timing": "chain",
+       "year_from": 2014,
+       "year_to": 2021
+      },
+      {
+       "engine": "2.0L I4 gas / diesel",
+       "timing": "chain",
+       "year_from": 2019,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00686
+    },
+    {
+     "make": "Volvo",
+     "model": "XC60 / XC90",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.5T I5",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2014
+      },
+      {
+       "engine": "3.2L I6",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2015
+      },
+      {
+       "engine": "2.0L Drive-E I4",
+       "timing": "belt",
+       "year_from": 2015,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00343,
+     "wmi": "YV4",
+     "names": [
+      {
+       "name": "XC60"
+      },
+      {
+       "name": "XC90"
+      }
+     ]
+    },
+    {
+     "make": "Tesla",
+     "model": "Model 3 / Model Y",
+     "year_from": 2018,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "electric",
+       "timing": "none",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "note": "electric: tyres and brakes only",
+     "share": 0.00458,
+     "wmi": "5YJ",
+     "names": [
+      {
+       "name": "Model 3"
+      },
+      {
+       "name": "Model Y"
+      }
+     ]
+    }
+   ],
+   "basis": [
+    "measured (us-shop.md): average age 12.8 years (S&P Global Mobility 2025); about 80 % of vehicles are model year 2007 or newer (Experian Q2 2026); domestic makes about 42 %; F-150, Silverado 1500 and Camry are the three largest models in operation (search snippet).",
+    "beyond the research (class X, from general knowledge of the US parc, not re-read): the shares of every other model, the engines and their belt or chain, the model-year ranges. Tennessee colour: Nissan (Smyrna) and Volkswagen (Chattanooga) a little above their national share.",
+    "age_weights are tuned so that a drawn car averages the measured 12.8 years after the model-year limits apply; the check prints the result.",
+    "wmi: the world manufacturer identifier a background car's VIN starts with, per model. Every code was read on Wikibooks, Vehicle Identification Numbers (VIN codes)/World Manufacturer Identifier (WMI), revision of 2026-11-04, read 2026-11-14: it names the maker and, where the page says so, the body type or the plant. It is the maker's code for that kind of vehicle, not always the plant that built the model. A model with no wmi (a van whose code was not read) takes the code of a seed-file VIN of its make, or no VIN.",
+    "names: where a model's label groups several models or generations, the model names a shop record carries, each with the years it applies to (and its make where it differs); a background car takes one of those valid for its year. Written by the seed's author from the label."
+   ]
+  },
+  "ru": {
+   "reference_year": 2026,
+   "age_weights": [
+    {
+     "age_from": 0,
+     "age_to": 3,
+     "weight": 0.056
+    },
+    {
+     "age_from": 4,
+     "age_to": 7,
+     "weight": 0.094
+    },
+    {
+     "age_from": 8,
+     "age_to": 10,
+     "weight": 0.07
+    },
+    {
+     "age_from": 11,
+     "age_to": 15,
+     "weight": 0.209
+    },
+    {
+     "age_from": 16,
+     "age_to": 20,
+     "weight": 0.238
+    },
+    {
+     "age_from": 21,
+     "age_to": 25,
+     "weight": 0.19
+    },
+    {
+     "age_from": 26,
+     "age_to": 35,
+     "weight": 0.114
+    },
+    {
+     "age_from": 36,
+     "age_to": 44,
+     "weight": 0.029
+    }
+   ],
+   "models": [
+    {
+     "make": "Lada",
+     "model": "Granta",
+     "year_from": 2011,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 8 кл. (11183 / 11186)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 16 кл. (21126 / 21127)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.04736,
+     "wmi": "XTA"
+    },
+    {
+     "make": "Lada",
+     "model": "Vesta",
+     "year_from": 2015,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 16 кл. (21129)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.8 (21179)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 H4M с вариатором",
+       "timing": "chain",
+       "year_from": 2019,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02469,
+     "wmi": "XTA"
+    },
+    {
+     "make": "Lada",
+     "model": "Kalina",
+     "year_from": 2004,
+     "year_to": 2018,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 8 кл. (11183 / 11186)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.4 / 1.6 16 кл.",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02675,
+     "wmi": "XTA"
+    },
+    {
+     "make": "Lada",
+     "model": "Priora",
+     "year_from": 2007,
+     "year_to": 2018,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 16 кл. (21126)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.03086,
+     "wmi": "XTA"
+    },
+    {
+     "make": "Lada",
+     "model": "2108 / 2109 / 21099 и 2113 / 2114 / 2115 (Samara)",
+     "year_from": 1987,
+     "year_to": 2013,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.3 / 1.5 / 1.6 8 кл.",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.03498,
+     "wmi": "XTA",
+     "names": [
+      {
+       "name": "2108",
+       "year_to": 2003
+      },
+      {
+       "name": "2109",
+       "year_to": 2004
+      },
+      {
+       "name": "21099",
+       "year_to": 2004
+      },
+      {
+       "name": "2113",
+       "year_from": 2004
+      },
+      {
+       "name": "2114",
+       "year_from": 2001
+      },
+      {
+       "name": "2115",
+       "year_from": 1997
+      }
+     ]
+    },
+    {
+     "make": "Lada",
+     "model": "2110 / 2111 / 2112",
+     "year_from": 1996,
+     "year_to": 2011,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5 / 1.6, 8 и 16 кл.",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02469,
+     "wmi": "XTA",
+     "names": [
+      {
+       "name": "2110"
+      },
+      {
+       "name": "2111"
+      },
+      {
+       "name": "2112"
+      }
+     ]
+    },
+    {
+     "make": "Lada",
+     "model": "2104 / 2105 / 2106 / 2107 (классика)",
+     "year_from": 1982,
+     "year_to": 2012,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5 / 1.6 (2103 / 2106)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.3 (2105)",
+       "timing": "belt",
+       "year_from": 1982,
+       "year_to": 1994
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01646,
+     "wmi": "XTA",
+     "names": [
+      {
+       "name": "2104"
+      },
+      {
+       "name": "2105"
+      },
+      {
+       "name": "2106",
+       "year_to": 2006
+      },
+      {
+       "name": "2107"
+      }
+     ]
+    },
+    {
+     "make": "Lada",
+     "model": "Largus универсал",
+     "year_from": 2012,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 8 кл. (K7M / 11189)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 16 кл. (K4M / 21129)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01852,
+     "wmi": "XTA"
+    },
+    {
+     "make": "Lada",
+     "model": "Largus фургон",
+     "year_from": 2012,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "1.6 8 кл. (K7M / 11189)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 16 кл. (K4M / 21129)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01235,
+     "wmi": "XTA"
+    },
+    {
+     "make": "Lada",
+     "model": "Niva Legend (2121 / 21213 / 21214)",
+     "year_from": 1990,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.6 / 1.7 (2121 / 21213 / 21214)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.0144,
+     "wmi": "XTA",
+     "names": [
+      {
+       "name": "Niva Legend"
+      }
+     ]
+    },
+    {
+     "make": "Lada",
+     "model": "Niva Travel / Chevrolet Niva",
+     "year_from": 2002,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.7 (2123)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01235,
+     "wmi": "XTA",
+     "names": [
+      {
+       "name": "Niva",
+       "year_to": 2020,
+       "make": "Chevrolet"
+      },
+      {
+       "name": "Niva Travel",
+       "year_from": 2021
+      }
+     ]
+    },
+    {
+     "make": "УАЗ",
+     "model": "Patriot",
+     "year_from": 2005,
+     "year_to": 2026,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "2.7 ЗМЗ-409 / ЗМЗ Pro",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "note": "собирается в Ульяновске",
+     "share": 0.01543,
+     "wmi": "XTT"
+    },
+    {
+     "make": "УАЗ",
+     "model": "СГР «Буханка» (3909 / 2206 / 3303)",
+     "year_from": 1990,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.7 ЗМЗ-409",
+       "timing": "chain",
+       "year_from": 2008,
+       "year_to": null
+      },
+      {
+       "engine": "2.9 УМЗ-4213 / 4218",
+       "timing": "no_belt",
+       "year_from": 1990,
+       "year_to": 2011
+      }
+     ],
+     "fleet_use": true,
+     "note": "собирается в Ульяновске",
+     "share": 0.00617,
+     "wmi": "XTT",
+     "names": [
+      {
+       "name": "3909"
+      },
+      {
+       "name": "2206"
+      },
+      {
+       "name": "3303"
+      }
+     ]
+    },
+    {
+     "make": "ГАЗ",
+     "model": "ГАЗель (3302 / 2705), включая «Бизнес»",
+     "year_from": 1996,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.3 / 2.5 ЗМЗ-402 / 406 / 405",
+       "timing": "no_belt",
+       "year_from": 1996,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.9 УМЗ-4216",
+       "timing": "no_belt",
+       "year_from": 2008,
+       "year_to": null
+      },
+      {
+       "engine": "2.8 Cummins ISF, дизель",
+       "timing": "no_belt",
+       "year_from": 2010,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01543,
+     "wmi": "X96",
+     "names": [
+      {
+       "name": "ГАЗель 3302"
+      },
+      {
+       "name": "ГАЗель 2705"
+      }
+     ]
+    },
+    {
+     "make": "ГАЗ",
+     "model": "ГАЗель Next",
+     "year_from": 2013,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.7 УМЗ Evotech",
+       "timing": "no_belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.8 Cummins ISF, дизель",
+       "timing": "no_belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.0144,
+     "wmi": "X96"
+    },
+    {
+     "make": "ГАЗ",
+     "model": "Соболь (2752 / 2217)",
+     "year_from": 2003,
+     "year_to": 2026,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.5 ЗМЗ-405",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.9 УМЗ-4216",
+       "timing": "no_belt",
+       "year_from": 2010,
+       "year_to": null
+      },
+      {
+       "engine": "2.8 Cummins ISF, дизель",
+       "timing": "no_belt",
+       "year_from": 2010,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00617,
+     "wmi": "X96",
+     "names": [
+      {
+       "name": "Соболь 2752"
+      },
+      {
+       "name": "Соболь 2217"
+      }
+     ]
+    },
+    {
+     "make": "Toyota",
+     "model": "Camry",
+     "year_from": 1997,
+     "year_to": 2026,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.2 (5S-FE)",
+       "timing": "belt",
+       "year_from": 1997,
+       "year_to": 2001
+      },
+      {
+       "engine": "3.0 V6 (1MZ-FE)",
+       "timing": "belt",
+       "year_from": 1997,
+       "year_to": 2006
+      },
+      {
+       "engine": "2.4 (2AZ-FE)",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2011
+      },
+      {
+       "engine": "2.0 / 2.5",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": null
+      },
+      {
+       "engine": "3.5 V6 (2GR-FE)",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02469,
+     "wmi": "XW7"
+    },
+    {
+     "make": "Toyota",
+     "model": "Corolla",
+     "year_from": 1997,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (4A-FE)",
+       "timing": "belt",
+       "year_from": 1997,
+       "year_to": 2001
+      },
+      {
+       "engine": "1.6 (3ZZ-FE / 1ZR-FE)",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02058,
+     "wmi": "JTD"
+    },
+    {
+     "make": "Toyota",
+     "model": "RAV4",
+     "year_from": 1997,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 (3S-FE)",
+       "timing": "belt",
+       "year_from": 1997,
+       "year_to": 2000
+      },
+      {
+       "engine": "2.0 (1AZ-FE / 3ZR-FAE)",
+       "timing": "chain",
+       "year_from": 2001,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.4 / 2.5",
+       "timing": "chain",
+       "year_from": 2004,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02058,
+     "wmi": "JTM"
+    },
+    {
+     "make": "Toyota",
+     "model": "Land Cruiser Prado 90 / 120 / 150",
+     "year_from": 1997,
+     "year_to": 2022,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "3.4 V6 (5VZ-FE)",
+       "timing": "belt",
+       "year_from": 1997,
+       "year_to": 2002
+      },
+      {
+       "engine": "2.7 (3RZ-FE / 2TR-FE)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "4.0 V6 (1GR-FE)",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2022
+      },
+      {
+       "engine": "3.0 D-4D (1KD-FTV), дизель",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2015
+      },
+      {
+       "engine": "2.8 D (1GD-FTV), дизель",
+       "timing": "chain",
+       "year_from": 2015,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01029,
+     "wmi": "JTE",
+     "names": [
+      {
+       "name": "Land Cruiser Prado"
+      }
+     ]
+    },
+    {
+     "make": "Toyota",
+     "model": "Land Cruiser 100 / 200",
+     "year_from": 1998,
+     "year_to": 2021,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "4.7 V8 (2UZ-FE)",
+       "timing": "belt",
+       "year_from": 1998,
+       "year_to": 2012
+      },
+      {
+       "engine": "4.5 D V8 (1VD-FTV), дизель",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2021
+      },
+      {
+       "engine": "4.2 TD (1HD-FTE), дизель",
+       "timing": "belt",
+       "year_from": 1998,
+       "year_to": 2007
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00617,
+     "wmi": "JTE",
+     "names": [
+      {
+       "name": "Land Cruiser 100",
+       "year_to": 2007
+      },
+      {
+       "name": "Land Cruiser 200",
+       "year_from": 2008
+      }
+     ]
+    },
+    {
+     "make": "Kia",
+     "model": "Rio",
+     "year_from": 2003,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5 (A5D)",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2005
+      },
+      {
+       "engine": "1.4 (G4EE)",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2011
+      },
+      {
+       "engine": "1.4 / 1.6 Gamma (G4FA / G4FC / G4FG)",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02881,
+     "wmi": "Z94"
+    },
+    {
+     "make": "Kia",
+     "model": "Ceed",
+     "year_from": 2007,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 Gamma (G4FC)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0 (G4GC)",
+       "timing": "belt",
+       "year_from": 2007,
+       "year_to": 2010
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01235,
+     "wmi": "XWE"
+    },
+    {
+     "make": "Kia",
+     "model": "Sportage",
+     "year_from": 2005,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 (G4GC)",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.0 (G4KD / G4NA)",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01337,
+     "wmi": "XWE"
+    },
+    {
+     "make": "Kia",
+     "model": "Sorento",
+     "year_from": 2003,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.5 CRDi (D4CB), дизель",
+       "timing": "chain",
+       "year_from": 2003,
+       "year_to": 2009
+      },
+      {
+       "engine": "2.4 (G4KE)",
+       "timing": "chain",
+       "year_from": 2009,
+       "year_to": null
+      },
+      {
+       "engine": "3.5 V6 (G6CU)",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2006
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0072,
+     "wmi": "XWE"
+    },
+    {
+     "make": "Kia",
+     "model": "Spectra",
+     "year_from": 2005,
+     "year_to": 2011,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (S6D)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00412,
+     "wmi": "XWE"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Solaris",
+     "year_from": 2011,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.4 / 1.6 Gamma (G4FA / G4FC / G4FG)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.03086,
+     "wmi": "Z94"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Creta",
+     "year_from": 2016,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.6 Gamma (G4FG)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0 Nu (G4NA)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01235,
+     "wmi": "Z94"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Tucson / ix35",
+     "year_from": 2004,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 (G4GC)",
+       "timing": "belt",
+       "year_from": 2004,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.0 (G4KD / G4NA)",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00926,
+     "wmi": "XWE",
+     "names": [
+      {
+       "name": "Tucson",
+       "year_to": 2009
+      },
+      {
+       "name": "ix35",
+       "year_from": 2010,
+       "year_to": 2015
+      },
+      {
+       "name": "Tucson",
+       "year_from": 2016
+      }
+     ]
+    },
+    {
+     "make": "Hyundai",
+     "model": "Santa Fe",
+     "year_from": 2001,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.7 V6 (G6EA / G6BA)",
+       "timing": "belt",
+       "year_from": 2001,
+       "year_to": 2010
+      },
+      {
+       "engine": "2.4 (G4KE)",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00617,
+     "wmi": "XWE"
+    },
+    {
+     "make": "Hyundai",
+     "model": "Accent (ТагАЗ)",
+     "year_from": 2001,
+     "year_to": 2012,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5 (G4EC)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "Z94",
+     "names": [
+      {
+       "name": "Accent"
+      }
+     ]
+    },
+    {
+     "make": "Nissan",
+     "model": "Qashqai",
+     "year_from": 2007,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.6 (HR16DE)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0 (MR20DE)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01337,
+     "wmi": "Z8N"
+    },
+    {
+     "make": "Nissan",
+     "model": "X-Trail",
+     "year_from": 2001,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 (QR20DE / MR20DE)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.5 (QR25DE)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01337,
+     "wmi": "Z8N"
+    },
+    {
+     "make": "Nissan",
+     "model": "Almera (N16) / Almera Classic / Almera G15",
+     "year_from": 2000,
+     "year_to": 2018,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5 / 1.6 / 1.8 (QG15DE / QG16DE / QG18DE)",
+       "timing": "chain",
+       "year_from": 2000,
+       "year_to": 2013
+      },
+      {
+       "engine": "1.6 (K4M)",
+       "timing": "belt",
+       "year_from": 2013,
+       "year_to": 2018
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01235,
+     "wmi": "Z8N",
+     "names": [
+      {
+       "name": "Almera",
+       "year_to": 2005
+      },
+      {
+       "name": "Almera Classic",
+       "year_from": 2006,
+       "year_to": 2012
+      },
+      {
+       "name": "Almera",
+       "year_from": 2013
+      }
+     ]
+    },
+    {
+     "make": "Nissan",
+     "model": "Note / Tiida",
+     "year_from": 2006,
+     "year_to": 2014,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.4 / 1.6 (CR14DE / HR16DE)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "Z8N",
+     "names": [
+      {
+       "name": "Note"
+      },
+      {
+       "name": "Tiida"
+      }
+     ]
+    },
+    {
+     "make": "Nissan",
+     "model": "Terrano",
+     "year_from": 2014,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.6 (K4M)",
+       "timing": "belt",
+       "year_from": 2014,
+       "year_to": 2016
+      },
+      {
+       "engine": "1.6 (H4M)",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.0 (F4R)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00617,
+     "wmi": "Z8N"
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Polo седан",
+     "year_from": 2010,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (CFNA)",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2015
+      },
+      {
+       "engine": "1.6 (CWVA)",
+       "timing": "belt",
+       "year_from": 2015,
+       "year_to": 2022
+      },
+      {
+       "engine": "1.4 TSI (CZCA)",
+       "timing": "belt",
+       "year_from": 2015,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02469,
+     "wmi": "XW8"
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Tiguan",
+     "year_from": 2008,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.4 TSI (CAXA)",
+       "timing": "chain",
+       "year_from": 2008,
+       "year_to": 2016
+      },
+      {
+       "engine": "2.0 TSI",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.4 TSI (CZDA)",
+       "timing": "belt",
+       "year_from": 2017,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00926,
+     "wmi": "XW8"
+    },
+    {
+     "make": "Volkswagen",
+     "model": "Golf / Bora / Jetta",
+     "year_from": 1998,
+     "year_to": 2020,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (AKL / BFQ / BSE)",
+       "timing": "belt",
+       "year_from": 1998,
+       "year_to": 2011
+      },
+      {
+       "engine": "1.6 (CFNA)",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2015
+      },
+      {
+       "engine": "1.4 TSI (CZDA)",
+       "timing": "belt",
+       "year_from": 2015,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "XW8",
+     "names": [
+      {
+       "name": "Golf"
+      },
+      {
+       "name": "Bora",
+       "year_to": 2005
+      },
+      {
+       "name": "Jetta",
+       "year_from": 2006
+      }
+     ]
+    },
+    {
+     "make": "Renault",
+     "model": "Logan",
+     "year_from": 2005,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.4 / 1.6 8 кл. (K7J / K7M)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 16 кл. (K4M)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 (H4M)",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.02058,
+     "wmi": "X7L"
+    },
+    {
+     "make": "Renault",
+     "model": "Sandero / Sandero Stepway",
+     "year_from": 2010,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 8 кл. (K7M)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 16 кл. (K4M)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 (H4M)",
+       "timing": "chain",
+       "year_from": 2016,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01029,
+     "wmi": "X7L",
+     "names": [
+      {
+       "name": "Sandero"
+      },
+      {
+       "name": "Sandero Stepway"
+      }
+     ]
+    },
+    {
+     "make": "Renault",
+     "model": "Duster",
+     "year_from": 2012,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.6 (K4M)",
+       "timing": "belt",
+       "year_from": 2012,
+       "year_to": 2015
+      },
+      {
+       "engine": "1.6 (H4M)",
+       "timing": "chain",
+       "year_from": 2015,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.0 (F4R)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.5 dCi (K9K), дизель",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01852,
+     "wmi": "X7L"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Lacetti",
+     "year_from": 2004,
+     "year_to": 2013,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.4 / 1.6 (F14D3 / F16D3)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.8 (F18D3)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01029,
+     "wmi": "KL1"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Cruze",
+     "year_from": 2009,
+     "year_to": 2015,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (F16D3 / F16D4)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.8 (F18D4)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.4 Turbo (A14NET)",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": 2015
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01337,
+     "wmi": "XUF"
+    },
+    {
+     "make": "Chevrolet",
+     "model": "Aveo",
+     "year_from": 2003,
+     "year_to": 2015,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.2 / 1.4",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2011
+      },
+      {
+       "engine": "1.6 (F16D4)",
+       "timing": "belt",
+       "year_from": 2012,
+       "year_to": 2015
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "KL1"
+    },
+    {
+     "make": "Ford",
+     "model": "Focus I / II / III",
+     "year_from": 1999,
+     "year_to": 2019,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 Zetec-SE, 1.8 / 2.0 Zetec-E",
+       "timing": "belt",
+       "year_from": 1999,
+       "year_to": 2005
+      },
+      {
+       "engine": "1.6 Duratec Ti-VCT",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2019
+      },
+      {
+       "engine": "1.8 / 2.0 Duratec HE",
+       "timing": "chain",
+       "year_from": 2005,
+       "year_to": 2019
+      },
+      {
+       "engine": "1.4 Duratec",
+       "timing": "belt",
+       "year_from": 2005,
+       "year_to": 2011
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.02263,
+     "wmi": "X9F",
+     "names": [
+      {
+       "name": "Focus"
+      }
+     ]
+    },
+    {
+     "make": "Ford",
+     "model": "Kuga",
+     "year_from": 2008,
+     "year_to": 2019,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.5 Turbo",
+       "timing": "belt",
+       "year_from": 2008,
+       "year_to": 2012
+      },
+      {
+       "engine": "1.6 EcoBoost",
+       "timing": "belt",
+       "year_from": 2013,
+       "year_to": 2016
+      },
+      {
+       "engine": "2.5 Duratec",
+       "timing": "chain",
+       "year_from": 2013,
+       "year_to": 2019
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "Z6F"
+    },
+    {
+     "make": "Ford",
+     "model": "Transit",
+     "year_from": 2006,
+     "year_to": 2022,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.2 TDCi Duratorq, дизель",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.4 TDCi, дизель",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2012
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00617,
+     "wmi": "Z6F"
+    },
+    {
+     "make": "Mitsubishi",
+     "model": "Lancer IX / X",
+     "year_from": 2003,
+     "year_to": 2016,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (4G18)",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2007
+      },
+      {
+       "engine": "1.5 / 1.6 (4A91 / 4A92)",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2016
+      },
+      {
+       "engine": "1.8 / 2.0 (4B10 / 4B11)",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2016
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01337,
+     "wmi": "JMB",
+     "names": [
+      {
+       "name": "Lancer"
+      }
+     ]
+    },
+    {
+     "make": "Mitsubishi",
+     "model": "Outlander",
+     "year_from": 2003,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.4 (4G69)",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2008
+      },
+      {
+       "engine": "2.0 / 2.4 (4B11 / 4B12)",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": null
+      },
+      {
+       "engine": "3.0 V6 (6B31)",
+       "timing": "belt",
+       "year_from": 2007,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01235,
+     "wmi": "Z8T"
+    },
+    {
+     "make": "Mitsubishi",
+     "model": "ASX",
+     "year_from": 2010,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.6 (4A92)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.8 / 2.0 (4B10 / 4B11)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "JMB"
+    },
+    {
+     "make": "Mitsubishi",
+     "model": "Pajero / Pajero Sport",
+     "year_from": 1997,
+     "year_to": 2021,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "3.0 V6 (6G72 / 6B31)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "3.2 DI-D (4M41), дизель",
+       "timing": "chain",
+       "year_from": 2000,
+       "year_to": 2021
+      },
+      {
+       "engine": "2.5 DI-D (4D56), дизель",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "JMB",
+     "names": [
+      {
+       "name": "Pajero"
+      },
+      {
+       "name": "Pajero Sport"
+      }
+     ]
+    },
+    {
+     "make": "Honda",
+     "model": "Civic",
+     "year_from": 2001,
+     "year_to": 2016,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (D16)",
+       "timing": "belt",
+       "year_from": 2001,
+       "year_to": 2005
+      },
+      {
+       "engine": "1.8 (R18A)",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": 2016
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "JHM"
+    },
+    {
+     "make": "Honda",
+     "model": "CR-V",
+     "year_from": 1997,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 (B20B)",
+       "timing": "belt",
+       "year_from": 1997,
+       "year_to": 2001
+      },
+      {
+       "engine": "2.0 (K20A / R20A)",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2022
+      },
+      {
+       "engine": "2.4 (K24)",
+       "timing": "chain",
+       "year_from": 2002,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01132,
+     "wmi": "SHS"
+    },
+    {
+     "make": "Skoda",
+     "model": "Octavia Tour / A5 / A7",
+     "year_from": 1998,
+     "year_to": 2020,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (AEH / BFQ / BSE)",
+       "timing": "belt",
+       "year_from": 1998,
+       "year_to": 2013
+      },
+      {
+       "engine": "1.4 TSI (CAXA)",
+       "timing": "chain",
+       "year_from": 2009,
+       "year_to": 2013
+      },
+      {
+       "engine": "1.8 TSI",
+       "timing": "chain",
+       "year_from": 2007,
+       "year_to": 2020
+      },
+      {
+       "engine": "1.6 MPI (CWVA)",
+       "timing": "belt",
+       "year_from": 2014,
+       "year_to": 2020
+      },
+      {
+       "engine": "1.4 TSI (CZDA)",
+       "timing": "belt",
+       "year_from": 2013,
+       "year_to": 2020
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01646,
+     "wmi": "XW8",
+     "names": [
+      {
+       "name": "Octavia"
+      }
+     ]
+    },
+    {
+     "make": "Skoda",
+     "model": "Rapid",
+     "year_from": 2014,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (CFNA)",
+       "timing": "chain",
+       "year_from": 2014,
+       "year_to": 2015
+      },
+      {
+       "engine": "1.6 (CWVA)",
+       "timing": "belt",
+       "year_from": 2015,
+       "year_to": 2022
+      },
+      {
+       "engine": "1.4 TSI (CZCA)",
+       "timing": "belt",
+       "year_from": 2015,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.01132,
+     "wmi": "XW8"
+    },
+    {
+     "make": "Mazda",
+     "model": "Mazda3",
+     "year_from": 2003,
+     "year_to": 2018,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (Z6)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0 (LF)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00926,
+     "wmi": "JMZ"
+    },
+    {
+     "make": "Mazda",
+     "model": "Mazda6",
+     "year_from": 2002,
+     "year_to": 2022,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.8 / 2.0 / 2.5",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0072,
+     "wmi": "JMZ"
+    },
+    {
+     "make": "Mazda",
+     "model": "CX-5",
+     "year_from": 2012,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 / 2.5 Skyactiv-G",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "JMZ"
+    },
+    {
+     "make": "Opel",
+     "model": "Astra G / H / J",
+     "year_from": 1998,
+     "year_to": 2015,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 (Z16XE / Z16XER / A16XER)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.8 (Z18XE / Z18XER)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.4 Turbo (A14NET)",
+       "timing": "chain",
+       "year_from": 2010,
+       "year_to": 2015
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0144,
+     "wmi": "W0L",
+     "names": [
+      {
+       "name": "Astra"
+      }
+     ]
+    },
+    {
+     "make": "Daewoo",
+     "model": "Nexia",
+     "year_from": 1995,
+     "year_to": 2016,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.5 (G15MF / A15SMS)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 (F16D3)",
+       "timing": "belt",
+       "year_from": 2008,
+       "year_to": 2016
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0144,
+     "wmi": "XWB"
+    },
+    {
+     "make": "Daewoo",
+     "model": "Matiz",
+     "year_from": 1998,
+     "year_to": 2015,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "0.8 / 1.0",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "XWB"
+    },
+    {
+     "make": "Subaru",
+     "model": "Forester",
+     "year_from": 1998,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 / 2.5 (EJ20 / EJ25)",
+       "timing": "belt",
+       "year_from": 1998,
+       "year_to": 2011
+      },
+      {
+       "engine": "2.0 / 2.5 (FB20 / FB25)",
+       "timing": "chain",
+       "year_from": 2011,
+       "year_to": 2022
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "JF2"
+    },
+    {
+     "make": "Peugeot",
+     "model": "Boxer",
+     "year_from": 2006,
+     "year_to": 2022,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.2 HDi, дизель",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00412,
+     "wmi": "VF3"
+    },
+    {
+     "make": "Fiat",
+     "model": "Ducato",
+     "year_from": 2008,
+     "year_to": 2022,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.3 Multijet, дизель",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00412,
+     "wmi": "ZFA"
+    },
+    {
+     "make": "BMW",
+     "model": "3 серии (E46 / E90 / F30)",
+     "year_from": 1998,
+     "year_to": 2019,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "2.0 / 2.5 / 3.0 бензин",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "X4X",
+     "names": [
+      {
+       "name": "3 серии"
+      }
+     ]
+    },
+    {
+     "make": "Mercedes-Benz",
+     "model": "E-класс (W210 / W211 / W212)",
+     "year_from": 1997,
+     "year_to": 2016,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.8 / 2.0 / 2.4 / 3.5 бензин",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0072,
+     "wmi": "WDD",
+     "names": [
+      {
+       "name": "E-класс"
+      }
+     ]
+    },
+    {
+     "make": "Mercedes-Benz",
+     "model": "Sprinter Classic",
+     "year_from": 2013,
+     "year_to": 2018,
+     "vehicle_class": "van",
+     "engines": [
+      {
+       "engine": "2.1 CDI (OM646), дизель",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": true,
+     "share": 0.00514
+    },
+    {
+     "make": "Lexus",
+     "model": "RX 330 / RX 350",
+     "year_from": 2003,
+     "year_to": 2022,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "3.3 V6 (3MZ-FE)",
+       "timing": "belt",
+       "year_from": 2003,
+       "year_to": 2006
+      },
+      {
+       "engine": "3.5 V6 (2GR-FE)",
+       "timing": "chain",
+       "year_from": 2006,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00617,
+     "wmi": "JTJ",
+     "names": [
+      {
+       "name": "RX 330",
+       "year_to": 2006
+      },
+      {
+       "name": "RX 350",
+       "year_from": 2007
+      }
+     ]
+    },
+    {
+     "make": "Datsun",
+     "model": "on-DO / mi-DO",
+     "year_from": 2014,
+     "year_to": 2020,
+     "vehicle_class": "car",
+     "engines": [
+      {
+       "engine": "1.6 8 кл. (11186)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 16 кл. (21127)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0072,
+     "wmi": "Z8N",
+     "names": [
+      {
+       "name": "on-DO"
+      },
+      {
+       "name": "mi-DO"
+      }
+     ]
+    },
+    {
+     "make": "Haval",
+     "model": "Jolion",
+     "year_from": 2021,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.5T (GW4G15K)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01235,
+     "wmi": "XZG"
+    },
+    {
+     "make": "Haval",
+     "model": "F7 / F7x",
+     "year_from": 2019,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.5T (GW4G15B)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "2.0T (GW4C20)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "XZG",
+     "names": [
+      {
+       "name": "F7"
+      },
+      {
+       "name": "F7x"
+      }
+     ]
+    },
+    {
+     "make": "Chery",
+     "model": "Tiggo 4 / Tiggo 4 Pro",
+     "year_from": 2019,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.5 (SQRE4G15C)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.5T (SQRE4T15C)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01132,
+     "wmi": "LVV",
+     "names": [
+      {
+       "name": "Tiggo 4"
+      },
+      {
+       "name": "Tiggo 4 Pro"
+      }
+     ]
+    },
+    {
+     "make": "Chery",
+     "model": "Tiggo 7 Pro / 7 Pro Max",
+     "year_from": 2020,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.5T (SQRE4T15C)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.6 TGDI (SQRF4J16)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.01029,
+     "wmi": "LVV",
+     "names": [
+      {
+       "name": "Tiggo 7 Pro"
+      },
+      {
+       "name": "Tiggo 7 Pro Max"
+      }
+     ]
+    },
+    {
+     "make": "Geely",
+     "model": "Coolray",
+     "year_from": 2020,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.5T (JLH-3G15TD)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00823,
+     "wmi": "Y4K"
+    },
+    {
+     "make": "Geely",
+     "model": "Atlas / Atlas Pro",
+     "year_from": 2018,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "2.0 / 2.4 (JLD-4G20 / JLD-4G24)",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      },
+      {
+       "engine": "1.5T (JLH-3G15TD)",
+       "timing": "chain",
+       "year_from": 2021,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.0072,
+     "wmi": "Y4K",
+     "names": [
+      {
+       "name": "Atlas"
+      },
+      {
+       "name": "Atlas Pro"
+      }
+     ]
+    },
+    {
+     "make": "Changan",
+     "model": "CS35 Plus / CS55 Plus",
+     "year_from": 2019,
+     "year_to": 2026,
+     "vehicle_class": "suv",
+     "engines": [
+      {
+       "engine": "1.4T / 1.5T / 1.6",
+       "timing": "chain",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00514,
+     "wmi": "LS5",
+     "names": [
+      {
+       "name": "CS35 Plus"
+      },
+      {
+       "name": "CS55 Plus"
+      }
+     ]
+    },
+    {
+     "make": "Great Wall",
+     "model": "Hover H3 / H5",
+     "year_from": 2005,
+     "year_to": 2016,
+     "vehicle_class": "truck",
+     "engines": [
+      {
+       "engine": "2.0 / 2.4 (4G63 / 4G64 / 4G69)",
+       "timing": "belt",
+       "year_from": null,
+       "year_to": null
+      }
+     ],
+     "fleet_use": false,
+     "share": 0.00412,
+     "wmi": "LGW",
+     "names": [
+      {
+       "name": "Hover H3"
+      },
+      {
+       "name": "Hover H5"
+      }
+     ]
+    }
+   ],
+   "basis": [
+    "measured (ru-shop.md): 69 % of passenger cars older than ten years, 9.9 % eight to ten, 13.2 % four to seven, 7.9 % up to three (Автостат, 2026-01-01); average age over 15 years; make shares in the parc (Lada 25.7 %, Toyota 9.5 %); makes seen at independent shops (Fit Service 2026: Toyota 13.2 % of foreign-brand visits, Kia 9.5, Hyundai 9.5, Nissan 9.0, VW 6.8, Renault 5.8, Ford 4.9, Mitsubishi 4.6, Honda 4.6; Chinese and Russian brands not counted there); Chinese cars are almost all 2021 and newer.",
+    "age_weights are tuned so that 69 % of drawn cars are older than ten years after the model-year limits apply (a car cannot be older than its model, so the bands differ from Автостат's). The mean comes out near 13.6 years, between the 12.7 measured at independent services and the parc's 15.5: a reported gap against the design's 'over fifteen', see ledger_rows_proposed in mix.json.",
+    "beyond the research (class X): Lada is set at its share of the parc (about 26 %), Chinese makes at about 7 %; older generations of long-running models are listed (Focus I, Octavia Tour, Astra G, Camry XV20) because most cars older than ten years date from the late 1990s and the 2000s; model shares inside a make, engines and belt or chain, model-year ranges are from general knowledge, not re-read. Ульяновск colour: УАЗ a little above its national share.",
+    "wmi: the world manufacturer identifier a background car's VIN starts with, per model. Every code was read on Wikibooks, Vehicle Identification Numbers (VIN codes)/World Manufacturer Identifier (WMI), revision of 2026-11-04, read 2026-11-14: it names the maker and, where the page says so, the body type or the plant. It is the maker's code for that kind of vehicle, not always the plant that built the model. A model with no wmi (a van whose code was not read) takes the code of a seed-file VIN of its make, or no VIN.",
+    "names: where a model's label groups several models or generations, the model names a shop record carries, each with the years it applies to (and its make where it differs); a background car takes one of those valid for its year. Written by the seed's author from the label."
+   ]
+  }
+ }
+}

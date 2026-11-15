@@ -1,0 +1,143 @@
+{
+  "format": "seed-conversation/1",
+  "id": "09-people-p05-telegram-itog",
+  "configuration": "ru",
+  "number": 9,
+  "story": "people",
+  "title": "Старший приёмщик флагмана в Telegram: готова ли машина и почему сумма больше",
+  "demonstrates": "Slot 5 in writing: a first reply after 13 minutes, typed in a hurry with no capitals, the total and the pick-up time in one line, «наберите меня, так быстрее» when a question takes more than a line. He writes his own text over two drafts and sends the third as it was. He does not resolve; Chatwoot does, a week later.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Ильнур Сабиров",
+      "invented": true,
+      "first_time": false,
+      "note": "постоянный клиент сервиса на Московском шоссе; Renault Duster 2014; в этот день меняли передний ступичный подшипник"
+    },
+    "staff": [
+      {"slot": 5, "name": "Дмитрий Григорьев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Постоянный клиент, с работы, про машину, которую оставил утром.",
+    "vehicle": "Renault Duster 2014",
+    "what_happens": "Спрашивает, готова ли машина. Дмитрий пишет, что сделали, сколько к оплате и до скольки забирать. Сумма больше той, что звучала по телефону; Дмитрий в одну строку объясняет почему и предлагает созвониться. Клиент приедет к семи.",
+    "facts": {
+      "main_line": "+7 (8422) 10-40-40 (phones.md)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "7900", "amount": 7902.0, "what": "замена подшипника передней ступицы, класс suv, стандартная запчасть, по прайсу (7 902); так он её округляет", "from": {"catalogue": "wheel_bearing", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "7 902 ₽", "amount": 7902.0, "what": "то же, точно", "from": {"catalogue": "wheel_bearing", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "8 019,99", "amount": 8019.99, "what": "то же с расходными материалами: к оплате, НДС в том числе", "from": {"catalogue": "wheel_bearing", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": true, "with_tax": false}},
+        {"said": "117,99 ₽", "amount": 117.99, "what": "расходные материалы по этой работе: разница между названным по телефону и счётом", "from": {"shop_supplies_of": "wheel_bearing", "class": "suv"}}
+      ]
+    }
+  },
+  "days": {
+    "T-126d": {"anchor": "slot 5's first working day on or after the Thursday of week T-18", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 18, "on_or_after_for_slot": 5}, "nominal": "Fri 2026-07-10"},
+    "T-119d": {"anchor": "7 calendar days after slot 5's first working day on or after the Thursday of week T-18", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 18, "on_or_after_for_slot": 5, "plus_days": 7}, "nominal": "Fri 2026-07-17", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "4503599627372611",
+      "peer": {"id": "4503599627372611", "name": "Ильнур"},
+      "contact": {
+        "identifier": "telegram_4503599627372611",
+        "name": "Ильнур",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "белый Renault Duster на грунтовой дороге у реки",
+          "person_in_it": false,
+          "matches_vehicle": "Renault Duster 2014"
+        }
+      },
+      "opened": {
+        "day": "T-126d",
+        "at": "16:20:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-126d", "at": "16:20:10", "kind": "message", "from": "customer", "text": "Дмитрий добрый день. дастер готов?"},
+        {"n": 2, "day": "T-126d", "at": "16:20:55", "kind": "draft", "id": "d1", "text": "Здравствуйте! Данных по вашей машине у меня сейчас нет. Уточню у мастера и сразу напишу.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 5, "day": "T-126d", "at": "16:33:40", "because": "he sent his own text (n 5)"}},
+        {"n": 3, "day": "T-126d", "at": "16:32", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-126d", "at": "16:33:38", "kind": "activity", "what": "assigned", "derived": true, "to": 5, "by": 5, "how": "first reply"},
+        {"n": 5, "day": "T-126d", "at": "16:33:40", "kind": "message", "from": "staff", "slot": 5, "text": "готов. подшипник ступичный поменяли, передний левый, гул ушел. к оплате 8 019,99. забирать до 20 00"},
+        {"n": 6, "day": "T-126d", "at": "16:33:42", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-126d", "at": "16:36:05", "kind": "message", "from": "customer", "text": "а почему больше. по телефону говорили 7900"},
+        {"n": 8, "day": "T-126d", "at": "16:36:50", "kind": "draft", "id": "d2", "text": "7 902 ₽ — это работа и запчасть. К ним добавляются расходные материалы, 117,99 ₽, поэтому к оплате 8 019,99 ₽. Приношу извинения, если по телефону это не прозвучало.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 5, "day": "T-126d", "at": "16:44:30", "because": "he sent his own text (n 9)"}},
+        {"n": 9, "day": "T-126d", "at": "16:44:30", "kind": "message", "from": "staff", "slot": 5, "text": "7900 это без расходников. работа та же, ничего не добавляли. наберите меня, так быстрее, 10-40-40"},
+        {"n": 10, "day": "T-126d", "at": "16:47:10", "kind": "message", "from": "customer", "text": "да ладно, понял. к 7 подъеду"},
+        {"n": 11, "day": "T-126d", "at": "16:47:50", "kind": "draft", "id": "d3", "text": "Хорошо, ждём вас к 19:00.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 5, "day": "T-126d", "at": "16:52:20", "became": 12}},
+        {"n": 12, "day": "T-126d", "at": "16:52:20", "kind": "message", "from": "staff", "slot": 5, "text": "Хорошо, ждём вас к 19:00."},
+        {"n": 13, "day": "T-119d", "at": "16:52", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-126d", "at": "16:33:38", "to": 5, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 5,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 5, "working_minutes": 13.5},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 5, "working_minutes": 13.5, "wall_minutes": 13.5, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 5, "working_minutes": 8.4, "wall_minutes": 8.4, "measured_from": "n 7", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 5, "working_minutes": 5.2, "wall_minutes": 5.2, "measured_from": "n 10", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 5,
+          "n": 5,
+          "working_minutes": 13.5,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-119d", "at": "16:52", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 5},
+          {"draft": "d2", "outcome": "discarded", "manager": 5},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 5}
+        ],
+        "operator_credit": "slot 5: first answer 13.5 minutes (his ledger row is 14), three replies, two drafts discarded and one sent as it was, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "is my car ready, has the part come",
+    "handled": "slot 5; the assistant drafts",
+    "outcome": "готов; 8 019,99 к оплате; закрыт по 7 дням тишины",
+    "facts": [
+      "the wheel-bearing job is 7 902 at list for class suv; with shop supplies (117,99) 8 019,99 to pay, VAT inside",
+      "the customer had heard the figure without shop supplies on the phone",
+      "slot 5 did not resolve the chat"
+    ],
+    "questions": []
+  },
+  "why": [
+    "«гул ушел. к оплате 8 019,99. забирать до 20 00»: без заглавных, наспех, и всё равно две вещи, которые нужны клиенту, — итог и время.",
+    "Второй черновик объясняет счёт лучше, чем он сам; он пишет своё и зовёт к телефону.",
+    "Третий черновик ему подходит, и он его отправляет."
+  ],
+  "new_facts": [
+    "Ильнур Сабиров (в Telegram «Ильнур»), Renault Duster 2014: замена переднего левого ступичного подшипника на main в первый рабочий день слота 5 начиная с четверга недели T-18: 7 902 по прайсу, 8 019,99 с расходными материалами (НДС в том числе); утром по телефону ему назвали сумму без расходных материалов.",
+    "Картинка контакта: белый Duster у реки."
+  ]
+}

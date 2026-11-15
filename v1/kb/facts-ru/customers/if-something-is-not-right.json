@@ -1,0 +1,89 @@
+{
+ "path": "customers/if-something-is-not-right.md",
+ "title": "Если что-то не так",
+ "title_en": "If something isn't right",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/if-something-is-not-right.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "Public complaints route.",
+ "serves": [
+  "S8",
+  "S1"
+ ],
+ "length_class": "short",
+ "words_ru": 106,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "A written claim (претензия) is a route of its own in Russia; the page promises a written answer within ten days.",
+  "Slot 2 is «директор»; her address follows phones.md."
+ ],
+ "new_facts": [
+  "A written claim is answered in writing within ten days."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "The ten-day term for answering a consumer's written claim about work (consumer-protection law, article 31) is not in the research.",
+   "outcome": "verified",
+   "note": "The law's ten days are for satisfying the demand (price reduction, cost of putting the defect right, money back, losses); the page promises a written answer inside the same ten days.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-31/",
+   "sentence": "ст. 31 п. 1: требования потребителя, предусмотренные пунктом 1 статьи 28 «и пунктами 1 и 4 статьи 29 настоящего Закона, подлежат удовлетворению в десятидневный срок» «со дня предъявления соответствующего требования»."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Если что-то не так",
+   "item": "Позвоните в сервис, где делали машину, и попросите руководителя: Сергей Анатольевич Мельников — Московское шоссе и Инженерный, Ринат Фаридович Галиев — Техническая. Или скажите любому мастеру-приёмщику, он его позовёт."
+  },
+  {
+   "section": "Если что-то не так",
+   "item": "Вам ответят в течение одного рабочего дня — человек, который может решить вопрос."
+  },
+  {
+   "section": "Если что-то не так",
+   "item": "Если машину нужно показать, смотрим её первой, вне очереди. За осмотр вы не платите."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович Галиев",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

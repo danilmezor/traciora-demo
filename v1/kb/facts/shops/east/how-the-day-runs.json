@@ -1,0 +1,72 @@
+{
+ "path": "shops/east/how-the-day-runs.md",
+ "title": "Bonny Oaks: how the day runs",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "The east shop's habits in its lead advisor's words: the photo before the price, Mondays, cover.",
+ "serves": [
+  "S5",
+  "S4",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_en": 253,
+ "links_to": [
+  "accounts/a2.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "House rules of slot 16: photo before price; two times offered after the price; declined work raised at the next drop-off.",
+  "Mondays belong to account A2 until about 10:00; retail from 9:30.",
+  "Slot 18 takes diagnostics at east, two a day, plus overflow from main.",
+  "The phone is answered even with a customer present.",
+  "These habits are what the scorecard rewards (offered_time, asked_for_booking) and why east sells more recommended work with her (63 % with her, 52 % without per design 7.2)."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [
+  "Slot 18's limit of two diagnostic jobs a day."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same habits in slot 16's Russian voice."
+ ]
+}

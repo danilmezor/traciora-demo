@@ -1,0 +1,681 @@
+{
+  "format": "seed-call/1",
+  "id": "en-22-S1-a6-quote-promised",
+  "configuration": "en",
+  "number": 22,
+  "story": "S1",
+  "title": "The newcomer promises the catering company a written quote 'today'; it goes out two days late",
+  "purpose": "Story S1. Erin Castillo wants an itemized quote on two vans before she schedules anything. Caleb will not guess a fleet price, which is right, and answers 'how soon could you take it' with the opening hours, which is not. He promises the quote by the end of the day and sends it two days later; the call log shows no call back.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Caleb Sutton",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Erin Castillo",
+      "ref": "accounts.json en.A6 contacts[1]",
+      "company": "Sourwood Catering Co.",
+      "account": "A6",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Bobby Shadden",
+        "ref": "accounts.json en.A6 contacts[0]",
+        "role": "the former fleet contact"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Tuesday of week T-9 (rule R6; card S01, call 22)",
+    "nominal_offset": "T-66d",
+    "nominal_date": "2026-09-08",
+    "local_start": "10:15",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 18,
+    "caller_phone": "423-555-0106",
+    "repeat_caller": false,
+    "talk_s": 114
+  },
+  "scenario": {
+    "who_calls": "Erin Castillo of company account A6, eleven weeks into the job and comparing shops.",
+    "vehicle": "units SC-4 (2019 Ram ProMaster 2500, BRC-4958) and SC-5 (2021 Ram ProMaster 2500, BRC-7728)",
+    "job": "front and rear brakes on SC-4; the PM service on SC-5",
+    "wants": "a written, itemized quote before she schedules anything",
+    "what_happens": "Caleb repeats the two jobs back, will not give a ballpark, answers 'how soon could you take the ProMaster' with the opening hours, promises the quote by email by the end of the day, takes her number without saying it back and repeats what he owes her.",
+    "facts": {
+      "quote_promised": "the call's day, by the end of the day",
+      "quote_sent": "call+2d",
+      "note": "No price is said on the call. Card S01: a quote promised by slot 7 and sent two days late; it is one of the things the account's fading rests on."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Thursday",
+      "day": "call+2d"
+    },
+    {
+      "word": "Friday",
+      "day": "call+3d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Caleb."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.5,
+      "said": "Hi, Caleb. This is Erin Castillo with Sourwood Catering. We have an account with y'all."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.8,
+      "said": "Yes ma'am!"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 12.0,
+      "said": "I need a written quote on two of our vans before I schedule anything. Front and rear brakes on S-C-four, that's the ProMaster. And the regular service on S-C-five."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 24.5,
+      "said": "Okay. S-C-four, brakes, front and rear. And S-C-five, the service. Yes ma'am, no problem."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 29.8,
+      "said": "Right.",
+      "overlap": true
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 32.1,
+      "said": "And I need it itemized. Parts and labor separate."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 36.5,
+      "said": "Yes ma'am. Itemized."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 39.7,
+      "said": "Can you give me a ballpark on the brakes right now? Just so I know what I'm walking into."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 48.5,
+      "said": "Uh — I don't wanna guess on that one, ma'am. I'd — I'd have to look up what y'all's price is. It'll be on the quote."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 59.2,
+      "said": "Okay. And how soon could you take the ProMaster, if we go ahead?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 65.2,
+      "said": "Uh, should be pretty quick. We're open seven-thirty to five-thirty."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 69.7,
+      "said": "...Okay. So when will I have the quote?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 73.7,
+      "said": "Today. I'll — I'll have it in your email by the end of the day, and I'll do it myself."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 81.6,
+      "said": "Today. Okay. Do you have my email? It's not Bobby's anymore."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 87.3,
+      "said": "Uh — what's a good number for you, just in case?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 92.6,
+      "said": "Four two three, five five five, oh one oh six. And the email's E-Castillo at Sourwood Catering."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 100.6,
+      "said": "Got it. Yes ma'am."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 102.3,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 104.2,
+      "said": "So — quote on the ProMaster and the service, today."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 108.6,
+      "said": "Thank you."
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 110.9,
+      "said": "Yes ma'am. Have a good one!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.72,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          3,
+          5,
+          8,
+          10,
+          12,
+          13,
+          14,
+          16,
+          18,
+          20,
+          22
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "the caller's first name heard as a man's",
+        "script_turn": 2,
+        "said": "Erin",
+        "stored": "Aaron"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          4,
+          5,
+          12,
+          17
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 3,
+        "dropped": 2
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 1
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 1,
+        "as_digits": 1,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 232,
+    "stored_words": 220,
+    "strict_word_difference": 0.099
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 241,
+    "duration_s": 114.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Caleb.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi, Caleb. This is Aaron Castillo with Sourwood Catering. We have an account with y'all.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am!",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I need a written quote on two of our vans before I schedule anything. Front and rear brakes on SC-4, that's the ProMaster. And the regular service on SC-5.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. SC-4, brakes, front and rear. And SC-5, the service. Yes, ma'am, no problem.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Right. And I need it itemized. Parts and labor separate.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am. Itemized.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Can you give me a ballpark on the brakes right now? Just so I know what I'm walking into.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I don't want to guess on that one, ma'am. I'd have to look up what y'all's price is. It'll be on the quote.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And how soon could you take the ProMaster, if we go ahead?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Should be pretty quick. We're open 7:30 to 5:30.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So when will I have the quote?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Today. I'll have it in your email by the end of the day, and I'll do it myself.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Today. Okay. Do you have my email? It's not Bobby's anymore.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh, what's a good number for you, just in case?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0106. And the email's E-Castillo at Sourwood Catering.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Got it. Yes, ma'am.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So, quote on the ProMaster and the service, today.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am. Have a good one!",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Caleb.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "what's a good number for you, just in case?",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "need_discovery",
+        "quote": "SC-4, brakes, front and rear. And SC-5, the service.",
+        "level": 1,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "I don't want to guess on that one, ma'am.",
+        "level": 0,
+        "segment": 8
+      },
+      {
+        "key": "offered_time",
+        "quote": "We're open 7:30 to 5:30.",
+        "level": 0,
+        "segment": 10
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I'll have it in your email by the end of the day, and I'll do it myself.",
+        "level": 2,
+        "segment": 12
+      },
+      {
+        "key": "recap",
+        "quote": "quote on the ProMaster and the service, today",
+        "level": 1,
+        "segment": 18
+      }
+    ],
+    "na": [
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [],
+    "strength": {
+      "quote": "SC-4, brakes, front and rear. And SC-5, the service.",
+      "why": "He said both jobs back to her before doing anything else, so the quote he owes is for the right work.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "We're open 7:30 to 5:30.",
+      "say": "If you go ahead, I can take SC-4 Thursday at 7:30 or Friday at 7:30, and brakes all the way around is most of a day. Which would hurt your schedule less?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 46.4,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 0,
+          "segment": 8
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 10
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 12
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 18
+        }
+      ],
+      "na": [
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised"
+      ],
+      "score": 46.4,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Caleb",
+        "name_and_number": "what's a good number for you, just in case?",
+        "need_discovery": "SC-4, brakes, front and rear. And SC-5, the service",
+        "price_with_next_step": "I don't want to guess on that one, ma'am",
+        "offered_time": "We're open 7:30 to 5:30",
+        "asked_for_booking": "I'll have it in your email by the end of the day, and I'll do it myself",
+        "recap": "quote on the ProMaster and the service, today"
+      },
+      "na": {
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "SC-4, brakes, front and rear. And SC-5, the service",
+        "why": "He said both jobs back to her before doing anything else, so the quote he owes is for the right work."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "We're open 7:30 to 5:30.",
+        "say": "If you go ahead, I can take SC-4 Thursday at 7:30 or Friday at 7:30, and brakes all the way around is most of a day. Which would hurt your schedule less?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. The promise on this call was not kept: the quote was e-mailed two days later and nobody rang her.",
+    "what_follows": "The call log's auto-fail callback_not_kept. Card S01 counts this among the reasons the account is fading.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 1,
+      "price_with_next_step": 0,
+      "offered_time": 0,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": "na"
+    },
+    "score": 46.4,
+    "score_exact": 46.4286,
+    "outcome": "callback_promised",
+    "tags": [
+      "callback_promised"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and his own name.",
+    "name_and_number": "1: he asks for a number, says 'got it' and does not say it back; he asked for the number when she asked about her email.",
+    "need_discovery": "1: the units and the jobs, as she gave them; he asks nothing (which is urgent, mileage, what the drivers report).",
+    "price_with_next_step": "0: asked for a ballpark, he gives none and does not say why an inspection or a look at the account would be needed first. Not guessing a fleet price is right; saying nothing in its place is the level.",
+    "offered_time": "0: asked how soon he could take the van, he gives the opening hours.",
+    "asked_for_booking": "2: a step with a day, a time and a person: the quote, today, by the end of the day, from him.",
+    "recap": "1: what and when; not where it is going.",
+    "objection": "N/A: she is brisk, not doubtful.",
+    "auto_fails": "None from the judge: nothing on the call shows the promise is empty. The call log adds callback_not_kept.",
+    "score": "(1·2 + 2·1 + 2·1 + 2·0 + 3·0 + 3·2 + 1·1) / 2 = 6.5 of 14 weight points = 46.4.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "not kept: no outbound call to 423-555-0106 in the 24 hours after this call; the quote went by e-mail on call+2d",
+    "auto_fail": "callback_not_kept"
+  },
+  "new_facts": [
+    "An estimate for A6 at main opened on this call's day for SC-4 (front and rear brakes) and SC-5 (PM service) and sent on call+2d; it is the 'quote sent two days late' of card S01.",
+    "Her e-mail is the account's own, ecastillo@sourwoodcatering.example; the account still held her predecessor's."
+  ]
+}

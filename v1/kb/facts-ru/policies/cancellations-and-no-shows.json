@@ -1,0 +1,94 @@
+{
+ "path": "policies/cancellations-and-no-shows.md",
+ "title": "Отмена записи и неявка",
+ "title_en": "Cancellations and no-shows",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/cancellations-and-no-shows.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What happens when a booked customer does not come.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 197,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "About one booking in ten is not kept (the Russian share; English one in eight).",
+  "Confirmation by a message or a call by 17:00 the day before (closing is 20:00).",
+  "A tyre-season rule: the slot is held 15 minutes."
+ ],
+ "new_facts": [
+  "Confirmation by 17:00; the 30-minute rule; two no-shows in twelve months; 15 minutes in the tyre season."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Отмена записи и неявка",
+   "item": "Подтверждаем накануне. Сообщение или звонок по каждой записи на время, до 17:00. Подтверждённую запись отмечаем как подтверждённую."
+  },
+  {
+   "section": "Отмена записи и неявка",
+   "item": "Тридцать минут. Клиент опоздал больше чем на 30 минут и не предупредил — окно уходит. Ставим в записи «неявка» и отдаём пост следующей машине. Приедет позже — ждёт как клиент без записи, и разговариваем с ним при этом нормально."
+  },
+  {
+   "section": "Отмена записи и неявка",
+   "item": "Не приехавшему звоним один раз, в тот же день: «Мы вас утром не дождались. Записать на другое время?» Половина перезаписывается."
+  },
+  {
+   "section": "Отмена записи и неявка",
+   "item": "Две неявки за двенадцать месяцев — на время больше не записываем. Пусть приезжает с утра без записи, возьмём, когда освободится пост. Напишите это в примечании к клиенту, чтобы видел следующий мастер-приёмщик."
+  },
+  {
+   "section": "Отмена записи и неявка",
+   "item": "Денег не берём. Ни за пропущенную запись, ни предоплаты за запись."
+  },
+  {
+   "section": "Отмена записи и неявка",
+   "item": "Клиенту, который позвонил и отменил, говорим спасибо. Другое время предлагаем до того, как он положит трубку."
+  },
+  {
+   "section": "Отмена записи и неявка",
+   "item": "В сезон шиномонтажа окно держим 15 минут: за дверью стоят ещё трое."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паше",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

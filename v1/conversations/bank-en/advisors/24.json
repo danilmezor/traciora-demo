@@ -1,0 +1,241 @@
+{
+  "format": "bank-en/advisor/1",
+  "slot": 24,
+  "name": "Jasmine Bolden",
+  "shop": "Charlotte Pike",
+  "voice": "Clear, upbeat, professional. Confirms name, number and vehicle, then offers two times. Says 'what I can do is' instead of 'no'. Findings by number with the estimate attached, a total to the cent, 'You're booked'.",
+  "sheet": {
+    "draft_outcomes": {
+      "sent_as_is": 35,
+      "sent_edited": 50,
+      "discarded": 15
+    },
+    "first_reply_min": 7,
+    "ask_chance": 85,
+    "label_share": 95,
+    "resolves": 80
+  },
+  "signoff": null,
+  "pickup": [
+    "Good morning, {first_name}, this is Jasmine at Charlotte Pike. To confirm: {full_name}, {phone}, {car}.",
+    "Hi {first_name}, this is Jasmine at Brennan Auto Care on Charlotte Pike. I have your message, and I'm on it.",
+    "Good afternoon, {first_name}. Jasmine at Charlotte Pike. To confirm, this is the {car}?",
+    "Hi {first_name}, Jasmine here at the Charlotte Pike shop. Thank you for your patience."
+  ],
+  "replies": {
+    "price": {
+      "quote": [
+        "For the {car}, the {job} is {job_price} before tax and takes {duration}. What I can do is {day_a} at {time_a} or {day_b} at {time_b}.",
+        "Here's the price for your {model}: {job}, {job_price}; with shop supplies and tax, {job_total}. Estimate attached.",
+        "The {job} is {job_price} on the {model}. I can take it {day_a} at {time_a} or {day_b} at {time_b}. Which works?",
+        "To give you an exact number I'd want the technician to look first: the {diag} is {diag_price}. What I can do is {day_a} at {time_a}."
+      ],
+      "after": [
+        "That includes parts and labor. With shop supplies and tax, it's {job_total}.",
+        "It takes {duration}. You're welcome to wait in the lobby.",
+        "I can't match another shop's price, but what I can do is show you exactly what's included, line by line.",
+        "That's the total: {job_total}. Nothing is added without your approval."
+      ]
+    },
+    "booking": {
+      "offer": [
+        "What I can do is {day_a} at {time_a} or {day_b} at {time_b}. Which time works?",
+        "The morning is full, so what I can do is {time_a} or {time_b} on {day_a}.",
+        "To confirm: {car}, {job}. I have {day_a} at {time_a} or {day_b} at {time_b}.",
+        "I have two openings: {day_a} at {time_a}, or {day_b} at {time_b}. Let me know which you'd like."
+      ],
+      "confirm": [
+        "You're booked, {first_name}: {day_agreed} at {time_agreed}, {job} on the {model}, {shop_address}.",
+        "Thank you, {first_name}. {day_agreed} at {time_agreed} works. See you at {shop_address}.",
+        "You're booked for {day_agreed} at {time_agreed}. I'll send a reminder the day before.",
+        "Confirmed: {day_agreed}, {time_agreed}, {job}. If anything changes, message me here."
+      ]
+    },
+    "hours": {
+      "answer": [
+        "We're open {open_time} to {close_time}, Monday to Friday, Central time. We're closed Saturdays here; East Main in Chattanooga is open {sat_hours} Eastern.",
+        "Yes, we do. What I can do is find you a time this week.",
+        "We're at {shop_address}. Parking is right in front of the office.",
+        "We're closed Saturdays and Sundays here, {first_name}. Weekdays {open_time} to {close_time}."
+      ],
+      "after": [
+        "After hours, use the key drop by the office door. Fill out the envelope, and I'll call you in the morning.",
+        "The battery test is free and takes about ten minutes. No appointment needed.",
+        "We don't run a shuttle at Charlotte Pike, but you're welcome to wait for shorter jobs.",
+        "If you'd rather call, the shop line is {shop_phone}."
+      ]
+    },
+    "symptom": {
+      "advise": [
+        "To confirm: {car}, {symptom_said}. I can take it {day_a} at {time_a} or {day_b} at {time_b}. The {diag} is {diag_price}.",
+        "Is the light steady or flashing? If it's flashing, please don't drive it far. What I can do is {day_a} at {time_a}.",
+        "Thank you for the photo, {first_name}. That should be looked at soon. The {diag} is {diag_price}.",
+        "What I can do is get it on the lift {day_a} at {time_a}. You'll have photos and an estimate before anything is done."
+      ],
+      "confirm": [
+        "You're booked, {first_name}: {day_agreed} at {time_agreed}, {job} on the {model}.",
+        "Thank you. I'll message you photos as soon as the technician has looked.",
+        "Confirmed. A steady light is fine to drive in on.",
+        "See you {day_agreed} at {time_agreed}, {first_name}."
+      ]
+    },
+    "status": {
+      "ready": [
+        "The {model} is ready, {first_name}. Total with tax is {job_total}. We're here until {close_time}.",
+        "Hi {first_name}! Your car is ready. Invoice attached: {job_total}.",
+        "Ready for pickup, {first_name}. Everything went as estimated: {job_total}.",
+        "All done, {first_name}. The {job} is complete and road tested. We're open until {close_time}."
+      ],
+      "not_yet": [
+        "Hi {first_name}. It's in progress; the technician expects to finish by {ready_time}. I'll message you here.",
+        "The part is due {eta_day}. What I can do is call you the moment it arrives and give you a firm time then.",
+        "Not yet, {first_name}. It's next on the lift, and I'll update you by {ready_time}.",
+        "Thank you for checking in. Here's where it stands: the diagnosis is done, the part is ordered, and it's due {eta_day}."
+      ]
+    },
+    "found_work": {
+      "present": [
+        "Hi {first_name}, the inspection is done. Estimate attached.\n1. {finding}: {finding_price}.\n2. {finding_b}: {finding_b_price}.\nWhat I can do is have both done by {ready_time} if I hear from you by {time_a}. Would you like both, or the first only?",
+        "Hi {first_name}. Here's what the technician found:\n1. {finding}, {finding_price}. Recommended today.\n2. {finding_b}, {finding_b_price}. Can wait.\nEstimate attached.",
+        "{first_name}, the {job} is done. One finding: {finding}, {finding_price}. Photo and estimate attached. Would you like it done today?",
+        "Hi {first_name}! The diagnosis is done: {finding}. The repair is {finding_price}, and I can have it ready by {ready_time}."
+      ],
+      "confirm": [
+        "Thank you, {first_name}. Approved: {finding_item}. The total with shop supplies and tax is {job_total}. Ready by {ready_time}, and I'll message you here.",
+        "Thank you. Both approved. Total {job_total}, ready by {ready_time}.",
+        "Got it, {first_name}: the first item only. Updated estimate attached.",
+        "Approved, thank you. The technician is starting now; I'll message you when it's road tested."
+      ],
+      "declined": [
+        "Understood. Declined for now: {finding_b_item}. I've noted it on your record.",
+        "Understood, {first_name}. Declined for now: {finding_item}. It's noted, and I'll remind you at your next visit.",
+        "Thank you for letting me know. No additional work; the estimate is updated.",
+        "Got it. We'll complete the original work only, and the declined item is on your record."
+      ]
+    },
+    "moving": {
+      "moved": [
+        "No problem, {first_name}. What I can do is {day_a} at {time_a} or {day_b} at {time_b}.",
+        "I've moved you off {appt_day}. To confirm, same job, new day: {day_a} at {time_a}?",
+        "Of course. I have {day_a} at {time_a} open. Does that work?",
+        "Thank you for the heads-up. Two options: {day_a} at {time_a}, or {day_b} at {time_b}."
+      ],
+      "cancelled": [
+        "Cancelled, {first_name}. Message me here when you'd like to rebook.",
+        "Understood. Your {appt_day} appointment is cancelled.",
+        "Thank you for letting me know. It's cancelled, no charge.",
+        "Done. When you're ready, I'll find you a time."
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        "{first_name}, this is Jasmine at Charlotte Pike. You're right, and I'm sorry. What I can do is have the technician look at it {day_a} at {time_a}, no charge.",
+        "I'm sorry, {first_name}. To confirm: {car}, worked on {visit_day}. Can you bring it by {day_a} at {time_a}?",
+        "Thank you for telling me, and I'm sorry. I'll go through the order and message you here today.",
+        "I'm sorry that wasn't explained. If anything else on the bill isn't clear, message me here."
+      ],
+      "fix": [
+        "Here's what happened: {finding}. It's corrected and road tested, at no charge.",
+        "Shop supplies is a small percentage of the hourly labor with a cap, and it should be on the estimate before work starts. I'm sorry nobody showed you.",
+        "{manager_first} has approved it. The corrected invoice is attached.",
+        "It's resolved, {first_name}. If you notice anything, message me directly."
+      ],
+      "bill": [
+        "{first_name}, this is Jasmine at Charlotte Pike. You're right, and I'm sorry it wasn't explained. The difference is sales tax and shop supplies; here's the breakdown, invoice attached.",
+        "Thank you for asking. The estimate was {job_price} before tax; with shop supplies and tax the total was {job_total}. That should have been shown to you before work started.",
+        "I'm sorry for the surprise. What I can do is go through every line with you by phone today.",
+        "Here's what's on the bill: the repair, shop supplies on the labor, and Tennessee sales tax. Nothing beyond what you approved was added."
+      ]
+    },
+    "fleet": {
+      "list": [
+        "Good morning, {contact_first}. To confirm: {unit} and {unit_b}, {day_said} at {time_a}, service on both.",
+        "Thank you, {contact_first}. {unit} is booked {day_a} at {time_a}. I'll send the estimate before any extra work.",
+        "What I can do is take {unit} today at {time_a} and have it back by {ready_time}.",
+        "Received, {contact_first}. Quote for {unit} attached, parts and labor separate."
+      ],
+      "paperwork": [
+        "Invoice for {unit} attached, {contact_first}.",
+        "PO {po} is on the order. Thank you, {contact_first}.",
+        "I'll send the statement copy to your office email by end of day.",
+        "Here's the itemized quote, parts and labor separate."
+      ]
+    }
+  },
+  "moves": {
+    "ask": [
+      "To confirm, {first_name}: is it a noise, a warning light, or something you feel?",
+      "So I book the right thing: is the light steady or flashing?",
+      "Which vehicle is this for? I'd like to confirm the year and model.",
+      "Just to make sure: do you want the {job}, or the inspection first?"
+    ],
+    "decline_discount": [
+      "I can't change the price, but what I can do is split it: the safety item now, the rest next visit.",
+      "Our prices are the same for every customer. What I can do is show you each line so you see what's included.",
+      "I understand. What I can do is check whether anything on the estimate can wait.",
+      "I'm not able to discount that, {first_name}, but nothing is added without your approval."
+    ],
+    "close": [
+      "See you then, {first_name}.",
+      "You're welcome! Message me here anytime.",
+      "Thank you for choosing Charlotte Pike, {first_name}.",
+      "Have a good evening, {first_name}."
+    ],
+    "pass_on": [
+      "I'll have {manager_first} call you today.",
+      "Let me check with the technician and update you within the hour.",
+      "That's one for {manager_first}; I've sent it to him and will follow up.",
+      "I'll check with the parts supplier and message you with what they say."
+    ]
+  },
+  "edits": [
+    {
+      "draft_key": "status.dont_have",
+      "draft": "Hi {first_name}! I don't have the status in front of me; I'll check with the technician and let you know.",
+      "sent": "Hi {first_name}! Yes, the diagnosis is done. Estimate attached.\n1. {finding}: {finding_price}.\nWhat I can do is have it done by {ready_time} if I hear from you by {time_a}.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "found_work.total",
+      "draft": "Thank you, {first_name}. I'll confirm the total with shop supplies and tax.",
+      "sent": "Thank you, {first_name}. Both approved. The total with shop supplies and tax is {job_total}. Ready by {ready_time}.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "booking.confirm_echo",
+      "draft": "Thank you, {first_name}. See you {day_agreed} at {time_agreed} at {shop_address}.",
+      "sent": "Thank you, {first_name}. See you {day_agreed} at {time_agreed} at {shop_address}.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "generic.close",
+      "draft": "See you soon, {first_name}.",
+      "sent": "See you soon, {first_name}.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "price.quote_list",
+      "draft": "Hi {first_name}! On our price list, {page_item} is {page_price} before tax for a car or small crossover. Would you like to set up a time?",
+      "sent": "Hi {first_name}! For the {car}, the {job} is {job_price} before tax. What I can do is {day_a} at {time_a} or {day_b} at {time_b}.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "complaint.bill",
+      "draft": "I'm sorry it wasn't explained, {first_name}. Shop supplies is a small charge on repairs billed by the hour, never more than {page_price} on one bill.",
+      "sent": "{first_name}, this is Jasmine at Charlotte Pike. I'm sorry it wasn't explained. Shop supplies is a small charge on hourly labor, never more than {page_price} on one bill, and it should be on your estimate before work starts.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "moving.ack",
+      "draft": "Thanks for letting us know, {first_name}. What day would suit you better?",
+      "sent": "No problem, {first_name}. What I can do is {day_a} at {time_a} or {day_b} at {time_b}.",
+      "outcome": "discarded"
+    }
+  ],
+  "notes": [
+    "@{manager_first} {first_name} {last_name} ({car}) has written twice about the part. Supplier moved it to {eta_day}. Can we source it elsewhere?",
+    "@{colleague_first} I booked {first_name} for {day_agreed} at {time_agreed}; the estimate is in the chat.",
+    "@{tech_first} customer approved both items on the {model}; she needs it by {ready_time}.",
+    "@{manager_first} customer disputes shop supplies on the {model} invoice. I explained; flagging in case they call."
+  ]
+}

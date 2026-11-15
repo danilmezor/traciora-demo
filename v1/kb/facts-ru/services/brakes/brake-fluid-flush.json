@@ -1,0 +1,103 @@
+{
+ "path": "services/brakes/brake-fluid-flush.md",
+ "title": "Замена тормозной жидкости",
+ "title_en": "Brake fluid flush",
+ "exists_in": "both",
+ "english_sheet": "facts/services/brakes/brake-fluid-flush.json",
+ "first_revision_text": "ru/_history/services/brakes/brake-fluid-flush.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Brake fluid exchange: why, when, how it is sold.",
+ "serves": [
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 131,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Every two years. The local line is a long descent to the Volga instead of the mountains near Chattanooga.",
+  "Customers call it «прокачать тормоза»."
+ ],
+ "new_facts": [
+  "The 3 % water threshold (as in English)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Замена тормозной жидкости",
+   "item": "На осмотре механик проверяет жидкость тестером и пишет процент. Больше 3 % воды — рекомендация. Покажите клиенту цифру."
+  },
+  {
+   "section": "Замена тормозной жидкости",
+   "item": "В девяти случаях из десяти эта работа продаётся из осмотра. Сам с этим никто не звонит."
+  },
+  {
+   "section": "Замена тормозной жидкости",
+   "item": "Клиенты называют это «прокачать тормоза». Прокачка — только часть работы: при замене суппорта или шланга прокачивается один контур, а не меняется вся жидкость. Если жидкость старая, продавайте обе работы вместе: система всё равно вскрыта."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_fluid_exchange",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "brake_fluid_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2480.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  2480.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

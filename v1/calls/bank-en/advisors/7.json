@@ -1,0 +1,337 @@
+{
+  "slot": 7,
+  "name": "Caleb Sutton",
+  "site": "main",
+  "role": "service advisor, three months in",
+  "tier": "warm",
+  "voice": "Eager and fast, too many 'yes sir, no problem's. Says the script's greeting, asks little, prices from memory or puts the caller on hold to look it up. Answers before he has the facts ('should be', 'I think') and forgets to take a name and number. Learning: he now pulls the price off the price list 'so I tell you right' and says 'let me not guess'.",
+  "style_sheet": {
+    "greeting": [
+      5,
+      25,
+      70
+    ],
+    "name_and_number": [
+      45,
+      40,
+      15
+    ],
+    "need_discovery": [
+      20,
+      50,
+      30
+    ],
+    "price_with_next_step": [
+      25,
+      55,
+      20
+    ],
+    "offered_time": [
+      45,
+      45,
+      10
+    ],
+    "asked_for_booking": [
+      35,
+      40,
+      25
+    ],
+    "recap": [
+      70,
+      20,
+      10
+    ],
+    "objection": [
+      60,
+      30,
+      10
+    ]
+  },
+  "habits": [
+    "'Yes sir!' and 'Yes ma'am' at the start of nearly every line; 'no problem'.",
+    "'Should be', 'I think', 'uh' while he looks something up.",
+    "Offers the shop's hours instead of a time.",
+    "Forgets the name and number; when he remembers, it comes late.",
+    "Never names a story's wrong price; his background wrong promises are the generator's (DESIGN.md: two only, both planted)."
+  ],
+  "fillers": [
+    "Yes {sir_maam},",
+    "Uh,",
+    "Okay,",
+    "Yes {sir_maam}, uh,"
+  ],
+  "tokens": {
+    "a_ok": [
+      "Okay",
+      "Uh, okay"
+    ],
+    "a_yes": [
+      "Yes {sir_maam}",
+      "Yes {sir_maam}, no problem"
+    ],
+    "a_sorry": [
+      "Sorry about that",
+      "I'm sorry"
+    ]
+  },
+  "greeting_tails": [
+    "",
+    " How can I help you?",
+    " Yes {sir_maam}?",
+    " What can I do for ya?"
+  ],
+  "greetings": [
+    "Brennan Auto Care, this is Caleb, what can I do for ya?",
+    "Good afternoon, Brennan Auto Care, this is Caleb!",
+    "Thanks for calling Brennan Auto Care, this is Caleb.",
+    "Brennan Auto Care, Caleb, how can I help you?",
+    "Brennan Auto Care on East Main, this is Caleb.",
+    "Hi, Brennan Auto Care, Caleb speaking!"
+  ],
+  "address": [
+    ", {sir_maam}"
+  ],
+  "checks": {
+    "greeting": {
+      "0": [
+        "Yeah, hello? — Sorry. Yes {sir_maam}, go ahead.",
+        "Hello?",
+        "Uh — yes {sir_maam}?",
+        "Hey, sorry, I was — go ahead."
+      ],
+      "1": [
+        "Brennan Auto Care!",
+        "Brennan Auto Care, hang on — sorry. Go ahead.",
+        "Brennan Auto Care, yes {sir_maam}?",
+        "Brennan Auto Care, what can I do for ya?"
+      ],
+      "2": [
+        "Brennan Auto Care, this is Caleb.",
+        "Brennan Auto Care, this is Caleb, how can I help you?",
+        "Good morning, Brennan Auto Care, this is Caleb!",
+        "Brennan Auto Care, Caleb speaking."
+      ]
+    },
+    "name_and_number": {
+      "0": [
+        "<skip>",
+        "Oh — I'll just put the {car_model} down for now.",
+        "Okay, I'll just put it under the {car_model}.",
+        "You can just give us all that when you get here."
+      ],
+      "1": [
+        "Okay, got it, yes {sir_maam}.",
+        "Yes {sir_maam}. Okay.",
+        "Got it. No problem.",
+        "Okay, {customer_first}, I wrote that down."
+      ],
+      "2": [
+        "Okay, {customer_phone_said}. Yes {sir_maam}, got it.",
+        "{customer_phone_said}? Okay, I got it wrote down.",
+        "Let me make sure — {customer_phone_said}. Okay!",
+        "{customer_phone_said}. Yes {sir_maam}, I've got it."
+      ]
+    },
+    "need_discovery": {
+      "0": [
+        "Yes {sir_maam}! Uh, hang on one second, let me look...",
+        "Okay, one second, let me pull up the price.",
+        "Yes {sir_maam}, no problem, let me look it up.",
+        "Uh, okay. Let me see."
+      ],
+      "1": [
+        "Yes {sir_maam}! What kind of car is it?",
+        "Okay, and what kind of vehicle?",
+        "Yes {sir_maam}. What year and model?",
+        "Okay. And what's the car?"
+      ],
+      "2": [
+        "Okay. And uh — {job_question}",
+        "Yes {sir_maam}. Uh, {job_question}",
+        "How long has the {car_model} been doing that, you think?",
+        "Okay, and — sorry, {job_question}"
+      ]
+    },
+    "price_with_next_step": {
+      "0": [
+        "Uh, I'm not sure on that one. I'd have to ask in the back.",
+        "I don't wanna guess on that one, {sir_maam}.",
+        "Uh — I don't know {job_said} off the top of my head.",
+        "I'd have to look that up and call you back, I think."
+      ],
+      "1": [
+        "Okay. That's {price}. Should be.",
+        "Yes {sir_maam}, {price_statement}. I think that's everything.",
+        "Uh — {price}, plus tax. Yes {sir_maam}.",
+        "It's {price}. Before tax, I think."
+      ],
+      "2": [
+        "Okay. Give me one second — I wanna pull it off the price list so I tell you right... {price_statement}. {depends} You want me to find you a time?",
+        "So {price_statement}, before tax. Uh. {depends} I can look at the schedule for you.",
+        "Okay, so uh — {inspection_line} I can get you on the schedule if you want.",
+        "Yes {sir_maam}, {price_statement}. {depends} Let me see when we've got."
+      ]
+    },
+    "offered_time": {
+      "0": [
+        "Uh, anytime. We're open {shop_hours}.",
+        "You can just bring it by.",
+        "We're open {shop_hours}, yes {sir_maam}.",
+        "Whenever's good for you, no problem, just bring the {car_model}."
+      ],
+      "1": [
+        "Uh — I could get you in {time_1}?",
+        "When did you wanna bring it by?",
+        "Yes {sir_maam}. What day were you thinking?",
+        "I could probably do {time_1}."
+      ],
+      "2": [
+        "Uh, I could do {time_1}, or {time_2}?",
+        "I've got {time_1} or — uh — {time_2}. Either one?",
+        "Yes {sir_maam}, {time_1} or {time_2} would work.",
+        "So, {time_1}? Or {time_2}, if that's better."
+      ]
+    },
+    "asked_for_booking": {
+      "0": [
+        "Yes {sir_maam}, no problem. Have a good one!",
+        "Okay, yes {sir_maam}. Just give us a call about the {car_model}.",
+        "No problem! Call us anytime.",
+        "Okay, yes {sir_maam}, sounds good!"
+      ],
+      "1": [
+        "You want me to go ahead and put you down for something?",
+        "Want me to put the {car_model} on the schedule?",
+        "I can call you back when I know more?",
+        "You wanna go ahead and set something up?"
+      ],
+      "2": [
+        "Okay. So I've got you down for {time_chosen}, and I'll be the one checking you in. Just ask for Caleb.",
+        "Yes {sir_maam}, I'll put you down, {time_chosen}, just ask for Caleb.",
+        "Okay, you're on for {time_chosen}. I'll check you in — I'm Caleb.",
+        "Got it, {time_chosen}. I'll be up front, ask for Caleb."
+      ]
+    },
+    "recap": {
+      "0": [
+        "Yes {sir_maam}. See you then.",
+        "Alright, see you!",
+        "Okay, you have a good one now!",
+        "Yes {sir_maam}, no problem."
+      ],
+      "1": [
+        "So that's {time_chosen}, yes {sir_maam}.",
+        "Okay, {time_chosen} for the {car_model}.",
+        "Alright, {time_chosen} then. Should be good.",
+        "{time_chosen}, got it."
+      ],
+      "2": [
+        "So that's {time_chosen}, here at {shop_address}, and we're doing {job_said}. Yes {sir_maam}.",
+        "Okay, so {time_chosen}, at {shop_address}, {job_said} on the {car_model}. I think that's it.",
+        "Let me — okay, {time_chosen}, {shop_address}, {job_said}.",
+        "So, uh, {job_said}, {time_chosen}, here at {shop_address}."
+      ]
+    },
+    "objection": {
+      "0": [
+        "Oh. Yes {sir_maam}. So — when did you wanna bring the {car_model} by?",
+        "Okay. Uh — anyway.",
+        "Yes {sir_maam}. Uh, {time_1}?",
+        "Right. Okay."
+      ],
+      "1": [
+        "Oh. Yes {sir_maam}. Well — ours comes with a warranty and everything.",
+        "Yes {sir_maam}, it's all good parts, I think.",
+        "Uh, we do good work on {job_said}, though.",
+        "I mean, it should be worth it."
+      ],
+      "2": [
+        "Oh — okay. Uh, {objection_answer}",
+        "Yes {sir_maam}, that's — {objection_answer}",
+        "Okay, so I asked the guys about that before — {objection_answer}",
+        "Yes {sir_maam}. So, uh, {objection_answer}"
+      ]
+    }
+  },
+  "moves": {
+    "ack": [
+      "Yes {sir_maam}! We can do that.",
+      "Yes {sir_maam}, no problem.",
+      "Okay! Yes {sir_maam}.",
+      "Uh, yes {sir_maam}, we do {job_said}."
+    ],
+    "ask_what": [
+      "Yes {sir_maam}, uh — what's it doing?",
+      "Okay, and what's wrong with it?",
+      "Uh, what's going on with it?"
+    ],
+    "ask_name": [
+      "Oh — can I get your name?",
+      "And uh, what's your name?",
+      "Sorry, who am I talking to?",
+      "Can I get your name real quick?"
+    ],
+    "ask_number": [
+      "And a number for you?",
+      "What's a good number for you, {customer_first}, just in case?",
+      "Uh, and your phone number?",
+      "And uh, {customer_first}, a good number?",
+      "Yes {sir_maam}, and a phone number, {customer_first}?",
+      "Okay, and uh — what number should I put down?"
+    ],
+    "recognise": [
+      "Oh, hey, {customer_first}! Yes {sir_maam}.",
+      "Hey {customer_first}! What can I do for ya?",
+      "Yes {sir_maam}, {customer_first}, I remember."
+    ],
+    "lookup": [
+      "Uh, hang on, let me find it...",
+      "One second, it's — okay, here it is.",
+      "Let me look on the board real quick."
+    ],
+    "hold": [
+      "Can you hold on one second? Let me look it up.",
+      "Hang on one sec, let me ask in the back."
+    ],
+    "back_from_hold": [
+      "Okay, sorry — thanks for waiting.",
+      "Yes {sir_maam}, sorry, I'm back."
+    ],
+    "explain": [
+      "Uh, so I think {job_explain}.",
+      "Yes {sir_maam}, usually {job_explain}, I think.",
+      "So, from what the guys say, {job_explain}."
+    ],
+    "duration": [
+      "Uh... I think like {job_duration}? Should be.",
+      "Should be {job_duration}, no problem.",
+      "Uh — let me not guess. I'll ask the tech and tell you when you drop it off."
+    ],
+    "probe": [
+      "Oh — uh, {objection_probe}",
+      "Can I ask, uh — {objection_probe}"
+    ],
+    "outbound_open": [
+      "Hi, uh, is this {customer_first}? This is Caleb at Brennan Auto Care.",
+      "Yes {sir_maam}, this is Caleb, from Brennan Auto Care.",
+      "Hey, {customer_first}, it's Caleb at Brennan's, yes {sir_maam}."
+    ],
+    "closing_booked": [
+      "Thank you, {customer_first}! Have a good one.",
+      "Yes {sir_maam}, see you {time_chosen}!",
+      "Alright, {customer_first}, thanks for calling!",
+      "Yes {sir_maam}, see you then, bye now!",
+      "Okay, {customer_first}, see you {time_chosen}! Bye!",
+      "Yes {sir_maam}, we'll be ready for you."
+    ],
+    "closing_open": [
+      "Okay, thanks! Have a good one!",
+      "Thanks for calling Brennan Auto Care, have a good one!",
+      "Alright, {customer_first}, bye now!",
+      "Yes {sir_maam}, thanks for calling, {customer_first}!",
+      "Alright, call us back anytime, {customer_first}.",
+      "Okay, yes {sir_maam}, bye now!",
+      "Alright! Thanks again, {sir_maam}."
+    ]
+  }
+}

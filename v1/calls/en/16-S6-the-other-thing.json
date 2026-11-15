@@ -1,0 +1,607 @@
+{
+  "format": "seed-call/1",
+  "id": "en-16-S6-the-other-thing",
+  "configuration": "en",
+  "number": 16,
+  "story": "S6",
+  "title": "The same customer three days on: the promised day has passed, and a question nobody asks him to finish",
+  "purpose": "Story S6, design rule R13 (unresolved). Curtis Vaughn rang that morning and nobody answered. He gets through in the afternoon, is told the part has not come, and asks whether anybody looked at 'the other thing'. Chad repeats the words and does not ask what he means. The customer gives up. An existing-job call: no score.",
+  "cast": {
+    "advisor": {
+      "slot": 23,
+      "name": "Chad Binkley",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Curtis Vaughn",
+      "ref": "named_customers.json en.S6_waiting_nine_days",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "west's last full open day before T (rule R6; card S06, call 16)",
+    "nominal_offset": "T-1d",
+    "nominal_date": "2026-11-12",
+    "local_start": "14:20",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "302",
+    "ring_s": 24,
+    "caller_phone": "615-555-0115",
+    "repeat_caller": true,
+    "talk_s": 75,
+    "note": "Central time. His call at 09:12 that morning rang desk 302 for 20 s and then every desk for 15 s and was not answered; this call resolves that miss as got_through."
+  },
+  "scenario": {
+    "who_calls": "Curtis Vaughn, whose car has stood at the Charlotte Pike shop for eight days and was promised for the day before.",
+    "vehicle": "2012 Volvo XC60 T6 AWD, BRC-7896",
+    "job": "the remanufactured angle gear, still on order",
+    "wants": "a date; and to know whether 'the other thing' was looked at",
+    "what_happens": "He says he rang that morning, that Wednesday has passed, and asks when. Chad says the part did not come and the supplier gave no day. Asked about 'the other thing', Chad repeats it, says he has nothing written down and does not ask what it was. The customer says he will call back or come and stand at the counter.",
+    "unclear": {
+      "kind": "a second request named only as 'the other thing'",
+      "asked_again": 0,
+      "resolved": false,
+      "what_he_meant": "the rear brake pads he asked to have done in call 15, which were never written up",
+      "how": "Chad echoes the phrase and looks for a note instead of asking. Nothing on the call says what the thing is."
+    },
+    "facts": {
+      "promised_in_call_15": "the day before this call",
+      "at_t": "the car is still waiting for the part",
+      "note": "Card S06: the missed call of that morning, then this call; it ends with his question unanswered, which is the auto-fail dropped_customer. No date is promised on this call, so it carries no wrong promise."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Wednesday",
+      "day": "call-1d"
+    },
+    {
+      "word": "Thursday",
+      "day": "call"
+    },
+    {
+      "word": "Monday",
+      "day": "call-3d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 1.9,
+      "said": "Yeah. Curtis Vaughn. Again."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 4.1,
+      "said": "...Yes sir."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 5.9,
+      "said": "I called this mornin'. Phone rang and rang. Nobody picked up."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 11.2,
+      "said": "Yes sir. We were busy up front."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 15.6,
+      "said": "You told me Wednesday. I'm lookin' at a calendar and it says Thursday."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 21.4,
+      "said": "Yes sir. Part didn't come in."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 24.6,
+      "said": "It didn't come in. Did you call 'em?"
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 29.3,
+      "said": "...They said it's on the truck."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 32.2,
+      "said": "On the truck when?"
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 34.6,
+      "said": "They didn't say."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 36.4,
+      "said": "Man. Okay. And what — and what about the other thing? Did anybody ever look at that?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 43.4,
+      "said": "The other thing."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 46.4,
+      "said": "Yeah. What we talked about. Monday."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 50.1,
+      "said": "Uh... I'd have to look. I don't have nothin' wrote down on it."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 56.6,
+      "said": "You don't have nothin' wrote down."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 60.0,
+      "said": "No sir."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 62.1,
+      "said": "...You know what, forget it. I'll call back tomorrow. Or I'll just come down there and stand at the counter till somebody tells me somethin'."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 72.3,
+      "said": "Alright."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 73.8,
+      "said": "Alright."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.67,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words replaced by a plausible wrong phrase",
+        "script_turn": 18,
+        "said": "Or I'll just come down there and stand at the counter till somebody tells me somethin'.",
+        "stored": "Or I'll just come down there and stand at the counter until somebody tells me."
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 0,
+        "as_digits": 0,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 0,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 139,
+    "stored_words": 137,
+    "strict_word_difference": 0.094
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 157,
+    "duration_s": 75.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. Curtis Vaughn. Again.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I called this morning. Phone rang and rang. Nobody picked up.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. We were busy up front.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You told me Wednesday. I'm looking at a calendar and it says Thursday.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. Part didn't come in.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It didn't come in. Did you call them?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "They said it's on the truck.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "On the truck when?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "They didn't say.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Man. Okay. And what about the other thing? Did anybody ever look at that?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The other thing.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. What we talked about. Monday.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'd have to look. I don't have nothing wrote down on it.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You don't have nothing wrote down.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, sir.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You know what, forget it. I'll call back tomorrow. Or I'll just come down there and stand at the counter until somebody tells me.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto.",
+        "level": 1,
+        "segment": 0
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "There was no agreement: the customer said he would call back or come by."
+      }
+    ],
+    "auto_fails": [
+      {
+        "key": "dropped_customer",
+        "quote": "You know what, forget it. I'll call back tomorrow.",
+        "segment": 17
+      }
+    ],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint"
+    ],
+    "strength": {
+      "quote": "Yes, sir. Part didn't come in.",
+      "why": "He said plainly that the part had not come, without making the customer drag it out of him.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "greeting",
+      "instead_of": "Brennan Auto.",
+      "say": "Brennan Auto Care on Charlotte Pike, this is Chad."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [
+        {
+          "key": "dropped_customer",
+          "segment": 17
+        }
+      ],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "complaint",
+        "repeat_caller"
+      ],
+      "score": null,
+      "applicable": 1,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "greeting",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto"
+      },
+      "na": {
+        "recap": "There was no agreement: the customer said he would call back or come by."
+      },
+      "auto_fails": {
+        "dropped_customer": "You know what, forget it. I'll call back tomorrow"
+      },
+      "strength": {
+        "quote": "Yes, sir. Part didn't come in",
+        "why": "He said plainly that the part had not come, without making the customer drag it out of him."
+      },
+      "try_next": {
+        "check": "greeting",
+        "instead_of": "Brennan Auto.",
+        "say": "Brennan Auto Care on Charlotte Pike, this is Chad."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same level. The request stays unclear: the stored lines never say what 'the other thing' is, and neither did the speech.",
+    "unresolved": "He meant the rear brake pads of call 15. An answer about this call that names the brakes as what he asked is reading call 15, not this call.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": "na",
+      "objection": "not_applicable"
+    },
+    "score": null,
+    "outcome": "customer_will_call",
+    "tags": [
+      "complaint",
+      "repeat_caller"
+    ]
+  },
+  "why": {
+    "call_type": "existing_job: he asks about work already agreed. 'The other thing' is not a request for new work that anyone could name from this call.",
+    "greeting": "1: the business only, and not its full name.",
+    "recap": "N/A: nothing was agreed.",
+    "not_applicable": "The six checks that apply to new enquiries only are not asked of this call, which is why the unasked question costs him nothing on the scorecard.",
+    "auto_fails": "dropped_customer: the scorecard's words are 'ended the call without resolving the customer's question, or transferred a call nobody picked up'. His question about 'the other thing' is never asked about or answered, and Chad lets him go with 'All right'. He names no day this time, so no wrong promise.",
+    "try_next": "The greeting is the only scored check, so it is the only line the product can coach. What the call needed is not a check: 'Which thing do you mean, Mr. Vaughn?'",
+    "score": "No score: 1 scored check (greeting), under the three a score needs.",
+    "carried_by": []
+  },
+  "call_log": {
+    "repeat_caller": true,
+    "earlier_miss": "the same number at 09:12 that day, first desk 302, not answered; state got_through, resolved by this call",
+    "auto_fail": null
+  },
+  "day_report": {
+    "in_report": true,
+    "candidate": {
+      "kind": "rang_twice"
+    },
+    "says": "Chad's report of the day carries the highlight 'the caller at 14:20 had already rung at 09:12 and got no answer'. The call has no score and adds none to his day."
+  },
+  "new_facts": [
+    "The time of the missed call of that morning: 09:12 Central, first desk 302, 35 s of ringing.",
+    "What he meant by 'the other thing' (the rear pads of call 15) is in no store: it is in this file's truth only."
+  ]
+}

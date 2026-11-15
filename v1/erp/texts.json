@@ -1,0 +1,49 @@
+{
+ "_doc": "The free text a desk or a mechanic types into the shop system, per configuration: what the generator writes where the spec names a text field and no story fixes its wording. Reasons are drawn evenly from their list. F1's planted discount reason (generator-spec.md, S02) is in none of these lists. readings: what a mechanic writes in inspection_item.measurement, by inspection group and result; measured groups carry a figure in the market's units, the others a short finding. The thresholds follow the knowledge base: pads at 4 mm are 'watch' (shop-floor/courtesy-inspection), brake fluid over 3 % water is a recommendation (services/brakes/brake-fluid-flush), a tyre under 1.6 mm is a defect (ru services/tires/seasonal-changeover-and-storage). 'brake fluid' applies to the job brake_fluid_exchange alone; every other job of the group fluids and filters reads 'fluids and filters'.",
+ "en": {
+  "background_discount_reasons": ["senior discount", "military discount", "price match", "sorry for the wait"],
+  "coupon_reasons": ["first-visit coupon", "seasonal coupon"],
+  "void_reasons": ["duplicate", "wrong customer", "opened by mistake"],
+  "comeback_note": "redo under warranty",
+  "s8_discount_reason": "goodwill: wrong quote and late car",
+  "till_note": "not known",
+  "part_return_reasons": ["wrong part", "not needed", "defective"],
+  "readings": {
+   "tyres": {"watch": ["5/32", "4/32"], "bad": ["3/32", "2/32"]},
+   "brake pads": {"watch": ["5 mm", "4 mm"], "bad": ["3 mm", "2 mm"]},
+   "battery": {"watch": ["test 65 %", "test 60 %", "test 55 %"], "bad": ["test 40 %", "test 35 %", "test 30 %"]},
+   "brake fluid": {"watch": ["3 % water"], "bad": ["4 % water", "5 % water"]},
+   "fluids and filters": {"watch": ["dirty"], "bad": ["clogged", "overdue"]},
+   "lights": {"watch": ["lens hazed"], "bad": ["bulb out"]},
+   "wipers": {"watch": ["streaking"], "bad": ["blade torn"]},
+   "belts and hoses": {"watch": ["light cracking"], "bad": ["cracked", "hose swollen"]},
+   "leaks underneath": {"watch": ["seeping"], "bad": ["dripping"]},
+   "shocks and struts": {"watch": ["light misting", "slight play"], "bad": ["leaking", "play in the joint"]},
+   "CV boots": {"watch": ["grease film"], "bad": ["boot torn"]},
+   "exhaust": {"watch": ["surface rust"], "bad": ["leak at the joint"]}
+  }
+ },
+ "ru": {
+  "background_discount_reasons": ["скидка пенсионерам", "по акции", "цена как у конкурента", "за ожидание"],
+  "coupon_reasons": ["купон на первый визит", "сезонный купон"],
+  "void_reasons": ["дубль", "не тот клиент", "открыт по ошибке"],
+  "comeback_note": "переделка по гарантии",
+  "s8_discount_reason": "компенсация: ошибка в расчёте и задержка машины",
+  "till_note": "причина не установлена",
+  "part_return_reasons": ["не та деталь", "не понадобилась", "брак"],
+  "readings": {
+   "tyres": {"watch": ["4 мм", "3 мм"], "bad": ["2 мм", "1,6 мм"]},
+   "brake pads": {"watch": ["5 мм", "4 мм"], "bad": ["3 мм", "2 мм"]},
+   "battery": {"watch": ["тест 65 %", "тест 60 %", "тест 55 %"], "bad": ["тест 40 %", "тест 35 %", "тест 30 %"]},
+   "brake fluid": {"watch": ["3 % воды"], "bad": ["4 % воды", "5 % воды"]},
+   "fluids and filters": {"watch": ["загрязнён"], "bad": ["забит", "пора менять"]},
+   "lights": {"watch": ["плафон помутнел"], "bad": ["лампа не горит"]},
+   "wipers": {"watch": ["оставляет полосы"], "bad": ["резинка порвана"]},
+   "belts and hoses": {"watch": ["мелкие трещины"], "bad": ["трещины", "патрубок вздулся"]},
+   "leaks underneath": {"watch": ["запотевание"], "bad": ["капает"]},
+   "shocks and struts": {"watch": ["запотевание стойки", "небольшой люфт"], "bad": ["течёт", "люфт в шарнире"]},
+   "CV boots": {"watch": ["следы смазки"], "bad": ["пыльник порван"]},
+   "exhaust": {"watch": ["поверхностная ржавчина"], "bad": ["сечёт на стыке"]}
+  }
+ }
+}

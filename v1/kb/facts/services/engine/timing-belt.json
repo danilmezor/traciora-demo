@@ -1,0 +1,175 @@
+{
+ "path": "services/engine/timing-belt.md",
+ "title": "Timing belt",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The timing-belt job, as written before the price rise: old labour rate, old total, and a same-day promise. Stale on purpose (S12); a correction is proposed and waiting.",
+ "serves": [
+  "S12",
+  "S8",
+  "operate:propose",
+  "operate:find-waiting",
+  "operate:contradiction",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 444,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S12: old labour rate, old total, same-day promise",
+ "facts": [
+  "STALE ON PURPOSE (S12): the first of the two pages that still carry the labour rate from before the rise. Labour 3.2 h at 125.00 = 400.00; kit 259.00; coolant 29.00; total 688.00; with the premium kit 728.00 (catalogue before_rise).",
+  "Current list: 3.2 h at 135.00 = 432.00; total 720.00; premium 760.00; economy 690.00. Bill for the story car: 720.00 + 21.60 shop supplies = 741.60 before tax, 810.20 with tax.",
+  "Last reviewed T-9 months: before the rise at P; slot 5's pass after the rise missed it.",
+  "Public (ledger s12.pages): the website assistant can read it beside the price list.",
+  "It also promises \"same day if the car is here by 8:00\": the wrong promise slot 7 repeated on the phone on his 5th working day before T (S8).",
+  "Interval 60,000 to 105,000 miles or seven to ten years; the Subaru 2.5 at 105,000 (story car: 2011 Outback 2.5i, second belt).",
+  "Kit = belt, tensioner, idlers, water pump; never the belt alone.",
+  "V6: labour multiplier 1.5 (class SUV), different kit.",
+  "\"The belt is forty dollars\" is the advisor's figure of speech, not a price of ours.",
+  "Ledger s8.price_quoted 688.00 and s8.price_now 720.00 (the design text's 640 and 691 are superseded)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Ask",
+   "item": "Mileage, and has it ever been done? On a car past 150,000 with no record, assume it has not."
+  },
+  {
+   "section": "Ask",
+   "item": "Any coolant on the ground? A weeping pump moves the job from \"soon\" to \"now\"."
+  },
+  {
+   "section": "They say",
+   "item": "\"It runs fine.\" \"It will, right up until it does not. It is the one part on the car that gives no warning.\""
+  },
+  {
+   "section": "They say",
+   "item": "\"That is a lot for a belt.\" \"The belt is forty dollars. The rest is getting to it: the front of the engine comes apart. That is why we do the pump and the pulleys while we are in there.\""
+  },
+  {
+   "section": "They say",
+   "item": "\"Can I wait?\" If they are under the interval, yes, and say when. If they are over it, tell them plainly it is a gamble with the engine, and write on the order that they declined."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "hours",
+   "class": "car",
+   "value": 3.2
+  },
+  {
+   "catalogue_key": "configurations.en.labour_rate.standard.before_rise",
+   "what": "labour hour",
+   "value": 125.0,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "labour",
+   "class": "car",
+   "when": "before_rise",
+   "value": 400.0,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "part list price each: Timing belt kit with water pump",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "kit",
+   "brand": "Gates PowerGrip Premium",
+   "value": 259.0
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "part list price each: Coolant, Asian blue 50/50",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "gal",
+   "brand": "Zerex Asian Vehicle 50/50",
+   "value": 29.0
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 688.0
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 728.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian stale page: 3.2 н/ч at 1 760 = 5 632; kit 8 700; coolant 1 220; total 15 552 (ledger s8.price_quoted: the catalogue price before the rise). Reference car Renault Logan 1.6 16V, interval 60 000 km or 4 years. Same-day line kept."
+ ],
+ "pending_proposal": {
+  "serves": "S12: the correction that waits for a decision",
+  "state": "pending (never decided before T)",
+  "proposer_slot": "5",
+  "proposed_at_text_date": "{{@belt_proposal|date}}",
+  "proposed_at": "the full open day after slot 4's discount (stories/TIMELINE.md; ledger s12.proposal): about one working day before T",
+  "made_how": "by slot 5 himself on the page (he is middle rank: may propose, may not publish); origin is not the assistant",
+  "reason": "Old labour rate. Caleb quoted $688 from this page and promised same day; the bill was $741.60 and Greg gave $80 back. Price list says $720. Also taking out the same-day line: it is only true when the kit is on the shelf.",
+  "base": "the page's head revision (the import); nothing may edit this page after the proposal or it goes stale",
+  "changes": [
+   {
+    "before": "Travis Burnette · Last reviewed {{T-9mo|date}}",
+    "after": "Travis Burnette · Last reviewed {{@belt_proposal|date}}"
+   },
+   {
+    "before": "Labour is 3.2 hours at $125.00, $400.00. The Gates kit with the pump is $259.00 and a gallon of coolant $29.00. **$688.00** before supplies and tax. With the Aisin kit, $728.00.",
+    "after": "Labour is 3.2 hours at $135.00, $432.00. The Gates kit with the pump is $259.00 and a gallon of coolant $29.00. **$720.00** before supplies and tax. With the Aisin kit, $760.00. These are examples: quote from the price list."
+   },
+   {
+    "before": "**Same day.** If the car is here by 8:00 it goes home that afternoon. Tell the customer so; it is a selling point against the dealer, who keeps it two days.",
+    "after": "**Book it as a full day.** Same day only when the kit is already on the shelf and the car is in a bay by 8:00. Do not promise same day on the phone."
+   }
+  ],
+  "deciders": [
+   "4",
+   "22",
+   "1",
+   "2"
+  ],
+  "inbox": "one knowledge.proposed line in each decider's Inbox; slot 4's \"needs you\" is where the design puts it",
+  "against_standard": "policies/service-standards.md: decided within five working days; at T it is one day old",
+  "not_covered": "services/brakes/brake-questions.md is equally stale and has no proposal"
+ }
+}

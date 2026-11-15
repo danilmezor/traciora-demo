@@ -1,0 +1,110 @@
+{
+ "path": "parts/ordering-parts.md",
+ "title": "Как заказать запчасть под работу",
+ "title_en": "Ordering parts for a job",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/ordering-parts.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "How a part gets from the order to the bay, and when an advisor may promise a time.",
+ "serves": [
+  "S8",
+  "S6",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_ru": 208,
+ "links_to": [
+  "policies/deposits.md",
+  "parts/suppliers.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Cover when the parts manager is off (he works five weekdays): the advisor on shift, since advisors work two on, two off.",
+  "Unconfirmed part: a call by 15:00 (the last order time of V1).",
+  "Special orders take two to ten working days.",
+  "The promise rule is the same; S8's Russian form is «сегодня же заберёте» on a 3.2-hour job."
+ ],
+ "new_facts": [
+  "The 13:00 transfer run between the two Ulyanovsk shops; special orders two to ten working days."
+ ],
+ "new_amounts": [
+  {
+   "value": 10000,
+   "why": "порог предоплаты за запчасти под заказ"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Как заказать запчасть под работу",
+   "item": "Запчасть попадает в наряд из каталога: номер, бренд, ценовая категория. Не «колодки перед»."
+  },
+  {
+   "section": "Как заказать запчасть под работу",
+   "item": "Заказываю я. Московское шоссе: скажите или поставьте отметку в наряде. Инженерный: отметка в наряде, я вижу. В субботу и воскресенье меня нет — заказывает мастер-приёмщик смены."
+  },
+  {
+   "section": "Как заказать запчасть под работу",
+   "item": "Сначала VIN. Всегда. Половина неправильных деталей в этом здании заказана по году и модели."
+  },
+  {
+   "section": "Как заказать запчасть под работу",
+   "item": "Время прихода ставлю в наряд, когда поставщик его подтвердил. Пока времени в наряде нет — времени нет."
+  },
+  {
+   "section": "Как заказать запчасть под работу",
+   "item": "Деталь «пришла», когда лежит на полке и на ней номер наряда. Не когда «машина уже выехала»."
+  },
+  {
+   "section": "Как заказать запчасть под работу",
+   "item": "Инженерный получает запчасти от поставщика напрямую. Всё, что нужно перевезти между площадками, едет моим рейсом в 13:00."
+  },
+  {
+   "section": "Что может обещать приёмка",
+   "item": "Деталь на полке, механик свободен: время сегодня."
+  },
+  {
+   "section": "Что может обещать приёмка",
+   "item": "Деталь подтверждена на рейс: время рейса, плюс нормо-часы работы, плюс час."
+  },
+  {
+   "section": "Что может обещать приёмка",
+   "item": "Деталь не подтверждена: «Перезвоню до 15:00 и назову время». И перезвонить."
+  },
+  {
+   "section": "Что может обещать приёмка",
+   "item": "Никогда не «сегодня же заберёте» только потому, что работы на три часа."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  10000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,72 @@
+{
+ "path": "shops/west/parts.md",
+ "title": "Charlotte Pike: parts",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "How Nashville orders parts, in its manager's words.",
+ "serves": [
+  "S6",
+  "challenge:near-duplicate-shop-pages",
+  "operate:contradiction",
+  "S15"
+ ],
+ "length_class": "tiny",
+ "words_en": 86,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "West orders from V2 Harpeth Valley Parts Supply, (615) 555-0123: two runs, order by 9:00 and 14:00 (Central).",
+  "Import parts from V3 next morning; tyres from V5 Tuesday and Friday.",
+  "The advisor who wrote the job orders the part (there is no parts manager at west).",
+  "Says nothing about part numbers, tiers or the house-brand pads; parts are often typed by hand at west (ERP mess kind 7: 9 % of part lines).",
+  "Disagrees in spirit with parts/suppliers.md and parts/brake-pads-we-fit.md, where the parts manager wants west moved to V1 (S6)."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V2",
+   "name": "Harpeth Valley Parts Supply"
+  },
+  {
+   "vendor": "V3",
+   "name": "Ridge & Valley Import Parts"
+  },
+  {
+   "vendor": "V5",
+   "name": "Tellico Tire Distributors"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-12mo|date}}"
+ ],
+ "new_facts": [
+  "Order-by times at west: 9:00 and 14:00 Central."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Old supplier from vendors.json ru."
+ ]
+}

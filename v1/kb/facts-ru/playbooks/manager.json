@@ -1,0 +1,171 @@
+{
+ "path": "playbooks/manager.md",
+ "title": "Памятка: руководители",
+ "title_en": "Playbook: managers",
+ "exists_in": "both",
+ "english_sheet": "facts/playbooks/manager.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: planning shifts, deciding notes and page changes, seeing colleagues' phone performance.",
+ "serves": [
+  "S4",
+  "S5",
+  "S12",
+  "S14",
+  "operate:find-waiting",
+  "visibility:administrator"
+ ],
+ "length_class": "medium",
+ "words_ru": 304,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The cover-gaps report arrives at 18:30 (ledger s10.tasks.ru: «Завтрашние пробелы в графике»).",
+  "The decline example names the Russian page «Запись на ремонт»."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что у вас есть сверх старшего мастера-приёмщика",
+   "item": "График — ваш: вы его составляете и публикуете. Просьбы приходят вам во Входящие."
+  },
+  {
+   "section": "Что у вас есть сверх старшего мастера-приёмщика",
+   "item": "Заметки команды: вы их принимаете или отклоняете. Пишите причину: её читает тот, кто предлагал."
+  },
+  {
+   "section": "Что у вас есть сверх старшего мастера-приёмщика",
+   "item": "Страницы базы знаний: вы можете их менять и решаете чужие предложения."
+  },
+  {
+   "section": "Что у вас есть сверх старшего мастера-приёмщика",
+   "item": "Звонки: вы видите оценки всех мастеров-приёмщиков, а не только свои."
+  },
+  {
+   "section": "Что у вас есть сверх старшего мастера-приёмщика",
+   "item": "Вся история, а не год."
+  },
+  {
+   "section": "Что у вас есть сверх старшего мастера-приёмщика",
+   "item": "Оплата труда и пересчёты кассы."
+  },
+  {
+   "section": "Каждый день",
+   "item": "«Ждёт вас» на Главной — это список дел. Просьбы о сменах, исправления отметок, предложения, карточки, которые передали вам. Он должен пустеть."
+  },
+  {
+   "section": "Каждый день",
+   "item": "Завтрашние пробелы в графике приходят в 18:30. Закройте их до ухода домой."
+  },
+  {
+   "section": "Каждый день",
+   "item": "Список «Перезвонить» — не ваша работа. Ваша работа — на него смотреть."
+  },
+  {
+   "section": "Каждую неделю",
+   "item": "Опубликуйте следующую неделю до полудня четверга."
+  },
+  {
+   "section": "Каждую неделю",
+   "item": "Решите каждое предложение за пять рабочих дней. Предложение, которое висит, говорит автору, что страница никому не нужна."
+  },
+  {
+   "section": "Каждую неделю",
+   "item": "Прочитайте звонки того, у кого оценка ниже всех, и того, кто вырос сильнее всех. Скажите обоим."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Когда мы пропускаем больше всего звонков?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Кто может выйти на приёмку на Инженерном, пока Демидова в отпуске?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Эта скидка была по правилам?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Что ждёт моего решения?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«На какие смены на следующей неделе никто не поставлен?»"
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не опубликует график и не решит просьбу, пока вы сами не нажали кнопку."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не покажет вам чужой сервис целиком: людей своих сервисов вы видите полностью, а по компании — цифры."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не откроет консоль. Она у Екатерины Николаевны."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Мельникова",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Галиева",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николая Петровича",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "16",
+   "written_as": "Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерины Николаевны",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@note_declined|date}}",
+   "what": "added the section \"Declining well\" after the first declined team note; message: \"Name the page.\"",
+   "message_ru": "Называйте страницу."
+  }
+ ],
+ "has_history": true
+}

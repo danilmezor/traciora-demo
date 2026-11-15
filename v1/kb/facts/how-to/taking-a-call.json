@@ -1,0 +1,186 @@
+{
+ "path": "how-to/taking-a-call.md",
+ "title": "Taking a call",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "How an advisor handles a first call; teaches exactly what the call scorecard checks, in the best closer's voice.",
+ "serves": [
+  "S4",
+  "S3",
+  "S8",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_en": 554,
+ "links_to": [
+  "prices/price-list.md",
+  "parts/ordering-parts.md",
+  "how-to/price-objections.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "The eight scorecard checks with their weights (calls design): greeting 1, name and number 2, need discovery 2, price with next step 2, offered time 3, asked for booking 3, recap 1, objection 2.",
+  "Example lines are the level-2 lines of the calls design.",
+  "Checks 5 and 6 carry the most weight; a call that ends on the price fails both.",
+  "Checks do not apply when the customer is known, names a time, or raises no doubt.",
+  "Automatic fails: wrong promise, dropped customer, promised call back not kept.",
+  "Inspection price in the example line is the brake inspection menu price.",
+  "Slot 6's weakest check is the objection (S4); slot 7's two wrong promises (S8, S12) are the first automatic fail.",
+  "The approved team note \"offer a time before the price on a first call\" is about order and is deliberately not on this page; the page says \"a price with a next step attached\"."
+ ],
+ "tables": [
+  {
+   "section": "The eight",
+   "columns": [
+    "#",
+    "What",
+    "What it sounds like",
+    "Weight"
+   ],
+   "rows": [
+    {
+     "#": "1",
+     "What": "Greeting with our name and yours",
+     "What it sounds like": "\"Brennan Auto Care, this is Maya.\"",
+     "Weight": "1"
+    },
+    {
+     "#": "2",
+     "What": "Name and number, read back",
+     "What it sounds like": "\"And the best number for you? ...0142, perfect.\"",
+     "Weight": "2"
+    },
+    {
+     "#": "3",
+     "What": "Find out what is going on. The car, and one question more than you need",
+     "What it sounds like": "\"How long has it been doing that? Does it change when you brake?\"",
+     "Weight": "2"
+    },
+    {
+     "#": "4",
+     "What": "A price with a next step attached",
+     "What it sounds like": "\"It is $49.95 for the inspection, and I could get you in Friday at eight.\"",
+     "Weight": "2"
+    },
+    {
+     "#": "5",
+     "What": "Offer a time. Two of them",
+     "What it sounds like": "\"Tomorrow at 7:30 or Friday at 1:00?\"",
+     "Weight": "3"
+    },
+    {
+     "#": "6",
+     "What": "Ask for the booking and take it",
+     "What it sounds like": "\"I have you down for Friday at eight. Ask for Maya.\"",
+     "Weight": "3"
+    },
+    {
+     "#": "7",
+     "What": "Recap: day, time, which shop, what we are doing",
+     "What it sounds like": "\"Friday at eight, East Main Street, front brakes inspected.\"",
+     "Weight": "1"
+    },
+    {
+     "#": "8",
+     "What": "Answer the doubt, if there is one",
+     "What it sounds like": "\"Did somebody quote it lower? Here is what is in that number.\"",
+     "Weight": "2"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "The three ways to fail a call outright",
+   "item": "A wrong promise. A price that is not on the price list. \"Same day\" before parts and a technician are confirmed: what you may promise. If you do not know, say \"let me check and call you back by two\" and call back by two."
+  },
+  {
+   "section": "The three ways to fail a call outright",
+   "item": "Dropping the customer. A hold that never comes back, a transfer to nobody, a hang-up."
+  },
+  {
+   "section": "The three ways to fail a call outright",
+   "item": "A call back you promised and did not make."
+  },
+  {
+   "section": "Things I have learned",
+   "item": "Smile before you pick up. They hear it."
+  },
+  {
+   "section": "Things I have learned",
+   "item": "The first price a caller asks for is not their real question. Their real question is \"can I trust you with my car\". Answer that one by asking about the car."
+  },
+  {
+   "section": "Things I have learned",
+   "item": "Never price \"brakes\" without the car. Pads on a Corolla and pads on an F-250 are different jobs."
+  },
+  {
+   "section": "Things I have learned",
+   "item": "When you offer two times, stop talking. Let them pick."
+  },
+  {
+   "section": "Things I have learned",
+   "item": "If they say \"I will call you back\", ask \"would it help if I held Friday at eight for you until tomorrow noon?\" Then hold it."
+  },
+  {
+   "section": "Things I have learned",
+   "item": "If the call is about a car that is already here, start with their name and end with what happens next and when."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [
+  "Holding a slot \"until tomorrow noon\" for an undecided caller (habit, no data footprint)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "Angie's rewrite of the whole page around the eight checks when the scorecard came in (proposed by slot 16, approved by slot 4); message: \"The call, in eight moves.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Example lines from the Russian side of the calls design («Ермак-Сервис, Алина, здравствуйте», «Завтра к девяти или в пятницу к девяти?»). Same weights."
+ ]
+}

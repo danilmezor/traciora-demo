@@ -1,0 +1,89 @@
+{
+ "path": "shops/east/hours-and-getting-here.md",
+ "title": "Инженерный: часы и как проехать",
+ "title_en": "Bonny Oaks: hours and getting here",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/east/hours-and-getting-here.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Bonny Oaks's hours, parking and key drop; no Saturday.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S13"
+ ],
+ "length_class": "short",
+ "words_ru": 99,
+ "links_to": [
+  "customers/hours-and-locations.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Every day 9:00-20:00. The planted difference from the flagship's page: a car left before opening goes to the left of the entrance, under the lamp.",
+  "No Saturday forwarding and no shuttle."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Инженерный: часы и как проехать",
+   "item": "Телефон: +7 (8422) 10-40-41. Почта: east@ermak-service.example."
+  },
+  {
+   "section": "Инженерный: часы и как проехать",
+   "item": "Адрес: Ульяновск, 10-й Инженерный проезд, 30. Парковаться можно перед входом, на любом месте. Машины «Тёплого контура» и других организаций ставят на боковую площадку."
+  },
+  {
+   "section": "Инженерный: часы и как проехать",
+   "item": "Приехали до открытия — машину ставят слева от входа, под фонарём."
+  },
+  {
+   "section": "Инженерный: часы и как проехать",
+   "item": "Своего склада запчастей у нас нет. Вопросы по запчастям — Паше на Московское шоссе, доб. 112."
+  },
+  {
+   "section": "Инженерный: часы и как проехать",
+   "item": "Развозки нет. Такси клиенту вызываю я или Артём."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Паше",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "17",
+   "written_as": "Артём",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

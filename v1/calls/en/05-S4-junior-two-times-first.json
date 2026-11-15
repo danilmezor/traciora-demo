@@ -1,0 +1,755 @@
+{
+  "format": "seed-call/1",
+  "id": "en-05-S4-junior-two-times-first",
+  "configuration": "en",
+  "number": 5,
+  "story": "S4",
+  "title": "The junior operator in her fifth month: two times before the price, the booking, a full summary",
+  "purpose": "Story S4, period P5. The note she keeps for herself ('offer two appointment times before the price') is on the call: two times, then the price with what could change it, the booking and a summary with the address. Nobody pushes back, so the check she is worst at never comes up.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Stephanie Vandergriff",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P5 (rule R6)",
+    "nominal_offset": "T-36d",
+    "nominal_date": "2026-10-08",
+    "local_start": "09:35",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 4,
+    "caller_phone": "423-555-0191",
+    "repeat_caller": false,
+    "talk_s": 146
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Stephanie Vandergriff, who hit a pothole two nights ago.",
+    "vehicle": "2017 Honda Odyssey",
+    "job": "four-wheel alignment, and a look for anything bent",
+    "wants": "a price for an alignment",
+    "what_happens": "Maya asks how the wheel sits and whether the tire is hurt, offers two times before she says a price, gives the price with what the tech might find, takes the name and the number, books Monday at 1:30 and sums up with the address.",
+    "facts": {
+      "offered": [
+        "call+1d 08:00",
+        "call+4d 13:30"
+      ],
+      "booked": "call+4d 13:30",
+      "note": "catalogue.json wheel_alignment, class suv: 119.95 (a menu price).",
+      "prices": [
+        {
+          "what": "Four-wheel alignment",
+          "job": "wheel_alignment",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 119.95,
+          "said": "one nineteen ninety-five",
+          "said_usd": 119.95,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday",
+      "day": "call+4d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 5.8,
+      "said": "Hi, yes. I — I think I need an alignment? I hit a pothole on Brainerd Road the other night, like, hard, and now my steering wheel's crooked. What do y'all charge for that?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 19.5,
+      "said": "Oh no. Okay. What are you driving?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 22.8,
+      "said": "A twenty-seventeen Odyssey."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 25.7,
+      "said": "Okay. And when you say crooked — is it turned to one side when you're going straight?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 33.1,
+      "said": "Yeah, it's — it's tilted to the left, like, this much. And it kinda drifts right if I let go."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 41.4,
+      "said": "Okay. Any shaking in the wheel? Or does the tire look low, or have a bubble on the side?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 50.3,
+      "said": "I looked. I didn't see a bubble. It doesn't shake."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 55.9,
+      "said": "Okay, good. So I've — I can get you in tomorrow morning at eight, or Monday at one-thirty. Which one's better for you?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 64.9,
+      "said": "Um... Monday. I've got the kids in the mornin'."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 70.2,
+      "said": "Monday at one-thirty, you got it. And you asked what it costs — the alignment's one nineteen ninety-five. If the tech sees something bent from the pothole, like a tie rod, he'll show you before we do anything else."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 84.3,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 85.7,
+      "said": "Okay. That's fine."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 88.2,
+      "said": "Perfect. Let me get your name."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 91.7,
+      "said": "Stephanie Vandergriff."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 93.5,
+      "said": "Vandergriff. And a good number for you, Stephanie?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 97.5,
+      "said": "Four two three, five five five, oh one nine one."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 102.2,
+      "said": "Got it. Okay, so I've got you down for Monday at one-thirty, and I'll be the one checking you in."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 110.6,
+      "said": "Do I need to leave it?"
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 114.1,
+      "said": "It's about an hour."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 115.8,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 117.4,
+      "said": "You can wait, or we can run you home and come get you."
+    },
+    {
+      "n": 23,
+      "who": "customer",
+      "at_s": 124.2,
+      "said": "I'll just wait."
+    },
+    {
+      "n": 24,
+      "who": "advisor",
+      "at_s": 126.5,
+      "said": "Okay! So that's Monday at one-thirty, here at twenty-one-oh-six East Main Street, and we're doing a four-wheel alignment on the Odyssey and checking for anything bent."
+    },
+    {
+      "n": 25,
+      "who": "customer",
+      "at_s": 137.5,
+      "said": "Great. Thank you so much."
+    },
+    {
+      "n": 26,
+      "who": "advisor",
+      "at_s": 141.0,
+      "said": "Thanks, Stephanie! See you Monday."
+    },
+    {
+      "n": 27,
+      "who": "customer",
+      "at_s": 144.6,
+      "said": "Bye-bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.72,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          5,
+          6,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "a name heard as a neighbour in sound",
+        "script_turn": 16,
+        "said": "Vandergriff",
+        "stored": "Vandergrift"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          4,
+          9,
+          11,
+          17,
+          18,
+          24
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "a number split, merged or changed",
+        "script_turn": 11,
+        "said": "one-thirty",
+        "stored": "130"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words replaced by a plausible wrong phrase",
+        "script_turn": 6,
+        "said": "if I let go",
+        "stored": "if I let it go"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost; two turns of one speaker become one line",
+        "script_turns": [
+          12,
+          21,
+          22
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 4,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 9,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 8,
+        "as_digits": 8,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 2,
+        "joined": 1
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 304,
+    "stored_words": 289,
+    "strict_word_difference": 0.102
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 313,
+    "duration_s": 146.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi, yes. I think I need an alignment? I hit a pothole on Brainerd Road the other night, like, hard, and now my steering wheel's crooked. What do y'all charge for that?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh no. Okay. What are you driving?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "A 2017 Odyssey.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And when you say crooked, is it turned to one side when you're going straight?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, it's tilted to the left, like, this much. And it kind of drifts right if I let it go.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Any shaking in the wheel? Or does the tire look low, or have a bubble on the side?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I looked. I didn't see a bubble. It doesn't shake.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, good. So I can get you in tomorrow morning at 8, or Monday at 1:30. Which one's better for you?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Monday. I've got the kids in the morning.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Monday at 130, you got it. And you asked what it costs, the alignment's $119.95. If the tech sees something bent from the pothole, like a tie rod, he'll show you before we do anything else.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. That's fine.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Perfect. Let me get your name.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Stephanie Vandergriff.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Vandergrift. And a good number for you, Stephanie?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0191.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Got it. Okay, so I've got you down for Monday at 1:30, and I'll be the one checking you in.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Do I need to leave it?",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's about an hour. You can wait, or we can run you home and come get you.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'll just wait.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay! So that's Monday at 1:30, here at 2106 East Main Street, and we're doing a four-wheel alignment on the Odyssey and checking for anything bent.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Great. Thank you so much.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks, Stephanie! See you Monday.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Bye-bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "And a good number for you, Stephanie?",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Or does the tire look low, or have a bubble on the side?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "If the tech sees something bent from the pothole, like a tie rod, he'll show you before we do anything else.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "I can get you in tomorrow morning at 8, or Monday at 1:30.",
+        "level": 2,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "so I've got you down for Monday at 1:30, and I'll be the one checking you in",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "recap",
+        "quote": "So that's Monday at 1:30, here at 2106 East Main Street, and we're doing a four-wheel alignment on the Odyssey and checking for anything bent.",
+        "level": 2,
+        "segment": 20
+      }
+    ],
+    "na": [
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "I can get you in tomorrow morning at 8, or Monday at 1:30. Which one's better for you?",
+      "why": "Two times and a choice between them, before a word about money: the caller picked a day instead of weighing a price.",
+      "segment": 8
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "Got it.",
+      "say": "Let me read that back: 423-555-0191. Is that a cell, in case we need to text you when it's done?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 92.9,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 20
+        }
+      ],
+      "na": [
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 92.9,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 8,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "name_and_number": "And a good number for you, Stephanie?",
+        "need_discovery": "Or does the tire look low, or have a bubble on the side?",
+        "price_with_next_step": "If the tech sees something bent from the pothole, like a tie rod, he'll show you before we do anything else",
+        "offered_time": "I can get you in tomorrow morning at 8, or Monday at 1:30",
+        "asked_for_booking": "so I've got you down for Monday at 1:30, and I'll be the one checking you in",
+        "recap": "So that's Monday at 1:30, here at 2106 East Main Street, and we're doing a four-wheel alignment on the Odyssey and checking for anything bent"
+      },
+      "na": {
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "I can get you in tomorrow morning at 8, or Monday at 1:30. Which one's better for you?",
+        "why": "Two times and a choice between them, before a word about money: the caller picked a day instead of weighing a price."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "Got it.",
+        "say": "Let me read that back: 423-555-0191. Is that a cell, in case we need to text you when it's done?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 92.9,
+    "score_exact": 92.8571,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name in the first line.",
+    "name_and_number": "1: the name and the number are taken, and the number is not said back.",
+    "need_discovery": "2: the car, the job and what she asked for: the wheel sits left, it drifts right, no bubble, no shake.",
+    "price_with_next_step": "2: the price, what could change the job (something bent) and a time already agreed in the same line.",
+    "offered_time": "2: tomorrow at eight or Monday at 1:30.",
+    "asked_for_booking": "2: the day, the hour and who checks her in.",
+    "recap": "2: the time, the address and the work before goodbye.",
+    "objection": "N/A: 'I've got the kids in the morning' chooses between the two times; it is not a doubt.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·2 + 3·2 + 1·2) / 2 = 13 of 14 weight points = 92.9. Exactly 92.86; the product rounds a score to one decimal.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Stephanie Vandergriff, 423-555-0191, 2017 Honda Odyssey: an appointment at main on call+4d at 13:30 for a four-wheel alignment."
+  ]
+}

@@ -1,0 +1,147 @@
+{
+ "path": "office/month-end-close.md",
+ "title": "Закрытие месяца",
+ "title_en": "Month-end close",
+ "exists_in": "both",
+ "english_sheet": "facts/office/month-end-close.json",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "The bookkeeper's month-end checklist; the check that caught the missing money.",
+ "serves": [
+  "S2",
+  "S15",
+  "visibility:middle",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_ru": 266,
+ "links_to": [
+  "office/statements-and-receivables.md",
+  "office/payroll-hours.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Ten steps. The checks that caught the Russian leak are steps 2 to 4: stock issues with no order line, clocked time above sold hours, discounts on cash orders by advisor (ledger s2.f1.second, s2.f1.third, s2.f1.discounted). The till is step 6 and is not where the problem showed.",
+  "No sales-tax return: VAT at 5 %, the sales book reconciled monthly, a return each quarter, by the 25th of the month after it (ledger kb.month_end; НК ст. 174 п. 5).",
+  "Company clients: documents per order, not statements on the first working day."
+ ],
+ "new_facts": [
+  "Orders open more than 60 days are reported to slot 2 (as in English)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "The quarterly VAT return and the sales book for a company on the simplified system with VAT at 5 %: ordinary since 2025, not in the research; no filing date is stated on the page.",
+   "outcome": "verified",
+   "note": "Stands: the tax period is the quarter, and a company on the simplified system that pays VAT keeps a sales book and files a return. The page now gives the date: by the 25th of the month after the quarter (ledger kb.month_end). Read in the verify pass (section 1).",
+   "url": "https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-174/ ; https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-163/",
+   "sentence": "НК ст. 163: налоговый период «устанавливается как квартал». Ст. 174 п. 5: декларация представляется «в срок не позднее 25-го числа месяца, следующего за истекшим налоговым периодом»."
+  },
+  {
+   "item": "cast.json (slot 3's Russian biography) says she noticed that in Kazan «касса не сходится с нарядами», and slot F1's Russian biography still tells the English signature (voids after payment, the till short on nineteen shifts). The ledger and stories/S02 give the Russian signature used here.",
+   "outcome": "corrected",
+   "note": "Settled in the seed files: the Russian biographies of slots F1 and 3 in cast.json now tell the Russian leak (parts written off with no sale, work past the order, unapproved discounts), as stories/S02.md does. The page already followed the ledger."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Закрытие месяца",
+   "item": "Открытые наряды. Каждый наряд, открытый раньше последней недели месяца, либо закрыт и выставлен, либо у него есть причина. Причины спрашиваю у руководителей. О наряде, открытом больше 60 дней, сообщаю Екатерине Николаевне."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Склад. По каждому сервису — список выдач со склада, под которыми нет строки заказ-наряда, с фамилией того, кто выдавал. В этом списке не должно быть ничего."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Время и нормо-часы. По каждому мастеру-приёмщику — наряды, в которых механики отметили заметно больше времени, чем продано нормо-часов."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Скидки. У каждого наряда со скидкой больше 10 % есть согласующий. Тот же список Екатерина Николаевна получает по пятницам. Отдельно смотрю скидки на нарядах с оплатой наличными — по мастерам-приёмщикам."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Наличные наряды на «Розничного покупателя». Их быть не должно."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Касса. За каждый день есть пересчёт. Расхождения за месяц складываю по сервисам и по тем, кто закрывал смену."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Сверка с поставщиками: возвраты учтены, или спрашиваю Пашу."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Корпоративные клиенты: по всем закрытым нарядам счета и документы выставлены и отправлены. Просрочка — на странице Счета, акты и дебиторка."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "Табель за вторую половину месяца: Табель и зарплата."
+  },
+  {
+   "section": "Закрытие месяца",
+   "item": "НДС. Выручка по кассе и по счетам сходится с книгой продаж. Декларация — раз в квартал, не позже 25-го числа следующего месяца."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерине Николаевне",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "9",
+   "written_as": "Пашу",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}",
+  "{{@discount_rule|month}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "Donna's steps 2 to 5 (proposed by slot 3, approved by slot 2); message: \"Till by person, voids, discounts, walk-in.\"",
+   "proposer_slot": "3",
+   "approver_slot": "2",
+   "message_ru": "Склад и время — по людям, скидки на наличных, «Розничный покупатель»."
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,128 @@
+{
+ "path": "customers/brake-noise.md",
+ "title": "Brake noise",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "6",
+ "purpose": "What a customer with a brake noise is told, what the inspection costs and what a typical repair costs. The page the assistant answers S7 from.",
+ "serves": [
+  "S7",
+  "challenge:customer-terms"
+ ],
+ "length_class": "medium",
+ "words_en": 297,
+ "links_to": [
+  "customers/prices-for-common-services.md",
+  "customers/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Customers say \"discs\" or \"rotors\", \"grinding\", \"squeal\"; the trade name on the order is \"Replace front brake pads & rotors\".",
+  "Brake inspection is 0.5 h; wheels off, pads and discs measured, hoses and fluid checked, photos sent.",
+  "A typical front pads-and-rotors job on a car costs from the economy to the premium total of the catalogue.",
+  "Same-day return for most brake jobs when dropped at 7:30 (hours 1.8)."
+ ],
+ "tables": [
+  {
+   "section": "What the noise usually means",
+   "columns": [
+    "What you hear or feel",
+    "What it usually is",
+    "How soon"
+   ],
+   "rows": [
+    {
+     "What you hear or feel": "A high squeal that goes away when you press the pedal",
+     "What it usually is": "The wear indicator: a small metal tab that touches the disc when the pads are nearly gone",
+     "How soon": "This week"
+    },
+    {
+     "What you hear or feel": "Grinding, metal on metal",
+     "What it usually is": "The pads are worn through and the backing plate is on the disc",
+     "How soon": "Now. Every stop is damaging the disc"
+    },
+    {
+     "What you hear or feel": "A squeal on the first few stops on a damp morning",
+     "What it usually is": "Surface rust on the discs. It clears itself",
+     "How soon": "No visit needed"
+    },
+    {
+     "What you hear or feel": "The pedal or steering wheel shakes when you brake",
+     "What it usually is": "Discs worn unevenly",
+     "How soon": "Soon"
+    },
+    {
+     "What you hear or feel": "The car pulls to one side when braking",
+     "What it usually is": "A sticking caliper or a hose",
+     "How soon": "Soon"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 428.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 523.76
+  }
+ ],
+ "people": [
+  {
+   "slot": "6",
+   "written_as": "Maya",
+   "role": "service_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "new_facts": [
+  "The five noise rows and their urgency are the trade's common advice, chosen for the page."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "added the table of noises on Maya's draft; message: \"Maya's table. Customers ask this every day.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Words differ: «скрип», «скрежет», «бьёт руль при торможении»; the job is «Замена передних тормозных дисков и колодок». Prices from the Russian catalogue.",
+  "Juniors cannot publish, so the page was published by slot 4 from slot 6's draft in both configurations."
+ ]
+}

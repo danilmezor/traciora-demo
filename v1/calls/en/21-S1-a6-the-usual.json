@@ -1,0 +1,808 @@
+{
+  "format": "seed-call/1",
+  "id": "en-21-S1-a6-the-usual",
+  "configuration": "en",
+  "number": 21,
+  "story": "S1",
+  "title": "The catering company's new contact wants 'the usual on the white van' and an answer about the price",
+  "purpose": "Story S1, design rule R13 (resolved). Erin Castillo has just taken over the vans. She asks for 'the usual on the white van' and why it costs more. It takes Travis two questions to learn which van and what job. He books it, and answers the price with 'everything's gone up'. The account's visits fall from here.",
+  "cast": {
+    "advisor": {
+      "slot": 5,
+      "name": "Travis Burnette",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Erin Castillo",
+      "ref": "accounts.json en.A6 contacts[1]",
+      "company": "Sourwood Catering Co.",
+      "account": "A6",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Bobby Shadden",
+        "ref": "accounts.json en.A6 contacts[0]",
+        "role": "the fleet contact until the price rise"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Tuesday of week T-20 (rule R6; card S01, call 21)",
+    "nominal_offset": "T-143d",
+    "nominal_date": "2026-06-23",
+    "local_start": "09:50",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "101",
+    "ring_s": 5,
+    "caller_phone": "423-555-0106",
+    "repeat_caller": false,
+    "talk_s": 184
+  },
+  "scenario": {
+    "who_calls": "Erin Castillo, operations coordinator of company account A6, the fleet contact since the day of the price rise; she has a sheet her predecessor left.",
+    "vehicle": "unit SC-2, a 2020 Ford Transit-250, BRC-2362 (accounts.json en.A6 fleet)",
+    "job": "fleet PM service A: oil and filter, chassis lube, 50-point inspection",
+    "wants": "'the usual' booked, and to know why it is 270 on the website when her sheet says 255",
+    "what_happens": "Travis asks which van; she says 'the big one'. He asks for the unit number on the key tag; it is SC-2. He names what was done last time and she confirms from her sheet. He says the price went up, answers her budget with 'everything's gone up', gives the out-the-door figure and a time, takes her number and books Thursday at 7:30.",
+    "unclear": {
+      "kind": "vague: 'the usual on the white van'",
+      "asked_again": 2,
+      "resolved": true,
+      "how": "First question: which van (several are white). Second: the unit number on the key tag, and then what was done last time, which she confirms from her predecessor's sheet."
+    },
+    "facts": {
+      "offered": [
+        "call+2d 07:30"
+      ],
+      "booked": "call+2d 07:30, back by 10:00",
+      "note": "A6 is a medium account and pays list. catalogue.json fleet_pm_van, class van, standard parts: 270.59 at today's hour and 255.59 at the hour before the rise (1.5 hours, so the rise is 15.00). Out the door with shop supplies 10.12 and sales tax: 306.68. He says 'two-seventy', 'two fifty-five' and 'three-oh-six and change'.",
+      "prices": [
+        {
+          "what": "Fleet PM service A - cargo van (oil & filter, chassis lube, 50-point inspection)",
+          "job": "fleet_pm_van",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 270.59,
+          "said": "two-seventy",
+          "said_usd": 270,
+          "said_as": "before tax"
+        },
+        {
+          "what": "Fleet PM service A - cargo van (oil & filter, chassis lube, 50-point inspection)",
+          "job": "fleet_pm_van",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 270.59,
+          "shop_supplies_usd": 10.12,
+          "out_the_door_usd": 306.68,
+          "said": "three-oh-six and change",
+          "said_usd": 306,
+          "said_as": "out the door"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Thursday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Travis."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.0,
+      "said": "Hi, Travis. This is Erin Castillo, I'm with Sourwood Catering? I've taken over the vans from Bobby Shadden."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.5,
+      "said": "Oh, okay! Yeah, Bobby told me he was handing those off. Nice to meet you, Erin. What do you need?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 19.1,
+      "said": "So I need to get the usual done on the white van. And I need somebody to explain to me why it costs more than it did last time."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 30.4,
+      "said": "Okay. We can do both. Which van are we talking about? Y'all have got about five white ones."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 37.9,
+      "said": "Um. The big one? Bobby just calls it the white van on his sheet."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 44.3,
+      "said": "That sounds like Bobby. Is there a unit number on the key tag, or can you read me the plate?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 53.3,
+      "said": "Hang on. ...It says S-C-two on the key."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 57.6,
+      "said": "S-C-two. Okay, that's the twenty-twenty Transit. And when you say the usual — last time that one was in, we did the P-M service. Oil and filter, grease the chassis, and the fifty-point inspection. Is that what Bobby's got written down?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 72.4,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 73.8,
+      "said": "It just says 'usual, two fifty-five.' That's my whole problem. I looked on your website and it says two-seventy."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 82.4,
+      "said": "Okay. So that's the P-M, and yeah, it's two-seventy now. It was two fifty-five."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 87.7,
+      "said": "Right.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 90.1,
+      "said": "Since when?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 92.3,
+      "said": "It just went up. First time we've raised the labor rate in better than two years."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 98.9,
+      "said": "Bobby didn't say anything about prices going up. I've got a budget he gave me, and it's got two fifty-five on every line."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 108.8,
+      "said": "Yeah, I hear you. Everything's gone up, Erin — parts, insurance, all of it — and we held that rate as long as we could. It's still a fair price for what you're getting."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 122.2,
+      "said": "Okay. I guess that's what it is."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 126.0,
+      "said": "So — out the door, with shop supplies and tax, that P-M's three-oh-six and change. Anything the inspection turns up, I call you before we touch it. And I can take S-C-two Thursday morning at seven-thirty and have it back to you by ten."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 141.9,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 143.2,
+      "said": "Thursday... yeah. Thursday's okay, it doesn't go out till lunch."
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 147.8,
+      "said": "Good. What's the best number for you? I've still got Bobby's on the account."
+    },
+    {
+      "n": 23,
+      "who": "customer",
+      "at_s": 153.8,
+      "said": "Four two three, five five five, oh one oh six."
+    },
+    {
+      "n": 24,
+      "who": "advisor",
+      "at_s": 158.6,
+      "said": "Got it. Alright, Erin, I've got S-C-two down for Thursday at seven-thirty, and I'll write it up myself."
+    },
+    {
+      "n": 25,
+      "who": "customer",
+      "at_s": 167.2,
+      "said": "Okay. Do I need to do anything?"
+    },
+    {
+      "n": 26,
+      "who": "advisor",
+      "at_s": 171.0,
+      "said": "Just get it here. So that's Thursday, seven-thirty, P-M service on S-C-two, back by ten."
+    },
+    {
+      "n": 27,
+      "who": "customer",
+      "at_s": 178.0,
+      "said": "Okay. Thanks."
+    },
+    {
+      "n": 28,
+      "who": "advisor",
+      "at_s": 179.9,
+      "said": "Thank you, Erin. Tell Bobby I said hey."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.7,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          6,
+          8,
+          9,
+          17,
+          19,
+          21,
+          24
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "a name heard as a neighbour in sound",
+        "script_turn": 2,
+        "said": "Sourwood",
+        "stored": "Sour Wood"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          8,
+          9,
+          11,
+          12,
+          19,
+          23,
+          24,
+          26
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "a number split, merged or changed",
+        "script_turn": 11,
+        "said": "two fifty-five",
+        "stored": "2.55"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 3,
+        "said": "Yeah, Bobby told me he was handing those off.",
+        "stored": ""
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          10,
+          13
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 15,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 12,
+        "as_digits": 11,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 3,
+        "lost": 2,
+        "joined": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 416,
+    "stored_words": 395,
+    "strict_word_difference": 0.106
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 420,
+    "duration_s": 184.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Travis.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi, Travis. This is Erin Castillo, I'm with Sour Wood Catering? I've taken over the vans from Bobby Shadden.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, okay! Nice to meet you, Erin. What do you need?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So I need to get the usual done on the white van. And I need somebody to explain to me why it costs more than it did last time.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. We can do both. Which van are we talking about? Y'all have got about five white ones.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The big one? Bobby just calls it the white van on his sheet.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "That sounds like Bobby. Is there a unit number on the key tag, or can you read me the plate?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hang on. It says SC-2 on the key.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "SC-2. Okay, that's the 2020 Transit. And when you say the usual, last time that one was in, we did the P-M service. Oil and filter, grease the chassis, and the fifty-point inspection. Is that what Bobby's got written down?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It just says 'usual, 2.55.' That's my whole problem. I looked on your website and it says 270.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So that's the P-M, and yeah, it's $270 now. It was $255.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Since when?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It just went up. First time we've raised the labor rate in better than two years.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Bobby didn't say anything about prices going up. I've got a budget he gave me, and it's got two fifty-five on every line.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, I hear you. Everything's gone up, Erin, parts, insurance, all of it, and we held that rate as long as we could. It's still a fair price for what you're getting.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. I guess that's what it is.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So, out the door, with shop supplies and tax, that P-M's $306 and change. Anything the inspection turns up, I call you before we touch it. And I can take SC-2 Thursday morning at 7:30 and have it back to you by 10.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Thursday, yeah. Thursday's okay, it doesn't go out till lunch.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Good. What's the best number for you? I've still got Bobby's on the account.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0106.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Got it. All right, Erin, I've got SC-2 down for Thursday at 7:30, and I'll write it up myself.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Do I need to do anything?",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Just get it here. So that's Thursday, 7:30, P-M service on SC-2, back by 10.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Thanks.",
+        "confidence": null
+      },
+      {
+        "sequence": 24,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you, Erin. Tell Bobby I said hey.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Travis.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "What's the best number for you?",
+        "level": 1,
+        "segment": 18
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Is there a unit number on the key tag, or can you read me the plate?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Anything the inspection turns up, I call you before we touch it. And I can take SC-2 Thursday morning at 7:30",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "offered_time",
+        "quote": "And I can take SC-2 Thursday morning at 7:30 and have it back to you by 10.",
+        "level": 1,
+        "segment": 16
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I've got SC-2 down for Thursday at 7:30, and I'll write it up myself.",
+        "level": 2,
+        "segment": 20
+      },
+      {
+        "key": "recap",
+        "quote": "So that's Thursday, 7:30, P-M service on SC-2, back by 10.",
+        "level": 1,
+        "segment": 22
+      },
+      {
+        "key": "objection",
+        "quote": "Everything's gone up, Erin, parts, insurance, all of it, and we held that rate as long as we could.",
+        "level": 1,
+        "segment": 14
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "And when you say the usual, last time that one was in, we did the P-M service.",
+      "why": "He did not guess what 'the usual' was: he found the van first and then read her the last job so she could check it against her sheet.",
+      "segment": 8
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "Everything's gone up, Erin, parts, insurance, all of it, and we held that rate as long as we could.",
+      "say": "It's the labor rate: it went from 125 to 135 an hour, and that service is an hour and a half, so 15 dollars. Parts didn't move. Do you want that in an email, so you can change the lines on Bobby's budget?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 75.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 18
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 16
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 20
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 22
+        },
+        {
+          "key": "objection",
+          "level": 1,
+          "segment": 14
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 75.0,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 8,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Travis",
+        "name_and_number": "What's the best number for you?",
+        "need_discovery": "Is there a unit number on the key tag, or can you read me the plate?",
+        "price_with_next_step": "Anything the inspection turns up, I call you before we touch it. And I can take SC-2 Thursday morning at 7:30",
+        "offered_time": "And I can take SC-2 Thursday morning at 7:30 and have it back to you by 10",
+        "asked_for_booking": "I've got SC-2 down for Thursday at 7:30, and I'll write it up myself",
+        "recap": "So that's Thursday, 7:30, P-M service on SC-2, back by 10",
+        "objection": "Everything's gone up, Erin, parts, insurance, all of it, and we held that rate as long as we could"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "And when you say the usual, last time that one was in, we did the P-M service",
+        "why": "He did not guess what 'the usual' was: he found the van first and then read her the last job so she could check it against her sheet."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "Everything's gone up, Erin, parts, insurance, all of it, and we held that rate as long as we could.",
+        "say": "It's the labor rate: it went from 125 to 135 an hour, and that service is an hour and a half, so 15 dollars. Parts didn't move. Do you want that in an email, so you can change the lines on Bobby's budget?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. The request was unclear twice over (which van, what job) and was made clear by his questions; that is the evidence for need discovery at level 2 (design rule R13).",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": 1
+    },
+    "score": 75.0,
+    "score_exact": 75.0,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "price_objection"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and his own name.",
+    "name_and_number": "1: he takes her number and says 'got it' without saying it back; her name she gave herself.",
+    "need_discovery": "2: the unit and the job, each found by a question of his, and one circumstance from her answer: it does not go out until lunch.",
+    "price_with_next_step": "2: the out-the-door price, what could add to it (anything the inspection turns up) and a time, in one line.",
+    "offered_time": "1: one specific option, Thursday at 7:30.",
+    "asked_for_booking": "2: the day, the hour and who writes it up.",
+    "recap": "1: the time and the work; no address for a contact who has never been to the shop.",
+    "objection": "1: her doubt is a budget with the old price on every line, and it gets 'everything's gone up'. He does not say what changed (the hour) or by how much (15 dollars).",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·1 + 3·2 + 1·1 + 2·1) / 2 = 12 of 16 weight points = 75.0.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "new_facts": [
+    "An appointment at main for SC-2 on call+2d at 07:30 (the Thursday of week T-20): fleet PM service A at list, 270.59; it is one of A6's visits in its first 30-day block after the rise.",
+    "Several of A6's vans are white (he says 'about five'); no colour is recorded in accounts.json.",
+    "Her predecessor left her a sheet with 'usual, 255' against the van."
+  ]
+}

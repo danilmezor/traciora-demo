@@ -1,0 +1,71 @@
+{
+ "path": "accounts/a3.md",
+ "title": "Moccasin Bend Janitorial Services",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Standing instructions for account A3.",
+ "serves": [
+  "S1",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 127,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Account A3: nine vehicles MB-1 to MB-9, home shop main, net 15, list prices; contacts from accounts.json (Yolanda Fitch operations manager, Dennis Fitch owner).",
+  "Vans arrive 7:30-8:00 and must be ready by 16:00.",
+  "Driver limit 300 USD (the one company rule).",
+  "MB-8 is the 2015 Express van (accounts.json): heavy use.",
+  "They prefer economy parts; quote standard first."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Moccasin Bend Janitorial Services",
+   "item": "Contact: Yolanda Fitch, operations manager, (423) 555-0180. She books and approves. Dennis Fitch owns the company and stays out of it."
+  },
+  {
+   "section": "Moccasin Bend Janitorial Services",
+   "item": "Their crews work nights. Vans arrive between 7:30 and 8:00 after the shift and have to be ready by 4:00 to go back out."
+  },
+  {
+   "section": "Moccasin Bend Janitorial Services",
+   "item": "A driver may approve up to $300 for the visit. Over that, Yolanda."
+  },
+  {
+   "section": "Moccasin Bend Janitorial Services",
+   "item": "Units are MB-1 to MB-9. MB-8 is the old Express van that carries the floor machines: it is heavy, check the rear springs and tires every visit."
+  },
+  {
+   "section": "Moccasin Bend Janitorial Services",
+   "item": "They ask for the economy line on brakes and filters. Quote standard anyway and let Yolanda choose."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-7mo|date}}"
+ ],
+ "new_facts": [
+  "Night crews, ready by 16:00, the economy preference (colour)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "«Клининговая компания» from accounts.json ru, 14 days."
+ ]
+}

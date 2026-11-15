@@ -1,0 +1,146 @@
+{
+  "format": "seed-conversation/1",
+  "id": "27-r13-avito-never-clear",
+  "configuration": "ru",
+  "number": 27,
+  "story": "R13",
+  "title": "Непонятно и так и не прояснилось: «сколько стоит стойки поменять»",
+  "demonstrates": "Rule R13 on Avito, the session that ends unclear. «Стойки» is two different parts. The assistant's draft is the clarifying question; slot 17 writes a price for his first reading over it, is corrected, guesses a second time, and when the customer says he needs only one, the right question goes out an hour later, as the draft wrote it. Nobody answers it. Chatwoot resolves the chat after seven silent days.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Эдуард",
+      "invented": true,
+      "first_time": true,
+      "note": "пишет по объявлению; машина не названа"
+    },
+    "staff": [
+      {"slot": 17, "name": "Артём Николаев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек по объявлению, который называет деталь так, как её называют в гараже.",
+    "what_happens": "Три реплики клиента, две догадки приёмщика, один правильный вопрос через час, тишина.",
+    "facts": {
+      "public_pages_used": [],
+      "note": "Ни машина, ни ось, ни сторона так и не названы; цену на одну стойку никто не посчитал.",
+      "prices": [
+        {"said": "3 700", "amount": 3700.0, "what": "замена стоек стабилизатора передних, пара, класс car", "from": {"catalogue": "sway_bar_links", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "18 580", "amount": 18580.0, "what": "замена передних амортизаторных стоек, пара, класс car", "from": {"catalogue": "front_struts_pair", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    },
+    "unclear": {
+      "kind": "one word, two parts: «стойки» are sway bar links or strut assemblies; then one of a pair",
+      "loops": 2,
+      "resolved": false,
+      "how": "Черновик спрашивает, какие стойки и какая машина. Артём вместо вопроса называет цену стоек стабилизатора; клиент: «не. которые большие». Артём называет пару передних амортизаторных стоек; клиент: «мне только одну. ладно». Вопрос из третьего черновика уходит через час, ответа нет."
+    }
+  },
+  "days": {
+    "T-16d": {"anchor": "the Wednesday of week T-2", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 2}, "nominal": "Wed 2026-10-28", "what": "the Wednesday of week T-2 (DESIGN.md section 6, row 27); a working day of slot 17"},
+    "T-9d": {"anchor": "7 calendar days after the Wednesday of week T-2", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 2, "plus_days": 7}, "nominal": "Wed 2026-11-04", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "avito",
+      "bridge": "avito:default",
+      "inbox": "Avito",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "u2i-seedv1-0261-0001",
+      "peer": {"id": "900000000000261", "name": "Эдуард"},
+      "contact": {
+        "identifier": "avito_900000000000261",
+        "name": "Эдуард",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "listing_context": {
+        "item_id": "900000000000057",
+        "title": "Ремонт ходовой, диагностика подвески. Новый город",
+        "url": "https://avito.example/900000000000057"
+      },
+      "opened": {
+        "day": "T-16d",
+        "at": "15:10:05",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "a new Avito chat: one per listing and buyer"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-16d", "at": "15:10:05", "kind": "message", "from": "customer", "text": "здравствуйте сколько стоит стойки поменять"},
+        {"n": 2, "day": "T-16d", "at": "15:10:50", "kind": "draft", "id": "d1", "text": "Здравствуйте! Уточните, пожалуйста: вам нужны амортизаторные стойки или стойки стабилизатора? И какая у вас машина?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 17, "day": "T-16d", "at": "15:21:40", "because": "he sent his own text (n 4)"}},
+        {"n": 3, "day": "T-16d", "at": "15:21:38", "kind": "activity", "what": "assigned", "derived": true, "to": 17, "by": 17, "how": "first reply"},
+        {"n": 4, "day": "T-16d", "at": "15:21:40", "kind": "message", "from": "staff", "slot": 17, "text": "Здравствуйте! Стойки стабилизатора 3 700 за пару с работой. Когда подъедете?"},
+        {"n": 5, "day": "T-16d", "at": "15:25:10", "kind": "message", "from": "customer", "text": "не. которые большие"},
+        {"n": 6, "day": "T-16d", "at": "15:25:50", "kind": "draft", "id": "d2", "text": "Понял, амортизаторные стойки. Уточните, пожалуйста: передние или задние? И какая у вас машина и какого года: от этого зависит цена.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 17, "day": "T-16d", "at": "15:33:30", "because": "he sent his own text (n 7)"}},
+        {"n": 7, "day": "T-16d", "at": "15:33:30", "kind": "message", "from": "staff", "slot": 17, "text": "А, амортизаторы. Передние 18 580 за пару с работой, всё сделаем"},
+        {"n": 8, "day": "T-16d", "at": "15:36:40", "kind": "message", "from": "customer", "text": "да не. мне только одну. ладно"},
+        {"n": 9, "day": "T-16d", "at": "15:37:20", "kind": "draft", "id": "d3", "text": "Уточните, пожалуйста, с какой стороны и на какой оси стойка и какая у вас машина: посчитаем точно. Стойки обычно меняют парой на одной оси.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 17, "day": "T-16d", "at": "16:35:05", "became": 11}},
+        {"n": 10, "day": "T-16d", "at": "16:00", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 11, "day": "T-16d", "at": "16:35:05", "kind": "message", "from": "staff", "slot": 17, "text": "Уточните, пожалуйста, с какой стороны и на какой оси стойка и какая у вас машина: посчитаем точно. Стойки обычно меняют парой на одной оси.", "late": "второй вопрос может ждать час (cast.json)"},
+        {"n": 12, "day": "T-16d", "at": "16:35:07", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 13, "day": "T-9d", "at": "16:35", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-16d", "at": "15:21:38", "to": 17, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 17,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 17, "working_minutes": 11.6},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 17, "working_minutes": 11.6, "wall_minutes": 11.6, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 17, "working_minutes": 8.3, "wall_minutes": 8.3, "measured_from": "n 5", "reply": "later"},
+          {"asked": 8, "answered": 11, "by": 17, "working_minutes": 58.4, "wall_minutes": 58.4, "measured_from": "n 8", "reply": "later", "late": "второй вопрос может ждать час (cast.json)"}
+        ],
+        "first_person_line": {
+          "by": 17,
+          "n": 4,
+          "working_minutes": 11.6,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-9d", "at": "16:35", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 17},
+          {"draft": "d2", "outcome": "discarded", "manager": 17},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 17}
+        ],
+        "operator_credit": "slot 17: first answer 11.6 minutes (his ledger row is 11), three replies, two drafts discarded and one sent as it was, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "slot 17; the assistant drafts",
+    "outcome": "просьба осталась неясной; закрыт по 7 дням тишины",
+    "facts": [
+      "the request was never made clear",
+      "both discarded drafts were the clarifying questions; slot 17 answered his first reading twice (3 700, then 18 580)",
+      "the right question was sent 58 minutes after the customer's last line and got no answer"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Оба выброшенных черновика — вопросы, которые прояснили бы просьбу за минуту.",
+    "Клиент не становится яснее от того, что ему называют цену: он уходит.",
+    "Неясных клиентов у слабого приёмщика столько же, сколько у сильного; неясных итогов — больше (DESIGN.md, раздел 4)."
+  ],
+  "new_facts": [
+    "Объявление сервиса на Авито «Ремонт ходовой, диагностика подвески. Новый город».",
+    "«Эдуард»: спрашивал замену «стоек», машину не назвал, не приехал.",
+    "У контакта нет картинки."
+  ]
+}

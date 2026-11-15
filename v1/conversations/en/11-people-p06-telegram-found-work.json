@@ -1,0 +1,141 @@
+{
+  "format": "seed-conversation/1",
+  "id": "11-people-p06-telegram-found-work",
+  "configuration": "en",
+  "number": 11,
+  "story": "people",
+  "title": "The junior operator on Telegram: found work, two photos, a yes and a no",
+  "demonstrates": "Slot 6 in writing: four minutes to a first reply, complete sentences, the urgent thing first with its price, the other offered without pressure, a pick-up time, at most one exclamation mark a message. She builds on two drafts and sends the third as it was; she labels and resolves.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Shonda Ellis",
+      "invented": true,
+      "first_time": false,
+      "note": "a customer of the East Main shop; 2015 Kia Sorento, in for an oil change"
+    },
+    "staff": [
+      {"slot": 6, "name": "Maya Torres"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer whose car is in for an oil change, from her desk.",
+    "vehicle": "2015 Kia Sorento",
+    "what_happens": "She asks for news. Maya has two findings with photos: rear pads at 3 mm, and a cabin filter full of leaves. The customer takes the brakes and keeps the filter for herself.",
+    "facts": {
+      "approved": "rear brake pads, 260.31",
+      "declined": "cabin air filter, 67.94",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "$260.31", "amount": 260.31, "what": "rear brake pads, class suv, standard parts", "from": {"catalogue": "rear_brake_pads", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$67.94", "amount": 67.94, "what": "cabin air filter, class suv", "from": {"catalogue": "cabin_air_filter", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "3 mm", "what": "what the rear pads measured; new pads are about 10 mm"}
+      ]
+    }
+  },
+  "days": {
+    "T-80d": {"anchor": "the Tuesday of week T-11", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 11}, "nominal": "Tue 2026-08-25"}
+  },
+  "floating_days": [
+    {"word": "today", "said_on": "T-80d", "day": "T-80d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "4503599627372788",
+      "peer": {"id": "4503599627372788", "name": "Shonda E."},
+      "contact": {
+        "identifier": "telegram_4503599627372788",
+        "name": "Shonda E.",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "opened": {
+        "day": "T-80d",
+        "at": "11:05:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of her one Telegram conversation; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-80d", "at": "11:05:10", "kind": "message", "from": "customer", "text": "hey Maya its Shonda. any news on the sorento?"},
+        {"n": 2, "day": "T-80d", "at": "11:05:55", "kind": "draft", "id": "d1", "text": "Hi Shonda! I don't have the status of the Sorento in front of me. I'll check with the technician and message you right back.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 6, "day": "T-80d", "at": "11:09:20", "became": 4}},
+        {"n": 3, "day": "T-80d", "at": "11:09:18", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 4, "day": "T-80d", "at": "11:09:20", "kind": "message", "from": "staff", "slot": 6, "text": "Hi Shonda, good timing. The oil change is done and the inspection found two things, photos below. The rear brake pads are down to 3 mm, and that one I wouldn't put off: $260.31, about an hour. The cabin air filter is full of leaves, $67.94, and that can wait if you'd rather. Want us to go ahead with either one today?", "files": [{"kind": "image", "file": "sorento_rear_pad.jpg", "pool": "worn-pad", "shows": "a rear brake pad held next to a new one, a thin strip of friction material left"}, {"kind": "image", "file": "sorento_cabin_filter.jpg", "pool": "dirty-cabin-filter", "shows": "a cabin air filter grey with dust, dry leaves in the pleats"}]},
+        {"n": 5, "day": "T-80d", "at": "11:12:40", "kind": "message", "from": "customer", "text": "do the brakes. ill do the filter myself lol"},
+        {"n": 6, "day": "T-80d", "at": "11:13:25", "kind": "draft", "id": "d2", "text": "Sounds good, Shonda. We'll do the rear brake pads today, $260.31, and leave the cabin filter. We'll message you when it's ready.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 6, "day": "T-80d", "at": "11:14:50", "became": 7}},
+        {"n": 7, "day": "T-80d", "at": "11:14:50", "kind": "message", "from": "staff", "slot": 6, "text": "Sounds good, Shonda. We'll do the rear pads today, $260.31, and leave the cabin filter to you. It'll be ready by 1:30, and I'll message you here when it's done!"},
+        {"n": 8, "day": "T-80d", "at": "11:15:10", "kind": "activity", "what": "label_added", "label": "approval", "by": 6},
+        {"n": 9, "day": "T-80d", "at": "13:24:30", "kind": "message", "from": "staff", "slot": 6, "text": "The Sorento is ready whenever you are, Shonda. We're here until 5:30."},
+        {"n": 10, "day": "T-80d", "at": "13:30:15", "kind": "message", "from": "customer", "text": "omw"},
+        {"n": 11, "day": "T-80d", "at": "13:30:55", "kind": "draft", "id": "d3", "text": "See you soon, Shonda!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-80d", "at": "13:31:40", "became": 12}},
+        {"n": 12, "day": "T-80d", "at": "13:31:40", "kind": "message", "from": "staff", "slot": 6, "text": "See you soon, Shonda!"},
+        {"n": 13, "day": "T-80d", "at": "13:32:00", "kind": "activity", "what": "resolved", "by": 6}
+      ],
+      "assignee_history": [
+        {"day": "T-80d", "at": "11:09:18", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["approval"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 6, "working_minutes": 4.2},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 6, "working_minutes": 4.2, "wall_minutes": 4.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 6, "working_minutes": 2.2, "wall_minutes": 2.2, "measured_from": "n 5", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 6, "working_minutes": 1.4, "wall_minutes": 1.4, "measured_from": "n 10", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 4,
+          "working_minutes": 4.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 4, "note": 0},
+        "resolutions": [
+          {"day": "T-80d", "at": "13:32:00", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 6},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 6},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 6}
+        ],
+        "operator_credit": "slot 6: first answer 4.2 minutes (her ledger row is 4), four replies, two drafts edited and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "slot 6; the assistant drafts",
+    "outcome": "rear brake pads approved (260.31), cabin air filter declined; resolved by slot 6",
+    "facts": [
+      "two findings, each with a photo",
+      "approved: rear brake pads; declined: the cabin air filter",
+      "ready by 1:30, as said"
+    ],
+    "questions": []
+  },
+  "why": [
+    "The first draft has nothing in it, because the assistant cannot see the car; Maya keeps the greeting and writes the rest.",
+    "Urgent thing first, with its reason and its price; the second thing offered, not pushed.",
+    "She tells the customer when, and then does it."
+  ],
+  "new_facts": [
+    "Shonda Ellis (Telegram name 'Shonda E.'), 2015 Kia Sorento, at main on the Tuesday of week T-11: oil change; rear brake pads approved, 260.31; cabin air filter declined, 67.94.",
+    "The photos sorento_rear_pad.jpg and sorento_cabin_filter.jpg (picture pools 'worn-pad', 'dirty-cabin-filter').",
+    "The contact has no picture."
+  ]
+}

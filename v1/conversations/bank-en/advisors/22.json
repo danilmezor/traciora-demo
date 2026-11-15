@@ -1,0 +1,242 @@
+{
+  "format": "bank-en/advisor/1",
+  "slot": 22,
+  "name": "Dale Hutchins",
+  "shop": "Charlotte Pike",
+  "voice": "Middle Tennessee, gravelly, slow. Warm with people he knows, curt with strangers. No time, no price, seldom a name. In chat he answers the next day if at all: 'will do', 'handled', 'bring it by'. Lower case, no full stops he can skip.",
+  "sheet": {
+    "draft_outcomes": {
+      "sent_as_is": 5,
+      "sent_edited": 5,
+      "discarded": 90
+    },
+    "first_reply_min": 35,
+    "slowest_tenth": "next working day",
+    "ask_chance": 25,
+    "label_share": 5,
+    "resolves": 10
+  },
+  "signoff": null,
+  "pickup": [
+    "dale here. bring it by",
+    "this is dale at the nashville shop. bring it on in",
+    "dale. got your message",
+    "yep. dale at charlotte pike"
+  ],
+  "replies": {
+    "price": {
+      "quote": [
+        "depends what it needs",
+        "cant say til i see it",
+        "{colleague_first} will price it for you",
+        "same as anybody. bring it in and we'll see"
+      ],
+      "after": [
+        "its on every ticket",
+        "thats the price",
+        "tax and supplies. same as anywhere",
+        "thats what it runs"
+      ]
+    },
+    "booking": {
+      "offer": [
+        "come on by whenever",
+        "bring it in the morning",
+        "drop it off, we'll get to it",
+        "bring it first thing"
+      ],
+      "confirm": [
+        "will do",
+        "ok then",
+        "see you when you get here",
+        "good deal"
+      ]
+    },
+    "hours": {
+      "answer": [
+        "closed saturdays",
+        "yep we do that",
+        "were on {shop_address}",
+        "open til {close_time}"
+      ],
+      "after": [
+        "key box by the door",
+        "no saturdays here",
+        "walk in is fine",
+        "we close at {close_time} sharp"
+      ]
+    },
+    "symptom": {
+      "advise": [
+        "run it by here and we'll look",
+        "dont drive it far. bring it in",
+        "sounds like the pump. bring it by",
+        "we'll look at it. come by in the morning"
+      ],
+      "confirm": [
+        "alright then",
+        "ok we'll look",
+        "yep",
+        "we'll see what it is"
+      ]
+    },
+    "status": {
+      "ready": [
+        "its ready",
+        "done. come get it",
+        "ready. we close at {close_time}",
+        "its out front"
+      ],
+      "not_yet": [
+        "not yet",
+        "waiting on parts",
+        "tomorrow probably",
+        "{colleague_first} will call you"
+      ]
+    },
+    "found_work": {
+      "present": [
+        "{finding}. needs doing",
+        "found {finding}. want it done",
+        "the {finding_item}. id fix it",
+        "{finding}. {colleague_first} will call with the price"
+      ],
+      "confirm": [
+        "handled",
+        "ok. doing it",
+        "we'll do it today",
+        "will get it done"
+      ],
+      "declined": [
+        "fine. leave it then",
+        "ok. not today",
+        "your call",
+        "alright. we wont"
+      ]
+    },
+    "moving": {
+      "moved": [
+        "fine. come when you can",
+        "no problem. whenever",
+        "ok. bring it {day_a}",
+        "thats fine"
+      ],
+      "cancelled": [
+        "ok. call when you need us",
+        "cancelled",
+        "fine by me",
+        "alright. take care"
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        "bring it back. we'll look",
+        "sorry to hear it. come by",
+        "call the shop. ask for me",
+        "we'll make it right. bring it by"
+      ],
+      "fix": [
+        "every ticket has it",
+        "fixed",
+        "took care of it",
+        "talked to the tech. its good now"
+      ],
+      "bill": [
+        "its on every ticket",
+        "tax and supplies",
+        "thats the price plus tax",
+        "{colleague_first} can go over it"
+      ]
+    },
+    "fleet": {
+      "list": [
+        "bring em",
+        "send em over",
+        "we'll get to them",
+        "ok. {unit} first"
+      ],
+      "paperwork": [
+        "{colleague_first} does the paperwork",
+        "will send",
+        "ask the office",
+        "office will email it"
+      ]
+    }
+  },
+  "moves": {
+    "ask": [
+      "which one",
+      "what year",
+      "whats it doing",
+      "front or rear"
+    ],
+    "decline_discount": [
+      "price is the price",
+      "nope",
+      "cant do it",
+      "thats what it costs"
+    ],
+    "close": [
+      "take care now",
+      "see you",
+      "alright",
+      "good enough"
+    ],
+    "pass_on": [
+      "{colleague_first} will get you",
+      "ask {colleague_first}",
+      "{colleague_first}'ll handle it",
+      "call the desk"
+    ],
+    "warm": [
+      "hows your mama",
+      "tell your daddy i said hey",
+      "you still fishing out at the lake",
+      "hows that boy of yours"
+    ]
+  },
+  "edits": [
+    {
+      "draft_key": "status.dont_have",
+      "draft": "Hi {first_name}. I don't have the status of the {model} in front of me. I'll check with the shop and message you right back.",
+      "sent": "not yet",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "booking.ask_day",
+      "draft": "Hi {first_name}! We'd be glad to take care of the {model}. Which day works best for you? I'll confirm a time.",
+      "sent": "bring it in the morning",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "symptom.advise",
+      "draft": "Hi {first_name}. I'm sorry to hear that. That should be checked soon. Would you like to bring the {model} in?",
+      "sent": "run it by here and we'll look",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "complaint.sorry",
+      "draft": "I'm sorry, {first_name}. That's not how it should be. If the car needs to come back, we look at it first and there's no charge to have it looked at.",
+      "sent": "bring it back. we'll look",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "generic.close",
+      "draft": "Anytime, {first_name}.",
+      "sent": "Anytime, {first_name}.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "price.depends",
+      "draft": "Good question, {first_name}. It depends on the parts the {model} takes; the first step is the {page_item} at {page_price}.",
+      "sent": "depends on the parts. {page_price} to look",
+      "outcome": "sent_edited"
+    }
+  ],
+  "notes": [
+    "handled it",
+    "@{colleague_first} call him",
+    "ill look at it tomorrow",
+    "@{tech_first} put it on the lift first thing"
+  ]
+}

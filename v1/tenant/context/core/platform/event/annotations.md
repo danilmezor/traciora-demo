@@ -1,0 +1,3 @@
+<!-- extends config/sources/traciora/platform/event/annotations.md; appended under "## Demo tenant, notes v1" -->
+
+Event types the questions meet: shift.no_show (subject the shift, person_id the person rostered, business_day the day; one per shift); punch.recorded (payload_public log_type and exception_type); work_item.created, work_item.assigned, work_item.state_changed, work_item.completed; calendar_event.scheduled, calendar_event.cancelled, calendar_event.responded. payload_enc is not readable. A no-show is the event, not a shift status; a shift that someone else took afterwards shows that person on the shift.

@@ -1,0 +1,1096 @@
+# Shop goldens, seed v1, English configuration: manager questions with reference SQL on schema shop.
+# Each choice a reference makes (which orders, which date, which window, how many rows, which columns) is
+# said in its question or in the shop context (v1/erp/context/); every column is asked for by the question.
+# Written by _build/gen_shop.py: change the generator, never this file.
+questions:
+- id: shop-S01-accounts-lost
+  question: Which company accounts have we lost or are losing?
+  asker: '2'
+  sql: |
+    WITH acct AS (
+      SELECT customer_id, name FROM shop.customer WHERE payment_terms_days IS NOT NULL
+    ), visits AS (
+      SELECT o.customer_id, o.opened_at
+      FROM shop.repair_order o JOIN acct a ON a.customer_id = o.customer_id
+      WHERE o.order_type = 'customer_pay' AND o.status NOT IN ('declined', 'void')
+    ), per_account AS (
+      SELECT a.name,
+             count(v.opened_at) FILTER (WHERE v.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '29 days') AS last_30,
+             count(v.opened_at) FILTER (WHERE v.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '89 days') AS last_90,
+             count(v.opened_at) FILTER (WHERE v.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '179 days'
+                                          AND v.opened_at < date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '149 days') AS block_before
+      FROM acct a LEFT JOIN visits v ON v.customer_id = a.customer_id
+      GROUP BY a.customer_id, a.name
+    )
+    SELECT name AS account_name
+    FROM per_account
+    WHERE last_90 = 0 OR last_30 < block_before / 2.0
+    ORDER BY name
+  expected:
+    columns:
+    - account_name
+    nonempty: true
+  rule: acct.A5.visits, acct.A6.visits
+  expect_keys:
+    account_name:
+      Cumberland Bend Electric: 1
+      Sourwood Catering Co.: 1
+  category: accounts
+  notes: Accounts billed on terms only (not every company); their business is customer-pay orders, not declined or void. Lost
+    and being lost as the context defines them (story S1.1), in calendar days to today.
+- id: shop-S01-east-overdue
+  question: Which accounts at Bonny Oaks have a bill overdue?
+  asker: '16'
+  sql: |
+    SELECT DISTINCT c.name AS account_name
+    FROM shop.statement s
+    JOIN shop.customer c ON c.customer_id = s.customer_id
+    JOIN shop.location l ON l.location_id = c.created_location_id
+    WHERE c.payment_terms_days IS NOT NULL
+      AND l.name = 'Bonny Oaks'
+      AND s.due_on < date_trunc('day', now() AT TIME ZONE 'America/New_York')::date
+      AND NOT EXISTS (SELECT 1 FROM shop.payment p WHERE p.statement_id = s.statement_id AND p.kind = 'payment')
+    ORDER BY c.name
+  expected:
+    columns:
+    - account_name
+    rows: 0
+  rule: acct.others_pay_on_time
+  category: accounts
+  notes: 'The right answer is none: an empty result, not a guess. An account belongs to the shop that created it; overdue
+    = due day past with no payment.'
+- id: shop-S02-brent-cost
+  question: 'What did Brent Lassiter cost us at Charlotte Pike in his last 26 weeks: the discounts he gave, the cash he took
+    on orders he then voided, the days his till came up 20 dollars or more short, and the three together?'
+  asker: '2'
+  sql: |
+    WITH f1 AS (
+      SELECT employee_id, left_on FROM shop.employee
+      WHERE first_name = 'Brent' AND last_name = 'Lassiter'
+    ), disc AS (
+      SELECT coalesce(sum(o.discount_total), 0) AS v
+      FROM shop.repair_order o JOIN f1 ON f1.employee_id = o.advisor_id
+      JOIN LATERAL (SELECT min(h.changed_at) AS at FROM shop.order_status_history h
+                    WHERE h.repair_order_id = o.repair_order_id AND h.status = 'invoiced') inv ON true
+      WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid') AND inv.at >= f1.left_on - 182 AND inv.at < f1.left_on + 1
+    ), voids AS (
+      SELECT coalesce(sum(o.total), 0) AS v
+      FROM shop.repair_order o JOIN f1 ON f1.employee_id = o.advisor_id
+      WHERE o.status = 'void' AND EXISTS (SELECT 1 FROM shop.payment p WHERE p.repair_order_id = o.repair_order_id
+                       AND p.kind = 'payment' AND p.method = 'cash') AND o.opened_at >= f1.left_on - 182 AND o.opened_at < f1.left_on + 1
+    ), till AS (
+      SELECT coalesce(-sum(d.difference), 0) AS v
+      FROM shop.cash_drawer_close d JOIN f1 ON f1.employee_id = d.closed_by_id
+      WHERE d.difference <= -20 AND d.business_date >= f1.left_on - 182 AND d.business_date <= f1.left_on
+    )
+    SELECT disc.v AS discounts_usd,
+           voids.v AS voided_after_cash_usd,
+           till.v AS till_short_usd,
+           disc.v + voids.v + till.v AS estimated_total_usd
+    FROM disc, voids, till
+  expected:
+    columns:
+    - discounts_usd
+    - voided_after_cash_usd
+    - till_short_usd
+    - estimated_total_usd
+    rows: 1
+    positive_columns:
+    - discounts_usd
+    - voided_after_cash_usd
+    - till_short_usd
+    - estimated_total_usd
+  rule: s2.total
+  expect_keys:
+    estimated_total_usd:
+      11400: 1
+  category: money
+  notes: 'Three non-overlapping components and their sum, an estimate (s2.total), all in the 26 weeks to his last day; his
+    discounts are those of his revenue orders (every one of them planted: cash, 15 to 30 %, no approver). ru as billed, VAT
+    inside (s2.amounts_basis). Void trap: a voided order keeps its total. ru: stock issued with no order line, at cost; clocked
+    hours more than one hour past an order''s sold hours, at the standard hour in force on its day.'
+- id: shop-S02-discount-rule-30d
+  question: Which orders broke the discount rule in the last 30 days, and which advisor wrote each?
+  asker: '2'
+  sql: |
+    SELECT o.number AS order_number,
+           e.first_name || ' ' || e.last_name AS advisor_name
+    FROM shop.repair_order o
+    JOIN shop.employee e ON e.employee_id = o.advisor_id
+    WHERE o.order_type = 'customer_pay'
+      AND o.status NOT IN ('declined', 'void')
+      AND o.discount_approved_by_id IS NULL
+      AND o.discount_total > 0.10 * (o.labor_total + o.parts_total + o.sublet_total + o.fees_total)
+      AND o.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '29 days'
+    ORDER BY o.opened_at
+  expected:
+    columns:
+    - order_number
+    - advisor_name
+    nonempty: true
+  rule: s2.west.discounts_after
+  expect_keys:
+    advisor_name:
+      Chad Binkley: 2
+  category: money
+  notes: 'The rule: a discount above 10 % of the bill with no approver, on a customer-pay order not declined or void. Warranty
+    and goodwill orders carry their whole amount in discount_total and are not discounts. The share is discount over the bill
+    before discount, the same on gross (ru) or net (en) lines.'
+- id: shop-S02-west-leaks
+  question: On which days was the Charlotte Pike till short by 20 dollars or more?
+  asker: '3'
+  sql: |
+    SELECT d.business_date AS business_day_yyyy_mm_dd
+    FROM shop.cash_drawer_close d
+    JOIN shop.location l ON l.location_id = d.location_id
+    WHERE l.name = 'Charlotte Pike'
+      AND d.difference <= -20
+    ORDER BY d.business_date
+  expected:
+    columns:
+    - business_day_yyyy_mm_dd
+    rows: 19
+  rule: s2.f1.third
+  category: money
+  notes: Till counts are hidden below middle rank; the bookkeeper may read them. The whole history; no other day is 20 or
+    more short.
+- id: shop-S06-west-waiting-parts
+  question: Whose cars are waiting for parts at Charlotte Pike now, and for how long?
+  asker: '22'
+  sql: |
+    SELECT c.name AS customer_name,
+           v.year AS vehicle_year,
+           v.make AS vehicle_make,
+           v.model AS vehicle_model,
+           (now() AT TIME ZONE l.time_zone)::date
+             - (SELECT max(h.changed_at)::date FROM shop.order_status_history h
+                WHERE h.repair_order_id = o.repair_order_id AND h.status = 'waiting_parts') AS days_waiting_count
+    FROM shop.repair_order o
+    JOIN shop.location l ON l.location_id = o.location_id
+    JOIN shop.customer c ON c.customer_id = o.customer_id
+    JOIN shop.vehicle v ON v.vehicle_id = o.vehicle_id
+    WHERE l.name = 'Charlotte Pike' AND o.status = 'waiting_parts'
+    ORDER BY days_waiting_count DESC, o.number
+  expected:
+    columns:
+    - customer_name
+    - vehicle_year
+    - vehicle_make
+    - vehicle_model
+    - days_waiting_count
+    nonempty: true
+  rule: s6.waiting_at_t
+  top:
+    customer_name: Curtis Vaughn
+  category: parts
+  notes: Calendar days since the order last entered waiting_parts, counted on the shop's own clock.
+- id: shop-S11-seasonal-hire-start
+  question: For each season in our records, when did the air-conditioning season start, and when did our seasonal hire start?
+  asker: '4'
+  sql: |
+    WITH hist AS (
+      SELECT min(o.opened_at)::date AS start_on FROM shop.repair_order o
+    ), months AS (
+      SELECT gs::date AS month_on
+      FROM hist, generate_series(date_trunc('month', hist.start_on + interval '1 month' - interval '1 day'),
+                                 date_trunc('month', now() AT TIME ZONE 'America/New_York') - interval '1 month',
+                                 interval '1 month') AS gs
+    ), ac AS (
+      SELECT m.month_on, count(j.order_job_id) AS jobs
+      FROM months m
+      LEFT JOIN shop.repair_order o ON date_trunc('month', o.opened_at)::date = m.month_on
+                                   AND o.status NOT IN ('declined', 'void')
+      LEFT JOIN shop.order_job j ON j.repair_order_id = o.repair_order_id AND j.status = 'approved'
+           AND j.canned_job_id IN (SELECT cj.canned_job_id FROM shop.canned_job cj
+                                   JOIN shop.service_category sc ON sc.service_category_id = cj.service_category_id
+                                   WHERE sc.code = 'air_conditioning')
+      GROUP BY m.month_on
+    ), seasons AS (
+      SELECT y AS season_year
+      FROM hist, generate_series(extract(year FROM hist.start_on)::int, extract(year FROM now() AT TIME ZONE 'America/New_York')::int) AS y
+      WHERE make_date(y, 5, 1) >= hist.start_on AND make_date(y, 8, 31) < (now() AT TIME ZONE 'America/New_York')::date
+    )
+    SELECT s.season_year,
+           to_char(min(a.month_on), 'YYYY-MM') AS season_start_month_yyyy_mm,
+           (SELECT min(e.hired_on) FROM shop.employee e
+            WHERE e.first_name = 'Mason' AND e.last_name = 'Pruitt'
+              AND extract(year FROM e.hired_on) = s.season_year) AS hire_started_on_yyyy_mm_dd
+    FROM seasons s
+    JOIN ac a ON extract(year FROM a.month_on) = s.season_year
+    WHERE a.jobs > 1.5 * (SELECT avg(jobs) FROM ac)
+    GROUP BY s.season_year
+    ORDER BY s.season_year
+  expected:
+    columns:
+    - season_year
+    - season_start_month_yyyy_mm
+    - hire_started_on_yyyy_mm_dd
+    nonempty: true
+  rule: season.hire
+  expect_keys:
+    hire_started_on_yyyy_mm_dd: '@[d for d in f4_seasons if d >= history_start]'
+  category: people
+  notes: 'The season as the context defines it: only seasons that lie whole inside the history count; the threshold is season.threshold
+    (en month above 1.5 times the mean month of air-conditioning jobs, ru week above twice the mean week of seasonal tyre
+    jobs), all shops. The hire has one employee row per season.'
+- id: shop-S15-customer-count
+  question: How many customers do we have?
+  asker: '2'
+  sql: |
+    SELECT count(DISTINCT coalesce(c.phone, 'id:' || c.customer_id)) AS customers_count
+    FROM shop.customer c
+    WHERE c.name <> 'WALK-IN CUSTOMER'
+  expected:
+    columns:
+    - customers_count
+    rows: 1
+  rule: s15.mess
+  category: customers
+  notes: 'Duplicate trap: two records with one phone are one customer. The walk-in record is not a customer.'
+- id: shop-S15-revenue-last-month
+  question: What was last month's revenue?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT round(sum(o.total - o.tax_total), 2) AS revenue_before_tax_usd
+    FROM shop.repair_order o JOIN inv ON inv.repair_order_id = o.repair_order_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York') - interval '1 month'
+      AND inv.invoiced_at < date_trunc('month', now() AT TIME ZONE 'America/New_York')
+  expected:
+    columns:
+    - revenue_before_tax_usd
+    rows: 1
+  rule: erp/context/RULES.md#money
+  category: revenue
+  notes: 'Void, warranty and goodwill traps: voids keep totals, free work totals zero; open orders are not revenue. Tax: before
+    tax is total - tax_total in both installs.'
+- id: shop-S15-average-order-by-shop
+  question: What has the average order been at each shop over the last 12 months?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT l.name AS shop_name,
+           round(avg(o.total - o.tax_total), 2) AS average_order_before_tax_usd
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN shop.location l ON l.location_id = o.location_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '12 months'
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - average_order_before_tax_usd
+    rows: 3
+  rule: volume.average_order
+  expect_keys:
+    shop_name:
+      East Main: 1
+      Bonny Oaks: 1
+      Charlotte Pike: 1
+  category: revenue
+  notes: Closed orders of the last 12 months before tax; the never-closed orders, voids and free warranty work are out.
+- id: shop-S15-wrong-mileage
+  question: Which orders have a mileage that cannot be right?
+  asker: '4'
+  sql: |
+    WITH seq AS (
+      SELECT o.number, o.opened_at, o.mileage_in,
+             lag(o.mileage_in) OVER (PARTITION BY o.vehicle_id ORDER BY o.opened_at) AS prev_in
+      FROM shop.repair_order o
+      WHERE o.mileage_in IS NOT NULL
+    )
+    SELECT number AS order_number
+    FROM seq
+    WHERE mileage_in < prev_in OR mileage_in >= 10 * prev_in
+    ORDER BY opened_at
+  expected:
+    columns:
+    - order_number
+    rows: 6
+  rule: s15.mess
+  category: quality
+  notes: A reading below the car's previous one, or ten times it or more; the whole history. The ten-times readings are each
+    car's last visit.
+- id: shop-S15-open-over-60-days
+  question: Which orders have been open for more than 60 days?
+  asker: '2'
+  sql: |
+    SELECT o.number AS order_number
+    FROM shop.repair_order o
+    WHERE o.status NOT IN ('invoiced', 'paid', 'void', 'declined')
+      AND o.opened_at::date < date_trunc('day', now() AT TIME ZONE 'America/New_York')::date - 60
+    ORDER BY o.opened_at
+  expected:
+    columns:
+    - order_number
+    rows: 3
+  rule: s15.dates
+  category: orders
+  notes: Never-closed orders trap (west since the Wednesday of week T-22, main and east since the Tuesdays of T-12 and T-10);
+    an account order waiting at invoiced on an unpaid or disputed statement is money owed, not open. Calendar days to today.
+- id: shop-revenue-last-week
+  question: How much did we make last week?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT round(sum(o.total - o.tax_total), 2) AS revenue_before_tax_usd
+    FROM shop.repair_order o JOIN inv ON inv.repair_order_id = o.repair_order_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('week', now() AT TIME ZONE 'America/New_York') - interval '7 days'
+      AND inv.invoiced_at < date_trunc('week', now() AT TIME ZONE 'America/New_York')
+  expected:
+    columns:
+    - revenue_before_tax_usd
+    rows: 1
+  rule: erp/context/RULES.md#money
+  category: revenue
+  notes: 'Void, warranty/goodwill and tax traps: voids keep totals, free work is not revenue, revenue is before tax (en tax
+    on top, ru VAT inside). Monday to Sunday before this week.'
+- id: shop-revenue-30d-by-shop
+  question: What's revenue been the last 30 days at each shop?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT l.name AS shop_name,
+           round(sum(o.total - o.tax_total), 2) AS revenue_before_tax_usd
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN shop.location l ON l.location_id = o.location_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '29 days'
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - revenue_before_tax_usd
+    rows: 3
+  rule: erp/context/RULES.md#money
+  category: revenue
+  notes: Today and the 29 days before it, on the home calendar; dated by first invoice.
+- id: shop-revenue-12-months
+  question: What did we bring in over the last 12 months?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT round(sum(o.total - o.tax_total), 2) AS revenue_before_tax_usd
+    FROM shop.repair_order o JOIN inv ON inv.repair_order_id = o.repair_order_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '12 months'
+  expected:
+    columns:
+    - revenue_before_tax_usd
+    rows: 1
+  rule: volume.revenue_year.company
+  category: revenue
+  notes: Before tax; voids, declined estimates, open orders and free warranty work left out.
+- id: shop-average-order-this-month
+  question: What's the average ticket at each shop so far this month?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT l.name AS shop_name,
+           round(avg(o.total - o.tax_total), 2) AS average_order_before_tax_usd
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN shop.location l ON l.location_id = o.location_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York')
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - average_order_before_tax_usd
+    nonempty: true
+  rule: erp/context/RULES.md#money
+  category: revenue
+  notes: Free warranty orders (total 0) would drag the average down if counted.
+- id: shop-top-jobs-90d
+  question: What were the ten jobs that brought in the most money over the last 90 days?
+  asker: '4'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    ), jobs AS (
+      SELECT j.order_job_id, j.canned_job_id, (CASE WHEN o.tax_included THEN 1 + o.tax_rate / 100 ELSE 1 END) AS divisor
+      FROM shop.repair_order o
+      JOIN inv ON inv.repair_order_id = o.repair_order_id
+      JOIN shop.order_job j ON j.repair_order_id = o.repair_order_id
+      WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+        AND j.status = 'approved'
+        AND inv.invoiced_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '89 days'
+    ), job_money AS (
+      SELECT jb.canned_job_id,
+             ((SELECT coalesce(sum(l.amount - l.discount), 0) FROM shop.order_labor l WHERE l.order_job_id = jb.order_job_id)
+            + (SELECT coalesce(sum(p.quantity * p.unit_price), 0) FROM shop.order_part p WHERE p.order_job_id = jb.order_job_id)
+            + (SELECT coalesce(sum(sb.price), 0) FROM shop.order_sublet sb WHERE sb.order_job_id = jb.order_job_id))
+             / jb.divisor AS amount
+      FROM jobs jb
+    )
+    SELECT cj.name AS job_name,
+           round(sum(jm.amount), 2) AS revenue_before_tax_usd
+    FROM job_money jm JOIN shop.canned_job cj ON cj.canned_job_id = jm.canned_job_id
+    GROUP BY cj.canned_job_id, cj.name
+    ORDER BY revenue_before_tax_usd DESC
+    LIMIT 10
+  expected:
+    columns:
+    - job_name
+    - revenue_before_tax_usd
+    rows: 10
+  rule: mixrow.category_revenue
+  category: revenue
+  notes: 'Tax trap: ru line prices hold VAT and are divided by 1 + rate; declined jobs keep their lines and are left out;
+    order-level fees are not a job''s.'
+- id: shop-cars-per-day
+  question: On average, how many cars a weekday has each shop had over the last 12 months?
+  asker: '2'
+  sql: |
+    WITH days AS (
+      SELECT d.location_id, d.business_date
+      FROM shop.cash_drawer_close d
+      WHERE d.business_date >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '12 months'
+        AND extract(isodow FROM d.business_date) < 6
+    ), visits AS (
+      SELECT o.location_id, o.opened_at::date AS day_on, count(*) AS n
+      FROM shop.repair_order o
+      WHERE o.status NOT IN ('declined', 'void')
+        AND o.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '12 months'
+      GROUP BY o.location_id, o.opened_at::date
+    )
+    SELECT l.name AS shop_name,
+           round(coalesce(sum(v.n), 0)::numeric / count(*), 2) AS cars_per_day_avg
+    FROM days
+    JOIN shop.location l ON l.location_id = days.location_id
+    LEFT JOIN visits v ON v.location_id = days.location_id AND v.day_on = days.business_date
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - cars_per_day_avg
+    rows: 3
+  rule: volume.orders_per_day.main, volume.orders_per_day.east, volume.orders_per_day.west
+  category: orders
+  notes: Visits on the shop's working days (a till count) over those days, the last 12 months; en asks for a weekday, so Monday
+    to Friday only (the flagship's Saturday morning is left out), ru every open day.
+- id: shop-busiest-weekday
+  question: What's our busiest day of the week, and how many cars a day do we see on it?
+  asker: '4'
+  sql: |
+    WITH days AS (
+      SELECT DISTINCT d.business_date AS day_on
+      FROM shop.cash_drawer_close d
+    ), per_day AS (
+      SELECT days.day_on, count(o.repair_order_id) AS n
+      FROM days
+      LEFT JOIN shop.repair_order o ON o.opened_at::date = days.day_on AND o.status NOT IN ('declined', 'void')
+      GROUP BY days.day_on
+    )
+    SELECT extract(isodow FROM day_on)::int AS weekday_iso_1_7,
+           round(avg(n), 2) AS cars_per_day_avg
+    FROM per_day
+    GROUP BY 1
+    ORDER BY cars_per_day_avg DESC
+    LIMIT 1
+  expected:
+    columns:
+    - weekday_iso_1_7
+    - cars_per_day_avg
+    rows: 1
+  rule: mixrow.weekday
+  category: orders
+  notes: 'All history, the company together: visits a working day (a date any shop has a till count), each order on its own
+    shop''s calendar day.'
+- id: shop-open-orders-now
+  question: How many jobs are still open at each shop?
+  asker: '4'
+  sql: |
+    SELECT l.name AS shop_name,
+           count(*) AS open_orders_count
+    FROM shop.repair_order o JOIN shop.location l ON l.location_id = o.location_id
+    WHERE o.status NOT IN ('invoiced', 'paid', 'void', 'declined')
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - open_orders_count
+    nonempty: true
+  rule: erp/context/RULES.md#orders
+  category: orders
+  notes: 'Open-order trap: an account order sitting at invoiced is money owed, not an open job; the never-closed orders are
+    open.'
+- id: shop-west-early-arrivals
+  question: How many cars came into Charlotte Pike before 9 our time last week?
+  asker: '2'
+  sql: |
+    WITH arrivals AS (
+      SELECT (o.opened_at AT TIME ZONE l.time_zone) AT TIME ZONE 'America/New_York' AS home_time
+      FROM shop.repair_order o JOIN shop.location l ON l.location_id = o.location_id
+      WHERE l.name = 'Charlotte Pike' AND o.status NOT IN ('declined', 'void')
+    )
+    SELECT count(*) AS orders_count
+    FROM arrivals
+    WHERE home_time >= date_trunc('week', now() AT TIME ZONE 'America/New_York') - interval '7 days'
+      AND home_time < date_trunc('week', now() AT TIME ZONE 'America/New_York')
+      AND extract(hour FROM home_time) < 9
+  expected:
+    columns:
+    - orders_count
+    rows: 1
+  rule: geo.zone_gap_hours
+  category: orders
+  notes: 'Clock trap: the shop''s timestamps are its own wall clock, an hour behind home; 9:00 home time is 8:00 there. A
+    car that came in is a visit: not declined, not void.'
+- id: shop-new-vs-returning-this-month
+  question: How many new customers have we had this month, against ones who've been in before?
+  asker: '2'
+  sql: |
+    WITH person AS (
+      SELECT c.customer_id, coalesce(c.phone, 'id:' || c.customer_id) AS person_key
+      FROM shop.customer c
+      WHERE c.name <> 'WALK-IN CUSTOMER'
+    ), visits AS (
+      SELECT p.person_key, o.opened_at
+      FROM shop.repair_order o JOIN person p ON p.customer_id = o.customer_id
+      WHERE o.status NOT IN ('declined', 'void')
+    ), first_visit AS (
+      SELECT person_key, min(opened_at) AS first_at FROM visits GROUP BY person_key
+    ), this_month AS (
+      SELECT DISTINCT person_key FROM visits
+      WHERE opened_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York')
+    )
+    SELECT count(*) FILTER (WHERE f.first_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York')) AS new_customers_count,
+           count(*) FILTER (WHERE f.first_at < date_trunc('month', now() AT TIME ZONE 'America/New_York')) AS returning_customers_count
+    FROM this_month t JOIN first_visit f ON f.person_key = t.person_key
+  expected:
+    columns:
+    - new_customers_count
+    - returning_customers_count
+    rows: 1
+  rule: erp.customer.returning_share
+  category: customers
+  notes: Duplicate trap (merge by phone), walk-in record left out, and new means first visit, not created_at (the bought shop's
+    customers were all created on one day).
+- id: shop-top-customers
+  question: Who are our ten best customers of all time?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    ), person AS (
+      SELECT c.customer_id, c.name, coalesce(c.phone, 'id:' || c.customer_id) AS person_key
+      FROM shop.customer c
+      WHERE c.name <> 'WALK-IN CUSTOMER'
+    )
+    SELECT min(p.name) AS customer_name
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN person p ON p.customer_id = o.customer_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+    GROUP BY p.person_key
+    ORDER BY sum(o.total - o.tax_total) DESC
+    LIMIT 10
+  expected:
+    columns:
+    - customer_name
+    rows: 10
+  rule: acct.A1.average_order
+  top:
+    customer_name: Nickajack Delivery
+  category: customers
+  notes: 'Best = the most revenue, all history. Walk-in trap: the counter-sales record holds hundreds of orders and is not
+    a customer; duplicate records merged by phone.'
+- id: shop-no-shows-west-last-month
+  question: How many no-shows did Charlotte Pike have last month?
+  asker: '22'
+  sql: |
+    SELECT count(*) FILTER (WHERE a.status = 'no_show') AS no_shows_count
+    FROM shop.appointment a JOIN shop.location l ON l.location_id = a.location_id
+    WHERE l.name = 'Charlotte Pike'
+      AND a.starts_at >= date_trunc('month', now() AT TIME ZONE l.time_zone) - interval '1 month'
+      AND a.starts_at < date_trunc('month', now() AT TIME ZONE l.time_zone)
+  expected:
+    columns:
+    - no_shows_count
+    rows: 1
+  rule: erp.appointment.outcome
+  category: customers
+  notes: The calendar month before this one, on the shop's own clock, by the booking's start.
+- id: shop-oil-price
+  question: What does a quart of each motor oil we use in oil changes cost for a passenger car today?
+  asker: '6'
+  sql: |
+    SELECT p.brand AS oil_brand,
+           min(p.list_price) AS list_price_usd_per_unit
+    FROM shop.part p
+    WHERE p.part_number IS NULL
+      AND EXISTS (SELECT 1 FROM shop.order_part op
+                  JOIN shop.order_job j ON j.order_job_id = op.order_job_id
+                  JOIN shop.canned_job cj ON cj.canned_job_id = j.canned_job_id
+                  WHERE cj.code = 'oil_service' AND op.part_id = p.part_id)
+    GROUP BY p.brand
+    ORDER BY list_price_usd_per_unit, p.brand
+  expected:
+    columns:
+    - oil_brand
+    - list_price_usd_per_unit
+    rows: 3
+  rule: erp/context/RULES.md#money
+  category: parts
+  notes: Today's list price per unit (quart or litre) of the oils the oil service uses; fluids carry no part number; the lowest
+    row per brand is the passenger-car price.
+- id: shop-oil-change-price
+  question: What's the labor on an oil change?
+  asker: '6'
+  sql: |
+    SELECT CASE WHEN cj.labor_pricing = 'menu' THEN cj.menu_price
+                ELSE round(cj.hours * r.rate, 2) END AS oil_change_labour_usd
+    FROM shop.canned_job cj
+    CROSS JOIN shop.labor_rate r
+    JOIN shop.location l ON l.location_id = r.location_id
+    WHERE cj.code = 'oil_service'
+      AND l.name = 'East Main'
+      AND r.price_class = 'standard'
+      AND r.valid_to IS NULL
+  expected:
+    columns:
+    - oil_change_labour_usd
+    rows: 1
+  rule: price.hour.posted
+  category: parts
+  notes: 'Today''s price for a passenger car at the asker''s shop: en a menu price, ru hours times the posted hour (VAT inside).'
+- id: shop-parts-waiting
+  question: How many cars are waiting on parts right now at each shop, and how many days has the longest been waiting?
+  asker: '4'
+  sql: |
+    SELECT l.name AS shop_name,
+           count(*) AS cars_waiting_count,
+           max((now() AT TIME ZONE l.time_zone)::date
+               - (SELECT max(h.changed_at)::date FROM shop.order_status_history h
+                  WHERE h.repair_order_id = o.repair_order_id AND h.status = 'waiting_parts')) AS longest_wait_days
+    FROM shop.repair_order o JOIN shop.location l ON l.location_id = o.location_id
+    WHERE o.status = 'waiting_parts'
+    GROUP BY l.location_id, l.name
+    ORDER BY cars_waiting_count DESC, l.location_id
+  expected:
+    columns:
+    - shop_name
+    - cars_waiting_count
+    - longest_wait_days
+    nonempty: true
+  rule: s6.waiting_at_t
+  top:
+    shop_name:
+    - Charlotte Pike
+    - East Main
+    - Bonny Oaks
+    cars_waiting_count:
+    - 5
+    - 2
+    - 1
+  category: parts
+  notes: Calendar days since the order last entered waiting_parts, on each shop's own calendar.
+- id: shop-supplier-late
+  question: How often is each supplier late?
+  asker: '4'
+  sql: |
+    SELECT v.name AS vendor_name,
+           round(count(*) FILTER (WHERE po.received_at::date > po.promised_at::date)::numeric / count(*), 3) AS late_share_float_0_1
+    FROM shop.purchase_order po JOIN shop.vendor v ON v.vendor_id = po.vendor_id
+    WHERE po.status = 'received'
+    GROUP BY v.vendor_id, v.name
+    ORDER BY late_share_float_0_1 DESC, v.name
+  expected:
+    columns:
+    - vendor_name
+    - late_share_float_0_1
+    nonempty: true
+  rule: parts.on_time.V2
+  top:
+    vendor_name: Harpeth Valley Parts Supply
+  category: parts
+  notes: All history; late = received on a later day than promised, over received purchase orders; cancelled orders are not
+    late deliveries.
+- id: shop-parts-margin-last-month
+  question: What was our margin on parts last month?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT round(1 - sum(p.quantity * p.unit_cost) / nullif(sum(p.quantity * p.unit_price / (CASE WHEN o.tax_included THEN 1 + o.tax_rate / 100 ELSE 1 END)), 0), 4) AS parts_margin_float_0_1
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN shop.order_job j ON j.repair_order_id = o.repair_order_id AND j.status = 'approved'
+    JOIN shop.order_part p ON p.order_job_id = j.order_job_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York') - interval '1 month'
+      AND inv.invoiced_at < date_trunc('month', now() AT TIME ZONE 'America/New_York')
+  expected:
+    columns:
+    - parts_margin_float_0_1
+    rows: 1
+  rule: mixrow.parts_margin
+  category: parts
+  notes: 'The company together, revenue''s orders dated by first invoice. Tax trap: ru part prices hold VAT, divided out before
+    the margin; part lines of declined jobs are not sales; discount_total is the labour lines''.'
+- id: shop-mechanic-billed-hours
+  question: How many hours did each mechanic bill last month?
+  asker: '4'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT e.first_name || ' ' || e.last_name AS technician_name,
+           sum(lab.hours) AS billed_hours
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN shop.order_job j ON j.repair_order_id = o.repair_order_id AND j.status = 'approved'
+    JOIN shop.order_labor lab ON lab.order_job_id = j.order_job_id
+    JOIN shop.employee e ON e.employee_id = lab.technician_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York') - interval '1 month'
+      AND inv.invoiced_at < date_trunc('month', now() AT TIME ZONE 'America/New_York')
+    GROUP BY e.employee_id, e.first_name, e.last_name
+    ORDER BY billed_hours DESC, technician_name
+  expected:
+    columns:
+    - technician_name
+    - billed_hours
+    nonempty: true
+  rule: erp/context/RULES.md#orders
+  category: people
+  notes: 'Billed hours: sold hours of revenue''s orders dated by first invoice. Warranty trap: comeback lines carry hours
+    nobody pays for; sold hours, not clocked; declined jobs'' lines left out.'
+- id: shop-recommended-sold-by-advisor
+  question: How much of the recommended work has each advisor sold over the last 90 days?
+  asker: '4'
+  sql: |
+    SELECT e.first_name || ' ' || e.last_name AS advisor_name,
+           round(count(*) FILTER (WHERE j.status = 'approved')::numeric / count(*), 3) AS sold_share_float_0_1
+    FROM shop.repair_order o
+    JOIN shop.order_job j ON j.repair_order_id = o.repair_order_id
+    JOIN shop.employee e ON e.employee_id = o.advisor_id
+    WHERE o.status <> 'void'
+      AND j.status IN ('approved', 'declined')
+      AND EXISTS (SELECT 1 FROM shop.inspection_item ii WHERE ii.order_job_id = j.order_job_id)
+      AND o.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '89 days'
+    GROUP BY e.employee_id, e.first_name, e.last_name
+    ORDER BY sold_share_float_0_1 DESC, advisor_name
+  expected:
+    columns:
+    - advisor_name
+    - sold_share_float_0_1
+    nonempty: true
+  rule: sold.company
+  top:
+    advisor_name: Angie Holloway
+  category: people
+  notes: Recommended = raised from an inspection item; share over approved plus declined among those jobs, never over every
+    job.
+- id: shop-tech-efficiency-this-month
+  question: How efficient are the techs this month?
+  asker: '4'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    ), jobs AS (
+      SELECT j.order_job_id
+      FROM shop.repair_order o
+      JOIN inv ON inv.repair_order_id = o.repair_order_id
+      JOIN shop.order_job j ON j.repair_order_id = o.repair_order_id
+      WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+        AND j.status = 'approved'
+        AND inv.invoiced_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York')
+    ), sold AS (
+      SELECT lab.technician_id, sum(lab.hours) AS h
+      FROM shop.order_labor lab JOIN jobs ON jobs.order_job_id = lab.order_job_id
+      WHERE lab.technician_id IS NOT NULL
+      GROUP BY lab.technician_id
+    ), clocked AS (
+      SELECT t.technician_id, sum(extract(epoch FROM t.clock_out - t.clock_in) / 3600) AS h
+      FROM shop.time_entry t JOIN jobs ON jobs.order_job_id = t.order_job_id
+      WHERE t.clock_out IS NOT NULL
+      GROUP BY t.technician_id
+    )
+    SELECT e.first_name || ' ' || e.last_name AS technician_name,
+           round(s.h / nullif(c.h, 0), 3) AS sold_over_clocked_float
+    FROM sold s
+    JOIN clocked c ON c.technician_id = s.technician_id
+    JOIN shop.employee e ON e.employee_id = s.technician_id
+    ORDER BY sold_over_clocked_float DESC, technician_name
+  expected:
+    columns:
+    - technician_name
+    - sold_over_clocked_float
+    nonempty: true
+  rule: erp.time.clocked_over_sold
+  category: people
+  notes: Sold hours over clocked hours on the approved jobs of revenue's orders first invoiced this month, each technician
+    his own; a clock still running is left out.
+- id: shop-comebacks-by-mechanic
+  question: How many comebacks has each mechanic had over the last 12 months?
+  asker: '2'
+  sql: |
+    WITH came_back AS (
+      SELECT o.repair_order_id,
+             (SELECT lab.technician_id
+              FROM shop.order_job j JOIN shop.order_labor lab ON lab.order_job_id = j.order_job_id
+              WHERE j.repair_order_id = o.repair_order_id AND j.status = 'approved' AND lab.technician_id IS NOT NULL
+              GROUP BY lab.technician_id
+              ORDER BY sum(lab.hours) DESC, lab.technician_id
+              LIMIT 1) AS technician_id
+      FROM shop.repair_order o
+      WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+        AND o.opened_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '12 months'
+        AND EXISTS (SELECT 1 FROM shop.repair_order cb
+                    WHERE cb.comeback_of_id = o.repair_order_id AND cb.status <> 'void'
+                      AND cb.order_type IN ('warranty', 'goodwill'))
+    )
+    SELECT e.first_name || ' ' || e.last_name AS technician_name,
+           count(*) AS comebacks_count
+    FROM came_back b
+    JOIN shop.employee e ON e.employee_id = b.technician_id
+    GROUP BY e.employee_id, e.first_name, e.last_name
+    ORDER BY comebacks_count DESC, technician_name
+  expected:
+    columns:
+    - technician_name
+    - comebacks_count
+    nonempty: true
+  rule: comeback.definition
+  category: quality
+  notes: Counted on the paid orders opened in the last 12 months that came back (any warranty or goodwill repeat; ru has warranty
+    repeats within 30 days only), each charged to the technician with the most sold hours on it, as the people rows pNN.comebacks
+    count them.
+- id: shop-free-work-this-year
+  question: How much warranty and goodwill work have we done free this year, at its prices?
+  asker: '2'
+  sql: |
+    SELECT round(coalesce(sum((o.labor_total + o.parts_total + o.sublet_total + o.fees_total) / (CASE WHEN o.tax_included THEN 1 + o.tax_rate / 100 ELSE 1 END)), 0), 2) AS free_work_before_tax_usd
+    FROM shop.repair_order o
+    WHERE o.order_type IN ('warranty', 'goodwill')
+      AND o.status <> 'void'
+      AND o.opened_at >= date_trunc('year', now() AT TIME ZONE 'America/New_York')
+  expected:
+    columns:
+    - free_work_before_tax_usd
+    rows: 1
+  rule: erp.warranty_order_totals
+  category: quality
+  notes: 'Warranty trap: these orders total 0; the value of the free work is in the lines (labour + parts + sublet + fees),
+    ru with VAT divided out.'
+- id: shop-accounts-owed
+  question: What do our company accounts owe right now, and how fast have they paid over the last six months?
+  asker: '3'
+  sql: |
+    WITH paid AS (
+      SELECT p.statement_id, min(p.received_at)::date AS paid_on
+      FROM shop.payment p
+      WHERE p.statement_id IS NOT NULL AND p.kind = 'payment'
+      GROUP BY p.statement_id
+    )
+    SELECT c.name AS account_name,
+           (SELECT coalesce(sum(o.total), 0) FROM shop.repair_order o
+            WHERE o.customer_id = c.customer_id AND o.order_type = 'customer_pay' AND o.status = 'invoiced') AS owed_usd,
+           (SELECT round(avg(pd.paid_on - s.issued_on), 2)
+            FROM shop.statement s JOIN paid pd ON pd.statement_id = s.statement_id
+            WHERE s.customer_id = c.customer_id AND s.issued_on >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '6 months') AS days_to_pay_avg
+    FROM shop.customer c
+    WHERE c.payment_terms_days IS NOT NULL
+    ORDER BY owed_usd DESC, account_name
+  expected:
+    columns:
+    - account_name
+    - owed_usd
+    - days_to_pay_avg
+    rows: 6
+  rule: acct.A1.days_to_pay
+  category: accounts
+  notes: 'The six accounts billed on terms (not every company). Owed: the totals of their orders still at invoiced, billed
+    or not yet (en: the current month is on no statement yet). Days to pay = first payment date minus the issue date, over
+    bills issued in the last six months and paid; a disputed bill is still owed.'
+- id: shop-account-revenue
+  question: How much did each company account bring in over the last 12 months?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT c.name AS account_name,
+           coalesce(round(sum(o.total - o.tax_total), 2), 0) AS revenue_before_tax_usd
+    FROM shop.customer c
+    LEFT JOIN (shop.repair_order o JOIN inv ON inv.repair_order_id = o.repair_order_id)
+           ON o.customer_id = c.customer_id
+          AND o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+          AND inv.invoiced_at >= date_trunc('day', now() AT TIME ZONE 'America/New_York') - interval '12 months'
+    WHERE c.payment_terms_days IS NOT NULL
+    GROUP BY c.customer_id, c.name
+    ORDER BY revenue_before_tax_usd DESC, account_name
+  expected:
+    columns:
+    - account_name
+    - revenue_before_tax_usd
+    rows: 6
+  rule: acct.A1.average_order
+  top:
+    account_name: Nickajack Delivery
+  category: accounts
+  notes: Before tax, every account billed on terms, one with nothing at 0; the most visits (A2) is not the most money (A1).
+- id: shop-unpaid-orders
+  question: Which orders haven't been paid yet, leaving out the company accounts?
+  asker: '3'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    ), paid AS (
+      SELECT p.repair_order_id, sum(CASE WHEN p.kind = 'refund' THEN -p.amount ELSE p.amount END) AS amount
+      FROM shop.payment p
+      WHERE p.repair_order_id IS NOT NULL
+      GROUP BY p.repair_order_id
+    )
+    SELECT o.number AS order_number
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    JOIN shop.customer c ON c.customer_id = o.customer_id
+    LEFT JOIN paid pd ON pd.repair_order_id = o.repair_order_id
+    WHERE o.status = 'invoiced'
+      AND o.order_type = 'customer_pay'
+      AND c.payment_terms_days IS NULL
+      AND o.total - coalesce(pd.amount, 0) > 0
+    ORDER BY inv.invoiced_at, o.number
+  expected:
+    columns:
+    - order_number
+    nonempty: true
+  rule: erp/context/RULES.md#payments
+  category: money
+  notes: 'Payments trap: deposits count, refunds are positive and are subtracted; a voided order can carry a payment and is
+    not owed.'
+- id: shop-discounts-this-month
+  question: How much have we given away in discounts this month?
+  asker: '2'
+  sql: |
+    WITH inv AS (
+      SELECT h.repair_order_id, min(h.changed_at) AS invoiced_at
+      FROM shop.order_status_history h
+      WHERE h.status = 'invoiced'
+      GROUP BY h.repair_order_id
+    )
+    SELECT round(coalesce(sum(o.discount_total / (CASE WHEN o.tax_included THEN 1 + o.tax_rate / 100 ELSE 1 END)), 0), 2) AS discounts_before_tax_usd
+    FROM shop.repair_order o
+    JOIN inv ON inv.repair_order_id = o.repair_order_id
+    WHERE o.order_type = 'customer_pay' AND o.status IN ('invoiced', 'paid')
+      AND inv.invoiced_at >= date_trunc('month', now() AT TIME ZONE 'America/New_York')
+  expected:
+    columns:
+    - discounts_before_tax_usd
+    rows: 1
+  rule: erp/context/RULES.md#money
+  category: money
+  notes: 'The company together, revenue''s orders dated by first invoice, before tax. Warranty trap: a warranty or goodwill
+    order''s discount_total is the whole free amount, not a discount; voids left out.'
+- id: shop-cash-last-week
+  question: How much cash did each shop take in last week?
+  asker: '3'
+  sql: |
+    SELECT l.name AS shop_name,
+           sum(CASE WHEN p.kind = 'refund' THEN -p.amount ELSE p.amount END) AS cash_taken_usd
+    FROM shop.payment p
+    JOIN shop.repair_order o ON o.repair_order_id = p.repair_order_id
+    JOIN shop.location l ON l.location_id = o.location_id
+    WHERE p.method = 'cash'
+      AND p.received_at >= date_trunc('week', now() AT TIME ZONE 'America/New_York') - interval '7 days'
+      AND p.received_at < date_trunc('week', now() AT TIME ZONE 'America/New_York')
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - cash_taken_usd
+    rows: 3
+  rule: erp/context/RULES.md#payments
+  category: money
+  notes: 'Payments trap: refunds are stored positive and must be subtracted; payments, not till counts (hidden below middle).'
+- id: shop-labour-rate
+  question: What are our hourly labor rates right now at each shop, the standard rate and the negotiated one?
+  asker: '4'
+  sql: |
+    SELECT l.name AS shop_name,
+           max(r.rate) FILTER (WHERE r.price_class = 'standard') AS standard_rate_usd,
+           max(r.rate) FILTER (WHERE r.price_class = 'company_account') AS negotiated_rate_usd
+    FROM shop.labor_rate r JOIN shop.location l ON l.location_id = r.location_id
+    WHERE r.valid_to IS NULL
+    GROUP BY l.location_id, l.name
+    ORDER BY l.location_id
+  expected:
+    columns:
+    - shop_name
+    - standard_rate_usd
+    - negotiated_rate_usd
+    rows: 3
+  rule: price.hour.posted
+  expect_keys:
+    standard_rate_usd:
+      135.0: 3
+    negotiated_rate_usd:
+      121.5: 3
+  category: money
+  notes: 'The row in force today; old orders carry the rate of their own date. ru: the hour holds VAT.'

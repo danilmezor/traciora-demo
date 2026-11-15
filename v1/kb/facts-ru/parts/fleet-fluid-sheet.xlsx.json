@@ -1,0 +1,54 @@
+{
+ "path": "parts/fleet-fluid-sheet.xlsx",
+ "title": "Заправочные объёмы (таблица)",
+ "title_en": "Fleet fluid sheet (spreadsheet)",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/fleet-fluid-sheet.xlsx.json",
+ "kind": "binary",
+ "format": "XLSX, one sheet",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "The parts manager's working sheet of oil, coolant and transmission fluid by vehicle. Not readable by the assistant.",
+ "serves": [
+  "challenge:unreadable-binary",
+  "challenge:fact-only-in-attachment"
+ ],
+ "draft": "ru/_binaries.md",
+ "russian_form": "the parts manager's working sheet, in litres, for the Russian fleets' models",
+ "facts": [],
+ "facts_only_in_this_file": [
+  "the rows for LADA Vesta and Citroën Jumper"
+ ],
+ "differs_from_en": [
+  "Fifteen rows: the thirteen of the PDF plus LADA Vesta (the driving school's cars 4 and 7) and Citroën Jumper (the caterer's van 8), both unfinished.",
+  "Models are those of accounts.json ru: ГАЗель Next, NN and Бизнес, Largus, Granta, Niva Legend, УАЗ, Ford Transit, Solaris and Rio, Logan, Duster.",
+  "Not extracted by the engine: found by name, cannot be read."
+ ],
+ "new_facts": [
+  "ALL QUANTITIES AND SPECIFICATIONS ARE RECALLED, NOT VERIFIED, as in the English draft: every row is to be checked against the makers' data."
+ ],
+ "to_verify": [
+  "Every oil quantity, oil grade, coolant type and gearbox oil in the table."
+ ],
+ "settled": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "new_version",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "the parts manager's updated file with the two new rows (uploaded by slot 4; juniors cannot publish)",
+   "message_ru": "Таблица Паши, две новые машины."
+  }
+ ],
+ "has_history": true
+}

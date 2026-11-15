@@ -1,0 +1,132 @@
+{
+ "path": "how-to/closing-the-till.md",
+ "title": "Закрытие смены и кассы",
+ "title_en": "Closing the till",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/closing-the-till.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "The company procedure for counting the cash drawer at the end of the day.",
+ "serves": [
+  "S2",
+  "challenge:near-duplicate-shop-pages",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 241,
+ "links_to": [
+  "shops/main/opening-and-closing.md",
+  "shops/east/opening-and-closing.md",
+  "shops/west/opening-and-closing.md",
+  "policies/voids-and-refunds.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "An online cash register: the shift is closed on the register and its cash figure must equal the shop system's.",
+  "Floats 5 000 / 3 000 / 3 000 RUB; differences above 100 RUB are reported.",
+  "Card payments and СБП leave no slips: the bag holds cash, the count sheet and the register report.",
+  "In the Russian configuration the till is not the leak's signature; the procedure is the same and the ERP holds no planted short days."
+ ],
+ "new_facts": [
+  "The 100 RUB reporting threshold; the three floats in one sentence."
+ ],
+ "new_amounts": [
+  {
+   "value": 5000,
+   "why": "размен в кассе, Московское шоссе"
+  },
+  {
+   "value": 3000,
+   "why": "размен в кассе, Инженерный и Техническая"
+  },
+  {
+   "value": 3000,
+   "why": "размен в кассе, Инженерный и Техническая"
+  },
+  {
+   "value": 100,
+   "why": "порог расхождения кассы"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Снимите в программе отчёт по оплатам за день: сколько наличными, сколько картой и по СБП."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Закройте смену на кассе. Наличные в отчёте кассы и в отчёте программы должны совпасть. Не совпали — не уходите, ищите чек."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Пересчитайте ящик. Отложите размен: Московское шоссе — 5 000 ₽, Инженерный — 3 000 ₽, Техническая — 3 000 ₽. Остальное — наличная выручка за день."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Внесите пересчитанную сумму в программу. Она покажет расхождение."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Расхождение больше 100 ₽, в любую сторону: напишите в листе пересчёта причину, если знаете, и «причина неизвестна», если нет. До ухода сообщите руководителю. Он в тот же вечер сообщает мне."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Наличные, лист пересчёта и отчёт кассы — в сейф-пакет. Запечатайте. На пакете — сумма и подпись."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Пакет отправляется туда, куда сказано на странице вашего сервиса: Московское шоссе, Инженерный, Техническая."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "На Технической ящик пересчитывают двое, и оба расписываются."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Из кассы ничего не выплачивается. Ни за запчасти, ни на обед, ни на размен. Подотчётные деньги — отдельно, они у меня."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Наряд не аннулируют и возврат не пробивают ради того, чтобы касса сошлась. Работа мимо наряда, списания и возврат денег."
+  },
+  {
+   "section": "Закрытие смены и кассы",
+   "item": "Небольшое расхождение — дело обычное. Минус у одного и того же человека из недели в неделю — нет, и на закрытии месяца я это вижу."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "amounts": [
+  100.0,
+  3000.0,
+  5000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

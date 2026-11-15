@@ -1,0 +1,176 @@
+{
+ "path": "policies/warranty.md",
+ "title": "Гарантия",
+ "title_en": "Warranty",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/warranty.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The current warranty in full, for staff: terms, exclusions, who decides, how a claim is written up.",
+ "serves": [
+  "S12",
+  "S1",
+  "S6",
+  "challenge:near-duplicate",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_ru": 424,
+ "links_to": [
+  "shop-floor/when-a-car-comes-back.md",
+  "how-to/a-comeback-at-the-counter.md",
+  "customers/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Terms from ledger s12.warranty.ru: 30 days on mechanical and electrical work; no mileage; honoured at any of the three shops.",
+  "No business-use tier: company vehicles get the same terms (English: 12/12). The later revision (T-4mo) added that row and the closing line about the old page.",
+  "A fifth write-up step: the same complaint after day 30 is a paid order (ledger comeback.definition).",
+  "A section on where the terms come from: the order is the contract; ПП № 780 of 2025 replaced № 290 and sets no minimum warranty (research, read)."
+ ],
+ "new_facts": [
+  "Used parts fitted at the customer's request: no warranty on the part, 30 days on the work.",
+  "Wrong diagnosis: the customer does not pay for the part that did not fix the fault (as in English).",
+  "1 September 2025 is written as a calendar date: a fact of law."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Body work: see customers/warranty.md. The catalogue has no welding job; the price list names welding among the unpriced jobs.",
+   "outcome": "corrected",
+   "note": "As customers/warranty.md: the six-month term and the welding of sills and arches are gone; exhaust welding stays, as mechanical work with no list price."
+  },
+  {
+   "item": "ПП № 780: in force from 2025-09-01, replaced № 290, no minimum warranty, warranty terms in the written contract \"if set\" (ru-shop.md, gap 15, read through a summarising fetch): re-read the primary text before the page is shown as legal guidance.",
+   "outcome": "verified",
+   "note": "Re-read on the text.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 4 постановления: «Настоящее постановление вступает в силу с 1 сентября 2025 г.»; п. 2 признаёт утратившим силу «постановление Правительства Российской Федерации от 11 апреля 2001 г. N 290»; п. 9 правил: «гарантийные сроки на результаты оказания услуг, если они установлены»."
+  }
+ ],
+ "tables": [
+  {
+   "section": "Условия",
+   "columns": [
+    "Случай",
+    "Гарантия"
+   ],
+   "rows": [
+    {
+     "Случай": "Слесарные и электротехнические работы",
+     "Гарантия": "30 дней"
+    },
+    {
+     "Случай": "Запчасти, купленные у нас",
+     "Гарантия": "Гарантия производителя, срок указываем в заказ-наряде. После 30 дней деталь меняем по гарантии, работа по замене платная"
+    },
+    {
+     "Случай": "Колодки, щётки, лампы, свечи, фильтры",
+     "Гарантия": "Только заводской брак. Износ — не брак"
+    },
+    {
+     "Случай": "Аккумуляторы",
+     "Гарантия": "По гарантийному талону производителя"
+    },
+    {
+     "Случай": "Шины",
+     "Гарантия": "Гарантия производителя; обращение оформляем мы"
+    },
+    {
+     "Случай": "Работы подрядчика (капремонт АКПП, рулевая рейка, стёкла)",
+     "Гарантия": "Гарантия подрядчика, письменно, отдаём клиенту вместе с заказ-нарядом"
+    },
+    {
+     "Случай": "Б/у запчасти, которые клиент попросил поставить",
+     "Гарантия": "На деталь гарантии нет; на работу — 30 дней"
+    },
+    {
+     "Случай": "Запчасти клиента",
+     "Гарантия": "Только на работу, 30 дней"
+    },
+    {
+     "Случай": "Диагностика",
+     "Гарантия": "Если наша диагностика оказалась неверной, клиент не платит за деталь, которая не помогла"
+    },
+    {
+     "Случай": "Автомобили организаций",
+     "Гарантия": "Те же сроки, что и у частных клиентов"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Как оформлять",
+   "item": "Новый заказ-наряд, вид гарантийный, с привязкой к первому. Старый наряд не переоткрываем."
+  },
+  {
+   "section": "Как оформлять",
+   "item": "Первым машину смотрит мастер цеха: Если машина вернулась."
+  },
+  {
+   "section": "Как оформлять",
+   "item": "Случай гарантийный — делаем бесплатно и говорим об этом прямо. Не гарантийный — объясняем почему, с первым нарядом в руках, и считаем смету, как на любую работу."
+  },
+  {
+   "section": "Как оформлять",
+   "item": "Не уверены — не решайте на приёмке. Сергей Анатольевич по Ульяновску, Ринат Фаридович по Казани, в тот же день."
+  },
+  {
+   "section": "Как оформлять",
+   "item": "Та же жалоба после 30 дней — наряд обычный, платный. Если видно, что виноваты всё-таки мы, руководитель оформляет компенсацию."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@warranty_2424|date}}",
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-4mo|date}}",
+   "what": "added the row for vehicles in business use and the closing line about the older page; message: \"Fleet cover spelled out. Old page still to be removed.\"",
+   "message_ru": "Корпоративные — те же сроки, записала отдельной строкой. Старую страницу ещё нужно убрать."
+  }
+ ],
+ "has_history": true
+}

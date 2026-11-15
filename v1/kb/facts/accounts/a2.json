@@ -1,0 +1,101 @@
+{
+ "path": "accounts/a2.md",
+ "title": "Millsaps Heating & Plumbing",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Standing instructions for account A2, the happy path.",
+ "serves": [
+  "S1",
+  "S5",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 253,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Account A2: 25 vehicles, home shop east; contacts from accounts.json (Tina Ragsdale dispatcher, Hal Millsaps president, Joyce Millsaps office manager).",
+  "Standing slot Monday 7:30, five vans (ledger acct.A2.weekly_slot); unit numbers sent by Friday noon; priority on Monday mornings; a holiday Monday moves the slot to Tuesday.",
+  "Vans back by 15:30 unless the dispatcher was called by noon.",
+  "Drivers up to 300 USD like every account; the dispatcher up to 1,000 USD a vehicle; the president above.",
+  "Company rate; paper statement mailed with invoices attached.",
+  "Units M-101 to M-125.",
+  "Voice: slot 16, first person, warm and exact, signed."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Approvals",
+   "item": "The drivers drop the vans and leave. A driver may approve up to $300 like any account's driver, but they would rather not: call Tina."
+  },
+  {
+   "section": "Approvals",
+   "item": "Tina Ragsdale approves up to $1,000 a vehicle: (423) 555-0121."
+  },
+  {
+   "section": "Approvals",
+   "item": "Over $1,000, Hal Millsaps himself: (423) 555-0163. He answers."
+  },
+  {
+   "section": "Things I know about these vans",
+   "item": "Units are M-101 to M-125 and the number is on the rear door."
+  },
+  {
+   "section": "Things I know about these vans",
+   "item": "The Express vans eat front brakes. Measure the pads at every visit and tell Tina a visit ahead, so it is never a surprise."
+  },
+  {
+   "section": "Things I know about these vans",
+   "item": "The ladder racks sit lower than our door at bay 2. Bay 1 or bay 4."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [
+  "A holiday Monday moves the slot to Tuesday; back by 15:30; bay 1 or bay 4 because of the ladder racks (colour, no data footprint).",
+  "Paper statements for A2."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "Monday priority moved here from a team note, in Angie's words (she is middle rank: her proposal, approved by slot 4); message: \"Monday slot written down.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Сервисная компания (отопление и сантехника)» from accounts.json ru; contract hour; documents per order. Lead advisors in the Russian configuration work 2/2 (R12), so say who holds the Monday slot when slot 16 is off."
+ ]
+}

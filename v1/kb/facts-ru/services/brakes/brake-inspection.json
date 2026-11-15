@@ -1,0 +1,99 @@
+{
+ "path": "services/brakes/brake-inspection.md",
+ "title": "Диагностика тормозов",
+ "title_en": "Brake inspection",
+ "exists_in": "both",
+ "english_sheet": "facts/services/brakes/brake-inspection.json",
+ "first_revision_text": "ru/_history/services/brakes/brake-inspection.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The inspection every brake complaint starts with.",
+ "serves": [
+  "S7",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 155,
+ "links_to": [
+  "policies/diagnostic-fees.md",
+  "customers/towing.md",
+  "services/brakes/pads-and-rotors.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Диагностика тормозной системы», a fixed 700 RUB, 0.4 н/ч."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Диагностика тормозов",
+   "item": "Машина уже у нас на другой работе, и механик через диск увидел тонкие колодки — это бесплатный осмотр по чек-листу сделал своё дело. Диагностику за это в наряд не ставим."
+  },
+  {
+   "section": "Диагностика тормозов",
+   "item": "В стоимость ремонта диагностика не засчитывается. Почему."
+  },
+  {
+   "section": "Диагностика тормозов",
+   "item": "Скрежет, педаль проваливается или горит лампа тормозов — скажите клиенту далеко не ездить и предложите эвакуатор."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 700.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  700.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

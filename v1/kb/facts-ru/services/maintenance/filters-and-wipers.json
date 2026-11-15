@@ -1,0 +1,215 @@
+{
+ "path": "services/maintenance/filters-and-wipers.md",
+ "title": "Фильтры и щётки",
+ "title_en": "Filters and wipers",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/filters-and-wipers.json",
+ "first_revision_text": "ru/_history/services/maintenance/filters-and-wipers.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Engine air filter, cabin filter, wiper blades: small jobs sold from the inspection.",
+ "serves": [
+  "challenge:fact-in-table",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 210,
+ "links_to": [
+  "services/maintenance/fuel-system-service.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Wiper blades carry a small labour charge (0.1 н/ч) in the Russian catalogue; the blades are most of the price.",
+  "Cabin filter yearly, before summer."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Фильтры и щётки",
+   "columns": [
+    "Работа",
+    "Время",
+    "Стандарт",
+    "От эконом до премиум"
+   ],
+   "rows": [
+    {
+     "Работа": "Воздушный фильтр двигателя",
+     "Время": "0,2 н/ч",
+     "Стандарт": "1 530 ₽",
+     "От эконом до премиум": "от 950 ₽ до 1 550 ₽"
+    },
+    {
+     "Работа": "Салонный фильтр",
+     "Время": "0,3 н/ч",
+     "Стандарт": "1 660 ₽",
+     "От эконом до премиум": "от 1 090 ₽ до 1 740 ₽"
+    },
+    {
+     "Работа": "Щётки стеклоочистителя, комплект",
+     "Время": "0,1 н/ч",
+     "Стандарт": "2 570 ₽",
+     "От эконом до премиум": "от 1 090 ₽ до 3 570 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Фильтры и щётки",
+   "item": "Покажите старый. Серый салонный фильтр с листьями и пухом продаёт себя сам. Чистый фильтр мы не рекомендуем, и клиент запоминает, что мы его не рекомендовали."
+  },
+  {
+   "section": "Фильтры и щётки",
+   "item": "Салонный — раз в год, перед летом; тем, кто ставит машину под тополями, чаще. Если из дефлекторов пахнет — начинаем с него."
+  },
+  {
+   "section": "Фильтры и щётки",
+   "item": "Щётки: полосят или скрипят. В цене почти всё — сами щётки, работа там копеечная."
+  },
+  {
+   "section": "Фильтры и щётки",
+   "item": "Клиент знает, что фильтр в магазине стоит дешевле. Скажите это первым: «Этот вы можете поменять и сами, выйдет почти вдвое дешевле. Если хотите, чтобы сделали мы, пока машина у нас, — это десять минут»."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "hours",
+   "class": "car",
+   "value": 0.2
+  },
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1530.0
+  },
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 950.0
+  },
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1550.0
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "hours",
+   "class": "car",
+   "value": 0.3
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1660.0
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1090.0
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1740.0
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "hours",
+   "class": "car",
+   "value": 0.1
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2570.0
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1090.0
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3570.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  950.0,
+  1090.0,
+  1530.0,
+  1550.0,
+  1660.0,
+  1740.0,
+  2570.0,
+  3570.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

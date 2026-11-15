@@ -1,0 +1,155 @@
+{
+  "format": "seed-conversation/1",
+  "id": "13-people-p07-avito-pervyy-iz-dvuh",
+  "configuration": "ru",
+  "number": 13,
+  "story": "people",
+  "title": "Новичок на Авито: два вопроса в одном сообщении, ответ на первый",
+  "demonstrates": "Slot 7 in writing: polite, short, «Да-да», an exclamation mark, and of two questions the first. He sends what he is given: three drafts go out untouched, and the one time he types for himself he drops half the question, so the customer has to ask again. He resolves.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Саня",
+      "invented": true,
+      "first_time": true,
+      "note": "пишет по объявлению; Renault Logan 2014, хрустит левый наружный ШРУС"
+    },
+    "staff": [
+      {"slot": 7, "name": "Никита Ведяшкин", "weeks_in_the_job": 3}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек по объявлению, вечером.",
+    "vehicle": "Renault Logan 2014",
+    "what_happens": "Цена и срок — черновик отвечает на оба вопроса, Никита его отправляет. Потом «завтра с утра можно? и пыльник отдельно не меняете?»: он печатает «Да-да, завтра к 9 приезжайте!», про пыльник приходится спрашивать ещё раз; следующий черновик отвечает, и он его отправляет.",
+    "facts": {
+      "booked": "следующий день, 09:00, main (в тот день смена слотов 6 и 29)",
+      "hours": "1,5 нормо-часа по каталогу: «около полутора часов»",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "7 470 ₽", "amount": 7470.0, "what": "замена наружного ШРУСа, класс car", "from": {"catalogue": "cv_axle", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-85d": {"anchor": "slot 7's first working day on or after the Thursday of week T-12", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 12, "on_or_after_for_slot": 7}, "nominal": "Thu 2026-08-20"},
+    "T-84d": {"anchor": "1 calendar day after slot 7's first working day on or after the Thursday of week T-12", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 12, "on_or_after_for_slot": 7, "plus_days": 1}, "nominal": "Fri 2026-08-21", "what": "«завтра»"}
+  },
+  "floating_days": [
+    {"word": "завтра с утра", "said_on": "T-85d", "day": "the next day", "form": "adverb"},
+    {"word": "Завтра утром", "said_on": "T-85d", "day": "the next day", "form": "adverb"},
+    {"word": "завтра к 9", "said_on": "T-85d", "day": "the next day", "form": "adverb"},
+    {"word": "завтра к 9:00", "said_on": "T-85d", "day": "the next day", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "avito",
+      "bridge": "avito:default",
+      "inbox": "Avito",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "u2i-seedv1-0219-0001",
+      "peer": {"id": "900000000000219", "name": "Саня"},
+      "contact": {
+        "identifier": "avito_900000000000219",
+        "name": "Саня",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "серебристый Renault Logan во дворе у гаражей",
+          "person_in_it": false,
+          "matches_vehicle": "Renault Logan 2014"
+        }
+      },
+      "listing_context": {
+        "item_id": "900000000000044",
+        "title": "Ремонт ходовой: ШРУСы, стойки, рычаги, ступичные подшипники. Московское шоссе",
+        "url": "https://avito.example/900000000000044"
+      },
+      "opened": {
+        "day": "T-85d",
+        "at": "18:02:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "a new Avito chat: one per listing and buyer"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-85d", "at": "18:02:10", "kind": "message", "from": "customer", "text": "здравствуйте. шрус на логан наружный сколько стоит поменять и за сколько по времени сделаете"},
+        {"n": 2, "day": "T-85d", "at": "18:02:55", "kind": "draft", "id": "d1", "text": "Здравствуйте! Замена наружного ШРУСа на Logan стоит 7 470 ₽ с запчастью, по времени около полутора часов. Подскажите год выпуска и с какой стороны хрустит?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-85d", "at": "18:11:30", "became": 4}},
+        {"n": 3, "day": "T-85d", "at": "18:11:28", "kind": "activity", "what": "assigned", "derived": true, "to": 7, "by": 7, "how": "first reply"},
+        {"n": 4, "day": "T-85d", "at": "18:11:30", "kind": "message", "from": "staff", "slot": 7, "text": "Здравствуйте! Замена наружного ШРУСа на Logan стоит 7 470 ₽ с запчастью, по времени около полутора часов. Подскажите год выпуска и с какой стороны хрустит?"},
+        {"n": 5, "day": "T-85d", "at": "18:14:20", "kind": "message", "from": "customer", "text": "2014, левый. завтра с утра можно? и пыльник отдельно не меняете, без шруса?"},
+        {"n": 6, "day": "T-85d", "at": "18:15:05", "kind": "draft", "id": "d2", "text": "Завтра утром можно, время подтвержу. По пыльнику: если ШРУС уже хрустит, один пыльник не поможет, шарнир изношен; мастер посмотрит на месте и скажет точно.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 7, "day": "T-85d", "at": "18:19:40", "because": "he sent his own text (n 7)"}},
+        {"n": 7, "day": "T-85d", "at": "18:19:40", "kind": "message", "from": "staff", "slot": 7, "text": "Да-да, завтра к 9 приезжайте!"},
+        {"n": 8, "day": "T-85d", "at": "18:22:10", "kind": "message", "from": "customer", "text": "а пыльник?"},
+        {"n": 9, "day": "T-85d", "at": "18:22:50", "kind": "draft", "id": "d3", "text": "Если ШРУС уже хрустит, замена одного пыльника не поможет: шарнир изношен. Мастер посмотрит на месте и скажет точно.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-85d", "at": "18:27:30", "became": 10}},
+        {"n": 10, "day": "T-85d", "at": "18:27:30", "kind": "message", "from": "staff", "slot": 7, "text": "Если ШРУС уже хрустит, замена одного пыльника не поможет: шарнир изношен. Мастер посмотрит на месте и скажет точно."},
+        {"n": 11, "day": "T-85d", "at": "18:29:15", "kind": "message", "from": "customer", "text": "понял, буду"},
+        {"n": 12, "day": "T-85d", "at": "18:29:55", "kind": "draft", "id": "d4", "text": "Ждём вас завтра к 9:00: Московское шоссе, 40.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-85d", "at": "18:33:20", "became": 13}},
+        {"n": 13, "day": "T-85d", "at": "18:33:20", "kind": "message", "from": "staff", "slot": 7, "text": "Ждём вас завтра к 9:00: Московское шоссе, 40."},
+        {"n": 14, "day": "T-85d", "at": "18:33:50", "kind": "activity", "what": "resolved", "by": 7}
+      ],
+      "assignee_history": [
+        {"day": "T-85d", "at": "18:11:28", "to": 7, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 7,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 7, "working_minutes": 9.3},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 7, "working_minutes": 9.3, "wall_minutes": 9.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 7, "working_minutes": 5.3, "wall_minutes": 5.3, "measured_from": "n 5", "reply": "later"},
+          {"asked": 8, "answered": 10, "by": 7, "working_minutes": 5.3, "wall_minutes": 5.3, "measured_from": "n 8", "reply": "later"},
+          {"asked": 11, "answered": 13, "by": 7, "working_minutes": 4.1, "wall_minutes": 4.1, "measured_from": "n 11", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 7,
+          "n": 4,
+          "working_minutes": 9.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 4, "assistant": 0, "manager": 4, "note": 0},
+        "resolutions": [
+          {"day": "T-85d", "at": "18:33:50", "by": 7}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 7},
+          {"draft": "d2", "outcome": "discarded", "manager": 7},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 7},
+          {"draft": "d4", "outcome": "sent_as_is", "manager": 7}
+        ],
+        "operator_credit": "slot 7: first answer 9.3 minutes (his ledger row is 9), four replies, three drafts sent as they were and one discarded, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "slot 7; the assistant drafts",
+    "outcome": "записан на следующее утро, 09:00; закрыт слотом 7",
+    "facts": [
+      "the price given is 7 470",
+      "of two questions in one message slot 7 answered the first; the second was asked again and answered by a draft sent as it was",
+      "no name or number was asked for"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Черновик, который он выбросил, отвечал на оба вопроса; его собственная строка — на один.",
+    "Три черновика из четырёх ушли без правки: это доля из его строки в леджере.",
+    "Имя и телефон он не спросил; на Авито номер не виден, и запись осталась без контакта."
+  ],
+  "new_facts": [
+    "Объявление сервиса на Авито «Ремонт ходовой: ШРУСы, стойки, рычаги, ступичные подшипники. Московское шоссе».",
+    "«Саня», Renault Logan 2014: замена левого наружного ШРУСа на main на следующий день после чата, 09:00; запись без телефона.",
+    "Картинка контакта: серебристый Logan у гаражей."
+  ]
+}

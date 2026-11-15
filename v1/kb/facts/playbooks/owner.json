@@ -1,0 +1,107 @@
+{
+ "path": "playbooks/owner.md",
+ "title": "Playbook: owner and administrator",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Administrator: the managing owner's own notes on running the product.",
+ "serves": [
+  "S10",
+  "S12",
+  "visibility:administrator",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 267,
+ "links_to": [
+  "team/who-is-who.md",
+  "prices/how-prices-change.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Administrator: the console (people, ranks, job roles, switches, sources, jobs, alerts, usage) and the knowledge ranks.",
+  "Visibility table of the whole base by folder (the rank design of this seed): customers, shop-floor, services and the price list at worker rank (also the website assistant); the other staff folders and the rest of prices at junior; accounts/credit and office at middle; management at senior; management/owners and playbooks at administrator.",
+  "Rungs left at product defaults: propose from middle, publish from senior.",
+  "Slot 2's scheduled tasks (design S10 as corrected in 7.2: the monthly report became weekly): accounts Monday 8:00; discounts Friday 16:00; Charlotte Pike against plan weekly, Monday 9:00; missed calls daily 18:00 (ledger s10.tasks).",
+  "Leavers: sign-in ended the same day, removed from the directory, their name stays in history (S2, S14)."
+ ],
+ "tables": [
+  {
+   "section": "How the knowledge base is ranked here",
+   "columns": [
+    "Folder",
+    "Seen from"
+   ],
+   "rows": [
+    {
+     "Folder": "customers, shop-floor, services, and the price list",
+     "Seen from": "Everyone, and the website assistant"
+    },
+    {
+     "Folder": "the rest of prices, and policies, accounts, how-to, parts, shops, team",
+     "Seen from": "Advisors and up"
+    },
+    {
+     "Folder": "accounts/credit, office",
+     "Seen from": "Lead advisors, the office and up"
+    },
+    {
+     "Folder": "management",
+     "Seen from": "Managers and up"
+    },
+    {
+     "Folder": "management/owners, playbooks",
+     "Seen from": "Me"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "My reports",
+   "item": "Monday 8:00: company accounts this week."
+  },
+  {
+   "section": "My reports",
+   "item": "Friday 4:00: discounts over 10 %."
+  },
+  {
+   "section": "My reports",
+   "item": "Monday 9:00: Charlotte Pike against plan."
+  },
+  {
+   "section": "My reports",
+   "item": "Daily 6:00 p.m.: missed calls today."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "The owner's weekly report on the Nashville shop is called \"Charlotte Pike against plan\" on the page; ledger s10.tasks holds it as \"west against plan\", Monday 09:00 home time. The scheduled-task definition carries the page's name."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the section \"When a price changes\"; message: \"After the timing belt.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same playbook for the same rank; examples from the Russian stories and channels. The product pins the playbooks folder at administrator in both configurations."
+ ]
+}

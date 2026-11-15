@@ -1,0 +1,442 @@
+{
+  "format": "seed-call/1",
+  "id": "en-08-S7-confirming-call",
+  "configuration": "en",
+  "number": 8,
+  "story": "S7",
+  "title": "The junior operator rings the web-chat customer to confirm tomorrow's booking",
+  "purpose": "Story S7, day A. The web chat of the evening before became a booking at 7:36; this is the call Maya said she would make. It is outbound, so it has a transcript and no verdict: the answer to 'what score did my confirming call get' is none.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Rachel Dunlap",
+      "ref": "named_customers.json en.S7",
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 6's 14th working day before T, day A of S7 (rule R6; card S07)",
+    "nominal_offset": "T-18d",
+    "nominal_date": "2026-10-26",
+    "local_start": "07:52",
+    "site": "main",
+    "direction": "outbound",
+    "line": "100",
+    "placed_from": "102",
+    "ring_s": 12,
+    "callee_phone": "423-555-0131",
+    "answered": true,
+    "repeat_caller": false,
+    "talk_s": 95
+  },
+  "scenario": {
+    "who_calls": "Maya rings Rachel Dunlap, who wrote in the web chat at 21:10 the evening before and was booked that morning.",
+    "vehicle": "2014 Honda CR-V EX AWD, BRC-3197",
+    "job": "brake inspection",
+    "wants": "to confirm the booking; the customer asks whether she can drive the car and where the shop is",
+    "what_happens": "Maya confirms tomorrow at nine at the East Main shop, tells her to keep to short trips and what would mean a tow, gives the inspection's price and what it includes, and the address.",
+    "facts": {
+      "booked": "call+1d 09:00, ERP appointment, source web chat",
+      "note": "catalogue.json brake_inspection: 49.95 (ledger s7.bill.inspection).",
+      "prices": [
+        {
+          "what": "Brake system inspection",
+          "job": "brake_inspection",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 49.95,
+          "said": "forty-nine ninety-five",
+          "said_usd": 49.95,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Tuesday",
+      "day": "call+1d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "customer",
+      "at_s": 0.0,
+      "said": "Hello?"
+    },
+    {
+      "n": 2,
+      "who": "advisor",
+      "at_s": 1.1,
+      "said": "Hi, is this Rachel?"
+    },
+    {
+      "n": 3,
+      "who": "customer",
+      "at_s": 4.3,
+      "said": "Yes?"
+    },
+    {
+      "n": 4,
+      "who": "advisor",
+      "at_s": 6.0,
+      "said": "Hi, Rachel, this is Maya at Brennan Auto Care. You were — you were chatting with us on the website last night about your CR-V?"
+    },
+    {
+      "n": 5,
+      "who": "customer",
+      "at_s": 15.7,
+      "said": "Oh! Yes. Hi. That was fast."
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 19.4,
+      "said": "We try! So I've — I've got you on the schedule for tomorrow, Tuesday, at nine, here at the East Main shop, for the brake inspection. I just wanted to make sure that still works."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 33.1,
+      "said": "Yeah, nine's fine. Is it okay to drive it till then? It's makin' that grindin'."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 40.7,
+      "said": "Um — I'd keep it to short trips if you can, and — and leave yourself some extra room to stop. If the pedal starts feeling soft, or it gets a lot louder, don't drive it. Call us and we'll figure out a tow."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 56.2,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 58.3,
+      "said": "And it's — what'd they say, fifty dollars?"
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 61.8,
+      "said": "Forty-nine ninety-five for the inspection, and that's the wheels off and everything measured. If it needs brakes, I'll show you what we found and give you a price before we do anything."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 73.7,
+      "said": "Right.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 75.8,
+      "said": "Okay, good. And where are y'all, exactly?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 80.4,
+      "said": "Twenty-one-oh-six East Main Street. Just pull up to the first door and come on in."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 87.2,
+      "said": "Okay. I'll see you at nine."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 90.2,
+      "said": "Perfect. Just ask for Maya. Thanks, Rachel!"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 93.5,
+      "said": "Thank you. Bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.75,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          4,
+          6,
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 4,
+        "said": "CR-V",
+        "stored": "CRV"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          6,
+          7,
+          11,
+          14
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 13,
+        "said": ", exactly",
+        "stored": ""
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          9,
+          12
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 5,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 4,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 2,
+        "joined": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 206,
+    "stored_words": 197,
+    "strict_word_difference": 0.087
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 212,
+    "duration_s": 95.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hello?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi, is this Rachel?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi, Rachel, this is Maya at Brennan Auto Care. You were chatting with us on the website last night about your CRV?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh! Yes. Hi. That was fast.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "We try! So I've got you on the schedule for tomorrow, Tuesday, at 9, here at the East Main shop, for the brake inspection. I just wanted to make sure that still works.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, 9 is fine. Is it okay to drive it till then? It's making that grinding.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'd keep it to short trips if you can, and leave yourself some extra room to stop. If the pedal starts feeling soft, or it gets a lot louder, don't drive it. Call us and we'll figure out a tow.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "And what'd they say, fifty dollars?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "$49.95 for the inspection, and that's the wheels off and everything measured. If it needs brakes, I'll show you what we found and give you a price before we do anything.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, good. And where are y'all?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "2106 East Main Street. Just pull up to the first door and come on in.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. I'll see you at nine.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Perfect. Just ask for Maya. Thanks, Rachel!",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you. Bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": null,
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": false,
+      "direction": "outbound",
+      "line": "100",
+      "checks": [],
+      "tags": [],
+      "media_version": 1
+    },
+    "result_enc_plain": null
+  },
+  "truth": {
+    "note": "Not judged: an outbound call carries no verdict (judged: false). What happened: the booking stands.",
+    "outcome": "the appointment of call+1d 09:00 is confirmed",
+    "tags": []
+  },
+  "why": {
+    "verdict": "None. The product does not judge outbound calls: the scorecard row holds judged: false, no checks and no score (card S07, question S7.4)."
+  },
+  "day_report": {
+    "in_report": false,
+    "why": "A day report is built from a person's judged customer calls; this call is not one of them and is named nowhere in Maya's report of the day."
+  },
+  "new_facts": [
+    "Nothing new: the booking, the customer, her car and her number are card S07's and the web-chat sample's."
+  ]
+}

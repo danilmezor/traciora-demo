@@ -1,0 +1,70 @@
+{
+ "path": "accounts/a5.md",
+ "title": "Идель-Электромонтаж",
+ "title_en": "Cumberland Bend Electric",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/a5.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "Account A5 as Charlotte Pike wrote it before the account left: thin, and silent on everything that went wrong.",
+ "serves": [
+  "S1",
+  "challenge:kb-does-not-say",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "tiny",
+ "words_ru": 40,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S1: silent about the account leaving",
+ "differs_from_en": [
+  "«Идель-Электромонтаж», Kazan: 11 vehicles, 30 days; the same five lines in slot 22's Russian voice.",
+  "Silent about the two brake comebacks, the disputed invoice, the three unreturned calls and four and a half months without a visit."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A5",
+   "contact": "Рустем Ильгизович Фаттахов",
+   "role": "заместитель директора по производству (тот, кому не перезвонили)",
+   "written_as": "Рустем Ильгизович Фаттахов"
+  },
+  {
+   "account": "A5",
+   "contact": "Алсу Маратовна Гайнутдинова",
+   "role": "бухгалтер",
+   "written_as": "Алсу Маратовна Гайнутдинова"
+  }
+ ],
+ "dates": [
+  "{{T-13mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

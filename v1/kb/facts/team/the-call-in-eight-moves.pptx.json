@@ -1,0 +1,40 @@
+{
+ "path": "team/the-call-in-eight-moves.pptx",
+ "title": "The call, in eight moves",
+ "kind": "binary",
+ "format": "PPTX, 10 titled slides",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "The lead advisor's ten-slide training deck on taking a call.",
+ "serves": [
+  "S4",
+  "challenge:fact-only-in-attachment",
+  "challenge:near-duplicate"
+ ],
+ "draft": "en/_binaries.md",
+ "facts": [
+  "Slides: title; two minutes; the eight; hello; find out; the price is not the end; two times; when they doubt the price; three sentences I never say; listen.",
+  "Slide 9: \"No problem.\" \"It should be ready.\" \"It is all warrantied.\", each with her reason.",
+  "Slide 6 uses the brake inspection price 49.95.",
+  "Agrees with how-to/taking-a-call.md and how-to/price-objections.md; says nothing they contradict.",
+  "Speaker notes are not extracted."
+ ],
+ "facts_only_in_this_file": [
+  "the three sentences of slide 9"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "file uploaded for Angie (binary uploads are edits: published by slot 4); message: \"Angie's training deck.\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian deck in slot 16's voice; the three sentences: «Без проблем», «Должно быть готово», «У нас на всё гарантия»."
+ ]
+}

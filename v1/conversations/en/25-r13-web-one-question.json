@@ -1,0 +1,147 @@
+{
+  "format": "seed-conversation/1",
+  "id": "25-r13-web-one-question",
+  "configuration": "en",
+  "number": 25,
+  "story": "R13",
+  "title": "Unclear, then clear after one question: 'the thing where you hook it up to the computer'",
+  "demonstrates": "Rule R13 on the web chat. The customer names a tool, not a need. The assistant asks one plain question (what is the car doing?) and the answer settles it: a check engine light. It prices the diagnosis, hands over, and its note says what was asked. The advisor's own question (steady or flashing) is need discovery, not a second loop.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Kenny Dillard",
+      "invented": true,
+      "first_time": true,
+      "note": "2013 Dodge Charger; first visit",
+      "phone": "(615) 555-0412"
+    },
+    "staff": [
+      {"slot": 24, "name": "Jasmine Bolden"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Somebody who knows there is a machine and not what it is called.",
+    "vehicle": "2013 Dodge Charger",
+    "what_happens": "One clarifying question; then price, hand-over, and the advisor's two times.",
+    "facts": {
+      "booked": "the Thursday of week T-13, 07:30, at west",
+      "public_pages_used": ["price list: check engine light diagnosis"],
+      "prices": [
+        {"said": "$135.00", "amount": 135.0, "what": "check engine light: scan, test and diagnose, one hour", "from": {"catalogue": "check_engine_diag", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "730", "what": "7:30, as the customer types it"}
+      ]
+    },
+    "unclear": {
+      "kind": "vague: names a tool ('hook it up to the computer') instead of what is wrong",
+      "loops": 1,
+      "resolved": true,
+      "how": "The assistant asks whether a warning light is on or the car is doing something it should not; he says the check engine light came on yesterday."
+    }
+  },
+  "days": {
+    "T-93d": {"anchor": "the Wednesday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 13}, "nominal": "Wed 2026-08-12", "what": "the Wednesday of week T-13 (DESIGN.md section 6, row 25)"},
+    "T-92d": {"anchor": "the Thursday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 13}, "nominal": "Thu 2026-08-13", "what": "'tomorrow, Thursday'"}
+  },
+  "floating_days": [
+    {"word": "yesterday", "said_on": "T-93d", "day": "the Tuesday of week T-13"},
+    {"word": "tomorrow", "said_on": "T-93d", "day": "the Thursday of week T-13"},
+    {"word": "tomorrow at 7:30", "said_on": "T-93d", "day": "the Thursday of week T-13"},
+    {"word": "tomorrow, Thursday", "said_on": "T-93d", "day": "the Thursday of week T-13"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "5eedc0de-0025-4e00-8000-00000000e019",
+      "peer": {"id": "seedv1-browser-en-0835", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0835",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-93d", "at": "16:05:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-93d", "at": "16:05:10", "kind": "message", "from": "customer", "text": "do yall do the thing where you hook it up to the computer"},
+        {"n": 2, "day": "T-93d", "at": "16:05:34", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. We do have diagnostic equipment. So I point you to the right service: is a warning light on, or is the car doing something it shouldn't?"},
+        {"n": 3, "day": "T-93d", "at": "16:06:20", "kind": "message", "from": "customer", "text": "check engine light came on yesterday. 2013 charger"},
+        {"n": 4, "day": "T-93d", "at": "16:06:45", "kind": "message", "from": "assistant", "text": "Thanks, that's clear. For a check engine light the service is a scan, test and diagnosis: $135.00 for up to an hour, and the technician tells you what they found before any repair is priced. Would you like me to ask the shop to get you in?"},
+        {"n": 5, "day": "T-93d", "at": "16:07:15", "kind": "message", "from": "customer", "text": "yes the nashville one. tomorrow"},
+        {"n": 6, "day": "T-93d", "at": "16:07:39", "kind": "message", "from": "assistant", "text": "I can't book a time myself, but I'll pass it to the Charlotte Pike shop. What's your name and the best number for you?"},
+        {"n": 7, "day": "T-93d", "at": "16:08:05", "kind": "message", "from": "customer", "text": "Kenny Dillard 6155550412"},
+        {"n": 8, "day": "T-93d", "at": "16:08:28", "kind": "message", "from": "assistant", "text": "Thank you, Kenny. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 9, "day": "T-93d", "at": "16:08:29", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Kenny Dillard", "phone": "(615) 555-0412", "site": "the nashville one", "context": "Kenny Dillard, 2013 Dodge Charger. He first asked whether we 'hook it up to the computer'; I asked once what the car was doing: the check engine light came on yesterday. I named the diagnosis, $135.00. He wants to come tomorrow, the Nashville shop."}}, "note": {"from": "assistant", "private": true, "text": "Kenny Dillard, 2013 Dodge Charger. He first asked whether we 'hook it up to the computer'; I asked once what the car was doing: the check engine light came on yesterday. I named the diagnosis, $135.00. He wants to come tomorrow, the Nashville shop."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "west", "owner": null, "due": "T-93d 17:30, the day's close"}},
+        {"n": 10, "day": "T-93d", "at": "16:14:48", "kind": "activity", "what": "assigned", "derived": true, "to": 24, "by": 24, "how": "first reply"},
+        {"n": 11, "day": "T-93d", "at": "16:14:50", "kind": "message", "from": "staff", "slot": 24, "text": "Hi Kenny, this is Jasmine at Charlotte Pike. To confirm: 2013 Dodge Charger, check engine light on since yesterday. I can take it tomorrow at 7:30 or at 1:00. The diagnosis is $135.00 and takes about an hour. Is the light steady or flashing? If it's flashing, please don't drive it far."},
+        {"n": 12, "day": "T-93d", "at": "16:14:51", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 24, "how": "a manager's reply takes it off"},
+        {"n": 13, "day": "T-93d", "at": "16:17:30", "kind": "message", "from": "customer", "text": "steady. 730"},
+        {"n": 14, "day": "T-93d", "at": "16:18:10", "kind": "draft", "id": "d1", "text": "Thank you, Kenny. Tomorrow at 7:30 works. See you at 6399 Charlotte Pike.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-93d", "at": "16:19:40", "became": 15}},
+        {"n": 15, "day": "T-93d", "at": "16:19:40", "kind": "message", "from": "staff", "slot": 24, "text": "You're booked, Kenny: tomorrow, Thursday, at 7:30, check engine diagnosis on the Charger, 6399 Charlotte Pike. A steady light is fine to drive in on."},
+        {"n": 16, "day": "T-93d", "at": "16:20:00", "kind": "activity", "what": "label_added", "label": "booking", "by": 24},
+        {"n": 17, "day": "T-93d", "at": "16:20:20", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-93d", "at": "16:14:48", "to": 24, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 24,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 25},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 24},
+          {"asked": 7, "answered": 8, "by": "assistant", "wall_seconds": 23},
+          {"asked": 9, "answered": 11, "by": 24, "working_minutes": 6.3, "wall_minutes": 6.3, "measured_from": "n 9", "reply": "first"},
+          {"asked": 13, "answered": 15, "by": 24, "working_minutes": 2.2, "wall_minutes": 2.2, "measured_from": "n 13", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 24,
+          "n": 11,
+          "working_minutes": 6.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 4, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-93d", "at": "16:20:20", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 24}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 24: her first line 6.3 minutes after the hand-off, two replies, one draft edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "assistant first, handed over (scheduling), slot 24",
+    "outcome": "check engine diagnosis booked for the next day, 07:30, at west; resolved by slot 24",
+    "facts": [
+      "unclear first message; clear after one question by the assistant",
+      "the hand-off note carries his own words and says what was asked",
+      "the price named is the diagnosis, 135.00"
+    ],
+    "questions": []
+  },
+  "why": [
+    "The assistant does not guess a job from 'the computer': it asks what the car is doing.",
+    "The note lets the advisor skip the question the assistant already asked.",
+    "Jasmine's 'steady or flashing' is the question a judge would count for need discovery."
+  ],
+  "new_facts": [
+    "Kenny Dillard, (615) 555-0412 (tier B), 2013 Dodge Charger: a check engine diagnosis at west on the Thursday of week T-13 at 07:30."
+  ]
+}

@@ -1,0 +1,1338 @@
+{
+ "_meta": {
+  "seed_version": "v1",
+  "file": "cast.json",
+  "status": "draft by a wave-1 agent; revised for review 1 (founder renamed, slot 29 added, slot 24's start moved); brought to the ledger and the story cards in the reconcile pass of 2026-11-13. The people's numbers live only in ledger.json",
+  "sources": [
+   "2026-11-13-demo-seed-design.md sections 1.4, 1.4.1, 7",
+   "ledger.json (people rows pNN.*)",
+   "stories/ (the cards and TIMELINE.md)"
+  ],
+  "conventions": {
+   "T": "the day of generation; every date here is months before T unless it says calendar",
+   "start_months_before_t": "the day the person joined the company. For the people who came with the bought shop this is 14 (the purchase); at_shop_since_months_before_t gives when they joined that shop under its previous owner",
+   "gender_role_rank_site_extension": "the same in both configurations; names, ages, tenures and biographies are native to each",
+   "profile": "a pointer to the person's rows in ledger.json; no number is copied here. Numbers quoted in biographies are prose and follow the ledger",
+   "email": "<username>@brennanautocare.example (en), <username>@ermak-service.example (ru); see phones.md",
+   "extensions": "main 101-119, east 201-219, west 301-319, head office 401-409; ring groups 100, 200, 300 are the shops' public lines; mechanics and the foreman have none. Slot 29 has 105 (104 is the service manager's); F1 had 304"
+  },
+  "proposed_ledger_rows": [
+   "ages and tenures of all 33 people (slots 1 to 29 and F1 to F4) in both configurations (chosen so that tenure follows the survey spread: 4 under a year, most over three years)",
+   "east opened 132 months before T (needed for the tenure of slots 16 and 18)",
+   "slot 2 joined 72 months before T and has been managing owner for 36",
+   "slot 4 has run service for both home shops for 96 months",
+   "slot 14 started 3.5 months before T (two weeks after F2 was let go, as his replacement)",
+   "F1 came with the purchase: he worked at the bought shop before it was bought, and slot 22 had hired him",
+   "F2 comebacks 5 % in his last six months (the design says 'comebacks' without a rate)",
+   "F4 works calendar seasons: en ten weeks from the first Monday of June; ru six weeks from the first Monday of April and six from the first Monday of October",
+   "slot 11's share of the flagship's billed hours, 21 %, is derived: 1.30 / (1.35+1.30+1.00+0.95+0.65+0.90)",
+   "slot 24 started 10 months before T (decided in the ledger: west had three advisors while F1 worked there)",
+   "extension numbers per person; extension 103 was re-used by slot 7 after F3 left; F1's 304 was retired",
+   "slot 29: ages 58 and 49, tenures 204 and 84 months"
+  ],
+  "namesake_check": {
+   "slot_29": {
+    "en": "Brenda Pickett: searched on 2026-11-13 with 'service advisor', 'Chattanooga' and 'auto repair'. No person of that name in the trade came back. A repair business in Chattanooga carries the surname (Westbrook-Pickett, LLC); nothing ties a Brenda to it. A common first name and a common regional surname: kept.",
+    "ru": "Татьяна Геннадьевна Пахомова: searched on 2026-11-13 with «Ульяновск», «автосервис» and «мастер-приёмщик». Nothing came back for the name; the search service would not run a full-name query on a private person, so this is the absence of a hit, not a confirmed absence. A common name, patronymic and surname: kept, to be looked at once more by hand before the seed is shown outside a demo."
+   },
+   "the_rest": "the other names were chosen in wave 1 as common names of each region; no one in the cast is named after a real person"
+  }
+ },
+ "roles": {
+  "founder": {
+   "en": "Founder, Owner",
+   "ru": "Основатель, владелец"
+  },
+  "managing_owner": {
+   "en": "Managing Owner",
+   "ru": "Директор, совладелец"
+  },
+  "office_manager": {
+   "en": "Office Manager / Bookkeeper",
+   "ru": "Бухгалтер"
+  },
+  "service_manager": {
+   "en": "Service Manager",
+   "ru": "Руководитель сервиса"
+  },
+  "lead_advisor": {
+   "en": "Lead Service Advisor",
+   "ru": "Старший мастер-приёмщик"
+  },
+  "service_advisor": {
+   "en": "Service Advisor",
+   "ru": "Мастер-приёмщик"
+  },
+  "shop_foreman": {
+   "en": "Shop Foreman",
+   "ru": "Мастер цеха"
+  },
+  "parts_manager": {
+   "en": "Parts Manager",
+   "ru": "Менеджер по запчастям"
+  },
+  "technician": {
+   "en": "Automotive Technician",
+   "ru": "Автомеханик"
+  },
+  "diagnostic_technician": {
+   "en": "Diagnostic Technician",
+   "ru": "Автомеханик-диагност"
+  },
+  "electrical_technician": {
+   "en": "Electrical Technician",
+   "ru": "Автоэлектрик"
+  },
+  "lead_technician": {
+   "en": "Lead Technician",
+   "ru": "Старший автомеханик"
+  },
+  "apprentice_technician": {
+   "en": "Apprentice Technician",
+   "ru": "Ученик автомеханика"
+  },
+  "lube_tyre_technician": {
+   "en": "Lube and Tire Technician",
+   "ru": "Шиномонтажник"
+  },
+  "shop_manager": {
+   "en": "Shop Manager",
+   "ru": "Руководитель СТО"
+  },
+  "seasonal_helper": {
+   "en": "Seasonal Shop Helper",
+   "ru": "Шиномонтажник (сезонный)"
+  }
+ },
+ "people": [
+  {
+   "slot": "1",
+   "status": "active",
+   "site": "none",
+   "role_key": "founder",
+   "rank": "senior",
+   "gender": "male",
+   "extension": "401",
+   "profile": {
+    "ledger_rows": "p01.*"
+   },
+   "stories": [
+    "S10"
+   ],
+   "en": {
+    "full_name": "Ray Brennan",
+    "colleagues_call": "Ray",
+    "customers_call": "Ray; older customers say Mr. Brennan",
+    "age": 68,
+    "start_months_before_t": 360,
+    "username": "rbrennan",
+    "biography": "Opened the first shop on East Main thirty years ago with two bays and a borrowed alignment rack, after fifteen years turning wrenches at a dealership. He ran the front counter himself until his knees and his daughter both told him to stop; three years ago he handed her the business and kept the title. He comes by on Thursdays for coffee with Randy, still knows half the old customers by their trucks, and reads the morning brief on his phone before he reads the paper. He does not log in to anything he can avoid.",
+    "voice": "Slow, warm, East Tennessee; calls men 'bud' and tells a story before he answers the question. Never gives a price on the phone: 'let me get Greg to call you.' In chat he writes one line in lower case with no punctuation and signs it 'Ray' anyway."
+   },
+   "ru": {
+    "full_name": "Николай Петрович Ермолаев",
+    "colleagues_call": "Николай Петрович; старожилы — Петрович",
+    "customers_call": "Николай Петрович",
+    "age": 64,
+    "start_months_before_t": 360,
+    "username": "nermolaev",
+    "biography": "Двенадцать лет отработал на автозаводе, дорос до мастера участка, а когда зарплату стали выдавать через раз, снял два бокса на Московском шоссе и начал чинить «уазики» и «Волги». Первые годы сам принимал клиентов и сам возил запчасти из Тольятти на своей «Ниве». Три года назад передал управление дочери и оставил себе, как он говорит, право ворчать. В сервисе бывает раз-два в неделю, утреннюю сводку читает с телефона на даче и, если цифра не нравится, звонит не Кате, а Мельникову.",
+    "voice": "Говорит неторопливо, по-заводскому обстоятельно; со своими на «ты» и по имени, ровесников зовёт по отчеству. Любимое: «давай по порядку» и «так дела не делаются». Цен клиентам не называет никогда: «это к Сергею». В чате пишет коротко, без точек, чаще отправляет голосовое."
+   }
+  },
+  {
+   "slot": "2",
+   "status": "active",
+   "site": "none",
+   "role_key": "managing_owner",
+   "rank": "admin",
+   "gender": "female",
+   "extension": "402",
+   "profile": {
+    "ledger_rows": "p02.*"
+   },
+   "stories": [
+    "S1",
+    "S2",
+    "S6",
+    "S9",
+    "S10",
+    "S16"
+   ],
+   "en": {
+    "full_name": "Claire Brennan",
+    "colleagues_call": "Claire",
+    "customers_call": "Claire; on paper Ms. Brennan",
+    "age": 38,
+    "start_months_before_t": 72,
+    "username": "cbrennan",
+    "biography": "Ray's younger daughter. She studied accounting at UTC, spent eight years in commercial lending at a regional bank, and came back six years ago when her father's bookkeeping finally scared her. Managing owner for three years; she found, priced and closed the Nashville purchase fourteen months ago, and it is the decision she is judged on, by herself first. She works from a laptop, drives to Nashville twice a month, set Traciora up herself and asks it the questions she used to ask a spreadsheet at midnight. Fair, direct, and impatient with 'we've always done it that way'.",
+    "voice": "Quick and precise; asks for the number first and the story second. Says 'walk me through it' and 'what would it take'. On a customer call she is polite and brief and repeats the commitment back. Writes in full sentences with question marks, often after nine at night."
+   },
+   "ru": {
+    "full_name": "Екатерина Николаевна Ермолаева",
+    "colleagues_call": "Екатерина Николаевна; старожилы между собой — Катя",
+    "customers_call": "Екатерина Николаевна",
+    "age": 36,
+    "start_months_before_t": 72,
+    "username": "eermolaeva",
+    "biography": "Дочь основателя. Окончила экономический факультет в Ульяновске, семь лет работала в банке в Самаре — кредитовала малый бизнес — и шесть лет назад вернулась, когда отец в очередной раз «потерял» квартальный отчёт. Три года как директор; покупку казанского сервиса четырнадцать месяцев назад придумала, просчитала и провела сама и спрашивает за неё с себя строже, чем с других. Работает в основном с ноутбука, в Казань ездит два раза в месяц, Traciora настраивала своими руками. Справедливая, прямая, не выносит ответа «у нас так принято».",
+    "voice": "Говорит быстро и по делу: сначала спрашивает цифру, потом объяснение. Со всеми на «вы», кроме отца и Мельникова. Любимое: «покажите на цифрах» и «что нужно, чтобы это заработало?». Пишет полными фразами, с запятыми, часто поздно вечером."
+   }
+  },
+  {
+   "slot": "3",
+   "status": "active",
+   "site": "main",
+   "role_key": "office_manager",
+   "rank": "middle",
+   "gender": "female",
+   "extension": "111",
+   "profile": {
+    "ledger_rows": "p03.*"
+   },
+   "stories": [
+    "S2",
+    "S9",
+    "S16"
+   ],
+   "en": {
+    "full_name": "Donna Ledford",
+    "colleagues_call": "Donna; the younger ones say Miss Donna",
+    "customers_call": "Donna",
+    "age": 57,
+    "start_months_before_t": 228,
+    "username": "dledford",
+    "biography": "Answered an ad for 'someone good with numbers' nineteen years ago and has closed every month since. She does payables, payroll hours and the fleet statements, and knows which accounts pay on the tenth and which need a second envelope. Careful to the penny and slow to take up anything with a login; Claire won her over to Traciora by showing her the punch corrections. She was the one who noticed, checking the tills against the payments, that Nashville did not add up. She works her list from the top and does not jump the queue for a card on a board.",
+    "voice": "Even, unhurried, a little formal on the phone: 'Brennan Auto Care, accounting, this is Donna.' Never guesses a balance; puts you on hold and looks. In chat she answers hours later, in complete sentences, with the invoice number."
+   },
+   "ru": {
+    "full_name": "Ирина Владимировна Кудашкина",
+    "colleagues_call": "Ирина Владимировна",
+    "customers_call": "Ирина Владимировна",
+    "age": 54,
+    "start_months_before_t": 204,
+    "username": "ikudashkina",
+    "biography": "В «Ермак-Сервисе» семнадцать лет: пришла из бухгалтерии хлебокомбината, когда Николай Петрович перестал справляться с бумагами сам. Ведёт оплаты, счета корпоративным клиентам, акты сверки и табель для зарплаты; помнит, кто платит день в день, а кому нужно напомнить дважды. Аккуратна до копейки, к новым программам относится настороженно, но корректировки отметок в Traciora оценила первой. Именно она, сверяя кассу с оплатами, заметила, что в Казани слишком много наличных нарядов со скидкой, которую никто не согласовывал. Работает по своему списку сверху вниз и ради карточки на доске очередь не ломает.",
+    "voice": "Говорит ровно, чуть официально, по телефону представляется: «Бухгалтерия, Ирина Владимировна». На глаз сумму не назовёт: «минуту, я посмотрю». В чате отвечает не сразу, зато полным предложением и с номером счёта."
+   }
+  },
+  {
+   "slot": "4",
+   "status": "active",
+   "site": "main",
+   "also_sites": [
+    "east"
+   ],
+   "role_key": "service_manager",
+   "rank": "senior",
+   "gender": "male",
+   "extension": "104",
+   "demo_role": "the senior operator",
+   "profile": {
+    "ledger_rows": "p04.*"
+   },
+   "stories": [
+    "S3",
+    "S4",
+    "S5",
+    "S8",
+    "S9",
+    "S10",
+    "S12",
+    "S14",
+    "S16"
+   ],
+   "en": {
+    "full_name": "Greg Whitaker",
+    "colleagues_call": "Greg",
+    "customers_call": "Greg; Mr. Whitaker when they are upset",
+    "age": 49,
+    "start_months_before_t": 264,
+    "username": "gwhitaker",
+    "biography": "Started as a technician on East Main twenty-two years ago, moved to the counter when his back gave out, and has run service for both Chattanooga shops for eight years. He builds the schedule for the two shops as one crew, moves people between them without drama, and is the person a customer gets when a customer has been wronged. Calm and hard to rattle; his weakness is fixing a problem himself instead of handing it down. He approves the discounts and the team notes, and he is the one who had to let the late mechanic go.",
+    "voice": "Low, steady, unhurried; lets an angry customer finish, then says 'here's what I can do.' Never says 'no problem'; says 'I'll own that.' Writes short and exact in chat, with a time and a person's name in every message."
+   },
+   "ru": {
+    "full_name": "Сергей Анатольевич Мельников",
+    "colleagues_call": "Сергей Анатольевич; механики-старожилы — Анатольич; Николай Петрович — Сергей",
+    "customers_call": "Сергей Анатольевич",
+    "age": 47,
+    "start_months_before_t": 216,
+    "username": "smelnikov",
+    "biography": "Пришёл в «Ермак» восемнадцать лет назад автомехаником, через несколько лет встал на приёмку, а последние восемь руководит сервисом — обеими площадками в Ульяновске. График на Московском шоссе и в Новом городе составляет как для одной бригады, людей переставляет без скандалов, трудных клиентов забирает на себя. Спокойный, вывести его сложно; слабость одна — ему проще сделать самому, чем поручить. Скидки и заметки для команды согласует он, и увольнять опаздывавшего механика тоже пришлось ему.",
+    "voice": "Говорит негромко и ровно, сердитому клиенту даёт договорить, потом: «Давайте так. Вот что я могу сделать прямо сейчас». С механиками на «ты», с клиентами только на «вы». В чате пишет коротко, в каждом сообщении — срок и фамилия."
+   }
+  },
+  {
+   "slot": "5",
+   "status": "active",
+   "site": "main",
+   "role_key": "lead_advisor",
+   "rank": "middle",
+   "gender": "male",
+   "extension": "101",
+   "profile": {
+    "ledger_rows": "p05.*"
+   },
+   "stories": [
+    "S3",
+    "S4",
+    "S8",
+    "S9",
+    "S12"
+   ],
+   "en": {
+    "full_name": "Travis Burnette",
+    "colleagues_call": "Travis",
+    "customers_call": "Travis",
+    "age": 44,
+    "start_months_before_t": 132,
+    "username": "tburnette",
+    "biography": "Eleven years at the main counter, lead advisor for six. He was a technician first, so the bays do not argue with his write-ups, and regulars will wait for his line rather than take another. He sells honestly and a little cautiously, which is why his number is good rather than great. He would rather pick up a phone than type, so a chat sits while he walks a customer out to the bay. He took the complaint call about the timing belt and wrote up the stale page himself.",
+    "voice": "Friendly and plain; explains a repair with a comparison ('it's like a bicycle chain, only it costs more'). Always gives the out-the-door number and the pick-up time. Types slowly, leaves the typos, and answers a chat with 'call me, easier.'"
+   },
+   "ru": {
+    "full_name": "Дмитрий Олегович Григорьев",
+    "colleagues_call": "Дима; новички — Дмитрий Олегович",
+    "customers_call": "Дмитрий",
+    "age": 42,
+    "start_months_before_t": 108,
+    "username": "dgrigoriev",
+    "biography": "На приёмке на Московском шоссе девять лет, старший мастер — последние пять. Сам из механиков, поэтому в цехе с его дефектовкой не спорят, а постоянные клиенты готовы подождать, лишь бы попасть к нему. Продаёт честно и осторожно: лишнего не навяжет, но и дожимать не любит — отсюда хорошая, а не выдающаяся цифра. Печатать не любит, в чате отвечает, когда освободится, и предпочитает перезвонить. Жалобу по ремню ГРМ принял он и сам же предложил исправить устаревшую страницу.",
+    "voice": "Говорит просто, по-свойски, но на «вы»; ремонт объясняет на бытовых примерах. Всегда называет итоговую сумму и время выдачи. В чате пишет коротко, с опечатками: «наберите меня, так быстрее»."
+   }
+  },
+  {
+   "slot": "6",
+   "status": "active",
+   "site": "main",
+   "also_sites": [
+    "east"
+   ],
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "female",
+   "extension": "102",
+   "demo_role": "the junior operator",
+   "profile": {
+    "ledger_rows": "p06.*"
+   },
+   "stories": [
+    "S3",
+    "S4",
+    "S5",
+    "S7",
+    "S10",
+    "S16"
+   ],
+   "en": {
+    "full_name": "Maya Torres",
+    "colleagues_call": "Maya",
+    "customers_call": "Maya",
+    "age": 27,
+    "start_months_before_t": 18,
+    "username": "mtorres",
+    "biography": "Eighteen months at the main counter; before that, three years at the front desk of a dental office, which is where the patience comes from. She grew up in East Ridge, speaks Spanish with the customers who prefer it, and types faster than anyone in the building, so the chats are mostly hers. She used to quote a price and wait; now she offers a time first and sums the call up at the end, and it shows in her scores. An objection still knocks her off her script. She works a day at Bonny Oaks when Greg needs her there.",
+    "voice": "Bright, quick, smiles on the phone: 'absolutely, let me get that set up for you.' Fills a silence instead of letting the customer think, and when someone pushes back on price she soothes ('I totally understand') instead of answering. In chat: fast, complete, friendly, one exclamation mark a message at most."
+   },
+   "ru": {
+    "full_name": "Алина Рамилевна Хасанова",
+    "colleagues_call": "Алина; старшие — Алиночка",
+    "customers_call": "Алина",
+    "age": 26,
+    "start_months_before_t": 18,
+    "username": "akhasanova",
+    "biography": "Полтора года на приёмке на Московском шоссе; до этого три года была администратором в стоматологии — оттуда терпение и привычка всё записывать. Выросла в Засвияжье; печатает быстрее всех в сервисе, поэтому чаты в основном на ней. Раньше называла цену и ждала, что скажет клиент; теперь сначала предлагает время, а в конце проговаривает, о чём договорились, — и это видно по оценкам звонков. На возражениях пока теряется. Когда нужно Мельникову, выходит на день в Новый город.",
+    "voice": "Говорит быстро, приветливо, с улыбкой в голосе: «Да, конечно, сейчас всё оформим». Паузу заполняет сама, вместо того чтобы дать клиенту подумать; на «дорого» начинает сочувствовать («я вас понимаю»), а не отвечать по существу. В чате пишет грамотно и быстро, без канцелярита, смайлик — не чаще одного за переписку."
+   }
+  },
+  {
+   "slot": "7",
+   "status": "active",
+   "site": "main",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "male",
+   "extension": "103",
+   "profile": {
+    "ledger_rows": "p07.*"
+   },
+   "stories": [
+    "S3",
+    "S8",
+    "S12"
+   ],
+   "en": {
+    "full_name": "Caleb Sutton",
+    "colleagues_call": "Caleb",
+    "customers_call": "Caleb",
+    "age": 23,
+    "start_months_before_t": 3,
+    "username": "csutton",
+    "biography": "Three months in. He sold batteries and wiper blades at a parts-store counter for two years and came over because he wanted to be near the repair, not the shelf. He is early every day, writes everything down and volunteers for Saturdays. He also promises what he hopes is true: a same-day finish, a price he read on an old page. Two wrong price promises and three re-billed orders so far, and while he is checking a car in he lets the phone ring, because he is afraid of getting the paperwork wrong. He takes correction well and does not make the same mistake twice; he finds new ones.",
+    "voice": "Eager and fast, too many 'yes sir, no problem's. Answers before he has the facts, says 'should be' and 'I think' a lot, and forgets to ask for a name and a number. In chat he is polite and short, and of two questions in one message he answers the first."
+   },
+   "ru": {
+    "full_name": "Никита Ведяшкин",
+    "colleagues_call": "Никита",
+    "customers_call": "Никита",
+    "age": 22,
+    "start_months_before_t": 3,
+    "username": "nvedyashkin",
+    "biography": "Работает три месяца. Два года стоял за прилавком в магазине автозапчастей и перешёл в сервис, потому что хотел быть ближе к ремонту, а не к полке. Приходит раньше всех, всё записывает в блокнот, сам просится на выходные. При этом обещает то, на что надеется: «сегодня же заберёте», цену со старой страницы. На счету два неверных обещания по цене и три перевыставленных счёта; пока оформляет машину, трубку не берёт — боится напутать в наряде. Замечания принимает спокойно и одну ошибку дважды не повторяет — находит новые.",
+    "voice": "Говорит торопливо, старательно, через слово «да-да, конечно» и «без проблем». Отвечает раньше, чем проверит: «вроде бы», «должно быть готово»; забывает спросить имя и номер. В чате вежлив и краток, из двух вопросов в одном сообщении отвечает на первый."
+   }
+  },
+  {
+   "slot": "8",
+   "status": "active",
+   "site": "main",
+   "role_key": "shop_foreman",
+   "rank": "junior",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p08.*"
+   },
+   "stories": [
+    "S8",
+    "S14"
+   ],
+   "en": {
+    "full_name": "Randy Elrod",
+    "colleagues_call": "Randy",
+    "customers_call": "Randy",
+    "age": 52,
+    "start_months_before_t": 300,
+    "username": "relrod",
+    "biography": "Ray's second hire, twenty-five years ago, and foreman for the last twelve. He hands out the work in the morning, road-tests what goes out and takes the 'look at this car again' cards personally. Fair, gruff, allergic to meetings; he will tell a technician to his face that a job was rushed and then stay late to help him redo it. He and Dustin have a truce, not a friendship.",
+    "voice": "Few words, shop-floor plain: 'bring it back in, I'll look at it myself.' Never talks money with a customer; sends them back to the counter. Does not chat if he can walk over; when he writes it is one line, all lower case."
+   },
+   "ru": {
+    "full_name": "Александр Михайлович Бурмистров",
+    "colleagues_call": "Михалыч; при клиентах — Александр Михайлович",
+    "customers_call": "Александр Михайлович",
+    "age": 51,
+    "start_months_before_t": 264,
+    "username": "aburmistrov",
+    "biography": "В «Ермаке» двадцать два года, начинал слесарем ещё в старых боксах, мастером цеха стал двенадцать лет назад. С утра раздаёт работу, сам выезжает на контрольную поездку и задачи «посмотреть машину ещё раз» забирает себе. Справедливый, резковатый, совещаний не любит; может при всех сказать механику, что тот схалтурил, а вечером остаться и переделать вместе с ним. С Рябовым у них перемирие, а не дружба.",
+    "voice": "Говорит мало и по делу: «Загоняй обратно, сам посмотрю». О деньгах с клиентом не разговаривает: «это на приёмку». В чат пишет, только если не дойти ногами, — одной строкой, без заглавных букв."
+   }
+  },
+  {
+   "slot": "9",
+   "status": "active",
+   "site": "main",
+   "also_sites": [
+    "east"
+   ],
+   "role_key": "parts_manager",
+   "rank": "junior",
+   "gender": "male",
+   "extension": "112",
+   "profile": {
+    "ledger_rows": "p09.*"
+   },
+   "stories": [
+    "S6",
+    "S16"
+   ],
+   "en": {
+    "full_name": "Marcus Gaines",
+    "colleagues_call": "Marcus",
+    "customers_call": "Marcus",
+    "age": 41,
+    "start_months_before_t": 84,
+    "username": "mgaines",
+    "biography": "Seven years running parts for both Chattanooga shops from the cage on East Main. He came from a parts warehouse, so he thinks in fill rates and knows every counterman in town by voice. He orders by eight, chases by two, and keeps a list of which supplier lies about its delivery times. He has offered three times to take Nashville's ordering onto the home supplier and is still waiting for an answer from Nashville. Dry, organized, and he does his half of a shared task the day it lands.",
+    "voice": "Clipped and factual: part number, brand, arrival time, done. Says 'what's the VIN' before hello. In chat he answers fast, a line per part, and never an adjective."
+   },
+   "ru": {
+    "full_name": "Павел Мещеряков",
+    "colleagues_call": "Паша",
+    "customers_call": "Павел",
+    "age": 38,
+    "start_months_before_t": 72,
+    "username": "pmeshcheryakov",
+    "biography": "Шесть лет ведёт запчасти для обеих ульяновских площадок, сидит на складе на Московском шоссе. Пришёл из оптовой фирмы, поэтому знает поставщиков изнутри и помнит, кто из них обещает «завтра к обеду», а привозит послезавтра. Заказывает до девяти, после двух обзванивает опоздавших. Трижды предлагал перевести Казань на ульяновского поставщика и до сих пор ждёт оттуда ответа. Суховат, собран, свою часть общей задачи закрывает в тот же день.",
+    "voice": "Говорит отрывисто: номер, бренд, срок. Вместо «здравствуйте» — «VIN скиньте». В чате отвечает быстро, по строке на деталь, без лишних слов."
+   }
+  },
+  {
+   "slot": "10",
+   "status": "active",
+   "site": "main",
+   "role_key": "diagnostic_technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p10.*"
+   },
+   "stories": [
+    "S5"
+   ],
+   "en": {
+    "full_name": "Kevin Lawson",
+    "colleagues_call": "Kevin",
+    "customers_call": "Kevin",
+    "age": 46,
+    "start_months_before_t": 168,
+    "username": "klawson",
+    "biography": "Fourteen years on East Main. A master technician with the advanced engine-performance certificate, and the only one in the company trusted with hybrids and with the electrical faults other shops send away. He bills a third more than the norm without hurrying, because he finds the fault the first time. Quiet, exact, on time every day for fourteen years; he teaches if asked and never offers an opinion in a meeting. When he took two weeks off ten weeks ago, diagnostic work at the flagship backed up within three days.",
+    "voice": "Soft-spoken, exact, no slang. Explains a fault in order: what he tested, what it showed, what that rules out. In chat he writes careful complete sentences and attaches the scan data."
+   },
+   "ru": {
+    "full_name": "Андрей Викторович Шубин",
+    "colleagues_call": "Андрей; молодые — Андрей Викторович",
+    "customers_call": "Андрей Викторович",
+    "age": 44,
+    "start_months_before_t": 144,
+    "username": "ashubin",
+    "biography": "Двенадцать лет в «Ермаке». Начинал автоэлектриком, учился сам и на курсах, и сейчас это единственный человек в компании, которому доверяют гибриды и ту электрику, от которой отказались в других сервисах. Выработка у него на треть выше нормы — не потому, что спешит, а потому, что находит неисправность с первого раза. Тихий, точный, за двенадцать лет ни одного опоздания; объяснит, если спросить, но на планёрке первым не заговорит. Когда десять недель назад он ушёл на две недели в отпуск, диагностика на Московском шоссе встала уже на третий день.",
+    "voice": "Говорит негромко, без жаргона, по порядку: что проверил, что это показало, что это исключает. В чате пишет полными аккуратными фразами и прикладывает снимок экрана со сканера."
+   }
+  },
+  {
+   "slot": "11",
+   "status": "active",
+   "site": "main",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p11.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Dustin Swafford",
+    "colleagues_call": "Dustin",
+    "customers_call": "Dustin",
+    "age": 38,
+    "start_months_before_t": 52,
+    "username": "dswafford",
+    "biography": "The fastest hands in the building, and he knows it. Paid flat rate, he bills thirty percent over the norm on brakes, suspension and heavy line work, and four or five of his jobs in a hundred come back because he skipped the last check to start the next car. He shares custody of two boys, which is behind most of the late mornings and the constant requests to change his shifts; he does not explain and does not apologize. He skips meetings as unpaid time, argues with Randy over every comeback, and twice this year a customer has called the desk to complain about him. Greg keeps him because a fifth of the flagship's billed hours are his.",
+    "voice": "Fast, blunt, sarcastic when pushed: 'it's fixed, I don't know what else to tell you.' Talks over people and uses shop slang with customers. In chat he answers late and in fragments ('cant thurs. can luis take it?') and never replies to a meeting invite except to decline it."
+   },
+   "ru": {
+    "full_name": "Максим Рябов",
+    "colleagues_call": "Макс",
+    "customers_call": "Максим",
+    "age": 36,
+    "start_months_before_t": 46,
+    "username": "mryabov",
+    "biography": "Самые быстрые руки в цехе, и он об этом знает. Работает на сдельной, на ходовой и тормозах даёт на треть больше нормы, а четыре-пять машин из ста возвращаются: последнюю проверку он пропускает, чтобы скорее взять следующую. После развода забирает сыновей по своему графику — отсюда и опоздания, и бесконечные заявки на перенос смен; объяснять и извиняться он не привык. На собрания не ходит («мне за это не платят»), с Михалычем спорит из-за каждого возврата, и дважды за год клиенты звонили на приёмку жаловаться на него. Мельников его держит: пятая часть выработки цеха на Московском шоссе — его.",
+    "voice": "Говорит быстро, резко, перебивает; с клиентом может сорваться на «ты» и на жаргон: «Я сделал, чё ещё надо-то?». В чате отвечает поздно и обрывками: «в чт не могу. лёха выйдет за меня?». Приглашения на собрания отклоняет молча."
+   }
+  },
+  {
+   "slot": "12",
+   "status": "active",
+   "site": "main",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p12.*"
+   },
+   "stories": [],
+   "en": {
+    "full_name": "Luis Herrera",
+    "colleagues_call": "Luis",
+    "customers_call": "Luis",
+    "age": 35,
+    "start_months_before_t": 64,
+    "username": "lherrera",
+    "biography": "Five years on East Main as a general line technician: maintenance, brakes, cooling, timing sets. He came up from Dalton, Georgia, where he learned the trade in his uncle's shop. Steady and careful, and the one Randy pairs with the apprentice because he explains without showing off. He covers Dustin's swaps more often than is fair and has started saying no.",
+    "voice": "Easygoing, polite, measured; switches to Spanish for a customer who starts in it. In chat: short, clear, a thumbs-up for yes."
+   },
+   "ru": {
+    "full_name": "Алексей Карпов",
+    "colleagues_call": "Лёха; при клиентах — Алексей",
+    "customers_call": "Алексей",
+    "age": 33,
+    "start_months_before_t": 58,
+    "username": "akarpov",
+    "biography": "Почти пять лет на Московском шоссе, слесарь-универсал: ТО, тормоза, охлаждение, ремни и цепи. Ремеслу учился у отца в гаражном кооперативе, потом в колледже. Ровный, аккуратный; именно к нему Михалыч ставит ученика, потому что Лёха объясняет, а не красуется. Чаще других подменяет Рябова и в последнее время начал отказывать.",
+    "voice": "Говорит спокойно, вежливо, без спешки. В чате пишет коротко и ясно; на «выйдешь в субботу?» отвечает одним словом — «да» или «не могу»."
+   }
+  },
+  {
+   "slot": "13",
+   "status": "active",
+   "site": "main",
+   "role_key": "electrical_technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p13.*"
+   },
+   "stories": [],
+   "en": {
+    "full_name": "Terry Dotson",
+    "colleagues_call": "Terry",
+    "customers_call": "Terry; Mr. Terry to some",
+    "age": 51,
+    "start_months_before_t": 120,
+    "username": "tdotson",
+    "biography": "Ten years with the shop; before that, fifteen years rebuilding starters and alternators at an auto-electric shop that closed. He does the charging, wiring, air-conditioning and module work that does not need Kevin. Methodical and a little slow, which keeps his comebacks low. He hates being rushed and says so. A deacon at his church, off every Wednesday evening, and he asks for nothing else.",
+    "voice": "Slow, courteous, old-school: 'yes ma'am', 'I'd want to check that before I say.' He does not chat; he answers a message by finding the person."
+   },
+   "ru": {
+    "full_name": "Ильдар Фаритович Нуруллин",
+    "colleagues_call": "Ильдар; молодые — Ильдар Фаритович",
+    "customers_call": "Ильдар Фаритович",
+    "age": 49,
+    "start_months_before_t": 132,
+    "username": "inurullin",
+    "biography": "Одиннадцать лет в «Ермаке», до этого пятнадцать лет перематывал стартеры и генераторы в мастерской, которая потом закрылась. На нём зарядка, проводка, кондиционеры и блоки управления — всё, для чего не нужен Шубин. Работает методично и небыстро, поэтому возвратов у него мало. Не терпит, когда торопят, и говорит об этом прямо. По пятницам в обед уезжает на намаз и больше ни о чём не просит.",
+    "voice": "Говорит неспешно, обстоятельно, с клиентами подчёркнуто вежлив: «Пока не проверю, обещать не буду». В чат почти не пишет — предпочитает подойти и сказать."
+   }
+  },
+  {
+   "slot": "14",
+   "status": "active",
+   "site": "main",
+   "role_key": "apprentice_technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p14.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Hunter Varnell",
+    "colleagues_call": "Hunter",
+    "customers_call": "Hunter",
+    "age": 20,
+    "start_months_before_t": 3.5,
+    "username": "hvarnell",
+    "biography": "Three and a half months in, hired out of a community-college automotive program after the shop lost a mechanic. Good hands, real curiosity, and the attention span of a twenty-year-old: six of his jobs in a hundred come back, usually something left loose, and one day in six he drives home still on the clock and fixes the punch the next morning. He works under Luis and does oil services, brakes and tires on his own. He takes criticism to heart for about a day.",
+    "voice": "Polite and quiet with customers, 'yes sir' to everyone over thirty. Texts like his generation: lower case, 'my bad forgot to clock out again', an emoji when he is nervous."
+   },
+   "ru": {
+    "full_name": "Иван Сурков",
+    "colleagues_call": "Ваня",
+    "customers_call": "Иван",
+    "age": 19,
+    "start_months_before_t": 3.5,
+    "username": "isurkov",
+    "biography": "Работает три с половиной месяца: взяли после колледжа, когда из цеха ушёл механик. Руки хорошие, любопытства много, а внимания пока как у девятнадцатилетнего: шесть работ из ста возвращаются, обычно что-нибудь не дотянул, и раз в шесть смен он уезжает домой, не отметив уход, — утром исправляет. Работает под присмотром Лёхи, сам делает замену масла, колодки и шиномонтаж. Замечания переживает сильно, но недолго.",
+    "voice": "С клиентами тихий и вежливый, старших называет на «вы» и по имени-отчеству. В чате пишет строчными, без точек: «сорян, опять забыл отметиться»; когда волнуется, ставит скобочки."
+   }
+  },
+  {
+   "slot": "15",
+   "status": "active",
+   "site": "main",
+   "role_key": "lube_tyre_technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p15.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Cody Gann",
+    "colleagues_call": "Cody",
+    "customers_call": "Cody",
+    "age": 29,
+    "start_months_before_t": 40,
+    "username": "cgann",
+    "biography": "Three years on the lube and tire bay. He lives out past Soddy-Daisy, drops his daughter at school on the way in and loses the race with Highway 27 on three mornings in ten, by ten or fifteen minutes each time. He has never missed a day, stays late without being asked, and customers ask for him for tires because he torques the wheels by hand and shows them. Everyone likes him, which is why the lateness has been a joke for three years instead of a conversation.",
+    "voice": "Loud, cheerful, talks with his hands: 'I got you, buddy.' Texts 'omw 10 min' most mornings. Short messages, plenty of exclamation marks; he apologizes easily and means it."
+   },
+   "ru": {
+    "full_name": "Евгений Чугунов",
+    "colleagues_call": "Женя; в цехе — Жека",
+    "customers_call": "Женя; Евгений",
+    "age": 28,
+    "start_months_before_t": 34,
+    "username": "echugunov",
+    "biography": "Почти три года на шиномонтаже. Живёт в Новом городе, по дороге завозит дочку в садик и три утра из десяти проигрывает Президентскому мосту — минут на десять-пятнадцать. При этом ни одного прогула, вечером задерживается без просьб, а клиенты записываются «к Жене», потому что колёса он дотягивает ключом у них на глазах. Его все любят, и поэтому опоздания три года остаются поводом для шуток, а не для разговора.",
+    "voice": "Громкий, весёлый, с клиентами на «вы», но по-свойски: «Сейчас всё сделаем в лучшем виде». Почти каждое утро пишет: «еду, буду через 10 мин». Сообщения короткие, с восклицательными знаками; извиняется легко и искренне."
+   }
+  },
+  {
+   "slot": "16",
+   "status": "active",
+   "site": "east",
+   "role_key": "lead_advisor",
+   "rank": "middle",
+   "gender": "female",
+   "extension": "201",
+   "profile": {
+    "ledger_rows": "p16.*"
+   },
+   "stories": [
+    "S5",
+    "S9",
+    "S14"
+   ],
+   "en": {
+    "full_name": "Angie Holloway",
+    "colleagues_call": "Angie",
+    "customers_call": "Angie; some say Miss Angie",
+    "age": 47,
+    "start_months_before_t": 156,
+    "username": "aholloway",
+    "biography": "Thirteen years with the company; she opened the Bonny Oaks counter eleven years ago and has run it since. She remembers the car, the kids and what was declined last time, shows the worn part or a photo before she names a price, and asks for the yes every time. That is why she sells seven recommendations in ten herself; with her at the counter the shop sells better than six in ten, and five in ten when she is off. Organized to the minute and protective of her customers; she trains people by letting them listen to her calls. She has asked for a week off and nobody has yet said who covers it.",
+    "voice": "Warm, unhurried, uses the customer's name twice in the first minute. 'Here's what I'd do if it were my car,' then the price, then two times to choose from. Ends every call with a recap. Her chats read the way she talks, tidy and personal, signed 'Angie'."
+   },
+   "ru": {
+    "full_name": "Светлана Юрьевна Демидова",
+    "colleagues_call": "Света; молодые — Светлана Юрьевна",
+    "customers_call": "Светлана; Светлана Юрьевна",
+    "age": 43,
+    "start_months_before_t": 132,
+    "username": "sdemidova",
+    "biography": "В «Ермаке» одиннадцать лет: пришла, когда открывали сервис в Новом городе, и с первого дня ведёт там приёмку. Помнит машину, имя клиента и то, от чего он отказался в прошлый раз; сначала показывает изношенную деталь или фотографию, потом называет цену и обязательно спрашивает: «Делаем?» Поэтому в её смены клиенты соглашаются на семь рекомендаций из десяти, а без неё — на пять. Собранная, пунктуальная, за своих клиентов стоит горой; новичков учит просто — даёт слушать свои звонки. Попросила неделю отпуска, и пока никто не сказал, кто её заменит.",
+    "voice": "Говорит тепло и без спешки, в первую минуту дважды обращается к клиенту по имени. «Я бы на своей машине сделала так», потом цена, потом два времени на выбор. Каждый разговор заканчивает итогом: что делаем, сколько стоит, когда забирать. В чате пишет так же, как говорит, — аккуратно и по-человечески."
+   }
+  },
+  {
+   "slot": "17",
+   "status": "active",
+   "site": "east",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "male",
+   "extension": "202",
+   "profile": {
+    "ledger_rows": "p17.*"
+   },
+   "stories": [
+    "S5"
+   ],
+   "en": {
+    "full_name": "Josh Tipton",
+    "colleagues_call": "Josh",
+    "customers_call": "Josh",
+    "age": 31,
+    "start_months_before_t": 30,
+    "username": "jtipton",
+    "biography": "Two and a half years at Bonny Oaks, after selling phones at a mall kiosk. Competent, likeable, and comfortable in Angie's shadow: when a call gets hard he puts it on hold and asks her. On her days off the counter is his alone, and his numbers become the shop's numbers. Reliable about showing up, less so about calling back when he said he would.",
+    "voice": "Casual, friendly, a little salesman's patter: 'gotcha', 'we'll get you taken care of.' Names the price before he explains the need and accepts the first 'not today.' In chat he answers when the counter is clear, and a second question can wait an hour."
+   },
+   "ru": {
+    "full_name": "Артём Николаев",
+    "colleagues_call": "Артём; Тёма",
+    "customers_call": "Артём",
+    "age": 30,
+    "start_months_before_t": 26,
+    "username": "anikolaev",
+    "biography": "Два с небольшим года на приёмке в Новом городе, до этого продавал телефоны в салоне связи. Толковый, приятный в общении и привыкший быть в тени Светланы: если разговор становится трудным, ставит клиента на удержание и идёт к ней. В её выходные приёмка остаётся на нём одном, и цифры сервиса становятся его цифрами. На работу приходит исправно, а вот перезвонить, как обещал, может забыть.",
+    "voice": "Говорит легко, по-приятельски: «Понял, принял», «Всё сделаем». Цену называет раньше, чем объяснит, зачем нужна работа, и соглашается на первое же «не сегодня». В чате отвечает, когда освободится стойка; второй вопрос может ждать час."
+   }
+  },
+  {
+   "slot": "18",
+   "status": "active",
+   "site": "east",
+   "role_key": "lead_technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p18.*"
+   },
+   "stories": [],
+   "en": {
+    "full_name": "Andre Simmons",
+    "colleagues_call": "Andre",
+    "customers_call": "Andre",
+    "age": 43,
+    "start_months_before_t": 120,
+    "username": "asimmons",
+    "biography": "Lead technician at Bonny Oaks for ten years, since the year after it opened. Army motor pool, then a dealership, then here. He sets the pace in the east bays, checks the younger technicians' brake and suspension work before it leaves, and takes the overflow diagnostics when Kevin is buried. Even-tempered and first in, and much of the reason the east shop has the fewest comebacks in the company.",
+    "voice": "Calm, direct, a little military: 'copy', 'will do', 'that one's on me.' Explains to a customer at the car, plainly, with no selling. His chat messages are one complete sentence."
+   },
+   "ru": {
+    "full_name": "Валерий Геннадьевич Егоров",
+    "colleagues_call": "Валера; молодые — Валерий Геннадьевич",
+    "customers_call": "Валерий",
+    "age": 45,
+    "start_months_before_t": 132,
+    "username": "vegorov",
+    "biography": "Старший механик в Новом городе с самого открытия, одиннадцать лет. После армии работал в таксопарке, потом у дилера, оттуда и перешёл. Задаёт темп в цехе, проверяет за молодыми тормоза и ходовую перед выдачей и берёт на себя диагностику, когда Шубин завален. Ровный, приходит первым; во многом благодаря ему в Новом городе меньше всего возвратов по компании.",
+    "voice": "Говорит спокойно, коротко, по-армейски: «Принял», «Сделаю», «Мой косяк». Клиенту объясняет у машины, простыми словами, ничего не навязывая. В чате — одно законченное предложение."
+   }
+  },
+  {
+   "slot": "19",
+   "status": "active",
+   "site": "east",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p19.*"
+   },
+   "stories": [],
+   "en": {
+    "full_name": "Brandon Sisk",
+    "colleagues_call": "Brandon",
+    "customers_call": "Brandon",
+    "age": 33,
+    "start_months_before_t": 44,
+    "username": "bsisk",
+    "biography": "Almost four years at Bonny Oaks. A solid general technician who came from a quick-lube chain and has grown into brakes, suspension and air conditioning under Andre. He works at one speed, jokes all day, plays in a band at weekends and is sometimes slow to start on a Monday. Nothing about him worries anyone.",
+    "voice": "Laid-back, funny, a shade too casual with customers: 'she's good to go, boss.' In chat: 'yep' and 'on it.'"
+   },
+   "ru": {
+    "full_name": "Роман Кудряшов",
+    "colleagues_call": "Рома",
+    "customers_call": "Роман",
+    "age": 34,
+    "start_months_before_t": 40,
+    "username": "rkudryashov",
+    "biography": "Три с лишним года в Новом городе. Крепкий слесарь-универсал: пришёл из экспресс-замены масла и под присмотром Егорова дорос до тормозов, ходовой и кондиционеров. Работает в одном темпе, весь день шутит, выходные проводит на рыбалке и в понедельник раскачивается дольше обычного. Беспокойства никому не доставляет.",
+    "voice": "Говорит расслабленно, с шутками, с клиентом иногда слишком по-свойски: «Всё, летает ваша ласточка». В чате — «ок» и «делаю»."
+   }
+  },
+  {
+   "slot": "20",
+   "status": "active",
+   "site": "east",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p20.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Austin Crabtree",
+    "colleagues_call": "Austin",
+    "customers_call": "Austin",
+    "age": 27,
+    "start_months_before_t": 26,
+    "username": "acrabtree",
+    "biography": "A little over two years at Bonny Oaks. A good young technician with a second job he does not talk about: he drives for a delivery app in the evenings to pay down his truck. Usually it costs him only sleep. Two days ago he did not come in and did not call until ten; the shift was flagged and Jordan covered it. He was apologetic and vague, and Greg has not had the conversation with him yet.",
+    "voice": "Quiet, agreeable, hard to read: 'yeah, I can do that.' In chat he replies with one word and reads everything late at night."
+   },
+   "ru": {
+    "full_name": "Антон Блинов",
+    "colleagues_call": "Антон; Тоха",
+    "customers_call": "Антон",
+    "age": 27,
+    "start_months_before_t": 26,
+    "username": "ablinov",
+    "biography": "Чуть больше двух лет в Новом городе. Хороший молодой механик со второй работой, о которой не распространяется: по вечерам таксует, чтобы закрыть кредит за машину. Обычно это стоит ему только сна. Позавчера он не вышел на смену и позвонил лишь к десяти; смену отметили как неявку, его подменил Аюпов. Извинялся, но толком ничего не объяснил, и разговор с Мельниковым ещё впереди.",
+    "voice": "Тихий, покладистый, по нему не поймёшь, что он думает: «Да, могу». В чате отвечает одним словом и читает всё ближе к ночи."
+   }
+  },
+  {
+   "slot": "21",
+   "status": "active",
+   "site": "east",
+   "also_sites": [
+    "main"
+   ],
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p21.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Jordan Akins",
+    "colleagues_call": "Jordan",
+    "customers_call": "Jordan",
+    "age": 30,
+    "start_months_before_t": 34,
+    "username": "jakins",
+    "biography": "Almost three years with the company and the only technician who works both Chattanooga shops by design: based at Bonny Oaks, on East Main two or three days most weeks, wherever Greg has a hole. He likes the variety and the extra hours; the price is that he never quite has his own bay and loses time hunting through other people's tool carts. He says yes to cover shifts, including the one two days ago, and files a few requests of his own to keep Fridays free for his son's ball games.",
+    "voice": "Upbeat, flexible: 'whatever you need.' Confirms a shift in chat within minutes, always with the address, so nobody is confused about which shop."
+   },
+   "ru": {
+    "full_name": "Марат Аюпов",
+    "colleagues_call": "Марат",
+    "customers_call": "Марат",
+    "age": 31,
+    "start_months_before_t": 30,
+    "username": "mayupov",
+    "biography": "Два с половиной года в компании и единственный механик, который по графику работает на обеих площадках: числится в Новом городе, а два-три дня в неделю выходит на Московское шоссе — туда, где у Мельникова дыра. Ему нравятся разнообразие и лишние смены; расплата — нет своего поста, и часть времени уходит на поиски чужого инструмента. На подмены соглашается, в том числе позавчера, а сам время от времени просит освободить ему пятницу: возит сына на тренировки.",
+    "voice": "Говорит бодро, легко соглашается: «Без вопросов, выйду». Смену подтверждает в чате за пару минут и обязательно уточняет адрес, чтобы не приехать не туда."
+   }
+  },
+  {
+   "slot": "22",
+   "status": "active",
+   "site": "west",
+   "role_key": "shop_manager",
+   "rank": "senior",
+   "gender": "male",
+   "extension": "301",
+   "profile": {
+    "ledger_rows": "p22.*"
+   },
+   "stories": [
+    "S2",
+    "S6",
+    "S9"
+   ],
+   "en": {
+    "full_name": "Dale Hutchins",
+    "colleagues_call": "Dale",
+    "customers_call": "Dale",
+    "age": 56,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 228,
+    "username": "dhutchins",
+    "biography": "Nineteen years at the Charlotte Pike shop, eleven of them running it for its previous owner, and he came with it when the Brennans bought it fourteen months ago. He knows every regular in West Nashville by first name and what their daddy drove, and that is real value. He also hears every question from Chattanooga as an accusation: he hired the advisor who was fired over the missing money, and he has forgiven neither himself nor the people who found it. He posts the roster late, lets half of the owners' tasks run past due, answers the phone as if it had interrupted him, and usually skips a Monday meeting that starts half an hour before his shop opens. He is not lazy; he runs the shop the way it ran ten years ago and is waiting to be told he is not trusted.",
+    "voice": "Gravelly, slow, Middle Tennessee. Warm with people he knows ('how's your mama doing?') and curt with strangers: 'Brennan's.' 'Yep.' 'Bring it by.' Offers no time and no price on the phone and seldom takes a name. In chat he answers the next day, if at all: 'will do', 'handled'."
+   },
+   "ru": {
+    "full_name": "Ринат Фаридович Галиев",
+    "colleagues_call": "Ринат Фаридович; в Ульяновске — Ринат",
+    "customers_call": "Ринат Фаридович; давние клиенты — Ринат",
+    "age": 54,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 192,
+    "username": "rgaliev",
+    "biography": "Шестнадцать лет на Технической, десять из них руководил сервисом при прежнем владельце и остался, когда четырнадцать месяцев назад его купили Ермолаевы. Знает по имени каждого постоянного клиента и помнит, на чём ездил его отец, — это настоящая ценность. Но любой вопрос из Ульяновска слышит как упрёк: мастера-приёмщика, которого уволили за недостачу, на работу брал он сам и не простил этого ни себе, ни тем, кто недостачу нашёл. График выкладывает в последний момент, половину задач от владельцев закрывает с опозданием, трубку берёт так, будто его оторвали от дела, а планёрку по понедельникам, которая начинается за час до открытия его сервиса, чаще пропускает. Он не лентяй: он ведёт сервис так, как вёл его десять лет назад, и ждёт, когда ему скажут, что ему не доверяют.",
+    "voice": "Говорит глуховато, неторопливо. Со знакомыми тепло («Как отец, здоров?»), с незнакомыми сухо: «Сервис. Да. Приезжайте, посмотрим». Время и цену по телефону не называет, имя спрашивает редко; со своими в цехе легко переходит на татарский. В чате отвечает на следующий день, если отвечает: «принял», «сделаем»."
+   }
+  },
+  {
+   "slot": "23",
+   "status": "active",
+   "site": "west",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "male",
+   "extension": "302",
+   "profile": {
+    "ledger_rows": "p23.*"
+   },
+   "stories": [
+    "S2",
+    "S6"
+   ],
+   "en": {
+    "full_name": "Chad Binkley",
+    "colleagues_call": "Chad",
+    "customers_call": "Chad",
+    "age": 42,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 96,
+    "username": "cbinkley",
+    "biography": "Eight years at the Charlotte Pike counter, all of them under Dale, who taught him the job the way Dale does it. Chad writes up what the customer asks for and nothing more; he thinks recommending work is pushing people, so he mentions it at pick-up, when it is too late. He lets the phone ring when someone is standing in front of him, says 'should be ready tomorrow' without calling the parts house, and twice in the last month knocked twelve percent off a bill to end an argument without asking anyone. Decent, tired, and convinced the new owners' system is there to catch him out.",
+    "voice": "Flat, mumbling, sighs before he answers. 'Brennan Auto.' Long silences while he looks something up without saying so; 'I'll have to call you back', and then he does not. Promises a date to get off the phone. His chat replies come at the end of the day: 'its not here yet'."
+   },
+   "ru": {
+    "full_name": "Вячеслав Крюков",
+    "colleagues_call": "Слава",
+    "customers_call": "Вячеслав",
+    "age": 40,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 84,
+    "username": "vkryukov",
+    "biography": "Семь лет на приёмке на Технической, и все семь — под началом Галиева, который и научил его работать так, как работает сам. Оформляет то, о чём попросил клиент, и ни строчкой больше: рекомендации считает навязыванием и вспоминает о них при выдаче, когда уже поздно. Если перед ним стоит человек, телефон не берёт; «завтра будет готово» говорит, не позвонив поставщику; за последний месяц дважды сбросил по двенадцать процентов, чтобы закончить спор, и ни у кого не спросил. Человек незлой, уставший и уверенный, что новую систему поставили, чтобы ловить его на ошибках.",
+    "voice": "Говорит монотонно, невнятно, перед ответом вздыхает. «Сервис, слушаю». Подолгу молчит, пока ищет в программе, не предупредив; «я вам перезвоню» — и не перезванивает. Сроки обещает, лишь бы закончить разговор. В чате отвечает под вечер: «пока не пришло»."
+   }
+  },
+  {
+   "slot": "24",
+   "status": "active",
+   "site": "west",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "female",
+   "extension": "303",
+   "profile": {
+    "ledger_rows": "p24.*"
+   },
+   "stories": [
+    "S6"
+   ],
+   "en": {
+    "full_name": "Jasmine Bolden",
+    "colleagues_call": "Jasmine; Jas",
+    "customers_call": "Jasmine",
+    "age": 27,
+    "start_months_before_t": 10,
+    "username": "jbolden",
+    "biography": "Hired ten months ago, four months after the purchase, and the first person at Charlotte Pike chosen by the new owners. Four years in a dealership's service lane taught her the walk-around, the written estimate and the follow-up call, and she uses all three. She answers on the second ring, sells well over half of what the technicians find, and has rewritten the shop's saved chat replies on her own time. She gets along with Dale by not asking permission for what is already her job. She is the proof that the Nashville numbers are a habit, not a market.",
+    "voice": "Clear, upbeat, professional: 'Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.' Confirms name, number and vehicle, then offers two times. Says 'what I can do is' instead of 'no.' Her chat replies are prompt and organized, with the estimate attached."
+   },
+   "ru": {
+    "full_name": "Камила Шакирова",
+    "colleagues_call": "Камила",
+    "customers_call": "Камила",
+    "age": 25,
+    "start_months_before_t": 10,
+    "username": "kshakirova",
+    "biography": "Работает десять месяцев: её взяли через четыре месяца после покупки сервиса, и это первый человек на Технической, которого выбирали новые владельцы. Три года на приёмке у официального дилера приучили её к осмотру вместе с клиентом, понятной смете и звонку после ремонта — всем этим она пользуется. Трубку берёт со второго гудка, продаёт больше половины того, что находят механики, и по своей инициативе переписала шаблоны ответов в чате. С Галиевым ладит просто: не спрашивает разрешения на то, что и так входит в её работу. Она — доказательство того, что казанские цифры объясняются привычкой, а не рынком.",
+    "voice": "Говорит чётко, приветливо, по стандарту: «Ермак-Сервис, Казань, Камила, здравствуйте». Уточняет имя, номер и машину, потом предлагает два времени. Вместо «нет» говорит «давайте сделаем так». В чате отвечает быстро и по пунктам, смету прикладывает файлом."
+   }
+  },
+  {
+   "slot": "25",
+   "status": "active",
+   "site": "west",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p25.*"
+   },
+   "stories": [
+    "S6"
+   ],
+   "en": {
+    "full_name": "Gary Tidwell",
+    "colleagues_call": "Gary; Mr. Gary to the young ones",
+    "customers_call": "Gary",
+    "age": 59,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 264,
+    "username": "gtidwell",
+    "biography": "Twenty-two years in the same bay on Charlotte Pike; he has outlasted two owners and three signs. He does engines, front ends and anything with a carburetor that still wanders in, and bills a tenth over the norm by never stopping. He says little, trusts Dale, and regards the argument about suppliers as office business. The part-timer learns the trade at his elbow.",
+    "voice": "Dry, sparing, deadpan: 'it's wore out.' Explains with the old part in his hand. He does not chat; he reads the schedule and that is all."
+   },
+   "ru": {
+    "full_name": "Фарит Мансурович Зиннатуллин",
+    "colleagues_call": "Фарит абый; Фарит Мансурович",
+    "customers_call": "Фарит Мансурович",
+    "age": 58,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 228,
+    "username": "fzinnatullin",
+    "biography": "Девятнадцать лет на одном и том же посту на Технической, пережил двух владельцев и три вывески. Двигатели, ходовая и всё карбюраторное, что ещё заезжает; выработка на десятую выше нормы — просто потому, что он не останавливается. Говорит мало, Галиеву верит, а спор о поставщике считает делом конторы. Молодые механики зовут его Фарит абый и ходят к нему за советом.",
+    "voice": "Говорит скупо, с невозмутимым лицом: «Износ. Менять». Объясняет со старой деталью в руке. В чат не пишет, смотрит только график."
+   }
+  },
+  {
+   "slot": "26",
+   "status": "active",
+   "site": "west",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p26.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Shane Maddox",
+    "colleagues_call": "Shane",
+    "customers_call": "Shane",
+    "age": 36,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 50,
+    "username": "smaddox",
+    "biography": "Four years on Charlotte Pike. A capable general technician who does what the day asks and no more. Twice he has clocked in from the line at a biscuit drive-through down the pike, about 2,000 feet (600 m) short of the shop, because the line was long and the clock was running; both punches were flagged for distance. He was annoyed to be asked about it. Otherwise unremarkable, which at Charlotte Pike counts as good.",
+    "voice": "Even, a little sardonic: 'it is what it is.' Short chat replies, no punctuation."
+   },
+   "ru": {
+    "full_name": "Станислав Орехов",
+    "colleagues_call": "Стас",
+    "customers_call": "Станислав",
+    "age": 35,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 44,
+    "username": "sorekhov",
+    "biography": "Почти четыре года на Технической. Толковый слесарь-универсал, делает ровно то, что требует день, и не больше. Дважды отметил приход из машины, стоя в очереди на заправке в шестистах метрах от сервиса: очередь была длинной, а время шло; обе отметки система пометила из-за расстояния. Расспросам об этом был не рад. В остальном ничем не выделяется — на Технической это уже неплохо.",
+    "voice": "Говорит ровно, с лёгкой усмешкой: «Ну а что делать». В чате отвечает коротко, без знаков препинания."
+   }
+  },
+  {
+   "slot": "27",
+   "status": "active",
+   "site": "west",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "p27.*"
+   },
+   "stories": [
+    "S1",
+    "S6"
+   ],
+   "en": {
+    "full_name": "Derek Hooper",
+    "colleagues_call": "Derek",
+    "customers_call": "Derek",
+    "age": 41,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 62,
+    "username": "dhooper",
+    "biography": "Five years on Charlotte Pike, and the shop's brake and tire man by habit: most of the pads and rotors go to his bay. Seven of his jobs in a hundred come back, the worst rate in the company. Some of that is the bargain pads the old supplier sends, which squeal and wear fast on anyone's work. Some is his own: he does not clean and lubricate the caliper slides or measure rotor runout unless someone is watching, and on good pads his jobs still come back five times in a hundred, against two for everyone else. He is not careless about people, he coaches his son's baseball team, but nobody has ever shown him his own numbers. The electrical contractor's two vans were his.",
+    "voice": "Easygoing, talkative, defensive about comebacks: 'them pads are junk, I told Dale.' Explains loosely: 'it's just bedding in.' In chat: rare, friendly, misspelled."
+   },
+   "ru": {
+    "full_name": "Виталий Сомов",
+    "colleagues_call": "Виталик",
+    "customers_call": "Виталий",
+    "age": 40,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 56,
+    "username": "vsomov",
+    "biography": "Почти пять лет на Технической; тормоза и шиномонтаж достаются ему по привычке — большинство колодок и дисков проходит через его пост. Из ста его работ возвращаются пять — больше, чем у любого опытного механика в компании. Отчасти виноваты дешёвые колодки старого поставщика: они скрипят и быстро стираются у кого угодно. Отчасти — он сам: направляющие суппортов не чистит и не смазывает, биение диска не меряет, пока никто не смотрит, и даже на хороших колодках у него возвращаются пять работ из ста против двух у остальных. Человек он не равнодушный — тренирует дворовую хоккейную команду сына, — просто ему ни разу не показали его собственные цифры. Оба фургона электромонтажников делал он.",
+    "voice": "Говорит охотно, по-простому; на разговор о возвратах обижается: «Да колодки — дрова, я Ринату Фаридовичу говорил». Объясняет расплывчато: «Притрётся — перестанет». В чат пишет редко, дружелюбно, с ошибками."
+   }
+  },
+  {
+   "slot": "28",
+   "status": "active",
+   "site": "west",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "employment": "part-time",
+   "profile": {
+    "ledger_rows": "p28.*"
+   },
+   "stories": [],
+   "en": {
+    "full_name": "Tyler Jarrell",
+    "colleagues_call": "Tyler",
+    "customers_call": "Tyler",
+    "age": 22,
+    "start_months_before_t": 9,
+    "username": "tjarrell",
+    "biography": "Part-time for nine months, three days a week around his classes in a technical-college automotive program. He does maintenance, tires and whatever Gary hands him. He learns fast when someone teaches, and at Charlotte Pike that is mostly Gary. His shift requests are all about exam weeks.",
+    "voice": "Polite, a little shy on the phone, 'yes sir.' In chat: prompt, lower case, and he asks before he assumes."
+   },
+   "ru": {
+    "full_name": "Булат Гарипов",
+    "colleagues_call": "Булат",
+    "customers_call": "Булат",
+    "age": 21,
+    "start_months_before_t": 8,
+    "username": "bgaripov",
+    "biography": "Восемь месяцев работает на неполную ставку, три дня в неделю; остальное время учится на четвёртом курсе по автомобильной специальности. Делает ТО, шиномонтаж и всё, что поручит Фарит абый. Схватывает быстро, когда есть кому показать, а на Технической это в основном Зиннатуллин. Поменять смену просит только на время сессии.",
+    "voice": "Вежливый, по телефону немного стесняется, старших называет на «вы». В чате отвечает сразу, строчными буквами, и переспрашивает, если не уверен."
+   }
+  },
+  {
+   "slot": "29",
+   "status": "active",
+   "site": "main",
+   "also_sites": [
+    "east"
+   ],
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "female",
+   "extension": "105",
+   "employment": {
+    "en": "part-time: Saturday mornings and cover days",
+    "ru": "full-time, on the two-on, two-off rota with slot 6"
+   },
+   "profile": {
+    "ledger_rows": "p29.*"
+   },
+   "stories": [
+    "S3",
+    "S5"
+   ],
+   "en": {
+    "full_name": "Brenda Pickett",
+    "colleagues_call": "Brenda; the technicians say Miss Brenda",
+    "customers_call": "Brenda",
+    "age": 58,
+    "start_months_before_t": 204,
+    "username": "bpickett",
+    "biography": "Seventeen years at the East Main counter, the first fourteen of them full-time. She wrote service for Ray when the tickets were carbon paper, trained Travis on the desk, and went down to part-time three years ago when her husband retired and bought a boat. Now she works every Saturday morning with whichever advisor has the turn, and she is the first call when someone is out sick or on leave; from April to August, after Brad left and before Caleb came, that was two or three days a week. She knows the regulars' cars, their children and which of them will want the old parts back in a box. She sells what the car needs and no more, takes a careful message, and reads the booking back, though seldom the address. The computer is the part of the job she tolerates: she types with two fingers and would rather walk a chat reply over to Maya.",
+    "voice": "Unhurried, warm, a little formal: 'Brennan Auto Care, this is Brenda, how can I help you this morning?' Calls customers 'hon' once she knows them and 'sir' or 'ma'am' until then. Asks what the car is doing before she says a word about price. In chat: slow, correct, complete sentences, signed '- Brenda'."
+   },
+   "ru": {
+    "full_name": "Татьяна Геннадьевна Пахомова",
+    "colleagues_call": "Татьяна Геннадьевна; свои — Таня",
+    "customers_call": "Татьяна",
+    "age": 49,
+    "start_months_before_t": 84,
+    "username": "tpakhomova",
+    "biography": "Семь лет на приёмке на Московском шоссе, а до того двенадцать — у официального дилера, откуда ушла, когда тот закрылся. Работает два через два в одной смене с Алиной и без лишних слов прикрывает её там, где той пока не хватает опыта: спорный наряд, недовольный клиент, разговор с механиком на повышенных тонах. Постоянных клиентов помнит по машинам и по тому, кто из них попросит вернуть старые детали. Лишнего не продаёт и не уговаривает, зато всё, о чём договорились, записывает и проговаривает клиенту ещё раз — время и работу, адрес обычно забывает. К чатам относится как к неизбежному: отвечает грамотно, но не сразу, и при случае просит Алину «написать как надо».",
+    "voice": "Говорит спокойно, обстоятельно, с дилерской выучкой: «Ермак-Сервис, Татьяна, добрый день, слушаю вас». С клиентами только на «вы» и по имени-отчеству, если знает. Сначала расспрашивает, что с машиной, и только потом называет цену. В чате пишет полными предложениями, без смайликов и сокращений."
+   }
+  },
+  {
+   "slot": "F1",
+   "status": "former",
+   "left": "fired",
+   "site": "west",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "gender": "male",
+   "extension": "304",
+   "extension_note": "his while he worked; retired when he left. The shop had three advisors then: F1, 23 and 24",
+   "profile": {
+    "ledger_rows": "pF1.*"
+   },
+   "stories": [
+    "S2"
+   ],
+   "en": {
+    "full_name": "Brent Lassiter",
+    "colleagues_call": "Brent",
+    "customers_call": "Brent",
+    "age": 38,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 86,
+    "end_months_before_t": 5,
+    "username": "blassiter",
+    "biography": "Seven years at the Charlotte Pike counter, the last nine months of them for the Brennans. Charming, quick, the advisor the regulars liked best and the one Dale trusted to close the till. Three months after the sale he began taking cash on small jobs and entering a discount of 15 to 30 percent that nobody had approved, or voiding the order after payment, and he parked many of them on the walk-in customer record. In six months about 11,400 dollars went missing, and the drawer was short on nineteen of the days he closed it. Donna caught it checking the tills against the payments, Claire asked the data, and he was let go five months ago. He told Dale it had started with a truck payment he was behind on.",
+    "voice": "Smooth, fast, on first names at once: 'I'll take care of you.' Easy on the phone and vague on paper. Offers 'a little something off for cash' without being asked."
+   },
+   "ru": {
+    "full_name": "Артур Назаров",
+    "colleagues_call": "Артур",
+    "customers_call": "Артур",
+    "age": 36,
+    "start_months_before_t": 14,
+    "at_shop_since_months_before_t": 74,
+    "end_months_before_t": 5,
+    "username": "anazarov",
+    "biography": "Пять лет проработал на приёмке на Технической до продажи сервиса и ещё девять месяцев — уже при Ермолаевых. Обаятельный, быстрый, любимец постоянных клиентов; именно ему Галиев доверял закрывать кассу. Через три месяца после продажи начал брать наличные мимо кассы: проводил скидку в пятнадцать-тридцать процентов, которую никто не согласовывал, списывал запчасти со склада на своё имя без продажи и договаривался с клиентами о работах сверх наряда — механики тратили на машину больше часов, чем было продано. Многие такие наряды он оформлял на общую карточку «Розничный покупатель». За полгода, по оценке, набежало около трёхсот двадцати тысяч рублей. Заметила это Ирина Владимировна, когда сверяла кассу с оплатами, Екатерина Николаевна подняла данные, и пять месяцев назад его уволили. Галиеву он сказал, что всё началось с просроченного платежа по автокредиту.",
+    "voice": "Говорит гладко, быстро, сразу по имени: «Сделаем в лучшем виде, не переживайте». По телефону убедителен, в документах небрежен. Сам предлагает: «За наличные сделаю скидочку»."
+   }
+  },
+  {
+   "slot": "F2",
+   "status": "former",
+   "left": "fired",
+   "site": "main",
+   "role_key": "technician",
+   "rank": "worker",
+   "gender": "male",
+   "extension": null,
+   "profile": {
+    "ledger_rows": "pF2.*"
+   },
+   "stories": [
+    "S14"
+   ],
+   "en": {
+    "full_name": "Wes Tate",
+    "colleagues_call": "Wes",
+    "customers_call": "Wes",
+    "age": 33,
+    "start_months_before_t": 30,
+    "end_months_before_t": 4,
+    "username": "wtate",
+    "biography": "Two years and two months on East Main. For the first year and a half he was a capable line technician. Then he started doing side work in his own garage at night; he came in late four mornings in ten and tired on the rest, and his jobs began to come back. Greg warned him twice in writing, and in his last two months he missed five days without calling. He was let go four months ago, without a scene on either side; he works for himself now.",
+    "voice": "Tired and short: 'yeah, running behind.' He rarely answered a chat."
+   },
+   "ru": {
+    "full_name": "Константин Жарков",
+    "colleagues_call": "Костя",
+    "customers_call": "Константин",
+    "age": 32,
+    "start_months_before_t": 27,
+    "end_months_before_t": 4,
+    "username": "kzharkov",
+    "biography": "Почти два года на Московском шоссе. Первые полтора — нормальный, грамотный слесарь. Потом начал по ночам «гаражить», брать клиентов в собственный бокс; на работу приходил с опозданием четыре утра из десяти, в остальные — невыспавшимся, и его машины стали возвращаться. Мельников дважды предупреждал его письменно; за последние два месяца Костя пять раз не вышел, не позвонив. Четыре месяца назад его уволили. Расстались без скандала: теперь он работает на себя.",
+    "voice": "Говорит устало и коротко: «Да, задерживаюсь». На сообщения в чате почти не отвечал."
+   }
+  },
+  {
+   "slot": "F3",
+   "status": "former",
+   "left": "resigned",
+   "site": "main",
+   "role_key": "service_advisor",
+   "rank": null,
+   "rank_note": "left before the product arrived; no account",
+   "gender": "male",
+   "extension": "103",
+   "extension_note": "his while he worked; now slot 7's",
+   "profile": {
+    "ledger_rows": "pF3.*"
+   },
+   "stories": [
+    "S3"
+   ],
+   "en": {
+    "full_name": "Brad Keller",
+    "colleagues_call": "Brad",
+    "customers_call": "Brad",
+    "age": 36,
+    "start_months_before_t": 58,
+    "end_months_before_t": 7,
+    "username": "bkeller",
+    "biography": "Advisor on East Main for a little over four years; he resigned seven months ago for a service-writer job at a dealership across town that paid more. He was good with the company accounts, several of which dealt only with him. He left before Traciora arrived, so he exists in the shop system and nowhere else. His desk stood empty for four months, until Caleb was hired; Brenda covered it two or three days a week.",
+    "voice": "No recorded calls. In order notes he is brisk and abbreviates, and signs 'BK'."
+   },
+   "ru": {
+    "full_name": "Вадим Савельев",
+    "colleagues_call": "Вадим",
+    "customers_call": "Вадим",
+    "age": 35,
+    "start_months_before_t": 52,
+    "end_months_before_t": 7,
+    "username": "vsavelyev",
+    "biography": "Без малого четыре года проработал мастером-приёмщиком на Московском шоссе и семь месяцев назад ушёл к официальному дилеру на другой конец города: там предложили больше. Хорошо ладил с корпоративными клиентами, некоторые работали только с ним. Уволился до появления Traciora, поэтому остался только в учётной программе сервиса. Его место четыре месяца пустовало, пока не взяли Никиту: всё это время Григорьев в свои смены стоял на приёмке один.",
+    "voice": "Записей звонков нет. В комментариях к нарядам пишет сжато, с сокращениями, подписывается «В. С.»."
+   }
+  },
+  {
+   "slot": "F4",
+   "status": "former",
+   "left": "contract ended",
+   "site": "main",
+   "role_key": "seasonal_helper",
+   "rank": "worker",
+   "rank_note": "worker rank, per build: he has a person, a worker login, shifts and punches only for those of his weeks that fall inside the product period (card S11); outside them he is a row of the shop system",
+   "gender": "male",
+   "extension": null,
+   "employment": "seasonal, fixed-term",
+   "profile": {
+    "ledger_rows": "pF4.*"
+   },
+   "stories": [
+    "S11"
+   ],
+   "en": {
+    "full_name": "Mason Pruitt",
+    "colleagues_call": "Mason",
+    "customers_call": "Mason",
+    "age": 20,
+    "seasons_calendar": "ten weeks from the first Monday of June, in each summer inside the two years of history (proposed)",
+    "username": "mpruitt",
+    "biography": "Summer helper on East Main for ten weeks in each of the last two summers: tires, oil services, shuttle runs, sweeping up. A mechanical-engineering student from Ooltewah who wanted grease on his hands. Punctual, careful and slow. He left at the end of his contract to go back to school, and Randy would have him back.",
+    "voice": "Polite, earnest, asks twice to be sure."
+   },
+   "ru": {
+    "full_name": "Рустам Юсупов",
+    "colleagues_call": "Рустам",
+    "customers_call": "Рустам",
+    "age": 24,
+    "seasons_calendar": "six weeks from the first Monday of April and six weeks from the first Monday of October, in each season inside the two years of history (proposed)",
+    "username": "ryusupov",
+    "biography": "Сезонный шиномонтажник: выходит на шесть недель весной и на шесть осенью, когда на Московском шоссе очередь на переобувку стоит до ворот. В остальное время работает на стройке у дяди. Быстрый, выносливый, с Женей Чугуновым работает в паре без слов. Договор срочный и заканчивается вместе с сезоном; Михалыч каждый раз зовёт его остаться.",
+    "voice": "Немногословный, вежливый: «Готово, можно забирать»."
+   }
+  }
+ ]
+}

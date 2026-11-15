@@ -1,0 +1,135 @@
+{
+ "path": "policies/discounts.md",
+ "title": "Discount policy",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The discount rule created after story S2.",
+ "serves": [
+  "S2",
+  "S8",
+  "challenge:policy-vs-team-note",
+  "operate:find-what-changed",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 298,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "In force from {{@discount_rule}} (T-5 months), created by slot 2 (design S2).",
+  "Up to and including 10 %: the advisor, with a written reason. Over 10 %: the shop manager before the bill is closed, recorded on the order (ERP repair_order: who approved a discount).",
+  "Approvers: slot 4 for main and east, slot 22 for west; slot 2 as fallback; lead advisors cannot approve.",
+  "The 10 % is measured on the bill before sales tax (design 7.2 S8).",
+  "No cash discount; no rounding down; no discount without a reason.",
+  "Company-account price class, warranty orders and goodwill are defined; goodwill over 10 % needs the same approval.",
+  "Slot 2's Friday report \"Discounts over 10 %\" (design S10) is the check.",
+  "S8: 80 USD off a bill of 741.60 before tax is 10.8 %, approved by slot 4 and recorded: inside the rule. Slot 23 gave 12 % twice last month with no approver: outside it.",
+  "The team note \"discounts above 10 % need the shop manager's approval\" (S2) agrees with this page."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "The rule",
+   "item": "Up to 10 % of the bill: an advisor may give it. Write the reason on the order."
+  },
+  {
+   "section": "The rule",
+   "item": "More than 10 %: the shop manager approves it before the bill is closed, and the order shows who approved. That is Greg for East Main and Bonny Oaks and Dale for Charlotte Pike. If he is out, call me. A lead advisor cannot approve it."
+  },
+  {
+   "section": "The rule",
+   "item": "The 10 % is measured on the bill before sales tax, labour and parts together."
+  },
+  {
+   "section": "The rule",
+   "item": "Anything that makes the bill smaller is a discount: money off a line, hours cut \"to help\", a part given away, a fee left off."
+  },
+  {
+   "section": "What is not allowed at any percentage",
+   "item": "A discount for cash. There is none. If a customer says somebody here used to give one, the answer is that the price is the price."
+  },
+  {
+   "section": "What is not allowed at any percentage",
+   "item": "Rounding a bill down to end a conversation."
+  },
+  {
+   "section": "What is not allowed at any percentage",
+   "item": "A discount with no reason written."
+  },
+  {
+   "section": "What is not a discount",
+   "item": "The company-account rate that Nickajack Delivery and Millsaps Heating & Plumbing pay. That is a price class."
+  },
+  {
+   "section": "What is not a discount",
+   "item": "A warranty repair. That is a warranty order with no charge, tied to the first order."
+  },
+  {
+   "section": "What is not a discount",
+   "item": "Goodwill: when we got something wrong and make it right. Goodwill over 10 % follows the same rule as any discount: the shop manager, on the order."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Nickajack Delivery"
+  },
+  {
+   "account": "A2",
+   "name": "Millsaps Heating & Plumbing"
+  }
+ ],
+ "dates": [
+  "{{@discount_rule|date}}",
+  "{{@belt_proposal|date}}"
+ ],
+ "new_facts": [
+  "The advisor's own limit is \"up to 10 % with a written reason\"; lead advisors cannot approve over 10 %; slot 2 is the fallback approver. Reason: the design gives only the 10 % line.",
+  "Definition of what counts as a discount (hours cut, a part given away, a fee left off)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the line \"The 10 % is measured on the bill before sales tax\" after the timing-belt discount (stories/S02: revisions as slot 2, then slot 4); message: \"Before tax. It came up on the timing belt bill.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same rule and percentages. The Russian leak looks different (R11: work done past the order, parts written off with no sale), so the list \"what is not allowed\" adds: work without an order, a part issued without an order line. Approvers: slots 4 and 22."
+ ]
+}

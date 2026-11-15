@@ -1,0 +1,129 @@
+{
+ "path": "shops/main/opening-and-closing.md",
+ "title": "Московское шоссе: открытие и закрытие",
+ "title_en": "East Main: opening and closing",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/main/opening-and-closing.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Opening and closing checklist for the flagship: who, till float, where the deposit goes.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S3",
+  "S2"
+ ],
+ "length_class": "short",
+ "words_ru": 203,
+ "links_to": [
+  "how-to/missed-calls-and-call-backs.md",
+  "how-to/closing-the-till.md",
+  "shops/main/saturdays.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Opening 9:00, closing 20:00. The fix of S3 in its Russian form (stories/S03, per market): before, the day's second advisor started at 11:30; since @early_desk both of the day's pair start at 9:00.",
+  "No key drop box: step 2 is the night's messages (answering machine, chats, missed calls).",
+  "Online cash register: the shift is opened and closed on it; cash goes into a sealed bag; weekend bags are banked on Monday."
+ ],
+ "new_facts": [
+  "Till float at the flagship 5 000 RUB. The ERP cash_drawer_close figures treat the float as how-to/closing-the-till.md says.",
+  "Weekend takings are banked on Monday."
+ ],
+ "new_amounts": [
+  {
+   "value": 5000,
+   "why": "размен в кассе, Московское шоссе"
+  },
+  {
+   "value": 5000,
+   "why": "размен в кассе, Московское шоссе"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Открытие",
+   "item": "Снять с сигнализации. Код передаётся лично и нигде не записывается. Здесь тоже."
+  },
+  {
+   "section": "Открытие",
+   "item": "Разобрать то, что пришло за ночь: автоответчик, чаты, список пропущенных — Пропущенные звонки и перезвоны."
+  },
+  {
+   "section": "Открытие",
+   "item": "Открыть смену на кассе, пересчитать размен: 5 000 ₽. Записать в лист пересчёта."
+  },
+  {
+   "section": "Открытие",
+   "item": "Кофе, свет в зоне ожидания, дверь — ровно в 9:00. Люди стоят с без десяти."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Все машины клиентов — в боксах или на закрытой территории. Ключи в шкафу, шкаф заперт."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Закрыть кассу: Закрытие смены и кассы. Размен 5 000 ₽ остаётся в ящике. Остальное — в сейф-пакет."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Сейф-пакет — в сейф бухгалтерии. Ирина Владимировна сдаёт выручку в банк на следующий рабочий день; пакеты за субботу и воскресенье — в понедельник."
+  },
+  {
+   "section": "Закрытие",
+   "item": "Ворота постов, компрессор (спросите последнего механика), свет, сигнализация, ворота территории."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Михалыч",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "amounts": [
+  5000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "opening section rewritten for the early desk shift, missed-call list added as step 3; message: \"Early desk from today.\"",
+   "message_ru": "С сегодняшнего дня оба мастера-приёмщика с девяти."
+  }
+ ],
+ "has_history": true
+}

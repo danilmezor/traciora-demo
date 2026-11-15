@@ -1,0 +1,98 @@
+{
+ "path": "accounts/opening-a-company-account.md",
+ "title": "Opening a company account",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Who qualifies for an account and the steps to open one.",
+ "serves": [
+  "S1",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_en": 167,
+ "links_to": [
+  "accounts/company-account-terms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Threshold: five vehicles and six months as a paying customer.",
+  "Credit application names an approver and a payer.",
+  "Slot 2 approves and sets the credit limit.",
+  "Terms: 15 days under ten vehicles, 30 days from ten (matches A3 with 9 and A4 with 8 at 15 days; A5 with 11, A6 with 10, A1 and A2 at 30).",
+  "Slot 4 writes the account page and the terms-table row; slot 3 sets terms in the shop system (ERP customer: payment terms and credit limit).",
+  "The company rate is by agreement with slot 2 only."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Opening a company account",
+   "item": "Five vehicles or more, and at least six months as a customer paying at the counter."
+  },
+  {
+   "section": "Opening a company account",
+   "item": "The business fills in the credit application (Donna has the form) and names one person who approves work and one who pays bills. They may be the same person."
+  },
+  {
+   "section": "Opening a company account",
+   "item": "I approve it and set the credit limit. Nobody else opens an account."
+  },
+  {
+   "section": "Opening a company account",
+   "item": "Terms: 15 days for a fleet of fewer than ten vehicles, 30 days from ten up."
+  },
+  {
+   "section": "Opening a company account",
+   "item": "Greg writes the account's page in this folder and adds the row to the terms table: approver, anything the shop needs to know. No page, no account."
+  },
+  {
+   "section": "Opening a company account",
+   "item": "Donna sets the customer up in the shop system with its terms. From that day its vehicles are not charged at the counter."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-10mo|date}}"
+ ],
+ "new_facts": [
+  "The fleet-size rule for terms (15 days under ten vehicles, 30 from ten). Reason: explains the two payment terms in accounts.json with one rule.",
+  "Six months as a counter customer before an account."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: договор на обслуживание with отсрочка платежа 14 or 30 days; the company gives its реквизиты (ИНН, КПП) instead of a credit application."
+ ]
+}

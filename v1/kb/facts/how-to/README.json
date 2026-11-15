@@ -1,0 +1,105 @@
+{
+ "path": "how-to/README.md",
+ "title": "How we do things",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Index of the counter procedures, in the order a job passes through them.",
+ "serves": [
+  "operate:overview",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_en": 101,
+ "links_to": [
+  "how-to/taking-a-call.md",
+  "how-to/price-objections.md",
+  "how-to/booking-a-visit.md",
+  "how-to/checking-a-car-in.md",
+  "how-to/company-vehicle-at-the-counter.md",
+  "shop-floor/courtesy-inspection.md",
+  "how-to/writing-an-estimate.md",
+  "how-to/getting-approval.md",
+  "parts/ordering-parts.md",
+  "how-to/handing-a-car-back.md",
+  "how-to/closing-the-till.md",
+  "how-to/a-comeback-at-the-counter.md",
+  "policies/complaints.md",
+  "how-to/missed-calls-and-call-backs.md",
+  "how-to/chats-and-messages.md",
+  "how-to/stocktake-day.md",
+  "how-to/using-this-knowledge-base.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Nine steps from the call to the till, each a page; steps 4, 5 and 6 are the procedure spread over three pages (inspection, estimate, approval).",
+  "Four side pages and two \"when it goes wrong\" pages."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "How we do things",
+   "item": "Taking a call, and when the customer pushes back: Price objections"
+  },
+  {
+   "section": "How we do things",
+   "item": "Booking a visit"
+  },
+  {
+   "section": "How we do things",
+   "item": "Checking a car in. A company vehicle: also this"
+  },
+  {
+   "section": "How we do things",
+   "item": "The technician's courtesy inspection"
+  },
+  {
+   "section": "How we do things",
+   "item": "Writing an estimate"
+  },
+  {
+   "section": "How we do things",
+   "item": "Getting approval"
+  },
+  {
+   "section": "How we do things",
+   "item": "Parts: Ordering parts for a job"
+  },
+  {
+   "section": "How we do things",
+   "item": "Handing a car back"
+  },
+  {
+   "section": "How we do things",
+   "item": "Closing the till"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same order."
+ ]
+}

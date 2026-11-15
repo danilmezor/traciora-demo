@@ -1,0 +1,140 @@
+{
+  "format": "seed-conversation/1",
+  "id": "14-people-p07-web-sends-what-he-is-given",
+  "configuration": "en",
+  "number": 14,
+  "story": "people",
+  "title": "The newcomer takes a hand-over: 'should', and a draft that sends the customer back to him",
+  "demonstrates": "A booking on the web chat. The assistant gives the public price, cannot book, hands over. Slot 7 answers in nine minutes with a time, an exclamation mark and two 'should's. Asked whether the price is the total, the assistant drafts that the advisor can give the exact figure, and the advisor sends that sentence as it was.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Jerome Purcell",
+      "invented": true,
+      "first_time": true,
+      "note": "2017 Toyota Camry; first visit",
+      "phone": "(423) 555-0391"
+    },
+    "staff": [
+      {"slot": 7, "name": "Caleb Sutton", "weeks_in_the_job": 11}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A first-time customer who knows which service he wants.",
+    "vehicle": "2017 Toyota Camry",
+    "what_happens": "Price from the list, a hand-over, 'tomorrow at 10:00'. His one question about the total gets a sentence that answers nothing; he lets it go.",
+    "facts": {
+      "booked": "the Wednesday of week T-3, 10:00, at main",
+      "the_exact_total": "151.00 + 6.75 shop supplies, 172.34 with tax; nobody tells him",
+      "public_pages_used": ["price list: brake fluid flush"],
+      "prices": [
+        {"said": "$151.00", "amount": 151.0, "what": "brake fluid flush, class car", "from": {"catalogue": "brake_fluid_exchange", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "151", "what": "the customer's way of writing 151.00"}
+      ]
+    }
+  },
+  "days": {
+    "T-24d": {"anchor": "the Tuesday of week T-3", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 3}, "nominal": "Tue 2026-10-20"},
+    "T-23d": {"anchor": "the Wednesday of week T-3", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 3}, "nominal": "Wed 2026-10-21", "what": "'tomorrow'"}
+  },
+  "floating_days": [
+    {"word": "tomorrow", "said_on": "T-24d", "day": "the Wednesday of week T-3"},
+    {"word": "tomorrow at 10:00", "said_on": "T-24d", "day": "the Wednesday of week T-3"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0014-4e00-8000-00000000e00e",
+      "peer": {"id": "seedv1-browser-en-0512", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0512",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-24d", "at": "15:12:05", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-24d", "at": "15:12:05", "kind": "message", "from": "customer", "text": "need a brake fluid flush. do yall do those and how much"},
+        {"n": 2, "day": "T-24d", "at": "15:12:28", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. Yes, we do. A brake fluid flush is $151.00 before shop supplies and tax. Would you like me to ask the shop to set up a time?"},
+        {"n": 3, "day": "T-24d", "at": "15:13:00", "kind": "message", "from": "customer", "text": "yeah tomorrow if possible. 2017 camry"},
+        {"n": 4, "day": "T-24d", "at": "15:13:24", "kind": "message", "from": "assistant", "text": "I can't book a time myself, but I'll pass it on. What's your name and the best number to reach you, and which shop works better: East Main Street or Bonny Oaks Drive?"},
+        {"n": 5, "day": "T-24d", "at": "15:13:55", "kind": "message", "from": "customer", "text": "Jerome Purcell 4235550391. east main"},
+        {"n": 6, "day": "T-24d", "at": "15:14:18", "kind": "message", "from": "assistant", "text": "Thank you, Jerome. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 7, "day": "T-24d", "at": "15:14:19", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Jerome Purcell", "phone": "(423) 555-0391", "site": "east main", "context": "Jerome Purcell, 2017 Toyota Camry. He wants a brake fluid flush tomorrow if possible, East Main Street. I gave the price-list figure, $151.00 before shop supplies and tax."}}, "note": {"from": "assistant", "private": true, "text": "Jerome Purcell, 2017 Toyota Camry. He wants a brake fluid flush tomorrow if possible, East Main Street. I gave the price-list figure, $151.00 before shop supplies and tax."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-24d 17:30, the day's close"}},
+        {"n": 8, "day": "T-24d", "at": "15:23:38", "kind": "activity", "what": "assigned", "derived": true, "to": 7, "by": 7, "how": "first reply"},
+        {"n": 9, "day": "T-24d", "at": "15:23:40", "kind": "message", "from": "staff", "slot": 7, "text": "Hi Jerome, Caleb at East Main. Yes sir, we can get you in tomorrow at 10:00! Should take about an hour so you should be out by lunch"},
+        {"n": 10, "day": "T-24d", "at": "15:23:41", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 7, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-24d", "at": "15:25:10", "kind": "message", "from": "customer", "text": "cool. is 151 the total or is there more on top"},
+        {"n": 12, "day": "T-24d", "at": "15:25:50", "kind": "draft", "id": "d1", "text": "Good question, Jerome. $151.00 is the price of the flush. Shop supplies and sales tax are added on the bill, so the total will be a little higher; the advisor can give you the exact figure.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-24d", "at": "15:31:20", "became": 13}},
+        {"n": 13, "day": "T-24d", "at": "15:31:20", "kind": "message", "from": "staff", "slot": 7, "text": "Good question, Jerome. $151.00 is the price of the flush. Shop supplies and sales tax are added on the bill, so the total will be a little higher; the advisor can give you the exact figure."},
+        {"n": 14, "day": "T-24d", "at": "15:33:05", "kind": "message", "from": "customer", "text": "ok. see you at 10"},
+        {"n": 15, "day": "T-24d", "at": "15:33:45", "kind": "draft", "id": "d2", "text": "See you tomorrow at 10:00, Jerome: 2106 East Main Street.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-24d", "at": "15:38:30", "became": 16}},
+        {"n": 16, "day": "T-24d", "at": "15:38:30", "kind": "message", "from": "staff", "slot": 7, "text": "See you tomorrow at 10:00, Jerome: 2106 East Main Street."},
+        {"n": 17, "day": "T-24d", "at": "15:39:00", "kind": "activity", "what": "resolved", "by": 7}
+      ],
+      "assignee_history": [
+        {"day": "T-24d", "at": "15:23:38", "to": 7, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 7,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 23},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 23},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 23},
+          {"asked": 7, "answered": 9, "by": 7, "working_minutes": 9.3, "wall_minutes": 9.3, "measured_from": "n 7", "reply": "first"},
+          {"asked": 11, "answered": 13, "by": 7, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 11", "reply": "later"},
+          {"asked": 14, "answered": 16, "by": 7, "working_minutes": 5.4, "wall_minutes": 5.4, "measured_from": "n 14", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 7,
+          "n": 9,
+          "working_minutes": 9.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 3, "manager": 3, "note": 1},
+        "resolutions": [
+          {"day": "T-24d", "at": "15:39:00", "by": 7}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 7},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 7}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 7: his first line 9.3 minutes after the hand-off, three replies, two drafts sent as they were, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "assistant first, handed over (scheduling), slot 7",
+    "outcome": "brake fluid flush booked for the next day, 10:00; resolved by slot 7",
+    "facts": [
+      "the price given is 151.00 before shop supplies and tax",
+      "asked for the total, slot 7 sent the assistant's draft unchanged, which says the advisor can give the exact figure; nobody gave it"
+    ],
+    "questions": []
+  },
+  "why": [
+    "'Should take about an hour so you should be out by lunch.'",
+    "A draft is written for a person to finish. Sent as it was, by the advisor, it tells the customer to ask the advisor.",
+    "No label: he labels about half his chats."
+  ],
+  "new_facts": [
+    "Jerome Purcell, (423) 555-0391 (tier B), 2017 Toyota Camry, a brake fluid flush at main on the Wednesday of week T-3 at 10:00."
+  ]
+}

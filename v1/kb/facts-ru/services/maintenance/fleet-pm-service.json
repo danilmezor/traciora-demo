@@ -1,0 +1,162 @@
+{
+ "path": "services/maintenance/fleet-pm-service.md",
+ "title": "ТО коммерческого автомобиля",
+ "title_en": "Fleet PM service A",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/fleet-pm-service.json",
+ "first_revision_text": "ru/_history/services/maintenance/fleet-pm-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "The preventive-maintenance service for cargo vans; list price and what the company rate does to it.",
+ "serves": [
+  "S1",
+  "S16",
+  "challenge:combine-policy-and-price",
+  "challenge:fact-only-in-attachment"
+ ],
+ "length_class": "short",
+ "words_ru": 233,
+ "links_to": [
+  "accounts/company-account-terms.md",
+  "parts/fluids-and-capacities.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«ТО коммерческого автомобиля» (reference ГАЗель Next with the Cummins diesel): 1.5 н/ч, six litres of diesel oil, an oil filter and an air filter; list 9 710 RUB.",
+  "The contract price is deliberately not printed: 1.5 × 1 700 = 2 550 labour plus 0.9 × 6 860 of oil and filters = 8 724 RUB before shop supplies, VAT inside: what the account pays (the Russian twin of P5.6; ledger kb.worked_answers, price.company_rounding).",
+  "Interval 10 000 km."
+ ],
+ "new_facts": [
+  "Expected answer for \"what does «Симбирский гонец» pay for the service\": 8 724 RUB before shop supplies, VAT inside."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что входит",
+   "item": "Масло и фильтры: шесть литров дизельного масла по 670 ₽ за литр, масляный фильтр за 1 090 ₽ и воздушный за 1 750 ₽."
+  },
+  {
+   "section": "Что входит",
+   "item": "Смазка по точкам, где есть пресс-маслёнки. Петли дверей, направляющая сдвижной двери, ограничители задних дверей."
+  },
+  {
+   "section": "Что входит",
+   "item": "Осмотр по чек-листу: тормоза с замером на всех колёсах, шины с остатком протектора и годом выпуска, свет, включая освещение кузова, ремни, патрубки, течи, аккумулятор, щётки, сигнал, люфт руля, крепление перегородки и пола грузового отсека."
+  },
+  {
+   "section": "Что входит",
+   "item": "Заполненный лист по машине: гаражный номер, пробег, что подойдёт к следующему ТО."
+  },
+  {
+   "section": "Как это устроено",
+   "item": "Каждые 10 000 км для парков доставки. Список машин, которым подошёл срок, присылает транспортный отдел клиента."
+  },
+  {
+   "section": "Как это устроено",
+   "item": "Машина возвращается в тот же день. Из-за ТО фургон рейс не пропускает."
+  },
+  {
+   "section": "Как это устроено",
+   "item": "Всё найденное — это смета ответственному по договору, а не разговор с водителем сверх его лимита."
+  },
+  {
+   "section": "Как это устроено",
+   "item": "Литры по машинам: Жидкости и заправочные объёмы."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "hours",
+   "class": "van",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "part list price each: Масло моторное 10W-40 для дизельных двигателей (CI-4), на розлив",
+   "tier": "standard",
+   "qty": 6,
+   "unit": "л",
+   "brand": "G-Profi MSI 10W-40",
+   "value": 670
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "part list price each: Фильтр масляный",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "шт",
+   "brand": "Fleetguard",
+   "value": 1090
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "part list price each: Фильтр воздушный",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "шт",
+   "brand": "ГАЗ",
+   "value": 1750
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "labour",
+   "class": "van",
+   "when": "after_rise",
+   "value": 2850.0
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 9710.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  670.0,
+  1090.0,
+  1750.0,
+  2850.0,
+  9710.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

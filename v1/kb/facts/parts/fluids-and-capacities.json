@@ -1,0 +1,83 @@
+{
+ "path": "parts/fluids-and-capacities.md",
+ "title": "Fluids and capacities",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "Pointer page: what fluid types we use and where the per-vehicle quantities are (only in the attached sheet).",
+ "serves": [
+  "challenge:fact-only-in-attachment",
+  "challenge:unreadable-binary",
+  "operate:contradiction"
+ ],
+ "length_class": "short",
+ "words_en": 171,
+ "links_to": [
+  "parts/fleet-fluid-sheet.xlsx",
+  "parts/fleet-fluid-sheet.pdf"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "The per-vehicle quantities and specs exist only in the two attachments: fleet-fluid-sheet.xlsx (working copy) and fleet-fluid-sheet.pdf (print).",
+  "Product fact: the engine extracts text from PDF, DOCX and PPTX, not from XLSX. The spreadsheet is found by name and cannot be read; the PDF can, with page locators.",
+  "If they differ the spreadsheet wins (the PDF is one revision behind on purpose: see en/_binaries.md).",
+  "Rules: bill the quarts used rounded up to the half quart; CVT fluid is maker-specific; no mixing coolant; sealed brake fluid only."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Fluids and capacities",
+   "item": "Fleet fluid sheet (spreadsheet). The working copy. I update this one."
+  },
+  {
+   "section": "Fluids and capacities",
+   "item": "Fleet fluid sheet (printed copy). Same sheet, printed for the lube bays."
+  },
+  {
+   "section": "Fluids and capacities",
+   "item": "Bill the quarts that went in, rounded up to the half quart. Not the sheet's number if the engine took less."
+  },
+  {
+   "section": "Fluids and capacities",
+   "item": "CVT fluid is not ATF. Honda, Nissan, Subaru and Toyota CVTs each take their own. If it is not on the shelf, it is not going in."
+  },
+  {
+   "section": "Fluids and capacities",
+   "item": "Coolant is topped up with the same type and colour. No mixing."
+  },
+  {
+   "section": "Fluids and capacities",
+   "item": "Brake fluid from a sealed bottle only."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Billing rule: quarts used, rounded up to the half quart. The catalogue bills 5 qt on the Camry oil service and 6 qt on the fleet PM, consistent with rounding up."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Litres. Russian sheet covers the Russian fleets' models (ГАЗель NEXT, Largus, Solaris etc.)."
+ ]
+}

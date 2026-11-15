@@ -1,0 +1,126 @@
+{
+ "path": "policies/service-standards.md",
+ "title": "Service standards",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "One table of how fast the company promises to answer, call back, estimate and decide; the yardstick for several stories.",
+ "serves": [
+  "S3",
+  "S1",
+  "S6",
+  "S9",
+  "S12",
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_en": 244,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Twelve standards, each one row: phone answered inside 20 s (ring plan: one desk 20 s, then all); missed call returned within one hour; out-of-hours messages returned in the first open hour; chat first reply within 10 minutes; estimate the same working day; company estimates within four working hours; promised call backs the same day; ready calls before 16:30; complaints within one working day; comebacks seen the day they arrive; roster by Thursday noon; knowledge-base proposals decided within five working days.",
+  "Every standard exists only in this table.",
+  "Measured against the stories: main call backs median 40 minutes since the early desk (met), west 4 h 30 (missed), east 45 minutes (met); slot 22 and 23 first chat reply 35 and 40 minutes (missed); the timing-belt proposal was made one full open day before T (inside the standard)."
+ ],
+ "tables": [
+  {
+   "section": "Service standards",
+   "columns": [
+    "What",
+    "Standard"
+   ],
+   "rows": [
+    {
+     "What": "A ringing phone",
+     "Standard": "Answered by a person before it rolls to the second desk: inside 20 seconds"
+    },
+    {
+     "What": "A missed call",
+     "Standard": "Called back within one hour, the same day without exception"
+    },
+    {
+     "What": "A voicemail or message left when we were closed",
+     "Standard": "Returned in the first hour we are open"
+    },
+    {
+     "What": "A web chat or messenger message, in opening hours",
+     "Standard": "First reply within 10 minutes"
+    },
+    {
+     "What": "An estimate",
+     "Standard": "Sent the same working day the car was inspected"
+    },
+    {
+     "What": "A company account's estimate",
+     "Standard": "To the fleet contact within four working hours"
+    },
+    {
+     "What": "A promised call back",
+     "Standard": "Made the day it was promised"
+    },
+    {
+     "What": "\"Your car is ready\"",
+     "Standard": "The call or text goes out when it is ready, and before 4:30"
+    },
+    {
+     "What": "A complaint",
+     "Standard": "The customer hears from the person who can fix it within one working day"
+    },
+    {
+     "What": "A comeback",
+     "Standard": "Looked at the day it arrives, first"
+    },
+    {
+     "What": "The week's schedule",
+     "Standard": "Published by Thursday noon the week before"
+    },
+    {
+     "What": "A proposed correction to this knowledge base",
+     "Standard": "Decided within five working days"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}",
+  "{{@early_desk|date}}"
+ ],
+ "new_facts": [
+  "The twelve standards. Reason: the stories give measurements (call-back medians, chat reply medians, late rosters, waiting estimates) and nothing to measure them against; each number here was chosen so that the home shops mostly meet it and Charlotte Pike does not."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-5mo|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@early_desk|date}}",
+   "what": "missed-call standard tightened from two hours to one when the early desk shift started; message: \"One hour, now that the mornings are covered.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same table. Chat channels: web chat, Telegram, VK, Avito (design O3). Opening hours 9:00-20:00, so \"before 16:30\" becomes \"before 19:00\"."
+ ]
+}

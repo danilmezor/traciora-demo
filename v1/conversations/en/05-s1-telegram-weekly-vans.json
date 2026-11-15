@@ -1,0 +1,227 @@
+{
+  "format": "seed-conversation/1",
+  "id": "05-s1-telegram-weekly-vans",
+  "configuration": "en",
+  "number": 5,
+  "story": "S1",
+  "title": "The healthy account: the dispatcher's Monday list, every week, in one Telegram conversation",
+  "demonstrates": "One messenger conversation for life: every week the dispatcher's message reopens it, the assistant drafts, the east shop's lead advisor edits and sends, and resolves. Four sessions are written: the first after go-live, found work approved with a photo and a purchase-order number, a van swapped, and this week's, which at T is confirmed and waits on the customer. It is the named open messenger chat: its last public line is the shop's and no draft sits in its box.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "ref": "accounts.json en.A2 contacts[0]",
+      "name": "Tina Ragsdale",
+      "company": "Millsaps Heating & Plumbing",
+      "role": "Dispatcher (books the weekly slot)",
+      "phone": "(423) 555-0121",
+      "first_time": false
+    },
+    "named_in_a_line": [
+      {"name": "Hal Millsaps", "ref": "accounts.json en.A2 contacts[1]", "role": "President"},
+      {
+        "name": "Darnell",
+        "role": "the account's driver of M-112 (calls design, story call 25)",
+        "invented": true
+      }
+    ],
+    "staff": [
+      {"slot": 16, "name": "Angie Holloway"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "The dispatcher of the account with the most visits. She has sent the Monday list by phone for years; since go-live she sends it here.",
+    "vehicles": "five vans every Monday at 07:30 from the fleet of 25 (accounts.json en.A2): the units named in each session",
+    "wants": "The Monday slot confirmed; found work decided the same day.",
+    "what_happens": "Session 1: the first list in the messenger. Session 2: on a Monday the front struts of M-112 are found leaking; Angie sends a photo and the fleet price, the president says go ahead and gives a purchase-order number. Session 3: one van is swapped and the missed one is put on a later Monday. Session 4, the day before T: next Monday's five are confirmed and Angie asks one question that is still unanswered.",
+    "facts": {
+      "weekly_slot": "Monday 07:30, five vans (ledger acct.A2.weekly_slot)",
+      "price_class": "company-account rate (A1 and A2; ledger price.hour.company)",
+      "sessions_written": 4,
+      "sessions_in_the_seed": "one a week since G; the others are built from these four with the fleet's units and the same two voices",
+      "ties": "M-112 is the van whose front struts were done 'back in the summer' in story call 25; its driver is Darnell there too",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "$985.03", "amount": 985.03, "what": "front strut assemblies, pair, class van, company-account price", "from": {"catalogue": "front_struts_pair", "class": "van", "tier": "standard", "price_class": "company", "with_supplies": false, "with_tax": false}},
+        {"said": "$134.95", "amount": 134.95, "what": "four-wheel alignment, class van, company-account price", "from": {"catalogue": "wheel_alignment", "class": "van", "tier": "standard", "price_class": "company", "with_supplies": false, "with_tax": false}},
+        {"said": "$1,119.98", "amount": 1119.98, "what": "the two together, before tax", "from": {"sum_of_said": ["$985.03", "$134.95"]}}
+      ],
+      "numbers": [
+        {"said": "3 mm", "what": "the pad thickness under which she asks for a decision; a shop habit, not a catalogue row"},
+        {"said": "600 miles", "what": "how far M-108 is past its service in session 3; invented"}
+      ]
+    }
+  },
+  "days": {
+    "T-162d": {"anchor": "the Thursday of week T-23", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 23}, "nominal": "Thu 2026-06-04", "what": "session 1: the first list sent here, for the Monday after"},
+    "T-158d": {"anchor": "the Monday of week T-22", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 22}, "nominal": "Mon 2026-06-08", "what": "'Monday the 8th'"},
+    "T-109d": {"anchor": "the Monday of week T-15", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 15}, "nominal": "Mon 2026-07-27", "what": "session 2: a Monday slot; found work on M-112"},
+    "T-43d": {"anchor": "the Thursday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 6}, "nominal": "Thu 2026-10-01", "what": "session 3: a van swapped"},
+    "T-39d": {"anchor": "the Monday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 5}, "nominal": "Mon 2026-10-05", "what": "'Monday' of session 3"},
+    "T-32d": {"anchor": "the Monday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 4}, "nominal": "Mon 2026-10-12", "what": "'Monday the 12th'"},
+    "T-1d": {"anchor": "slot 16's last working day before T", "rule": {"kind": "slot_working_day", "slot": 16, "n": -1}, "nominal": "Thu 2026-11-12", "what": "session 4: this week's list, for the Monday of week W+1"},
+    "T+3d": {"anchor": "the Monday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": -1}, "nominal": "Mon 2026-11-16", "what": "'Monday the 16th'"}
+  },
+  "floating_days": [
+    {"word": "Monday the 8th", "said_on": "T-162d", "day": "the Monday of week T-22"},
+    {"word": "Monday", "said_on": "T-162d", "day": "the Monday of week T-22"},
+    {"word": "today", "said_on": "T-109d", "day": "T-109d"},
+    {"word": "next Monday", "said_on": "T-109d", "day": "the Monday of week T-14"},
+    {"word": "Monday", "said_on": "T-43d", "day": "the Monday of week T-5"},
+    {"word": "all week", "said_on": "T-43d", "day": "the week T-5"},
+    {"word": "Monday the 12th", "said_on": "T-43d", "day": "the Monday of week T-4"},
+    {"word": "Thursday", "said_on": "T-43d", "day": "the Thursday of week T-5"},
+    {"word": "Monday the 16th", "said_on": "T-1d", "day": "the Monday of week W+1 (T+3d)"},
+    {"word": "Monday", "said_on": "T-1d", "day": "the Monday of week W+1 (T+3d)"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "4503599627371807",
+      "peer": {"id": "4503599627371807", "name": "Tina Ragsdale"},
+      "contact": {
+        "identifier": "telegram_4503599627371807",
+        "name": "Tina Ragsdale",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "pet",
+          "shows": "a golden retriever looking out of a truck window",
+          "person_in_it": false
+        }
+      },
+      "opened": {
+        "day": "T-162d",
+        "at": "14:05:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "the conversation was created by the first session; every later session reopens it"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-162d", "at": "14:05:10", "kind": "message", "from": "customer", "text": "Hi Angie, it's Tina at Millsaps. Hal says we can send the Monday list here now instead of calling?"},
+        {"n": 2, "day": "T-162d", "at": "14:06:02", "kind": "message", "from": "customer", "text": "For Monday the 8th: M-103, M-107, M-110, M-114 and M-121. Service on all five. 110's driver says it pulls to the right"},
+        {"n": 3, "day": "T-162d", "at": "14:06:45", "kind": "draft", "id": "d1", "text": "Hi Tina! Yes, the Monday list can come here. For Monday the 8th at 7:30 we have M-103, M-107, M-110, M-114 and M-121 for service, and we'll look at the pull to the right on M-110.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-162d", "at": "14:11:20", "became": 5}},
+        {"n": 4, "day": "T-162d", "at": "14:11:18", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 5, "day": "T-162d", "at": "14:11:20", "kind": "message", "from": "staff", "slot": 16, "text": "Hi Tina! Yes ma'am, this is the place, and it's me on this end. I have all five down for Monday the 8th at 7:30: M-103, M-107, M-110, M-114 and M-121, service on each, and we'll put M-110 on the alignment rack for that pull. Same as always, Tina: I'll message you here as each one is ready, and anything past the service I run by you first.\nAngie"},
+        {"n": 6, "day": "T-162d", "at": "14:13:40", "kind": "message", "from": "customer", "text": "Perfect 👍"},
+        {"n": 7, "day": "T-162d", "at": "14:14:20", "kind": "draft", "id": "d2", "text": "Thank you, Tina. See you Monday!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 16, "day": "T-162d", "at": "14:15:05", "became": 8}},
+        {"n": 8, "day": "T-162d", "at": "14:15:05", "kind": "message", "from": "staff", "slot": 16, "text": "Thank you, Tina. See you Monday!"},
+        {"n": 9, "day": "T-162d", "at": "14:15:20", "kind": "activity", "what": "label_added", "label": "fleet", "by": 16},
+        {"n": 10, "day": "T-162d", "at": "14:15:40", "kind": "activity", "what": "resolved", "by": 16},
+        {"n": 11, "day": "T-109d", "at": "10:40:15", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 12, "day": "T-109d", "at": "10:40:15", "kind": "message", "from": "customer", "text": "Morning Angie. How are we looking on today's five? Hal wants 112 back by 3 if we can"},
+        {"n": 13, "day": "T-109d", "at": "10:41:00", "kind": "draft", "id": "d3", "text": "Good morning, Tina. I don't have the status of today's vans in front of me. I'll check on all five, and on M-112 for 3:00, and message you right back.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-109d", "at": "10:46:30", "became": 14}},
+        {"n": 14, "day": "T-109d", "at": "10:46:30", "kind": "message", "from": "staff", "slot": 16, "text": "Good morning, Tina! Four of the five are on schedule and will be ready by noon. M-112 is the one I was about to write you about, Tina: both front struts are leaking, and the right one is wet all the way down. If it were my van I wouldn't send it back out loaded like that. Photo below. At your fleet rate the pair is $985.03 installed, and it needs an alignment after, $134.95. I can still have it back to you by 3:00 if I get a yes by 11:30, or we can put it on next Monday's list. Which would Hal rather?\nAngie", "files": [{"kind": "image", "file": "M112_front_strut.jpg", "pool": "worn-part-strut", "shows": "a front strut wet with oil down to the spring seat, a gloved finger pointing at the seal"}]},
+        {"n": 15, "day": "T-109d", "at": "10:52:10", "kind": "message", "from": "customer", "text": "Ugh. Let me ask Hal"},
+        {"n": 16, "day": "T-109d", "at": "10:52:50", "kind": "draft", "id": "d4", "text": "Of course, Tina. We'll hold M-112 until we hear from you.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-109d", "at": "11:08:45", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 17, "day": "T-109d", "at": "11:08:05", "kind": "message", "from": "customer", "text": "Hal says go ahead, struts and alignment, today. PO 4398A"},
+        {"n": 18, "day": "T-109d", "at": "11:08:45", "kind": "draft", "id": "d5", "text": "Thank you, Tina. We'll go ahead with the front struts and the alignment on M-112 today under PO 4398A and have it ready by 3:00.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-109d", "at": "11:12:05", "became": 19}},
+        {"n": 19, "day": "T-109d", "at": "11:12:05", "kind": "message", "from": "staff", "slot": 16, "text": "Thank you, Tina, and thank Hal for the quick answer. So we're doing the front struts and the alignment on M-112 today, PO 4398A, $1,119.98 before tax. It'll be ready by 3:00 with the other four, and I'll message you when Darnell can come for it.\nAngie", "late": "nothing to answer until the customer came back with the decision: the product counts the wait from 'Let me ask Hal'"},
+        {"n": 20, "day": "T-109d", "at": "11:12:30", "kind": "activity", "what": "label_added", "label": "approval", "by": 16},
+        {"n": 21, "day": "T-109d", "at": "11:14:10", "kind": "message", "from": "customer", "text": "👍 thank you"},
+        {"n": 22, "day": "T-109d", "at": "11:14:50", "kind": "draft", "id": "d6", "text": "You're welcome, Tina!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 16, "day": "T-109d", "at": "11:16:20", "because": "cleared from the reply box"}},
+        {"n": 23, "day": "T-109d", "at": "11:16:30", "kind": "activity", "what": "resolved", "by": 16},
+        {"n": 24, "day": "T-43d", "at": "15:20:10", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 25, "day": "T-43d", "at": "15:20:10", "kind": "message", "from": "customer", "text": "Angie for Monday swap M-108 for M-115 please. 108 is stuck on the hospital job all week"},
+        {"n": 26, "day": "T-43d", "at": "15:20:40", "kind": "message", "from": "customer", "text": "so its 104 106 111 115 119"},
+        {"n": 27, "day": "T-43d", "at": "15:21:25", "kind": "draft", "id": "d7", "text": "Got it, Tina: M-115 in place of M-108. Monday at 7:30: M-104, M-106, M-111, M-115 and M-119.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-43d", "at": "15:26:10", "became": 28}},
+        {"n": 28, "day": "T-43d", "at": "15:26:10", "kind": "message", "from": "staff", "slot": 16, "text": "Got it, Tina: M-115 in place of M-108, so Monday at 7:30 it's M-104, M-106, M-111, M-115 and M-119. M-108 is about 600 miles past its service, so let's not let it slide much further, Tina. Want me to put it on the list for Monday the 12th?\nAngie"},
+        {"n": 29, "day": "T-43d", "at": "15:31:30", "kind": "message", "from": "customer", "text": "yes do that"},
+        {"n": 30, "day": "T-43d", "at": "15:32:10", "kind": "draft", "id": "d8", "text": "Done, Tina. M-108 is down for Monday the 12th.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-43d", "at": "15:34:20", "became": 31}},
+        {"n": 31, "day": "T-43d", "at": "15:34:20", "kind": "message", "from": "staff", "slot": 16, "text": "Done: M-108 is on the list for Monday the 12th, and I'll remind you the Thursday before.\nAngie"},
+        {"n": 32, "day": "T-43d", "at": "15:34:40", "kind": "activity", "what": "resolved", "by": 16},
+        {"n": 33, "day": "T-1d", "at": "13:10:20", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 34, "day": "T-1d", "at": "13:10:20", "kind": "message", "from": "customer", "text": "Hi Angie! Monday the 16th: M-102, M-109, M-113, M-116, M-122."},
+        {"n": 35, "day": "T-1d", "at": "13:10:55", "kind": "message", "from": "customer", "text": "113's driver says the heat is weak. kinda important this time of year lol"},
+        {"n": 36, "day": "T-1d", "at": "13:11:35", "kind": "draft", "id": "d9", "text": "Hi Tina! Got it for Monday the 16th at 7:30: M-102, M-109, M-113, M-116 and M-122, and we'll check the heater on M-113.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-1d", "at": "13:16:40", "became": 37}},
+        {"n": 37, "day": "T-1d", "at": "13:16:40", "kind": "message", "from": "staff", "slot": 16, "text": "Hi Tina! All five are down for Monday the 16th at 7:30: M-102, M-109, M-113, M-116 and M-122. We'll check the heat on M-113 first thing; if it were my van I'd want the coolant level and the thermostat looked at before it gets any colder. One thing I need from you, Tina: M-122 is the F-250, and its rear brakes were getting low at the last service. If they measure under 3 mm on Monday, do you want us to go ahead, or call Hal first?\nAngie"}
+      ],
+      "assignee_history": [
+        {"day": "T-162d", "at": "14:11:18", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "open",
+        "owner": 16,
+        "labels": ["fleet", "approval"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "waits_on": "the customer: the last public line is the shop's question; a reply cannot be sent on Telegram in a live demo and none is owed (ledger conv.live_demo, conv.open_at_t)",
+        "sessions": [
+          {"n": 1, "day": "T-162d", "ended": "resolved by 16"},
+          {"n": 2, "day": "T-109d", "ended": "resolved by 16"},
+          {"n": 3, "day": "T-43d", "ended": "resolved by 16"},
+          {"n": 4, "day": "T-1d", "ended": "open at T, waiting on the customer"}
+        ]
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 6.2},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 16, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 6, "answered": 8, "by": 16, "working_minutes": 1.4, "wall_minutes": 1.4, "measured_from": "n 6", "reply": "later"},
+          {"asked": 12, "answered": 14, "by": 16, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 12", "reply": "first"},
+          {"asked": 15, "answered": 19, "by": 16, "working_minutes": 19.9, "wall_minutes": 19.9, "measured_from": "n 15", "reply": "later", "late": "nothing to answer until the customer came back with the decision: the product counts the wait from 'Let me ask Hal'"},
+          {"asked": 25, "answered": 28, "by": 16, "working_minutes": 6.0, "wall_minutes": 6.0, "measured_from": "n 25", "reply": "first"},
+          {"asked": 29, "answered": 31, "by": 16, "working_minutes": 2.8, "wall_minutes": 2.8, "measured_from": "n 29", "reply": "later"},
+          {"asked": 34, "answered": 37, "by": 16, "working_minutes": 6.3, "wall_minutes": 6.3, "measured_from": "n 34", "reply": "first"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 5,
+          "working_minutes": 6.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 12, "assistant": 0, "manager": 7, "note": 0},
+        "resolutions": [
+          {"day": "T-162d", "at": "14:15:40", "by": 16},
+          {"day": "T-109d", "at": "11:16:30", "by": 16},
+          {"day": "T-43d", "at": "15:34:40", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 16},
+          {"draft": "d3", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d4", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d5", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d6", "outcome": "discarded", "manager": 16},
+          {"draft": "d7", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d8", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d9", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "slot 16: the chat's first answer is hers (5.3 minutes, her ledger row is 6); in the four sessions seven replies, five drafts edited, one sent as it was, one cleared; three resolutions of one chat",
+        "new_dialogs": "Stats counts this chat once, in the week it was created: its later sessions are in no 'new dialogs' figure (design section 10, gap 3)"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "company account: weekly bookings, quotes, documents",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "open at T: next Monday's five vans confirmed, one question to the customer unanswered",
+    "facts": [
+      "A2 books five vans every Monday at 07:30 through this conversation",
+      "found work on M-112 (front struts and an alignment, 1,119.98 before tax at the fleet rate) was approved the same morning with PO 4398A",
+      "M-108 missed a Monday and was put on a later one",
+      "at T the list for the Monday of week W+1 is confirmed and the shop waits for an answer about M-122's rear brakes",
+      "nothing is overdue on the shop's side"
+    ],
+    "questions": ["S1.1", "S5.1"]
+  },
+  "why": [
+    "Tina writes like a dispatcher: unit numbers, no greeting after the first week, 'Ugh. Let me ask Hal'.",
+    "Angie's lines keep the draft's facts and add what is hers: the name twice, 'if it were my van', a choice, the summary, her name at the end.",
+    "A draft the customer overtook is 'replaced before anyone acted' (d4); a thanks that needs no answer is cleared (d6).",
+    "The healthy account beside the fading one: same channel mode, minutes instead of days."
+  ],
+  "new_facts": [
+    "The Monday lists: week T-22: M-103, M-107, M-110, M-114, M-121; week T-15: five vans, M-112 among them; week T-5: M-104, M-106, M-111, M-115, M-119 (M-108 swapped out); week T-4: M-108 added; week W+1: M-102, M-109, M-113, M-116, M-122.",
+    "M-112's front struts and alignment were done on the Monday of week T-15 for 1,119.98 before tax under purchase order 4398A (the 'front struts back in the summer' of story call 25).",
+    "M-110 pulled to the right in week T-22; M-113's heater is weak in week W0; M-122's rear brakes were low at its last service.",
+    "The photo M112_front_strut.jpg (picture pool 'worn-part-strut').",
+    "The contact's picture: a golden retriever looking out of a truck window."
+  ]
+}

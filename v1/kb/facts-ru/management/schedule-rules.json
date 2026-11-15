@@ -1,0 +1,230 @@
+{
+ "path": "management/schedule-rules.md",
+ "title": "Правила графика",
+ "title_en": "Schedule rules",
+ "exists_in": "both",
+ "english_sheet": "facts/management/schedule-rules.json",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "4",
+ "purpose": "Senior rank: the cover each shop needs and the rules the planner follows.",
+ "serves": [
+  "S3",
+  "S5",
+  "S14",
+  "visibility:senior",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 319,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Desks run two on, two off (rule R12): the flagship always has its pair, the other two shops one advisor a day. The fix of S3: both of the pair from 9:00 since @early_desk (before, the second came at 11:30).",
+  "A tyre-season row (ledger season.extra_shifts).",
+  "The rule on a named cover applies where the desk has one advisor a day (S5: slot 16's week off has no cover yet)."
+ ],
+ "new_facts": [
+  "Mechanic minimums a day: 4 at the flagship, 2 at each of the other shops (bays 6 / 4 / 4, five days on and two off). The shift planner's cover requirements must equal this table.",
+  "The desk pairs are fixed: 5 with 7, 6 with 29 (ledger roster.advisor_pattern)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Сколько людей нужно",
+   "columns": [
+    "Сервис",
+    "Приёмка",
+    "Цех"
+   ],
+   "rows": [
+    {
+     "Сервис": "Московское шоссе, с 9:00 до 11:30",
+     "Приёмка": "2 мастера-приёмщика",
+     "Цех": "4 механика"
+    },
+    {
+     "Сервис": "Московское шоссе, остальной день",
+     "Приёмка": "Не меньше одного за стойкой: в смене двое, обедают по очереди",
+     "Цех": "4 механика"
+    },
+    {
+     "Сервис": "Инженерный",
+     "Приёмка": "1 мастер-приёмщик",
+     "Цех": "2 механика"
+    },
+    {
+     "Сервис": "Техническая",
+     "Приёмка": "1 мастер-приёмщик",
+     "Цех": "2 механика"
+    },
+    {
+     "Сервис": "Московское шоссе в сезон шиномонтажа",
+     "Приёмка": "2 мастера-приёмщика весь день",
+     "Цех": "Плюс два шиномонтажника, шесть дней в неделю"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Правила",
+   "item": "График на неделю публикуется до полудня четверга предыдущей недели."
+  },
+  {
+   "section": "Правила",
+   "item": "Мастера-приёмщики работают два через два, с 9:00 до 20:00. Смены постоянные: Дима с Никитой, Алина с Татьяной Геннадьевной; на Инженерном Света и Артём сменяют друг друга, на Технической — Слава и Камила."
+  },
+  {
+   "section": "Правила",
+   "item": "Там, где на приёмке один человек в день, отпуск мастера-приёмщика согласуется только с названной заменой. До согласования, а не после."
+  },
+  {
+   "section": "Правила",
+   "item": "У Шубина замены нет. Когда его нет, диагностику на Московском шоссе записываем в том объёме, какой может взять Ильдар Фаритович, остальное уходит Егорову на Инженерный, а клиенту при записи называем срок ожидания. Этому мы научились дорого."
+  },
+  {
+   "section": "Правила",
+   "item": "Марат Аюпов — первый звонок при любой дыре на обеих ульяновских площадках."
+  },
+  {
+   "section": "Правила",
+   "item": "Мастера-приёмщика можно на день отправить с Московского шоссе на Инженерный и обратно. Между Ульяновском и Казанью — нет."
+  },
+  {
+   "section": "Правила",
+   "item": "Просьба о замене смены — с причиной, письменно, за 7 дней. Позже ответ «нет», если человек не привёл замену сам."
+  },
+  {
+   "section": "Правила",
+   "item": "Неявка отмечается в то же утро, и смена сразу предлагается другим."
+  },
+  {
+   "section": "Правила",
+   "item": "Механики работают пять через два, выходные у всех разные. Больше шести дней подряд не работает никто."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Никитой",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "6",
+   "written_as": "Алина",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Татьяной Геннадьевной",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Артём",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "23",
+   "written_as": "Слава",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "24",
+   "written_as": "Камила",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубина",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Егорову",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Марат Аюпов",
+   "role": "technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@diag_back|date}}",
+   "what": "added the rule about slot 10 having no cover, after his two weeks off; message: \"What to do when Kevin is off.\"",
+   "message_ru": "Что делаем, когда Шубина нет."
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "East Main morning desk cover raised from 1 to 2; early desk shift added; message: \"Early desk from today.\"",
+   "message_ru": "С сегодняшнего дня утром на приёмке двое."
+  }
+ ],
+ "has_history": true
+}

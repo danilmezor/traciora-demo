@@ -1,0 +1,85 @@
+{
+ "path": "customers/estimates-and-approvals.md",
+ "title": "Смета и согласование работ",
+ "title_en": "Estimates and approvals",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/estimates-and-approvals.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Public promise on estimates: written, per job, nothing without approval.",
+ "serves": [
+  "S7",
+  "challenge:combine-policy-and-price",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_ru": 170,
+ "links_to": [
+  "customers/prices-for-common-services.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Approval is by a message (chat or messenger), a signature at the desk, or by phone with a note of who, when and what, followed by a message.",
+  "An estimate is valid 14 days, not 30: parts prices move faster (ledger price.parts_drift_year 12 % a year)."
+ ],
+ "new_facts": [
+  "Estimate validity 14 days.",
+  "A phone approval is written on the order and the customer is asked to confirm it by a message."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "\"You are not obliged to pay for work you did not agree to\" and the written form of consent to extra paid work: the research has them only as unverified snippets of consumer-law pages (ru-shop.md, second pass, gap 9). Under ПП № 780 an estimate confirmed by the consumer becomes part of the contract (п. 18, read).",
+   "outcome": "verified",
+   "note": "Both statements stand: extra paid work only with consent, in writing; a confirmed estimate is part of the contract.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-i/statja-16/",
+   "sentence": "ст. 16 п. 3.1: продажа дополнительных работ и услуг за отдельную плату «осуществляется продавцом (исполнителем, владельцем агрегатора) исключительно с согласия потребителя»; согласие «оформляется продавцом (исполнителем, владельцем агрегатора) в письменной форме, если иное не предусмотрено законом»; «Потребитель вправе потребовать от продавца (исполнителя, владельца агрегатора) возврата уплаченной денежной суммы». ПП № 780 п. 18: «смета становится частью договора с момента подтверждения ее потребителем»."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Смета и согласование работ",
+   "item": "Сначала смотрим. Цена ремонта появляется после осмотра или диагностики, а не до них."
+  },
+  {
+   "section": "Смета и согласование работ",
+   "item": "Смета — письменно. В ней каждая работа стоит отдельной строкой: работа, запчасти — и фотографии или замеры, на которых она основана."
+  },
+  {
+   "section": "Смета и согласование работ",
+   "item": "Вы согласуете каждую работу отдельно. Можно согласиться на тормоза и отказаться от амортизаторов. Согласие принимаем сообщением в чате или мессенджере, подписью на приёмке или по телефону — тогда записываем, кто, когда и на что согласился, и просим подтвердить сообщением."
+  },
+  {
+   "section": "Смета и согласование работ",
+   "item": "Сверх согласованного не делаем. Если по ходу ремонта выясняется, что нужно больше, останавливаемся и звоним. Нет согласия — нет дополнительных работ, и платить за них вы не обязаны."
+  },
+  {
+   "section": "Смета и согласование работ",
+   "item": "Отложенное не теряется. Работы, от которых вы пока отказались, остаются в истории машины, и мы о них напомним. Без нажима."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-26mo|date}}",
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

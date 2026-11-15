@@ -1,0 +1,150 @@
+{
+  "format": "seed-conversation/1",
+  "id": "17-people-p17-vk-ne-segodnya",
+  "configuration": "ru",
+  "number": 17,
+  "story": "people",
+  "title": "Второй приёмщик на Инженерном во «ВКонтакте»: цена раньше причины, и первое же «не сегодня» принято",
+  "demonstrates": "Slot 17 in writing: the price before the need, «Понял, принял» at the first no. The draft he wrote over said why the check comes before the alignment; the one he wrote over next argued for the visit. A later question waits an hour, and then the draft goes out as it was. He does not resolve.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Вадим",
+      "invented": true,
+      "first_time": true,
+      "note": "Chevrolet Cruze 2012; поймал яму, руль стоит криво"
+    },
+    "staff": [
+      {"slot": 17, "name": "Артём Николаев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Парень после ямы, пишет на «ты».",
+    "vehicle": "Chevrolet Cruze 2012",
+    "what_happens": "«Сколько развал сделать»: цена. «Дороговато, не сегодня»: «Понял, принял». Потом: сильно ли съест резину? Через час: да.",
+    "facts": {
+      "sold": "нет",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "3 000 ₽", "amount": 3000.0, "what": "регулировка углов установки колёс (сход-развал), две оси, класс car", "from": {"catalogue": "wheel_alignment", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "3 000", "amount": 3000.0, "what": "то же, как он пишет", "from": {"catalogue": "wheel_alignment", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "800 ₽", "amount": 800.0, "what": "диагностика ходовой части", "from": {"catalogue": "suspension_diag", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-84d": {"anchor": "slot 17's first working day on or after the Friday of week T-12", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 12, "on_or_after_for_slot": 17}, "nominal": "Fri 2026-08-21"},
+    "T-77d": {"anchor": "7 calendar days after slot 17's first working day on or after the Friday of week T-12", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 12, "on_or_after_for_slot": 17, "plus_days": 7}, "nominal": "Fri 2026-08-28", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "не сегодня", "said_on": "T-84d", "day": "T-84d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "vk",
+      "bridge": "vk:default",
+      "inbox": "VK",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "1990003162",
+      "peer": {"id": "1990003162", "name": "Вадим Корнеев"},
+      "contact": {
+        "identifier": "vk_1990003162",
+        "name": "Вадим Корнеев",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "чёрный Chevrolet Cruze на парковке у торгового центра",
+          "person_in_it": false,
+          "matches_vehicle": "Chevrolet Cruze 2012"
+        }
+      },
+      "opened": {
+        "day": "T-84d",
+        "at": "11:05:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "his first message to the community: a new conversation"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-84d", "at": "11:05:10", "kind": "message", "from": "customer", "text": "привет. яму поймал, руль теперь криво стоит. сколько развал сделать"},
+        {"n": 2, "day": "T-84d", "at": "11:05:55", "kind": "draft", "id": "d1", "text": "Здравствуйте! Регулировка углов установки колёс (сход-развал) на две оси стоит 3 000 ₽. После удара о яму сначала стоит проверить ходовую: если погнут рычаг или тяга, развал не выставится. Когда вам удобно подъехать?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 17, "day": "T-84d", "at": "11:17:20", "because": "he sent his own text (n 5)"}},
+        {"n": 3, "day": "T-84d", "at": "11:17", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-84d", "at": "11:17:18", "kind": "activity", "what": "assigned", "derived": true, "to": 17, "by": 17, "how": "first reply"},
+        {"n": 5, "day": "T-84d", "at": "11:17:20", "kind": "message", "from": "staff", "slot": 17, "text": "Здравствуйте! Развал 3 000 за две оси. Всё сделаем, когда подъедете?"},
+        {"n": 6, "day": "T-84d", "at": "11:17:22", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-84d", "at": "11:20:40", "kind": "message", "from": "customer", "text": "дороговато чет. не сегодня тогда"},
+        {"n": 8, "day": "T-84d", "at": "11:21:20", "kind": "draft", "id": "d2", "text": "Понимаю. Если руль стоит криво после удара, с ремонтом лучше не затягивать: шины будут изнашиваться неравномерно. Можем сначала посмотреть ходовую, диагностика стоит 800 ₽.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 17, "day": "T-84d", "at": "11:28:05", "because": "he sent his own text (n 9)"}},
+        {"n": 9, "day": "T-84d", "at": "11:28:05", "kind": "message", "from": "staff", "slot": 17, "text": "Понял, принял. Надумаете — пишите!"},
+        {"n": 10, "day": "T-84d", "at": "11:31:15", "kind": "message", "from": "customer", "text": "а если так ездить резину сильно съест?"},
+        {"n": 11, "day": "T-84d", "at": "11:31:55", "kind": "draft", "id": "d3", "text": "Да: при нарушенных углах шины изнашиваются неравномерно и быстрее, особенно передние.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-84d", "at": "11:59:25", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 12, "day": "T-84d", "at": "11:55", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 13, "day": "T-84d", "at": "11:58:40", "kind": "message", "from": "customer", "text": "мне просто до зарплаты дотянуть надо"},
+        {"n": 14, "day": "T-84d", "at": "11:59:25", "kind": "draft", "id": "d4", "text": "Понимаю. До зарплаты доехать можно, но при нарушенных углах шины изнашиваются неравномерно и быстрее, особенно передние: лучше не затягивать.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 17, "day": "T-84d", "at": "12:29:40", "became": 15}},
+        {"n": 15, "day": "T-84d", "at": "12:29:40", "kind": "message", "from": "staff", "slot": 17, "text": "Понимаю. До зарплаты доехать можно, но при нарушенных углах шины изнашиваются неравномерно и быстрее, особенно передние: лучше не затягивать.", "late": "второй вопрос может ждать час (cast.json)"},
+        {"n": 16, "day": "T-84d", "at": "12:29:42", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 17, "day": "T-77d", "at": "12:29", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-84d", "at": "11:17:18", "to": 17, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 17,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 17, "working_minutes": 12.2},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 17, "working_minutes": 12.2, "wall_minutes": 12.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 17, "working_minutes": 7.4, "wall_minutes": 7.4, "measured_from": "n 7", "reply": "later"},
+          {"asked": 10, "answered": 15, "by": 17, "working_minutes": 58.4, "wall_minutes": 58.4, "measured_from": "n 10", "reply": "later", "late": "второй вопрос может ждать час (cast.json)"}
+        ],
+        "first_person_line": {
+          "by": 17,
+          "n": 5,
+          "working_minutes": 12.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 4, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-77d", "at": "12:29", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 17},
+          {"draft": "d2", "outcome": "discarded", "manager": 17},
+          {"draft": "d3", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d4", "outcome": "sent_as_is", "manager": 17}
+        ],
+        "operator_credit": "slot 17: first answer 12.2 minutes (his ledger row is 11), three replies, two drafts discarded, one replaced before he looked and one sent as it was, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "slot 17; the assistant drafts",
+    "outcome": "визита нет; закрыт по 7 дням тишины",
+    "facts": [
+      "the price was named before the reason for the work",
+      "the customer said «не сегодня» once and slot 17 accepted it",
+      "both discarded drafts proposed checking the suspension first, 800",
+      "a later question waited 58 minutes"
+    ],
+    "questions": ["S5.1"]
+  },
+  "why": [
+    "Цена, потом «всё сделаем», потом «надумаете — пишите»: три привычки из его листа звонков, только набранные.",
+    "Оба выброшенных черновика — то, что написала бы Светлана.",
+    "Это его смена: в такие дни сервис продаёт меньше (история S5)."
+  ],
+  "new_facts": [
+    "Вадим Корнеев («ВКонтакте»), Chevrolet Cruze 2012: спрашивал сход-развал на east (3 000) после удара о яму; не приехал.",
+    "Картинка контакта: чёрный Cruze на парковке."
+  ]
+}

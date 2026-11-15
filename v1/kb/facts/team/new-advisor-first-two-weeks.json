@@ -1,0 +1,149 @@
+{
+ "path": "team/new-advisor-first-two-weeks.md",
+ "title": "New advisor: the first two weeks",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Onboarding checklist for a new service advisor, written when the newcomer started.",
+ "serves": [
+  "S8",
+  "S4",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "medium",
+ "words_en": 319,
+ "links_to": [
+  "prices/price-list.md",
+  "how-to/taking-a-call.md",
+  "how-to/booking-a-visit.md",
+  "how-to/checking-a-car-in.md",
+  "policies/discounts.md",
+  "policies/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Week one: shadow a lead; no solo quotes or promises; six pages to read in order; five of slot 16's calls; half days with slot 8 and slot 9; ten supervised check-ins.",
+  "Week two: calls with three reviewed a day; every estimate read by the lead; one till close with slot 3; chats.",
+  "Sign-off list of five points (prices, promises, the 10 % rule, the Walk-in record, which shop).",
+  "Written the week slot 7 started (the Monday of week T-14); it says the service pages are not where prices live, about eleven weeks before he quoted from one (S8 at T-12 days): he had been told."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Week one: watch and read",
+   "item": "You sit beside a lead advisor. You do not quote a price or promise a time on your own this week. Nobody will mind you saying \"let me check that\"."
+  },
+  {
+   "section": "Week one: watch and read",
+   "item": "Read, in this order: the price list, Taking a call, Booking a visit, Checking a car in, Discount policy, Warranty."
+  },
+  {
+   "section": "Week one: watch and read",
+   "item": "Listen to five of Angie's calls. Write down what she does after she says the price."
+  },
+  {
+   "section": "Week one: watch and read",
+   "item": "Half a day in the shop with Randy: an oil service, a brake inspection, a tire off the rim. You will explain these fifty times a day."
+  },
+  {
+   "section": "Week one: watch and read",
+   "item": "Half a day with Marcus in the parts cage."
+  },
+  {
+   "section": "Week one: watch and read",
+   "item": "Check in ten cars with someone watching."
+  },
+  {
+   "section": "Week two: do it, with a net",
+   "item": "You take calls. Your lead listens to three a day and tells you one thing to fix."
+  },
+  {
+   "section": "Week two: do it, with a net",
+   "item": "You write estimates. Your lead reads every one before it goes."
+  },
+  {
+   "section": "Week two: do it, with a net",
+   "item": "You close the till once, with Donna beside you."
+  },
+  {
+   "section": "Week two: do it, with a net",
+   "item": "You answer chats. Read the draft before you send it."
+  },
+  {
+   "section": "Before you are on your own",
+   "item": "[ ] You can find any price in under a minute, and you know the service pages are not where prices live."
+  },
+  {
+   "section": "Before you are on your own",
+   "item": "[ ] You know what you may promise about time, and what you may not."
+  },
+  {
+   "section": "Before you are on your own",
+   "item": "[ ] You know the 10 % rule and who approves above it."
+  },
+  {
+   "section": "Before you are on your own",
+   "item": "[ ] You have never used the Walk-in customer."
+  },
+  {
+   "section": "Before you are on your own",
+   "item": "[ ] You know which shop you are in when you answer the phone."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@newcomers|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "proposal",
+   "author_slot": "5",
+   "text_date": "{{@newcomers|date}}",
+   "what": "page created",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same plan; Russian new advisor is slot 7."
+ ]
+}

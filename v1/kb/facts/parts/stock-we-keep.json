@@ -1,0 +1,106 @@
+{
+ "path": "parts/stock-we-keep.md",
+ "title": "Stock we keep",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "What is on the shelf at the home shops, and how stock is counted.",
+ "serves": [
+  "S13",
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 252,
+ "links_to": [
+  "how-to/stocktake-day.md",
+  "parts/fluids-and-capacities.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Stocked lines listed for main and east; R-1234yf is stocked at East Main only.",
+  "Battery groups 24F, 35, 51R, 65, H6; bulbs H11, 9005, 9006, 3157, 7443.",
+  "Weekly spot count of ten lines; full stocktake twice a year with all shops closed from noon (S13).",
+  "Anything taken from the shelf goes on an order (customer or internal; ERP order type internal).",
+  "Charlotte Pike keeps its own stock; what it keeps is not stated."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Stock we keep",
+   "item": "Bulk oil: 0W-20 and 5W-30 full synthetic, synthetic blend. Quarts of the premium oil."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "Oil filters for the twenty fitments we see most. Air and cabin filters for the top ten."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "Wiper blades, common bulbs (H11, 9005, 9006, 3157, 7443)."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "Batteries: groups 24F, 35, 51R, 65 and H6."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "Brake pads, standard line, for the twelve fitments we see most. Rotors come on the next run."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "Brake fluid DOT 3, coolant (Asian pink, Asian blue, orange, universal), ATF in the four common types, 75W-90 gear oil."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "R-134a at both shops. R-1234yf at East Main only. A newer car that needs an A/C recharge at Bonny Oaks either goes to East Main or waits for a bottle on the 1:00 run."
+  },
+  {
+   "section": "Stock we keep",
+   "item": "Tire repair units, valve stems, wheel weights."
+  },
+  {
+   "section": "Counting",
+   "item": "I spot-count ten lines a week."
+  },
+  {
+   "section": "Counting",
+   "item": "Full stocktake twice a year. All three shops close at noon that day and everybody counts: Stocktake day."
+  },
+  {
+   "section": "Counting",
+   "item": "Something used and not on an order is the reason counts are wrong. If you take it off the shelf, it goes on an order: a customer's, or the shop's own."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-6mo|date}}"
+ ],
+ "new_facts": [
+  "R-1234yf at East Main only. Reason: gives a question that joins this page to the A/C service page (\"can Bonny Oaks recharge a 2019 CR-V today?\"). ERP stock_level should show no R-1234yf at east or west."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Stocked lines the Russian shop keeps: масла на розлив, фильтры, колодки ходовых моделей, АКБ 60 and 75 А·ч, антифриз G11/G12, грузики, вентили; seasonal: bags for tyre storage."
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "path": "services/maintenance/coolant-service.md",
+ "title": "Coolant service",
+ "first_revision_text": "en/_history/services/maintenance/coolant-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Coolant drain, flush and fill.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 149,
+ "links_to": [
+  "services/engine/cooling-system-repairs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job coolant_exchange: 1.0 h, 2 gallons, one price in all tiers.",
+  "Long-life coolant about five years or 100,000 miles.",
+  "Coolant by maker: pink Toyota, blue Honda and Subaru, orange GM.",
+  "Low coolant means a leak: pressure test first.",
+  "Jobs that open the cooling system include coolant; the service is not added on top."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Coolant service",
+   "item": "Sold from the inspection: the technician tests it with a strip and notes the result."
+  },
+  {
+   "section": "Coolant service",
+   "item": "The right coolant matters. Pink for Toyota, blue for Honda and Subaru, orange for GM. Never \"universal\" in a car under ten years old."
+  },
+  {
+   "section": "Coolant service",
+   "item": "If the coolant is low, that is a leak, not a service. Pressure test first ($67.50): Cooling system repairs."
+  },
+  {
+   "section": "Coolant service",
+   "item": "Any job that opens the cooling system (water pump, thermostat, radiator, timing belt on some engines) already includes coolant. Do not sell this on top."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "coolant_exchange",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "coolant_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 193.0
+  },
+  {
+   "catalogue_key": "cooling_pressure_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 67.5
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "Five years or 100,000 miles as the interval (common long-life coolant advice)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена антифриза»; G11 / G12 / G12++ by maker."
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "path": "customers/payment.md",
+ "title": "Оплата",
+ "title_en": "Paying your bill",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/payment.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "3",
+ "purpose": "Public payment terms: methods, when due, deposits, tax.",
+ "serves": [
+  "S2",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 165,
+ "links_to": [
+  "customers/company-vehicles.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Methods follow ledger pay.mix.ru: card, СБП by QR code, cash; bank transfer on an invoice for companies. No cheques.",
+  "VAT 5 % is inside every price; the order, the act and the receipt show the total and «в том числе НДС 5 %» (ledger kb.vat_in_list_prices).",
+  "Companies under a contract get an invoice and an act or УПД per order, with the amount before VAT, the VAT and the total as separate figures (ledger kb.documents)."
+ ],
+ "new_facts": [
+  "Prepayment threshold for special-order parts: 10 000 RUB.",
+  "The cash receipt is given on paper or sent to a phone or e-mail."
+ ],
+ "new_amounts": [
+  {
+   "value": 10000,
+   "why": "порог предоплаты за запчасти под заказ"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Оплата",
+   "item": "Когда. Оплата — при получении автомобиля."
+  },
+  {
+   "section": "Оплата",
+   "item": "Как. Банковской картой, наличными или по QR-коду через СБП. Организации платят по счёту, безналичным переводом."
+  },
+  {
+   "section": "Оплата",
+   "item": "Чек. Кассовый чек выдаём на бумаге либо присылаем на телефон или электронную почту — как вам удобнее."
+  },
+  {
+   "section": "Оплата",
+   "item": "Предоплата. Просим её в двух случаях: если запчасть везём под заказ и она стоит дороже 10 000 ₽, и перед тем, как отправить коробку передач на капитальный ремонт. Предоплата засчитывается в итоговую сумму, чек на неё выдаём сразу."
+  },
+  {
+   "section": "Оплата",
+   "item": "НДС. Цены в прайс-листе указаны с НДС 5 %, сверху он не добавляется. В заказ-наряде, акте и чеке стоит итог и строка «в том числе НДС 5 %»."
+  },
+  {
+   "section": "Оплата",
+   "item": "Организации с договором получают счёт и акт или УПД по каждому заказ-наряду; сумма без НДС, НДС и итог указаны в них отдельно. См. Автомобили организаций."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  10000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

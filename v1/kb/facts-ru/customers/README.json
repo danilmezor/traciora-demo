@@ -1,0 +1,150 @@
+{
+ "path": "customers/README.md",
+ "title": "Ответы клиентам",
+ "title_en": "Customer answers",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/README.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Index of the public pages; the README the website assistant gets from kb_overview.",
+ "serves": [
+  "S7",
+  "S13",
+  "visibility:public"
+ ],
+ "length_class": "short",
+ "words_ru": 141,
+ "links_to": [
+  "customers/hours-and-locations.md",
+  "customers/what-we-do.md",
+  "customers/prices-for-common-services.md",
+  "customers/estimates-and-approvals.md",
+  "customers/warranty.md",
+  "customers/dropping-off-and-picking-up.md",
+  "customers/payment.md",
+  "customers/towing.md",
+  "customers/bringing-your-own-parts.md",
+  "customers/if-something-is-not-right.md",
+  "customers/brake-noise.md",
+  "customers/check-engine-light.md",
+  "customers/air-conditioning.md",
+  "customers/battery.md",
+  "customers/seasonal-tyre-change.md",
+  "customers/tires.md",
+  "customers/maintenance-by-mileage.md",
+  "customers/pre-purchase-inspection.md",
+  "customers/hybrids-and-electric-cars.md",
+  "customers/company-vehicles.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Prices on public pages include VAT (5 %); the order and the receipt say «в том числе НДС 5 %» (ledger kb.vat_in_list_prices).",
+  "One more link: the seasonal tyre page, which exists only in Russian."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Ответы клиентам",
+   "item": "Адреса и часы работы"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Что мы делаем и чего не делаем"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Цены на частые услуги"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Смета и согласование работ"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Наша гарантия"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Как сдать и забрать автомобиль"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Оплата"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Эвакуатор"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Ремонт со своими запчастями"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Если что-то не так"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Скрип и скрежет при торможении"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Горит «чек»"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Кондиционер не холодит"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Аккумулятор и трудный пуск"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Сезонная замена шин и хранение"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Шины, проколы и сход-развал"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "ТО по пробегу"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Проверка автомобиля перед покупкой"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Гибриды и электромобили"
+  },
+  {
+   "section": "Ответы клиентам",
+   "item": "Автомобили организаций"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

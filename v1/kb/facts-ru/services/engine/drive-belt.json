@@ -1,0 +1,97 @@
+{
+ "path": "services/engine/drive-belt.md",
+ "title": "Ремень навесных агрегатов",
+ "title_en": "Drive belt",
+ "exists_in": "both",
+ "english_sheet": "facts/services/engine/drive-belt.json",
+ "first_revision_text": "ru/_history/services/engine/drive-belt.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The serpentine belt: not the timing belt.",
+ "serves": [
+  "challenge:near-duplicate",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 140,
+ "links_to": [
+  "services/engine/timing-belt.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Замена ремня привода навесных агрегатов» against «Замена ремня ГРМ»: the same near-duplicate pair (2 750 against 16 000). Customers say «ремень генератора» (the Russian twin of the fan belt)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Ремень навесных агрегатов",
+   "item": "Находят на осмотре: трещины поперёк ручейков, блеск, свист на холодную."
+  },
+  {
+   "section": "Ремень навесных агрегатов",
+   "item": "Если он порвётся, загорится лампа аккумулятора и потяжелеет руль. На моторах, где он крутит помпу, двигатель перегреется за несколько минут. Глушить."
+  },
+  {
+   "section": "Ремень навесных агрегатов",
+   "item": "Свистит с новым ремнём — это натяжитель или ролик. Это смета, а не возврат."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "drive_belt",
+   "what": "hours",
+   "class": "car",
+   "value": 0.6
+  },
+  {
+   "catalogue_key": "drive_belt",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2750.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  2750.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

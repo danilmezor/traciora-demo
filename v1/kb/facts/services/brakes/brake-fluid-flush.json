@@ -1,0 +1,98 @@
+{
+ "path": "services/brakes/brake-fluid-flush.md",
+ "title": "Brake fluid flush",
+ "first_revision_text": "en/_history/services/brakes/brake-fluid-flush.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Brake fluid exchange: why, when, how it is sold.",
+ "serves": [
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 136,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job brake_fluid_exchange: 1.0 h; recommended share 0.9 (\"nine times in ten from the inspection\").",
+  "Interval two to three years; tested with a meter; over 3 % water is a recommendation.",
+  "Local colour: Signal Mountain and Lookout Mountain (real places near Chattanooga).",
+  "A caliper job bleeds one corner only."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Brake fluid flush",
+   "item": "The technician tests the fluid with a meter at the inspection and writes the percentage. Over 3 % water is a recommendation. Show the customer the number."
+  },
+  {
+   "section": "Brake fluid flush",
+   "item": "It is sold nine times in ten from the inspection. Nobody calls up asking for it."
+  },
+  {
+   "section": "Brake fluid flush",
+   "item": "A caliper or hose job includes bleeding that corner, not a full flush. If the fluid is old, sell both together: the system is open anyway."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_fluid_exchange",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "brake_fluid_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 151.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "The 3 % water threshold."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена тормозной жидкости», every two years; replace the mountain line with a local equivalent or drop it."
+ ]
+}

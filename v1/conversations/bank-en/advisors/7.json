@@ -1,0 +1,235 @@
+{
+  "format": "bank-en/advisor/1",
+  "slot": 7,
+  "name": "Caleb Sutton",
+  "shop": "East Main",
+  "voice": "Eager and fast: 'Yes {sir_maam}', 'Yes {sir_maam}', 'no problem', 'should be', 'I think', an exclamation mark even on bad news. Answers before he has the facts, forgets to ask for a name and a number, and of two questions answers the first. Sends what the assistant drafts.",
+  "sheet": {
+    "draft_outcomes": {
+      "sent_as_is": 70,
+      "sent_edited": 15,
+      "discarded": 15
+    },
+    "first_reply_min": 9,
+    "ask_chance": 45,
+    "label_share": 50,
+    "resolves": 60
+  },
+  "signoff": null,
+  "pickup": [
+    "Hi {first_name}, Caleb at East Main. Yes {sir_maam}, I can help with that!",
+    "Hi {first_name}! This is Caleb at Brennan, no problem at all!",
+    "Hey {first_name}, Caleb here at East Main. Yes {sir_maam}, got your message!",
+    "Hi {first_name}, this is Caleb! Sorry for the wait, I'm on it now!"
+  ],
+  "replies": {
+    "price": {
+      "quote": [
+        "Yes {sir_maam}, the {job} should be {job_price}!",
+        "I think it's {job_price} for the {model}, should be about {duration}!",
+        "Yes {sir_maam}, {job_price} for the {job}! We can probably get it done same day!",
+        "That should run {job_price}, plus tax I think!"
+      ],
+      "after": [
+        "Yes {sir_maam} that should be everything!",
+        "I think tax is extra, let me double check!",
+        "Should take {duration} so you can wait if you want!",
+        "No problem, we can probably do it today!"
+      ]
+    },
+    "booking": {
+      "offer": [
+        "Yes {sir_maam}, {day_a} at {time_a} works!",
+        "Yes {sir_maam}, we can get you in {day_a} at {time_a}!",
+        "Should be able to do {day_a}, how about {time_a}?",
+        "I think we have {time_a} open {day_a}, does that work?"
+      ],
+      "confirm": [
+        "Awesome, see you {day_agreed} at {time_agreed}!",
+        "Yes {sir_maam} you're all set for {time_agreed}!",
+        "Perfect, {day_agreed} at {time_agreed}! Should be out by {ready_time}",
+        "Got you down for {time_agreed}, no problem!"
+      ]
+    },
+    "hours": {
+      "answer": [
+        "Yes {sir_maam} we're open till {close_time}!",
+        "Yes {sir_maam} we do that here!",
+        "We're open Saturday {sat_hours} here at East Main!",
+        "Yes {sir_maam}, should be no problem, we work on those!"
+      ],
+      "after": [
+        "No appointment needed I think, just come on by!",
+        "Yes {sir_maam}, we're at {shop_address}!",
+        "Should be fine to drop it off after hours in the key box!",
+        "I think Bonny Oaks is closed Saturday but we're open!"
+      ]
+    },
+    "symptom": {
+      "advise": [
+        "Yes {sir_maam}, that should be the brakes, I'd bring it in! {day_a} at {time_a} work?",
+        "Oh no! I think you should be fine to drive it in, we can look at it {day_a}!",
+        "That might be the battery! Should be a free test, come by anytime!",
+        "Yes {sir_maam}, we can look at it! Inspection should be {diag_price}!"
+      ],
+      "confirm": [
+        "Awesome, see you then! We'll take a look!",
+        "Yes {sir_maam}, we'll check it out first thing!",
+        "No problem, should have an answer for you by {ready_time}!",
+        "Sounds good! Drive safe!"
+      ]
+    },
+    "status": {
+      "ready": [
+        "Yes {sir_maam} it's ready!",
+        "Yes {sir_maam}, all done! Should be {job_total}!",
+        "It's ready to go! We're here till {close_time}!",
+        "All done, come get it whenever! Total should be {job_total}"
+      ],
+      "not_yet": [
+        "Not yet but should be done by {ready_time}!",
+        "Part isn't here yet, should be {eta_day}!",
+        "Almost! Should be about {ready_time}!",
+        "Still working on it, I think {ready_time}! Sorry!"
+      ]
+    },
+    "found_work": {
+      "present": [
+        "Hi {first_name}! {tech_first} found {finding}, it's {finding_price}! Want us to do it?",
+        "Yes {sir_maam} so we found {finding}! Should be {finding_price}, I'd do it!",
+        "Hi {first_name}, bad news, {finding}! {finding_price}! Let me know!",
+        "We also found {finding}, I think it's {finding_price}! Do you want it done today?"
+      ],
+      "confirm": [
+        "Yes {sir_maam}, we'll go ahead!",
+        "No problem, just the {finding_item} then!",
+        "Awesome! Should still be ready by {ready_time}!",
+        "Got it, starting on it now!"
+      ],
+      "declined": [
+        "Got it, we'll hold off!",
+        "No problem, we'll leave it!",
+        "Yes {sir_maam}, no extra work then!",
+        "Okay! Just the original job then!"
+      ]
+    },
+    "moving": {
+      "moved": [
+        "No problem! Does {day_a} at {time_a} work?",
+        "Yes {sir_maam}, we can move it to {day_a}!",
+        "Yes {sir_maam}, moved you to {day_a} at {time_a}!",
+        "No problem at all! What day works better?"
+      ],
+      "cancelled": [
+        "No problem, I cancelled it!",
+        "Yes {sir_maam}, all cancelled! Just let us know!",
+        "Got it, no problem at all!",
+        "Okay, cancelled! Hope everything's alright!"
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        "Oh no, I'm sorry! Can you bring it back {day_a}?",
+        "Yes {sir_maam}, sorry about that! I'll let {manager_first} know!",
+        "I'm really sorry! We'll look at it, no problem!",
+        "Sorry about that! Should be covered I think, bring it by!"
+      ],
+      "fix": [
+        "{manager_first} said we'll take care of it!",
+        "Yes {sir_maam}, should be fixed now! Sorry again!",
+        "I talked to {tech_first}, he said it should be good now!",
+        "No charge for that one!"
+      ],
+      "bill": [
+        "Yes {sir_maam}, I think that's the tax and shop supplies!",
+        "Sorry about that! I think the quote was before tax!",
+        "Let me check with {manager_first} and get back to you!",
+        "Should just be the tax added, I'll double check!"
+      ]
+    },
+    "fleet": {
+      "list": [
+        "Yes {sir_maam}, {unit} and {unit_b} for {day_said}!",
+        "Working on that quote now, should have it to you this afternoon!",
+        "Yes {sir_maam}, we can take {unit} {day_a} at {time_a}!",
+        "Got it, {unit} is on the list!"
+      ],
+      "paperwork": [
+        "Yes {sir_maam}, I'll send that invoice over!",
+        "Should have the copy to you today!",
+        "Yes {sir_maam}, PO {po} is on there!",
+        "Quote attached! Just let me know when you want to bring {unit} in"
+      ]
+    }
+  },
+  "moves": {
+    "ask": [
+      "Yes {sir_maam}, which car is it for?",
+      "Is that the front or the back?",
+      "Sorry, which one do you mean?",
+      "Is the light steady or blinking?"
+    ],
+    "decline_discount": [
+      "I'm not sure, let me ask {manager_first}!",
+      "I don't think we can, sorry!",
+      "Let me check, I think we might have something!",
+      "Sorry, I don't think I'm allowed to do discounts!"
+    ],
+    "close": [
+      "No problem!",
+      "Yes {sir_maam}, have a good one!",
+      "Thank you! See you soon!",
+      "Anytime!"
+    ],
+    "pass_on": [
+      "Let me ask {colleague_first}, one sec!",
+      "I'll have {manager_first} call you!",
+      "Let me check with {tech_first} and get back to you!",
+      "{colleague_first} would know better, I'll ask!"
+    ]
+  },
+  "edits": [
+    {
+      "draft_key": "price.quote_list",
+      "draft": "Hi {first_name}. {page_item} is {page_price} before shop supplies and tax on a car like yours. Which day works for you?",
+      "sent": "Hi {first_name}. {page_item} is {page_price} before shop supplies and tax on a car like yours. Which day works for you?",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "booking.ask_day",
+      "draft": "Hi {first_name}! We'd be glad to take care of the {model}. Which day works best for you? I'll confirm a time.",
+      "sent": "Hi {first_name}! We'd be glad to take care of the {model}. Which day works best for you? I'll confirm a time.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "status.dont_have",
+      "draft": "Hi {first_name}. I don't have the status of the {model} in front of me. I'll check with the shop and message you right back.",
+      "sent": "Hi {first_name}. I don't have the status of the {model} in front of me. I'll check with the shop and message you right back.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "generic.close",
+      "draft": "Anytime, {first_name}.",
+      "sent": "Anytime, {first_name}.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "found_work.total",
+      "draft": "Thank you, {first_name}. I'll confirm the total with shop supplies and tax.",
+      "sent": "Should be about {job_total}!",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "booking.confirm_echo",
+      "draft": "Thank you, {first_name}. {day_agreed} at {time_agreed} works. See you then!",
+      "sent": "Thank you, {first_name}! {day_agreed} at {time_agreed} works, see you then!",
+      "outcome": "sent_edited"
+    }
+  ],
+  "notes": [
+    "@{colleague_first} customer in chat asking about the {job}, what do I tell him?",
+    "@{colleague_first} on it, sending it now!",
+    "@{manager_first} sorry, I told her same day, is that ok?",
+    "@{tech_first} can you check if the part came for the {model}?"
+  ]
+}

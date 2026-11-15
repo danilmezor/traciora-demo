@@ -1,0 +1,74 @@
+{
+ "path": "customers/warranty-policy.md",
+ "title": "Warranty policy",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "1",
+ "purpose": "The old warranty page nobody removed: 12/12. Stale on purpose (S12).",
+ "serves": [
+  "S12",
+  "challenge:near-duplicate",
+  "operate:contradiction"
+ ],
+ "length_class": "short",
+ "words_en": 120,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S12: the old warranty page beside the current one",
+ "facts": [
+  "STALE ON PURPOSE. States 12 months / 12,000 miles; electrical parts 90 days; warranty only at the shop that did the repair; used parts not guaranteed; complaints to the founder.",
+  "It contradicts customers/warranty.md and policies/warranty.md on four points: the term (12/12 against 24/24), electrical parts (90 days against the full term), where it is honoured (the original shop against all three), used parts (none against 90 days).",
+  "Its own dates give it away: effective {{T-6y}}, reviewed {{T-38mo}}, both before the current page came into force at {{@warranty_2424}} (T-26 months).",
+  "Signed by slot 1; American spelling \"labor\" as the founder writes.",
+  "Not linked from any page; found by search (\"warranty\") and in the folder listing of customers/ beside warranty.md (\"Our warranty\"). It is public (ledger s12.pages): the website assistant can read it."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Warranty policy",
+   "item": "Electrical parts (starters, alternators, sensors, switches): 90 days."
+  },
+  {
+   "section": "Warranty policy",
+   "item": "Batteries: per the manufacturer's label."
+  },
+  {
+   "section": "Warranty policy",
+   "item": "Brake pads: guaranteed against defects for 12 months. Normal wear excepted."
+  },
+  {
+   "section": "Warranty policy",
+   "item": "Used parts installed at the customer's request are not guaranteed."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "1",
+   "written_as": "Ray Brennan",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-6y|date}}",
+  "{{T-38mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "The Russian old page: for example 14 days on work and \"по месту ремонта\" against the current 30 days at any of the three shops; signed by slot 1."
+ ]
+}

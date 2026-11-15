@@ -1,0 +1,236 @@
+{
+ "format": "seed-scheduled-task/1",
+ "configuration": "ru",
+ "prose_version": "assistant-ru/1",
+ "zone": "home (Ульяновск, UTC+4)",
+ "about": "Семь задач по расписанию из истории S10 (auth.db cron_prompt_jobs) и шаблоны, по которым собирается ответ каждого запуска (cron_runs.answer_enc). Запуск выбирает случай по данным на свой момент, а внутри случая берёт формулировки по очереди, так что два соседних запуска не совпадают дословно. Первая строка — то, что владелец видит во входящих. Тексты написаны по-русски с нуля.",
+ "tasks": [
+  {
+   "id": "yesterday-three-numbers",
+   "owner": {"slot": "1", "name": "Николай Петрович Ермолаев"},
+   "name": "Вчера в трёх цифрах",
+   "schedule": {"days": null, "times": ["08:15"]},
+   "created": "@golive",
+   "set_up": "набрала Екатерина Николаевна с его слов, под его учётной записью",
+   "prompt": "Каждое утро — как прошёл вчерашний день, тремя цифрами: сколько машин выдали по каждому сервису, на сколько закрыли нарядов и сколько звонков пропустили. Простыми словами, три строки, без таблиц.",
+   "cases": {
+    "open": [
+     "Вчера выдали {{=orders.closed|site=all|prev_day|n:машину/машины/машин}}: Московское шоссе — {{=orders.closed|site=main|prev_day|int}}, Инженерный — {{=orders.closed|site=east|prev_day|int}}, Техническая — {{=orders.closed|site=west|prev_day|int}}.\nНарядов закрыли на {{=orders.revenue|site=all|prev_day|money0}}, это с НДС.\nПропустили {{=calls.missed|site=all|prev_day|n:звонок/звонка/звонков}} из {{=calls.inbound|site=all|prev_day|int}}; перезвона ждут ещё {{=calls.waiting|site=all|at|int}}.",
+     "За вчера, {{@now-1d|weekday}}: Московское шоссе выдало {{=orders.closed|site=main|prev_day|int}}, Инженерный — {{=orders.closed|site=east|prev_day|int}}, Техническая — {{=orders.closed|site=west|prev_day|int}}.\nПо трём сервисам закрыто нарядов на {{=orders.revenue|site=all|prev_day|money0}} с НДС.\nБез ответа осталось звонков: {{=calls.missed|site=all|prev_day|int}} из {{=calls.inbound|site=all|prev_day|int}}, больше всего — {{=calls.missed_top_site|site=all|prev_day|text}}.",
+     "Машин выдано вчера: {{=orders.closed|site=all|prev_day|int}} (Московское шоссе — {{=orders.closed|site=main|prev_day|int}}, Инженерный — {{=orders.closed|site=east|prev_day|int}}, Техническая — {{=orders.closed|site=west|prev_day|int}}).\nЗакрыто нарядов на {{=orders.revenue|site=all|prev_day|money0}} (с НДС).\nПропущено звонков: {{=calls.missed|site=all|prev_day|int}} из {{=calls.inbound|site=all|prev_day|int}}."
+    ],
+    "closed": [
+     "Вчера сервисы не работали.\nНаряды не закрывались.\nЗвонков в нерабочее время: {{=calls.out_of_hours|site=all|prev_day|int}}."
+    ]
+   }
+  },
+  {
+   "id": "accounts-this-week",
+   "owner": {"slot": "2", "name": "Екатерина Николаевна Ермолаева"},
+   "name": "Корпоративные клиенты за неделю",
+   "schedule": {"days": ["mon"], "times": ["09:00"]},
+   "created": "@golive",
+   "prompt": "Каждый понедельник — по каждому корпоративному клиенту с договором: сколько заездов за прошлую неделю против обычной, сметы, которые больше двух дней ждут нашего ответа, и счета с просроченной оплатой. Отдельно отметьте тех, кто не приезжал 30 дней. Сначала цифра, потом одна таблица, худшие сверху.",
+   "blocks": {
+    "accounts": {"kind": "table", "rows": "account", "where": "terms=yes", "period": "prev_week",
+     "columns": [["Клиент", "name"], ["Заездов за неделю", "=acct.visits||int"], ["Обычная неделя", "=acct.usual_visits||int"], ["Сметы ждут ответа", "=acct.estimates_waiting||int"], ["Просрочено, с НДС", "=acct.overdue_money||money0"], ["Дней без заезда", "=acct.days_since_visit||int"]],
+     "order": "flagged first, then days since last visit desc"}
+   },
+   "cases": {
+    "flagged": [
+     "Клиентов, которые требуют внимания: {{=acct.flagged|terms=yes|prev_week|int}}.\n\n{{#accounts}}\n\nОтмечены те, у кого нет заездов 30 дней, смета ждёт ответа больше двух дней или счёт просрочен.\nИсточник: учётная программа: наряды, сметы, счета и оплаты.",
+     "За прошлую неделю клиенты с договором сделали {{=acct.visits|terms=yes|prev_week|n:заезд/заезда/заездов}}; отмечено клиентов: {{=acct.flagged|terms=yes|prev_week|int}}.\n\n{{#accounts}}\n\nИсточник: учётная программа: наряды, сметы, счета и оплаты.",
+     "Корпоративные клиенты, неделя с {{@now-7d|date}}: отмечено {{=acct.flagged|terms=yes|prev_week|int}}, просроченных оплат — на {{=acct.overdue_money|terms=yes|at|money0}} с НДС.\n\n{{#accounts}}\n\nИсточник: учётная программа: наряды, сметы, счета и оплаты."
+    ],
+    "nothing": [
+     "На этой неделе никто из корпоративных клиентов внимания не требует.\n\n{{#accounts}}\n\nИсточник: учётная программа: наряды, сметы, счета и оплаты."
+    ]
+   },
+   "planted_runs": [
+    {"story": "S10", "due": "W-1.mon 09:00", "kind": "scheduled", "status": "failed", "started": "due", "finished": "due+40s",
+     "error_text": "Учётная программа была недоступна, поэтому отчёту нечего было читать. Запустите его ещё раз, когда связь восстановится.",
+     "inbox": {"type": "scheduled_task.failed", "settled": "due+65min"}},
+    {"story": "S10", "due": null, "kind": "again", "status": "ok", "started": "W-1.mon 10:05", "requested_by": "владелец, кнопка «Запустить ещё раз» в строке входящих", "case": "flagged", "wording": 1,
+     "inbox": {"type": "scheduled_task.ran"}}
+   ]
+  },
+  {
+   "id": "discounts-over-10",
+   "owner": {"slot": "2", "name": "Екатерина Николаевна Ермолаева"},
+   "name": "Скидки больше 10 %",
+   "schedule": {"days": ["fri"], "times": ["18:00"]},
+   "created": "@discount_rule",
+   "created_in": {"thread": "s2-rule", "turn": 2},
+   "prompt": "Каждую пятницу — список нарядов, закрытых за неделю со скидкой больше 10 % от суммы наряда: сервис, мастер, дата, процент, кто согласовал. Если согласующего нет, пишите об этом прямо.",
+   "blocks": {
+    "orders": {"kind": "table", "rows": "order", "where": "site=all&min_over=10", "period": "week",
+     "columns": [["Сервис", "site"], ["Мастер", "advisor"], ["Дата", "date"], ["Сумма с НДС", "=orders.revenue||money"], ["Скидка", "=orders.discount_pct||pct1"], ["Согласовал", "approver"]],
+     "order": "unapproved first, then date"}
+   },
+   "cases": {
+    "unapproved": [
+     "Без согласования на этой неделе: {{=orders.discounted|site=all&min_over=10&approved=no|week|int}} из {{=orders.discounted|site=all&min_over=10|week|int}} нарядов со скидкой больше 10 %.\n\n{{#orders}}\n\nИсточник: учётная программа, наряды, закрытые за неделю; скидка от суммы наряда с НДС.",
+     "Скидок больше 10 % за неделю: {{=orders.discounted|site=all&min_over=10|week|int}}. Без согласующего в наряде: {{=orders.discounted|site=all&min_over=10&approved=no|week|int}}.\n\n{{#orders}}\n\nИсточник: учётная программа, наряды, закрытые за неделю; скидка от суммы наряда с НДС."
+    ],
+    "approved": [
+     "Скидок больше 10 % за неделю: {{=orders.discounted|site=all&min_over=10|week|int}}, все согласованы.\n\n{{#orders}}\n\nИсточник: учётная программа, наряды, закрытые за неделю; скидка от суммы наряда с НДС.",
+     "Все согласованы: за неделю {{=orders.discounted|site=all&min_over=10|week|n:скидка/скидки/скидок}} больше 10 %, согласующий указан в каждом наряде.\n\n{{#orders}}\n\nИсточник: учётная программа, наряды, закрытые за неделю; скидка от суммы наряда с НДС."
+    ],
+    "nothing": [
+     "За неделю нет ни одного наряда со скидкой больше 10 %.\n\nИсточник: учётная программа, наряды, закрытые за неделю в трёх сервисах.",
+     "Больше 10 % за неделю не давали ни в одном сервисе.\n\nИсточник: учётная программа, наряды, закрытые за неделю; скидка от суммы наряда с НДС."
+    ]
+   },
+   "planted_runs": [
+    {"story": "S2", "due": "W-3.fri 18:00", "kind": "scheduled", "status": "ok", "started": "due", "case": "unapproved"}
+   ],
+   "expect": ["запуски пятниц недель T-3 и T-1 берут случай «unapproved» и показывают наряд слота 23 (ledger s2.west.discounts_after): это наряды его последнего рабочего дня не позже среды недели T-3 и не позже четверга недели T-1; для номинального T понедельник, 19 октября, и среда, 4 ноября", "ни один другой запуск после появления правила этот случай не берёт"]
+  },
+  {
+   "id": "charlotte-pike-against-plan",
+   "owner": {"slot": "2", "name": "Екатерина Николаевна Ермолаева"},
+   "name": "Казань: план и факт",
+   "schedule": {"days": ["mon"], "times": ["10:00"]},
+   "created": "@golive",
+   "prompt": "Каждый понедельник сравнивайте прошлую неделю на Технической с планом: {{$s10.west_plan.orders|int}} нарядов и {{$s10.west_plan.revenue|money0}} выручки за неделю, с НДС. Обе цифры — в процентах от плана, рядом четыре предыдущие недели и одна строка о том, что изменилось.",
+   "blocks": {
+    "weeks": {"kind": "table", "rows": "week", "where": "site=west", "period": "@now-35d..@now",
+     "columns": [["Неделя с", "week"], ["Нарядов", "=orders.closed||int"], ["От плана", "=plan.orders_share||pct"], ["Выручка", "=orders.revenue||money0"], ["От плана", "=plan.revenue_share||pct"]],
+     "order": "week desc", "limit": 5}
+   },
+   "cases": {
+    "open": [
+     "Казань за прошлую неделю: {{=plan.orders_share|site=west|prev_week|pct}} плана по нарядам и {{=plan.revenue_share|site=west|prev_week|pct}} по выручке.\n\n{{#weeks}}\n\nЗакрыто нарядов: {{=orders.closed|site=west|prev_week|int}} при плане {{$s10.west_plan.orders|int}}. Машин в ожидании запчастей на утро: {{=orders.waiting_parts|site=west|at|int}}, самая долгая стоит {{=orders.waiting_days_max|site=west|at|n:день/дня/дней}}.\nИсточник: учётная программа, закрытые наряды Технической; выручка и план с НДС.",
+     "{{=plan.revenue_share|site=west|prev_week|pct}} плана по выручке и {{=plan.orders_share|site=west|prev_week|pct}} по нарядам: Техническая, неделя с {{@now-7d|date}}.\n\n{{#weeks}}\n\nВыручка — {{=orders.revenue|site=west|prev_week|money0}} при плане {{$s10.west_plan.revenue|money0}}; средний наряд — {{=orders.average|site=west|prev_week|money0}}. Все суммы с НДС.\nИсточник: учётная программа, закрытые наряды Технической.",
+     "Прошлая неделя на Технической: нарядов — {{=orders.closed|site=west|prev_week|int}} ({{=plan.orders_share|site=west|prev_week|pct}} плана), выручка — {{=orders.revenue|site=west|prev_week|money0}} ({{=plan.revenue_share|site=west|prev_week|pct}}).\n\n{{#weeks}}\n\nПродано рекомендаций: {{=rec.sold_share|site=west|prev_week|pct}}; в ульяновских сервисах — {{=rec.sold_share|site=home|prev_week|pct}}.\nИсточник: учётная программа, закрытые наряды и листы осмотра; выручка и план с НДС."
+    ]
+   }
+  },
+  {
+   "id": "missed-calls-today",
+   "owner": {"slot": "2", "name": "Екатерина Николаевна Ермолаева"},
+   "name": "Пропущенные звонки за день",
+   "schedule": {"days": null, "times": ["20:15"]},
+   "created": "@golive",
+   "prompt": "В конце каждого дня: сколько звонков пропустили по сервисам, отдельно утро и остальной день, скольким перезвонили и кто ждёт дольше всех. Одна таблица и одна строка, если что-то выбивается из обычного.",
+   "blocks": {
+    "by_shop": {"kind": "table", "rows": "site", "where": "site=all", "period": "day",
+     "columns": [["Сервис", "name"], ["Звонков", "=calls.inbound||int"], ["Пропущено", "=calls.missed||int"], ["Из них до 11:30", "=calls.missed|block=morning|int"], ["Перезвонили", "=calls.called_back||int"], ["Ждут", "=calls.waiting||int"]],
+     "order": "missed desc"}
+   },
+   "cases": {
+    "open": [
+     "За день пропущено {{=calls.missed|site=all|day|int}} из {{=calls.inbound|site=all|day|int}} звонков ({{=calls.missed_share|site=all|day|pct}}); перезвона ждут {{=calls.waiting|site=all|at|int}}.\n\n{{#by_shop}}\n\nДольше всех ждёт: {{=calls.oldest_waiting|site=all|at|text}}.\nИсточник: журнал звонков, входящие в часы работы.",
+     "{{=calls.missed_share|site=all|day|pct}} пропущенных за день: {{=calls.missed|site=all|day|int}} из {{=calls.inbound|site=all|day|int}}. Перезвонили: {{=calls.called_back|site=all|day|int}}.\n\n{{#by_shop}}\n\nИсточник: журнал звонков, входящие в часы работы.",
+     "Пропущено за день: {{=calls.missed|site=all|day|int}}. Сейчас перезвона ждут {{=calls.waiting|site=all|at|int}}, из них на Технической — {{=calls.waiting|site=west|at|int}}.\n\n{{#by_shop}}\n\nДольше всех ждёт: {{=calls.oldest_waiting|site=all|at|text}}.\nИсточник: журнал звонков, входящие в часы работы."
+    ],
+    "closed": [
+     "Сегодня сервисы не работали. Звонков в нерабочее время: {{=calls.out_of_hours|site=all|day|int}}; пропущенными они не считаются.\n\nИсточник: журнал звонков."
+    ]
+   }
+  },
+  {
+   "id": "tomorrows-gaps",
+   "owner": {"slot": "4", "name": "Сергей Анатольевич Мельников"},
+   "name": "Завтрашние пробелы в графике",
+   "schedule": {"days": null, "times": ["18:30"]},
+   "created": "@golive",
+   "prompt": "Каждый вечер проверяй завтрашний день на Московском и на Инженерном: где на приёмке или в цехе людей меньше, чем положено, смены без человека и те, кто в отпуске, но стоит в графике. По каждому пробелу — кто свободен, с фамилией.",
+   "blocks": {
+    "gaps": {"kind": "table", "rows": "gap", "where": "site=home", "period": "next_day",
+     "columns": [["Сервис", "site"], ["Где", "position"], ["Часы", "hours"], ["Не хватает", "=roster.gaps||int"], ["Свободны в этот день", "=roster.free_people||names"]],
+     "order": "site, hours"}
+   },
+   "cases": {
+    "gaps": [
+     "Завтра, {{@now+1d|day}}, пробелов в графике: {{=roster.gaps|site=home|next_day|int}}.\n\n{{#gaps}}\n\nИсточник: опубликованный график и нормы по сменам, Московское шоссе и Инженерный.",
+     "На завтра, {{@now+1d|day}}, людей не хватает в {{=roster.gaps|site=home|next_day|n:месте/местах/местах}}.\n\n{{#gaps}}\n\nИсточник: опубликованный график и нормы по сменам, Московское шоссе и Инженерный."
+    ],
+    "nothing": [
+     "Завтра, {{@now+1d|day}}, пробелов нет: на Московском в смене {{=roster.on_shift|site=main|next_day|n:человек/человека/человек}}, на Инженерном — {{=roster.on_shift|site=east|next_day|int}}.\n\nИсточник: опубликованный график и нормы по сменам.",
+     "На завтра, {{@now+1d|day}}, людей хватает на обеих площадках. Заявок по сменам, которые ждут вашего решения: {{=roster.requests_open|site=home|at|int}}.\n\nИсточник: опубликованный график и нормы по сменам."
+    ],
+    "closed": [
+     "Завтра, {{@now+1d|day}}, обе площадки не работают.\n\nИсточник: часы работы и график."
+    ]
+   }
+  },
+  {
+   "id": "my-call-backs",
+   "owner": {"slot": "6", "name": "Алина Рамилевна Хасанова"},
+   "name": "Мои перезвоны",
+   "schedule": {"days": null, "times": ["09:00"]},
+   "created": "@golive",
+   "prompt": "Каждое утро к открытию: кто ждёт перезвона на Московском шоссе, начиная с самых давних, и о чём человек звонил в прошлый раз, если это известно. И отдельно — кому я обещала перезвонить и ещё не перезвонила.",
+   "blocks": {
+    "waiting": {"kind": "table", "rows": "missed_call", "where": "site=main&state=waiting", "period": "d7",
+     "columns": [["Пропущен", "daytime"], ["Кто звонил", "caller"], ["В прошлый раз", "last_topic"], ["Попыток с тех пор", "=calls.attempts||int"]],
+     "order": "missed asc"}
+   },
+   "cases": {
+    "waiting": [
+     "Ждут перезвона на Московском: {{=calls.waiting|site=main|at|int}}; дольше всех — {{=calls.oldest_waiting|site=main|at|since_daytime}}.\n\n{{#waiting}}\n\nВы обещали перезвонить и пока не перезвонили: {{=calls.promised_open|person=6|at|int}}.\nИсточник: журнал звонков и список «Перезвонить», только Московское шоссе.",
+     "На Московском с утра нужно перезвонить {{=calls.waiting|site=main|at|n:клиенту/клиентам/клиентам}}; ваших обещанных перезвонов — {{=calls.promised_open|person=6|at|int}}.\n\n{{#waiting}}\n\nИсточник: журнал звонков и список «Перезвонить», только Московское шоссе."
+    ],
+    "nothing": [
+     "На Московском перезвона никто не ждёт, обещанных перезвонов за вами нет.\n\nИсточник: журнал звонков и список «Перезвонить», только Московское шоссе.",
+     "Ждут перезвона: 0. Обещано вами: 0.\n\nИсточник: журнал звонков и список «Перезвонить», только Московское шоссе."
+    ]
+   },
+   "expect": ["запуск в день T берёт случай «waiting» с пропущенными старше сегодняшнего дня из ledger calls.queue_at_t.main (2)"]
+  }
+ ],
+ "briefs": {
+  "format": "seed-brief/1",
+  "about": "Сводка — скрытое задание у каждого руководителя (slug brief-<manager id>, название «Сводка», инструкция — brief.md продукта, своего расписания нет). В сводке не больше трёх строк, каждая начинается с «- » и состоит из одного предложения не длиннее 20 слов. «at_t» — сводка, которую каждый из четверых читает утром в день T: первый запуск дня. Из «bank» собираются все остальные сводки: пункт берётся, если его условие выполняется на момент запуска; сначала самое важное, не больше трёх.",
+  "jobs_for": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "16", "17", "22", "23", "24", "29"],
+  "at_t": [
+   {"owner": {"slot": "1", "name": "Николай Петрович Ермолаев"}, "run": "первый запуск дня T (06:40, смены нет)",
+    "points": [
+     "- Две заметки для команды ждут решения: от Алины Рамилевны про водителей организаций и общая — откуда брать цены.",
+     "- Клиентов, которые ждут перезвона: {{=calls.waiting|site=all|at|int}}, из них на Технической — {{=calls.waiting|site=west|at|int}}.",
+     "- Задача Рината Фаридовича перевести Техническую на ульяновского поставщика просрочена на {{=board.days_overdue|card=s6.supplier_change|at|n:день/дня/дней}}."
+    ]},
+   {"owner": {"slot": "2", "name": "Екатерина Николаевна Ермолаева"}, "run": "первый запуск дня T (06:40, смены нет)",
+    "points": [
+     "- Peugeot Айрата Гизатуллина ждёт деталь на Технической уже {{=orders.waiting_days_max|site=west|at|n:день/дня/дней}}; {{@now-1wd:west|on_weekday}} он звонил дважды, один раз трубку не взяли.",
+     "- Смена поставщика, которую вы поручили Ринату Фаридовичу, просрочена на {{=board.days_overdue|card=s6.supplier_change|at|n:день/дня/дней}}; машин в ожидании запчастей там — {{=orders.waiting_parts|site=west|at|int}}.",
+     "- За {{@now-1d|weekday_acc}} пропущено {{=calls.missed_share|site=all|prev_day|pct}} звонков, на Технической — {{=calls.missed_share|site=west|prev_day|pct}}."
+    ]},
+   {"owner": {"slot": "4", "name": "Сергей Анатольевич Мельников"}, "run": "первый запуск дня T (за пять минут до его смены)",
+    "points": [
+     "- Вашего решения ждут две заметки для команды: Хасановой — про водителей организаций и общая — про цены, она есть у троих.",
+     "- Григорьев {{slot7:-4+1wd:slot5+1wd:slot4+1wd:slot5|on_weekday}} предложил правку к странице «Ремень ГРМ»; она ждёт вашего решения.",
+     "- У Демидовой на Инженерном с {{W+1.thu|date_gen}} не закрыто смен: {{=roster.uncovered_days|site=east&position=desk|next_two_weeks|int}}; обе её заявки открыты."
+    ]},
+   {"owner": {"slot": "6", "name": "Алина Рамилевна Хасанова"}, "run": "первый запуск дня T (за пять минут до её смены)",
+    "points": [
+     "- Ольга Сергеевна Тимофеева {{slot6:-1|on_weekday}} написала про задние амортизаторы; вы предложили два времени, она пока не ответила.",
+     "- На Московском ждут перезвона: {{=calls.waiting|site=main|at|int}}; дольше всех — {{=calls.oldest_waiting|site=main|at|since_weekday}}.",
+     "- Обзор по «Симбирскому гонцу» нужно сдать {{slot6:+2|until_day}}, до 12:00; часть Ирины Владимировны ещё не готова."
+    ]}
+  ],
+  "bank": [
+   {"id": "run-failed", "for": ["owner", "planner", "advisor", "office"], "when": "их задача по расписанию не завершилась после предыдущей сводки и строка во входящих ещё открыта", "point": "- Отчёт «{{=runs.failed_name|owner=me|since_prev|text}}» в {{=runs.failed_at|owner=me|since_prev|clock}} не завершился; запустите его ещё раз из входящих."},
+   {"id": "unapproved-discount", "for": ["owner"], "when": "после предыдущей сводки закрыт наряд со скидкой больше 10 % без согласующего", "point": "- Со вчерашнего дня без согласования дали скидку больше 10 %: нарядов — {{=orders.discounted|site=all&min_over=10&approved=no|since_prev|int}}, сервис — {{=orders.discounted_site|site=all&min_over=10&approved=no|since_prev|text}}."},
+   {"id": "missed-yesterday", "for": ["owner"], "when": "первая сводка рабочего дня", "point": "- За {{@now-1d|weekday_acc}} пропущено {{=calls.missed_share|site=all|prev_day|pct}} звонков; перезвона до сих пор ждут {{=calls.waiting|site=all|at|int}}."},
+   {"id": "west-parts", "for": ["owner"], "when": "машина на Технической ждёт запчасти пять дней или дольше", "point": "- На Технической машин в ожидании запчастей: {{=orders.waiting_parts|site=west|at|int}}; самая долгая стоит {{=orders.waiting_days_max|site=west|at|n:день/дня/дней}}."},
+   {"id": "account-quiet", "for": ["owner"], "when": "клиент с договором не приезжал 30 дней", "point": "- {{=acct.quiet_name|terms=yes|at|text}} не приезжает уже {{=acct.days_since_visit|terms=yes&quietest=yes|at|n:день/дня/дней}}."},
+   {"id": "notes-waiting", "for": ["owner", "planner"], "when": "заметка для команды ждёт решения или проверки", "point": "- Заметок для команды, которые ждут решения: {{=memory.proposals_waiting|all|at|int}}; ждут проверки: {{=memory.notes_to_check|all|at|int}}."},
+   {"id": "gaps-tomorrow", "for": ["planner"], "when": "завтра на их площадке не хватает людей", "point": "- На завтра в графике не хватает людей в {{=roster.gaps|site=planned|next_day|n:месте/местах/местах}}; первое — {{=roster.first_gap|site=planned|next_day|text}}."},
+   {"id": "requests-open", "for": ["planner"], "when": "заявки по сменам ждут их решения", "point": "- Заявок по сменам, которые ждут вашего решения: {{=roster.requests_open|site=planned|at|int}}; самая давняя — {{=roster.oldest_request|site=planned|at|since_weekday}}."},
+   {"id": "no-show", "for": ["planner"], "when": "после предыдущей сводки смена отмечена как невыход", "point": "- {{=roster.no_show_name|site=planned|since_prev|text}} {{=roster.no_show_day|site=planned|since_prev|on_weekday}} не вышел на смену; смена отмечена как невыход."},
+   {"id": "late-yesterday", "for": ["planner"], "when": "первая сводка дня, накануне кто-то опоздал", "point": "- За {{@now-1d|weekday_acc}} опозданий больше пяти минут: {{=roster.late_shifts|site=planned|prev_day|int}}."},
+   {"id": "team-overdue", "for": ["planner"], "when": "у людей, которым они ставят задачи, есть просроченные", "point": "- Просроченных задач у вашей команды: {{=board.overdue|team=mine|at|int}}; самая старая просрочена на {{=board.days_overdue|team=mine&oldest=yes|at|n:день/дня/дней}}."},
+   {"id": "callbacks", "for": ["advisor"], "when": "в их сервисе клиенты ждут перезвона", "point": "- Ждут перезвона: {{=calls.waiting|site=mine|at|int}}; дольше всех — {{=calls.oldest_waiting|site=mine|at|since_weekday}}."},
+   {"id": "cards-today", "for": ["advisor", "office"], "when": "у них есть задача со сроком сегодня или просроченная", "point": "- Задач со сроком сегодня: {{=board.due_today|owner=me|at|int}}; просроченных: {{=board.overdue|owner=me|at|int}}."},
+   {"id": "chats-waiting", "for": ["advisor"], "when": "в их чате клиент ждёт ответа", "point": "- В чатах вашего ответа ждут клиенты: {{=chats.waiting|owner=me|at|int}}; дольше всех — с {{=chats.oldest_waiting|owner=me|at|clock}}."},
+   {"id": "booked-today", "for": ["advisor"], "when": "первая сводка рабочей смены", "point": "- На сегодня записано машин: {{=bookings.count|site=mine|day|int}}; первая — в {{=bookings.first_time|site=mine|day|clock}}."},
+   {"id": "try-next", "for": ["advisor"], "when": "за прошлую смену у них есть оценённые звонки", "point": "- Звонки прошлой смены оценены на {{=calls.score_mean|person=me|prev_shift|score}}; что попробовать: {{=calls.worst_check|person=me|prev_shift|text}}."},
+   {"id": "past-terms", "for": ["office"], "when": "есть счета с просроченной оплатой", "point": "- Счетов с просроченной оплатой: {{=acct.overdue_bills|terms=yes|at|int}}, на {{=acct.overdue_money|terms=yes|at|money0}}."},
+   {"id": "punches-corrected", "for": ["office", "planner"], "when": "после предыдущей сводки исправлена отметка об уходе", "point": "- Со вчерашнего дня исправлено отметок об уходе: {{=roster.corrections|site=mine|since_prev|int}}."},
+   {"id": "late-orders", "for": ["office"], "when": "у заказов поставщикам прошёл обещанный срок (менеджер по запчастям)", "point": "- Заказов поставщикам с прошедшим сроком: {{=parts.late_orders|site=home|at|int}}; самый старый — {{=parts.oldest_late|site=home|at|text}}."},
+   {"id": "look-again", "for": ["office"], "when": "открыта задача «посмотреть машину ещё раз» (мастер цеха)", "point": "- Машин, которые ждут повторного осмотра: {{=board.open|owner=me&kind=look_again|at|int}}."}
+  ]
+ }
+}

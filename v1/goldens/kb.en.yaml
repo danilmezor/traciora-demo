@@ -1,0 +1,398 @@
+# Written by evals/_build/kb_goldens.py from evals/questions.en.json and kb/en/; do not edit.
+questions:
+- id: KB.P1.2
+  question: Which pages still show the old prices?
+  asker: '4'
+  facts:
+  - value: $125.00
+    page: services/engine/timing-belt.md
+  rule: services/engine/timing-belt.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P1.3
+  question: A customer says we quoted $475 for front pads and rotors. Is that our price?
+  asker: '17'
+  facts:
+  - value: $493.00
+    page: prices/price-list.md
+  - value: $475.00
+    page: prices/price-list.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P1.5
+  question: When did the labour rate change, and from what to what?
+  asker: '6'
+  facts:
+  - value: $125.00
+    page: prices/how-prices-change.md
+  - value: $135.00
+    page: prices/how-prices-change.md
+  - value: $112.50
+    page: prices/how-prices-change.md
+  - value: $121.50
+    page: prices/how-prices-change.md
+  - value: 8 %
+    page: prices/how-prices-change.md
+  rule: prices/how-prices-change.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P1.6
+  question: How much is a timing belt on a 2011 Outback?
+  asker: customer
+  facts:
+  - value: $720.00
+    page: prices/price-list.md
+  - value: $688.00
+    page: services/engine/timing-belt.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P2.1
+  question: What is our warranty?
+  asker: '6'
+  facts:
+  - value: '24'
+    page: customers/warranty.md
+  - value: 24,000
+    page: customers/warranty.md
+  - value: '12'
+    page: customers/warranty.md
+  - value: 12,000
+    page: customers/warranty.md
+  rule: customers/warranty.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P2.5
+  question: What is your warranty on brake work?
+  asker: customer
+  facts:
+  - value: '24'
+    page: customers/warranty.md
+  - value: 24,000
+    page: customers/warranty.md
+  - value: '12'
+    page: customers/warranty.md
+  - value: 12,000
+    page: customers/warranty.md
+  rule: customers/warranty.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P4.3
+  question: I want to give 12 % to end an argument. Can I?
+  asker: '23'
+  facts:
+  - value: 10 %
+    page: policies/discounts.md
+  rule: policies/discounts.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.1
+  question: What are Nickajack's terms, and what must be on every order?
+  asker: '6'
+  facts:
+  - value: '30'
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.2
+  question: A Millsaps driver says go ahead with $380 of extra work
+  asker: '17'
+  facts:
+  - value: $300
+    page: accounts/company-account-terms.md
+  - value: $1,000
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.3
+  question: A Nickajack driver approves $380 of found work
+  asker: '6'
+  facts:
+  - value: $300
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.7b
+  question: What is Nickajack's credit limit?
+  asker: '3'
+  facts:
+  - value: $30,000
+    page: accounts/credit/credit-limits-and-collections.md
+  rule: accounts/credit/credit-limits-and-collections.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.8
+  question: Which accounts come first, and when?
+  asker: '16'
+  facts:
+  - value: '7:30'
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P6.1
+  question: Are you open on the afternoon of the stocktake day?
+  asker: customer
+  facts:
+  - value: '7:30'
+    page: customers/hours-and-locations.md
+  rule: customers/hours-and-locations.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P6.2
+  question: What do I do with bookings that day?
+  asker: '7'
+  facts:
+  - value: '10:30'
+    page: how-to/stocktake-day.md
+  rule: how-to/stocktake-day.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P6.3
+  question: Is Charlotte Pike open on Saturdays?
+  asker: '24'
+  facts:
+  - value: '8'
+    page: customers/hours-and-locations.md
+  - value: '12'
+    page: customers/hours-and-locations.md
+  rule: customers/hours-and-locations.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P8.1
+  question: My brakes are grinding. What is it and what will it cost?
+  asker: customer
+  facts:
+  - value: $49.95
+    page: customers/brake-noise.md
+  - value: $428.00
+    page: customers/brake-noise.md
+  - value: $523.76
+    page: customers/brake-noise.md
+  rule: customers/brake-noise.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C1.2
+  question: Where does the deposit bag go at closing at Bonny Oaks?
+  asker: '17'
+  facts:
+  - value: '1:00'
+    page: shops/east/opening-and-closing.md
+  rule: shops/east/opening-and-closing.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C1.5
+  question: How much is a transmission flush?
+  asker: '7'
+  facts:
+  - value: $191.98
+    page: services/transmission/transmission-fluid-service.md
+  - value: $386.94
+    page: services/transmission/transmission-fluid-service.md
+  rule: services/transmission/transmission-fluid-service.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C2.1
+  question: How much longer do spark plugs take on a V6 SUV?
+  asker: '7'
+  facts:
+  - value: '2.4'
+    page: prices/labour-rates-and-fees.md
+  rule: prices/labour-rates-and-fees.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C2.2
+  question: Who approves work on a driving-school car above $500?
+  asker: '17'
+  facts:
+  - value: $500
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C3.1
+  question: Front pads and rotors on a van?
+  asker: '5'
+  facts:
+  - value: $640.91
+    page: prices/counter-price-sheet.pdf
+  rule: prices/counter-price-sheet.pdf
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C3.2a
+  question: How many paid days off after two years?
+  asker: '17'
+  facts:
+  - value: '10'
+    page: team/staff-handbook.docx
+  rule: team/staff-handbook.docx
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C3.6
+  question: How many late arrivals before a written warning?
+  asker: '4'
+  facts:
+  - value: '30'
+    page: team/staff-handbook.docx
+  rule: team/staff-handbook.docx
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C4.2
+  question: How long do I wait for an answer to an estimate?
+  asker: '17'
+  facts:
+  - value: '30'
+    page: how-to/getting-approval.md
+  - value: '4:00'
+    page: how-to/getting-approval.md
+  rule: how-to/getting-approval.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.1
+  question: A customer wants a tune-up on a 2015 Camry
+  asker: '7'
+  facts:
+  - value: $222.28
+    page: services/maintenance/spark-plugs.md
+  rule: services/maintenance/spark-plugs.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.2
+  question: Recharge the freon on a 2019 CR-V at Bonny Oaks today?
+  asker: '17'
+  facts:
+  - value: R-1234yf
+    page: services/ac/ac-check-and-recharge.md
+  - value: $278.80
+    page: services/ac/ac-check-and-recharge.md
+  - value: $49.95
+    page: services/ac/ac-check-and-recharge.md
+  - value: '1:00'
+    page: services/ac/ac-check-and-recharge.md
+  rule: services/ac/ac-check-and-recharge.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.3
+  question: Front end alignment on an F-150?
+  asker: '23'
+  facts:
+  - value: $137.94
+    page: services/tires/alignment.md
+  rule: services/tires/alignment.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.4
+  question: How much is a fan belt?
+  asker: '7'
+  facts:
+  - value: $124.18
+    page: services/engine/drive-belt.md
+  rule: services/engine/drive-belt.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.5
+  question: A customer says it shakes when braking
+  asker: '6'
+  facts:
+  - value: $49.95
+    page: customers/brake-noise.md
+  rule: customers/brake-noise.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C7.2
+  question: Deposit and total for a transmission rebuild?
+  asker: '17'
+  facts:
+  - value: $1,700.00
+    page: services/transmission/transmission-rebuild.md
+  - value: $4,412.50
+    page: services/transmission/transmission-rebuild.md
+  rule: services/transmission/transmission-rebuild.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C7.6
+  question: What warranty does a Nickajack van get on a brake job?
+  asker: '6'
+  facts:
+  - value: '12'
+    page: accounts/company-account-terms.md
+  - value: 12,000
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C9.1
+  question: What is a wheel bearing, standard?
+  asker: '17'
+  facts:
+  - value: $420.27
+    page: prices/price-list.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C9.2
+  question: Every transmission job and its standard price
+  asker: '5'
+  facts:
+  - value: $191.98
+    page: prices/price-list.md
+  - value: $386.94
+    page: prices/price-list.md
+  - value: $169.50
+    page: prices/price-list.md
+  - value: $1,227.91
+    page: prices/price-list.md
+  - value: $379.64
+    page: prices/price-list.md
+  - value: $4,412.50
+    page: prices/price-list.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C12.4
+  question: Sourwood's credit limit?
+  asker: '5'
+  facts:
+  - value: $7,500
+    page: accounts/credit/credit-limits-and-collections.md
+  rule: accounts/credit/credit-limits-and-collections.md
+  assertions:
+  - type: tool_call
+    tool: kb_read

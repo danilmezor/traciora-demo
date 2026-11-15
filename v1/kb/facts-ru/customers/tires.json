@@ -1,0 +1,124 @@
+{
+ "path": "customers/tires.md",
+ "title": "Шины, проколы и сход-развал",
+ "title_en": "Tires, flats and alignment",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/tires.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "15",
+ "purpose": "Public page for tire questions with menu prices.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:fact-only-in-attachment"
+ ],
+ "length_class": "short",
+ "words_ru": 207,
+ "links_to": [
+  "customers/seasonal-tyre-change.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The seasonal part is a page of its own in Russian; this page keeps the year-round tyre questions.",
+  "Reference size 185/65 R15; the total includes the disposal fee (no state fee).",
+  "\"Most sizes arrive the next day\" is true in Ulyanovsk; Kazan gets tyres twice a week (vendors.json V5): the planted contradiction of O15."
+ ],
+ "new_facts": [
+  "Rotation is rarely asked for because wheels change places at the seasonal changeover."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "tyre_repair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 21320.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 35120.0
+  },
+  {
+   "catalogue_key": "wheel_balance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "tyre_rotation",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 760.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "tpms_sensor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4590.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "15",
+   "written_as": "Евгений",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  760.0,
+  800.0,
+  1200.0,
+  3000.0,
+  4590.0,
+  21320.0,
+  35120.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

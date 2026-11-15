@@ -1,0 +1,835 @@
+{
+  "format": "seed-call/1",
+  "id": "en-17-S1-a5-complaint",
+  "configuration": "en",
+  "number": 17,
+  "story": "S1",
+  "title": "The electrical contractor's manager on two brake comebacks and a bill; a call back promised and never made",
+  "purpose": "Story S1, the call that lost account A5. Wade Carlisle has had two vans back for brakes inside two months and a statement that still bills the second job in full. Dale blames the parts house, says billing goes through Chattanooga, and says he will pull the tickets and call back this week. He never does. An existing-job call: no score; the call log adds the auto-fail.",
+  "cast": {
+    "advisor": {
+      "slot": 22,
+      "name": "Dale Hutchins",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Wade Carlisle",
+      "ref": "accounts.json en.A5 contacts[0]",
+      "company": "Cumberland Bend Electric",
+      "account": "A5",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Derek Hooper",
+        "slot": 27,
+        "role": "fitted both pad jobs; the customer quotes him without his name",
+        "said_on_call": false
+      }
+    ]
+  },
+  "call": {
+    "day": "the Tuesday of week T-19 (rule R6; card S01, call 17)",
+    "nominal_offset": "T-136d",
+    "nominal_date": "2026-06-30",
+    "local_start": "10:40",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "301",
+    "ring_s": 11,
+    "caller_phone": "615-555-0134",
+    "repeat_caller": false,
+    "talk_s": 181,
+    "note": "Central time. The public line rang desk 301 first."
+  },
+  "scenario": {
+    "who_calls": "Wade Carlisle, operations manager of company account A5, from a job site.",
+    "vehicle": "units E-2 (2016 Chevrolet Express 2500, BRC-5572) and E-6 (2020 Ford Transit-250, BRC-3674)",
+    "job": "front pad jobs on both vans, each of which came back about three weeks later; the comebacks were done without charge",
+    "wants": "the second pad job taken off the statement, and to know whether the same pads will go on his trucks again",
+    "what_happens": "Dale knows about the Transit, says the pads come from the parts house, that both vans were fixed free, that the first job costs what it cost and that billing goes through Chattanooga. Pressed, he says he will pull both tickets and call back, and when asked when, 'this week'. He does not sum it up.",
+    "facts": {
+      "comeback_orders_opened": [
+        "the Tuesday of week T-26 (E-2)",
+        "the Tuesday of week T-22 (E-6)"
+      ],
+      "disputed": "the statement that holds the first order of the second comeback: the pad job on E-6",
+      "note": "Cards S01 and S06: both jobs were fitted by slot 27 with the cheap pads of the supplier the shop kept. No amount is said on the call. Three unanswered calls from this number follow (calls 18 to 20), and nobody calls back."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Thursday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan's."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 1.8,
+      "said": "Dale. Wade Carlisle, Cumberland Bend Electric."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 5.1,
+      "said": "Wade. What can I do for you."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 9.5,
+      "said": "You can tell me why I've — I've had two vans back in your shop for brakes inside of two months."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 18.6,
+      "said": "...Which ones we talkin' about?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 21.8,
+      "said": "The Express, the sixteen — that was last month. Squealin' like a stuck hog three weeks after y'all put pads on it. Now the Transit. Same thing. My guy brought it back to you three weeks ago."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 36.4,
+      "said": "Yeah, I know about the Transit."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 40.2,
+      "said": "Then you know it's the same pads. Your man told my driver it's 'just bedding in.' It ain't bedding in, Dale. It was down to nothin' on the inside pad."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 52.5,
+      "said": "Them pads come from the parts house. I don't make 'em."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 58.0,
+      "said": "I don't care where they come from. I care that I pay you to put brakes on a truck and three weeks later I got a man standin' around a job site with no truck."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 71.0,
+      "said": "Yeah.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 72.8,
+      "said": "We fixed both of 'em. Didn't charge you for it."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 77.4,
+      "said": "You didn't charge me the second time. You charged me the first time. I'm lookin' at your statement right now, and the Transit's brake job is settin' right there on it, full price."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 89.7,
+      "said": "Yeah.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 91.4,
+      "said": "That's the first job. That's what it cost."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 95.6,
+      "said": "For brakes that didn't last a month! I'm not — I'm not payin' that, Dale. Not that line."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 102.5,
+      "said": "Well. I can't just take it off."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 106.4,
+      "said": "Why not? It's your shop."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 109.6,
+      "said": "It ain't my — it goes through Chattanooga now. The billing does."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 115.2,
+      "said": "Then who do I talk to in Chattanooga?"
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 119.6,
+      "said": "...Let me look into it. I'll pull both tickets and see what was put on 'em."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 127.5,
+      "said": "I've got eleven trucks, Dale. I been comin' to that shop since before your name was on the door. Well — it ain't on the door now, is it."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 139.4,
+      "said": "No, it ain't."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 142.2,
+      "said": "I need to know two things. Am I payin' for that brake job, and are you gonna keep puttin' those pads on my trucks. 'Cause if it's yes and yes, I'll take 'em down the road."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 156.8,
+      "said": "I hear you."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 159.3,
+      "said": "So when do I hear back?"
+    },
+    {
+      "n": 27,
+      "who": "advisor",
+      "at_s": 162.9,
+      "said": "I'll call you. Let me pull the tickets and I'll call you back."
+    },
+    {
+      "n": 28,
+      "who": "customer",
+      "at_s": 169.4,
+      "said": "When, Dale?"
+    },
+    {
+      "n": 29,
+      "who": "advisor",
+      "at_s": 171.1,
+      "said": "This week."
+    },
+    {
+      "n": 30,
+      "who": "customer",
+      "at_s": 173.6,
+      "said": "Alright. I'll be waitin' on it."
+    },
+    {
+      "n": 31,
+      "who": "advisor",
+      "at_s": 177.8,
+      "said": "Alright."
+    },
+    {
+      "n": 32,
+      "who": "customer",
+      "at_s": 179.5,
+      "said": "Alright."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.41,
+    "restoration_tier": "medium",
+    "noise": "the caller is outdoors on a job site, a generator running; the advisor mumbles",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          4,
+          5,
+          6,
+          8,
+          9,
+          12,
+          13,
+          16,
+          19,
+          21,
+          22,
+          24,
+          30,
+          31,
+          32
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "a name heard as a neighbour in sound",
+        "script_turn": 2,
+        "said": "Carlisle",
+        "stored": "Carlyle"
+      },
+      {
+        "rule": "R2",
+        "what": "a name heard as a neighbour in sound",
+        "script_turn": 2,
+        "said": "Cumberland Bend",
+        "stored": "Cumberland Band"
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 6,
+        "said": "Transit",
+        "stored": "transit"
+      },
+      {
+        "rule": "R4",
+        "what": "a trade phrase replaced by words that sound like it",
+        "script_turn": 8,
+        "said": "bedding in",
+        "stored": "betting in"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          6
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 6,
+        "said": "like a stuck hog",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 10,
+        "said": "three weeks later I got a man standin' around a job site with no truck",
+        "stored": "{?likely: three weeks later I got a man standing around a job site with no truck}"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the end of the caller's sentence is gone",
+        "script_turn": 13,
+        "said": "is settin' right there on it, full price",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a few words replaced by a plausible wrong phrase",
+        "script_turn": 22,
+        "said": "since before your name was on the door",
+        "stored": "since before you're in was on the door"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 24,
+        "said": "'Cause if it's yes and yes, I'll take 'em down the road.",
+        "stored": "{?likely: Because if it's yes and yes, I'll take them down the road.}"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the span that holds the promise is marked as uncertain",
+        "script_turn": 27,
+        "said": "I'll call you. Let me pull the tickets and I'll call you back.",
+        "stored": "{?likely: I'll call you. Let me pull the tickets and I'll call you back.}"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          11
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 4,
+        "wrong": 2
+      },
+      "first_names": {
+        "mentions": 7,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 15,
+        "wrong": 2
+      },
+      "money_time": {
+        "mentions": 1,
+        "as_digits": 1,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 6,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 375,
+    "stored_words": 363,
+    "strict_word_difference": 0.144
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 393,
+    "duration_s": 181.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan's.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Dale. Wade Carlyle, Cumberland Band Electric.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Wade. What can I do for you.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You can tell me why I've had two vans back in your shop for brakes inside of two months.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Which ones we talking about?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The Express, the '16, that was last month. Squealing three weeks after y'all put pads on it. Now the transit. Same thing. My guy brought it back to you three weeks ago.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, I know about the Transit.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Then you know it's the same pads. Your man told my driver it's 'just betting in.' It ain't bedding in, Dale. It was down to nothing on the inside pad.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Them pads come from the parts house. I don't make them.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I don't care where they come from. I care that I pay you to put brakes on a truck and {?likely: three weeks later I got a man standing around a job site with no truck}.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "We fixed both of them. Didn't charge you for it.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You didn't charge me the second time. You charged me the first time. I'm looking at your statement right now, and the Transit's brake job.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. That's the first job. That's what it cost.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "For brakes that didn't last a month! I'm not paying that, Dale. Not that line.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Well. I can't just take it off.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Why not? It's your shop.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It goes through Chattanooga now. The billing does.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Then who do I talk to in Chattanooga?",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Let me look into it. I'll pull both tickets and see what was put on them.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I've got eleven trucks, Dale. I been coming to that shop since before you're in was on the door. Well, it ain't on the door now, is it.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, it ain't.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I need to know two things. Am I paying for that brake job, and are you going to keep putting those pads on my trucks. {?likely: Because if it's yes and yes, I'll take them down the road.}",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I hear you.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So when do I hear back?",
+        "confidence": null
+      },
+      {
+        "sequence": 24,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "{?likely: I'll call you. Let me pull the tickets and I'll call you back.}",
+        "confidence": null
+      },
+      {
+        "sequence": 25,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "When, Dale?",
+        "confidence": null
+      },
+      {
+        "sequence": 26,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "This week.",
+        "confidence": null
+      },
+      {
+        "sequence": 27,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. I'll be waiting on it.",
+        "confidence": null
+      },
+      {
+        "sequence": 28,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      },
+      {
+        "sequence": 29,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan's.",
+        "level": 1,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "All right.",
+        "level": 0,
+        "segment": 28
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint",
+      "warranty"
+    ],
+    "strength": {
+      "quote": "I'll pull both tickets and see what was put on them.",
+      "why": "The one thing he offers to do is the right first step: find out what was fitted to both vans.",
+      "segment": 18
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "All right.",
+      "say": "So: I pull both tickets today, and I call you Thursday before noon with two answers: whether that line comes off the statement, and what pads go on your trucks from now on."
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 28
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "complaint",
+        "warranty"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "poor",
+      "strength_segment": 18,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan's",
+        "recap": "All right"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "I'll pull both tickets and see what was put on them",
+        "why": "The one thing he offers to do is the right first step: find out what was fitted to both vans."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "All right.",
+        "say": "So: I pull both tickets today, and I call you Thursday before noon with two answers: whether that line comes off the statement, and what pads go on your trucks from now on."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. The promise ('I'll call you. Let me pull the tickets and I'll call you back.') was said clearly; in the stored lines it is inside an uncertainty marker, which is why the quality is poor.",
+    "what_follows": "No call is made to this number. He rings again 1, 6 and 9 days later and nobody answers (calls 18 to 20). The account has no order after the Thursday of week T-20.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 0,
+      "objection": "not_applicable"
+    },
+    "score": null,
+    "outcome": "callback_promised",
+    "tags": [
+      "callback_promised",
+      "complaint",
+      "warranty"
+    ]
+  },
+  "why": {
+    "call_type": "existing_job: a complaint about work already done and a bill for it.",
+    "greeting": "1: the business only, in one word.",
+    "recap": "0: a call back was agreed and the call ends on 'all right', three times.",
+    "not_applicable": "The six checks that apply to new enquiries only are not asked of this call.",
+    "outcome": "callback_promised: 'I'll call you back', and 'this week' when pressed.",
+    "tags": "complaint and warranty: both vans came back inside the warranty and were redone free; the dispute is the first job's line on the statement.",
+    "auto_fails": "None from the judge. The call log adds callback_not_kept: no call to this number in the 24 hours after, or ever.",
+    "asr_quality": "poor: the line that holds the promise is marked uncertain, 'bedding in' came out as 'betting in', and two of the caller's phrases are gone.",
+    "score": "No score: 2 scored checks (greeting, recap), under the three a score needs.",
+    "carried_by": []
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "not kept: no outbound call to 615-555-0134 after this call",
+    "auto_fail": "callback_not_kept"
+  },
+  "day_report": {
+    "in_report": true,
+    "candidate": {
+      "kind": "callback",
+      "state": "not_kept"
+    },
+    "says": "In Dale's report of that day this call is the 'callback' highlight: the call back he promised at 10:40 was not made. The call has no score."
+  },
+  "new_facts": [
+    "Which van is which: the first comeback (the Tuesday of week T-26) is E-2, the second (the Tuesday of week T-22) is E-6; each came back about three weeks after its pad job, so the first orders are about three weeks before those days and the disputed line is E-6's pad job.",
+    "Both comebacks were done without charge (warranty orders).",
+    "Slot 27 told A5's driver the noise was 'just bedding in'."
+  ]
+}

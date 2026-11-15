@@ -1,0 +1,199 @@
+{
+ "path": "how-to/taking-a-call.md",
+ "title": "Как принять звонок",
+ "title_en": "Taking a call",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/taking-a-call.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "How an advisor handles a first call; teaches exactly what the call scorecard checks, in the best closer's voice.",
+ "serves": [
+  "S4",
+  "S3",
+  "S8",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_ru": 481,
+ "links_to": [
+  "prices/price-list.md",
+  "parts/ordering-parts.md",
+  "how-to/price-objections.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The eight checks and their weights are the same (1, 2, 2, 2, 3, 3, 1, 2). The example lines are Russian lines in the register of the seed's Russian call samples.",
+  "The brake-inspection price in line 4 is the Russian catalogue's.",
+  "One more learned thing: ask again when the customer is unclear (rule R13)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Восемь шагов",
+   "columns": [
+    "№",
+    "Что",
+    "Как это звучит",
+    "Вес"
+   ],
+   "rows": [
+    {
+     "№": "1",
+     "Что": "Приветствие: название и ваше имя",
+     "Как это звучит": "«Ермак-Сервис, Алина, здравствуйте».",
+     "Вес": "1"
+    },
+    {
+     "№": "2",
+     "Что": "Имя и номер, номер повторить",
+     "Как это звучит": "«Как к вам обращаться? И номер для связи продиктуйте, я повторю».",
+     "Вес": "2"
+    },
+    {
+     "№": "3",
+     "Что": "Выяснить, что случилось. Машина — и на один вопрос больше, чем нужно",
+     "Как это звучит": "«Давно так? Только при торможении или всё время?»",
+     "Вес": "2"
+    },
+    {
+     "№": "4",
+     "Что": "Цена сразу со следующим шагом",
+     "Как это звучит": "«Диагностика тормозов — 700 ₽, и я могу принять вас в пятницу в девять».",
+     "Вес": "2"
+    },
+    {
+     "№": "5",
+     "Что": "Предложить время. Два",
+     "Как это звучит": "«Завтра к девяти или в пятницу к часу?»",
+     "Вес": "3"
+    },
+    {
+     "№": "6",
+     "Что": "Попросить запись и записать",
+     "Как это звучит": "«Записываю: пятница, девять утра. Подойдёте на приёмку, спросите Алину».",
+     "Вес": "3"
+    },
+    {
+     "№": "7",
+     "Что": "Итог: день, время, какой сервис, что делаем",
+     "Как это звучит": "«Пятница, девять утра, Московское шоссе, сорок, смотрим передние тормоза».",
+     "Вес": "1"
+    },
+    {
+     "№": "8",
+     "Что": "Ответить на сомнение, если оно прозвучало",
+     "Как это звучит": "«Вам где-то назвали меньше? Давайте скажу, что входит в нашу сумму».",
+     "Вес": "2"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Три способа провалить звонок целиком",
+   "item": "Неверное обещание. Цена не из прайс-листа. «Сегодня же заберёте» — до того, как подтверждены запчасти и механик: что можно обещать. Не знаете — скажите «уточню и перезвоню до двух» и перезвоните до двух."
+  },
+  {
+   "section": "Три способа провалить звонок целиком",
+   "item": "Брошенный клиент. Поставили на удержание и не вернулись, перевели в никуда, сбросили звонок."
+  },
+  {
+   "section": "Три способа провалить звонок целиком",
+   "item": "Обещанный и не сделанный перезвон."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "Улыбнитесь до того, как взяли трубку. Это слышно."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "Первая цена, о которой спрашивают, — не настоящий вопрос. Настоящий: «можно ли вам доверить машину». На него отвечают вопросами про машину."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "«Тормоза» без машины не оцениваем. Колодки на «Гранту» и колодки на «Прадо» — разные работы."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "Назвали два времени — замолчите. Пусть выберет."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "Клиент говорит непонятно — переспросите. Дважды, если нужно. «Стучит что-то спереди» — это ещё не жалоба."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "На «я перезвоню» спросите: «Давайте я придержу для вас пятницу, девять утра, до завтрашнего полудня?» И придержите."
+  },
+  {
+   "section": "Чему я научилась",
+   "item": "Звонок про машину, которая уже у нас: начните с имени клиента, закончите тем, что будет дальше и когда."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 700.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [
+  700.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "Angie's rewrite of the whole page around the eight checks when the scorecard came in (proposed by slot 16, approved by slot 4); message: \"The call, in eight moves.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Звонок в восемь шагов."
+  }
+ ],
+ "has_history": true
+}

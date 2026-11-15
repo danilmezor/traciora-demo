@@ -1,0 +1,111 @@
+{
+ "path": "how-to/chats-and-messages.md",
+ "title": "Chats and messages",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "6",
+ "purpose": "How web chat and messenger conversations are answered alongside the assistant.",
+ "serves": [
+  "S7",
+  "S12",
+  "challenge:combine-kb-and-data",
+  "visibility:public"
+ ],
+ "length_class": "medium",
+ "words_en": 334,
+ "links_to": [
+  "customers/README.md",
+  "prices/price-list.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Channels in the English configuration: web chat and Telegram (design O3).",
+  "Web chat: the assistant sends, from the public pages only (customers/, services/, the price list; also shop-floor/, which is at the same rank); it cannot see customer data or book; it hands over with a card.",
+  "Telegram: the assistant drafts; a person sends (S7: the open Telegram conversation with a draft waiting).",
+  "First reply within 10 minutes; read the whole thread; one contact per phone (S7: one person across three stores by her phone).",
+  "Drafts are checked against the price list and the schedule.",
+  "No repair prices in chat for an unseen car; menu prices and public ranges are fine.",
+  "Booked work is read back in the chat; conversations are closed when done.",
+  "A wrong answer from the assistant usually means a wrong page.",
+  "Juniors cannot publish: slot 6's text, published by slot 4."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What the assistant does",
+   "item": "Web chat: the assistant answers by itself, from the pages customers may be shown: Customer answers, the service pages and the price list. Nothing else. It can explain a service, give a menu price, say our hours. It cannot see a customer's car or history and it cannot book. When the customer wants a time, or asks something that is not on those pages, it hands the conversation to us and a card appears on the board."
+  },
+  {
+   "section": "What the assistant does",
+   "item": "Telegram: the assistant only drafts. Nothing goes out until one of us reads the draft, fixes it and sends it."
+  },
+  {
+   "section": "What we do",
+   "item": "First reply within 10 minutes in opening hours. A handed-over chat is a customer who has already waited."
+  },
+  {
+   "section": "What we do",
+   "item": "Open the conversation, read all of it, then answer. Do not make them repeat what they told the assistant."
+  },
+  {
+   "section": "What we do",
+   "item": "Find them by phone number. A chat, a call and a visit are one person; put them on one customer record."
+  },
+  {
+   "section": "What we do",
+   "item": "A draft is a start. Check every price in it against the price list and every time against the schedule before you press send. You are the one sending it."
+  },
+  {
+   "section": "What we do",
+   "item": "Repair prices are not given in a chat for a car we have not seen. Menu prices and \"from... to\" ranges that are on the public pages are fine."
+  },
+  {
+   "section": "What we do",
+   "item": "One question per message is how customers write. Answer all of them, not the first."
+  },
+  {
+   "section": "What we do",
+   "item": "When it is booked, say the booking back in the chat: day, time, shop, the work."
+  },
+  {
+   "section": "What we do",
+   "item": "Close the conversation when it is done, so the open list is the list of people waiting."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "6",
+   "written_as": "Maya",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Channels: web chat, Telegram, VK, Avito (design O3). Say which channels the assistant sends in and which it drafts in, per the tenant settings of the Russian configuration."
+ ]
+}

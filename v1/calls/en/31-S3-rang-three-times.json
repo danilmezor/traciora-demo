@@ -1,0 +1,850 @@
+{
+  "format": "seed-call/1",
+  "id": "en-31-S3-rang-three-times",
+  "configuration": "en",
+  "number": 31,
+  "story": "S3",
+  "title": "Monday, ten past eight: 'I have called y'all three times this morning'",
+  "purpose": "Story S3, before the fix. One advisor is at the counter until nine and the phones ring out; this caller got through on her fourth try. Travis says why, handles a flashing check engine light properly and books her for nine. Her doubt, whether she will ever reach the shop again, gets an apology and no more.",
+  "cast": {
+    "advisor": {
+      "slot": 5,
+      "name": "Travis Burnette",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Tamika Ellison",
+      "invented": true,
+      "first_time": true
+    },
+    "mentioned": [
+      {
+        "name": "Kevin Lawson",
+        "slot": 10,
+        "role": "the diagnostic technician"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Monday of week T-6, 08:10 (rule R6; card S03, call 31)",
+    "nominal_offset": "T-46d",
+    "nominal_date": "2026-09-28",
+    "local_start": "08:10",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "101",
+    "ring_s": 27,
+    "caller_phone": "423-555-0137",
+    "repeat_caller": true,
+    "talk_s": 172,
+    "note": "Her calls at 07:34, 07:46 and 07:58 rang out; this one was answered on the second ring stage. The three misses are resolved by this call as got_through."
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Tamika Ellison, in the car park at her work, on her fourth call of the morning.",
+    "vehicle": "2017 Hyundai Elantra",
+    "job": "check engine light flashing with a shake: diagnose a misfire",
+    "wants": "somebody to answer; then to know whether she can drive it and what it costs to look at",
+    "what_happens": "Travis apologises and says why the phones rang out, establishes that the light is flashing and the car shakes all the time, tells her to keep off the interstate, offers nine o'clock with the diagnostic technician, gives the price out the door with what it usually finds, answers her doubt with an apology, takes her name and number and reads the number back, books and sums up.",
+    "facts": {
+      "booked": "the call's day, 09:00",
+      "misses_before": [
+        "07:34",
+        "07:46",
+        "07:58"
+      ],
+      "note": "catalogue.json check_engine_diag: 135.00; with shop supplies 6.75 and sales tax, 154.86 out the door. Before the fix one advisor worked 07:30 to 16:00 and two came in at 09:00 (card S03).",
+      "prices": [
+        {
+          "what": "Check engine light - scan, test & diagnose (1 hr)",
+          "job": "check_engine_diag",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 135.0,
+          "said": "one thirty-five",
+          "said_usd": 135,
+          "said_as": "before tax"
+        },
+        {
+          "what": "Check engine light - scan, test & diagnose (1 hr)",
+          "job": "check_engine_diag",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 135.0,
+          "shop_supplies_usd": 6.75,
+          "out_the_door_usd": 154.86,
+          "said": "one fifty-four eighty-six",
+          "said_usd": 154.86,
+          "said_as": "out the door"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday",
+      "day": "call"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Travis."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.1,
+      "said": "Finally. I have called y'all three times this mornin'."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.3,
+      "said": "I'm sorry about that. Monday mornings we're three deep at the counter and it's just me up here till nine. I've got you now. What's going on?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 19.9,
+      "said": "My check engine light's flashin' and the whole car is shakin'. It started on the way to work."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 27.4,
+      "said": "Okay. Flashing, not just on?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 30.9,
+      "said": "Flashin'. On and off."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 34.1,
+      "said": "Okay. That's a misfire, and that's the one light I don't want you driving on. Where are you right now?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 42.9,
+      "said": "I'm in the parkin' lot at work. Off Amnicola."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 47.0,
+      "said": "Okay, that's not far. What kind of car?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 50.6,
+      "said": "Twenty-seventeen Elantra."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 52.5,
+      "said": "And is it shaking all the time, or just when you give it gas?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 59.6,
+      "said": "All the time. It's worse at a red light."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 64.4,
+      "said": "Okay. Here's what I'd do. Don't take it on the interstate. If you can limp it over here, slow, I can have Kevin — he's our diagnostic tech — on it at nine this morning."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 76.7,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 78.1,
+      "said": "What's it gonna cost me for him to look at it?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 83.0,
+      "said": "The diagnostic's one thirty-five, and out the door with tax that's one fifty-four eighty-six. Most times a misfire's a coil or a plug, and he finds it inside that hour. If it's more than that, I call you before we do anything. And like I said, I can get you in at nine."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 102.5,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 104.2,
+      "said": "I mean, I about gave up and called somebody else. If I can't get y'all on the phone, how am I supposed to know when my car's done?"
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 116.3,
+      "said": "I hear you, and I'm sorry. Monday mornings get away from us."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 122.7,
+      "said": "...Okay. Well. I can be there by nine."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 126.9,
+      "said": "Good. What's your name?"
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 130.1,
+      "said": "Tamika Ellison."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 131.5,
+      "said": "Tamika, and a good number for you?"
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 135.4,
+      "said": "Four two three, five five five, oh one three seven."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 139.9,
+      "said": "Four two three, five five five, oh one three seven. Okay, Tamika. I've got you down for nine this morning, and I'll write it up myself."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 151.5,
+      "said": "Can somebody give me a ride back to work?"
+    },
+    {
+      "n": 27,
+      "who": "advisor",
+      "at_s": 156.5,
+      "said": "Yes ma'am, we'll run you back. So that's nine this morning, the Elantra, and Kevin's checking that misfire."
+    },
+    {
+      "n": 28,
+      "who": "customer",
+      "at_s": 164.4,
+      "said": "Okay. Thank you."
+    },
+    {
+      "n": 29,
+      "who": "advisor",
+      "at_s": 167.4,
+      "said": "Thank you for sticking with us, Tamika. Drive it easy."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.39,
+    "restoration_tier": "medium",
+    "noise": "a full counter behind the advisor and an impact wrench in the first bay; the caller is in a car with the engine running rough",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          4,
+          6,
+          8,
+          13,
+          15,
+          18,
+          20,
+          27
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "the caller's first name misheard once",
+        "script_turn": 23,
+        "said": "Tamika",
+        "stored": "Tameka"
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 16,
+        "said": "coil",
+        "stored": "coal"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          3,
+          10,
+          13,
+          16,
+          24,
+          25,
+          27
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 4,
+        "said": "the whole car is shakin'",
+        "stored": "{?likely: the whole car is shaking}"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 12,
+        "said": "It's worse at a red light.",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 13,
+        "said": "he's our diagnostic tech",
+        "stored": "{?likely: he's our diagnostic tech}"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a few words gone without a trace",
+        "script_turn": 18,
+        "said": "If I can't get y'all on the phone,",
+        "stored": ""
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          17
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 7,
+        "wrong": 1
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 9,
+        "as_digits": 8,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 4,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 367,
+    "stored_words": 332,
+    "strict_word_difference": 0.163
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 359,
+    "duration_s": 172.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Travis.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Finally. I have called y'all three times this morning.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm sorry about that. Monday mornings we're three deep at the counter and it's just me up here till 9. I've got you now. What's going on?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "My check engine light's flashing and {?likely: the whole car is shaking}. It started on the way to work.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Flashing, not just on?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Flashing. On and off.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. That's a misfire, and that's the one light I don't want you driving on. Where are you right now?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm in the parking lot at work. Off Amnicola.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, that's not far. What kind of car?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "2017 Elantra.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "And is it shaking all the time, or just when you give it gas?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All the time.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Here's what I'd do. Don't take it on the interstate. If you can limp it over here, slow, I can have Kevin, {?likely: he's our diagnostic tech}, on it at 9 this morning.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh-huh. What's it going to cost me for him to look at it?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The diagnostic's $135, and out the door with tax that's $154.86. Most times a misfire's a coal or a plug, and he finds it inside that hour. If it's more than that, I call you before we do anything. And like I said, I can get you in at 9.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I about gave up and called somebody else. How am I supposed to know when my car's done?",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I hear you, and I'm sorry. Monday mornings get away from us.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Well. I can be there by nine.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Good. What's your name?",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Tamika Ellison.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Tameka, and a good number for you?",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0137.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0137. Okay, Tamika. I've got you down for 9 this morning, and I'll write it up myself.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Can somebody give me a ride back to work?",
+        "confidence": null
+      },
+      {
+        "sequence": 24,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am, we'll run you back. So that's 9 this morning, the Elantra, and Kevin's checking that misfire.",
+        "confidence": null
+      },
+      {
+        "sequence": 25,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Thank you.",
+        "confidence": null
+      },
+      {
+        "sequence": 26,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you for sticking with us, Tamika. Drive it easy.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Travis.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "423-555-0137. Okay, Tamika.",
+        "level": 2,
+        "segment": 22
+      },
+      {
+        "key": "need_discovery",
+        "quote": "And is it shaking all the time, or just when you give it gas?",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "If it's more than that, I call you before we do anything. And like I said, I can get you in at 9.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "offered_time",
+        "quote": "on it at 9 this morning",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I've got you down for 9 this morning, and I'll write it up myself.",
+        "level": 2,
+        "segment": 22
+      },
+      {
+        "key": "recap",
+        "quote": "So that's 9 this morning, the Elantra, and Kevin's checking that misfire.",
+        "level": 1,
+        "segment": 24
+      },
+      {
+        "key": "objection",
+        "quote": "I hear you, and I'm sorry. Monday mornings get away from us.",
+        "level": 1,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "and that's the one light I don't want you driving on",
+      "why": "He told her what a flashing light means before he asked anything else, which is what decided how the car got to the shop.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "I hear you, and I'm sorry. Monday mornings get away from us.",
+      "say": "You're right to ask. Here's my direct line, extension 101, and I'll call you myself by noon with what Kevin found, so you won't have to get through to us again."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 81.2,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 2,
+          "segment": 22
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 22
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 24
+        },
+        {
+          "key": "objection",
+          "level": 1,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "repeat_caller"
+      ],
+      "score": 81.2,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Travis",
+        "name_and_number": "423-555-0137. Okay, Tamika",
+        "need_discovery": "And is it shaking all the time, or just when you give it gas?",
+        "price_with_next_step": "If it's more than that, I call you before we do anything. And like I said, I can get you in at 9",
+        "offered_time": "on it at 9 this morning",
+        "asked_for_booking": "I've got you down for 9 this morning, and I'll write it up myself",
+        "recap": "So that's 9 this morning, the Elantra, and Kevin's checking that misfire",
+        "objection": "I hear you, and I'm sorry. Monday mornings get away from us"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "and that's the one light I don't want you driving on",
+        "why": "He told her what a flashing light means before he asked anything else, which is what decided how the car got to the shop."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "I hear you, and I'm sorry. Monday mornings get away from us.",
+        "say": "You're right to ask. Here's my direct line, extension 101, and I'll call you myself by noon with what Kevin found, so you won't have to get through to us again."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Three spans were hit by noise; none holds a check's evidence, so the quality is ok. The tag repeat_caller is the call log's: three unanswered calls from the same number in the 36 minutes before.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 2,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": 1
+    },
+    "score": 81.2,
+    "score_exact": 81.25,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "repeat_caller"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and his own name.",
+    "name_and_number": "2: the name, the number, and the number said back.",
+    "need_discovery": "2: the car, the job and what he asked for: flashing, not steady; shaking all the time, worse at a stop; where she is.",
+    "price_with_next_step": "2: the price out the door, what it usually finds and what happens if it is more, and the time again, in one line.",
+    "offered_time": "1: one specific option, nine this morning.",
+    "asked_for_booking": "2: the hour and who writes it up.",
+    "recap": "1: the time and the work; no address for a first-time customer who is about to drive there.",
+    "objection": "1: her doubt is whether she can reach the shop at all, and it gets an apology. A direct line or a promised call would have answered it.",
+    "asr_quality": "ok: two marked spans and one lost clause in twenty-seven turns, none on a quoted line.",
+    "score": "(1·2 + 2·2 + 2·2 + 2·2 + 3·1 + 3·2 + 1·1 + 2·1) / 2 = 13 of 16 weight points = 81.2. Exactly 81.25; the product rounds a score to one decimal.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "call_log": {
+    "repeat_caller": true,
+    "earlier_misses": "07:34, 07:46 and 07:58 the same morning, first desks 101, 101 and 101 (the only advisor on shift was at the counter); all three resolved by this call as got_through",
+    "auto_fail": null
+  },
+  "new_facts": [
+    "Three missed calls at main from 423-555-0137 on the Monday of week T-6 at 07:34, 07:46 and 07:58, each resolved by this call (got_through); they are among the morning misses of the period before the fix.",
+    "An invented first-time caller, Tamika Ellison, 2017 Hyundai Elantra: an appointment at main that day at 09:00 for a check engine diagnosis (technician slot 10), and a ride back to her work."
+  ]
+}

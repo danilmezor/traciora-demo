@@ -1,0 +1,111 @@
+{
+ "path": "services/maintenance/scheduled-maintenance.md",
+ "title": "Scheduled maintenance: 30K, 60K, 90K",
+ "first_revision_text": "en/_history/services/maintenance/scheduled-maintenance.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The mileage service: what the labour covers and what is priced separately.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 225,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job scheduled_maintenance: 1.8 h, labour only, no parts.",
+  "Labour covers the maker's inspection list; parts and fluids are separate catalogue lines.",
+  "Typical extras: 30K oil service, both air filters, rotation; 60K adds brake fluid and often transmission fluid; 90K adds spark plugs, coolant, and the timing belt question.",
+  "A full 60K quote must be added up from the price list (for example: 243.00 + 90.95 + 53.14 + 64.36 + 25.00 + 151.00 = 627.45 before supplies and tax, with transmission drain and fill 191.98 more)."
+ ],
+ "tables": [
+  {
+   "section": "Scheduled maintenance: 30K, 60K, 90K",
+   "columns": [
+    "At",
+    "Usually also due"
+   ],
+   "rows": [
+    {
+     "At": "30,000",
+     "Usually also due": "Oil service, engine and cabin air filters, tire rotation"
+    },
+    {
+     "At": "60,000",
+     "Usually also due": "The 30K items, plus brake fluid, and on many cars transmission fluid"
+    },
+    {
+     "At": "90,000",
+     "Usually also due": "The 30K items, plus spark plugs and coolant if not done; ask about the timing belt"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Scheduled maintenance: 30K, 60K, 90K",
+   "item": "Look up the car's own schedule. The table is a habit, not a rule."
+  },
+  {
+   "section": "Scheduled maintenance: 30K, 60K, 90K",
+   "item": "People with a new car under the maker's warranty ask whether they have to go to the dealer. They do not. Keep the invoice."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "scheduled_maintenance",
+   "what": "hours",
+   "class": "car",
+   "value": 1.8
+  },
+  {
+   "catalogue_key": "scheduled_maintenance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 243.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "The 30/60/90K table of typical extras."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«ТО по регламенту», every 15 000 km; ТО-1, ТО-2 etc."
+ ]
+}

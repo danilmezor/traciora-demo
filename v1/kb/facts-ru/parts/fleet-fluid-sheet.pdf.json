@@ -1,0 +1,169 @@
+{
+ "path": "parts/fleet-fluid-sheet.pdf",
+ "title": "Заправочные объёмы (распечатка)",
+ "title_en": "Fleet fluid sheet (printed copy)",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/fleet-fluid-sheet.pdf.json",
+ "kind": "binary",
+ "format": "PDF, 1 page landscape, text",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "A one-page print of the fluid sheet: the readable copy.",
+ "serves": [
+  "challenge:fact-only-in-attachment",
+  "challenge:fact-in-table",
+  "S1"
+ ],
+ "draft": "ru/_binaries.md",
+ "russian_form": "a one-page print of the sheet: the readable copy",
+ "facts": [
+  {
+   "rows": [
+    {
+     "vehicle": "ГАЗель Next, фургон и борт",
+     "engine": "Cummins ISF 2.8, дизель",
+     "oil": "10W-40 CI-4",
+     "litres_with_filter": "6,0",
+     "coolant": "G12 красный",
+     "gearbox": "МКПП, 75W-90 GL-4",
+     "seen_in": "«Симбирский гонец», «Тёплый контур», «Чистый Венец» № 7, «Идель-Электромонтаж», «Вкусный выезд» № 1–3"
+    },
+    {
+     "vehicle": "ГАЗель NN, фургон",
+     "engine": "Cummins ISF 2.8 или G21A 2.5, дизель: смотреть по VIN",
+     "oil": "10W-40 CI-4",
+     "litres_with_filter": "6,0",
+     "coolant": "G12 красный",
+     "gearbox": "МКПП, 75W-90 GL-4",
+     "seen_in": "«Симбирский гонец»"
+    },
+    {
+     "vehicle": "ГАЗель Бизнес 2705",
+     "engine": "УМЗ-4216, бензин",
+     "oil": "10W-40 SL",
+     "litres_with_filter": "5,0",
+     "coolant": "G11 зелёный",
+     "gearbox": "МКПП, 75W-90 GL-4",
+     "seen_in": "«Симбирский гонец», три старые машины"
+    },
+    {
+     "vehicle": "LADA Largus",
+     "engine": "1.6 16 кл. (K4M), ремень ГРМ",
+     "oil": "5W-40",
+     "litres_with_filter": "4,8 (в наряд 5)",
+     "coolant": "Type D жёлтый",
+     "gearbox": "МКПП, 75W-80",
+     "seen_in": "«Симбирский гонец», «Тёплый контур», «Вкусный выезд», «Идель-Электромонтаж»"
+    },
+    {
+     "vehicle": "LADA Largus",
+     "engine": "1.6 8 кл. (K7M)",
+     "oil": "5W-40",
+     "litres_with_filter": "3,3 (в наряд 3,5)",
+     "coolant": "Type D жёлтый",
+     "gearbox": "МКПП, 75W-80",
+     "seen_in": "«Чистый Венец»"
+    },
+    {
+     "vehicle": "LADA Granta",
+     "engine": "1.6 8 кл. (11186)",
+     "oil": "5W-40",
+     "litres_with_filter": "3,2 (в наряд 3,5)",
+     "coolant": "G12 красный",
+     "gearbox": "МКПП, 75W-85",
+     "seen_in": "автошкола, «Тёплый контур», «Чистый Венец»"
+    },
+    {
+     "vehicle": "LADA Niva Legend",
+     "engine": "1.7 (21214)",
+     "oil": "5W-40",
+     "litres_with_filter": "3,75 (в наряд 4)",
+     "coolant": "G12 красный",
+     "gearbox": "МКПП; мосты и раздатка — отдельные работы",
+     "seen_in": "«Тёплый контур», «Идель-Электромонтаж» Э-9"
+    },
+    {
+     "vehicle": "УАЗ 3909 и УАЗ Профи",
+     "engine": "ЗМЗ-409 и ZMZ Pro 2.7",
+     "oil": "10W-40",
+     "litres_with_filter": "7,0",
+     "coolant": "G12 красный",
+     "gearbox": "МКПП, 75W-90 GL-4",
+     "seen_in": "«Тёплый контур», «Идель-Электромонтаж» Э-7, Э-8"
+    },
+    {
+     "vehicle": "Ford Transit, фургон",
+     "engine": "2.2 TDCi, дизель, сажевый фильтр",
+     "oil": "5W-30, только с допуском Ford WSS-M2C913-D",
+     "litres_with_filter": "6,2 (в наряд 6,5)",
+     "coolant": "Оранжевый (Ford)",
+     "gearbox": "Не обслуживаем",
+     "seen_in": "«Симбирский гонец», «Идель-Электромонтаж» Э-10, «Вкусный выезд» № 7"
+    },
+    {
+     "vehicle": "Hyundai Solaris и Kia Rio",
+     "engine": "1.6 (G4FC)",
+     "oil": "5W-30 или 5W-40",
+     "litres_with_filter": "3,6 (в наряд 4)",
+     "coolant": "Зелёный (Hyundai Long Life)",
+     "gearbox": "АКПП: ATF SP-IV. МКПП: 75W-85",
+     "seen_in": "самые частые машины частных клиентов; «Чистый Венец» № 8, автошкола № 6, «Вкусный выезд» № 9"
+    },
+    {
+     "vehicle": "Renault Logan",
+     "engine": "1.6 8 кл. (K7M)",
+     "oil": "5W-40",
+     "litres_with_filter": "3,3 (в наряд 3,5)",
+     "coolant": "Type D жёлтый",
+     "gearbox": "МКПП, 75W-80",
+     "seen_in": "«Чистый Венец» № 9, автошкола № 5"
+    },
+    {
+     "vehicle": "Renault Logan",
+     "engine": "1.6 16 кл. (K4M), ремень ГРМ",
+     "oil": "5W-40",
+     "litres_with_filter": "4,8 (в наряд 5)",
+     "coolant": "Type D жёлтый",
+     "gearbox": "МКПП, 75W-80",
+     "seen_in": "частные клиенты"
+    },
+    {
+     "vehicle": "Renault Duster",
+     "engine": "2.0 (F4R)",
+     "oil": "5W-40",
+     "litres_with_filter": "5,4 (в наряд 5,5)",
+     "coolant": "Type D жёлтый",
+     "gearbox": "МКПП, 75W-80; АКПП: смотреть по VIN",
+     "seen_in": "«Тёплый контур», «Идель-Электромонтаж» Э-11, частные клиенты"
+    }
+   ]
+  }
+ ],
+ "facts_only_in_this_file": [
+  "every quantity and specification"
+ ],
+ "differs_from_en": [
+  "Thirteen rows: vehicle, engine, oil, litres with filter, coolant, gearbox, where seen. Printed six months before T; two rows behind the spreadsheet.",
+  "The ГАЗель Next with the Cummins diesel takes 6,0 litres of 10W-40 CI-4 (the catalogue's fleet PM bills six litres): the Russian twin of C3.4.",
+  "The Ford Transit takes an oil with a Ford approval that is not stocked: agrees with the account page (Transits: fluids, filters, brakes and tyres only)."
+ ],
+ "new_facts": [
+  "All thirteen rows are recalled, not verified."
+ ],
+ "to_verify": [
+  "Every quantity and specification."
+ ],
+ "settled": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive",
+   "message_ru": "Импортировано из файлов компании"
+  }
+ ],
+ "has_history": false
+}

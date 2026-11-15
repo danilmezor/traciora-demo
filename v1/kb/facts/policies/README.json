@@ -1,0 +1,122 @@
+{
+ "path": "policies/README.md",
+ "title": "Policies",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Index of the policy pages.",
+ "serves": [
+  "operate:overview",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "short",
+ "words_en": 177,
+ "links_to": [
+  "policies/discounts.md",
+  "policies/warranty.md",
+  "policies/estimates-and-approvals.md",
+  "policies/diagnostic-fees.md",
+  "policies/customer-supplied-parts.md",
+  "policies/deposits.md",
+  "policies/cancellations-and-no-shows.md",
+  "policies/storage-of-uncollected-cars.md",
+  "policies/complaints.md",
+  "policies/voids-and-refunds.md",
+  "policies/customer-records.md",
+  "policies/service-standards.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Twelve policy pages listed, each with a one-line summary.",
+  "The old page customers/warranty-policy.md is in no index: it is found only by search or by the folder listing.",
+  "Policy beats habit."
+ ],
+ "tables": [
+  {
+   "section": "Policies",
+   "columns": [
+    "Page",
+    "In one line"
+   ],
+   "rows": [
+    {
+     "Page": "Discount policy",
+     "In one line": "Over 10 % needs the shop manager, on the order"
+    },
+    {
+     "Page": "Warranty",
+     "In one line": "24 months or 24,000 miles"
+    },
+    {
+     "Page": "Estimates and approvals",
+     "In one line": "In writing, per job, never over"
+    },
+    {
+     "Page": "Diagnostic and inspection fees",
+     "In one line": "Charged, not credited"
+    },
+    {
+     "Page": "Customer-supplied parts",
+     "In one line": "Fitted, not warrantied"
+    },
+    {
+     "Page": "Deposits",
+     "In one line": "Before special orders and rebuilds"
+    },
+    {
+     "Page": "Cancellations and no-shows",
+     "In one line": "No fee; two strikes"
+    },
+    {
+     "Page": "Cars not collected",
+     "In one line": "Five free days"
+    },
+    {
+     "Page": "Complaints",
+     "In one line": "Heard the same day, answered within one"
+    },
+    {
+     "Page": "Voids and refunds",
+     "In one line": "A paid order is never voided at the counter"
+    },
+    {
+     "Page": "Customer records",
+     "In one line": "One customer, one record, a real name"
+    },
+    {
+     "Page": "Service standards",
+     "In one line": "How fast we answer, call back and estimate"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same index."
+ ]
+}

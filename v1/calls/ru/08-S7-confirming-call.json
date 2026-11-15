@@ -1,0 +1,483 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-08-confirming-call",
+  "configuration": "ru",
+  "number": 8,
+  "story": "S7",
+  "title": "The junior operator rings the web-chat customer to confirm tomorrow's booking",
+  "purpose": "Story S7, day A. Alina has taken the hand-over card, booked the brake diagnosis for the next morning and written to the customer in the web chat; in the afternoon she rings to confirm. An outbound call: it has a transcript and no verdict.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Ольга Сергеевна Тимофеева",
+      "ref": "named_customers.json ru.S7",
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "day A of story S7: slot 6's 10th working day before T (rule R6; ledger s7.booking_day)",
+    "nominal_offset": "T-20d",
+    "nominal_date": "2026-10-24",
+    "local_start": "14:20",
+    "site": "main",
+    "direction": "outbound",
+    "line": "100",
+    "answered_by": null,
+    "ring_s": 11,
+    "caller_phone": null,
+    "repeat_caller": false,
+    "callee_phone": "+7 907 378-60-35",
+    "talk_s": 105,
+    "placed_from": "102"
+  },
+  "scenario": {
+    "who_calls": "Alina, to the customer who wrote in the web chat the evening before.",
+    "vehicle": "Hyundai Solaris, 2016, М742РЕ73",
+    "job": "brake system diagnosis, booked for the next morning at 9:30",
+    "wants": "to confirm the booking by voice, as she promised in the chat",
+    "what_happens": "She confirms the day, the hour and the work, says how long it takes and that nothing is done without the customer's word, tells her how to drive until then, and confirms the address.",
+    "facts": {
+      "brake_inspection_rub": 700,
+      "booked": "call+1d 09:30, main",
+      "note": "catalogue.json brake_inspection: 700. The booking, its price and the alternative time are in the web chat of the same morning (conversations sample ru-1).",
+      "prices": [
+        {
+          "job": "brake_inspection",
+          "name": "Диагностика тормозной системы",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 700.0,
+          "labour_hour_rub": 1900,
+          "said": "семьсот рублей",
+          "said_rub": 700
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "воскресенье",
+      "day": "call+1d",
+      "form": "nominative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "customer",
+      "at_s": 0.0,
+      "said": "Алло?"
+    },
+    {
+      "n": 2,
+      "who": "advisor",
+      "at_s": 1.8,
+      "said": "Ольга, здравствуйте! Это Алина, «Ермак-Сервис» на Московском шоссе. Я вам утром в чат писала по записи. Удобно сейчас говорить?"
+    },
+    {
+      "n": 3,
+      "who": "customer",
+      "at_s": 12.5,
+      "said": "А, да-да, здравствуйте. Удобно."
+    },
+    {
+      "n": 4,
+      "who": "advisor",
+      "at_s": 16.0,
+      "said": "Я коротко: подтверждаю запись на завтра, воскресенье, девять тридцать. Диагностика тормозов, Солярис. Всё в силе?"
+    },
+    {
+      "n": 5,
+      "who": "customer",
+      "at_s": 24.9,
+      "said": "Да, в силе. Я приеду. А это надолго? Мне потом к маме ещё."
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 32.2,
+      "said": "Сама диагностика — минут тридцать, семьсот рублей, как я и писала. Мастер снимет колёса, посмотрит колодки, диски и вам всё покажет. Если что-то менять — сначала скажем цену, без вас ничего делать не будем."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 48.2,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 50.0,
+      "said": "Хорошо. А то муж говорит — подшипник, а я вот не знаю..."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 56.5,
+      "said": "Завтра и увидим, не переживайте. Скрежет при торможении — это чаще колодки, но гадать не буду."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 65.7,
+      "said": "Ладно. А ехать-то можно до завтра? Я сегодня ещё в магазин хотела."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 72.6,
+      "said": "Потихоньку можно, только без резких торможений и недалеко. Если звук станет сильнее или педаль изменится — лучше не ехать, позвоните нам."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 82.2,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 84.3,
+      "said": "Поняла. А адрес — Московское шоссе, сорок, да?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 89.2,
+      "said": "Да, Московское шоссе, сорок. Подойдёте на приёмку и спросите Алину — я завтра работаю."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 96.7,
+      "said": "Хорошо, спасибо большое."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 99.0,
+      "said": "Вам спасибо! До завтра, Ольга."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 102.8,
+      "said": "До свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.73,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the company's name loses its quotes and hyphen",
+        "script_turn": 2,
+        "said": "«Ермак-Сервис»",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turn": 4,
+        "said": "девять тридцать",
+        "stored": "9:30",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          3,
+          5,
+          8,
+          10
+        ],
+        "said": [
+          "А, да-да",
+          "к маме ещё",
+          "а я вот не знаю",
+          "ехать-то"
+        ],
+        "stored": [
+          "Да-да",
+          "к маме",
+          "а я не знаю",
+          "ехать"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          12
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          6,
+          13,
+          14
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          2,
+          8,
+          16
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 174,
+    "stored_words": 170,
+    "strict_word_difference": 0.075
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 186,
+    "duration_s": 105.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алло?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ольга, здравствуйте. Это Алина, Ермак Сервис на Московском шоссе. Я вам утром в чат писала по записи. Удобно сейчас говорить?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, здравствуйте. Удобно.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я коротко: подтверждаю запись на завтра, воскресенье, 9:30. Диагностика тормозов, Солярис. Всё в силе?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, в силе. Я приеду. А это надолго? Мне потом к маме.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сама диагностика, минут 30, 700 рублей, как я и писала. Мастер снимет колёса, посмотрит колодки, диски и вам всё покажет. Если что-то менять, сначала скажем цену, без вас ничего делать не будем.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. А то муж говорит, подшипник, а я не знаю.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Завтра и увидим, не переживайте. Скрежет при торможении, это чаще колодки, но гадать не буду.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ладно. А ехать можно до завтра? Я сегодня ещё в магазин хотела.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Потихоньку можно, только без резких торможений и недалеко. Если звук станет сильнее или педаль изменится, лучше не ехать, позвоните нам.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поняла. А адрес, Московское шоссе, 40, да?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, Московское шоссе, 40. Подойдёте на приёмку и спросите Алину, я завтра работаю.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, спасибо большое.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вам спасибо. До завтра, Ольга.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": null,
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": false,
+      "direction": "outbound",
+      "line": "100",
+      "checks": [],
+      "tags": [],
+      "media_version": 1
+    },
+    "result_enc_plain": null
+  },
+  "truth": {
+    "note": "Исходящий звонок: продукт не судит его и не хранит по нему ни уровней, ни исхода.",
+    "what_happened": "Запись на завтра, 9:30, подтверждена голосом; названы длительность, цена диагностики и адрес.",
+    "outcome": null,
+    "tags": []
+  },
+  "why": {
+    "not_judged": "Исходящие и внутренние звонки судье не передаются (processing.py, UNJUDGED_DIRECTIONS). Строка оценки есть, в ней judged: false. Ответ на вопрос S7.4 «какую оценку получил мой звонок»: никакой."
+  },
+  "day_report": {
+    "would_say": "В отчёт дня звонок не попадает: отчёт строится по оценённым входящим. В ленте звонков дня он виден как исходящий, 14:20, без оценки."
+  },
+  "new_facts": []
+}

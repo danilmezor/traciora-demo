@@ -1,0 +1,168 @@
+{
+ "path": "playbooks/manager.md",
+ "title": "Playbook: managers",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: planning shifts, deciding notes and page changes, seeing colleagues' phone performance.",
+ "serves": [
+  "S4",
+  "S5",
+  "S12",
+  "S14",
+  "operate:find-waiting",
+  "visibility:administrator"
+ ],
+ "length_class": "medium",
+ "words_en": 317,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Senior rank: plans and publishes shifts; decides team notes and knowledge proposals; sees colleagues' phone performance; whole history; pay and till counts (design 1.4, 2.6).",
+  "Daily: \"Needs you\"; the cover-gaps report at 16:30 (S10: slot 4's scheduled task). Weekly: publish by Thursday noon; decide proposals within five working days; read calls.",
+  "The decline example quotes slot 4's reason for slot 6's note (S4).",
+  "Slot 1 holds senior rank and uses the morning brief."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What you have beyond a lead",
+   "item": "The schedule is yours to plan and publish. Requests come to your Inbox."
+  },
+  {
+   "section": "What you have beyond a lead",
+   "item": "Team notes: you approve or decline them. Give the reason; the person who proposed it reads it."
+  },
+  {
+   "section": "What you have beyond a lead",
+   "item": "Knowledge pages: you can change them and you decide other people's proposals."
+  },
+  {
+   "section": "What you have beyond a lead",
+   "item": "Calls: you see every advisor's scores, not only your own."
+  },
+  {
+   "section": "What you have beyond a lead",
+   "item": "The whole history, not a year."
+  },
+  {
+   "section": "What you have beyond a lead",
+   "item": "Pay and till counts."
+  },
+  {
+   "section": "Every day",
+   "item": "\"Needs you\" on Home is the list. Shift requests, punch corrections, proposals waiting, cards handed to you. Empty it."
+  },
+  {
+   "section": "Every day",
+   "item": "Tomorrow's gaps in cover arrive at 4:30. Fill them before you go home."
+  },
+  {
+   "section": "Every day",
+   "item": "The To call back list is not yours to work. It is yours to look at."
+  },
+  {
+   "section": "Every week",
+   "item": "Publish the following week by Thursday noon."
+  },
+  {
+   "section": "Every week",
+   "item": "Decide every proposal within five working days. A proposal that sits says the page does not matter."
+  },
+  {
+   "section": "Every week",
+   "item": "Read the calls of whoever scored lowest, and of whoever improved most. Tell both."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"When do we miss the most calls?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Who can cover the Bonny Oaks desk the week Angie is off?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Was that discount inside our rules?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"What is waiting for me to decide?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Which shifts next week have nobody?\""
+  },
+  {
+   "section": "It will not",
+   "item": "Publish a schedule or decide a request without you pressing the button."
+  },
+  {
+   "section": "It will not",
+   "item": "Tell you what one shop's manager may not see of another's: you see your own shops' people in full and the company's numbers."
+  },
+  {
+   "section": "It will not",
+   "item": "Open the console. That is Claire's."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@note_declined|date}}",
+   "what": "added the section \"Declining well\" after the first declined team note; message: \"Name the page.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same playbook for the same rank; examples from the Russian stories and channels. The product pins the playbooks folder at administrator in both configurations."
+ ]
+}

@@ -1,0 +1,132 @@
+{
+  "format": "seed-conversation/1",
+  "id": "24-people-p24-web-same-day",
+  "configuration": "en",
+  "number": 24,
+  "story": "people",
+  "title": "A dead battery at 7:41: the assistant passes it on, and the advisor finds two times in a full morning",
+  "demonstrates": "A same-day request on the web chat. The assistant says what is free and what it cannot do, and hands over. Slot 24 answers in under seven minutes: she repeats name, number and car, says the morning is full and what she can do, prices the battery if it is needed. The closing draft goes out as it was; labelled and resolved.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Deion Marshall",
+      "invented": true,
+      "first_time": true,
+      "note": "2017 Kia Soul; first visit",
+      "phone": "(615) 555-0347"
+    },
+    "staff": [
+      {"slot": 24, "name": "Jasmine Bolden"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Somebody whose car needed a jump this morning.",
+    "vehicle": "2017 Kia Soul",
+    "what_happens": "Can you get me in today? The test is free; the morning is full; 11:30 or 2:15. He takes 11:30.",
+    "facts": {
+      "booked": "T-122d 11:30 at west",
+      "public_pages_used": ["price list: battery test"],
+      "prices": [
+        {"said": "$239.95", "amount": 239.95, "what": "battery replaced, class car, menu labour and a standard battery", "from": {"catalogue": "battery_replace", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "free", "what": "battery, starting and charging system test: 0.00 in the catalogue"}
+      ]
+    }
+  },
+  "days": {
+    "T-122d": {"anchor": "the Tuesday of week T-17", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 17}, "nominal": "Tue 2026-07-14"}
+  },
+  "floating_days": [
+    {"word": "this morning", "said_on": "T-122d", "day": "T-122d"},
+    {"word": "today", "said_on": "T-122d", "day": "T-122d"},
+    {"word": "11:30 today", "said_on": "T-122d", "day": "T-122d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "5eedc0de-0024-4e00-8000-00000000e018",
+      "peer": {"id": "seedv1-browser-en-0811", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0811",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-122d", "at": "07:41:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-122d", "at": "07:41:10", "kind": "message", "from": "customer", "text": "my battery died this morning had to get a jump. can you guys get me in today?? charlotte pike"},
+        {"n": 2, "day": "T-122d", "at": "07:41:33", "kind": "message", "from": "assistant", "text": "Good morning! I'm the assistant for Brennan Auto Care. I can't book a time myself, but I'll pass this to the Charlotte Pike shop right away. A battery, starting and charging system test is free, and if the car needs a battery the advisor will price one for it. What's your name, the best number for you, and what are you driving?"},
+        {"n": 3, "day": "T-122d", "at": "07:42:15", "kind": "message", "from": "customer", "text": "Deion Marshall 615 555 0347. 2017 kia soul"},
+        {"n": 4, "day": "T-122d", "at": "07:42:39", "kind": "message", "from": "assistant", "text": "Thank you, Deion. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 5, "day": "T-122d", "at": "07:42:40", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Deion Marshall", "phone": "(615) 555-0347", "site": "charlotte pike", "context": "Deion Marshall, 2017 Kia Soul. The battery died this morning and the car needed a jump; he asks to be seen today at Charlotte Pike. I told him the battery and charging test is free and named no battery price."}}, "note": {"from": "assistant", "private": true, "text": "Deion Marshall, 2017 Kia Soul. The battery died this morning and the car needed a jump; he asks to be seen today at Charlotte Pike. I told him the battery and charging test is free and named no battery price."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "west", "owner": null, "due": "T-122d 17:30, the day's close"}},
+        {"n": 6, "day": "T-122d", "at": "07:49:18", "kind": "activity", "what": "assigned", "derived": true, "to": 24, "by": 24, "how": "first reply"},
+        {"n": 7, "day": "T-122d", "at": "07:49:20", "kind": "message", "from": "staff", "slot": 24, "text": "Good morning, Deion, this is Jasmine at Charlotte Pike. To confirm: Deion Marshall, (615) 555-0347, 2017 Kia Soul. The morning is full, so what I can do is 11:30 or 2:15 today. The battery and charging test is free and takes about ten minutes; if it does need a battery, it's $239.95 installed. Which time works?"},
+        {"n": 8, "day": "T-122d", "at": "07:49:21", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 24, "how": "a manager's reply takes it off"},
+        {"n": 9, "day": "T-122d", "at": "07:51:05", "kind": "message", "from": "customer", "text": "11:30"},
+        {"n": 10, "day": "T-122d", "at": "07:51:45", "kind": "draft", "id": "d1", "text": "Thank you, Deion. 11:30 today works. See you at 6399 Charlotte Pike.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 24, "day": "T-122d", "at": "07:53:10", "became": 11}},
+        {"n": 11, "day": "T-122d", "at": "07:53:10", "kind": "message", "from": "staff", "slot": 24, "text": "Thank you, Deion. 11:30 today works. See you at 6399 Charlotte Pike."},
+        {"n": 12, "day": "T-122d", "at": "07:53:30", "kind": "activity", "what": "label_added", "label": "booking", "by": 24},
+        {"n": 13, "day": "T-122d", "at": "07:53:50", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-122d", "at": "07:49:18", "to": 24, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 24,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 23},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 23},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 7, "by": 24, "working_minutes": 6.7, "wall_minutes": 6.7, "measured_from": "n 5", "reply": "first"},
+          {"asked": 9, "answered": 11, "by": 24, "working_minutes": 2.1, "wall_minutes": 2.1, "measured_from": "n 9", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 24,
+          "n": 7,
+          "working_minutes": 6.7,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 2, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-122d", "at": "07:53:50", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 24}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 24: her first line 6.7 minutes after the hand-off, two replies, one draft sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "assistant first, handed over (scheduling), slot 24",
+    "outcome": "battery test booked the same day, 11:30, at west; resolved by slot 24",
+    "facts": [
+      "written 11 minutes after opening; answered by the assistant in 23 seconds and by slot 24 in 6.7 minutes",
+      "the test is free; a battery, if needed, 239.95"
+    ],
+    "questions": []
+  },
+  "why": [
+    "She reads back the three things a booking needs before she offers anything.",
+    "'The morning is full, so what I can do is': a no that the customer hears as a yes.",
+    "The draft has the address; she had nothing to add."
+  ],
+  "new_facts": [
+    "Deion Marshall, (615) 555-0347 (tier B), 2017 Kia Soul: a battery and charging test at west on the Tuesday of week T-17 at 11:30."
+  ]
+}

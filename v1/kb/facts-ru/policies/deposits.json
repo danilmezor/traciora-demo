@@ -1,0 +1,121 @@
+{
+ "path": "policies/deposits.md",
+ "title": "Предоплата",
+ "title_en": "Deposits",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/deposits.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "When a deposit is taken, how much, and what is refunded.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "S15"
+ ],
+ "length_class": "short",
+ "words_ru": 220,
+ "links_to": [
+  "policies/voids-and-refunds.md",
+  "parts/returns-and-cores.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Threshold 10 000 RUB for special-order and electrical parts; half the price.",
+  "Gearbox rebuild: half of the subcontractor's price, from the catalogue (85 000 sublet price, so 42 500).",
+  "The advance is entered as a payment marked «аванс» and gets its own cash receipt at once.",
+  "After shipping the refund is less what the company actually loses on the return (up to 20 %), worded as actual expenses."
+ ],
+ "new_facts": [
+  "Prepayment threshold 10 000 RUB; half for parts and for tyres in a size not stocked; the 20 % ceiling of the supplier's return charge (as in English)."
+ ],
+ "new_amounts": [
+  {
+   "value": 10000,
+   "why": "порог предоплаты за запчасти под заказ"
+  }
+ ],
+ "to_verify": [
+  "A separate cash receipt for an advance with its own payment attribute: ordinary practice with online cash registers, not in the research."
+ ],
+ "settled": [
+  {
+   "item": "A consumer's right to cancel a service contract paying the contractor's actual expenses (consumer-protection law, article 32) is not in the research; the page speaks of \"what we actually lose\" and cites no article.",
+   "outcome": "verified",
+   "note": "The page's \"what we actually lose\" is the law's \"actual expenses\".",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-32/",
+   "sentence": "ст. 32: «Потребитель вправе отказаться от исполнения договора о выполнении работ (оказании услуг) в любое время» при условии оплаты исполнителю фактически понесённых им расходов."
+  }
+ ],
+ "tables": [
+  {
+   "section": "Предоплата",
+   "columns": [
+    "Когда",
+    "Предоплата"
+   ],
+   "rows": [
+    {
+     "Когда": "Запчасть под заказ или любая электрика под заказ, если для клиента она стоит дороже 10 000 ₽",
+     "Предоплата": "Половина цены запчасти"
+    },
+    {
+     "Когда": "АКПП уходит на капитальный ремонт",
+     "Предоплата": "42 500 ₽ — половина цены подрядчика"
+    },
+    {
+     "Когда": "Четыре шины и больше в размере, который мы обычно не держим",
+     "Предоплата": "Половина цены шин"
+    },
+    {
+     "Когда": "Клиент с договором",
+     "Предоплата": "Не берём, всё идёт в счёт"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Возврат предоплаты",
+   "item": "Клиент отказался до того, как поставщик отгрузил запчасть, — возвращаем всё."
+  },
+  {
+   "section": "Возврат предоплаты",
+   "item": "После отгрузки — предоплату за вычетом того, что мы фактически теряем на возврате поставщику; это бывает до 20 % цены детали. Если поставщик деталь назад не принимает, отдаём её клиенту, а предоплата идёт в её оплату."
+  },
+  {
+   "section": "Возврат предоплаты",
+   "item": "Возвращаем тем же способом, каким получили: с карты — на ту же карту, наличные — наличными, с чеком возврата. Возврат наличных проводит руководитель: Работа мимо наряда, списания и возврат денег."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "amounts": [
+  10000.0,
+  42500.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

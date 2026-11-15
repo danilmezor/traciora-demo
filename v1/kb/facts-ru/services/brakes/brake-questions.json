@@ -1,0 +1,122 @@
+{
+ "path": "services/brakes/brake-questions.md",
+ "title": "Вопросы по тормозам",
+ "title_en": "Brake questions",
+ "exists_in": "both",
+ "english_sheet": "facts/services/brakes/brake-questions.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "F3",
+ "purpose": "An old FAQ by an advisor who has left: still carries the labour rate and brake prices from before the rise. Stale on purpose (S12).",
+ "serves": [
+  "S12",
+  "S8",
+  "challenge:near-duplicate",
+  "operate:contradiction",
+  "operate:propose"
+ ],
+ "length_class": "short",
+ "words_ru": 142,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S12: old labour rate and brake prices",
+ "differs_from_en": [
+  "STALE ON PURPOSE (S12): the hour of 1 760 RUB from before the last rise (the last but one of the history) and the before-rise totals: front discs and pads 12 268 (ledger s12.brake_price.ru stale; current 12 520), rear discs and pads, front pads, rear pads, inspection 650 (current 700), fluid 2 340 (current 2 480).",
+  "Signed «В. С.» (cast: slot F3 signs his order comments so), dated nine months before T; he resigned in week T-30. The date is after the second rise (eleven months before T), so the hour it shows was the current one when it was written.",
+  "Its other answers (no disc machining, 30 days on the work) agree with the current pages."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "configurations.ru.labour_rate.standard.before_rise",
+   "what": "labour hour",
+   "value": 1760,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 12268.0
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 11008.0
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 4420.0
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 4000.0
+  },
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 650.0
+  },
+  {
+   "catalogue_key": "brake_fluid_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 2340.0
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "amounts": [
+  650.0,
+  1760.0,
+  2340.0,
+  4000.0,
+  4420.0,
+  11008.0,
+  12268.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,118 @@
+{
+ "path": "services/inspections/pre-purchase-inspection.md",
+ "title": "Pre-purchase inspection",
+ "first_revision_text": "en/_history/services/inspections/pre-purchase-inspection.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Staff page for the used-car inspection.",
+ "serves": [
+  "smoke",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 205,
+ "links_to": [
+  "customers/pre-purchase-inspection.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job pre_purchase_inspection: menu 149.95, 1.5 h; about a dozen a month (1.36 % of about 840 orders).",
+  "The customer is whoever pays; the report goes to them only.",
+  "Done by slot 12 at main and slot 18 at east.",
+  "Lift and road test required; no \"buy\" verdict; hybrids at East Main only without a high-voltage battery test.",
+  "The fee is not credited."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Pre-purchase inspection",
+   "item": "Who is the customer? Whoever pays. The report goes to them and to nobody else, even if the seller brought the car and is standing there."
+  },
+  {
+   "section": "Pre-purchase inspection",
+   "item": "Book it with a technician who has the patience for it: Luis at East Main, Andre at Bonny Oaks."
+  },
+  {
+   "section": "Pre-purchase inspection",
+   "item": "The car must be allowed on the lift and on a road test. If the seller will not allow either, tell the buyer that is the finding."
+  },
+  {
+   "section": "Pre-purchase inspection",
+   "item": "The report lists what we found and what it will cost in the first year, priced from the list. It does not say \"buy\" or \"do not buy\"."
+  },
+  {
+   "section": "Pre-purchase inspection",
+   "item": "Hybrids: only at East Main, and we say plainly that we cannot test the high-voltage battery."
+  },
+  {
+   "section": "Pre-purchase inspection",
+   "item": "If the buyer then brings the car to us for the work, the inspection fee is not taken off. Same rule as any inspection."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "pre_purchase_inspection",
+   "what": "hours",
+   "class": "car",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "pre_purchase_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 149.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Luis",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "3 000 RUB; «проверка автомобиля перед покупкой»."
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "path": "shop-floor/before-a-car-leaves.md",
+ "title": "Before a car leaves your bay",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "The foreman's final checks.",
+ "serves": [
+  "S6",
+  "S14",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_en": 183,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Ten checks; lugs torqued by hand with a torque wrench; brake slides cleaned and lubricated (slot 27 skips this: S6).",
+  "The foreman (slot 8) road-tests some cars.",
+  "The job clock is stopped per job (ERP time_entry)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Wheels off today? Torque the lugs with the torque wrench, by hand, to the spec. Not the gun."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Brake job? Pump the pedal before you move the car. Clean and lube the slides. Check the fluid level."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Caps on: oil, coolant, brake fluid, washer. Dipstick in."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Nothing left under the hood. Count your tools."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Start it, look underneath for drips."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Drive it round the building at least. Brakes, steering, suspension and anything that made a noise gets a real road test."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Reset the oil light. Set the tire pressures to the door sticker."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Old parts in the box if the order says the customer wants them."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Wipe the wheel, the shifter and the door handle. Take the seat cover and mat out."
+  },
+  {
+   "section": "Before a car leaves your bay",
+   "item": "Stop your job clock. Write what you did and what you saw on the order."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same list. Torque in N·m."
+ ]
+}

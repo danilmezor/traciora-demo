@@ -1,0 +1,637 @@
+{
+  "format": "seed-call/1",
+  "id": "en-13-people-newcomer-first-weeks",
+  "configuration": "en",
+  "number": 13,
+  "story": "people",
+  "title": "The newcomer in his first weeks: he does not know the price, finds it, and tells the caller to just bring it by",
+  "purpose": "People, slot 7, a month into the job. He has the greeting by heart and nothing else: he is not sure the shop does the work, puts the caller on hold to find the price, answers 'do I need an appointment' with the opening hours and takes no name.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Caleb Sutton",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Earl Blevins",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "the Wednesday of week T-10 (rule R6; people, call 13)",
+    "nominal_offset": "T-72d",
+    "nominal_date": "2026-09-02",
+    "local_start": "16:20",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 17,
+    "caller_phone": "706-555-0136",
+    "repeat_caller": false,
+    "talk_s": 117
+  },
+  "scenario": {
+    "who_calls": "A first-time caller from across the Georgia line, Earl Blevins, who is about to buy a used car from a private seller.",
+    "vehicle": "2016 Honda Civic (not his yet)",
+    "job": "pre-purchase inspection with road test and written report",
+    "wants": "to know whether the shop does it and what it costs",
+    "what_happens": "Caleb thinks the shop does, puts the caller on hold for half a minute to find the price, gives it twice, says no appointment is needed and gives the opening hours, guesses the time it takes, offers to put him down and accepts 'I'll just come by'.",
+    "facts": {
+      "hold_s": 34,
+      "note": "catalogue.json pre_purchase_inspection: 149.95 for any class (a menu price), 1.5 hours. The price he finds is right: his two wrong prices are calls 12 and 9.",
+      "prices": [
+        {
+          "what": "Pre-purchase inspection with road test & written report",
+          "job": "pre_purchase_inspection",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 149.95,
+          "said": "one forty-nine ninety-five",
+          "said_usd": 149.95,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Friday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Caleb."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.0,
+      "said": "Yeah. Do y'all check out a used car before a fella buys it?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.6,
+      "said": "Yes sir! Uh — I think so. Yes sir, we do."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 15.4,
+      "said": "What's that cost?"
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 18.4,
+      "said": "Uh, I'm not sure on that one. Can you hold on one second? Let me look it up."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 25.7,
+      "said": "Go ahead."
+    },
+    {
+      "n": 7,
+      "who": "hold",
+      "at_s": 27.4,
+      "said": "[on hold, 34 s: music]",
+      "hold_s": 34
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 62.6,
+      "said": "Okay, sorry about that. It's one forty-nine ninety-five. That's the pre-purchase inspection."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 67.2,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 69.2,
+      "said": "A hundred fifty. And does it matter what it is? It's a Civic. A sixteen."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 75.4,
+      "said": "No sir, I don't think it matters. It's one forty-nine ninety-five."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 80.2,
+      "said": "Okay. Do I need an appointment for that?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 83.9,
+      "said": "Uh, no sir. I mean, you can just bring it by. We're open seven-thirty to five-thirty."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 91.6,
+      "said": "How long's it take?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 94.8,
+      "said": "Uh... I think like an hour? Hour and a half. Should be."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 100.4,
+      "said": "Alright."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 102.3,
+      "said": "You want me to put you down for something?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 106.5,
+      "said": "Nah, I'll just come by one day this week."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 110.9,
+      "said": "Yes sir, no problem. Have a good one!"
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 115.4,
+      "said": "You too."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.69,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          3,
+          5,
+          11,
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 10,
+        "said": "Civic",
+        "stored": "civic"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          8,
+          10,
+          11,
+          13
+        ]
+      },
+      {
+        "rule": "R9",
+        "what": "the hold leaves no line",
+        "script_turn": 7,
+        "stored": ""
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 4,
+        "dropped": 3
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 4,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 1,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": true,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 160,
+    "stored_words": 152,
+    "strict_word_difference": 0.106
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 170,
+    "duration_s": 117.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Caleb.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. Do y'all check out a used car before a fella buys it?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir! I think so. Yes, sir, we do.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "What's that cost?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm not sure on that one. Can you hold on one second? Let me look it up.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Go ahead.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, sorry about that. It's $149.95. That's the pre-purchase inspection.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. A hundred fifty. And does it matter what it is? It's a civic. A '16.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, sir, I don't think it matters. It's $149.95.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Do I need an appointment for that?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, sir. You can just bring it by. We're open 7:30 to 5:30.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "How long's it take?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh. I think like an hour? Hour and a half. Should be.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You want me to put you down for something?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No, I'll just come by one day this week.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir, no problem. Have a good one!",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You too.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Caleb.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Yes, sir, no problem. Have a good one!",
+        "level": 0,
+        "segment": 16
+      },
+      {
+        "key": "need_discovery",
+        "quote": "No, sir, I don't think it matters.",
+        "level": 1,
+        "segment": 8
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "It's $149.95. That's the pre-purchase inspection.",
+        "level": 1,
+        "segment": 6
+      },
+      {
+        "key": "offered_time",
+        "quote": "You can just bring it by. We're open 7:30 to 5:30.",
+        "level": 0,
+        "segment": 10
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "You want me to put you down for something?",
+        "level": 1,
+        "segment": 14
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Nothing was agreed on the call."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt: he said he would come by this week."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Can you hold on one second? Let me look it up.",
+      "why": "He did not know the price and went and found it instead of guessing.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "You can just bring it by. We're open 7:30 to 5:30.",
+      "say": "It takes about an hour and a half, so it's better with a time. I have tomorrow at 10 or Friday at 2. Which one can the seller make?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 34.6,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 16
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 8
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 6
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 10
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 14
+        }
+      ],
+      "na": [
+        "recap",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted"
+      ],
+      "score": 34.6,
+      "applicable": 6,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Caleb",
+        "name_and_number": "Yes, sir, no problem. Have a good one!",
+        "need_discovery": "No, sir, I don't think it matters",
+        "price_with_next_step": "It's $149.95. That's the pre-purchase inspection",
+        "offered_time": "You can just bring it by. We're open 7:30 to 5:30",
+        "asked_for_booking": "You want me to put you down for something?"
+      },
+      "na": {
+        "recap": "Nothing was agreed on the call.",
+        "objection": "The customer voiced no doubt: he said he would come by this week."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Can you hold on one second? Let me look it up",
+        "why": "He did not know the price and went and found it instead of guessing."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "You can just bring it by. We're open 7:30 to 5:30.",
+        "say": "It takes about an hour and a half, so it's better with a time. I have tomorrow at 10 or Friday at 2. Which one can the seller make?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. The hold left no line in the transcript.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 0,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": "na"
+    },
+    "score": 34.6,
+    "score_exact": 34.6154,
+    "outcome": "customer_will_call",
+    "tags": [
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and his own name, said the way he was taught.",
+    "name_and_number": "0: he asks for neither.",
+    "need_discovery": "1: the car and the job, both from the caller; he asks nothing (whose car, when the caller can get it, what worries him about it).",
+    "price_with_next_step": "1: the right price, bare, after a hold; no step follows it.",
+    "offered_time": "0: asked whether he needs an appointment, he says no and gives the opening hours.",
+    "asked_for_booking": "1: he offers to put the caller down and the caller declines.",
+    "recap": "N/A: nothing was agreed.",
+    "objection": "N/A: 'I'll just come by one day this week' is an intention, not a doubt.",
+    "score": "(1·2 + 2·0 + 2·1 + 2·1 + 3·0 + 3·1) / 2 = 4.5 of 13 weight points = 34.6.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Earl Blevins, 706-555-0136; no order follows.",
+    "The call holds 34 seconds of hold music between two of the advisor's lines."
+  ]
+}

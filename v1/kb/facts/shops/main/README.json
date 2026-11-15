@@ -1,0 +1,97 @@
+{
+ "path": "shops/main/README.md",
+ "title": "East Main",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Front page of the flagship's own pages.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "operate:overview"
+ ],
+ "length_class": "tiny",
+ "words_en": 84,
+ "links_to": [
+  "shops/main/hours-and-getting-here.md",
+  "shops/main/who-is-who.md",
+  "shops/main/opening-and-closing.md",
+  "shops/main/how-the-day-runs.md",
+  "shops/main/saturdays.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Address 2106 East Main St, Chattanooga.",
+  "Only at East Main: slot 10 and hard diagnostics, hybrid work, R-1234yf, the long alignment rack, the office (slot 3), the parts cage (slot 9)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "East Main",
+   "item": "Hours and getting here"
+  },
+  {
+   "section": "East Main",
+   "item": "Who is who"
+  },
+  {
+   "section": "East Main",
+   "item": "Opening and closing"
+  },
+  {
+   "section": "East Main",
+   "item": "How the day runs"
+  },
+  {
+   "section": "East Main",
+   "item": "Saturdays"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "A long-runway alignment rack at East Main (colour; the founder started with \"a borrowed alignment rack\")."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Московское шоссе, 40."
+ ]
+}

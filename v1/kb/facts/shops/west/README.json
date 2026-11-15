@@ -1,0 +1,117 @@
+{
+ "path": "shops/west/README.md",
+ "title": "Charlotte Pike",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "The bought shop's front page as its manager wrote it thirteen months ago: thin and out of date on Saturday hours and on who works the counter.",
+ "serves": [
+  "S13",
+  "S2",
+  "challenge:near-duplicate-shop-pages",
+  "operate:contradiction",
+  "challenge:combine-kb-and-data",
+  "challenge:broken-link",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "tiny",
+ "words_en": 81,
+ "links_to": [
+  "shops/west/opening-and-closing.md",
+  "shops/west/parts.md",
+  "shops/west/answering-the-phone.md",
+  "shops/west/tow-trucks.md"
+ ],
+ "broken_links_on_purpose": [
+  "shops/west/tow-trucks.md"
+ ],
+ "stale_on_purpose": "S13/S2: Saturday hours and counter staff out of date",
+ "facts": [
+  "STALE ON PURPOSE in two places. (1) Saturday 8 to 12: Charlotte Pike has not opened on Saturdays since the purchase; the public hours page and shops/README.md say Monday to Friday. (2) The counter: names Brent (slot F1, fired at T-5 months) and omits slot 24 (hired T-10 months, cast.json) and slot 28 (hired T-9 months); team/who-is-who.md is right.",
+  "Address 6399 Charlotte Pike, Nashville; six bays; (615) 555-0119.",
+  "Written by slot 22 at T-13 months; the link to answering-the-phone.md was added later by slot 2.",
+  "BROKEN LINK ON PURPOSE: \"Tow trucks we use\" points to tow-trucks.md, a page that was never written. kb_links reports it as missing. Nashville's tow partner is stated nowhere.",
+  "Voice: slot 22, curt, proprietary."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Charlotte Pike",
+   "item": "Opening and closing"
+  },
+  {
+   "section": "Charlotte Pike",
+   "item": "Parts"
+  },
+  {
+   "section": "Charlotte Pike",
+   "item": "Answering the phone"
+  },
+  {
+   "section": "Charlotte Pike",
+   "item": "Tow trucks we use"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "23",
+   "written_as": "Chad",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "25",
+   "written_as": "Gary",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Derek",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "26",
+   "written_as": "Shane",
+   "role": "technician",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-13mo|date}}"
+ ],
+ "new_facts": [
+  "Charlotte Pike opened on Saturday mornings under its previous owner and stopped at the purchase. Reason: gives the bought shop's page a plausible way to be wrong about hours. No Saturday orders at west in the ERP after T-14 months (its records start that day anyway)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-2mo|date}}",
+   "what": "one line added: the link to \"Answering the phone\"; nothing else touched; message: \"Link to Jasmine's page.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Казань, Техническая, 30. Russian shops open every day, so the stale fact is different: for example the page says 9:00-19:00 while the company's hours are 9:00-20:00. The fired advisor is Артур."
+ ]
+}

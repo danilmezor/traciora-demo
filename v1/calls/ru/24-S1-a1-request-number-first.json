@@ -1,0 +1,640 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-24-a1-request-number-first",
+  "configuration": "ru",
+  "number": 24,
+  "story": "S1",
+  "title": "The anchor account books a Largus; the request number is asked for first",
+  "purpose": "Story S1, call 24, three months after call 23. The same contact, another vehicle. Alina asks for the request number before anything else, asks how long the brakes have been grinding, offers a time today, books and repeats the time, the work and the number.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Олег Вячеславович Кравцов",
+      "company": "Симбирский гонец",
+      "account": "A1",
+      "ref": "accounts.json ru.A1 contacts[0]",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "slot 6's first working day on or after the Wednesday of week T-4 (rule R6; card S01, call 24; for the nominal T that Wednesday is her day off)",
+    "nominal_offset": "T-28d",
+    "nominal_date": "2026-10-16",
+    "local_start": "09:50",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 4,
+    "caller_phone": "+7 907 346-93-67",
+    "repeat_caller": false,
+    "talk_s": 92
+  },
+  "scenario": {
+    "who_calls": "Олег Вячеславович Кравцов of account A1.",
+    "vehicle": "unit 24, LADA Largus van, 2019, Р358ТН173 (accounts.json ru.A1 fleet)",
+    "job": "front brake pads; discs if they are scored",
+    "wants": "the car booked",
+    "what_happens": "He dictates the job. Alina asks for the request number first, repeats it, confirms the plate, asks how long it has been grinding and whether the discs are scored, offers today at two, books and repeats the time, the work and the request number.",
+    "facts": {
+      "request_number": "247/10",
+      "front_brake_pads_van_company_rub": 5320,
+      "booked": "the day of the call, 14:00",
+      "note": "No price is asked for or given. For the record: catalogue.json front_brake_pads, class van, company-account price 5 320."
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, доброе утро."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.2,
+      "said": "Алина, доброе. Кравцов. Записывайте: Ларгус, двадцать четвёртый, колодки передние стёрлись, водитель говорит — скрежещет уже."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.7,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 4,
+      "who": "advisor",
+      "at_s": 11.5,
+      "said": "Олег Вячеславович, здравствуйте. Записываю. Только сначала номер заявки продиктуйте, пожалуйста, — чтобы у нас счёт потом без него не ушёл."
+    },
+    {
+      "n": 5,
+      "who": "customer",
+      "at_s": 22.3,
+      "said": "О, научились. Сейчас... э-э... Двести сорок семь дробь десять."
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 28.0,
+      "said": "Двести сорок семь дробь десять, есть. Ларгус двадцать четвёртый — это эр триста пятьдесят восемь тэ-эн?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 36.5,
+      "said": "Он."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 38.1,
+      "said": "А скрежет давно? Диски не задрало, водитель не смотрел?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 43.4,
+      "said": "Дня два, говорит. Диски — не знаю, вы гляньте."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 48.7,
+      "said": "Поняла, мастер замерит. Если диски под замену — я вам сначала позвоню с суммой. Могу принять сегодня в два."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 57.2,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 58.9,
+      "said": "В два — годится, он как раз с маршрута вернётся."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 65.0,
+      "said": "Записала: сегодня, четырнадцать ноль-ноль, Ларгус двадцать четвёртый, принимаю я."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 70.4,
+      "said": "И сразу скажите, когда заберём."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 73.9,
+      "said": "Если только колодки — через час отдадим. Значит, сегодня в два, передние колодки, заявка двести сорок семь дробь десять. По дискам отзвонюсь."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 86.4,
+      "said": "Добро. Спасибо."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 88.1,
+      "said": "Спасибо, Олег Вячеславович, до свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.73,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R3",
+        "what": "the plate: эн heard as эм",
+        "script_turn": 6,
+        "said": "эр триста пятьдесят восемь тэ-эн",
+        "stored": "Р358ТМ",
+        "error": true
+      },
+      {
+        "rule": "R3",
+        "what": "the request number, right",
+        "script_turns": [
+          5,
+          6
+        ],
+        "said": [
+          "Двести сорок семь дробь десять",
+          "Двести сорок семь дробь десять"
+        ],
+        "stored": [
+          "247/10",
+          "247/10"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R3",
+        "what": "the request number, right, in another form",
+        "script_turn": 15,
+        "said": "двести сорок семь дробь десять",
+        "stored": "247 дробь 10",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          6,
+          13
+        ],
+        "said": [
+          "двадцать четвёртый",
+          "четырнадцать ноль-ноль"
+        ],
+        "stored": [
+          "24-й",
+          "14:00"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          3
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          11
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          2
+        ],
+        "said": [
+          "Ларгус"
+        ],
+        "stored": [
+          "Largus"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          4,
+          5,
+          15,
+          17
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 1,
+        "wrong": 1
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 3,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 2,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 150,
+    "stored_words": 133,
+    "strict_word_difference": 0.187
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 148,
+    "duration_s": 92.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, доброе утро.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алина, доброе. Кравцов. Записывайте: Largus, двадцать четвёртый, колодки передние стёрлись, водитель говорит, скрежещет уже.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Олег Вячеславович, здравствуйте. Записываю. Только сначала номер заявки продиктуйте, пожалуйста, чтобы у нас счёт потом без него не ушёл.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "О, научились. Сейчас, э-э. 247/10.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "247/10, есть. Ларгус 24-й, это Р358ТМ?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Он.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А скрежет давно? Диски не задрало, водитель не смотрел?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Дня два, говорит. Диски, не знаю, вы гляньте.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поняла, мастер замерит. Если диски под замену, я вам сначала позвоню с суммой. Могу принять сегодня в два.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Угу. В два, годится, он как раз с маршрута вернётся.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Записала: сегодня, 14:00, Ларгус двадцать четвёртый, принимаю я.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "И сразу скажите, когда заберём.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Если только колодки, через час отдадим. Сегодня в два, передние колодки, заявка 247 дробь 10. По дискам отзвонюсь.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добро. Спасибо.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, Олег Вячеславович, до свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, доброе утро.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А скрежет давно? Диски не задрало, водитель не смотрел?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "offered_time",
+        "quote": "Могу принять сегодня в два.",
+        "level": 1,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записала: сегодня, 14:00, Ларгус двадцать четвёртый, принимаю я.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "recap",
+        "quote": "Сегодня в два, передние колодки, заявка 247 дробь 10.",
+        "level": 1,
+        "segment": 12
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер обращается к нему по имени и отчеству."
+      },
+      {
+        "key": "price_with_next_step",
+        "why": "Клиент не спрашивал о цене."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [],
+    "strength": {
+      "quote": "Только сначала номер заявки продиктуйте, пожалуйста, чтобы у нас счёт потом без него не ушёл.",
+      "why": "Номер заявки спросила первым делом и объяснила зачем. Три месяца назад на таком же звонке о нём не вспомнили.",
+      "segment": 2
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Могу принять сегодня в два.",
+      "say": "Могу принять сегодня в два или завтра в девять утра, как водителю удобнее?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 80.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 12
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "price_with_next_step",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed"
+      ],
+      "score": 80.0,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 2,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, доброе утро",
+        "need_discovery": "А скрежет давно? Диски не задрало, водитель не смотрел?",
+        "offered_time": "Могу принять сегодня в два",
+        "asked_for_booking": "Записала: сегодня, 14:00, Ларгус двадцать четвёртый, принимаю я",
+        "recap": "Сегодня в два, передние колодки, заявка 247 дробь 10"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер обращается к нему по имени и отчеству.",
+        "price_with_next_step": "Клиент не спрашивал о цене.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Только сначала номер заявки продиктуйте, пожалуйста, чтобы у нас счёт потом без него не ушёл",
+        "why": "Номер заявки спросила первым делом и объяснила зачем. Три месяца назад на таком же звонке о нём не вспомнили."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Могу принять сегодня в два.",
+        "say": "Могу принять сегодня в два или завтра в девять утра, как водителю удобнее?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": "na",
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": "na"
+    },
+    "score": 80.0
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "Не применяется: клиента знают.",
+    "need_discovery": "2: машина, работа и обстоятельства, о которых спросила: давно ли скрежет и не задрало ли диски.",
+    "price_with_next_step": "Не применяется: о цене не спрашивали.",
+    "offered_time": "1: один вариант, сегодня в два.",
+    "asked_for_booking": "2: день, час, машина и кто принимает.",
+    "recap": "1: время, работа и номер заявки; адреса нет.",
+    "objection": "Не применяется.",
+    "request_number": "Номер заявки 247/10 спрошен до всего остального и повторён дважды. Рубрика этого не оценивает; это видно по наряду и по тому, что счёт уходит с номером.",
+    "score": "(1·2 + 2·2 + 3·1 + 3·2 + 1·1) / 2 = 8 из 10 весовых баллов = 80.0.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "У A1 наряд на машину № 24 (Р358ТН173) в день звонка, 14:00: замена передних колодок, номер заявки клиента 247/10."
+  ]
+}

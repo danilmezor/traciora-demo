@@ -1,0 +1,146 @@
+{
+  "format": "seed-conversation/1",
+  "id": "08-s13-vk-stocktake-regular",
+  "configuration": "ru",
+  "number": 8,
+  "story": "S13",
+  "title": "Про день инвентаризации спрашивают во «ВКонтакте»: ассистент готовит черновик, Светлана правит и отправляет",
+  "demonstrates": "VK, a drafts-only channel: the draft is correct and plain; the east shop's lead advisor keeps its facts and rewrites it in her own voice, twice. Both outcomes are sent_edited.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Марина Захарова",
+      "invented": true,
+      "first_time": false,
+      "note": "постоянная клиентка сервиса в Новом городе; Volkswagen Polo 2017; задние колодки ей рекомендовали на прошлом ТО"
+    },
+    "staff": [
+      {"slot": 16, "name": "Светлана Демидова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Постоянная клиентка, пишет Светлане по имени.",
+    "vehicle": "Volkswagen Polo 2017",
+    "what_happens": "Она просит записать её на день инвентаризации после обеда. Из «не работаем» в черновике Светлана делает два времени на выбор: понедельник у себя или суббота у Артёма, потому что с четверга она неделю не работает. Вторым сообщением подводит итог.",
+    "facts": {
+      "stocktake": "четверг недели W+1: все сервисы работают до 12:00 (card S13; ledger site.stocktake)",
+      "hours": "9:00–20:00, без выходных",
+      "address_east": "10-й Инженерный проезд, 30",
+      "booked": "понедельник недели W+1, 14:00, east, принимает слот 16; запись в ERP, источник messenger",
+      "public_pages_used": ["часы работы и адреса, с датой инвентаризации"],
+      "rota": "понедельник недели W+1 — последний рабочий день Светланы перед неделей, на которую она просит отпуск (S5, с четверга); решения по заявке нет, но на эти дни она никого на себя не записывает. Суббота недели W+1 — смена слота 17"
+    }
+  },
+  "days": {
+    "T-1d": {"anchor": "slot 16's last working day before T", "rule": {"kind": "slot_working_day", "slot": 16, "n": -1}, "nominal": "Thu 2026-11-12", "what": "slot 16's last working day before T"},
+    "T+3d": {"anchor": "slot 16's 2nd working day after T (card S13: her last working day before her week off, the Monday of week W+1 for the nominal T)", "rule": {"kind": "slot_working_day", "slot": 16, "n": 2}, "nominal": "Mon 2026-11-16", "what": "her appointment, 14:00"},
+    "T+6d": {"anchor": "the Thursday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": -1}, "nominal": "Thu 2026-11-19", "what": "the stocktake: every shop closes at 12:00"},
+    "T+8d": {"anchor": "the Saturday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Sat", "week": -1}, "nominal": "Sat 2026-11-21", "what": "the first day after the stocktake on which slot 17 has the desk: the other time she is offered"}
+  },
+  "floating_days": [
+    {"word": "в четверг 19го", "said_on": "T-1d", "day": "T+6d", "form": "в + accusative, date"},
+    {"word": "В четверг, 19 ноября", "said_on": "T-1d", "day": "T+6d", "form": "в + accusative, date"},
+    {"word": "В четверг, 19-го", "said_on": "T-1d", "day": "T+6d", "form": "в + accusative, date"},
+    {"word": "в понедельник, 16-го", "said_on": "T-1d", "day": "T+3d", "form": "в + accusative, date"},
+    {"word": "в субботу, 21-го", "said_on": "T-1d", "day": "T+8d", "form": "в + accusative, date"},
+    {"word": "с четверга", "said_on": "T-1d", "day": "T+6d", "form": "с + genitive"},
+    {"word": "в понедельник в 14", "said_on": "T-1d", "day": "T+3d", "form": "в + accusative"},
+    {"word": "Понедельник, 16 ноября", "said_on": "T-1d", "day": "T+3d", "form": "nominative, date"},
+    {"word": "понедельник, 16 ноября", "said_on": "T-1d", "day": "T+3d", "form": "nominative, date"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "vk",
+      "bridge": "vk:default",
+      "inbox": "VK",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "1990000417",
+      "peer": {"id": "1990000417", "name": "Марина Захарова"},
+      "contact": {
+        "identifier": "vk_1990000417",
+        "name": "Марина Захарова",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "view",
+          "shows": "набережная Волги зимой, фонари, людей нет",
+          "person_in_it": false
+        }
+      },
+      "opened": {
+        "day": "T-1d",
+        "at": "10:41:20",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of her one VK conversation; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-1d", "at": "10:41:20", "kind": "message", "from": "customer", "text": "Светлана здравствуйте) а в четверг 19го после обеда можно подъехать? задние колодки, вы говорили пора"},
+        {"n": 2, "day": "T-1d", "at": "10:42:05", "kind": "draft", "id": "d1", "text": "Здравствуйте! В четверг, 19 ноября, сервис работает до 12:00: во второй половине дня инвентаризация, принять машину после обеда не получится. С 9:00 до 12:00 работаем как обычно, в остальные дни с 9:00 до 20:00. Подойдёт ли вам утро?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-1d", "at": "10:47:50", "became": 4}},
+        {"n": 3, "day": "T-1d", "at": "10:47:48", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 4, "day": "T-1d", "at": "10:47:50", "kind": "message", "from": "staff", "slot": 16, "text": "Марина, здравствуйте! В четверг, 19-го, мы работаем только до 12: инвентаризация, после обеда не примем. Я бы на своей машине с задними колодками до конца месяца не тянула. Могу принять вас в понедельник, 16-го, в 14:00. Или после инвентаризации, в субботу, 21-го, но тогда вас примет Артём: меня с четверга неделю не будет. Как вам удобнее, Марина?"},
+        {"n": 5, "day": "T-1d", "at": "10:58:30", "kind": "message", "from": "customer", "text": "в понедельник в 14 давайте"},
+        {"n": 6, "day": "T-1d", "at": "10:59:15", "kind": "draft", "id": "d2", "text": "Хорошо, Марина. Понедельник, 16 ноября, 14:00. Ждём вас!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-1d", "at": "11:01:40", "became": 7}},
+        {"n": 7, "day": "T-1d", "at": "11:01:40", "kind": "message", "from": "staff", "slot": 16, "text": "Записала, Марина: понедельник, 16 ноября, 14:00, задние колодки, Volkswagen Polo. Мы на 10-м Инженерном проезде, 30. Займёт около часа, можно подождать у нас. Принимаю я. До встречи!"},
+        {"n": 8, "day": "T-1d", "at": "11:02:00", "kind": "activity", "what": "label_added", "label": "запись", "by": 16},
+        {"n": 9, "day": "T-1d", "at": "11:02:20", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-1d", "at": "10:47:48", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["запись"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 6.5},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 16, "working_minutes": 6.5, "wall_minutes": 6.5, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 16, "working_minutes": 3.2, "wall_minutes": 3.2, "measured_from": "n 5", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 4,
+          "working_minutes": 6.5,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 2, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-1d", "at": "11:02:20", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "slot 16: first answer 6.5 minutes (her ledger row is 6), two replies, two drafts edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "записана на понедельник недели W+1, 14:00, east, к слоту 16: до инвентаризации и до её недели отпуска; закрыт слотом 16",
+    "facts": [
+      "the shop closes at 12:00 on the stocktake day, so the afternoon she asked for is not possible",
+      "slot 16 offered her own last working day before her week off, the Monday of week W+1, at 14:00, or the Saturday after the stocktake with slot 17",
+      "she chose the Monday at 14:00; slot 16 books nobody to herself inside the week she has asked off"
+    ],
+    "questions": ["S13.1"]
+  },
+  "why": [
+    "В черновике и в ответе Светланы одни и те же факты. У неё дважды имя клиентки, «я бы на своей машине», два времени на выбор.",
+    "Второе сообщение — итог: день, время, работа, машина, адрес, кто принимает."
+  ],
+  "new_facts": [
+    "Марина Захарова, постоянная клиентка east, Volkswagen Polo 2017 (в образце была Kia Rio 2017: такая же машина в named_customers.json записана на другую Марину того же сервиса), задние колодки рекомендованы на прошлом ТО; запись на понедельник недели W+1, 14:00, принимает слот 16.",
+    "«Принимаю я» сказано про понедельник, её последний рабочий день перед неделей отпуска (S5); на дни внутри этой недели она никого на себя не записывает и вторым временем называет субботу у Артёма (слот 17), его смену.",
+    "Картинка контакта: набережная Волги зимой."
+  ]
+}

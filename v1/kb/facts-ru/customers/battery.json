@@ -1,0 +1,99 @@
+{
+ "path": "customers/battery.md",
+ "title": "Аккумулятор и трудный пуск",
+ "title_en": "Battery and starting trouble",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/battery.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Public page: free battery test, replacement price range, the cold-weeks rush.",
+ "serves": [
+  "S11",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 152,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The battery test is paid (300 RUB, catalogue ru battery_test).",
+  "Rush: the first frosts to the end of February (ledger season.battery_curve: November 1.40, December 1.55, January 1.50, February 1.25).",
+  "Reference battery 60 А·ч; EFB or AGM for stop-start."
+ ],
+ "new_facts": [
+  "The old battery is taken for recycling at no charge."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Аккумулятор и трудный пуск",
+   "item": "Проверка. 300 ₽, десять минут, без записи. Проверяем аккумулятор нагрузочной вилкой, смотрим, сколько берёт стартер и сколько даёт генератор. Пока не проверю, обещать ничего не буду — ни что он ещё походит, ни что его пора менять."
+  },
+  {
+   "section": "Аккумулятор и трудный пуск",
+   "item": "Замена. От 7 000 ₽ до 13 380 ₽ с установкой, для ходового размера на 60 А·ч. Цена зависит от марки. Машинам с системой «старт-стоп» нужен аккумулятор EFB или AGM, обычный там проживёт одну зиму. Клеммы зачищаем, старый аккумулятор забираем на утилизацию."
+  },
+  {
+   "section": "Аккумулятор и трудный пуск",
+   "item": "Дело не в аккумуляторе? Если аккумулятор исправен, а машина не заводится, значит, стартер, генератор или утечка тока. Мастер-приёмщик объяснит, что показала проверка."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "battery_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 300.0
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 7000.0
+  },
+  {
+   "catalogue_key": "battery_replace",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 13380.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович",
+   "role": "electrical_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  300.0,
+  7000.0,
+  13380.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

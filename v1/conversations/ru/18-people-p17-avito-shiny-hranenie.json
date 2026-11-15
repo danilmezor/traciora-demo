@@ -1,0 +1,151 @@
+{
+  "format": "seed-conversation/1",
+  "id": "18-people-p17-avito-shiny-hranenie",
+  "configuration": "ru",
+  "number": 18,
+  "story": "people",
+  "title": "Авито перед сезоном: шиномонтаж на кроссовер, и хранение, про которое пришлось спросить дважды",
+  "demonstrates": "An Avito price question a day before the tyre window. Slot 17 sends the first draft as it was, answers the first half of a double question himself, and gets to the second half 58 minutes after it is asked again, editing the draft into a booking with the address. He labels it and does not resolve.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Олег",
+      "invented": true,
+      "first_time": true,
+      "note": "пишет по объявлению; кроссовер, колёса R16"
+    },
+    "staff": [
+      {"slot": 17, "name": "Артём Николаев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек по объявлению, за день до начала шинного окна.",
+    "vehicle": "кроссовер, R16 (модель не названа)",
+    "what_happens": "Цена, запись на среду вечером, и хранение летней резины: на этот вопрос ответ приходит почти через час после второго напоминания.",
+    "facts": {
+      "booked": "среда недели T-4, 18:30, east (в тот день смена слота 16)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "3 750 ₽", "amount": 3750.0, "what": "сезонная замена шин, 4 колеса с балансировкой, класс suv", "from": {"catalogue": "seasonal_tyre_change", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "3 000 ₽ за сезон", "amount": 3000.0, "what": "сезонное хранение комплекта шин", "from": {"catalogue": "tyre_storage", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "3 000 за сезон", "amount": 3000.0, "what": "то же, как он пишет", "from": {"catalogue": "tyre_storage", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "до семи месяцев", "what": "срок хранения в названии услуги каталога"}
+      ]
+    }
+  },
+  "days": {
+    "T-32d": {"anchor": "slot 17's first working day on or after the Monday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 4, "on_or_after_for_slot": 17}, "nominal": "Mon 2026-10-12"},
+    "T-30d": {"anchor": "the Wednesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 4}, "nominal": "Wed 2026-10-14", "what": "«в среду»"},
+    "T-25d": {"anchor": "7 calendar days after slot 17's first working day on or after the Monday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 4, "on_or_after_for_slot": 17, "plus_days": 7}, "nominal": "Mon 2026-10-19", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "в среду вечером", "said_on": "T-32d", "day": "the Wednesday of week T-4", "form": "в + accusative"},
+    {"word": "В среду вечером", "said_on": "T-32d", "day": "the Wednesday of week T-4", "form": "в + accusative"},
+    {"word": "В среду", "said_on": "T-32d", "day": "the Wednesday of week T-4", "form": "в + accusative"},
+    {"word": "среда, 18:30", "said_on": "T-32d", "day": "the Wednesday of week T-4", "form": "nominative"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "avito",
+      "bridge": "avito:default",
+      "inbox": "Avito",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "u2i-seedv1-0233-0001",
+      "peer": {"id": "900000000000233", "name": "Олег"},
+      "contact": {
+        "identifier": "avito_900000000000233",
+        "name": "Олег",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "listing_context": {
+        "item_id": "900000000000052",
+        "title": "Шиномонтаж, балансировка, сезонное хранение шин. Новый город",
+        "url": "https://avito.example/900000000000052"
+      },
+      "opened": {
+        "day": "T-32d",
+        "at": "10:10:05",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "a new Avito chat: one per listing and buyer"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-32d", "at": "10:10:05", "kind": "message", "from": "customer", "text": "Добрый день. Шиномонтаж r16 сколько? 4 колеса, кроссовер"},
+        {"n": 2, "day": "T-32d", "at": "10:10:50", "kind": "draft", "id": "d1", "text": "Добрый день! Сезонная замена шин, 4 колеса с балансировкой, для кроссовера стоит 3 750 ₽. На какой день вас записать?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 17, "day": "T-32d", "at": "10:21:30", "became": 4}},
+        {"n": 3, "day": "T-32d", "at": "10:21:28", "kind": "activity", "what": "assigned", "derived": true, "to": 17, "by": 17, "how": "first reply"},
+        {"n": 4, "day": "T-32d", "at": "10:21:30", "kind": "message", "from": "staff", "slot": 17, "text": "Добрый день! Сезонная замена шин, 4 колеса с балансировкой, для кроссовера стоит 3 750 ₽. На какой день вас записать?"},
+        {"n": 5, "day": "T-32d", "at": "10:24:10", "kind": "message", "from": "customer", "text": "в среду вечером. и хранение летней резины есть у вас? почём"},
+        {"n": 6, "day": "T-32d", "at": "10:24:55", "kind": "draft", "id": "d2", "text": "В среду вечером можно, время подтвержу. Сезонное хранение комплекта шин стоит 3 000 ₽ за сезон.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 17, "day": "T-32d", "at": "10:33:20", "because": "he sent his own text (n 7)"}},
+        {"n": 7, "day": "T-32d", "at": "10:33:20", "kind": "message", "from": "staff", "slot": 17, "text": "В среду могу на 18:30 записать, подойдёт?"},
+        {"n": 8, "day": "T-32d", "at": "10:33:40", "kind": "activity", "what": "label_added", "label": "шины", "by": 17},
+        {"n": 9, "day": "T-32d", "at": "10:35:40", "kind": "message", "from": "customer", "text": "да. а хранение?"},
+        {"n": 10, "day": "T-32d", "at": "10:36:20", "kind": "draft", "id": "d3", "text": "Сезонное хранение комплекта из четырёх шин стоит 3 000 ₽ за сезон, до семи месяцев.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 17, "day": "T-32d", "at": "11:34:10", "became": 12}},
+        {"n": 11, "day": "T-32d", "at": "10:59", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 12, "day": "T-32d", "at": "11:34:10", "kind": "message", "from": "staff", "slot": 17, "text": "Хранение 3 000 за сезон, это до семи месяцев. Записал: среда, 18:30, шиномонтаж 4 колеса. Адрес: 10-й Инженерный проезд, 30.", "late": "второй вопрос может ждать час (cast.json)"},
+        {"n": 13, "day": "T-32d", "at": "11:34:12", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 14, "day": "T-25d", "at": "11:34", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-32d", "at": "10:21:28", "to": 17, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 17,
+        "labels": ["шины"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 17, "working_minutes": 11.4},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 17, "working_minutes": 11.4, "wall_minutes": 11.4, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 17, "working_minutes": 9.2, "wall_minutes": 9.2, "measured_from": "n 5", "reply": "later"},
+          {"asked": 9, "answered": 12, "by": 17, "working_minutes": 58.5, "wall_minutes": 58.5, "measured_from": "n 9", "reply": "later", "late": "второй вопрос может ждать час (cast.json)"}
+        ],
+        "first_person_line": {
+          "by": 17,
+          "n": 4,
+          "working_minutes": 11.4,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-25d", "at": "11:34", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 17},
+          {"draft": "d2", "outcome": "discarded", "manager": 17},
+          {"draft": "d3", "outcome": "sent_edited", "manager": 17}
+        ],
+        "operator_credit": "slot 17: first answer 11.4 minutes (his ledger row is 11), three replies, one draft sent as it was, one discarded, one edited, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "slot 17; the assistant drafts",
+    "outcome": "шиномонтаж в среду, 18:30, east; закрыт по 7 дням тишины",
+    "facts": [
+      "the price given is 3 750 for a crossover",
+      "storage (3 000 a season) was asked about twice and answered 58 minutes after the second asking"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Выброшенный черновик отвечал на оба вопроса сразу.",
+    "Час ожидания — тот самый «второй вопрос может ждать час» из его описания.",
+    "Имя на Авито есть, телефона нет: запись без контакта."
+  ],
+  "new_facts": [
+    "Объявление сервиса на Авито «Шиномонтаж, балансировка, сезонное хранение шин. Новый город».",
+    "«Олег», кроссовер R16: шиномонтаж на east в среду недели T-4, 18:30; спрашивал про хранение.",
+    "У контакта нет картинки."
+  ]
+}

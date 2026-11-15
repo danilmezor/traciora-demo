@@ -1,0 +1,106 @@
+{
+ "path": "services/tires/alignment.md",
+ "title": "Alignment",
+ "first_revision_text": "en/_history/services/tires/alignment.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Four-wheel alignment: when, price by vehicle class, which rack.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 173,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job wheel_alignment: menu 119.95; multipliers SUV 1.0, truck 1.15 (137.94), van 1.25 (149.94).",
+  "\"Front end alignment\" in customers' words.",
+  "Offered with new tyres; included in estimates for tie rods, control arms and struts; symptoms listed.",
+  "An alignment stopped for worn parts is charged once, after the repair.",
+  "Long vehicles go to East Main."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Alignment",
+   "item": "With new tires. Always offer it; a bad alignment eats a new set in a year."
+  },
+  {
+   "section": "Alignment",
+   "item": "After any steering or suspension part is replaced: tie rods, control arms, struts. It is part of that job's estimate, not an afterthought."
+  },
+  {
+   "section": "Alignment",
+   "item": "The car pulls, the steering wheel is off-centre, or a tire is worn on one edge."
+  },
+  {
+   "section": "Alignment",
+   "item": "After a kerb or a pothole hard enough to remember."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 119.95
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 137.94
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 149.94
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Сход-развал», 3 000 RUB for two axles."
+ ]
+}

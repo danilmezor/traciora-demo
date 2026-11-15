@@ -1,0 +1,292 @@
+{
+ "path": "services/tires/seasonal-changeover-and-storage.md",
+ "title": "Сезонный шиномонтаж и хранение шин",
+ "title_en": null,
+ "exists_in": "ru only",
+ "english_sheet": null,
+ "first_revision_text": "ru/_history/services/tires/seasonal-changeover-and-storage.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "15",
+ "purpose": "The seasonal tyre job for the counter: the three order lines, prices by vehicle class, what to ask, what is checked with the wheels off, when a tyre is refused, storage. Exists only in Russian.",
+ "serves": [
+  "S11",
+  "challenge:fact-in-table",
+  "challenge:customer-terms",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_ru": 546,
+ "links_to": [
+  "how-to/tyre-season.md",
+  "customers/seasonal-tyre-change.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Only in Russian. In English seasonal changeover is two sentences at the foot of the new-tyres page (under 0.2 % of orders); in Russian the three seasonal jobs lead 10.2 % of a year's orders.",
+  "Prices by class from the catalogue: changeover 3 000 / 3 750 / 4 350 / 3 900; wheels 1 200 / 1 380 / 1 560 / 1 560; storage 3 000 a season.",
+  "Customers' words: «переобуться», «перекинуть колёса».",
+  "Low-profile, large-diameter and run-flat tyres have no price of their own in the list (a planted \"the base does not say\")."
+ ],
+ "new_facts": [
+  "Every wheel is balanced at a changeover; weights and rubber valves are in the price.",
+  "A tyre with a bulge, a sidewall cut or older than six years is not fitted; a tyre at 4 mm and less (winter) or 1.6 mm and less (any tyre) is fitted with a note «клиент предупреждён»: the law's own boundaries, Перечень неисправностей п. 5.5 and 5.4; winter tyres are required December to February, п. 5.2 (ledger kb.tyre_season).",
+  "Stored tyres are released against the receipt, or against a passport and the customer record."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Minimum tread depths (4 mm winter, 1.6 mm summer) are stated as the shop's warning thresholds; the legal minimums are not in the research.",
+   "outcome": "corrected",
+   "note": "The values are the law's, the boundary and the citation were not. The law bars a tyre at \"4 mm and less\" (winter tyres on snow or ice) and at \"1.6 mm and less\", and the 1.6 mm applies to any tyre, not to summer tyres only; the points are 5.5 and 5.4 of the list of faults in the edition of 2026-08-28 (the first pass read the 2015 edition, point 5.1). The page now says «4 мм и меньше на зимней шине или 1,6 мм и меньше на любой» and adds that winter tyres are required from December to February (point 5.2). Read in the verify pass (section 5).",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_2709/ec034e2d80085428905b10189ee7d0d08173e8c7/",
+   "sentence": "Перечень неисправностей (ПДД, ред. от 28.08.2026), п. 5.4: «для транспортных средств категорий M1, N1, O1, O2 - 1,6 мм;»; п. 5.5: «Остаточная глубина рисунка протектора зимних шин … составляет 4 мм и менее.»; п. 5.2: «На транспортном средстве категорий M1 и N1 не установлены зимние шины в зимний период (декабрь, январь, февраль).»"
+  }
+ ],
+ "tables": [
+  {
+   "section": "Сезонный шиномонтаж и хранение шин",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Легковой",
+    "Кроссовер",
+    "Рамный внедорожник",
+    "Фургон, «Газель»"
+   ],
+   "rows": [
+    {
+     "В наряде": "Сезонная замена шин: шиномонтаж 4 колёс с балансировкой",
+     "Н/ч": "1,2",
+     "Легковой": "3 000 ₽",
+     "Кроссовер": "3 750 ₽",
+     "Рамный внедорожник": "4 350 ₽",
+     "Фургон, «Газель»": "3 900 ₽"
+    },
+    {
+     "В наряде": "Сезонная замена колёс в сборе (4 шт.)",
+     "Н/ч": "0,5",
+     "Легковой": "1 200 ₽",
+     "Кроссовер": "1 380 ₽",
+     "Рамный внедорожник": "1 560 ₽",
+     "Фургон, «Газель»": "1 560 ₽"
+    },
+    {
+     "В наряде": "Сезонное хранение шин (комплект 4 шт., один сезон)",
+     "Н/ч": "",
+     "Легковой": "3 000 ₽",
+     "Кроссовер": "3 000 ₽",
+     "Рамный внедорожник": "3 000 ₽",
+     "Фургон, «Газель»": "3 000 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Что спросить по телефону",
+   "item": "Машина и размер шин. Диаметр важнее всего остального."
+  },
+  {
+   "section": "Что спросить по телефону",
+   "item": "Шины на дисках или без? «Перекинуть колёса» — это колёса в сборе, вторая строка. «Переобуть» — шиномонтаж, первая."
+  },
+  {
+   "section": "Что спросить по телефону",
+   "item": "Лежат у нас на хранении или привезёте с собой? Если у нас — номер квитанции."
+  },
+  {
+   "section": "Что спросить по телефону",
+   "item": "Низкий профиль, R18 и больше, RunFlat — сразу говорим, что это дольше, и закладываем полтора часа. Отдельной цены в прайсе на них нет: спросите старшего мастера-приёмщика."
+  },
+  {
+   "section": "Что смотрим, раз уж колёса сняты",
+   "item": "Остаток протектора, грыжи, порезы, год выпуска. Пишем в наряд."
+  },
+  {
+   "section": "Что смотрим, раз уж колёса сняты",
+   "item": "Колодки и диски — замер на каждой машине. Пыльники ШРУСов, потёки на амортизаторах. Всё это идёт в осмотр по чек-листу, с фотографией, и уходит на приёмку."
+  },
+  {
+   "section": "Когда шину не ставим и когда ставим с оговоркой",
+   "item": "Грыжа, порез боковины, шина старше шести лет — не ставим. Показываем почему."
+  },
+  {
+   "section": "Когда шину не ставим и когда ставим с оговоркой",
+   "item": "Остаток протектора 4 мм и меньше на зимней шине или 1,6 мм и меньше на любой — по Перечню неисправностей (п. 5.5 и 5.4) это уже неисправность. Говорим клиенту и пишем в наряд: «клиент предупреждён». Решает он."
+  },
+  {
+   "section": "Когда шину не ставим и когда ставим с оговоркой",
+   "item": "С декабря по февраль легковая машина должна стоять на зимних шинах (тот же Перечень, п. 5.2)."
+  },
+  {
+   "section": "Когда шину не ставим и когда ставим с оговоркой",
+   "item": "Шипы: если выпала половина, это уже не шипованная шина. Тоже говорим."
+  },
+  {
+   "section": "Хранение",
+   "item": "Комплект из четырёх шин, на дисках или без, за сезон, до семи месяцев."
+  },
+  {
+   "section": "Хранение",
+   "item": "Принимаем при клиенте: моем, смотрим, записываем состояние в квитанцию. На каждой шине бирка: номер квитанции, фамилия, госномер, размер, с какого колеса."
+  },
+  {
+   "section": "Хранение",
+   "item": "Склад хранения — на Московском шоссе. Как шины попадают на Инженерный и что делать, если клиент их не забрал: Сезон шиномонтажа."
+  },
+  {
+   "section": "Хранение",
+   "item": "Выдаём по квитанции. Потерял квитанцию — по паспорту и по карточке клиента."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«Да там работы на двадцать минут». «Двадцать минут — это без балансировки. У нас балансируется каждое колесо, и затяжка по моменту»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«На шиномонтаже у дома дешевле». «Дешевле. Сравните, что входит: у нас балансировка всех четырёх, грузики, вентили и осмотр тормозов, пока колёса сняты»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«Запишите на завтра». В сезон «завтра» бывает через неделю. Называйте ближайшее окно честно и предлагайте два на выбор."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "suv",
+   "when": "after_rise",
+   "value": 3750.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 4350.0
+  },
+  {
+   "catalogue_key": "seasonal_tyre_change",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 3900.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "hours",
+   "class": "car",
+   "value": 0.5
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "suv",
+   "when": "after_rise",
+   "value": 1380.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 1560.0
+  },
+  {
+   "catalogue_key": "seasonal_wheel_swap",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 1560.0
+  },
+  {
+   "catalogue_key": "tyre_storage",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "15",
+   "written_as": "Евгений Чугунов",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  1200.0,
+  1380.0,
+  1560.0,
+  3000.0,
+  3750.0,
+  3900.0,
+  4350.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "the price pass after the rise (proposed by slot 5, approved by slot 4)",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

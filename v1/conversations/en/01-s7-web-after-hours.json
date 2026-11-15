@@ -1,0 +1,166 @@
+{
+  "format": "seed-conversation/1",
+  "id": "01-s7-web-after-hours",
+  "configuration": "en",
+  "number": 1,
+  "story": "S7",
+  "title": "Website chat on a Sunday night: a noise, one question, the assistant hands over, the junior operator next morning",
+  "demonstrates": "The assistant answers first on the web chat, from public pages only. The customer is unclear (R13): she asks what it costs to fix a noise she hears mostly in the morning. The assistant asks once, braking or turning, and that settles it. It cannot book, so it takes a name and a number and hands over as a scheduling request. The junior operator picks it up six minutes after opening.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json en.S7",
+      "name": "Rachel Dunlap",
+      "first_time": true,
+      "phone": "(423) 555-0131"
+    },
+    "staff": [
+      {"slot": 6, "name": "Maya Torres"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A first-time customer, on her phone, after the shops have closed.",
+    "vehicle": "2014 Honda CR-V EX AWD, 121,400 miles",
+    "wants": "She thinks she wants a price to fix a noise. What she needs is a brake inspection, soon.",
+    "what_happens": "One clarifying question, a photo of the dash, the public price of an inspection, a request for Tuesday morning. The assistant cannot book: it asks for her name, number and shop, hands over, and says somebody will get back to her. Monday at 7:36 Maya books Tuesday 9:00 and says she will call to confirm (the call is in the calls set, unscored).",
+    "facts": {
+      "hours_weekday": "7:30 to 17:30",
+      "address_main": "2106 East Main Street",
+      "public_pages_used": [
+        "hours and locations",
+        "price list: brake inspection",
+        "brake questions: a grinding sound with a warning light"
+      ],
+      "booked": "T-17d 09:00 at main; ERP appointment, source web chat",
+      "anchors": "rule R6: day A is slot 6's 14th working day before T; the chat is the evening before it and the visit her next working day. The first chat is under 30 days before T, inside the web chat's memory of a visitor (ledger s7.booking_day, s7.thread, conv.web_visitor_memory_days).",
+      "prices": [
+        {"said": "$49.95", "amount": 49.95, "what": "brake inspection, menu price", "from": {"catalogue": "brake_inspection", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    },
+    "unclear": {
+      "kind": "vague: a noise, mostly in the morning, and a price asked for it",
+      "loops": 1,
+      "resolved": true,
+      "how": "The assistant asks once whether she hears it when she presses the brake or when she turns the wheel; she says when she brakes, a scraping, and sends a photo of the warning light. It never names a repair or a repair price."
+    }
+  },
+  "days": {
+    "T-19d": {"anchor": "1 calendar day before slot 6's 14th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -14, "plus_days": -1}, "nominal": "Sun 2026-10-25", "what": "the chat, 21:10: the evening before day A"},
+    "T-18d": {"anchor": "slot 6's 14th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -14}, "nominal": "Mon 2026-10-26", "what": "day A: slot 6 takes the hand-over, books the visit, rings to confirm"},
+    "T-17d": {"anchor": "slot 6's 13th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -13}, "nominal": "Tue 2026-10-27", "what": "the visit, 09:00: slot 6's next working day after A"}
+  },
+  "floating_days": [
+    {"word": "tomorrow", "said_on": "T-19d", "day": "T-18d"},
+    {"word": "tuesday morning", "said_on": "T-19d", "day": "T-17d"},
+    {"word": "tonight", "said_on": "T-19d", "day": "T-19d"},
+    {"word": "tomorrow, Tuesday", "said_on": "T-18d", "day": "T-17d"},
+    {"word": "Tuesday at 9:00", "said_on": "T-18d", "day": "T-17d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0001-4e00-8000-00000000e001",
+      "peer": {"id": "seedv1-browser-en-0001", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0001",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-19d", "at": "21:10:12", "status": "pending", "arrived_closed": true},
+      "timeline": [
+        {"n": 1, "day": "T-19d", "at": "21:10:12", "kind": "message", "from": "customer", "text": "hi how much to fix a noise my car is making"},
+        {"n": 2, "day": "T-19d", "at": "21:10:25", "kind": "message", "from": "customer", "text": "its mostly in the morning"},
+        {"n": 3, "day": "T-19d", "at": "21:10:49", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. The shops are closed right now and open at 7:30 tomorrow, but I can help in the meantime. A price depends on where the noise comes from, so one question first: do you hear it when you press the brake, or when you turn the steering wheel? And what kind of car is it?"},
+        {"n": 4, "day": "T-19d", "at": "21:11:40", "kind": "message", "from": "customer", "text": "when i brake. like a scraping"},
+        {"n": 5, "day": "T-19d", "at": "21:11:53", "kind": "message", "from": "customer", "text": "idk if it matters but theres a light on now too"},
+        {"n": 6, "day": "T-19d", "at": "21:12:10", "kind": "message", "from": "customer", "text": "", "files": [{"kind": "image", "file": "IMG_4412.jpg", "pool": "dash-red-brake-lamp", "shows": "instrument cluster at night, the red BRAKE lamp lit"}]},
+        {"n": 7, "day": "T-19d", "at": "21:12:41", "kind": "message", "from": "assistant", "text": "Thank you for the photo: that's the red BRAKE warning light. I can't diagnose a car over chat, but a scraping sound when you press the brake, together with that light, should be looked at soon, and I wouldn't put many miles on it until then. The first step is a brake inspection, which is $49.95. The technician shows you what they find before any repair is priced. Would you like me to ask the shop to get you in?"},
+        {"n": 8, "day": "T-19d", "at": "21:13:30", "kind": "message", "from": "customer", "text": "yes please. can i bring it tuesday morning before work? its a 2014 crv"},
+        {"n": 9, "day": "T-19d", "at": "21:13:55", "kind": "message", "from": "assistant", "text": "I can't book a time myself, but I'll pass your request to the service desk and they'll confirm it with you. What's your name and the best number to reach you? And which shop works better: East Main Street or Bonny Oaks Drive?"},
+        {"n": 10, "day": "T-19d", "at": "21:14:37", "kind": "message", "from": "customer", "text": "Rachel Dunlap 423 555 0131"},
+        {"n": 11, "day": "T-19d", "at": "21:14:46", "kind": "message", "from": "customer", "text": "main st"},
+        {"n": 12, "day": "T-19d", "at": "21:15:19", "kind": "message", "from": "assistant", "text": "Thank you, Rachel. Your request is with the team now, and somebody will get back to you as soon as possible. Anything else I can help with tonight?"},
+        {"n": 13, "day": "T-19d", "at": "21:15:20", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Rachel Dunlap", "phone": "(423) 555-0131", "site": "main st", "context": "2014 Honda CR-V. Scraping sound when she presses the brake, mostly in the morning; the red BRAKE light is on (photo in the chat). She first asked what it costs to fix a noise; I asked once whether it was when braking or when turning, and she said braking. Wants a brake inspection on Tuesday morning before work, East Main Street."}}, "note": {"from": "assistant", "private": true, "text": "2014 Honda CR-V. Scraping sound when she presses the brake, mostly in the morning; the red BRAKE light is on (photo in the chat). She first asked what it costs to fix a noise; I asked once whether it was when braking or when turning, and she said braking. Wants a brake inspection on Tuesday morning before work, East Main Street."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-18d 17:30, the next open day's close"}},
+        {"n": 14, "day": "T-19d", "at": "21:15:58", "kind": "message", "from": "customer", "text": "no thats it thx"},
+        {"n": 15, "day": "T-19d", "at": "21:16:33", "kind": "draft", "id": "d1", "text": "You're welcome, Rachel. Have a good night!", "why_a_draft": "the chat carries handoff, so the assistant no longer sends", "outcome": {"kind": "discarded", "by": 6, "day": "T-18d", "at": "07:36:40", "because": "she sent her own text (n 17)"}},
+        {"n": 16, "day": "T-18d", "at": "07:36:38", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 17, "day": "T-18d", "at": "07:36:40", "kind": "message", "from": "staff", "slot": 6, "text": "Good morning Rachel, this is Maya at Brennan Auto Care on East Main. I have you down for tomorrow, Tuesday, at 9:00 for a brake inspection on the CR-V. It's $49.95, takes about half an hour, and we'll show you what we find before anything else is done. If you need it earlier for work I can also do 7:30. I'll give you a quick call to confirm!"},
+        {"n": 18, "day": "T-18d", "at": "07:36:41", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 19, "day": "T-18d", "at": "07:52", "kind": "outside", "store": "calls", "what": "Maya's confirming call, outbound, transcribed, not judged (story call 8): she confirms tomorrow at nine on the phone"},
+        {"n": 20, "day": "T-18d", "at": "08:12:10", "kind": "message", "from": "customer", "text": "thanks for the call!! see you at 9 tomorrow"},
+        {"n": 21, "day": "T-18d", "at": "08:12:55", "kind": "draft", "id": "d2", "text": "You're welcome, Rachel. See you Tuesday at 9:00 at 2106 East Main Street.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-18d", "at": "08:14:05", "became": 22}},
+        {"n": 22, "day": "T-18d", "at": "08:14:05", "kind": "message", "from": "staff", "slot": 6, "text": "You're welcome, Rachel. See you Tuesday at 9:00 at 2106 East Main Street."},
+        {"n": 23, "day": "T-18d", "at": "08:14:30", "kind": "activity", "what": "label_added", "label": "booking", "by": 6},
+        {"n": 24, "day": "T-18d", "at": "08:14:50", "kind": "activity", "what": "resolved", "by": 6},
+        {"n": 25, "day": "T-17d", "at": "09:00", "kind": "outside", "store": "erp", "what": "appointment kept; repair order opened by slot 6"}
+      ],
+      "assignee_history": [
+        {"day": "T-18d", "at": "07:36:38", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "contact_note": "One website visitor: the browser of the first chat, remembered for 30 days (ledger conv.web_visitor_memory_days). The contact holds no name and no phone; both are in the hand-off notes and on the cards."
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 24},
+          {"asked": 4, "answered": 7, "by": "assistant", "wall_seconds": 31},
+          {"asked": 8, "answered": 9, "by": "assistant", "wall_seconds": 25},
+          {"asked": 10, "answered": 12, "by": "assistant", "wall_seconds": 33},
+          {"asked": 14, "answered": 17, "by": 6, "working_minutes": 6.7, "wall_minutes": 621.3, "measured_from": "n 13", "reply": "first"},
+          {"asked": 20, "answered": 22, "by": 6, "working_minutes": 1.9, "wall_minutes": 1.9, "measured_from": "n 20", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 17,
+          "working_minutes": 6.7,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 10, "assistant": 4, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-18d", "at": "08:14:50", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 6},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 6}
+        ],
+        "operator_credit": "the chat's first answer is nobody's (the assistant wrote it); slot 6 has two replies and one resolution"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "assistant first, handed over (scheduling), slot 6",
+    "outcome": "brake inspection booked for the next day, 09:00, at main",
+    "facts": [
+      "first written at 21:10 on the evening before day A, outside opening hours",
+      "one clarifying question, asked by the assistant",
+      "the assistant named only the inspection price, 49.95, and no repair",
+      "handed over with her name and number; the contact itself holds neither",
+      "slot 6's first line 6.7 working minutes after opening",
+      "resolved by slot 6, label booking"
+    ],
+    "questions": ["S7.1"]
+  },
+  "why": [
+    "The assistant never books, never quotes a repair, never promises a time: 'as soon as possible' is the product's own sentence.",
+    "One question is enough here: it offers two readings, and her answer comes with a photo. The hand-off note says what was asked and how she answered.",
+    "Maya's two lines are her sheet: complete, a time offered before anything else, one exclamation mark, and the second is the draft sent as it was."
+  ],
+  "new_facts": [
+    "The photo IMG_4412.jpg (picture pool 'dash-red-brake-lamp')."
+  ]
+}

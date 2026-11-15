@@ -1,0 +1,149 @@
+{
+  "format": "seed-conversation/1",
+  "id": "26-r13-telegram-two-questions",
+  "configuration": "en",
+  "number": 26,
+  "story": "R13",
+  "title": "Unclear, then clear after two questions: 'the car is doing that thing again'",
+  "demonstrates": "Rule R13 on a drafts channel. The clarifying question is the draft; the advisor sends it in her own words. The first answer ('the one from last time') does not settle it, because last time there were two things. She asks again by naming both, and the answer shows it is neither: the shake is now under braking. One draft edited after another; booked, labelled, resolved.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Dot Kirby",
+      "invented": true,
+      "first_time": false,
+      "note": "an older regular of the Bonny Oaks shop; 2012 Toyota Camry; tires balanced in March, a battery light in June"
+    },
+    "staff": [
+      {"slot": 16, "name": "Angie Holloway"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A regular who expects Angie to know.",
+    "vehicle": "2012 Toyota Camry",
+    "what_happens": "Two questions before the request is clear, then a brake inspection the next morning.",
+    "facts": {
+      "history": "a shake at highway speed in March, cured by balancing the tires; a battery light in the mornings in June",
+      "booked": "the Thursday of week T-6, 09:00, at east",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "$49.95", "amount": 49.95, "what": "brake inspection, menu price", "from": {"catalogue": "brake_inspection", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    },
+    "unclear": {
+      "kind": "the wrong thing named: 'that thing again' points at last time's tire balance, and it is the brakes",
+      "loops": 2,
+      "resolved": true,
+      "how": "Angie asks which thing; the answer is 'the one from last time'. She names the two things of last time and asks which is back: the shaking, but now when braking downhill. That is a different job, and she says so."
+    }
+  },
+  "days": {
+    "T-44d": {"anchor": "the Wednesday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 6}, "nominal": "Wed 2026-09-30", "what": "the Wednesday of week T-6 (DESIGN.md section 6, row 26)"},
+    "T-43d": {"anchor": "the Thursday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 6}, "nominal": "Thu 2026-10-01", "what": "'tomorrow, Thursday'"},
+    "T-42d": {"anchor": "the Friday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 6}, "nominal": "Fri 2026-10-02", "what": "'Friday at 7:30'"}
+  },
+  "floating_days": [
+    {"word": "tomorrow at 9:00", "said_on": "T-44d", "day": "the Thursday of week T-6"},
+    {"word": "tomorrow at 9", "said_on": "T-44d", "day": "the Thursday of week T-6"},
+    {"word": "tomorrow, Thursday", "said_on": "T-44d", "day": "the Thursday of week T-6"},
+    {"word": "Friday at 7:30", "said_on": "T-44d", "day": "the Friday of week T-6"},
+    {"word": "today", "said_on": "T-44d", "day": "T-44d"},
+    {"word": "in March", "said_on": "T-44d", "day": "March"},
+    {"word": "in June", "said_on": "T-44d", "day": "June"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "4503599627372147",
+      "peer": {"id": "4503599627372147", "name": "Dot Kirby"},
+      "contact": {
+        "identifier": "telegram_4503599627372147",
+        "name": "Dot Kirby",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "opened": {"day": "T-44d", "at": "10:02:15", "status": "open", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-44d", "at": "10:02:15", "kind": "message", "from": "customer", "text": "Angie its Dot. the car is doing that thing again"},
+        {"n": 2, "day": "T-44d", "at": "10:03:00", "kind": "draft", "id": "d1", "text": "Good morning, Dot! I'm sorry to hear that. Could you tell me a little more about what the car is doing?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-44d", "at": "10:08:10", "became": 4}},
+        {"n": 3, "day": "T-44d", "at": "10:08:08", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 4, "day": "T-44d", "at": "10:08:10", "kind": "message", "from": "staff", "slot": 16, "text": "Good morning, Dot! I'm sorry, that's no fun. Help me out, Dot: which thing is it doing again?\nAngie"},
+        {"n": 5, "day": "T-44d", "at": "10:11:40", "kind": "message", "from": "customer", "text": "the one from last time"},
+        {"n": 6, "day": "T-44d", "at": "10:12:20", "kind": "draft", "id": "d2", "text": "Thank you, Dot. I don't have your last visit in front of me. Is it a noise, a warning light, or something you feel when you drive?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-44d", "at": "10:15:30", "became": 7}},
+        {"n": 7, "day": "T-44d", "at": "10:15:30", "kind": "message", "from": "staff", "slot": 16, "text": "We had two things, Dot, so let me chase the right one: the shake in the steering wheel on the highway, that we balanced the tires for in March, or the battery light that came on in the mornings in June. Which one is back?\nAngie"},
+        {"n": 8, "day": "T-44d", "at": "10:19:05", "kind": "message", "from": "customer", "text": "the shaking"},
+        {"n": 9, "day": "T-44d", "at": "10:19:30", "kind": "message", "from": "customer", "text": "but now its when I put the brakes on coming down the mountain"},
+        {"n": 10, "day": "T-44d", "at": "10:20:10", "kind": "draft", "id": "d3", "text": "Thank you, Dot, that helps. A shake that comes when you brake, especially downhill, should be checked. A brake inspection is $49.95. Would you like to bring it in?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-44d", "at": "10:24:00", "became": 11}},
+        {"n": 11, "day": "T-44d", "at": "10:24:00", "kind": "message", "from": "staff", "slot": 16, "text": "That tells me a lot, Dot. A shake when you brake coming downhill isn't the tires this time; it's most likely the front brake rotors, and if it were my car I wouldn't keep riding the mountain on them. A brake inspection is $49.95, and we'll show you what we find before anything is done. I can see you tomorrow at 9:00 or Friday at 7:30. Which is easier?\nAngie"},
+        {"n": 12, "day": "T-44d", "at": "10:27:15", "kind": "message", "from": "customer", "text": "tomorrow at 9"},
+        {"n": 13, "day": "T-44d", "at": "10:27:55", "kind": "draft", "id": "d4", "text": "Thank you, Dot. Tomorrow at 9:00 works. See you then!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-44d", "at": "10:29:40", "became": 14}},
+        {"n": 14, "day": "T-44d", "at": "10:29:40", "kind": "message", "from": "staff", "slot": 16, "text": "You're set, Dot: tomorrow, Thursday, at 9:00, brake inspection on the Camry, here at Bonny Oaks. Take it easy coming down today.\nAngie"},
+        {"n": 15, "day": "T-44d", "at": "10:30:00", "kind": "activity", "what": "label_added", "label": "booking", "by": 16},
+        {"n": 16, "day": "T-44d", "at": "10:30:20", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-44d", "at": "10:08:08", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 5.9},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 16, "working_minutes": 5.9, "wall_minutes": 5.9, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 16, "working_minutes": 3.8, "wall_minutes": 3.8, "measured_from": "n 5", "reply": "later"},
+          {"asked": 8, "answered": 11, "by": 16, "working_minutes": 4.9, "wall_minutes": 4.9, "measured_from": "n 8", "reply": "later"},
+          {"asked": 12, "answered": 14, "by": 16, "working_minutes": 2.4, "wall_minutes": 2.4, "measured_from": "n 12", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 4,
+          "working_minutes": 5.9,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 0, "manager": 4, "note": 0},
+        "resolutions": [
+          {"day": "T-44d", "at": "10:30:20", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d3", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d4", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "slot 16: first answer 5.9 minutes (her ledger row is 6), four replies, four drafts edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "brake inspection booked for the next day, 09:00, at east; resolved by slot 16",
+    "facts": [
+      "unclear first message; clear after two questions by slot 16",
+      "what she named (the thing from last time) was not what the car needed: the shake is under braking",
+      "the price named is the inspection, 49.95"
+    ],
+    "questions": []
+  },
+  "why": [
+    "The assistant's second draft offers three readings without knowing the history; Angie offers the two that are true.",
+    "A weaker desk would have booked a tire balance.",
+    "She still does not name a repair price: 'most likely the rotors', then the inspection."
+  ],
+  "new_facts": [
+    "Dot Kirby, 2012 Toyota Camry, a regular of east: tires balanced in March for a highway shake, a battery light in June; a brake inspection on the Thursday of week T-6 at 09:00.",
+    "The contact has no picture."
+  ]
+}

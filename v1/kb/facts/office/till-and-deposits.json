@@ -1,0 +1,101 @@
+{
+ "path": "office/till-and-deposits.md",
+ "title": "Till differences and deposits",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "The office side of the cash: the bag log, the bank, the differences book.",
+ "serves": [
+  "S2",
+  "visibility:middle",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_en": 183,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Bag log columns: date, amount, sealer, carrier, receiver.",
+  "East Main's bag is banked next morning with Bonny Oaks's (arriving on the 13:00 run); Charlotte Pike banks daily and sends a photo of the slip.",
+  "Bank slips are matched to the day's cash; mismatched bags are opened with a second person.",
+  "Differences book by date, shop and closer.",
+  "Four signals: repeated shorts by one closer; discounted cash orders concentrated at one counter; voids after payment; many small cash orders on a nameless customer.",
+  "The season is that of the day the money was found (the 5th full open day after go-live)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Till differences and deposits",
+   "item": "Each shop's deposit bag has a line in the bag log: date, amount on the bag, who sealed it, who carried it, who received it."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "East Main's bag is in the office safe overnight and I bank it the next morning with Bonny Oaks', which arrives on the 1:00 parts run. Charlotte Pike banks its own every working day and Dale sends me a photo of the slip."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "I match each bank slip to the shop system's cash for that day. A bag that does not match its own count sheet is opened with a second person present."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "Differences go in the differences book by date, shop and the person who closed."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "The same closer short on many days."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "Cash orders with a discount, more at one counter than the others."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "Orders voided after a payment."
+  },
+  {
+   "section": "Till differences and deposits",
+   "item": "Many small cash orders under a customer with no name."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}",
+  "{{@money_found|season}}"
+ ],
+ "new_facts": [
+  "Placeholder format \"season\" (spring, summer, fall, winter of a date) is needed for this sentence."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "proposal",
+   "author_slot": "3",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created",
+   "proposer_slot": "3",
+   "approver_slot": "2"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian: инкассация and the cash book (кассовая книга)."
+ ]
+}

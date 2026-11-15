@@ -1,0 +1,109 @@
+{
+ "path": "how-to/company-vehicle-at-the-counter.md",
+ "title": "A company vehicle at the counter",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What changes when the car belongs to a company account: unit number, purchase order, who may approve.",
+ "serves": [
+  "S4",
+  "S1",
+  "challenge:combine-policy-and-price",
+  "challenge:policy-vs-team-note"
+ ],
+ "length_class": "short",
+ "words_en": 237,
+ "links_to": [
+  "accounts/company-account-terms.md",
+  "accounts/small-business-customers.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "The customer is the company; the vehicle is found by plate or unit number.",
+  "Six accounts are in the terms table; others are small business customers.",
+  "A1 needs its purchase-order number before the order is opened.",
+  "Booked work is approved; a driver approves found work up to 300 USD per visit (ledger s4.driver_limit); over it the named approver is called; unreachable: booked work only and an estimate within four working hours.",
+  "Nothing is paid at the counter for an account.",
+  "Story call 7: a company driver says \"go ahead\" to 380 USD of found work: over the limit, so the fleet contact is called."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Whose is it? Find the vehicle by plate or unit number. It must be under the company, with the unit number."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Is it an account? The six are in the terms table. Anybody else is a small business customer and pays at pick-up."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Nickajack: purchase-order number first. No number, call their fleet manager before the order is opened."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "What was booked? Do that. It is approved."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "What else did we find? A driver may approve up to $300 for the whole visit. One limit, every account."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Inside it: the driver may say yes. Write the driver's name as the approver."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Over it, a driver cannot approve the work: call the person in the \"Approves work\" column. Not the driver's supervisor, not whoever answers their main line."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Nobody reachable: booked work only. Estimate to the fleet contact within four working hours."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "Nothing is paid at the counter. It goes on the statement."
+  },
+  {
+   "section": "A company vehicle at the counter",
+   "item": "If the driver is unhappy about waiting for an approval, that is fine. It is his company's rule, written down by his own boss."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "rewritten around the driver limit when it was written into the Company accounts page; message: \"Driver limit.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian drivers bring a доверенность or the company sends a заявка; approval by the company's responsible person."
+ ]
+}

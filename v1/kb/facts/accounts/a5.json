@@ -1,0 +1,56 @@
+{
+ "path": "accounts/a5.md",
+ "title": "Cumberland Bend Electric",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "Account A5 as Charlotte Pike wrote it before the account left: thin, and silent on everything that went wrong.",
+ "serves": [
+  "S1",
+  "challenge:kb-does-not-say",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "tiny",
+ "words_en": 36,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S1: silent about the account leaving",
+ "facts": [
+  "Account A5: 11 vehicles, home shop west, net 30; contacts from accounts.json (Wade Carlisle operations manager, Sherry Lane bookkeeper).",
+  "Written by slot 22 at T-13 months, a month after the purchase, and not touched since.",
+  "The page says nothing about the two brake comebacks, the disputed bill, the three unreturned calls or that the account has not visited for four and a half months: the knowledge base does not know the account left.",
+  "The driver limit (300 USD) is on the Company accounts page only.",
+  "Voice: slot 22, five lines, no verbs to spare."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-13mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "«Электромонтажная компания» «Идель-Электромонтаж» from accounts.json ru; same five lines in slot 22's Russian voice."
+ ]
+}

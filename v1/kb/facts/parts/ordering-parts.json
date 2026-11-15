@@ -1,0 +1,114 @@
+{
+ "path": "parts/ordering-parts.md",
+ "title": "Ordering parts for a job",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "How a part gets from the order to the bay, and when an advisor may promise a time.",
+ "serves": [
+  "S8",
+  "S6",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_en": 251,
+ "links_to": [
+  "policies/deposits.md",
+  "parts/suppliers.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Parts go on the order from the catalogue with number, brand and tier.",
+  "Slot 9 orders for main and east; cover: slot 5 at main, slot 16 at east.",
+  "VIN before ordering.",
+  "Arrival time is on the order only when the supplier confirmed; a part is \"here\" when shelved with the order number.",
+  "Inter-shop transfers go on the parts manager's 13:00 run (ERP stock_movement: transfers).",
+  "Promise rules: on the shelf = a time today; confirmed for a run = that run plus job hours plus one hour; unconfirmed = a call by 14:00; never \"same day\" on job length alone (S8: slot 7 promised a 3.2-hour job the same day).",
+  "Special orders take 2 to 5 working days; over 300 USD needs a deposit."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Ordering parts for a job",
+   "item": "The part goes on the order from the catalogue: number, brand, tier. Not \"front pads\"."
+  },
+  {
+   "section": "Ordering parts for a job",
+   "item": "I order it. East Main: tell me or flag the order. Bonny Oaks: flag the order; I see it. If I am off, Travis orders for East Main and Angie for Bonny Oaks."
+  },
+  {
+   "section": "Ordering parts for a job",
+   "item": "VIN first. Always. Half the wrong parts in this building were ordered off a year and a model."
+  },
+  {
+   "section": "Ordering parts for a job",
+   "item": "I put the arrival time on the order when the supplier confirms it. Until that time is on the order, there is no time."
+  },
+  {
+   "section": "Ordering parts for a job",
+   "item": "The part is \"here\" when it is on the shelf with the order number on it. Not when the truck is \"on its way\"."
+  },
+  {
+   "section": "Ordering parts for a job",
+   "item": "Bonny Oaks gets its parts direct from the supplier. Anything that has to move between the two shops goes on my 1:00 run."
+  },
+  {
+   "section": "What the counter may promise",
+   "item": "Part on the shelf, technician free: a time today."
+  },
+  {
+   "section": "What the counter may promise",
+   "item": "Part confirmed for a run: a time after that run plus the job hours plus an hour."
+  },
+  {
+   "section": "What the counter may promise",
+   "item": "Part not confirmed: \"I will call you by 2:00 with a time.\" Then call."
+  },
+  {
+   "section": "What the counter may promise",
+   "item": "Never \"same day\" because the job is only three hours."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "The 13:00 transfer run; the \"run plus hours plus one hour\" promise rule; special orders 2 to 5 working days."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: запчасти под заказ often take 1 to 14 days; customers frequently source parts themselves. Promise rule the same."
+ ]
+}

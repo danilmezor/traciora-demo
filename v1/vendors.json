@@ -1,0 +1,454 @@
+{
+ "_meta": {
+  "seed_version": "v1",
+  "file": "vendors.json",
+  "status": "draft by a wave-1 agent, brought to the ledger in the reconcile pass (2026-11-13)",
+  "sources": "stories/S06.md and ledger parts.on_time.V1, parts.on_time.V2, s6.brand; design section 1.5 (transmission rebuilds go to a subcontractor)",
+  "rules": [
+   "Every supplier is an invented regional distributor; the brands it carries are real brands of that market. No real manufacturer or distributor is a counterparty.",
+   "Every name was searched on the web with its city on 2026-11-13; no business of that name was found there."
+  ],
+  "the_cheap_brake_pads": {
+   "brand": {
+    "en": "Calder ValueStop",
+    "ru": "BREMHOF"
+   },
+   "invented": true,
+   "what": "The cheap pad of story S6 is a brand that does not exist: the house brand of supplier V2, which does not exist either. It is sold only by V2 and fitted only at west (ledger s6.brand; catalogue.json story_pins.S6).",
+   "why": "Story S6 says these pads come back four times as often as any other pad. Saying that of a real budget brand in a sales demo would be unfair to it, and nothing in the seed could support it. So no real brand carries the planted comeback rate.",
+   "namesake_check": "Done in the reconcile pass on 2026-11-13 by web search of each name in quotes with 'brake pads' / «тормозные колодки»: no brand, product line or seller called Calder ValueStop or BREMHOF came back; the Russian query returned only Brembo pages. A search is not a trademark clearance: before either name is shown outside a demo, the trademark registers of the market are to be read."
+  },
+  "ru_only": "V9, the steering-rack subcontractor, exists only in the Russian configuration: the Russian catalogue makes the rack job a sublet repair (cost 9 000, price 12 500); the English catalogue fits a remanufactured rack from a parts supplier.",
+  "proposed_ledger_rows": [
+   "payment terms per vendor",
+   "which shops each vendor serves",
+   "delivery rate is set only for the two suppliers of story S6; the others are to be set when the parts part is designed"
+  ]
+ },
+ "en": [
+  {
+   "id": "V1",
+   "role": "home parts supplier",
+   "name": "Sequoyah Parts Supply",
+   "legal_form": "Inc.",
+   "city": "Chattanooga, TN",
+   "payment_terms_days": 30,
+   "sells": "general-line parts for domestic and import cars and light trucks; three delivery runs a day to both Chattanooga shops",
+   "brands": [
+    "ACDelco",
+    "Motorcraft",
+    "Denso",
+    "NGK",
+    "Bosch",
+    "Wagner",
+    "Akebono",
+    "Raybestos",
+    "Gates",
+    "Moog",
+    "Monroe",
+    "Wix",
+    "Timken",
+    "Standard Motor Products"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": "93 %",
+   "phone": "(423) 555-0197",
+   "email": "orders@sequoyahparts.example"
+  },
+  {
+   "id": "V2",
+   "role": "the bought shop's old parts supplier",
+   "name": "Harpeth Valley Parts Supply",
+   "legal_form": "LLC",
+   "city": "Nashville, TN",
+   "payment_terms_days": 15,
+   "sells": "general-line parts with an economy bias; two delivery runs a day; its own Calder ValueStop economy line of brake pads and rotors",
+   "brands": [
+    "Dorman",
+    "Centric",
+    "Fram",
+    "Champion",
+    "Autolite",
+    "Prestone"
+   ],
+   "serves": [
+    "west"
+   ],
+   "delivered_on_the_promised_day": "62 %",
+   "phone": "(615) 555-0123",
+   "email": "orders@harpethvalleyparts.example",
+   "house_brand": {
+    "name": "Calder ValueStop",
+    "what": "economy brake pads and rotors, the pads of story S6",
+    "invented": true
+   }
+  },
+  {
+   "id": "V3",
+   "role": "parts supplier: Asian and European makes",
+   "name": "Ridge & Valley Import Parts",
+   "legal_form": "Inc.",
+   "city": "Chattanooga, TN",
+   "payment_terms_days": 30,
+   "sells": "original-equipment-brand parts for Asian and European cars; next-morning delivery, same day for stocked lines",
+   "brands": [
+    "Denso",
+    "Aisin",
+    "NGK",
+    "Beck/Arnley",
+    "Bosch",
+    "Mann-Filter",
+    "Mahle",
+    "Lemförder",
+    "Textar",
+    "Zimmermann",
+    "Sachs",
+    "Koyo"
+   ],
+   "serves": [
+    "main",
+    "east",
+    "west"
+   ],
+   "delivered_on_the_promised_day": "88 %",
+   "phone": "(423) 555-0158",
+   "email": "orders@ridgevalleyimport.example"
+  },
+  {
+   "id": "V4",
+   "role": "parts supplier: batteries, electrical and air conditioning",
+   "name": "Hiwassee Battery & Electric",
+   "legal_form": "Inc.",
+   "city": "Chattanooga, TN",
+   "payment_terms_days": 30,
+   "sells": "batteries, starters and alternators, air-conditioning compressors, condensers and refrigerant",
+   "brands": [
+    "Deka",
+    "Odyssey",
+    "Denso",
+    "Four Seasons",
+    "UAC",
+    "Delphi",
+    "Standard Motor Products"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": "90 %",
+   "phone": "(423) 555-0165",
+   "email": "orders@hiwasseebattery.example"
+  },
+  {
+   "id": "V5",
+   "role": "tyre supplier",
+   "name": "Tellico Tire Distributors",
+   "legal_form": "LLC",
+   "city": "Chattanooga, TN",
+   "payment_terms_days": 30,
+   "sells": "passenger and light-truck tires, wheel weights and valves; daily run in Chattanooga, twice a week to Nashville",
+   "brands": [
+    "Michelin",
+    "BFGoodrich",
+    "Goodyear",
+    "Cooper",
+    "Hankook",
+    "General",
+    "Falken",
+    "Firestone"
+   ],
+   "serves": [
+    "main",
+    "east",
+    "west"
+   ],
+   "delivered_on_the_promised_day": "84 %",
+   "phone": "(423) 555-0177",
+   "email": "orders@tellicotire.example"
+  },
+  {
+   "id": "V6",
+   "role": "transmission subcontractor",
+   "name": "Coulter Transmission & Driveline",
+   "legal_form": "LLC",
+   "city": "Chattanooga, TN",
+   "payment_terms_days": 15,
+   "sells": "automatic and manual transmission rebuilds, transfer cases and differentials, billed to the shop as sublet work",
+   "brands": [
+    "Sonnax",
+    "Raybestos Powertrain",
+    "BorgWarner",
+    "Transtec"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "(423) 555-0134",
+   "email": "orders@coultertransmission.example"
+  },
+  {
+   "id": "V7",
+   "role": "glass subcontractor",
+   "name": "Walden Auto Glass",
+   "legal_form": "LLC",
+   "city": "Chattanooga, TN",
+   "payment_terms_days": 15,
+   "sells": "windshield and door-glass replacement at the shop, camera recalibration",
+   "brands": [
+    "Pilkington",
+    "PGW",
+    "Fuyao",
+    "Carlite"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "(423) 555-0130",
+   "email": "orders@waldenautoglass.example"
+  },
+  {
+   "id": "V8",
+   "role": "towing partner",
+   "name": "Mowbray Towing & Recovery",
+   "legal_form": "LLC",
+   "city": "Soddy-Daisy, TN",
+   "payment_terms_days": 15,
+   "sells": "light-duty towing and roadside recovery around Chattanooga, billed per tow on a monthly statement",
+   "brands": [],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "(423) 555-0139",
+   "email": "orders@mowbraytowing.example"
+  }
+ ],
+ "ru": [
+  {
+   "id": "V1",
+   "role": "основной поставщик запчастей",
+   "name": "АвтоДеталь-Венец",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 30,
+   "sells": "запчасти для иномарок и отечественных автомобилей со склада; три доставки в день на обе ульяновские площадки",
+   "brands": [
+    "Bosch",
+    "TRW",
+    "Sangsin",
+    "Mann-Filter",
+    "Filtron",
+    "NGK",
+    "Denso",
+    "Gates",
+    "SKF",
+    "Lemförder",
+    "KYB",
+    "Sachs",
+    "LuK",
+    "Mando",
+    "CTR",
+    "Trialli",
+    "Fenox"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": "93 %",
+   "phone": "+7 (8422) 11-64-81",
+   "email": "orders@avtodetal-venets.example"
+  },
+  {
+   "id": "V2",
+   "role": "прежний поставщик купленного сервиса",
+   "name": "Казань-АвтоСнаб",
+   "legal_form": "ООО",
+   "city": "Казань",
+   "payment_terms_days": 14,
+   "sells": "запчасти эконом-сегмента со склада и под заказ; две доставки в день; собственная марка тормозных колодок и дисков BREMHOF",
+   "brands": [
+    "Patron",
+    "LYNXauto",
+    "Zekkert",
+    "Stellox",
+    "Miles"
+   ],
+   "serves": [
+    "west"
+   ],
+   "delivered_on_the_promised_day": "62 %",
+   "phone": "+7 (843) 138-66-17",
+   "email": "orders@kazan-avtosnab.example",
+   "house_brand": {
+    "name": "BREMHOF",
+    "what": "бюджетные тормозные колодки и диски, те самые колодки из истории S6",
+    "invented": true
+   }
+  },
+  {
+   "id": "V3",
+   "role": "поставщик запчастей: отечественные автомобили",
+   "name": "Симбирск-Комплект",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 14,
+   "sells": "запчасти для LADA, ГАЗ и УАЗ, оригинальные и заменители; доставка в день заказа",
+   "brands": [
+    "LADA (оригинальные запчасти)",
+    "ГАЗ (оригинальные запчасти)",
+    "УАЗ (оригинальные запчасти)",
+    "Трек",
+    "СААЗ",
+    "Пекар",
+    "БелМаг",
+    "Fenox"
+   ],
+   "serves": [
+    "main",
+    "east",
+    "west"
+   ],
+   "delivered_on_the_promised_day": "87 %",
+   "phone": "+7 (8422) 14-60-89",
+   "email": "orders@simbirsk-komplekt.example"
+  },
+  {
+   "id": "V4",
+   "role": "поставщик масел, жидкостей и фильтров",
+   "name": "ОйлТрейд-Симбирск",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 30,
+   "sells": "моторные и трансмиссионные масла в бочках и канистрах, антифризы, тормозная жидкость, фильтры",
+   "brands": [
+    "Лукойл",
+    "Роснефть",
+    "G-Energy",
+    "Sintec",
+    "ZIC",
+    "Liqui Moly",
+    "Felix",
+    "Mann-Filter",
+    "Big Filter"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": "91 %",
+   "phone": "+7 (8422) 12-29-68",
+   "email": "orders@oiltrade-simbirsk.example"
+  },
+  {
+   "id": "V5",
+   "role": "поставщик шин",
+   "name": "ШинТорг-Волга",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 30,
+   "sells": "легковые и легкогрузовые шины, диски, грузики и вентили; в сезон доставка каждый день, в Казань два раза в неделю",
+   "brands": [
+    "Cordiant",
+    "Viatti",
+    "КАМА",
+    "Ikon Tyres",
+    "Белшина",
+    "Triangle",
+    "Sailun",
+    "Kumho",
+    "Hankook"
+   ],
+   "serves": [
+    "main",
+    "east",
+    "west"
+   ],
+   "delivered_on_the_promised_day": "80 %",
+   "phone": "+7 (8422) 11-87-30",
+   "email": "orders@shintorg-volga.example"
+  },
+  {
+   "id": "V6",
+   "role": "субподрядчик по трансмиссиям",
+   "name": "ТрансмиссияПрофи",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 7,
+   "sells": "ремонт АКПП, вариаторов и роботизированных коробок, раздаточных коробок и редукторов; оформляется как работа сторонней организации",
+   "brands": [],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "+7 (8422) 14-21-13",
+   "email": "orders@transmissiya-profi.example"
+  },
+  {
+   "id": "V7",
+   "role": "субподрядчик по стёклам",
+   "name": "Стекломастер 73",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 7,
+   "sells": "замена лобовых и боковых стёкол с выездом в сервис",
+   "brands": [
+    "Fuyao",
+    "XYG",
+    "KMK Glass",
+    "БОР"
+   ],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "+7 (8422) 11-12-17",
+   "email": "orders@steklomaster73.example"
+  },
+  {
+   "id": "V8",
+   "role": "партнёр по эвакуации",
+   "name": "Автоспас 73",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 10,
+   "sells": "эвакуация легковых автомобилей и лёгких фургонов по Ульяновску и области; счёт раз в месяц",
+   "brands": [],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "+7 (8422) 12-53-75",
+   "email": "orders@avtospas73.example"
+  },
+  {
+   "id": "V9",
+   "role": "субподрядчик по рулевым рейкам",
+   "name": "РулТех-Симбирск",
+   "legal_form": "ООО",
+   "city": "Ульяновск",
+   "payment_terms_days": 7,
+   "sells": "ремонт рулевых реек с гидро- и электроусилителем, обменный фонд реек; оформляется как работа сторонней организации (catalogue.json, работа steering_rack)",
+   "brands": [],
+   "serves": [
+    "main",
+    "east"
+   ],
+   "delivered_on_the_promised_day": null,
+   "phone": "+7 (8422) 11-73-35",
+   "email": "orders@rultech-simbirsk.example",
+   "namesake_check": "Searched on the web in quotes with «ремонт рулевых реек Ульяновск» on 2026-11-13: no business of this name came back. A search is not a register check: before the name is shown outside a demo, the companies register is to be read."
+  }
+ ]
+}

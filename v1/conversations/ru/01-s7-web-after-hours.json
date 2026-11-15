@@ -1,0 +1,163 @@
+{
+  "format": "seed-conversation/1",
+  "id": "01-s7-web-after-hours",
+  "configuration": "ru",
+  "number": 1,
+  "story": "S7",
+  "title": "Чат на сайте в пятницу вечером: шум, один вопрос, ассистент передаёт заявку, утром Алина",
+  "demonstrates": "The assistant answers first on the web chat, from public pages only. The customer is unclear (R13): she asks what it costs to 'look at' a noise she hears mostly in the mornings. The assistant asks once, braking or turning, and that settles it; she adds her husband's guess, and the assistant does not argue with it. It cannot book: it takes a name and a number and hands over as a scheduling request. The junior operator picks it up six minutes after opening.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json ru.S7",
+      "name": "Ольга Сергеевна Тимофеева",
+      "in_chat": "Ольга",
+      "first_time": true,
+      "phone": "+7 907 378-60-35"
+    },
+    "staff": [
+      {"slot": 6, "name": "Алина Хасанова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Новая клиентка, с телефона, когда сервис уже закрыт.",
+    "vehicle": "Hyundai Solaris 2016, 112 000 км",
+    "wants": "Думает, что ей нужна цена «посмотреть шум». На деле нужна диагностика тормозов, и поскорее.",
+    "what_happens": "Один уточняющий вопрос, цена диагностики с открытой страницы, просьба записать на воскресенье с утра. Записать ассистент не может: спрашивает имя, телефон и сервис, передаёт заявку и говорит, что с ней свяжутся. В субботу в 9:06 Алина записывает на воскресенье, 9:30, и обещает позвонить (звонок есть в наборе звонков, без оценки).",
+    "facts": {
+      "hours": "9:00–20:00, без выходных",
+      "address_main": "Московское шоссе, 40",
+      "public_pages_used": [
+        "часы работы и адреса",
+        "прайс: диагностика тормозной системы",
+        "вопросы о тормозах: скрежет при торможении"
+      ],
+      "booked": "T-19d 09:30, main; запись в ERP, источник web chat",
+      "anchors": "rule R6: day A is slot 6's 10th working day before T (a Saturday for the nominal T); the chat is the evening before it and the visit her next working day, at 9:30 (ledger s7.booking_day, s7.thread). The first chat is under 30 days before T (conv.web_visitor_memory_days).",
+      "prices": [
+        {"said": "700 ₽", "amount": 700.0, "what": "диагностика тормозной системы, фиксированная цена", "from": {"catalogue": "brake_inspection", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    },
+    "unclear": {
+      "kind": "vague: a noise, mostly in the mornings, and a price asked for looking at it",
+      "loops": 1,
+      "resolved": true,
+      "how": "Ассистент один раз спрашивает, когда появляется шум: при нажатии на тормоз или при повороте руля. Ответ: «когда торможу, скрежет, спереди». Про подшипник не спорит и ремонт не оценивает."
+    }
+  },
+  "days": {
+    "T-21d": {"anchor": "1 calendar day before slot 6's 10th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -10, "plus_days": -1}, "nominal": "Fri 2026-10-23", "what": "the chat, 21:10: the evening before day A"},
+    "T-20d": {"anchor": "slot 6's 10th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -10}, "nominal": "Sat 2026-10-24", "what": "day A: slot 6 takes the hand-over, books the visit, rings to confirm"},
+    "T-19d": {"anchor": "slot 6's 9th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -9}, "nominal": "Sun 2026-10-25", "what": "the visit, 09:30: slot 6's next working day after A"}
+  },
+  "floating_days": [
+    {"word": "в воскресенье с утра", "said_on": "T-21d", "day": "T-19d", "form": "в + accusative"},
+    {"word": "на завтра, воскресенье", "said_on": "T-20d", "day": "T-19d", "form": "на + accusative"},
+    {"word": "завтра в 9:30", "said_on": "T-20d", "day": "T-19d", "form": "adverb"},
+    {"word": "Сегодня", "said_on": "T-20d", "day": "T-20d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0001-4e00-8000-00000000a001",
+      "peer": {"id": "seedv1-browser-ru-0001", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0001",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-21d", "at": "21:10:08", "status": "pending", "arrived_closed": true},
+      "timeline": [
+        {"n": 1, "day": "T-21d", "at": "21:10:08", "kind": "message", "from": "customer", "text": "здравствуйте. машина шумит, сколько стоит посмотреть"},
+        {"n": 2, "day": "T-21d", "at": "21:10:21", "kind": "message", "from": "customer", "text": "по утрам в основном"},
+        {"n": 3, "day": "T-21d", "at": "21:10:46", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Сейчас сервис закрыт, откроемся в 9:00, но на вопросы отвечу. Цена зависит от того, откуда шум, поэтому сначала уточню: он появляется, когда нажимаете на тормоз или когда поворачиваете руль? И какая у вас машина?"},
+        {"n": 4, "day": "T-21d", "at": "21:11:38", "kind": "message", "from": "customer", "text": "когда торможу. скрежет такой противный, спереди"},
+        {"n": 5, "day": "T-21d", "at": "21:11:55", "kind": "message", "from": "customer", "text": "муж говорит подшипник, но по моему нет"},
+        {"n": 6, "day": "T-21d", "at": "21:12:27", "kind": "message", "from": "assistant", "text": "Теперь понятно, спасибо. Скрежет спереди при нажатии на тормоз чаще всего связан с износом колодок, но точно скажет только мастер после осмотра: по переписке диагноз я поставить не могу. Начать стоит с диагностики тормозной системы: 700 ₽, около получаса. Мастер покажет, что нашёл, и только потом посчитает ремонт. С таким звуком лучше не затягивать. Передать заявку, чтобы вас записали?"},
+        {"n": 7, "day": "T-21d", "at": "21:13:10", "kind": "message", "from": "customer", "text": "да, давайте. а в воскресенье с утра можно? солярис 2016"},
+        {"n": 8, "day": "T-21d", "at": "21:13:36", "kind": "message", "from": "assistant", "text": "Сам записать я не могу, но передам заявку мастеру-приёмщику, он подтвердит время. Напишите, пожалуйста, как к вам обращаться и номер телефона. И в какой сервис удобнее: на Московском шоссе или в Новом городе?"},
+        {"n": 9, "day": "T-21d", "at": "21:14:20", "kind": "message", "from": "customer", "text": "Ольга 89073786035"},
+        {"n": 10, "day": "T-21d", "at": "21:14:31", "kind": "message", "from": "customer", "text": "на московском"},
+        {"n": 11, "day": "T-21d", "at": "21:15:02", "kind": "message", "from": "assistant", "text": "Спасибо, Ольга. Заявку передал, с вами свяжутся в ближайшее время. Могу ещё чем-то помочь?"},
+        {"n": 12, "day": "T-21d", "at": "21:15:03", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Ольга", "phone": "+7 907 378-60-35", "site": "на московском", "context": "Hyundai Solaris 2016. Скрежет спереди при нажатии на тормоз, в основном по утрам. Сначала спросила, сколько стоит «посмотреть шум»; я один раз уточнил, при торможении он или при повороте руля: при торможении. Муж считает, что это подшипник. Просит записать на диагностику тормозов в воскресенье с утра, Московское шоссе."}}, "note": {"from": "assistant", "private": true, "text": "Hyundai Solaris 2016. Скрежет спереди при нажатии на тормоз, в основном по утрам. Сначала спросила, сколько стоит «посмотреть шум»; я один раз уточнил, при торможении он или при повороте руля: при торможении. Муж считает, что это подшипник. Просит записать на диагностику тормозов в воскресенье с утра, Московское шоссе."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-20d 20:00, закрытие следующего рабочего дня"}},
+        {"n": 13, "day": "T-21d", "at": "21:15:40", "kind": "message", "from": "customer", "text": "нет, спасибо"},
+        {"n": 14, "day": "T-21d", "at": "21:16:12", "kind": "draft", "id": "d1", "text": "Пожалуйста, Ольга! Хорошего вечера.", "why_a_draft": "the chat carries handoff, so the assistant no longer sends", "outcome": {"kind": "discarded", "by": 6, "day": "T-20d", "at": "09:06:15", "because": "she sent her own text (n 16)"}},
+        {"n": 15, "day": "T-20d", "at": "09:06:13", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 16, "day": "T-20d", "at": "09:06:15", "kind": "message", "from": "staff", "slot": 6, "text": "Ольга, доброе утро! Это Алина, мастер-приёмщик «Ермак-Сервиса» на Московском шоссе. Записала вас на завтра, воскресенье, на 9:30: диагностика тормозов, Solaris. Это 700 ₽ и минут тридцать, по результату всё покажем и посчитаем. Если с утра не получится, есть ещё окно в 13:30. Сегодня наберу вас, чтобы подтвердить."},
+        {"n": 17, "day": "T-20d", "at": "09:06:16", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 18, "day": "T-20d", "at": "09:31:40", "kind": "message", "from": "customer", "text": "9:30 отлично, спасибо большое"},
+        {"n": 19, "day": "T-20d", "at": "09:32:20", "kind": "draft", "id": "d2", "text": "Пожалуйста, Ольга! Ждём вас завтра в 9:30: Московское шоссе, 40.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-20d", "at": "09:33:30", "became": 20}},
+        {"n": 20, "day": "T-20d", "at": "09:33:30", "kind": "message", "from": "staff", "slot": 6, "text": "Пожалуйста, Ольга! Ждём вас завтра в 9:30: Московское шоссе, 40."},
+        {"n": 21, "day": "T-20d", "at": "09:33:50", "kind": "activity", "what": "label_added", "label": "запись", "by": 6},
+        {"n": 22, "day": "T-20d", "at": "09:34:05", "kind": "activity", "what": "resolved", "by": 6},
+        {"n": 23, "day": "T-20d", "at": "14:20", "kind": "outside", "store": "calls", "what": "Алина звонит подтвердить запись: исходящий, расшифрован, без оценки (calls design, story call 8); час звонка задаёт набор звонков"},
+        {"n": 24, "day": "T-19d", "at": "09:30", "kind": "outside", "store": "erp", "what": "клиентка приехала; заказ-наряд открыт слотом 6"}
+      ],
+      "assignee_history": [
+        {"day": "T-20d", "at": "09:06:13", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["запись"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "contact_note": "One website visitor: the browser of the first chat, remembered for 30 days (ledger conv.web_visitor_memory_days). The contact holds no name and no phone; both are in the hand-off notes and on the cards."
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 25},
+          {"asked": 4, "answered": 6, "by": "assistant", "wall_seconds": 32},
+          {"asked": 7, "answered": 8, "by": "assistant", "wall_seconds": 26},
+          {"asked": 9, "answered": 11, "by": "assistant", "wall_seconds": 31},
+          {"asked": 13, "answered": 16, "by": 6, "working_minutes": 6.2, "wall_minutes": 711.2, "measured_from": "n 12", "reply": "first"},
+          {"asked": 18, "answered": 20, "by": 6, "working_minutes": 1.8, "wall_minutes": 1.8, "measured_from": "n 18", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 16,
+          "working_minutes": 6.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 9, "assistant": 4, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-20d", "at": "09:34:05", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 6},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 6}
+        ],
+        "operator_credit": "the chat's first answer is nobody's (the assistant wrote it); slot 6 has two replies and one resolution"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "assistant first, handed over (scheduling), slot 6",
+    "outcome": "диагностика тормозов назначена на следующий день, 09:30, main",
+    "facts": [
+      "first written at 21:10 on the evening before day A, outside opening hours",
+      "one clarifying question, asked by the assistant",
+      "the assistant named only the inspection price, 700, and no repair",
+      "handed over with her name and number; the contact itself holds neither",
+      "slot 6's first line 6.2 working minutes after opening",
+      "resolved by slot 6, label «запись»"
+    ],
+    "questions": ["S7.1"]
+  },
+  "why": [
+    "Ассистент не записывает, не называет цену ремонта и не обещает срок: «в ближайшее время» — формула самого продукта.",
+    "Одного вопроса хватило: он предлагает два варианта, и ответ приходит двумя сообщениями, вторым — версия мужа. В заметке её слова и то, что спрашивали один раз.",
+    "Две реплики Алины — её лист: грамотно, полно, сначала время, потом цена, без канцелярита; вторая — черновик ассистента, отправленный как есть."
+  ],
+  "new_facts": ["Звонок-подтверждение показан в 14:20; час задаёт calls/ru."]
+}

@@ -1,0 +1,744 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-14-newcomer-improving",
+  "configuration": "ru",
+  "number": 14,
+  "story": "people",
+  "title": "The newcomer three months in: he asks the name, books, half sums up, and still steps over a doubt",
+  "purpose": "People, slot 7, improving. Nikita no longer promises what he has not checked (\"the roller is for the mechanic to see\"), asks the name, asks when the caller could come, books his own next working day and repeats the time and the work. He still asks nothing about the car and says nothing to the caller's last doubt.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Никита Ведяшкин",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Алексей Тихонов",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 7's 3rd working day before T (rule R6; call 14)",
+    "nominal_offset": "T-5d",
+    "nominal_date": "2026-11-08",
+    "local_start": "10:20",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 9,
+    "caller_phone": "+7 907 504-97-29",
+    "repeat_caller": false,
+    "talk_s": 91
+  },
+  "scenario": {
+    "who_calls": "A first-time caller whose drive belt squeals when he starts the engine.",
+    "vehicle": "Škoda Rapid, 2017",
+    "job": "drive belt of the auxiliaries",
+    "wants": "a price",
+    "what_happens": "Nikita names the job and the price, refuses to promise anything about the roller, takes the first name, asks when the caller could come, cannot do Tuesday, offers Wednesday at two and books it. The caller says he may change his mind because a garage does it for a thousand; Nikita repeats the booking.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "drive_belt_rub": 2750,
+      "booked": "call+3d 14:00",
+      "note": "catalogue.json drive_belt, class car, standard: 0.6 h x 1 900 + belt 1 610 = 2 750. Tuesday (call+2d) is his day off; Wednesday (call+3d) is his next working day.",
+      "prices": [
+        {
+          "job": "drive_belt",
+          "name": "Замена ремня привода навесных агрегатов",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 2750.0,
+          "labour_hour_rub": 1900,
+          "said": "две семьсот пятьдесят",
+          "said_rub": 2750
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "во вторник",
+      "day": "call+2d",
+      "form": "во + accusative"
+    },
+    {
+      "word": "в среду",
+      "day": "call+3d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "среда",
+      "day": "call+3d",
+      "form": "nominative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Никита, здравствуйте!"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.8,
+      "said": "Добрый день. У меня ремень свистит под капотом. Как завожу — визг на всю улицу. Поменять сколько будет?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.8,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 4,
+      "who": "advisor",
+      "at_s": 12.3,
+      "said": "Да-да, ремень генератора, скорее всего. А машина у вас какая?"
+    },
+    {
+      "n": 5,
+      "who": "customer",
+      "at_s": 18.2,
+      "said": "Шкода Рапид."
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 19.9,
+      "said": "Рапид. Ремень с заменой — две семьсот пятьдесят."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 24.6,
+      "said": "Две семьсот пятьдесят. А ролик там не надо менять? Мне сосед говорил, обычно ролик свистит."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 31.6,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 33.4,
+      "said": "Ролик — это мастер посмотрит, я по телефону обещать не буду."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 39.5,
+      "said": "Ну ладно."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 41.7,
+      "said": "Как вас зовут, подскажите?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 44.3,
+      "said": "Алексей."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 46.0,
+      "said": "Алексей, ага, записал. Вам когда удобно приехать?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 50.2,
+      "said": "Во вторник после обеда могу."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 53.4,
+      "said": "Во вторник я не работаю... э-э... Давайте в среду, на два часа, я сам вас приму."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 62.8,
+      "said": "В среду... Ну давайте в среду."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 66.6,
+      "said": "Записал: среда, четырнадцать ноль-ноль, подойдёте ко мне, к Никите."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 72.7,
+      "said": "Хорошо. Только я, может, ещё передумаю — в гаражах у нас мужики за тысячу меняют."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 81.3,
+      "said": "Ага. Значит, записал: среда, два часа, Рапид, ремень генератора."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 86.7,
+      "said": "Ага. До свидания."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 88.8,
+      "said": "До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.7,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          6,
+          15,
+          17,
+          18,
+          19
+        ],
+        "said": [
+          "две семьсот пятьдесят",
+          "на два часа",
+          "четырнадцать ноль-ноль",
+          "за тысячу",
+          "два часа"
+        ],
+        "stored": [
+          "2750",
+          "на 2 часа",
+          "14:00",
+          "за 1000",
+          "2 часа"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "a number split in two by the recogniser",
+        "script_turns": [
+          7
+        ],
+        "said": [
+          "Две семьсот пятьдесят"
+        ],
+        "stored": [
+          "2700 50"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          8
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          5,
+          19
+        ],
+        "said": [
+          "Шкода Рапид",
+          "Рапид"
+        ],
+        "stored": [
+          "Skoda Rapid",
+          "Rapid"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          7
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          1,
+          15,
+          16,
+          21
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 3,
+        "latin": 2
+      },
+      "money_time": {
+        "mentions": 6,
+        "as_digits": 6,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 144,
+    "stored_words": 139,
+    "strict_word_difference": 0.125
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 160,
+    "duration_s": 91.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Никита, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добрый день. У меня ремень свистит под капотом. Как завожу, визг на всю улицу. Поменять сколько будет?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, ремень генератора, скорее всего. А машина у вас какая?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Skoda Rapid.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Рапид. Ремень с заменой — 2750.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "2700 50. А ролик там не надо менять? Мне сосед говорил, обычно ролик свистит.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ролик, это мастер посмотрит, я по телефону обещать не буду.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну ладно.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Как вас зовут, подскажите?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алексей.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алексей, ага, записал. Вам когда удобно приехать?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Во вторник после обеда могу.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Во вторник я не работаю. Давайте в среду, на 2 часа, я сам вас приму.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "В среду. Ну давайте в среду.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Записал: среда, 14:00, подойдёте ко мне, к Никите.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Только я, может, ещё передумаю, в гаражах у нас мужики за 1000 меняют.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага. Значит, записал: среда, 2 часа, Rapid, ремень генератора.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага. До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Никита, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Алексей, ага, записал.",
+        "level": 1,
+        "segment": 11
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А машина у вас какая?",
+        "level": 1,
+        "segment": 3
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Ремень с заменой — 2750.",
+        "level": 1,
+        "segment": 5
+      },
+      {
+        "key": "offered_time",
+        "quote": "Вам когда удобно приехать?",
+        "level": 1,
+        "segment": 11
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записал: среда, 14:00, подойдёте ко мне, к Никите.",
+        "level": 2,
+        "segment": 15
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, записал: среда, 2 часа, Rapid, ремень генератора.",
+        "level": 1,
+        "segment": 17
+      },
+      {
+        "key": "objection",
+        "quote": "Хорошо. Только я, может, ещё передумаю, в гаражах у нас мужики за 1000 меняют.",
+        "level": 0,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "Ролик, это мастер посмотрит, я по телефону обещать не буду.",
+      "why": "Не стал обещать по телефону то, чего не видел. Месяц назад на таком же вопросе он пообещал бы.",
+      "segment": 7
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "Ага.",
+      "say": "За тысячу — это одна работа, без ремня? У нас две семьсот пятьдесят уже с ремнём, и мастер заодно проверит ролик и натяжитель, чтобы через неделю не засвистело снова."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 56.2,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 11
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 3
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 5
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 11
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 15
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 17
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 56.2,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 7,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Никита, здравствуйте",
+        "name_and_number": "Алексей, ага, записал",
+        "need_discovery": "А машина у вас какая?",
+        "price_with_next_step": "Ремень с заменой — 2750",
+        "offered_time": "Вам когда удобно приехать?",
+        "asked_for_booking": "Записал: среда, 14:00, подойдёте ко мне, к Никите",
+        "recap": "Значит, записал: среда, 2 часа, Rapid, ремень генератора",
+        "objection": "Хорошо. Только я, может, ещё передумаю, в гаражах у нас мужики за 1000 меняют"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Ролик, это мастер посмотрит, я по телефону обещать не буду",
+        "why": "Не стал обещать по телефону то, чего не видел. Месяц назад на таком же вопросе он пообещал бы."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "Ага.",
+        "say": "За тысячу — это одна работа, без ремня? У нас две семьсот пятьдесят уже с ремнём, и мастер заодно проверит ролик и натяжитель, чтобы через неделю не засвистело снова."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": 0
+    },
+    "score": 56.2
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "1: имя спросил, номер нет.",
+    "need_discovery": "1: машина и работа; ни года, ни мотора, ни давно ли свистит.",
+    "price_with_next_step": "1: голая сумма.",
+    "offered_time": "1: спросил, когда удобно, потом назвал один вариант.",
+    "asked_for_booking": "2: день, час и кто принимает.",
+    "recap": "1: день, час, машина и работа; адреса нет.",
+    "objection": "0: на «может, ещё передумаю, в гаражах за тысячу меняют» сказал «ага» и повторил запись.",
+    "path": "Против звонка 13: появились имя, вопрос о времени, запись и итог. Не изменилось: вопросы о машине и ответ на сомнение.",
+    "score": "(1·2 + 2·1 + 2·1 + 2·1 + 3·1 + 3·2 + 1·1 + 2·0) / 2 = 9 из 16 весовых баллов = 56.2 (точно 56.25; продукт хранит одну цифру после запятой).",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "new_facts": [
+    "Новый клиент Алексей Тихонов, Škoda Rapid 2017, телефон +7 907 504-97-29 (на звонке взято только имя). Запись на среду после звонка (через три дня), 14:00: замена ремня привода навесных агрегатов, 2 750."
+  ]
+}

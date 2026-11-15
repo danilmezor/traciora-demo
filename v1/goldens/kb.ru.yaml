@@ -1,0 +1,504 @@
+# Written by evals/_build/kb_goldens.py from evals/questions.ru.json and kb/ru/; do not edit.
+questions:
+- id: KB.P1.2
+  question: На каких страницах остались старые цены?
+  asker: '4'
+  facts:
+  - value: 1 760 ₽
+    page: services/engine/timing-belt.md
+  rule: services/engine/timing-belt.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P1.3
+  question: Клиент говорит, что ему назвали 12 268 ₽ за передние диски с колодками. Это наша цена?
+  asker: '17'
+  facts:
+  - value: 12 520 ₽
+    page: prices/price-list.md
+  - value: 12 268 ₽
+    page: services/brakes/brake-questions.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P1.5
+  question: Когда менялся нормо-час и с какого на какой?
+  asker: '6'
+  facts:
+  - value: 1 760 ₽
+    page: prices/labour-rates-and-fees.md
+  - value: 1 900 ₽
+    page: prices/labour-rates-and-fees.md
+  - value: 1 580 ₽
+    page: prices/labour-rates-and-fees.md
+  - value: 1 700 ₽
+    page: prices/labour-rates-and-fees.md
+  - value: 7,95 %
+    page: prices/labour-rates-and-fees.md
+  - value: 1 500 ₽
+    page: prices/labour-rates-and-fees.md
+  - value: 1 620 ₽
+    page: prices/labour-rates-and-fees.md
+  rule: prices/labour-rates-and-fees.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P1.6
+  question: Сколько стоит поменять ремень ГРМ на «Логане»?
+  asker: customer
+  facts:
+  - value: 16 000 ₽
+    page: prices/price-list.md
+  - value: 15 552 ₽
+    page: services/engine/timing-belt.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P2.1
+  question: Какая у нас гарантия?
+  asker: '6'
+  facts:
+  - value: '30'
+    page: customers/warranty.md
+  - value: '14'
+    page: customers/warranty-policy.md
+  rule: customers/warranty.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P2.3
+  question: Какая гарантия на новый генератор?
+  asker: '7'
+  facts:
+  - value: '30'
+    page: customers/warranty.md
+  rule: customers/warranty.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P2.5
+  question: Какая у вас гарантия на замену тормозов?
+  asker: customer
+  facts:
+  - value: '30'
+    page: customers/warranty.md
+  - value: '14'
+    page: customers/warranty-policy.md
+  rule: customers/warranty.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P4.2
+  question: Кто написал правило и что в нём менялось?
+  asker: '2'
+  facts:
+  - value: 10 %
+    page: policies/discounts.md
+  rule: policies/discounts.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P4.3
+  question: Хочу дать 12 %, чтобы закончить спор. Можно?
+  asker: '23'
+  facts:
+  - value: 10 %
+    page: policies/discounts.md
+  rule: policies/discounts.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.1
+  question: Какие условия у «Симбирского гонца» и что должно быть в каждом наряде?
+  asker: '6'
+  facts:
+  - value: '30'
+    page: accounts/company-account-terms.md
+  - value: 1 700 ₽
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.2
+  question: 'Водитель «Тёплого контура» говорит: делайте допработы на 9 500 ₽'
+  asker: '17'
+  facts:
+  - value: 8 000 ₽
+    page: accounts/company-account-terms.md
+  - value: 25 000 ₽
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.3
+  question: Водитель «Гонца» согласовал 9 500 ₽ найденных работ
+  asker: '6'
+  facts:
+  - value: 8 000 ₽
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.7b
+  question: Какой лимит задолженности у «Гонца»?
+  asker: '3'
+  facts:
+  - value: 700 000 ₽
+    page: accounts/credit/credit-limits-and-collections.md
+  rule: accounts/credit/credit-limits-and-collections.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.8
+  question: Какие клиенты идут первыми и когда?
+  asker: '16'
+  facts:
+  - value: '9:00'
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P5.9
+  question: Какие документы получает корпоративный клиент и когда?
+  asker: '3'
+  facts:
+  - value: 5 %
+    page: policies/documents-and-vat.md
+  rule: policies/documents-and-vat.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P6.1
+  question: Вы работаете после обеда в день инвентаризации?
+  asker: customer
+  facts:
+  - value: '12:00'
+    page: customers/hours-and-locations.md
+  - value: '9:00'
+    page: customers/hours-and-locations.md
+  rule: customers/hours-and-locations.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P6.2
+  question: Что делать с записью на этот день?
+  asker: '7'
+  facts:
+  - value: '10:00'
+    page: how-to/stocktake-day.md
+  - value: '12:00'
+    page: how-to/stocktake-day.md
+  rule: how-to/stocktake-day.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P6.3
+  question: До которого часа работает Техническая?
+  asker: '24'
+  facts:
+  - value: '20:00'
+    page: customers/hours-and-locations.md
+  - value: '19:00'
+    page: shops/west/README.md
+  rule: customers/hours-and-locations.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.P8.1
+  question: У меня скрежет при торможении. Что это и сколько будет стоить?
+  asker: customer
+  facts:
+  - value: 700 ₽
+    page: customers/brake-noise.md
+  - value: 9 640 ₽
+    page: customers/brake-noise.md
+  - value: 16 030 ₽
+    page: customers/brake-noise.md
+  rule: customers/brake-noise.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C1.2
+  question: Куда при закрытии на Инженерном девается сейф-пакет?
+  asker: '17'
+  facts:
+  - value: '13:00'
+    page: shops/east/opening-and-closing.md
+  rule: shops/east/opening-and-closing.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C1.5
+  question: Сколько стоит поменять масло в автомате?
+  asker: '7'
+  facts:
+  - value: 6 900 ₽
+    page: services/transmission/transmission-fluid-service.md
+  - value: 16 300 ₽
+    page: services/transmission/transmission-fluid-service.md
+  rule: services/transmission/transmission-fluid-service.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C2.1
+  question: Насколько дольше менять свечи на рамном внедорожнике?
+  asker: '7'
+  facts:
+  - value: '2'
+    page: prices/labour-rates-and-fees.md
+  rule: prices/labour-rates-and-fees.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C2.2
+  question: Кто согласует работы по учебной машине дороже 12 000 ₽?
+  asker: '17'
+  facts:
+  - value: 12 000 ₽
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C2.4
+  question: Что добавляется к сумме при покупке новых шин?
+  asker: '17'
+  facts:
+  - value: 400 ₽
+    page: prices/labour-rates-and-fees.md
+  rule: prices/labour-rates-and-fees.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C3.1
+  question: Передние диски и колодки на «Газель»?
+  asker: '5'
+  facts:
+  - value: 16 276 ₽
+    page: prices/counter-price-sheet.pdf
+  rule: prices/counter-price-sheet.pdf
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C3.2a
+  question: Сколько дней отпуска положено после двух лет работы?
+  asker: '17'
+  facts:
+  - value: '28'
+    page: team/staff-handbook.docx
+  rule: team/staff-handbook.docx
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C3.6
+  question: Сколько опозданий до письменного взыскания?
+  asker: '4'
+  facts:
+  - value: '30'
+    page: team/staff-handbook.docx
+  rule: team/staff-handbook.docx
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C4.2
+  question: Сколько ждать ответа на смету?
+  asker: '17'
+  facts:
+  - value: '30'
+    page: how-to/getting-approval.md
+  - value: '18:00'
+    page: how-to/getting-approval.md
+  rule: how-to/getting-approval.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.1
+  question: Клиент просит «сделать ТО» на Solaris 2015 года
+  asker: '7'
+  facts:
+  - value: 2 850 ₽
+    page: prices/price-list.md
+  - value: 6 700 ₽
+    page: prices/price-list.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.2
+  question: Заправить «кондей» на Kia Sportage 2019 года на Инженерном сегодня?
+  asker: '17'
+  facts:
+  - value: R1234yf
+    page: services/ac/ac-check-and-recharge.md
+  - value: 10 800 ₽
+    page: services/ac/ac-check-and-recharge.md
+  - value: 900 ₽
+    page: services/ac/ac-check-and-recharge.md
+  - value: '13:00'
+    page: services/ac/ac-check-and-recharge.md
+  rule: services/ac/ac-check-and-recharge.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.3
+  question: «Сделать развал» на УАЗ Patriot?
+  asker: '23'
+  facts:
+  - value: 3 900 ₽
+    page: services/tires/alignment.md
+  rule: services/tires/alignment.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.4
+  question: Сколько стоит поменять ремень генератора?
+  asker: '7'
+  facts:
+  - value: 2 750 ₽
+    page: services/engine/drive-belt.md
+  rule: services/engine/drive-belt.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.5
+  question: 'Клиент говорит: бьёт в руль при торможении'
+  asker: '6'
+  facts:
+  - value: 700 ₽
+    page: customers/brake-noise.md
+  rule: customers/brake-noise.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.6
+  question: Клиент хочет «переобуться», кроссовер, шины без дисков
+  asker: '29'
+  facts:
+  - value: 3 750 ₽
+    page: services/tires/seasonal-changeover-and-storage.md
+  rule: services/tires/seasonal-changeover-and-storage.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C6.7
+  question: Сколько стоит «перекинуть колёса» на «Газели»?
+  asker: '24'
+  facts:
+  - value: 1 560 ₽
+    page: services/tires/seasonal-changeover-and-storage.md
+  rule: services/tires/seasonal-changeover-and-storage.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C7.2
+  question: Предоплата и полная сумма за капитальный ремонт АКПП?
+  asker: '17'
+  facts:
+  - value: 42 500 ₽
+    page: services/transmission/transmission-rebuild.md
+  - value: 96 400 ₽
+    page: services/transmission/transmission-rebuild.md
+  rule: services/transmission/transmission-rebuild.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C7.6
+  question: Какая гарантия у фургона «Гонца» на работу по тормозам?
+  asker: '6'
+  facts:
+  - value: '30'
+    page: accounts/company-account-terms.md
+  rule: accounts/company-account-terms.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C7.8
+  question: Сколько клиент заплатит на кассе за диагностику тормозов и передние диски с колодками в стандарте?
+  asker: '6'
+  facts:
+  - value: 13 322,60 ₽
+    page: policies/documents-and-vat.md
+  - value: 700 ₽
+    page: policies/documents-and-vat.md
+  - value: 12 520 ₽
+    page: policies/documents-and-vat.md
+  - value: 102,60 ₽
+    page: policies/documents-and-vat.md
+  - value: 5 %
+    page: policies/documents-and-vat.md
+  - value: 634,41 ₽
+    page: policies/documents-and-vat.md
+  - value: 12 688,19 ₽
+    page: policies/documents-and-vat.md
+  rule: policies/documents-and-vat.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C9.1
+  question: Подшипник ступицы в стандарте?
+  asker: '17'
+  facts:
+  - value: 6 360 ₽
+    page: prices/price-list.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C9.2
+  question: Все работы по трансмиссии и их цена в стандарте
+  asker: '5'
+  facts:
+  - value: 6 900 ₽
+    page: prices/price-list.md
+  - value: 16 300 ₽
+    page: prices/price-list.md
+  - value: 3 320 ₽
+    page: prices/price-list.md
+  - value: 26 550 ₽
+    page: prices/price-list.md
+  - value: 7 470 ₽
+    page: prices/price-list.md
+  - value: 96 400 ₽
+    page: prices/price-list.md
+  rule: prices/price-list.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.C12.4
+  question: Лимит задолженности «Вкусного выезда»?
+  asker: '5'
+  facts:
+  - value: 180 000 ₽
+    page: accounts/credit/credit-limits-and-collections.md
+  rule: accounts/credit/credit-limits-and-collections.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.O6
+  question: Что менялось в правиле о скидках с тех пор, как его написали?
+  asker: '2'
+  facts:
+  - value: 10 %
+    page: policies/discounts.md
+  rule: policies/discounts.md
+  assertions:
+  - type: tool_call
+    tool: kb_read
+- id: KB.O12
+  question: Найди страницы, которые противоречат друг другу
+  asker: '2'
+  facts:
+  - value: '19:00'
+    page: shops/west/README.md
+  - value: '20:00'
+    page: customers/hours-and-locations.md
+  rule: customers/hours-and-locations.md
+  assertions:
+  - type: tool_call
+    tool: kb_read

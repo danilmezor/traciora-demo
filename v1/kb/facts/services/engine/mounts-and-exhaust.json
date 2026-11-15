@@ -1,0 +1,101 @@
+{
+ "path": "services/engine/mounts-and-exhaust.md",
+ "title": "Mounts and exhaust",
+ "first_revision_text": "en/_history/services/engine/mounts-and-exhaust.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Engine mounts and the rear exhaust; what is not on the list.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 190,
+ "links_to": [
+  "services/diagnostics/check-engine-light.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs engine_mount (1.5 h, one mount) and exhaust_muffler (1.2 h), standard totals.",
+  "Catalytic converters have no list price: diagnosis, then a one-off estimate by slot 5 (planted).",
+  "The shop does not weld; fabricated pipes go to an exhaust shop, which is not named (planted gap)."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "engine_mount",
+   "what": "hours",
+   "class": "car",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "engine_mount",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 307.05
+  },
+  {
+   "catalogue_key": "exhaust_muffler",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "exhaust_muffler",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 384.73
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "The shop does not weld exhausts."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена опоры двигателя», «замена глушителя»; welding is commonly offered in Russian shops: decide and record."
+ ]
+}

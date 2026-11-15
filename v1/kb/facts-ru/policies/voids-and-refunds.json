@@ -1,0 +1,118 @@
+{
+ "path": "policies/voids-and-refunds.md",
+ "title": "Работа мимо наряда, списания и возврат денег",
+ "title_en": "Voids and refunds",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/voids-and-refunds.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The rule on voiding orders and giving money back; written with the discount rule after S2.",
+ "serves": [
+  "S2",
+  "S15",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_ru": 296,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The Russian page is about the Russian signature of the leak (design R11, ledger s2.f1.second and s2.f1.third): work done past the order and parts issued from stock with no sale. The English page is about voids after payment.",
+  "With online cash registers a void after payment would be a fiscal refund (stories/S02, per market): the page says money goes back only by a return receipt.",
+  "Checks: clocked job time against sold hours every evening; stock issues against sold parts weekly by slot 3."
+ ],
+ "new_facts": [
+  "The daily comparison of clocked job time with sold hours and the weekly reconciliation of stock issues with sales. Reason: the Russian story names both signatures; a written rule lets \"does anyone break it now\" be asked of them. No violation after the rule is planted.",
+  "Workshop consumables are written off separately, weekly, over the manager's signature."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Работа",
+   "item": "Машина заезжает на пост только с открытым заказ-нарядом. Механик берёт работу из наряда и запускает по ней время."
+  },
+  {
+   "section": "Работа",
+   "item": "Работы, которой нет в наряде, не существует. «Заодно», «по дружбе», «он потом рассчитается» — это работа мимо кассы, как бы её ни называли."
+  },
+  {
+   "section": "Работа",
+   "item": "Нашли что-то по ходу — остановились и сказали мастеру-приёмщику. Строка в наряде, согласование с клиентом, потом работа."
+  },
+  {
+   "section": "Работа",
+   "item": "Каждый вечер время, которое механики отметили по нарядам, сравнивается с проданными нормо-часами. Наряд, где отмечено намного больше, чем продано, — вопрос к мастеру-приёмщику, который его вёл, на следующее утро."
+  },
+  {
+   "section": "Запчасти",
+   "item": "Со склада деталь выдаётся только под строку заказ-наряда. Выдачи «на машину такую-то» без строки не бывает."
+  },
+  {
+   "section": "Запчасти",
+   "item": "Ветошь, очиститель, смазка и прочее на цех списывается отдельно, раз в неделю, за подписью руководителя."
+  },
+  {
+   "section": "Запчасти",
+   "item": "Брак и пересорт — это возврат поставщику через Пашу, а не списание."
+  },
+  {
+   "section": "Запчасти",
+   "item": "Раз в неделю Ирина Владимировна сверяет выдачи со склада с тем, что продано по нарядам. Выдача без продажи разбирается в тот же день."
+  },
+  {
+   "section": "Аннулирование и возврат денег",
+   "item": "Наряд без оплаты может аннулировать мастер-приёмщик, который его открыл, с причиной: не тот клиент, дубль, открыт по ошибке."
+  },
+  {
+   "section": "Аннулирование и возврат денег",
+   "item": "Наряд с оплатой на приёмке не аннулируется. Деньги возвращаются только чеком возврата через кассу: карта — на ту же карту, наличные — наличными. Возврат наличных проводит руководитель, а не мастер-приёмщик."
+  },
+  {
+   "section": "Аннулирование и возврат денег",
+   "item": "Возврат оформляется возвратом по наряду. Аннулировать наряд и завести вместо него новый нельзя."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "9",
+   "written_as": "Пашу",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

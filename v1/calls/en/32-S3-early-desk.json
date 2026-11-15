@@ -1,0 +1,685 @@
+{
+  "format": "seed-call/1",
+  "id": "en-32-S3-early-desk",
+  "configuration": "en",
+  "number": 32,
+  "story": "S3",
+  "title": "Ten minutes after opening, since the fix: the early desk answers on the first ring",
+  "purpose": "Story S3, after the fix. A caller who expected a recording gets Maya at 07:40. She asks where the screw is, gives the price with what would change it, offers eight o'clock, books and sums up with the address. Short, and the kind of call that used to ring out.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Jared Scruggs",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 6's 8th working day before T, 07:40, ten minutes after opening (rule R6; card S03, call 32)",
+    "nominal_offset": "T-10d",
+    "nominal_date": "2026-11-03",
+    "local_start": "07:40",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 3,
+    "caller_phone": "423-555-0181",
+    "repeat_caller": false,
+    "talk_s": 133
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Jared Scruggs, on his way to work, expecting to leave a message.",
+    "vehicle": "2019 Toyota RAV4",
+    "job": "flat repair: patch-plug and rebalance, right rear",
+    "wants": "a price to plug a tire that keeps going low",
+    "what_happens": "Maya asks which tire, where the screw sits and how long he has been airing it up, gives the price and what would make it a new tire instead, offers eight o'clock, takes his name, books and sums up with the address.",
+    "facts": {
+      "booked": "the call's day, 08:00",
+      "note": "catalogue.json tyre_repair: 31.00 (a menu price). Since the fix two advisors work from 07:30 (card S03).",
+      "prices": [
+        {
+          "what": "Flat repair - patch-plug, rebalance",
+          "job": "tyre_repair",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 31.0,
+          "said": "thirty-one dollars",
+          "said_usd": 31,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.7,
+      "said": "Oh! Hey. I didn't figure anybody'd pick up this early. I was gonna leave a message."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 14.1,
+      "said": "Nope, we're here! What can I do for you?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 18.5,
+      "said": "I got — I got a tire that keeps goin' low. Every mornin' the light's on. I think I picked up a nail."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 28.0,
+      "said": "Okay. Which tire is it, do you know?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 31.8,
+      "said": "Passenger rear."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 33.4,
+      "said": "And can you see the nail? Is it in the tread, like the flat part, or over toward the edge?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 42.6,
+      "said": "It's a screw, actually. It's in the tread. Kinda the middle."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 48.5,
+      "said": "Okay, that's the good spot. How long have you been airing it up?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 54.7,
+      "said": "'Bout a week. I put — I put air in it every other day. What do y'all charge to plug it?"
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 62.7,
+      "said": "So if it's in the tread like you're saying, we patch it from the inside and rebalance it, and that's thirty-one dollars. If it turns out to be in the shoulder, or the tire's been run low enough to hurt it, we can't patch that, and then we'd be talking about a tire. But I can get you in this morning at eight. Can you make that?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 87.3,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 89.0,
+      "said": "Eight? Like, twenty minutes from now?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 92.2,
+      "said": "Yep! First one in."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 95.6,
+      "said": "Yeah, I can do that. I'm ten minutes away."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 99.9,
+      "said": "Perfect. What's your name?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 102.6,
+      "said": "Jared Scruggs."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 104.7,
+      "said": "Okay, Jared. I've got you down for eight this morning, and I'll check you in myself. What are you driving?"
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 113.8,
+      "said": "Twenty-nineteen RAV4."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 116.0,
+      "said": "Okay. So that's eight o'clock this morning, here at twenty-one-oh-six East Main Street, and we're patching the right rear on the RAV4."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 124.2,
+      "said": "Yep.",
+      "overlap": true
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 126.1,
+      "said": "Sounds good. See you in a few."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 130.3,
+      "said": "See you soon, Jared!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.77,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          4,
+          8,
+          10,
+          13
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 19,
+        "said": "RAV4",
+        "stored": "RAV 4"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          11,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 2,
+        "said": "I was gonna leave a message.",
+        "stored": ""
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          12
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 2
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 7,
+        "as_digits": 6,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 284,
+    "stored_words": 271,
+    "strict_word_difference": 0.099
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 292,
+    "duration_s": 133.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh! Hey. I didn't figure anybody'd pick up this early.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Nope, we're here! What can I do for you?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I got a tire that keeps going low. Every morning the light's on. I think I picked up a nail.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Which tire is it, do you know?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Passenger rear.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "And can you see the nail? Is it in the tread, like the flat part, or over toward the edge?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's a screw. It's in the tread. Kind of the middle.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, that's the good spot. How long have you been airing it up?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "About a week. I put air in it every other day. What do y'all charge to plug it?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So if it's in the tread like you're saying, we patch it from the inside and rebalance it, and that's $31. If it turns out to be in the shoulder, or the tire's been run low enough to hurt it, we can't patch that, and then we'd be talking about a tire. But I can get you in this morning at 8. Can you make that?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Eight? Twenty minutes from now?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yep! First one in.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, I can do that. I'm ten minutes away.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Perfect. What's your name?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Jared Scruggs.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, Jared. I've got you down for 8 this morning, and I'll check you in myself. What are you driving?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "2019 RAV 4.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So that's 8:00 this morning, here at 2106 East Main Street, and we're patching the right rear on the RAV4.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yep. Sounds good. See you in a few.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "See you soon, Jared!",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "What's your name?",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Is it in the tread, like the flat part, or over toward the edge?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "we can't patch that, and then we'd be talking about a tire. But I can get you in this morning at 8.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "But I can get you in this morning at 8.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I've got you down for 8 this morning, and I'll check you in myself.",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "recap",
+        "quote": "So that's 8:00 this morning, here at 2106 East Main Street, and we're patching the right rear on the RAV4.",
+        "level": 2,
+        "segment": 18
+      }
+    ],
+    "na": [
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Is it in the tread, like the flat part, or over toward the edge?",
+      "why": "The one question that decides whether the tire can be patched at all, asked in words the caller could answer from the driver's seat.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "What's your name?",
+      "say": "What's your name, and is this the best number for you? I'll say it back so I have it right."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 82.1,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 18
+        }
+      ],
+      "na": [
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 82.1,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "name_and_number": "What's your name?",
+        "need_discovery": "Is it in the tread, like the flat part, or over toward the edge?",
+        "price_with_next_step": "we can't patch that, and then we'd be talking about a tire. But I can get you in this morning at 8",
+        "offered_time": "But I can get you in this morning at 8",
+        "asked_for_booking": "I've got you down for 8 this morning, and I'll check you in myself",
+        "recap": "So that's 8:00 this morning, here at 2106 East Main Street, and we're patching the right rear on the RAV4"
+      },
+      "na": {
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Is it in the tread, like the flat part, or over toward the edge?",
+        "why": "The one question that decides whether the tire can be patched at all, asked in words the caller could answer from the driver's seat."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "What's your name?",
+        "say": "What's your name, and is this the best number for you? I'll say it back so I have it right."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 82.1,
+    "score_exact": 82.1429,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name.",
+    "name_and_number": "1: the name only; she never asks for a number.",
+    "need_discovery": "2: the job and what she asked for: which tire, a screw in the middle of the tread, a week of airing it up; the car she asks for at the end.",
+    "price_with_next_step": "2: the price, what would make it a tire instead, and a time in the same line.",
+    "offered_time": "1: one specific option, eight this morning.",
+    "asked_for_booking": "2: the hour and who checks him in.",
+    "recap": "2: the time, the address and the work.",
+    "objection": "N/A: surprise at how soon, not doubt.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·1 + 3·2 + 1·2) / 2 = 11.5 of 14 weight points = 82.1. Exactly 82.14; the product rounds a score to one decimal.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Jared Scruggs, 423-555-0181, 2019 Toyota RAV4: an appointment at main that day at 08:00 for a flat repair."
+  ]
+}

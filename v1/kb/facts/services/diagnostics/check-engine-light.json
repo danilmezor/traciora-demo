@@ -1,0 +1,142 @@
+{
+ "path": "services/diagnostics/check-engine-light.md",
+ "title": "Check engine light",
+ "first_revision_text": "en/_history/services/diagnostics/check-engine-light.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "10",
+ "purpose": "How a check-engine job is booked and explained, in the diagnostician's exact voice.",
+ "serves": [
+  "S5",
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms"
+ ],
+ "length_class": "medium",
+ "words_en": 308,
+ "links_to": [
+  "policies/diagnostic-fees.md",
+  "services/diagnostics/electrical-diagnosis.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job check_engine_diag: 1.0 h at the posted hour; carried by 11.4 % of orders.",
+  "Four steps: codes and freeze-frame, test the circuit, confirm the cause, write what was tested and ruled out (slot 10's way of explaining: cast).",
+  "Booked into the diagnostic column: slot 10 about four a day at main; slot 18 two at east.",
+  "Questions for the customer: steady or flashing, drives differently, when, what was done before.",
+  "Fee not credited; more time needs approval; no repair quote before diagnosis.",
+  "\"$25\" and \"$1,300\" are illustrative causes (a fuel cap and a catalytic converter in the research's list), not shop prices.",
+  "Voice: slot 10: ordered, exact, no slang."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What the hour is",
+   "item": "Read the stored codes and the freeze-frame data: what the engine was doing when the fault set."
+  },
+  {
+   "section": "What the hour is",
+   "item": "Test the circuit or component the code points to. A code names a system, not a part. P0171 says the engine is running lean. It does not say why."
+  },
+  {
+   "section": "What the hour is",
+   "item": "Confirm the cause, so that the part we recommend is the part that failed."
+  },
+  {
+   "section": "What the hour is",
+   "item": "Write down what was tested, what it showed and what that rules out."
+  },
+  {
+   "section": "Booking",
+   "item": "Into the diagnostic column: Kevin at East Main, about four a day; Andre at Bonny Oaks, two."
+  },
+  {
+   "section": "Booking",
+   "item": "Ask: is the light steady or flashing; does the car drive differently; when did it start; was anything done to the car just before. Write the answers on the order. They save me twenty minutes."
+  },
+  {
+   "section": "Booking",
+   "item": "A flashing light with a shaking engine is a misfire. Advise the customer to drive as little as possible."
+  },
+  {
+   "section": "Booking",
+   "item": "The parts store will read the code for free. Customers arrive with a code and a part already bought. Explain, politely, that we still diagnose: we do not fit parts on a code."
+  },
+  {
+   "section": "Money",
+   "item": "The fee is charged whether or not the repair is done here and is not credited: Diagnostic and inspection fees."
+  },
+  {
+   "section": "Money",
+   "item": "More time needs the customer's approval first. Say what has been ruled out so far."
+  },
+  {
+   "section": "Money",
+   "item": "Do not quote the repair before the diagnosis. The same code has a $25 cause and a $1,300 cause."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 135.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Kevin Lawson",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Компьютерная диагностика двигателя», 0.5 н/ч, 1 200 RUB."
+ ]
+}

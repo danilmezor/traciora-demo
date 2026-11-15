@@ -1,0 +1,126 @@
+{
+ "path": "shops/west/README.md",
+ "title": "Техническая",
+ "title_en": "Charlotte Pike",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/west/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "The bought shop's front page as its manager wrote it thirteen months ago: thin and out of date on Saturday hours and on who works the counter.",
+ "serves": [
+  "S13",
+  "S2",
+  "challenge:near-duplicate-shop-pages",
+  "operate:contradiction",
+  "challenge:combine-kb-and-data",
+  "challenge:broken-link",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "tiny",
+ "words_ru": 76,
+ "links_to": [
+  "shops/west/opening-and-closing.md",
+  "shops/west/parts.md",
+  "shops/west/answering-the-phone.md",
+  "shops/west/tow-trucks.md"
+ ],
+ "broken_links_on_purpose": [
+  "shops/west/tow-trucks.md"
+ ],
+ "stale_on_purpose": "S13/S2: Saturday hours and counter staff out of date",
+ "differs_from_en": [
+  "STALE ON PURPOSE in two places, in the Russian form. (1) Hours: the page says 9:00 to 19:00; the company's hours are 9:00 to 20:00 at all three shops (the public page and shops/README.md). (2) The counter: names slot F1 (fired five months before T) and omits slots 24 and 28; team/who-is-who.md is right.",
+  "The broken link is the same: «Эвакуаторы, с которыми работаем» points to a page never written. Kazan's tow partner is stated nowhere.",
+  "Mechanics are named as the shop calls them (cast: Фарит абый, Виталик, Стас)."
+ ],
+ "new_facts": [
+  "The Kazan shop closed at 19:00 under its previous owner and has closed at 20:00 since the purchase. Reason: a Russian shop has no Saturday to be wrong about; an hour at the end of the day is the plausible stale fact. The ERP and the hours table show 20:00 at west."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Техническая",
+   "item": "Открытие и закрытие"
+  },
+  {
+   "section": "Техническая",
+   "item": "Запчасти"
+  },
+  {
+   "section": "Техническая",
+   "item": "Как мы отвечаем на звонки"
+  },
+  {
+   "section": "Техническая",
+   "item": "Эвакуаторы, с которыми работаем"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "F1",
+   "written_as": "Артур",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "23",
+   "written_as": "Слава",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "25",
+   "written_as": "Фарит абый",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Виталик",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "26",
+   "written_as": "Стас",
+   "role": "technician",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-13mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-2mo|date}}",
+   "what": "one line added: the link to \"Answering the phone\"; nothing else touched; message: \"Link to Jasmine's page.\"",
+   "message_ru": "Ссылка на страницу Камилы."
+  }
+ ],
+ "has_history": true
+}

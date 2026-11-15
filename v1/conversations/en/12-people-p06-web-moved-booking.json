@@ -1,0 +1,142 @@
+{
+  "format": "seed-conversation/1",
+  "id": "12-people-p06-web-moved-booking",
+  "configuration": "en",
+  "number": 12,
+  "story": "people",
+  "title": "A booking moved, and a price doubt the junior operator steps over",
+  "demonstrates": "Slot 6's weak spot in writing, as in her calls: a time first and a clean summary, and when the customer says another shop is cheaper she soothes ('I totally understand') and does not answer. The draft she wrote over had the answer. The booking holds anyway; she sends the closing draft as it was, labels, resolves.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Reggie Dorsey",
+      "invented": true,
+      "first_time": false,
+      "note": "a customer of the East Main shop with an alignment booked for the Monday",
+      "phone": "(423) 555-0318"
+    },
+    "staff": [
+      {"slot": 6, "name": "Maya Torres"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer with an appointment he cannot keep.",
+    "what_happens": "He asks to move Monday's alignment. The assistant cannot see appointments and hands over. Maya moves it and offers two times; he takes Thursday at 8:00 and asks whether the price is really 120 when another shop charges 89. She reassures him and confirms the time.",
+    "facts": {
+      "moved_to": "the Thursday of week T-4, 08:00, at main",
+      "public_pages_used": ["price list: four-wheel alignment"],
+      "prices": [
+        {"said": "$119.95", "amount": 119.95, "what": "four-wheel alignment, menu price", "from": {"catalogue": "wheel_alignment", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "120", "what": "the customer's rounding of 119.95"},
+        {"said": "89", "what": "what another shop is said to charge; the customer's claim"}
+      ]
+    }
+  },
+  "days": {
+    "T-35d": {"anchor": "the Friday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 5}, "nominal": "Fri 2026-10-09"},
+    "T-32d": {"anchor": "the Monday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 4}, "nominal": "Mon 2026-10-12", "what": "the booking he moves"},
+    "T-29d": {"anchor": "the Thursday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 4}, "nominal": "Thu 2026-10-15", "what": "the new day"}
+  },
+  "floating_days": [
+    {"word": "monday", "said_on": "T-35d", "day": "the Monday of week T-4"},
+    {"word": "wednesday", "said_on": "T-35d", "day": "the Wednesday of week T-4"},
+    {"word": "Thursday at 8:00", "said_on": "T-35d", "day": "the Thursday of week T-4"},
+    {"word": "Friday at 10:30", "said_on": "T-35d", "day": "the Friday of week T-4"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0012-4e00-8000-00000000e00c",
+      "peer": {"id": "seedv1-browser-en-0455", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0455",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-35d", "at": "08:50:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-35d", "at": "08:50:10", "kind": "message", "from": "customer", "text": "hi i have an appointment monday for an alignment and i need to move it"},
+        {"n": 2, "day": "T-35d", "at": "08:50:33", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. I can't see or change appointments from here, but I'll pass this to the service desk so they can move it. What's your name, the best number for you, and which shop is the appointment at?"},
+        {"n": 3, "day": "T-35d", "at": "08:51:15", "kind": "message", "from": "customer", "text": "Reggie Dorsey. 423 555 0318. east main"},
+        {"n": 4, "day": "T-35d", "at": "08:51:30", "kind": "message", "from": "customer", "text": "any day after wednesday works"},
+        {"n": 5, "day": "T-35d", "at": "08:51:54", "kind": "message", "from": "assistant", "text": "Thank you, Reggie. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 6, "day": "T-35d", "at": "08:51:55", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Reggie Dorsey", "phone": "(423) 555-0318", "site": "east main", "context": "Reggie Dorsey has an alignment booked at East Main on Monday and needs to move it; any day after Wednesday works. I can't see the appointment, so I changed nothing."}}, "note": {"from": "assistant", "private": true, "text": "Reggie Dorsey has an alignment booked at East Main on Monday and needs to move it; any day after Wednesday works. I can't see the appointment, so I changed nothing."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-35d 17:30, the day's close"}},
+        {"n": 7, "day": "T-35d", "at": "08:55:38", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 8, "day": "T-35d", "at": "08:55:40", "kind": "message", "from": "staff", "slot": 6, "text": "Good morning Reggie, this is Maya at East Main. I've moved your alignment off Monday. I can do Thursday at 8:00 or Friday at 10:30, and it takes about an hour either way. Which one would you like?"},
+        {"n": 9, "day": "T-35d", "at": "08:55:41", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 10, "day": "T-35d", "at": "08:58:20", "kind": "message", "from": "customer", "text": "thursday at 8. also is it really 120 for an alignment? place by my work said 89"},
+        {"n": 11, "day": "T-35d", "at": "08:59:00", "kind": "draft", "id": "d1", "text": "Thursday at 8:00 it is, Reggie. Our four-wheel alignment is $119.95: all four wheels are measured and adjusted. I can't speak for another shop's price, but I'm glad to tell you what ours covers.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 6, "day": "T-35d", "at": "09:01:10", "because": "she sent her own text (n 12)"}},
+        {"n": 12, "day": "T-35d", "at": "09:01:10", "kind": "message", "from": "staff", "slot": 6, "text": "I totally understand, Reggie, nobody likes paying more than they have to. You're all set for Thursday at 8:00 at East Main, and we'll take good care of it!"},
+        {"n": 13, "day": "T-35d", "at": "09:03:30", "kind": "message", "from": "customer", "text": "ok"},
+        {"n": 14, "day": "T-35d", "at": "09:04:10", "kind": "draft", "id": "d2", "text": "See you Thursday at 8:00, Reggie: 2106 East Main Street.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-35d", "at": "09:05:00", "became": 15}},
+        {"n": 15, "day": "T-35d", "at": "09:05:00", "kind": "message", "from": "staff", "slot": 6, "text": "See you Thursday at 8:00, Reggie: 2106 East Main Street."},
+        {"n": 16, "day": "T-35d", "at": "09:05:20", "kind": "activity", "what": "label_added", "label": "booking", "by": 6},
+        {"n": 17, "day": "T-35d", "at": "09:05:40", "kind": "activity", "what": "resolved", "by": 6}
+      ],
+      "assignee_history": [
+        {"day": "T-35d", "at": "08:55:38", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 23},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 23},
+          {"asked": 3, "answered": 5, "by": "assistant", "wall_seconds": 24},
+          {"asked": 6, "answered": 8, "by": 6, "working_minutes": 3.8, "wall_minutes": 3.8, "measured_from": "n 6", "reply": "first"},
+          {"asked": 10, "answered": 12, "by": 6, "working_minutes": 2.8, "wall_minutes": 2.8, "measured_from": "n 10", "reply": "later"},
+          {"asked": 13, "answered": 15, "by": 6, "working_minutes": 1.5, "wall_minutes": 1.5, "measured_from": "n 13", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 8,
+          "working_minutes": 3.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 2, "manager": 3, "note": 1},
+        "resolutions": [
+          {"day": "T-35d", "at": "09:05:40", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 6},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 6}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 6: her first line 3.8 minutes after the hand-off, three replies, one draft discarded and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "moving or cancelling a booking",
+    "handled": "assistant first, handed over (scheduling), slot 6",
+    "outcome": "alignment moved from Monday to Thursday 08:00; resolved by slot 6",
+    "facts": [
+      "the booking was moved by slot 6 four minutes after the hand-off",
+      "the customer voiced a price doubt (120 against 89 elsewhere) and it was not answered: she reassured and confirmed the time",
+      "the alignment is 119.95"
+    ],
+    "questions": []
+  },
+  "why": [
+    "'I totally understand' is where an answer should be; her call scores show the same thing (story S4, objection).",
+    "The discarded draft is the better reply, and the outcome row is the evidence.",
+    "Everything else is her at her best: four minutes, two times, the address in the last line."
+  ],
+  "new_facts": [
+    "Reggie Dorsey, (423) 555-0318 (tier B), an alignment at main moved from the Monday to the Thursday of week T-4, 08:00."
+  ]
+}

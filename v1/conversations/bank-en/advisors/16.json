@@ -1,0 +1,235 @@
+{
+  "format": "bank-en/advisor/1",
+  "slot": 16,
+  "name": "Angie Holloway",
+  "shop": "Bonny Oaks",
+  "voice": "Warm, unhurried, the customer's name twice. 'Here's what I'd do if it were my car,' then the price, then two times to choose from, then a recap. Rewrites the assistant's drafts into her own voice and signs every message 'Angie'.",
+  "sheet": {
+    "draft_outcomes": {
+      "sent_as_is": 20,
+      "sent_edited": 60,
+      "discarded": 20
+    },
+    "first_reply_min": 6,
+    "ask_chance": 95,
+    "label_share": 95,
+    "resolves": 80
+  },
+  "signoff": "\nAngie",
+  "pickup": [
+    "Good morning, {first_name}, this is Angie at Bonny Oaks. Thank you for writing in, {first_name}.",
+    "Hi {first_name}! Angie here at Bonny Oaks, and I've got your note right here, {first_name}.",
+    "Good afternoon, {first_name}, it's Angie at Brennan's Bonny Oaks shop. Let's sort this out, {first_name}.",
+    "Hi {first_name}, this is Angie on Bonny Oaks. I read your message, {first_name}, and I can help."
+  ],
+  "replies": {
+    "price": {
+      "quote": [
+        "{first_name}, here's what I'd do if it were my car: the {job}, {job_price} before tax on the {model}. I can take it {day_a} at {time_a} or {day_b} at {time_b}. Which is easier for you, {first_name}?",
+        "For your {model}, {first_name}, the {job} is {job_price}, about {job_total} with tax. If it were mine I wouldn't wait long. {day_a} at {time_a} or {day_b} at {time_b}?",
+        "Good question, {first_name}. The {job} on the {model} is {job_price} before tax and takes {duration}. I have {time_a} on {day_a} or {time_b} on {day_b}, {first_name}.",
+        "{first_name}, I'd want to see it first so I don't quote you the wrong thing: the {diag} is {diag_price}, and I'll send you photos before you spend a dime more. {day_a} at {time_a} or {day_b} at {time_b}?"
+      ],
+      "after": [
+        "That's parts and labor both, {first_name}. With shop supplies and tax you're at {job_total}, and that's the number you'll see.",
+        "It takes {duration}, {first_name}, so you can wait with us or our shuttle can run you home.",
+        "I understand, {first_name}. Here's what I'd do: let us look first, and you decide job by job.",
+        "Yes, that's the whole thing. So to recap, {first_name}: {job}, {job_total} out the door."
+      ]
+    },
+    "booking": {
+      "offer": [
+        "{first_name}, I can take the {model} {day_a} at {time_a} and have it back to you by {ready_time}, or {day_b} at {time_b}. Which is easier for you, {first_name}?",
+        "Let's get it in, {first_name}. I have {day_a} at {time_a} or {day_b} at {time_b}.",
+        "Good morning, {first_name}! Two times for you: {day_a} at {time_a}, or {day_b} at {time_b}. Which works, {first_name}?",
+        "{first_name}, if it were my car I'd do it this week. {day_a} at {time_a} or {day_b} at {time_b}?"
+      ],
+      "confirm": [
+        "You're all set, {first_name}: {day_agreed} at {time_agreed}, the {job} on the {model}, here at Bonny Oaks. I'll message you when it's ready.",
+        "You're set, {first_name}. {day_agreed}, {time_agreed}, {job}, {shop_address}. See you then, {first_name}.",
+        "Perfect, {first_name}. So that's {day_agreed} at {time_agreed} for the {job}, and you'll have it back by {ready_time}.",
+        "Got you down, {first_name}: {day_agreed} at {time_agreed}. Bring any paperwork from last time and I'll go over it with you."
+      ]
+    },
+    "hours": {
+      "answer": [
+        "Hi {first_name}! We're open {open_time} to {close_time} weekdays here at Bonny Oaks. East Main is the one open Saturday, {sat_hours}.",
+        "We sure do, {first_name}. Want me to find you a time this week?",
+        "We're at {shop_address}, {first_name}. Pull up by the office door and come find me.",
+        "{first_name}, we're closed Saturdays out here, but East Main is open {sat_hours}."
+      ],
+      "after": [
+        "After hours the key drop is by the office door, {first_name}. Fill out the envelope and I'll call you first thing.",
+        "No appointment for the battery test, {first_name}, just come on by.",
+        "We're closed Sunday, {first_name}, but I can see you {day_a} at {time_a} or {time_b}.",
+        "So to recap, {first_name}: weekdays {open_time} to {close_time} here, Saturday mornings at East Main."
+      ]
+    },
+    "symptom": {
+      "advise": [
+        "{first_name}, I'm sorry, that's no fun. If it were my car I wouldn't keep driving it like that. Bring it by {day_a} at {time_a} or {day_b} at {time_b} and we'll look; the {diag} is {diag_price}.",
+        "That tells me a lot, {first_name}. Here's what I'd do: let us put it on the lift and look. I can see you {day_a} at {time_a} or {time_b}.",
+        "Thank you for the photo, {first_name}. If it were my car I'd want that looked at, not guessed at. {day_a} at {time_a}, or {day_b} at {time_b}?",
+        "{first_name}, please don't drive it far until we've seen it. I can take it {day_a} at {time_a}; the {diag} is {diag_price}."
+      ],
+      "confirm": [
+        "You're set, {first_name}: {day_agreed} at {time_agreed}, here at Bonny Oaks. Take it easy on the way in.",
+        "Perfect, {first_name}. I'll walk out to the car with you myself when you get here.",
+        "Got it, {first_name}. {day_agreed} at {time_agreed}, and I'll send you photos of whatever we find.",
+        "Thank you, {first_name}. If it gets worse before then, message me and we'll work you in sooner."
+      ]
+    },
+    "status": {
+      "ready": [
+        "Good afternoon, {first_name}! The {model} is ready. Your total is {job_total}, and we're here until {close_time}.",
+        "{first_name}, it's ready whenever you are. {job_total} with tax, and I'll go over everything when you get here.",
+        "All done, {first_name}! The {job} went fine, and the total is {job_total}. See you before {close_time}?",
+        "Hi {first_name}, your {model} is done. Come by when you can, {first_name}; I'll have the paperwork ready."
+      ],
+      "not_yet": [
+        "Good morning, {first_name}. It's on the lift now, and I'll have it back to you by {ready_time}. I'll message you the minute it's done, {first_name}.",
+        "Not yet, {first_name}. The part is due {eta_day}, and as soon as it's here we'll get it done the same day.",
+        "{first_name}, I'm sorry, we're running a little behind. {ready_time} is more honest, and I'll keep you posted.",
+        "Almost there, {first_name}. {tech_first} is road testing it now, so {ready_time}."
+      ]
+    },
+    "found_work": {
+      "present": [
+        "{first_name}, the {job} is done and {tech_first} found {finding}, photo below. If it were my car I wouldn't put that off. It's {finding_price}, and I can still have it back to you by {ready_time}. Want us to go ahead, {first_name}?",
+        "Good morning, {first_name}. Two things from the inspection: {finding}, {finding_price}, and that one I'd do now; and {finding_b}, {finding_b_price}, that can wait. Which would you like, {first_name}?",
+        "{first_name}, I have a picture for you before I say a word about price: {finding}. That's {finding_price}. Would you like it done today?",
+        "Hi {first_name}. Here's what I'd do if it were mine: {finding}, {finding_price}. Everything else looks good. Yes, or not today, {first_name}?"
+      ],
+      "confirm": [
+        "Thank you, {first_name}. So we're doing the {finding_item} today, {job_total} with tax, ready by {ready_time}. I'll message you when it's done.",
+        "Got it, {first_name}: just the {finding_item}. To recap, {job_total} with tax, back to you by {ready_time}.",
+        "Thank you, {first_name}. {tech_first} is starting on it now, and I'll send you a photo of the new part.",
+        "Good choice, {first_name}. The {finding_item} is added; still back to you by {ready_time}."
+      ],
+      "declined": [
+        "That's fine, {first_name}. I've noted the rest on your record and I'll remind you before your next visit.",
+        "No pressure at all, {first_name}. I'll check in with you in a few weeks about it.",
+        "Understood, {first_name}. We'll leave the {finding_item} for now, and I'll show you the photo again next visit.",
+        "That's your call, {first_name}, and I respect it. It's on your record so we don't lose track of it."
+      ]
+    },
+    "moving": {
+      "moved": [
+        "No trouble, {first_name}. I've moved you off {appt_day}. I can do {day_a} at {time_a} or {day_b} at {time_b}. Which is easier, {first_name}?",
+        "{first_name}, things come up. Let's try {day_a} at {time_a} or {time_b}.",
+        "Of course, {first_name}. I took you off {appt_day}; two times for you: {day_a} at {time_a}, {day_b} at {time_b}.",
+        "Good morning, {first_name}. {day_a} at {time_a} is open, or {day_b} if mornings are hard."
+      ],
+      "cancelled": [
+        "That's fine, {first_name}. I've cancelled it, and I'll check in with you next week.",
+        "Cancelled, {first_name}. Message me whenever you're ready and I'll find you a time.",
+        "No problem at all, {first_name}. I hope everything's all right.",
+        "Done, {first_name}. I'll keep a note of what we were going to do so we pick up where we left off."
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        "{first_name}, please don't apologize, I'm glad you told me. That's not how I want you leaving here. Bring it by {day_a} at {time_a} or {day_b} at {time_b}; no charge, {first_name}.",
+        "I'm sorry, {first_name}. If it were my car I'd want it looked at, not guessed at. Can you come by {day_a} at {time_a}?",
+        "{first_name}, I'm sorry. I'll look at it with {tech_first} myself, at no charge.",
+        "Thank you for telling me, {first_name}. Let's get it back in {day_a} at {time_a} and make it right."
+      ],
+      "fix": [
+        "{first_name}, {tech_first} found it: a clip wasn't seated all the way, and that's on us. Fixed and road tested, no charge. Any noise at all, you message me.",
+        "I went through the bill line by line, {first_name}. The difference is tax and shop supplies, and I should have shown you that up front.",
+        "It's all quiet now, {first_name}. I'll walk out to the car with you when you pick it up.",
+        "{first_name}, {manager_first} and I talked it over, and we're taking care of it. I'll call you today."
+      ],
+      "bill": [
+        "{first_name}, I'm sorry, you should have heard the out-the-door number from us before you ever saw the bill. The difference is tax and shop supplies, and nothing else was added.",
+        "I went through your invoice line by line, {first_name}. The price we gave you was before tax; with shop supplies and tax it came to {job_total}. That should have been said up front.",
+        "You're right to ask, {first_name}. Let me pull your estimate and the bill side by side and I'll call you within the hour.",
+        "{first_name}, I'm sorry for the surprise. From now on I'll give you the total with tax before we start, every time."
+      ]
+    },
+    "fleet": {
+      "list": [
+        "Hi {contact_first}! I have {unit} and {unit_b} down for {day_said} at {time_a}. Same as always: I'll message you as each one is ready, and anything past the service I run by you first.",
+        "Got it, {contact_first}: {unit} in place of {unit_b}. I'll message you when it's done, {contact_first}.",
+        "{contact_first}, {unit} is about due on its service, so let's not let it slide. Want me to put it on the list for {day_a}?",
+        "Thank you, {contact_first}. To recap: {unit} and {unit_b}, {day_said} at {time_a}, service on both."
+      ],
+      "paperwork": [
+        "Good morning, {contact_first}. I've attached the invoice for {unit}; let me know if the office needs anything else.",
+        "{contact_first}, PO {po} is on the order. Thank you.",
+        "I'll have the statement copy to you today, {contact_first}.",
+        "Here's the estimate for {unit}, {contact_first}, with each job separate."
+      ]
+    }
+  },
+  "moves": {
+    "ask": [
+      "Help me out, {first_name}: which noise is it, the front or the back?",
+      "So I chase the right one, {first_name}: is it when you brake, or when you turn?",
+      "{first_name}, do you mean the light that came on last time, or a new one?",
+      "Let me make sure I have it right, {first_name}. Is it the {job} you want, or should we look at it first?"
+    ],
+    "decline_discount": [
+      "I hear you, {first_name}. I can't change the price, but here's what I can do: we'll only do what it needs, and I'll show you everything first.",
+      "{first_name}, our prices are the same for everybody. If it were my car I'd do the first item now and the rest next month.",
+      "I wish I could, {first_name}. What I'd do is spread it out over two visits.",
+      "I understand, {first_name}. Let me ask {manager_first} and I'll get back to you today."
+    ],
+    "close": [
+      "Thank you, {first_name}. See you soon.",
+      "You're welcome, {first_name}! Have a good evening.",
+      "Anytime, {first_name}. Take care.",
+      "Thank you, {first_name}. I'll message you when it's ready."
+    ],
+    "pass_on": [
+      "{first_name}, let me get {manager_first} on this one; he'll call you today.",
+      "I'll have {colleague_first} call you, {first_name}; your paperwork is right there.",
+      "Let me walk out and ask {tech_first}, {first_name}, and I'll write you right back.",
+      "{first_name}, that's one for {manager_first}. I've passed it on and I'll make sure he calls."
+    ]
+  },
+  "edits": [
+    {
+      "draft_key": "status.dont_have",
+      "draft": "Hi {first_name}! I don't have the status in front of me; I'll check with the technician and let you know.",
+      "sent": "Good morning, {first_name}! The {model} is on the lift now, and it'll be ready by {ready_time}. I'll message you the minute it's done, {first_name}.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "booking.ask_day",
+      "draft": "Hi {first_name}. Would a morning or an afternoon suit you better? I'll confirm the exact time.",
+      "sent": "Hi {first_name}! I can take the {model} {day_a} at {time_a} or {day_b} at {time_b}. Which is easier for you, {first_name}?",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "found_work.ack",
+      "draft": "Thank you, {first_name}. We'll go ahead with the {finding_item} and hold the rest. We'll message you when it's ready.",
+      "sent": "Thank you, {first_name}. So we're doing the {finding_item} today and holding the rest, which I've noted. Ready by {ready_time}, {first_name}.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "generic.close",
+      "draft": "Thank you, {first_name}. Have a good day.",
+      "sent": "Thank you, {first_name}. Have a good day.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "complaint.sorry",
+      "draft": "Good morning, {first_name}. I'm sorry about that. We'd like to look at it. Which day works for you?",
+      "sent": "Good morning, {first_name}, and I'm glad you told me. That's not how I want you leaving here. Bring it by {day_a} at {time_a} or {day_b} at {time_b}, no charge.",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "price.extras",
+      "draft": "It's before tax and shop supplies, {first_name}. I'll confirm the exact total for you.",
+      "sent": "Good question, {first_name}. That's before tax; with shop supplies and tax you're at {job_total}, and that's the number you'll see.",
+      "outcome": "discarded"
+    }
+  ],
+  "notes": [
+    "@{colleague_first} Mrs. {last_name} is coming at {time_agreed} for her {model}. She declined the {finding_item} last time; please bring it up gently.",
+    "@{tech_first} please take photos of the pads with the gauge in them, she wants to see.",
+    "@{manager_first} comeback on the {model}. Customer is fine, but I'd like you to look at it with me.",
+    "@{colleague_first} I'm off {day_a}. {first_name} {last_name} is expecting a call about the {finding_item}; the number is in the chat."
+  ]
+}

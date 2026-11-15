@@ -1,0 +1,134 @@
+{
+ "path": "how-to/using-this-knowledge-base.md",
+ "title": "Как пользоваться базой знаний и исправлять её",
+ "title_en": "Using and fixing this knowledge base",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/using-this-knowledge-base.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "How to search, how to read a page's date, how a correction is proposed and decided.",
+ "serves": [
+  "S12",
+  "S4",
+  "operate:propose",
+  "operate:find-waiting",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_ru": 333,
+ "links_to": [
+  "prices/price-list.md",
+  "customers/README.md",
+  "how-to/README.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Customers' words in the example are Russian: «переобуться», «заправить кондей», «развал».",
+  "The rungs are the same; the middle rank is «старший мастер-приёмщик, бухгалтер».",
+  "One sentence more than the English page: nobody decides their own proposal (the English outline's answer to P3.5 relies on it)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Как исправить страницу",
+   "columns": [
+    "Кто вы",
+    "Что вы можете"
+   ],
+   "rows": [
+    {
+     "Кто вы": "Старший мастер-приёмщик, бухгалтер и выше",
+     "Что вы можете": "Предложить правку: на самой странице или попросить помощника подготовить её и подтвердить карточку. Напишите зачем"
+    },
+    {
+     "Кто вы": "Сергей Анатольевич, Ринат Фаридович, Николай Петрович или я",
+     "Что вы можете": "Опубликовать правку, принять или отклонить предложение"
+    },
+    {
+     "Кто вы": "Все остальные",
+     "Что вы можете": "Сказать своему старшему мастеру-приёмщику, что не так и где. Сегодня"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Что куда писать",
+   "item": "То, что можно сказать любому клиенту, — в Ответы клиентам. Пишите для клиента: помощник на сайте это цитирует. Он читает ещё страницы услуг и прайс-лист, поэтому неверная цифра оттуда тоже может дойти до клиента."
+  },
+  {
+   "section": "Что куда писать",
+   "item": "Как мы делаем работу — в раздел Как мы работаем."
+  },
+  {
+   "section": "Что куда писать",
+   "item": "То, что касается одного корпоративного клиента, — на страницу этого клиента."
+  },
+  {
+   "section": "Что куда писать",
+   "item": "Ни имени, ни телефона, ни машины частного клиента на страницах быть не должно. Это хранится в программе сервиса."
+  },
+  {
+   "section": "Что куда писать",
+   "item": "Ваша собственная привычка, которая работает, — заметка для себя. Если так должна делать вся команда, это становится строкой на странице."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}",
+  "{{@price_rise|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the section \"Before you trust a page\"; message: \"Read the date line.\"",
+   "message_ru": "Читайте строку с датой."
+  }
+ ],
+ "has_history": true
+}

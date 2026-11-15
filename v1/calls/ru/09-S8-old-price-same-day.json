@@ -1,0 +1,732 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-09-old-price-same-day",
+  "configuration": "ru",
+  "number": 9,
+  "story": "S8",
+  "title": "The newcomer quotes the timing belt at the old price and promises the car the same day",
+  "purpose": "Story S8, the quote call. Nikita reads the price off the service page, which still carries the hour from before the rise, promises the car back the same day without asking the workshop, takes no name, asks nothing about the engine, offers no time and lets the caller pick a day himself.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Никита Ведяшкин",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Игорь Валентинович Фомичёв",
+      "ref": "named_customers.json ru.S8",
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 7's 5th working day before T (rule R6; card S08, call 9)",
+    "nominal_offset": "T-9d",
+    "nominal_date": "2026-11-04",
+    "local_start": "12:35",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 14,
+    "caller_phone": "+7 907 641-87-55",
+    "repeat_caller": false,
+    "talk_s": 99
+  },
+  "scenario": {
+    "who_calls": "Игорь Валентинович Фомичёв, 57, a first-time caller who drives to work in the next town every day.",
+    "vehicle": "Renault Logan, 2015, 1.6 16V (K4M), У838КА173, about 118,000 km",
+    "job": "timing belt with rollers and water pump",
+    "wants": "a price, and to know how long he will be without the car",
+    "what_happens": "Nikita reads 15,552 off the page \"Ремень ГРМ\" and calls it final, says nothing to \"expensive\", promises the car back the evening of the day it comes in (\"should manage, I think\"), answers \"when can I bring it\" with the opening hours, agrees to \"Saturday, in the morning\" without an hour or a name, and repeats the car, the job, the day and the price.",
+    "facts": {
+      "quoted_rub": 15552,
+      "list_price_rub": 16000,
+      "labour_hour_on_the_page_rub": 1760,
+      "labour_hour_now_rub": 1900,
+      "promised": "ready the evening of the day the car comes in (call+3d)",
+      "actually_ready": "call+4d, one working day late",
+      "note": "Ledger s8.price_quoted 15 552 and s8.price_now 16 000 (3.2 h + kit 8 700 + coolant 1 220). The car comes in on his next working day, the Saturday of the nominal calendar.",
+      "prices": [
+        {
+          "job": "timing_belt_kit",
+          "name": "Замена ремня ГРМ с роликами и помпой",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 16000.0,
+          "labour_hour_rub": 1900
+        }
+      ],
+      "ledger": {
+        "s8.price_quoted": 15552,
+        "s8.price_now": 16000
+      }
+    }
+  },
+  "floating_days": [
+    {
+      "word": "в субботу",
+      "day": "call+3d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "суббота",
+      "day": "call+3d",
+      "form": "nominative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Никита, здравствуйте!"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.6,
+      "said": "Добрый день. Мне бы ремень ГРМ поменять. Логан у меня. Сколько это у вас стоит?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 11.1,
+      "said": "Да-да, конечно, сейчас посмотрю... Ремень ГРМ, Логан... э-э... Вот: пятнадцать тысяч пятьсот пятьдесят два рубля. Это с роликами и с помпой, всё вместе."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 22.3,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 5,
+      "who": "customer",
+      "at_s": 24.2,
+      "said": "Пятнадцать пятьсот пятьдесят два. Это окончательная цена?"
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 28.6,
+      "said": "Да-да, это как на сайте, под ключ."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 33.5,
+      "said": "Хм. Дороговато что-то... В гаражах за десять берутся."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 38.7,
+      "said": "Да-да... А, и по времени: это за день делается. С утра оставите — вечером заберёте, в тот же день. Должны успеть, вроде бы."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 50.9,
+      "said": "В тот же день — это хорошо, мне без машины никак, я на ней на работу в Новоульяновск езжу. А когда можно привезти?"
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 61.6,
+      "said": "Да-да.",
+      "overlap": true
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 63.6,
+      "said": "Э-э... да в любой день, мы каждый день с девяти работаем."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 69.9,
+      "said": "Ну, тогда в субботу, наверное. С утра."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 74.9,
+      "said": "Да-да, в субботу, без проблем. Привозите."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 78.5,
+      "said": "Что-то с собой нужно?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 81.9,
+      "said": "Нет, ничего не надо, запчасти все наши."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 86.3,
+      "said": "Хорошо."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 87.8,
+      "said": "Значит, записал: Логан, ремень ГРМ, суббота. Пятнадцать пятьсот пятьдесят два."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 94.0,
+      "said": "Договорились. До свидания."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 96.5,
+      "said": "До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.67,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "a town's name heard as two plain words",
+        "script_turn": 9,
+        "said": "в Новоульяновск",
+        "stored": "в новый Ульяновск",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          3,
+          11,
+          17
+        ],
+        "said": [
+          "пятнадцать тысяч пятьсот пятьдесят два рубля",
+          "с девяти",
+          "Пятнадцать пятьсот пятьдесят два"
+        ],
+        "stored": [
+          "15 552 рубля",
+          "с 9",
+          "15 552"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turn": 7,
+        "said": "Хм. ",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          4
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          2,
+          17
+        ],
+        "said": [
+          "Логан",
+          "Логан"
+        ],
+        "stored": [
+          "Logan",
+          "Logan"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          5,
+          7
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          1,
+          3,
+          7,
+          8,
+          11,
+          12,
+          19
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 3,
+        "dropped": 2
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 7,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 3,
+        "latin": 2
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 160,
+    "stored_words": 151,
+    "strict_word_difference": 0.156
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 169,
+    "duration_s": 99.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Никита, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добрый день. Мне бы ремень ГРМ поменять. Logan у меня. Сколько это у вас стоит?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, конечно, сейчас посмотрю. Ремень ГРМ, Логан. Вот: 15 552 рубля. Это с роликами и с помпой, всё вместе.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "15 552. Это окончательная цена?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, это как на сайте, под ключ.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Дороговато что-то. В гаражах за 10 берутся.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да. А, и по времени: это за день делается. С утра оставите, вечером заберёте, в тот же день. Должны успеть, вроде бы.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "В тот же день, это хорошо, мне без машины никак, я на ней на работу в новый Ульяновск езжу. А когда можно привезти?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Э-э, да в любой день, мы каждый день с 9 работаем.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Тогда в субботу, наверное. С утра.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, в субботу, без проблем. Привозите.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Что-то с собой нужно?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Нет, ничего не надо, запчасти все наши.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Значит, записал: Logan, ремень ГРМ, суббота. 15 552.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Договорились. До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Никита, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Значит, записал: Logan, ремень ГРМ, суббота.",
+        "level": 0,
+        "segment": 15
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Ремень ГРМ, Логан.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Вот: 15 552 рубля. Это с роликами и с помпой, всё вместе.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "offered_time",
+        "quote": "Э-э, да в любой день, мы каждый день с 9 работаем.",
+        "level": 0,
+        "segment": 9
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Да-да, в субботу, без проблем. Привозите.",
+        "level": 1,
+        "segment": 11
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, записал: Logan, ремень ГРМ, суббота.",
+        "level": 1,
+        "segment": 15
+      },
+      {
+        "key": "objection",
+        "quote": "Дороговато что-то. В гаражах за 10 берутся.",
+        "level": 0,
+        "segment": 5
+      }
+    ],
+    "na": [],
+    "auto_fails": [
+      {
+        "key": "wrong_promise",
+        "quote": "С утра оставите, вечером заберёте, в тот же день. Должны успеть, вроде бы.",
+        "segment": 6
+      }
+    ],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection",
+      "wrong_promise"
+    ],
+    "strength": {
+      "quote": "Это с роликами и с помпой, всё вместе.",
+      "why": "Сразу сказал, что входит в сумму: ролики и помпа. Клиенту не пришлось переспрашивать, с чем эта цена.",
+      "segment": 2
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Э-э, да в любой день, мы каждый день с 9 работаем.",
+      "say": "Давайте запишу вас на субботу на девять утра. Сейчас уточню у мастера, успеет ли он за день, и сразу скажу вам срок, чтобы вы на него рассчитывали."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 31.2,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 15
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 9
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 11
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 15
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 5
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [
+        {
+          "key": "wrong_promise",
+          "segment": 6
+        }
+      ],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection",
+        "wrong_promise"
+      ],
+      "score": 31.2,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 2,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Никита, здравствуйте",
+        "name_and_number": "Значит, записал: Logan, ремень ГРМ, суббота",
+        "need_discovery": "Ремень ГРМ, Логан",
+        "price_with_next_step": "Вот: 15 552 рубля. Это с роликами и с помпой, всё вместе",
+        "offered_time": "Э-э, да в любой день, мы каждый день с 9 работаем",
+        "asked_for_booking": "Да-да, в субботу, без проблем. Привозите",
+        "recap": "Значит, записал: Logan, ремень ГРМ, суббота",
+        "objection": "Дороговато что-то. В гаражах за 10 берутся"
+      },
+      "na": {},
+      "auto_fails": {
+        "wrong_promise": "С утра оставите, вечером заберёте, в тот же день. Должны успеть, вроде бы"
+      },
+      "strength": {
+        "quote": "Это с роликами и с помпой, всё вместе",
+        "why": "Сразу сказал, что входит в сумму: ролики и помпа. Клиенту не пришлось переспрашивать, с чем эта цена."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Э-э, да в любой день, мы каждый день с 9 работаем.",
+        "say": "Давайте запишу вас на субботу на девять утра. Сейчас уточню у мастера, успеет ли он за день, и сразу скажу вам срок, чтобы вы на него рассчитывали."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 0,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 1,
+      "recap": 1,
+      "objection": 0
+    },
+    "score": 31.2
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "0: ни имени, ни номера не спросил; «записал» на машину и день.",
+    "need_discovery": "1: машина и работа известны со слов клиента. Ни года, ни мотора, ни пробега, ни когда меняли ремень он не спросил.",
+    "price_with_next_step": "1: сумма и что в неё входит. От чего она зависит, не сказано; времени в этой и следующей реплике нет.",
+    "offered_time": "0: на «когда можно привезти» назвал часы работы.",
+    "asked_for_booking": "1: согласился на «в субботу, с утра» без часа и без того, кто примет.",
+    "recap": "1: машина, работа, день и цена. Часа и адреса нет.",
+    "objection": "0: на «дороговато, в гаражах за десять берутся» не сказал ничего и перешёл к срокам.",
+    "auto_fails": "wrong_promise: срок «в тот же день» назван без оснований, и он сам это выдаёт: «должны успеть, вроде бы». Цена тоже неверная (15 552 вместо 16 000 по прайсу), но из диалога этого не видно: это видно по странице и по наряду.",
+    "visit_agreed": "Визит согласован на словах (суббота, утро), поэтому исход visit_agreed при уровне записи 1: полной записи с часом и именем нет.",
+    "score": "(1·2 + 2·0 + 2·1 + 2·1 + 3·0 + 3·1 + 1·1 + 2·0) / 2 = 5 из 16 весовых баллов = 31.2 (точно 31.25; продукт хранит одну цифру после запятой).",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Запись Фомичёва на субботу оформлена без имени, по номеру телефона; имя появляется в наряде при приёмке."
+  ]
+}

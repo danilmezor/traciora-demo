@@ -1,0 +1,336 @@
+{
+  "slot": 17,
+  "name": "Josh Tipton",
+  "site": "east",
+  "role": "service advisor",
+  "tier": "warm",
+  "voice": "Casual and likeable, a little salesman's patter: 'gotcha', 'we'll get you taken care of', 'no worries'. Names the price before he explains the need, accepts the first 'not today', and puts a hard call on hold to ask Angie. Does each thing half.",
+  "style_sheet": {
+    "greeting": [
+      5,
+      20,
+      75
+    ],
+    "name_and_number": [
+      20,
+      45,
+      35
+    ],
+    "need_discovery": [
+      5,
+      45,
+      50
+    ],
+    "price_with_next_step": [
+      10,
+      50,
+      40
+    ],
+    "offered_time": [
+      25,
+      50,
+      25
+    ],
+    "asked_for_booking": [
+      20,
+      30,
+      50
+    ],
+    "recap": [
+      45,
+      30,
+      25
+    ],
+    "objection": [
+      35,
+      45,
+      20
+    ]
+  },
+  "habits": [
+    "'Gotcha', 'cool', 'you bet', 'no worries'.",
+    "'We'll get you taken care of', 'it's all good stuff'.",
+    "Puts the caller on hold ('hang on one sec for me') to ask Angie.",
+    "Offers to 'hold you a spot' and lets the caller go on the first no.",
+    "Promises a call back he does not always make (the call log's auto-fail, 20 %)."
+  ],
+  "fillers": [
+    "Gotcha,",
+    "Cool,",
+    "Yeah,",
+    "So,"
+  ],
+  "tokens": {
+    "a_ok": [
+      "Gotcha",
+      "Cool"
+    ],
+    "a_yes": [
+      "Yep",
+      "You bet"
+    ],
+    "a_sorry": [
+      "My bad",
+      "Sorry about that"
+    ]
+  },
+  "greeting_tails": [
+    "",
+    " What can I do for you?",
+    " What's going on?",
+    " How can I help?"
+  ],
+  "greetings": [
+    "Brennan Auto Care, this is Josh, how can I help?",
+    "Hey there, Brennan Auto Care, Josh speaking.",
+    "Brennan Auto Care on Bonny Oaks, Josh speaking.",
+    "Brennan Auto Care, Josh here, what's going on?",
+    "Thanks for calling Brennan Auto Care, this is Josh.",
+    "Brennan Auto Care, you got Josh."
+  ],
+  "address": [
+    ", {customer_first}"
+  ],
+  "checks": {
+    "greeting": {
+      "0": [
+        "Hey, what's up — sorry, go ahead.",
+        "Yeah, hey.",
+        "Hello, hello?",
+        "Hey there."
+      ],
+      "1": [
+        "Brennan Auto Care, hey.",
+        "Bonny Oaks, Brennan's.",
+        "Brennan Auto Care, one sec — okay, go ahead.",
+        "Hey, Brennan Auto Care."
+      ],
+      "2": [
+        "Brennan Auto Care, this is Josh.",
+        "Brennan Auto Care, Josh speaking, what can I do for you?",
+        "Hey, Brennan Auto Care, this is Josh.",
+        "Brennan Auto Care on Bonny Oaks, this is Josh."
+      ]
+    },
+    "name_and_number": {
+      "0": [
+        "<skip>",
+        "I'll just throw it under the {car_model} for now.",
+        "We'll grab your info when you swing by.",
+        "No worries, I'll put it down under the {car_model}."
+      ],
+      "1": [
+        "Gotcha.",
+        "Cool, got it.",
+        "Alright, {customer_first}, got you in there.",
+        "Gotcha, I'll put it on there."
+      ],
+      "2": [
+        "{customer_phone_said}, gotcha.",
+        "Cool, so {customer_phone_said}?",
+        "{customer_phone_said}. Got you in there.",
+        "Lemme read it back, {customer_phone_said}. Cool."
+      ]
+    },
+    "need_discovery": {
+      "0": [
+        "Gotcha, let me get you a price on that.",
+        "Yeah, we can do that, hang on one sec.",
+        "Okay, let me see what that runs.",
+        "Cool, one sec."
+      ],
+      "1": [
+        "Gotcha. What're you driving?",
+        "What kind of car is it?",
+        "Okay, cool, what year and model?",
+        "And what's the vehicle?"
+      ],
+      "2": [
+        "Gotcha. And {job_question}",
+        "Okay, and real quick — {job_question}",
+        "How long's the {car_model} been doing it?",
+        "Cool. So {job_question}"
+      ]
+    },
+    "price_with_next_step": {
+      "0": [
+        "Uh, I'd have to have somebody look at it, honestly.",
+        "Hard to say on {job_said} till we get it in.",
+        "It kinda varies, man.",
+        "I couldn't tell you right off."
+      ],
+      "1": [
+        "Gotcha, that's gonna be {price}.",
+        "So that's {price}.",
+        "That's {price}, it's all good stuff.",
+        "It's {price} plus tax, give or take."
+      ],
+      "2": [
+        "So {price_statement}. {depends} We'll get you taken care of — want me to look at the schedule?",
+        "Okay, {price_statement}, plus tax. {depends} I can get you in pretty quick.",
+        "Yeah, so {inspection_line} We'll get you on the books.",
+        "{price_statement}. {depends} Want me to grab you a time?"
+      ]
+    },
+    "offered_time": {
+      "0": [
+        "We're open till {closing_time}, swing by whenever.",
+        "Just swing by.",
+        "Come by anytime, we'll get the {car_model} in.",
+        "We're here {shop_hours}, no appointment needed."
+      ],
+      "1": [
+        "When were you wanting to come in?",
+        "I could do {time_1}.",
+        "What day's good?",
+        "I can get you in {time_1} if that works."
+      ],
+      "2": [
+        "I've got {time_1} or {time_2}, what's better?",
+        "We could do {time_1}, or {time_2}.",
+        "How's {time_1}? Or {time_2} works too.",
+        "{time_1} or {time_2}, take your pick."
+      ]
+    },
+    "asked_for_booking": {
+      "0": [
+        "Alright, no worries.",
+        "Gotcha, no problem. Just give us a call on the {car_model}.",
+        "Cool, call us whenever.",
+        "No worries, take care."
+      ],
+      "1": [
+        "Want me to put you down for something anyway? Hold you a spot?",
+        "I can hold you a spot if you want.",
+        "I'll give you a shout when something opens.",
+        "Want me to just throw the {car_model} on the schedule?"
+      ],
+      "2": [
+        "Cool, I've got you down for {time_chosen}. Ask for Josh.",
+        "Alright, {time_chosen}, you're on the books. I'll be up front, it's Josh.",
+        "Done, {time_chosen}. I'll check you in when you get here — Josh.",
+        "Gotcha, {time_chosen} it is, ask for Josh."
+      ]
+    },
+    "recap": {
+      "0": [
+        "Cool, see you then.",
+        "Alright, see ya.",
+        "Gotcha, you're good.",
+        "Sounds good, man."
+      ],
+      "1": [
+        "Cool, so {time_chosen}.",
+        "Alright, {time_chosen} for {job_said}.",
+        "So {time_chosen} on the {car_model}, gotcha.",
+        "{time_chosen}, you're good."
+      ],
+      "2": [
+        "So {time_chosen}, {shop_address}, {job_said} on the {car_model}. You're set.",
+        "Alright, that's {time_chosen} here at {shop_address} for {job_said}.",
+        "Cool, so: {job_said}, {time_chosen}, {shop_address}.",
+        "Okay, {time_chosen}, at {shop_address}, and we're doing {job_said}."
+      ]
+    },
+    "objection": {
+      "0": [
+        "Gotcha. So you want to bring the {car_model} in?",
+        "Yeah. Cool. Anything else?",
+        "Okay, no worries.",
+        "Yeah, I hear you. So — {time_1}?"
+      ],
+      "1": [
+        "Yeah, we've got that too. It's all good stuff, either way. We'll get you taken care of.",
+        "It's all good stuff on {job_said}, I promise.",
+        "Yeah, we'll take care of you.",
+        "It's a good deal for what it is."
+      ],
+      "2": [
+        "Yeah, totally. {objection_answer}",
+        "Gotcha. So {objection_answer}",
+        "No, that's fair. {objection_answer}",
+        "Okay, so here's the thing — {objection_answer}"
+      ]
+    }
+  },
+  "moves": {
+    "ack": [
+      "Gotcha, yeah, we do that.",
+      "Oh yeah, we can take care of {job_said}.",
+      "Cool, cool. Okay.",
+      "Yep, we'll get you taken care of."
+    ],
+    "ask_what": [
+      "Gotcha — what's it doing?",
+      "Okay, cool, what's going on with it?",
+      "Cool, so what's the problem?"
+    ],
+    "ask_name": [
+      "Who've I got?",
+      "What's the name?",
+      "And your name is?",
+      "Who am I talking to?"
+    ],
+    "ask_number": [
+      "What's a good number?",
+      "Best number for you?",
+      "What's your number, {customer_first}, in case?",
+      "Cool, {customer_first}, and a good number?",
+      "And a number for you, {customer_first}?"
+    ],
+    "recognise": [
+      "Oh, hey, {customer_first}! What's going on?",
+      "{customer_first}, what's up?",
+      "Hey, {customer_first}, gotcha. The {car_model}, right?"
+    ],
+    "lookup": [
+      "Gotcha, lemme pull it up.",
+      "Hang on, it's on the board somewhere... got it.",
+      "One sec, I'm looking."
+    ],
+    "hold": [
+      "Uh, hang on one sec for me.",
+      "Let me check with Angie real quick, hang on."
+    ],
+    "back_from_hold": [
+      "Okay, thanks for hangin' on.",
+      "Alright, sorry, I'm back with you."
+    ],
+    "explain": [
+      "So basically {job_explain}.",
+      "Yeah, a lot of times {job_explain}.",
+      "Gotcha, so that's usually — {job_explain}."
+    ],
+    "duration": [
+      "It's like {job_duration}, give or take.",
+      "Figure {job_duration}, and you can hang out in the lobby.",
+      "Shouldn't be more than {job_duration}."
+    ],
+    "probe": [
+      "Real quick — {objection_probe}",
+      "Lemme ask, {objection_probe}"
+    ],
+    "outbound_open": [
+      "Hey, {customer_first}? It's Josh at Brennan Auto Care.",
+      "Hey, this is Josh over at Brennan's on Bonny Oaks.",
+      "Hi, is this {customer_first}? Josh, Brennan Auto Care."
+    ],
+    "closing_booked": [
+      "Cool, {customer_first}, see you {time_chosen}.",
+      "You bet, {customer_first}. Take care.",
+      "Alright, {customer_first}, we'll get you taken care of.",
+      "Cool, see you then.",
+      "Cool, {customer_first}, we'll see you then.",
+      "Alright, see you {time_chosen}."
+    ],
+    "closing_open": [
+      "Alright, take it easy.",
+      "You bet. Have a good one.",
+      "Cool, {customer_first}, talk to you later.",
+      "Alright, {customer_first}, take it easy.",
+      "Cool, {customer_first}, holler if you need us.",
+      "Alright, take it easy now.",
+      "No worries, holler anytime."
+    ]
+  }
+}

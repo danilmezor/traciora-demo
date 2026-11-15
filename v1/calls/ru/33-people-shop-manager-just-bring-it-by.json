@@ -1,0 +1,707 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-33-shop-manager-just-bring-it-by",
+  "configuration": "ru",
+  "number": 33,
+  "story": "people",
+  "title": "The Kazan shop manager and an old customer's son: \"just bring it by\"",
+  "purpose": "People, slot 22, the first of two calls. He knows the caller and his father, asks the right question about the noise, names a round price, asks when the caller can come and leaves it at \"drop in, I am here till seven\". The recording is poor: the workshop is loud, he speaks away from the handset, and the two men open and close in Tatar. The stored lines lose his question about the time.",
+  "cast": {
+    "advisor": {
+      "slot": 22,
+      "name": "Ринат Фаридович Галиев",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Ленар",
+      "invented": true,
+      "first_time": false,
+      "note": "the son of a long-standing customer, Фарид; on first-name terms with the shop manager"
+    }
+  },
+  "call": {
+    "day": "the Thursday of week T-7 (rule R6; call 33)",
+    "nominal_offset": "T-50d",
+    "nominal_date": "2026-09-24",
+    "local_start": "13:20",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "301",
+    "ring_s": 17,
+    "caller_phone": "+7 907 877-40-74",
+    "repeat_caller": false,
+    "talk_s": 76
+  },
+  "scenario": {
+    "who_calls": "Ленар, whose father has brought his cars to this shop for years.",
+    "vehicle": "Lada Priora, 2012",
+    "job": "the outer CV joint on the left (\"граната\"): it crunches on full lock, the boot is torn",
+    "wants": "to know what it is and what it costs",
+    "what_happens": "They greet each other in Tatar. He describes a crunch when pulling away on full lock. The shop manager names the part, asks how long and which side, says it must be replaced, gives a round price, asks when he can come, and when the caller cannot say tells him to drop in. The caller says he will ring when he is ready.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "cv_axle_rub": 7470,
+      "note": "catalogue.json cv_axle, class car, standard: 1.5 h x 1 900 + joint with boot 4 620 = 7 470; he says \"about seven and a half\". The Tatar phrases are a greeting, \"how are things\", \"fine, thanks\", \"all right\" and goodbyes.",
+      "prices": [
+        {
+          "job": "cv_axle",
+          "name": "Замена наружного ШРУСа (1 шт.)",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 7470.0,
+          "labour_hour_rub": 1900,
+          "said": "семь с половиной",
+          "said_rub": 7500
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Да, Ермак."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.2,
+      "said": "Исәнмесез, Ринат абый! Это Ленар, Фарида сын."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 6.7,
+      "said": "О, Ленар, сәлам. Хәлләр ничек? Отец как, здоров?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 11.9,
+      "said": "Әйбәт, рәхмәт. Отец нормально, работает. Ринат абый, у меня Приора хрустеть начала. Когда руль выворачиваю и трогаюсь — тр-р-р такой спереди."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 21.6,
+      "said": "Ну.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 23.7,
+      "said": "Граната. Давно хрустит? С какой стороны?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 28.2,
+      "said": "Слева вроде. Недели две уже. Пыльник там порвался, я видел."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 34.5,
+      "said": "Ну, раз пыльник порван и хрустит — всё, менять. Наружную."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 40.4,
+      "said": "А сколько это будет, примерно?"
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 43.7,
+      "said": "Семь с половиной где-то. С запчастью."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 47.6,
+      "said": "Нормально. А когда можно?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 50.2,
+      "said": "Когда сможешь?"
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 52.2,
+      "said": "Да я на неделе, после работы. Точно не скажу пока."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 58.6,
+      "said": "Ну заезжай. Я до семи тут. Посмотрим, сделаем."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 64.1,
+      "said": "Ярар, Ринат абый. Я тогда наберу, как соберусь."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 69.0,
+      "said": "Давай. Отцу привет."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 71.0,
+      "said": "Передам. Сау булыгыз!"
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 73.4,
+      "said": "Сау бул."
+    }
+  ],
+  "recognition": {
+    "profile": "heavy",
+    "consensus_score": 0.14,
+    "restoration_tier": "low",
+    "noise": "an impact wrench and an angle grinder in the workshop behind him; he talks with the handset on his shoulder; the Russian recognisers do not read the Tatar phrases",
+    "applied": [
+      {
+        "rule": "R4",
+        "what": "'хрустеть' heard as 'грустить'",
+        "script_turn": 4,
+        "said": "хрустеть начала",
+        "stored": "грустить начала",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "the trade word 'граната' in another form",
+        "script_turn": 6,
+        "said": "Граната.",
+        "stored": "Гранаты.",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turn": 14,
+        "said": "до семи",
+        "stored": "до 7",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise and another language: [unintelligible] where the models disagree",
+        "script_turns": [
+          2,
+          3,
+          4,
+          15,
+          17,
+          18
+        ],
+        "said": [
+          "Исәнмесез, Ринат абый! Это Ленар, Фарида сын.",
+          "сәлам. Хәлләр ничек?",
+          "Әйбәт, рәхмәт. ",
+          "Ярар, Ринат абый. Я тогда наберу, как соберусь.",
+          "Передам. Сау булыгыз!",
+          "Сау бул."
+        ],
+        "stored": [
+          "[unintelligible] Ринат абый. Это Ленар, {?likely: Фарида сын}.",
+          "салам. [unintelligible]",
+          "[unintelligible] ",
+          "[unintelligible] Я тогда наберу, {?likely: как соберусь}.",
+          "[unintelligible]",
+          "[unintelligible]"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: [unintelligible] where the models disagree",
+        "script_turns": [
+          4,
+          8,
+          9,
+          16
+        ],
+        "said": [
+          "руль выворачиваю и трогаюсь — тр-р-р такой спереди",
+          "и хрустит — всё, менять. Наружную.",
+          "это будет, примерно",
+          "Отцу привет."
+        ],
+        "stored": [
+          "руль [unintelligible] спереди",
+          "[unintelligible] менять. [unintelligible]",
+          "[unintelligible]",
+          "[unintelligible]"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: [unintelligible], an uncertain span marked, the tail gone",
+        "script_turn": 7,
+        "said": "Недели две уже. Пыльник там порвался, я видел.",
+        "stored": "[unintelligible] {?likely: Пыльник там порвался}.",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the manager's question about the time is lost whole",
+        "script_turn": 12,
+        "said": "Когда сможешь?",
+        "stored": "[unintelligible]",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a phrase lost and the sentence end clipped",
+        "script_turn": 13,
+        "said": "после работы. Точно не скажу пока.",
+        "stored": "[unintelligible] Точно не…",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: uncertain spans marked",
+        "script_turn": 14,
+        "said": "Посмотрим, сделаем.",
+        "stored": "{?likely: Посмотрим, сделаем.}",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turn": 11,
+        "said": "Нормально. ",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          8
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 1,
+        "lost": 0,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 6,
+        "wrong": 2
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 2,
+        "as_digits": 1,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 14,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 13
+    },
+    "script_words": 114,
+    "stored_words": 92,
+    "strict_word_difference": 0.447
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 110,
+    "duration_s": 76.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, Ермак.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible] Ринат абый. Это Ленар, {?likely: Фарида сын}.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "О, Ленар, салам. [unintelligible] Отец как, здоров?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible] Отец нормально, работает. Ринат абый, у меня Приора грустить начала. Когда руль [unintelligible] спереди.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Гранаты. Давно хрустит? С какой стороны?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Слева вроде. [unintelligible] {?likely: Пыльник там порвался}.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Раз пыльник порван [unintelligible] менять. [unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А сколько [unintelligible]?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Семь с половиной где-то. С запчастью.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А когда можно?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да я на неделе, [unintelligible] Точно не…",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну заезжай. Я до 7 тут. {?likely: Посмотрим, сделаем.}",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible] Я тогда наберу, {?likely: как соберусь}.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давай. [unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible]",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Да, Ермак.",
+        "level": 1,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Давно хрустит? С какой стороны?",
+        "level": 2,
+        "segment": 5
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Семь с половиной где-то. С запчастью.",
+        "level": 1,
+        "segment": 9
+      },
+      {
+        "key": "offered_time",
+        "quote": "Ну заезжай. Я до 7 тут.",
+        "level": 0,
+        "segment": 13
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Ну заезжай. Я до 7 тут.",
+        "level": 1,
+        "segment": 13
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер называет его по имени и спрашивает об отце."
+      },
+      {
+        "key": "recap",
+        "why": "Договорённости нет: клиент сказал, что позвонит, когда соберётся."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Давно хрустит? С какой стороны?",
+      "why": "По одному описанию назвал узел и тут же спросил, давно ли хрустит и с какой стороны.",
+      "segment": 5
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Ну заезжай. Я до 7 тут.",
+      "say": "Ленар, давай завтра к шести вечера или послезавтра к десяти утра. Запишу тебя, и граната к твоему приезду уже будет лежать."
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 45.5,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 5
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 9
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 13
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 13
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "recap",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted"
+      ],
+      "score": 45.5,
+      "applicable": 5,
+      "asr_quality": "poor",
+      "strength_segment": 5,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Да, Ермак",
+        "need_discovery": "Давно хрустит? С какой стороны?",
+        "price_with_next_step": "Семь с половиной где-то. С запчастью",
+        "offered_time": "Ну заезжай. Я до 7 тут",
+        "asked_for_booking": "Ну заезжай. Я до 7 тут"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер называет его по имени и спрашивает об отце.",
+        "recap": "Договорённости нет: клиент сказал, что позвонит, когда соберётся.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Давно хрустит? С какой стороны?",
+        "why": "По одному описанию назвал узел и тут же спросил, давно ли хрустит и с какой стороны."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Ну заезжай. Я до 7 тут.",
+        "say": "Ленар, давай завтра к шести вечера или послезавтра к десяти утра. Запишу тебя, и граната к твоему приезду уже будет лежать."
+      }
+    }
+  },
+  "truth": {
+    "note": "По чистой речи он спросил «Когда сможешь?»: открытый вопрос о времени, уровень 1. В сохранённых строках на этом месте [unintelligible], и проверка получает 0 по реплике, где времени уже нет. Запись стоит ему 13,6 балла: 59,1 по речи против 45,5 по строкам.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": "na"
+    },
+    "score": 59.1
+  },
+  "why": {
+    "greeting": "1: назвал компанию одним словом, себя не назвал.",
+    "name_and_number": "Не применяется: клиента знают.",
+    "need_discovery": "2: машина, что с ней и обстоятельства, о которых спросил: давно ли и с какой стороны.",
+    "price_with_next_step": "1: круглая сумма «с запчастью», без слова о том, от чего она зависит.",
+    "offered_time": "0 по сохранённым строкам, 1 по речи: вопрос «Когда сможешь?» потерян под шумом, осталось «Ну заезжай. Я до 7 тут».",
+    "asked_for_booking": "1: шаг без даты: «заезжай».",
+    "recap": "Не применяется: договорённости нет.",
+    "objection": "Не применяется.",
+    "asr_quality": "poor: четырнадцать мест [unintelligible] и четыре пометки о неуверенности на восемнадцать строк. Татарские приветствия и прощания русские распознаватели не прочитали вовсе.",
+    "tatar": "Исәнмесез: здравствуйте; сәлам: привет; хәлләр ничек: как дела; әйбәт, рәхмәт: хорошо, спасибо; ярар: ладно; сау булыгыз, сау бул: до свидания. Тег other_language не ставится: разговор идёт по-русски.",
+    "score": "(1·1 + 2·2 + 2·1 + 3·0 + 3·1) / 2 = 5 из 11 весовых баллов = 45.5.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Клиент казанского сервиса Ленар, Lada Priora 2012, телефон +7 907 877-40-74; его отец Фарид давно обслуживается на Технической. Позвонил ли он снова, история не говорит."
+  ]
+}

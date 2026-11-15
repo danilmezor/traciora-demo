@@ -1,0 +1,111 @@
+{
+ "path": "parts/returns-and-cores.md",
+ "title": "Returns and cores",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "What can go back to a supplier, by when, and how cores work.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 241,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Return table: stocked unopened 30 days full credit; opened unfitted usually, 30 days; fitted electrical parts never; special orders less up to 20 %; fluids and cut or greasy parts never; defective parts under the supplier's warranty with the order number and fault on the tag.",
+  "Unused parts return to the cage the same day with the order number (ERP part_return, stock_movement).",
+  "Cores: reman alternators, starters, calipers, racks, compressors; old part back in the box, drained, same day; returned within 30 days; customer pays the core charge only if keeping the old part.",
+  "Supplier credits are checked at month end by the office.",
+  "Core charge amounts are not stated (planted gap; the catalogue has none)."
+ ],
+ "tables": [
+  {
+   "section": "Returns",
+   "columns": [
+    "Part",
+    "Goes back?",
+    "By when"
+   ],
+   "rows": [
+    {
+     "Part": "Stocked line, unopened, clean box",
+     "Goes back?": "Yes, full credit",
+     "By when": "30 days"
+    },
+    {
+     "Part": "Opened but not fitted",
+     "Goes back?": "Usually. Supplier's call",
+     "By when": "30 days"
+    },
+    {
+     "Part": "Electrical part once fitted (sensor, module, coil, alternator)",
+     "Goes back?": "No",
+     "By when": ""
+    },
+    {
+     "Part": "Special order",
+     "Goes back?": "Sometimes, less up to 20 %",
+     "By when": "Ask before ordering"
+    },
+    {
+     "Part": "Fluids, cut hoses, anything greasy",
+     "Goes back?": "No",
+     "By when": ""
+    },
+    {
+     "Part": "Defective (warranty)",
+     "Goes back?": "Yes, with our order number and the fault written on the tag",
+     "By when": "Supplier's warranty period"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Cores",
+   "item": "Old part in the new part's box, drained, same day."
+  },
+  {
+   "section": "Cores",
+   "item": "Core goes back within 30 days or we eat the charge."
+  },
+  {
+   "section": "Cores",
+   "item": "The customer is not billed a core charge when the old part stays with us. If the customer wants the old part, they pay the core charge. Say so before the job."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-11mo|date}}"
+ ],
+ "new_facts": [
+  "30-day return and core windows; 20 % restocking ceiling (same as policies/deposits.md)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: возврат запчастей supplier by supplier; electrical parts non-returnable as well; cores (обменный фонд) are rare except for racks and turbochargers."
+ ]
+}

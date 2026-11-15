@@ -1,0 +1,154 @@
+{
+  "format": "seed-conversation/1",
+  "id": "02-s7-web-approval-and-thanks",
+  "configuration": "en",
+  "number": 2,
+  "story": "S7",
+  "title": "The day of the visit: she approves the brakes and declines the shock absorbers in the website chat; her thanks the next morning",
+  "demonstrates": "A returning website visitor is the same contact, and the assistant remembers her name and number. It cannot see or change a repair order, so an approval is a hand-over, kind escalation. The junior operator confirms in four minutes with the price, the total and the pick-up time. The thanks next day reopens the chat she owns: the assistant drafts, she edits and resolves.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json en.S7",
+      "name": "Rachel Dunlap",
+      "first_time": false,
+      "phone": "(423) 555-0131"
+    },
+    "staff": [
+      {"slot": 6, "name": "Maya Torres"}
+    ],
+    "named_in_a_line": [
+      {"slot": 12, "name": "Luis Herrera", "role": "the mechanic on her car"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "The same customer, from work, after reading the estimate the shop e-mailed her.",
+    "vehicle": "2014 Honda CR-V EX AWD",
+    "wants": "To say yes to the front brakes and no to the rear shock absorbers.",
+    "what_happens": "The inspection found worn front pads and rotors and a seeping rear shock absorber. She writes her decision in a new website visit; the assistant hands it over; Maya confirms the work, the total and the time. She pays by card that afternoon. Next morning she writes her thanks; the chat reopens, Maya sends the edited draft and resolves.",
+    "facts": {
+      "found": "front pads at the wear indicator, front rotors scored; right rear shock absorber seeping",
+      "approved": "front brake pads and rotors",
+      "declined_and_deferred": "rear shock absorbers, pair: 339.28 at list (ledger s7.bill.declined_rear_shocks); a reminder is raised",
+      "paid": "606.45 by card (ledger s7.bill)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "$493.00", "amount": 493.0, "what": "front brake pads and rotors, class car, standard parts", "from": {"catalogue": "front_pads_rotors", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$606.45", "amount": 606.45, "what": "the bill with tax: inspection 49.95 + pads and rotors 493.00 + shop supplies 12.15, plus sales tax", "from": {"ledger": "s7.bill.with_tax"}}
+      ]
+    }
+  },
+  "days": {
+    "T-17d": {"anchor": "slot 6's 13th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -13}, "nominal": "Tue 2026-10-27", "what": "the visit: slot 6's next working day after day A"},
+    "T-16d": {"anchor": "1 calendar day after slot 6's 13th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -13, "plus_days": 1}, "nominal": "Wed 2026-10-28", "what": "the day after the visit"}
+  },
+  "floating_days": [
+    {"word": "today", "said_on": "T-17d", "day": "T-17d"},
+    {"word": "this afternoon", "said_on": "T-17d", "day": "T-17d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0002-4e00-8000-00000000e002",
+      "peer": {"id": "seedv1-browser-en-0001", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0001",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-17d", "at": "09:00", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-17d", "at": "09:00", "kind": "outside", "store": "erp", "what": "the visit: repair order opened by slot 6; inspection by slot 12"},
+        {"n": 2, "day": "T-17d", "at": "10:05", "kind": "outside", "store": "erp", "what": "the estimate is e-mailed to her from the shop system: front pads and rotors 493.00; rear shock absorbers, pair, 339.28"},
+        {"n": 3, "day": "T-17d", "at": "10:21:15", "kind": "message", "from": "customer", "text": "hi its Rachel Dunlap, yall have my crv today. got the estimate in my email"},
+        {"n": 4, "day": "T-17d", "at": "10:21:40", "kind": "message", "from": "customer", "text": "go ahead with the front brakes. not the shocks right now, thats a lot at once"},
+        {"n": 5, "day": "T-17d", "at": "10:22:04", "kind": "message", "from": "assistant", "text": "Hi Rachel! I can't see or change repair orders from here, so I'll pass this to the service desk at East Main right away: yes to the front brakes, no to the rear shock absorbers for now. Is (423) 555-0131 still the best number for you?"},
+        {"n": 6, "day": "T-17d", "at": "10:22:35", "kind": "message", "from": "customer", "text": "yes"},
+        {"n": 7, "day": "T-17d", "at": "10:22:58", "kind": "message", "from": "assistant", "text": "Thank you. It's with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 8, "day": "T-17d", "at": "10:22:59", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Rachel Dunlap", "phone": "(423) 555-0131", "site": "East Main", "context": "Rachel Dunlap, 2014 Honda CR-V, at East Main today. She has read the estimate and says: go ahead with the front brakes; not the rear shock absorbers for now, it is a lot at once. I can't see the repair order, so I confirmed nothing."}}, "note": {"from": "assistant", "private": true, "text": "Rachel Dunlap, 2014 Honda CR-V, at East Main today. She has read the estimate and says: go ahead with the front brakes; not the rear shock absorbers for now, it is a lot at once. I can't see the repair order, so I confirmed nothing."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "main", "owner": null, "due": "T-17d 17:30, the day's close"}},
+        {"n": 9, "day": "T-17d", "at": "10:26:18", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 10, "day": "T-17d", "at": "10:26:20", "kind": "message", "from": "staff", "slot": 6, "text": "Hi Rachel, it's Maya! Got it: we're doing the front pads and rotors today, $493.00, and I've marked the rear shocks as declined for now. That one is seeping, not leaking, so it's fine to wait a few weeks, and I'll put a reminder on your file. With the inspection your total comes to $606.45 with tax. Luis will have it ready by 3:00, and we're here until 5:30."},
+        {"n": 11, "day": "T-17d", "at": "10:26:21", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 12, "day": "T-17d", "at": "10:31:02", "kind": "message", "from": "customer", "text": "perfect thank you!"},
+        {"n": 13, "day": "T-17d", "at": "10:31:40", "kind": "draft", "id": "d1", "text": "You're welcome, Rachel! We'll see you this afternoon.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-17d", "at": "10:32:30", "became": 14}},
+        {"n": 14, "day": "T-17d", "at": "10:32:30", "kind": "message", "from": "staff", "slot": 6, "text": "You're welcome, Rachel! We'll see you this afternoon."},
+        {"n": 15, "day": "T-17d", "at": "10:32:50", "kind": "activity", "what": "label_added", "label": "approval", "by": 6},
+        {"n": 16, "day": "T-17d", "at": "10:33:05", "kind": "activity", "what": "resolved", "by": 6},
+        {"n": 17, "day": "T-17d", "at": "15:10", "kind": "outside", "store": "erp", "what": "repair order closed: front pads and rotors fitted; rear shock absorbers declined, deferred, reminder raised; paid by card, 606.45"},
+        {"n": 18, "day": "T-16d", "at": "08:47:20", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 19, "day": "T-16d", "at": "08:47:20", "kind": "message", "from": "customer", "text": "brakes feel so much better. thank you Maya!!"},
+        {"n": 20, "day": "T-16d", "at": "08:48:00", "kind": "draft", "id": "d2", "text": "You're welcome, Rachel! We're glad the brakes feel right. Thank you for coming in.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 6, "day": "T-16d", "at": "08:50:40", "became": 21}},
+        {"n": 21, "day": "T-16d", "at": "08:50:40", "kind": "message", "from": "staff", "slot": 6, "text": "So glad to hear it, Rachel! Thank you for coming in. I'll check in with you in a few weeks about that rear shock."},
+        {"n": 22, "day": "T-16d", "at": "08:51:00", "kind": "activity", "what": "resolved", "by": 6}
+      ],
+      "assignee_history": [
+        {"day": "T-17d", "at": "10:26:18", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["approval"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "contact_note": "One website visitor: the browser of the first chat, remembered for 30 days (ledger conv.web_visitor_memory_days). The contact holds no name and no phone; both are in the hand-off notes and on the cards."
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 3, "answered": 5, "by": "assistant", "wall_seconds": 24},
+          {"asked": 6, "answered": 7, "by": "assistant", "wall_seconds": 23},
+          {"asked": 8, "answered": 10, "by": 6, "working_minutes": 3.4, "wall_minutes": 3.4, "measured_from": "n 8", "reply": "first"},
+          {"asked": 12, "answered": 14, "by": 6, "working_minutes": 1.5, "wall_minutes": 1.5, "measured_from": "n 12", "reply": "later"},
+          {"asked": 19, "answered": 21, "by": 6, "working_minutes": 3.3, "wall_minutes": 3.3, "measured_from": "n 19", "reply": "first"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 10,
+          "working_minutes": 3.4,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 2, "manager": 3, "note": 1},
+        "resolutions": [
+          {"day": "T-17d", "at": "10:33:05", "by": 6},
+          {"day": "T-16d", "at": "08:51:00", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 6},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 6}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 6 has three replies, two resolutions of one chat (Stats counts distinct chats: one), one draft sent as it was and one edited"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "assistant first, handed over (escalation), slot 6",
+    "outcome": "front pads and rotors approved and paid, 606.45 with tax; rear shock absorbers declined and deferred",
+    "facts": [
+      "approved: front brake pads and rotors, 493.00",
+      "declined: rear shock absorbers (a pair), deferred with a reminder",
+      "paid by card: 606.45 with sales tax",
+      "a thank-you from her the next morning; the chat is resolved by slot 6",
+      "the same website contact as the first chat"
+    ],
+    "questions": ["S7.1", "S7.2"]
+  },
+  "why": [
+    "The assistant repeats her decision back in plain words and confirms nothing it cannot see.",
+    "Maya answers what was asked and then what she will be asked next: the total and the time, and why the shock absorber can wait.",
+    "The thanks is a new session of a resolved chat: reopened, drafted for, sent edited, resolved again."
+  ],
+  "new_facts": [
+    "The estimate reached her by e-mail from the shop system at about 10:05 on the day of the visit (rdunlap@inbox.example).",
+    "The car was ready by 3:00; the order was closed and paid at about 15:10.",
+    "The seeping shock absorber is the right rear one."
+  ]
+}

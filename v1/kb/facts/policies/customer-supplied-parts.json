@@ -1,0 +1,85 @@
+{
+ "path": "policies/customer-supplied-parts.md",
+ "title": "Customer-supplied parts",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Staff rules for fitting parts the customer brings.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "S15"
+ ],
+ "length_class": "short",
+ "words_en": 210,
+ "links_to": [
+  "customers/bringing-your-own-parts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Three things said before taking the keys: normal labour rate, no warranty, labour charged again if the part is wrong.",
+  "The part goes on the order as a hand-typed line with \"customer supplied\", price 0.00, no part number (the one legitimate hand-typed part line; ERP mess kind 7).",
+  "Order note \"Customer-supplied part: no warranty\" prints on the invoice.",
+  "Refused items as on the public page; exceptions only through slot 4 or 22.",
+  "Shop supplies apply.",
+  "No company account supplies its own parts."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Customer-supplied parts",
+   "item": "Say the three things before taking the keys: normal labour rate, no warranty on part or labour, and if the part is wrong the labour is charged again. Get a yes."
+  },
+  {
+   "section": "Customer-supplied parts",
+   "item": "On the order, type the part on its own line with \"customer supplied\" in the description, price $0.00. It will have no part number. That is the one case where a hand-typed part line is right."
+  },
+  {
+   "section": "Customer-supplied parts",
+   "item": "Write \"Customer-supplied part: no warranty\" in the order notes. It prints on the invoice."
+  },
+  {
+   "section": "Customer-supplied parts",
+   "item": "We do not fit customer-supplied brake hydraulic parts, airbag or seat-belt parts, or tires over six years old. No exceptions at the counter; send the customer to Greg or Dale if they want to argue."
+  },
+  {
+   "section": "Customer-supplied parts",
+   "item": "Shop supplies apply as on any hourly job."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Frequent in Russia: add the Russian wording of the note printed on the act. If a higher hour for customer parts is chosen it is a new catalogue row."
+ ]
+}

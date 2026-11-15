@@ -1,0 +1,148 @@
+{
+  "format": "seed-conversation/1",
+  "id": "18-people-p17-web-own-tires",
+  "configuration": "en",
+  "number": 18,
+  "story": "people",
+  "title": "Tires bought online: the assistant passes the question on, and the second advisor answers half of it now and half an hour later",
+  "demonstrates": "A question the public pages do not settle: the assistant gives the listed price, says what it cannot confirm and hands over as a question, not a booking. Slot 17 answers in 11 minutes ('gotcha', 'we'll get you taken care of'), names the Saturday rule of his own shop, books Friday, and the second question waits 57 minutes for a draft he then sends as it was. He labels it and does not resolve.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Hector Ortega",
+      "invented": true,
+      "first_time": true,
+      "note": "first visit; he has four tires he bought online",
+      "phone": "(423) 555-0452"
+    },
+    "staff": [
+      {"slot": 17, "name": "Josh Tipton"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Somebody with four tires in his trunk.",
+    "what_happens": "Do you mount tires bought elsewhere, how much, Saturday, and what about the old ones. The Bonny Oaks shop is closed on Saturdays; he comes Friday at 2.",
+    "facts": {
+      "booked": "the Friday of week T-20, 14:00, at east",
+      "hours": "east: Monday to Friday; main: also Saturday 8:00 to 1:00 (ledger site.open_days)",
+      "public_pages_used": ["price list: tires", "hours and locations"],
+      "prices": [
+        {"said": "$100.00", "amount": 100.0, "what": "dismount, mount and balance four tires, class car, menu price", "from": {"catalogue": "seasonal_tyre_change", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$100", "amount": 100.0, "what": "the same, as he writes it", "from": {"catalogue": "seasonal_tyre_change", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "$3.50", "what": "tire disposal, each (catalogue.json new_tyres_fitted, the fee's name)"}
+      ]
+    }
+  },
+  "days": {
+    "T-141d": {"anchor": "the Thursday of week T-20", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 20}, "nominal": "Thu 2026-06-25"},
+    "T-140d": {"anchor": "the Friday of week T-20", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 20}, "nominal": "Fri 2026-06-26", "what": "the booking"},
+    "T-134d": {"anchor": "7 calendar days after the Thursday of week T-20", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 20, "plus_days": 7}, "nominal": "Thu 2026-07-02", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "saturday", "said_on": "T-141d", "day": "the Saturday of week T-20"},
+    {"word": "Saturday", "said_on": "T-141d", "day": "any Saturday"},
+    {"word": "Saturdays", "said_on": "T-141d", "day": "any Saturday"},
+    {"word": "Friday at 2", "said_on": "T-141d", "day": "the Friday of week T-20"},
+    {"word": "friday at 2", "said_on": "T-141d", "day": "the Friday of week T-20"},
+    {"word": "Friday at 2:00", "said_on": "T-141d", "day": "the Friday of week T-20"},
+    {"word": "Monday to Friday", "said_on": "T-141d", "day": "every weekday"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "east",
+      "thread_key": "5eedc0de-0018-4e00-8000-00000000e012",
+      "peer": {"id": "seedv1-browser-en-0644", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0644",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-141d", "at": "13:02:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-141d", "at": "13:02:10", "kind": "message", "from": "customer", "text": "do yall put on tires if i bought them online"},
+        {"n": 2, "day": "T-141d", "at": "13:02:33", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. Our price list has mounting and balancing four tires at $100.00 for a car. I can't confirm from here how the shop handles tires bought elsewhere, so I'll pass your question to an advisor. What's your name and the best number for you, and which shop: East Main Street or Bonny Oaks Drive?"},
+        {"n": 3, "day": "T-141d", "at": "13:03:15", "kind": "message", "from": "customer", "text": "Hector Ortega 423 555 0452 bonny oaks"},
+        {"n": 4, "day": "T-141d", "at": "13:03:39", "kind": "message", "from": "assistant", "text": "Thank you, Hector. Your question is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 5, "day": "T-141d", "at": "13:03:40", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Hector Ortega", "phone": "(423) 555-0452", "site": "bonny oaks", "context": "Hector Ortega asks whether the shop mounts tires he bought online. I gave the price-list figure for mounting and balancing four, $100.00, and said I could not confirm how tires bought elsewhere are handled. Bonny Oaks Drive."}}, "note": {"from": "assistant", "private": true, "text": "Hector Ortega asks whether the shop mounts tires he bought online. I gave the price-list figure for mounting and balancing four, $100.00, and said I could not confirm how tires bought elsewhere are handled. Bonny Oaks Drive."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "east", "owner": null, "due": "T-141d 17:30, the day's close"}},
+        {"n": 6, "day": "T-141d", "at": "13:15:08", "kind": "activity", "what": "assigned", "derived": true, "to": 17, "by": 17, "how": "first reply"},
+        {"n": 7, "day": "T-141d", "at": "13:15:10", "kind": "message", "from": "staff", "slot": 17, "text": "Hey Hector, Josh at Bonny Oaks. Gotcha, yeah we mount tires you bring in, $100 for all four mounted and balanced. We'll get you taken care of, when you wanna come by?"},
+        {"n": 8, "day": "T-141d", "at": "13:15:11", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 17, "how": "a manager's reply takes it off"},
+        {"n": 9, "day": "T-141d", "at": "13:18:40", "kind": "message", "from": "customer", "text": "saturday?"},
+        {"n": 10, "day": "T-141d", "at": "13:18:55", "kind": "message", "from": "customer", "text": "and do yall charge to get rid of the old ones"},
+        {"n": 11, "day": "T-141d", "at": "13:19:35", "kind": "draft", "id": "d1", "text": "The Bonny Oaks shop is open Monday to Friday, 7:30 to 5:30, so Saturday won't work there; East Main is open Saturday from 8:00 to 1:00. For the old tires there is a disposal fee; I'll confirm the amount.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 17, "day": "T-141d", "at": "13:27:05", "because": "he sent his own text (n 12)"}},
+        {"n": 12, "day": "T-141d", "at": "13:27:05", "kind": "message", "from": "staff", "slot": 17, "text": "Were closed Saturdays out here, East Main does 8 to 1 though. I can do Friday at 2 here"},
+        {"n": 13, "day": "T-141d", "at": "13:27:30", "kind": "activity", "what": "label_added", "label": "tires", "by": 17},
+        {"n": 14, "day": "T-141d", "at": "13:29:30", "kind": "message", "from": "customer", "text": "friday at 2 works. what about the old tires"},
+        {"n": 15, "day": "T-141d", "at": "13:30:10", "kind": "draft", "id": "d2", "text": "Friday at 2:00 works. For the old tires, disposal is $3.50 a tire.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 17, "day": "T-141d", "at": "14:26:40", "became": 17}},
+        {"n": 16, "day": "T-141d", "at": "13:53", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 17, "day": "T-141d", "at": "14:26:40", "kind": "message", "from": "staff", "slot": 17, "text": "Friday at 2:00 works. For the old tires, disposal is $3.50 a tire.", "late": "a second question can wait an hour"},
+        {"n": 18, "day": "T-141d", "at": "14:26:42", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 19, "day": "T-134d", "at": "14:26", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-141d", "at": "13:15:08", "to": 17, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 17,
+        "labels": ["tires"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 23},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 23},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 7, "by": 17, "working_minutes": 11.5, "wall_minutes": 11.5, "measured_from": "n 5", "reply": "first"},
+          {"asked": 9, "answered": 12, "by": 17, "working_minutes": 8.4, "wall_minutes": 8.4, "measured_from": "n 9", "reply": "later"},
+          {"asked": 14, "answered": 17, "by": 17, "working_minutes": 57.2, "wall_minutes": 57.2, "measured_from": "n 14", "reply": "later", "late": "a second question can wait an hour"}
+        ],
+        "first_person_line": {
+          "by": 17,
+          "n": 7,
+          "working_minutes": 11.5,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 2, "manager": 3, "note": 1},
+        "resolutions": [
+          {"day": "T-134d", "at": "14:26", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 17},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 17}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 17: his first line 11.5 minutes after the hand-off, three replies, one draft discarded and one sent as it was, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "assistant first, handed over (escalation), slot 17",
+    "outcome": "mounting booked for Friday 14:00 at east; resolved by 7 silent days",
+    "facts": [
+      "the assistant gave the listed price, 100.00, and passed on what it could not confirm",
+      "the question about old tires was asked twice and answered 57 minutes after the second asking: 3.50 a tire"
+    ],
+    "questions": []
+  },
+  "why": [
+    "The hand-over is kind escalation: a question, not a booking. Its card is High and due the same day.",
+    "'We'll get you taken care of' comes before any time is offered.",
+    "The wait of 57 minutes is the hour his voice note names."
+  ],
+  "new_facts": [
+    "Hector Ortega, (423) 555-0452 (tier B): four customer-supplied tires mounted and balanced at east on the Friday of week T-20 at 14:00, 100.00 plus disposal at 3.50 a tire.",
+    "The shop mounts tires a customer brings (said by slot 17; the public pages do not say)."
+  ]
+}

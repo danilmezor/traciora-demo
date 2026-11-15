@@ -1,0 +1,106 @@
+{
+ "path": "management/comeback-review.md",
+ "title": "Comeback review",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "4",
+ "purpose": "Senior rank: how comebacks are counted and reviewed each month, and where the review is not happening.",
+ "serves": [
+  "S6",
+  "S14",
+  "visibility:senior",
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_en": 247,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Monthly review on the first Tuesday by slots 4 and 8 for main and east.",
+  "Comeback = warranty or goodwill order tied to an earlier order; a technician's rate over three months.",
+  "Company target under 2.5 % (ledger: comebacks 2.5 % of orders).",
+  "Ladder: under 3 % nothing; 3 to 4 % shown one by one; over 4 % two months running: foreman checks every brake, steering and suspension job for a month; still over: in writing with slot 4.",
+  "Comebacks are also read by part or brand (S6: the pad effect).",
+  "Charlotte Pike: reviewed by slot 22 in principle; no review has been seen; highest rate; mostly brakes (ledger: 3.7 % at west; slot 27 at 7 %).",
+  "By this ladder slot 11 (4.5 %) and slot 14 (6 %) at main are in the \"over 4 %\" row, and slot 27 at west would be if anyone ran the review there."
+ ],
+ "tables": [
+  {
+   "section": "What we do with it",
+   "columns": [
+    "A technician's rate",
+    "What happens"
+   ],
+   "rows": [
+    {
+     "A technician's rate": "Under 3 %",
+     "What happens": "Nothing. Tell him"
+    },
+    {
+     "A technician's rate": "3 to 4 %",
+     "What happens": "Randy shows him his comebacks one by one. No paper"
+    },
+    {
+     "A technician's rate": "Over 4 % two months running",
+     "What happens": "Every brake, steering and suspension job of his is checked by the foreman before it leaves, for a month"
+    },
+    {
+     "A technician's rate": "Still over 4 % after that",
+     "What happens": "Greg and the technician, with the list, in writing"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [
+  "The thresholds 3 % and 4 % and the three-month window. Reason: gives per-person comeback rates something to be compared with; board tasks \"look at this car again\" for slot 8 fit the foreman-check row."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same ladder; company row 3 % (ledger)."
+ ]
+}

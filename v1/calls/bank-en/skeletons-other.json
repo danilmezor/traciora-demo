@@ -1,0 +1,1741 @@
+{
+  "format": "bank-en/skeletons/1",
+  "about": "Supplier (8), wrong number (5), other (6) and outbound (10) skeletons. On supplier, wrong-number and other calls the other party is not a customer: no voice is applied to their lines (party != customer). Outbound calls are transcribed and never judged; they open with the other party's hello and the advisor's moves.outbound_open. Outbound reasons and shares follow DESIGN.md section 2: car ready 35 %, approval of found work 25 %, calling a missed caller back 18 %, supplier 12 %, confirming a booking 10 %.",
+  "supplier": [
+    {
+      "id": "SU01",
+      "title": "Delivery on the next run",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hey, this is {vendor_rep} with {vendor_name}. I've got your {part_name} — it's going out on the {delivery_window} run",
+            "{vendor_rep} at {vendor_name}. Just letting y'all know that {part_name} came in, it'll be on the {delivery_window} truck"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Good. That's for the {car_model} — {tech_name}'s waiting on it. Is it the one for the {car_year_short}, not the earlier one?",
+              "{a_ok}, thanks. Make sure it's on that run, I've got a customer waiting on it."
+            ],
+            "warm": [
+              "Oh, awesome, thank you! The guys have been waiting on that.",
+              "{a_ok}, perfect! Thanks for letting us know."
+            ],
+            "curt": [
+              "Alright.",
+              "Okay. Bring it."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "yep, I checked it against the VIN, it's the right one",
+            "it's the one you ordered, part number matches"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Appreciate you. If it's not on that truck, call me and I'll send somebody for it.",
+              "Thanks, {vendor_rep}. I'll tell {tech_name}."
+            ],
+            "warm": [
+              "Thank you so much!",
+              "Perfect, thanks!"
+            ],
+            "curt": [
+              "Alright. Thanks.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, talk to you later",
+            "you got it. Bye"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SU02",
+      "title": "The wrong part was sent: return and credit",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "this is {vendor_rep} at {vendor_name}, returning y'all's call about the {part_name}",
+            "hey, {vendor_rep} with {vendor_name}. I got a message you've got a return?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Yeah, you sent the wrong one — it's for the other engine. I need the right one on the first run, and a credit on order {order_ref_said}.",
+              "{a_ok}, the {part_name} that came doesn't fit, it's the wrong year. I'll have it boxed up for your driver."
+            ],
+            "warm": [
+              "Oh, hi! Yeah, the part didn't fit, the guys said it's the wrong one.",
+              "Yes! So the {part_name} was wrong, I think it's for a different year?"
+            ],
+            "curt": [
+              "Part's wrong.",
+              "Yeah. Sent the wrong one."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, I'll get the right one on the {delivery_window} run and the driver'll grab the old one",
+            "okay, give me the order number and I'll credit it"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{order_ref_said}. And please check it against the VIN this time.",
+              "It's order {order_ref_said}. Thanks — the customer's waiting on it."
+            ],
+            "warm": [
+              "Um, hang on — it's {order_ref_said}. Thank you!",
+              "Okay, it's {order_ref_said}!"
+            ],
+            "curt": [
+              "{order_ref_said}.",
+              "It's on the box."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "got it. Sorry about that",
+            "alright, I'll fix it. Bye now"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SU03",
+      "title": "A part is back-ordered",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hey, it's {vendor_rep} with {vendor_name}. Bad news on that {part_name}, it's back-ordered from the warehouse",
+            "{vendor_rep} at {vendor_name}. That {part_name} y'all ordered is on back order, they're saying {part_eta}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's no good, I've got the car on a lift. Can you get an aftermarket one any sooner, or check the other warehouse?",
+              "{a_ok}. Is there another brand you can get me today? I'll take it if the warranty's decent."
+            ],
+            "warm": [
+              "Oh no. Um — is there any way to get it sooner?",
+              "Ugh, okay. Do y'all have another one anywhere?"
+            ],
+            "curt": [
+              "Great. When?",
+              "How long?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I can get an aftermarket one on the {delivery_window} run",
+            "the other warehouse has one, I can have it {part_eta}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Do that. Put it on the same order and I'll let the customer know.",
+              "Send it. I'll call the customer now."
+            ],
+            "warm": [
+              "Okay, yes, let's do that! Thank you!",
+              "Perfect, send that one!"
+            ],
+            "curt": [
+              "Alright, send it.",
+              "Fine."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "will do",
+            "alright, it's done"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SU04",
+      "title": "A sales rep with a new line",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hi, my name's {vendor_rep}, I'm with {vendor_name}. We've got a new brake line we're bringing into the area, and I wanted to see who handles your parts buying",
+            "hey there, this is {vendor_rep} from {vendor_name}, I'm calling the shops on this side of town about our delivery program"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's not me — parts buying goes through our parts manager. If you email the office, it'll get to him.",
+              "{a_ok}, I'm not the one to talk to on that. Leave me your name and number and I'll pass it on."
+            ],
+            "warm": [
+              "Oh! Um, that's not me — let me take your number and I'll pass it on?",
+              "Oh, okay! I can give them a message for you!"
+            ],
+            "curt": [
+              "Not interested right now.",
+              "We got a supplier."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "sure, it's {vendor_rep}, and the number's on our website",
+            "no problem, I'll drop a card by sometime"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Alright, I've got it. Thanks for calling.",
+              "Okay, I'll pass it along."
+            ],
+            "warm": [
+              "Okay! I'll let them know!",
+              "Sounds good, thanks!"
+            ],
+            "curt": [
+              "Alright.",
+              "Yep."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SU05",
+      "title": "A question about the statement",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hi, this is {vendor_rep} in accounts at {vendor_name}. I'm calling about an invoice on your statement, {order_ref_said}",
+            "hey, {vendor_rep} from {vendor_name}, accounting. There's an invoice still open on y'all's account"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "The office handles the statements. I'll take a message for the bookkeeper — what's the invoice and the amount?",
+              "{a_ok}, that's not something I can pull up out front. Let me get your number and the invoice and the office will call you back."
+            ],
+            "warm": [
+              "Oh, um, I think that's the office! Can I take a message?",
+              "Oh, okay — I'll have to get somebody to call you back!"
+            ],
+            "curt": [
+              "That's the office.",
+              "Call the office on that."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "sure, it's invoice {order_ref_said}, they can call me back at the main number",
+            "it's {order_ref_said}, just have them call me"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Got it, {order_ref_said}. I'll put it on her desk today.",
+              "Alright, I've written it down."
+            ],
+            "warm": [
+              "Okay, got it! I'll let her know!",
+              "Perfect, I'll pass it on!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SU06",
+      "title": "Picking up the cores",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "4-8",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hey, it's {vendor_rep} with {vendor_name}, my driver's coming by on the {delivery_window} run, y'all got any cores for him?",
+            "{vendor_rep} at {vendor_name}. Got any returns or cores you want picked up?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Yeah, there's an alternator core and a starter core boxed by the back door, both with the tags on them.",
+              "{a_yes}, two cores and one return. They're on the shelf by the parts room, marked."
+            ],
+            "warm": [
+              "Um, I think so! Let me ask the guys — yeah, there's a couple!",
+              "Oh, yeah, I think there's some in the back!"
+            ],
+            "curt": [
+              "Couple. By the back door.",
+              "Yeah, a couple."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, he'll grab them",
+            "good deal, I'll tell him"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SU07",
+      "title": "A price change on a common part",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "6-8",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hey, {vendor_rep} with {vendor_name}. Heads up, our prices on {part_name} are going up at the first of the month",
+            "this is {vendor_rep} at {vendor_name}, just letting our shops know we've got a price change coming on filters and fluids"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. Send it to the office in writing, with the old and new prices, so the price list gets updated.",
+              "{a_ok}, thanks for the warning. Email the new list to the office and I'll make sure parts sees it."
+            ],
+            "warm": [
+              "Oh, okay! Can you email that over?",
+              "Okay, thanks for telling us!"
+            ],
+            "curt": [
+              "Alright.",
+              "Figures."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'll send it over today",
+            "yep, it's going out by email"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SU08",
+      "title": "Tires for a special order",
+      "type": "supplier",
+      "party": "supplier",
+      "outcome": "no_visit",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hey, it's {vendor_rep} at {vendor_name}. Those four tires for your customer came in, I can have them there on the {delivery_window} run",
+            "{vendor_rep} with {vendor_name}, I've got a set of four on your special order, when do you want them?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "The {delivery_window} run's perfect. The customer's booked {time_chosen}, so I need them here before then.",
+              "{a_ok}, send them on that run, and put the order number on the invoice so it matches."
+            ],
+            "warm": [
+              "Oh, great! Yes, send them!",
+              "Awesome, thank you!"
+            ],
+            "curt": [
+              "Send 'em.",
+              "Alright."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "you got it, they'll be on there",
+            "alright, they're on the truck"
+          ]
+        }
+      ]
+    }
+  ],
+  "wrong_number": [
+    {
+      "id": "WN01",
+      "title": "Looking for a tire store",
+      "type": "wrong_number",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "wrong_number",
+      "turns": "4",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "is this {asked_for}? I'm calling about my tires I ordered",
+            "yeah, I'm calling for {asked_for}, about some tires"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "No, this is Brennan Auto Care. You've got the wrong number, but we do sell tires if you need any.",
+              "{a_sorry}, you've got Brennan Auto Care. I don't have your order here."
+            ],
+            "warm": [
+              "Oh — no, sorry, this is Brennan Auto Care!",
+              "Oh, no, I think you have the wrong number! This is Brennan's."
+            ],
+            "curt": [
+              "Wrong number.",
+              "Nope. Brennan's."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh — sorry about that",
+            "oh, my bad. Bye"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WN02",
+      "title": "A doctor's office",
+      "type": "wrong_number",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "wrong_number",
+      "turns": "4",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "yes, I need to reschedule my appointment with the doctor",
+            "hi, I'm calling about my prescription"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I think you've got the wrong number — this is Brennan Auto Care, a repair shop.",
+              "{a_sorry}, this is an auto repair shop. You might want to check the number."
+            ],
+            "warm": [
+              "Oh! Um, this is actually Brennan Auto Care, the repair shop!",
+              "Oh no, I think you've got the wrong number, sorry!"
+            ],
+            "curt": [
+              "This is a garage.",
+              "Wrong number."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, goodness. I'm sorry, honey",
+            "oh! Sorry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WN03",
+      "title": "Asking for somebody who doesn't work here",
+      "type": "wrong_number",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "wrong_number",
+      "turns": "4-6",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "is {asked_for} there?",
+            "can I talk to {asked_for}? He said call this number"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Nobody here by that name. This is Brennan Auto Care — is it about a car?",
+              "{a_sorry}, there's no {asked_for} here. This is Brennan Auto Care on {shop_short}."
+            ],
+            "warm": [
+              "Hmm, I don't think anybody here's named that! This is Brennan Auto Care.",
+              "Oh, no, sorry, there's nobody by that name here!"
+            ],
+            "curt": [
+              "Nobody here by that name.",
+              "Don't know him."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "huh. He must've give me the wrong number",
+            "oh. Okay, never mind"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WN04",
+      "title": "Trying to order food",
+      "type": "wrong_number",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "wrong_number",
+      "turns": "4",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "yeah, I want to place an order for pickup",
+            "hey, are y'all still doing the lunch special?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I wish — this is Brennan Auto Care. You've got the wrong number.",
+              "{a_sorry}, this is a repair shop, not a restaurant."
+            ],
+            "warm": [
+              "Ha — no, sorry, this is an auto shop!",
+              "Oh, I wish! This is Brennan Auto Care."
+            ],
+            "curt": [
+              "This ain't a restaurant.",
+              "Wrong number, buddy."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, man. Sorry",
+            "my bad, wrong number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WN05",
+      "title": "Looking for the dealer's service department",
+      "type": "wrong_number",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "wrong_number",
+      "turns": "4-6",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "is this the service department? I'm calling about my recall",
+            "I need the dealership, I've got a recall notice"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "No, this is Brennan Auto Care, an independent shop. Recalls have to go through the dealer, I'm afraid.",
+              "{a_sorry}, you want the dealer for a recall — we can't do those here. This is Brennan Auto Care."
+            ],
+            "warm": [
+              "Oh, no, this is Brennan Auto Care! The dealer does recalls, I think.",
+              "Oh, sorry, we're not the dealer! You'd have to call them for that."
+            ],
+            "curt": [
+              "This ain't the dealer.",
+              "Dealer does recalls."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, okay, thank you",
+            "alright, sorry about that"
+          ]
+        }
+      ]
+    }
+  ],
+  "other": [
+    {
+      "id": "OT01",
+      "title": "Silence, then a hang-up",
+      "type": "other",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "other",
+      "turns": "2",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Hello? ... Hello, can you hear me?",
+              "Hello? I can't hear you — if you can hear me, call us back."
+            ],
+            "warm": [
+              "Hello? Hi? ... Hello?",
+              "Hello? I think you're breaking up!"
+            ],
+            "curt": [
+              "Hello? ...",
+              "Hello."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "OT02",
+      "title": "A robocall about a warranty",
+      "type": "other",
+      "party": "robot",
+      "outcome": "no_visit",
+      "no_visit_reason": "other",
+      "turns": "2-3",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "we've been trying to reach you about your vehicle's extended warranty. Press one to speak to a representative",
+            "this is an important message about your business listing. Please stay on the line"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Nope.",
+              "Not today."
+            ],
+            "warm": [
+              "Oh my gosh, again?",
+              "Ugh. No thank you."
+            ],
+            "curt": [
+              "<skip>",
+              "Mm."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "OT03",
+      "title": "A tech calls the desk from a road test",
+      "type": "other",
+      "party": "staff",
+      "outcome": "no_visit",
+      "no_visit_reason": "other",
+      "turns": "4-6",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hey, it's {tech_name}. I'm out on the road test with the {car_model} — the noise is still there, can you ask the customer if it did this before?",
+            "it's {tech_name}, I'm at the parts house, they don't have the {part_name}. Want me to wait or come back?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I'll call them now. Bring it back and put it up, and I'll have an answer when you pull in.",
+              "Come back. I'll call the other supplier and have it sent."
+            ],
+            "warm": [
+              "Oh, okay! I'll call them right now!",
+              "Ugh, okay — come on back, I'll figure it out!"
+            ],
+            "curt": [
+              "Come on back.",
+              "Alright."
+            ]
+          },
+          "pair": "prev"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, heading back",
+            "ten-four"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT04",
+      "title": "The service manager rings the desk",
+      "type": "other",
+      "party": "staff",
+      "outcome": "no_visit",
+      "no_visit_reason": "other",
+      "turns": "4-6",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "it's {manager_name}. What's the board look like this afternoon? I might need to send you a car",
+            "hey, {manager_name} here. Did the customer on the {car_model} call back yet?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "We've got room after lunch, one lift open. Send it.",
+              "Not yet. I left a message, and I'll try again before lunch."
+            ],
+            "warm": [
+              "Um, I think we have room! Let me look — yeah, after lunch.",
+              "Not yet! I'll call again."
+            ],
+            "curt": [
+              "We're full.",
+              "No."
+            ]
+          },
+          "pair": "prev"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, I'll let you know",
+            "okay, keep me posted"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT05",
+      "title": "A fax tone",
+      "type": "other",
+      "party": "machine",
+      "outcome": "no_visit",
+      "no_visit_reason": "other",
+      "turns": "1-2",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "[fax tone]",
+            "[a recorded tone]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT06",
+      "title": "A caller who says nothing useful and hangs up",
+      "type": "other",
+      "party": "caller",
+      "outcome": "no_visit",
+      "no_visit_reason": "other",
+      "turns": "2-4",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh — sorry, I meant to call somebody else",
+            "hello? Oh, never mind, sorry"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "No problem. Have a good one.",
+              "That's alright. Bye now."
+            ],
+            "warm": [
+              "Oh, no worries! Bye!",
+              "Ha, okay! Bye-bye!"
+            ],
+            "curt": [
+              "Alright.",
+              "Bye."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "outbound": [
+    {
+      "id": "OB01",
+      "title": "Car ready",
+      "type": "outbound",
+      "reason": "ready",
+      "party": "customer",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "hello, this is {customer_first}",
+            "yeah, hello?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Your {car_model}'s ready. We did the {job_said}, it road-tested fine, and it's {bill_total} out the door. We're here till {closing_time}.",
+              "{a_ok}, the {car_model}'s all done. {bill_total} with tax, and it's parked out front."
+            ],
+            "warm": [
+              "Your car's all done! It's ready whenever you are!",
+              "{a_yes}, so your {car_model} is ready! It came to {bill_total}."
+            ],
+            "curt": [
+              "Car's done. {bill_total}.",
+              "It's ready."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, good. I'll be there {time_chosen}",
+            "alright, I'll come get it {time_chosen}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Sounds good, I'll have the paperwork ready.",
+              "Okay, ask for me and I'll walk you through it."
+            ],
+            "warm": [
+              "Perfect! See you then!",
+              "Okay! See you soon!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB02",
+      "title": "Car ready: the spouse answers",
+      "type": "outbound",
+      "reason": "ready",
+      "party": "customer",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "yeah, hello"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "this is her husband, she's at work. Is it done?",
+            "that's my wife's car, she can't come to the phone. What's going on with it?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "It's ready. It's {bill_total} with tax, and we're here till {closing_time}. Whoever picks it up just needs to bring a license.",
+              "{a_ok}, it's all done — the {job_said} — and it's {bill_total} out the door."
+            ],
+            "warm": [
+              "It's done! It's ready whenever she can come!",
+              "Oh, hi! Yeah, it's all done, it's {bill_total}!"
+            ],
+            "curt": [
+              "It's done. {bill_total}.",
+              "Ready. {bill_total}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "alright, I'll tell her. One of us'll be by {time_chosen}",
+            "okay, I'll come get it {time_chosen}"
+          ]
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB03",
+      "title": "Car ready, and a recommendation for next time",
+      "type": "outbound",
+      "reason": "ready",
+      "party": "customer",
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "this is {customer_first}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Your {car_model}'s ready, {bill_total} out the door. One thing for next time: {found_reason}. It's not urgent, so I've put it on your paperwork with the price.",
+              "{a_ok}, it's done. While it was in, {tech_name} noticed {found_reason} — not today's problem, but I've written it down for you."
+            ],
+            "warm": [
+              "Your car's ready! Oh, and they said {found_reason}, but it's not urgent!",
+              "It's all done! They also noticed {found_reason}, just so you know!"
+            ],
+            "curt": [
+              "It's done. {bill_total}.",
+              "Ready. {bill_total}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay. How much would that be?",
+            "alright, thanks for telling me"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "The {found_job_said} is {found_price}. We can look at it again at your next oil change.",
+              "It's {found_price}, and it can wait a while."
+            ],
+            "warm": [
+              "Um, I think it's {found_price}!",
+              "It's {found_price}, I'll write it down for you!"
+            ],
+            "curt": [
+              "{found_price}.",
+              "Bout {found_price}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay. I'll be there {time_chosen}",
+            "alright, I'll come get it {time_chosen}"
+          ]
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB04",
+      "title": "Approval of found work: yes",
+      "type": "outbound",
+      "reason": "approval",
+      "party": "customer",
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "hello, this is {customer_first}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "While {tech_name} had it up, he found {found_reason}. I'd recommend the {found_job_said}; it's {found_price} plus tax, and if you okay it, it's done today. I can text you a picture.",
+              "{a_ok}, the {job_said} is underway, but {found_reason}. To do the {found_job_said} is {found_price}."
+            ],
+            "warm": [
+              "So, um, they found {found_reason} while they had it up. It's {found_price} to fix it — do you want us to go ahead?",
+              "{a_ok}, so they found something — {found_reason}. It'd be {found_price}."
+            ],
+            "curt": [
+              "They found {found_reason}. {found_price}. Want it done?",
+              "Need the {found_job_said}. {found_price}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "yeah, go ahead and do it",
+            "alright. If it needs it, do it"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. That puts you at {bill_total} total, ready {ready_time}, and I'll call you when it's done.",
+              "{a_yes}. It'll be ready {ready_time}, {bill_total} out the door."
+            ],
+            "warm": [
+              "Okay, perfect! It'll be ready {ready_time}!",
+              "Okay! I'll tell the guys."
+            ],
+            "curt": [
+              "Alright. {ready_time}.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB05",
+      "title": "Approval of found work: not today",
+      "type": "outbound",
+      "reason": "approval",
+      "party": "customer",
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "yeah?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{tech_name} found {found_reason} while it was up. The {found_job_said} would be {found_price}. It's not going to strand you, but I'd plan on it soon.",
+              "{a_ok}, a heads-up while it's apart: {found_reason}. It's {found_price} to take care of it."
+            ],
+            "warm": [
+              "So they found {found_reason}! It'd be {found_price} to fix — do you want us to?",
+              "{a_ok}, so — they noticed {found_reason}. It's {found_price}."
+            ],
+            "curt": [
+              "Found {found_reason}. {found_price}.",
+              "Need the {found_job_said}. {found_price}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "not today. Just finish what I brought it in for",
+            "I can't swing that right now"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "That's fine. I'll put it on your paperwork with the price so you have it. Yours will be ready {ready_time}.",
+              "Understood. Just the {job_said} then, ready {ready_time}."
+            ],
+            "warm": [
+              "Okay, totally fine! It'll be ready {ready_time}!",
+              "No problem! Just the {job_said} then."
+            ],
+            "curt": [
+              "Alright.",
+              "Okay. {ready_time}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB06",
+      "title": "Approval of found work: let me think",
+      "type": "outbound",
+      "reason": "approval",
+      "party": "customer",
+      "turns": "8-12",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "this is {customer_first}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "While it was on the lift, {tech_name} found {found_reason}. The {found_job_said} is {found_price}. I can hold the car till you decide, or finish what you brought it for.",
+              "{a_ok}, there's one more thing: {found_reason}. It's {found_price} if you want it done while it's here."
+            ],
+            "warm": [
+              "So they found {found_reason}! It's {found_price} — do you want to think about it?",
+              "{a_ok}, um, they found {found_reason}. It'd be {found_price}."
+            ],
+            "curt": [
+              "Found {found_reason}. {found_price}. Let me know.",
+              "{found_job_said}. {found_price}."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "let me talk to my husband and call you back",
+            "let me think about it a little"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Sure. If I haven't heard from you {callback_time}, I'll call you back so the car's not sitting.",
+              "{a_yes}. I'll wait to hear from you, and if I haven't heard {callback_time}, I'll finish the {job_said} so you have it tonight."
+            ],
+            "warm": [
+              "Okay, sure! Just call me back!",
+              "Of course! Call us when you know!"
+            ],
+            "curt": [
+              "Alright.",
+              "Let me know."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB07",
+      "title": "Calling a missed caller back: a booking comes of it",
+      "type": "outbound",
+      "reason": "callback",
+      "party": "customer",
+      "turns": "10-16",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "yeah, who's this?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "You called us a little while ago and we missed you — I'm sorry about that. What can I do for you?",
+              "{a_sorry}, we missed your call earlier. What did you need?"
+            ],
+            "warm": [
+              "You called earlier and I'm so sorry we missed it! What can I help with?",
+              "Hi! I saw we missed your call — what's going on?"
+            ],
+            "curt": [
+              "You called?",
+              "Got a missed call from this number."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. {price_statement}. I can get you in {time_1} or {time_2}.",
+              "{a_ok}, {price_statement}, and I've got {time_1} or {time_2}."
+            ],
+            "warm": [
+              "Okay! So {price_statement}. Could you come {time_1} or {time_2}?",
+              "{a_ok}, so it's {price}! I have {time_1} or {time_2}!"
+            ],
+            "curt": [
+              "{price}. Bring it {time_1}.",
+              "Bout {price}. {time_1}'s open."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "respond_offer",
+          "force": "pick_of_two"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "You're down. I'll check you in myself.",
+              "{a_yes}, you're on the book. Ask for me."
+            ],
+            "warm": [
+              "Perfect, you're all set!",
+              "Okay, got you down!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB08",
+      "title": "Calling a missed caller back: already sorted",
+      "type": "outbound",
+      "reason": "callback",
+      "party": "customer",
+      "turns": "4-6",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "yeah, hello"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "We had a missed call from this number this morning — I wanted to make sure you got taken care of.",
+              "{a_sorry} we missed you earlier. Is there something I can help with?"
+            ],
+            "warm": [
+              "You called earlier and we missed it — I'm so sorry! Did you still need something?",
+              "Hi! We missed your call, I just wanted to call you back!"
+            ],
+            "curt": [
+              "You called?",
+              "Missed call from this number."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "oh, yeah, I got it handled, I went somewhere else",
+            "no, I figured it out, thanks",
+            "oh — I was just gonna ask what time y'all close, it's fine"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. Sorry we missed you, and keep us in mind next time.",
+              "Alright. If you ever need us, ask for me."
+            ],
+            "warm": [
+              "Oh, okay! Well, call us anytime!",
+              "Okay! Sorry again!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "OB09",
+      "title": "Calling the parts house about a late part",
+      "type": "outbound",
+      "reason": "supplier",
+      "party": "supplier",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "{vendor_name}, this is {vendor_rep}",
+            "parts counter, {vendor_rep}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Hey, it's {advisor_first} at Brennan's on {shop_short}. I'm checking on the {part_name}, order {order_ref_said} — I've got a car on a lift waiting.",
+              "{advisor_first} at Brennan Auto Care. Where's my {part_name}? It was supposed to be on the morning run."
+            ],
+            "warm": [
+              "Hi! It's {advisor_first} at Brennan Auto Care — I was checking on a part? The {part_name}?",
+              "Hey, it's {advisor_first} from Brennan's! Do you know where our {part_name} is?"
+            ],
+            "curt": [
+              "It's {advisor_first} at Brennan's. That {part_name} coming?",
+              "Brennan's. Where's the {part_name}?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "let me look... it's on the {delivery_window} run",
+            "hang on — it missed the truck, it'll be on the {delivery_window} run"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. If it's not on that one, call me and I'll send somebody for it.",
+              "Alright, I'll tell the customer. Please make sure it's on there."
+            ],
+            "warm": [
+              "Okay, thank you so much!",
+              "Okay, perfect, thanks!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "will do",
+            "you got it"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OB10",
+      "title": "Confirming a booking",
+      "type": "outbound",
+      "reason": "confirm",
+      "party": "customer",
+      "turns": "6-10",
+      "beats": [
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "hello?",
+            "hi, this is {customer_first}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "outbound_open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "I've got you on the schedule {time_chosen}, here at {shop_address}, for the {job_said}. I just wanted to make sure that still works.",
+              "{a_ok}, just confirming {time_chosen} for the {car_model}, the {job_said}. Still good?"
+            ],
+            "warm": [
+              "I just wanted to make sure {time_chosen} still works for you!",
+              "Just calling to confirm you for {time_chosen}!"
+            ],
+            "curt": [
+              "You're down for {time_chosen}. Still coming?",
+              "{time_chosen}. Still good?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "yep, I'll be there",
+            "yeah, that still works",
+            "yes, we'll be there"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Great. If anything changes, call me and I'll move it.",
+              "Perfect. See you then — ask for me."
+            ],
+            "warm": [
+              "Perfect! See you then!",
+              "Okay, awesome!"
+            ],
+            "curt": [
+              "Alright.",
+              "Okay."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    }
+  ]
+}

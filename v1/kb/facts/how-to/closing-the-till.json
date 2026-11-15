@@ -1,0 +1,106 @@
+{
+ "path": "how-to/closing-the-till.md",
+ "title": "Closing the till",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "The company procedure for counting the cash drawer at the end of the day.",
+ "serves": [
+  "S2",
+  "challenge:near-duplicate-shop-pages",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 246,
+ "links_to": [
+  "shops/main/opening-and-closing.md",
+  "shops/east/opening-and-closing.md",
+  "shops/west/opening-and-closing.md",
+  "policies/voids-and-refunds.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Closed daily by the advisor on the closing shift at each shop (ERP cash_drawer_close: expected, counted, difference).",
+  "Floats: East Main 200, Bonny Oaks 150, Charlotte Pike 150 USD; the float is removed before the count is entered, so \"expected\" is the day's cash without the float.",
+  "Differences over 5.00 either way are written with a reason and reported to the shop manager, who tells slot 3 the same evening.",
+  "Slips, checks and count sheet go in the sealed, initialled bag; where the bag goes is on each shop's own page.",
+  "Charlotte Pike: two counts.",
+  "Nothing is paid out of the till; no void to make the till agree.",
+  "Slot 3 reviews differences at month end (how S2 was caught)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Closing the till",
+   "item": "Print the day's payment report from the shop system. It shows the cash the system expects."
+  },
+  {
+   "section": "Closing the till",
+   "item": "Count the drawer. Take out the float (East Main $200, Bonny Oaks $150, Charlotte Pike $150). What is left is the day's cash."
+  },
+  {
+   "section": "Closing the till",
+   "item": "Enter the counted amount. The system shows the difference."
+  },
+  {
+   "section": "Closing the till",
+   "item": "A difference of more than $5.00, over or short: write the reason on the count sheet if you know it, and \"not known\" if you do not. Tell your shop manager before you leave. He tells me the same evening."
+  },
+  {
+   "section": "Closing the till",
+   "item": "Card slips and checks go in the bag with the cash and the count sheet. Seal it. Write the amount and your initials on the bag."
+  },
+  {
+   "section": "Closing the till",
+   "item": "The bag goes where your shop's page says: East Main, Bonny Oaks, Charlotte Pike."
+  },
+  {
+   "section": "Closing the till",
+   "item": "At Charlotte Pike the drawer is counted by two people and both initial the sheet."
+  },
+  {
+   "section": "Closing the till",
+   "item": "Nothing is paid out of the till. No parts, no lunches, no change for the machine. Petty cash is separate and I hold it."
+  },
+  {
+   "section": "Closing the till",
+   "item": "An order is never voided to make the till agree. Voids and refunds."
+  },
+  {
+   "section": "Closing the till",
+   "item": "A small difference is ordinary. The same person short week after week is not, and I see it at month end."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "new_facts": [
+  "The 5.00 USD reporting threshold; the three floats in one sentence. The till counts in the ERP: \"short\" days of slot F1 exceed the threshold; ordinary days stay inside it."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian: закрытие смены на кассе (Z-отчёт), сверка наличных; floats in RUB; the threshold for example 300 RUB."
+ ]
+}

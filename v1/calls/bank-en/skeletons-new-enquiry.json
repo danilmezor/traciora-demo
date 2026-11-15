@@ -1,0 +1,2042 @@
+{
+  "format": "bank-en/skeletons/1",
+  "kind": "new_enquiry",
+  "about": "Fourteen skeletons of a first-time (or known-customer) enquiry. Each sets the order of the beats, who leads, where a doubt falls and how the call can end; the dealt levels pick the wording at every beat and the outcome follows the booking level (DESIGN.md section 2). A day's calls of one advisor never reuse a skeleton for the same job block.",
+  "skeletons": [
+    {
+      "id": "NE01",
+      "title": "Price first, the advisor leads, no doubt",
+      "leads": "advisor",
+      "doubt": null,
+      "fits": {
+        "price_asked": true,
+        "doubt": false,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "18-26",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ack",
+          "p": 0.4
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain",
+          "p": 0.5
+        },
+        {
+          "who": "C",
+          "role": "backchannel",
+          "p": 0.4
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "C",
+          "role": "ask_duration",
+          "group": "dur",
+          "p": 0.5,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "duration",
+          "group": "dur",
+          "p": 0.5,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE02",
+      "title": "Name taken first, a price doubt after the quote",
+      "leads": "advisor",
+      "doubt": "price",
+      "fits": {
+        "price_asked": true,
+        "doubt": true,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "22-30",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "doubt"
+        },
+        {
+          "who": "A",
+          "role": "probe"
+        },
+        {
+          "who": "C",
+          "role": "probe_reply"
+        },
+        {
+          "who": "A",
+          "role": "objection",
+          "check": "objection"
+        },
+        {
+          "who": "C",
+          "role": "after_objection"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE03",
+      "title": "A booking caller who never asks the price",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": false,
+        "doubt": false,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "16-24",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ack"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain",
+          "p": 0.6
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "C",
+          "role": "ask_duration",
+          "group": "dur",
+          "p": 0.6,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "duration",
+          "group": "dur",
+          "p": 0.6,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE04",
+      "title": "The caller names the time before the advisor can offer one",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": null,
+        "doubt": false,
+        "known": false,
+        "ot_na": true,
+        "booking": [
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "14-20",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "name_time_first"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "C",
+          "role": "ask_duration",
+          "group": "dur",
+          "p": 0.6,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "duration",
+          "group": "dur",
+          "p": 0.6,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "NE05",
+      "title": "Two times before the price",
+      "leads": "advisor",
+      "doubt": null,
+      "fits": {
+        "price_asked": true,
+        "doubt": false,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "20-28",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ack",
+          "p": 0.5
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "C",
+          "role": "ask_duration",
+          "group": "dur",
+          "p": 0.5,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "duration",
+          "group": "dur",
+          "p": 0.5,
+          "when": "booked"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE06",
+      "title": "The offered times do not suit: a doubt about time",
+      "leads": "advisor",
+      "doubt": "time",
+      "fits": {
+        "price_asked": null,
+        "doubt": true,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "20-28",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain",
+          "p": 0.4
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "doubt"
+        },
+        {
+          "who": "A",
+          "role": "probe"
+        },
+        {
+          "who": "C",
+          "role": "probe_reply"
+        },
+        {
+          "who": "A",
+          "role": "objection",
+          "check": "objection"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE07",
+      "title": "Name first, a doubt about trust after the explanation",
+      "leads": "advisor",
+      "doubt": "trust",
+      "fits": {
+        "price_asked": true,
+        "doubt": true,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "22-30",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ack",
+          "p": 0.5
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain"
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "doubt"
+        },
+        {
+          "who": "A",
+          "role": "probe"
+        },
+        {
+          "who": "C",
+          "role": "probe_reply"
+        },
+        {
+          "who": "A",
+          "role": "objection",
+          "check": "objection"
+        },
+        {
+          "who": "C",
+          "role": "after_objection"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE08",
+      "title": "'Let me think about it' after the offer",
+      "leads": "advisor",
+      "doubt": "think",
+      "fits": {
+        "price_asked": true,
+        "doubt": true,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "18-26",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "doubt"
+        },
+        {
+          "who": "A",
+          "role": "probe"
+        },
+        {
+          "who": "C",
+          "role": "probe_reply"
+        },
+        {
+          "who": "A",
+          "role": "objection",
+          "check": "objection"
+        },
+        {
+          "who": "C",
+          "role": "after_objection"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE09",
+      "title": "Can you do it, what hours, where are you: information only",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": null,
+        "doubt": false,
+        "known": false,
+        "ot_na": true,
+        "booking": [
+          0,
+          1
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "8-12",
+      "weight": 0.8,
+      "no_visit_reason": "info_only",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "do y'all work on {car_make}s? I've got a {car_model}",
+            "I was just wondering what time y'all close",
+            "where are y'all at, exactly? I've never been",
+            "do y'all do {job_said}, or do I need to go to the dealer for that?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "{a_yes}, we work on just about everything, the {car_model} included. Is it doing something?",
+              "We're open {shop_hours} on weekdays. Is it something you need looked at?",
+              "We're at {shop_address}. What are you needing done?",
+              "{a_yes}, we do that here, no need for the dealer. What's going on with it?"
+            ],
+            "warm": [
+              "Oh, yeah, we sure do! Is something going on with it?",
+              "We're open till {closing_time}! Did you need to bring it in?",
+              "{a_ok}, we're at {shop_address}! Are you needing to come in?",
+              "Oh, yeah, we do that all the time! Is it acting up?"
+            ],
+            "curt": [
+              "Yeah, we work on 'em.",
+              "Till {closing_time}.",
+              "{shop_address}.",
+              "Yeah, we do that."
+            ]
+          },
+          "pair": "prev"
+        },
+        {
+          "who": "C",
+          "role": "open",
+          "when": "price_asked"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "when": "not price_asked",
+          "say": [
+            "no, nothing yet, I just wanted to know for when it does",
+            "not right now, I was just checking before I need y'all",
+            "okay, good. I might be bringing it by"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price",
+          "when": "price_asked"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "no, I was just checking. I'll call when I'm ready",
+            "not right now, I just wanted to know",
+            "nah, that's all I needed"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        }
+      ]
+    },
+    {
+      "id": "NE10",
+      "title": "A known customer: no name to take, the car on file",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": null,
+        "doubt": null,
+        "known": true,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": [
+        "chatty",
+        "elderly",
+        "terse",
+        "anxious",
+        "angry",
+        "price_shopper"
+      ],
+      "turns": "16-24",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "it's {customer_first} {customer_last}, y'all have done my {car_model} before",
+            "this is {customer_first}, I was in a while back with the {car_model}",
+            "it's {customer_first} — {customer_first} {customer_last}, the {car_model}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recognise"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain",
+          "p": 0.6
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price",
+          "when": "price_asked and not doubt"
+        },
+        {
+          "who": "C",
+          "role": "doubt"
+        },
+        {
+          "who": "A",
+          "role": "probe"
+        },
+        {
+          "who": "C",
+          "role": "probe_reply"
+        },
+        {
+          "who": "A",
+          "role": "objection",
+          "check": "objection"
+        },
+        {
+          "who": "C",
+          "role": "after_objection"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE11",
+      "title": "Only an inspection can set the price",
+      "leads": "advisor",
+      "doubt": null,
+      "price_mode": "inspection",
+      "fits": {
+        "price_asked": true,
+        "doubt": false,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": [
+        "check_engine",
+        "electrical",
+        "front_end_noise",
+        "coolant_leak",
+        "brake_inspection",
+        "air_conditioning",
+        "front_brakes",
+        "rear_brakes",
+        "wheel_bearing",
+        "front_struts",
+        "battery",
+        "starter",
+        "alternator",
+        "water_pump",
+        "control_arm"
+      ],
+      "voice_filter": null,
+      "turns": "18-26",
+      "weight": 1.0,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "so you can't just tell me what it'll be?",
+            "okay, but what's it gonna cost to fix it?",
+            "so what's the damage gonna be, you think?",
+            "so what am I looking at, money-wise?",
+            "can you give me a ballpark on fixing it, though?",
+            "but what's it gonna run, roughly?",
+            "okay, but if it's what you think, what's that cost?",
+            "I just need a number to tell my husband",
+            "so I'm paying y'all to look, and then what?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE12",
+      "title": "Urgent: the car is not safe to drive",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": null,
+        "doubt": false,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          1,
+          2
+        ]
+      },
+      "job_filter": [
+        "front_brakes",
+        "rear_brakes",
+        "brake_inspection",
+        "check_engine",
+        "coolant_leak",
+        "water_pump",
+        "alternator",
+        "starter",
+        "battery",
+        "flat_repair",
+        "wheel_bearing",
+        "cv_axle"
+      ],
+      "voice_filter": [
+        "anxious",
+        "angry",
+        "terse",
+        "chatty",
+        "elderly"
+      ],
+      "turns": "18-26",
+      "weight": 0.5,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I'm sitting in a parking lot and — {need}. I don't know if I should drive it",
+            "I'm at work, and {need}, and I'm scared to drive it home",
+            "I just pulled off the road, {need}, and I don't know what to do",
+            "I'm stuck at the grocery store and {need}, and I don't want to make it worse",
+            "I'm at my kid's school, and {need}. Is it okay to drive?"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Okay. First thing — are you somewhere safe, off the road?",
+              "{a_ok}. Are you parked somewhere safe right now?",
+              "Alright — first, where are you? Somewhere you can sit for a minute?",
+              "{a_ok}. Is the car off and out of the road?"
+            ],
+            "warm": [
+              "Oh no! Okay — are you okay? Are you off the road?",
+              "Oh my gosh, okay. Are you somewhere safe?",
+              "Oh no, okay, okay. Where are you right now?",
+              "Okay — first thing, are you safe?"
+            ],
+            "curt": [
+              "Where's it at?",
+              "Is it off the road?",
+              "Where you at?",
+              "You off the road?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "yeah, I'm in a parking lot",
+            "I'm at work, it's parked",
+            "I'm on the shoulder, I got my flashers on",
+            "I'm pulled over at a gas station",
+            "yeah, I'm sitting in the lot, it's off"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "explain",
+          "p": 0.5
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "If it won't make it here, I'll send {tow_name} — we use them, and I'll tell you what it costs before they hook it.",
+              "Don't drive it far like that. If you need a tow, I'll call {tow_name} for you and tell you the price first.",
+              "If you're not sure it'll make it, don't push it — I'll call {tow_name} and get you a price on the tow first.",
+              "Drive it easy if you can. If not, we work with {tow_name}, and I'll set it up."
+            ],
+            "warm": [
+              "And if you can't drive it, we can get a tow out to you!",
+              "We can call a tow truck for you too, if you need it.",
+              "Oh — and if it won't drive, we can send a tow, okay?",
+              "If you don't feel safe driving it, we'll get it towed in!"
+            ],
+            "curt": [
+              "You might need a tow.",
+              "If it won't drive, get it towed.",
+              "If it don't drive, tow it.",
+              "Might want a wrecker."
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I think I can make it if I take it slow",
+            "I'll try to drive it, it's not far",
+            "it's driving, it's just scary",
+            "I can get it there, I think",
+            "it's close, I'll creep it over there",
+            "I'd rather drive it if I can",
+            "my brother can follow me over"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE13",
+      "title": "Two jobs in one call",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": true,
+        "doubt": false,
+        "known": false,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": null,
+      "voice_filter": null,
+      "turns": "20-28",
+      "weight": 0.6,
+      "second_job": true,
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "ask_car",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "give_car"
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "okay. And while it's there — {second_need}. Can y'all look at that too?",
+            "and oh, I forgot — {second_need}. What would that be on top?",
+            "okay, and the other thing is, {second_need}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Sure. {second_job_said} is {second_price}, and we can do both on the same visit.",
+              "{a_yes}. For {second_job_said} you're at {second_price}, and doing them together saves you a trip."
+            ],
+            "warm": [
+              "Oh, sure! That's {second_price} for {second_job_said}.",
+              "{a_yes}, we can do that too! {second_job_said} is {second_price}."
+            ],
+            "curt": [
+              "Yeah. {second_price}.",
+              "{second_job_said}, {second_price}."
+            ]
+          }
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    },
+    {
+      "id": "NE14",
+      "title": "A company vehicle: unit, purchase order, account rate",
+      "leads": "customer",
+      "doubt": null,
+      "fits": {
+        "price_asked": null,
+        "doubt": null,
+        "known": null,
+        "ot_na": false,
+        "booking": [
+          0,
+          1,
+          2
+        ]
+      },
+      "job_filter": [
+        "fleet_pm",
+        "front_brakes",
+        "rear_brakes",
+        "check_engine",
+        "battery",
+        "flat_repair",
+        "new_tires",
+        "alignment",
+        "air_conditioning",
+        "brake_inspection"
+      ],
+      "voice_filter": [
+        "driver",
+        "dispatcher"
+      ],
+      "turns": "18-26",
+      "weight": 0.35,
+      "vehicle_class": "van",
+      "beats": [
+        {
+          "who": "A",
+          "role": "greeting",
+          "check": "greeting"
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "I've got one of our vans that needs to come see y'all",
+            "I need to get one of the vans in",
+            "we've got one acting up",
+            "got a van that needs to come in",
+            "one of ours is due",
+            "I need to set one of the vans up with y'all",
+            "I've got a van for y'all",
+            "one of the vans needs to come in",
+            "we need to get one of ours looked at"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "recognise"
+        },
+        {
+          "who": "A",
+          "role": "ack",
+          "when": "not known"
+        },
+        {
+          "who": "C",
+          "role": "open"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "Which unit is that? Is there a number on the key tag, or can you read me the tag?",
+              "Let me pull up the account. Which van is it — unit number or the last of the tag?",
+              "Okay. What's the unit number, so I pull up the right one?",
+              "{a_ok}, which of your vans is it — the number on the tag?",
+              "Okay — the unit number, or the last four of the tag, and I'll pull it up.",
+              "Sure. Give me the unit number and I'll pull up its history.",
+              "{a_ok}. Which one — the number on the key tag works."
+            ],
+            "warm": [
+              "Okay! Which van is it?",
+              "Sure, which one is it — do you have the number?",
+              "Okay, which one's giving you trouble?",
+              "Sure! What's the van number?",
+              "Okay! Do you know the unit number?",
+              "Which van are we talking about?",
+              "Okay! Is there a number on the key?",
+              "Sure thing — which unit?"
+            ],
+            "curt": [
+              "Which one?",
+              "Which van?",
+              "Which one is it?",
+              "Number on it?",
+              "What's the number on it?"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "say": [
+            "it's {unit}, tag ending {plate_tail_said}",
+            "{unit}. The {car_model}",
+            "says {unit} on the key",
+            "{unit}. Tag ends in {plate_tail_said}",
+            "the {car_model}, {unit}",
+            "{unit}, I think — yeah, {unit}"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "ask_more",
+          "check": "need_discovery"
+        },
+        {
+          "who": "C",
+          "role": "answer"
+        },
+        {
+          "who": "A",
+          "role": "say",
+          "say": {
+            "exact": [
+              "And do you have a PO for this one, so it bills right?",
+              "Before I open the ticket — is there a PO number?",
+              "And is there a purchase order for it?",
+              "Do you need a PO on the ticket for this one?"
+            ],
+            "warm": [
+              "Oh — do y'all need a PO on it?",
+              "Do you have a PO number for me?",
+              "Oh, and is there a PO?",
+              "Do I need a PO for it?"
+            ],
+            "curt": [
+              "<skip>"
+            ]
+          }
+        },
+        {
+          "who": "C",
+          "role": "say",
+          "when": "prev_said",
+          "say": [
+            "yeah, it's {po_said}",
+            "hang on... {po_said}",
+            "I'll have to get that to you, I don't have it on me",
+            "it's on the sheet — {po_said}",
+            "yep, {po_said}",
+            "let me look... {po_said}, I think"
+          ]
+        },
+        {
+          "who": "A",
+          "role": "price",
+          "check": "price_with_next_step"
+        },
+        {
+          "who": "C",
+          "role": "react_price"
+        },
+        {
+          "who": "A",
+          "role": "offer_time",
+          "check": "offered_time"
+        },
+        {
+          "who": "C",
+          "role": "respond_offer"
+        },
+        {
+          "who": "A",
+          "role": "booking",
+          "check": "asked_for_booking"
+        },
+        {
+          "who": "C",
+          "role": "after_booking"
+        },
+        {
+          "who": "A",
+          "role": "ask_name",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_name",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "ask_number",
+          "group": "name"
+        },
+        {
+          "who": "C",
+          "role": "give_number",
+          "group": "name"
+        },
+        {
+          "who": "A",
+          "role": "confirm_number",
+          "check": "name_and_number"
+        },
+        {
+          "who": "A",
+          "role": "recap",
+          "check": "recap"
+        },
+        {
+          "who": "C",
+          "role": "thanks_bye"
+        },
+        {
+          "who": "A",
+          "role": "closing"
+        }
+      ]
+    }
+  ]
+}

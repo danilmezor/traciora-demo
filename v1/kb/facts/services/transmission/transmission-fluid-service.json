@@ -1,0 +1,166 @@
+{
+ "path": "services/transmission/transmission-fluid-service.md",
+ "title": "Transmission fluid service",
+ "first_revision_text": "en/_history/services/transmission/transmission-fluid-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Drain and fill against machine exchange, and gear oil; what customers call a flush.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "short",
+ "words_en": 258,
+ "links_to": [
+  "services/transmission/transmission-rebuild.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs atf_drain_fill (0.9 h, 4 qt), atf_exchange (1.3 h, 12 qt), gear_oil_service (0.7 h, 3 qt), standard totals.",
+  "\"Transmission flush\" may mean either of two jobs with near-identical names and a twofold price difference.",
+  "Drain and fill replaces about a third; exchange nearly all.",
+  "High-mileage never-serviced transmissions: drain and fill only, with the risk explained and written on the order.",
+  "No fluid service for a failing transmission.",
+  "CVT fluid is maker-specific."
+ ],
+ "tables": [
+  {
+   "section": "Transmission fluid service",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Fluid",
+    "Standard"
+   ],
+   "rows": [
+    {
+     "On the order": "Automatic transmission fluid drain & fill",
+     "Hours": "0.9",
+     "Fluid": "4 quarts",
+     "Standard": "$191.98"
+    },
+    {
+     "On the order": "Transmission fluid exchange (machine)",
+     "Hours": "1.3",
+     "Fluid": "12 quarts",
+     "Standard": "$386.94"
+    },
+    {
+     "On the order": "Differential / manual transmission gear oil service",
+     "Hours": "0.7",
+     "Fluid": "3 quarts",
+     "Standard": "$169.50"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Transmission fluid service",
+   "item": "Drain and fill changes about a third of the fluid. It is the gentle one, and what most makers describe. On a car that has had regular services, this."
+  },
+  {
+   "section": "Transmission fluid service",
+   "item": "Exchange replaces nearly all of it with the machine. For a car that tows or works hard and has been serviced before."
+  },
+  {
+   "section": "Transmission fluid service",
+   "item": "A transmission past 100,000 miles that has never had its fluid changed: drain and fill only, and tell the customer honestly that new fluid sometimes shows up wear that old fluid was hiding. We are not blamed for what we explained first. Write it on the order."
+  },
+  {
+   "section": "Transmission fluid service",
+   "item": "If it is already slipping or shifting hard, fluid will not fix it. Do not sell a service to a failing transmission. That is a road test and a conversation about a rebuild."
+  },
+  {
+   "section": "Transmission fluid service",
+   "item": "CVTs take their maker's own fluid and nothing else. If we do not have it, the job waits."
+  },
+  {
+   "section": "Transmission fluid service",
+   "item": "Gear oil: pickups and four-wheel drives, front and rear differentials and the transfer case are each a service."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "atf_drain_fill",
+   "what": "hours",
+   "class": "car",
+   "value": 0.9
+  },
+  {
+   "catalogue_key": "atf_drain_fill",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 191.98
+  },
+  {
+   "catalogue_key": "atf_exchange",
+   "what": "hours",
+   "class": "car",
+   "value": 1.3
+  },
+  {
+   "catalogue_key": "atf_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 386.94
+  },
+  {
+   "catalogue_key": "gear_oil_service",
+   "what": "hours",
+   "class": "car",
+   "value": 0.7
+  },
+  {
+   "catalogue_key": "gear_oil_service",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 169.5
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Частичная замена масла в АКПП» against «аппаратная (полная) замена»; the same pair and the same confusion."
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "path": "customers/tires.md",
+ "title": "Tires, flats and alignment",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "15",
+ "purpose": "Public page for tire questions with menu prices.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:fact-only-in-attachment"
+ ],
+ "length_class": "short",
+ "words_en": 172,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Flat repair = patch-plug, rebalance; sidewall or shoulder damage is not repairable.",
+  "New tyres range: economy to premium totals of new_tyres_fitted (215/55R17 reference), fees included.",
+  "Rotation advised every other oil change.",
+  "Most tyre sizes arrive next morning (vendor V5: daily run in Chattanooga)."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "tyre_repair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 31.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 519.4
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1001.44
+  },
+  {
+   "catalogue_key": "tyre_rotation",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 25.0
+  },
+  {
+   "catalogue_key": "wheel_balance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 60.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 119.95
+  },
+  {
+   "catalogue_key": "tpms_sensor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 128.86
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "\"Most sizes arrive the next morning\" is true for the Chattanooga shops; Charlotte Pike gets tyres twice a week (vendors.json V5). The public page does not say so: planted, see parts/suppliers.md."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "The Russian page is a different page: seasonal changeover twice a year, storage per season, studded tyres. Write it from the Russian catalogue (seasonal_tyre_change, seasonal_wheel_swap, tyre_storage)."
+ ]
+}

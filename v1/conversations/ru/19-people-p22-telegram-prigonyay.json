@@ -1,0 +1,127 @@
+{
+  "format": "seed-conversation/1",
+  "id": "19-people-p22-telegram-prigonyay",
+  "configuration": "ru",
+  "number": 19,
+  "story": "people",
+  "title": "Руководитель казанского сервиса и человек, которого он знает много лет",
+  "demonstrates": "Slot 22 in writing, at his warmest: half an hour to a first reply, a few words and a question about the customer's father. No time, no price, nothing written down; «принял». Both drafts written over. Nobody resolves it.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Марат Нуриев",
+      "invented": true,
+      "first_time": false,
+      "note": "давний клиент сервиса на Технической, ещё при прежнем владельце; пригоняет отцовскую «Ниву»"
+    },
+    "staff": [
+      {"slot": 22, "name": "Ринат Фаридович Галиев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Давний клиент, пишет руководителю по имени-отчеству.",
+    "vehicle": "отцовская «Нива» (год не назван)",
+    "what_happens": "«Нива» опять греется. «пригоняй, посмотрим. как отец, здоров?» Будет после обеда. «принял».",
+    "facts": {
+      "public_pages_used": [],
+      "note": "нигде ничего не записано: ни записи, ни времени; визит — без записи"
+    }
+  },
+  "days": {
+    "T-115d": {"anchor": "the Tuesday of week T-16", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 16}, "nominal": "Tue 2026-07-21"},
+    "T-108d": {"anchor": "7 calendar days after the Tuesday of week T-16", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 16, "plus_days": 7}, "nominal": "Tue 2026-07-28", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "после обеда", "said_on": "T-115d", "day": "T-115d", "form": "после + genitive"},
+    {"word": "сегодня или завтра", "said_on": "T-115d", "day": "the day or the next", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "4503599627373602",
+      "peer": {"id": "4503599627373602", "name": "Марат Нуриев"},
+      "contact": {
+        "identifier": "telegram_4503599627373602",
+        "name": "Марат Нуриев",
+        "phone": null,
+        "avatar": {"has": true, "kind": "view", "shows": "река, камыши и закат", "person_in_it": false}
+      },
+      "opened": {
+        "day": "T-115d",
+        "at": "09:12:20",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-115d", "at": "09:12:20", "kind": "message", "from": "customer", "text": "Ринат Фаридович, салам. это Марат Нуриев, отцова нива опять греется. можно пригоню?"},
+        {"n": 2, "day": "T-115d", "at": "09:13:05", "kind": "draft", "id": "d1", "text": "Здравствуйте, Марат! Да, пригоняйте, посмотрим. Если двигатель перегревается, лучше не откладывать. Когда вам удобно, сегодня или завтра?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 22, "day": "T-115d", "at": "09:45:30", "because": "he sent his own text (n 5)"}},
+        {"n": 3, "day": "T-115d", "at": "09:24", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-115d", "at": "09:45:28", "kind": "activity", "what": "assigned", "derived": true, "to": 22, "by": 22, "how": "first reply"},
+        {"n": 5, "day": "T-115d", "at": "09:45:30", "kind": "message", "from": "staff", "slot": 22, "text": "салам. пригоняй, посмотрим. как отец, здоров?"},
+        {"n": 6, "day": "T-115d", "at": "09:45:32", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-115d", "at": "09:49:10", "kind": "message", "from": "customer", "text": "здоров, спасибо, вам привет передаёт. после обеда буду"},
+        {"n": 8, "day": "T-115d", "at": "09:49:50", "kind": "draft", "id": "d2", "text": "Спасибо, взаимно! Ждём вас после обеда.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 22, "day": "T-115d", "at": "10:20:15", "because": "he sent his own text (n 10)"}},
+        {"n": 9, "day": "T-115d", "at": "10:13", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 10, "day": "T-115d", "at": "10:20:15", "kind": "message", "from": "staff", "slot": 22, "text": "принял"},
+        {"n": 11, "day": "T-115d", "at": "10:20:17", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-108d", "at": "10:20", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-115d", "at": "09:45:28", "to": 22, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 22,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 22, "working_minutes": 33.2},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 22, "working_minutes": 33.2, "wall_minutes": 33.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 10, "by": 22, "working_minutes": 31.1, "wall_minutes": 31.1, "measured_from": "n 7", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 22,
+          "n": 5,
+          "working_minutes": 33.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 2, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-108d", "at": "10:20", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 22},
+          {"draft": "d2", "outcome": "discarded", "manager": 22}
+        ],
+        "operator_credit": "slot 22: first answer 33.2 minutes (his ledger row is 35), two replies, two drafts discarded, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "slot 22; the assistant drafts",
+    "outcome": "приедет без записи после обеда; закрыт по 7 дням тишины",
+    "facts": ["slot 22 offered no time and no price and took no note of the car", "both drafts were discarded"],
+    "questions": []
+  },
+  "why": [
+    "За это его и любят постоянные клиенты, и это настоящее.",
+    "Рядом — файл 20: тот же человек, незнакомый клиент, на следующий день, семь слов.",
+    "Черновик спрашивал «сегодня или завтра»; он не спросил."
+  ],
+  "new_facts": [
+    "Марат Нуриев, давний клиент west, отцовская «Нива» (перегрев, повторно), визит без записи во вторник недели T-16.",
+    "Картинка контакта: река, камыши и закат."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+ "path": "customers/pre-purchase-inspection.md",
+ "title": "Проверка автомобиля перед покупкой",
+ "title_en": "Buying a used car: pre-purchase inspection",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/pre-purchase-inspection.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Public description of the pre-purchase inspection.",
+ "serves": [
+  "smoke"
+ ],
+ "length_class": "tiny",
+ "words_ru": 87,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Customers say «проверка перед покупкой»; «автоподбор» is a different service (a person who searches for the car) and is not offered.",
+  "Paint-thickness measurement is part of the Russian inspection."
+ ],
+ "new_facts": [
+  "Paint-thickness measurement over the body: the ordinary content of such an inspection in Russia."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "pre_purchase_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  3000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,627 @@
+{
+  "format": "seed-call/1",
+  "id": "en-33-people-manager-bring-it-by",
+  "configuration": "en",
+  "number": 33,
+  "story": "people",
+  "title": "The Nashville shop manager and a customer he has known for years: 'just bring it by'",
+  "purpose": "People, slot 22. Dale answers as if the phone had interrupted him and warms up the moment he knows the voice. He remembers the truck and what he said about it last time, asks the right two questions, and then offers no time and takes no booking: 'whenever, I'm here.'",
+  "cast": {
+    "advisor": {
+      "slot": 22,
+      "name": "Dale Hutchins",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Harlan Pewitt",
+      "invented": true,
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "the Thursday of week T-7 (rule R6; people, call 33)",
+    "nominal_offset": "T-50d",
+    "nominal_date": "2026-09-24",
+    "local_start": "09:20",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "301",
+    "ring_s": 13,
+    "caller_phone": "615-555-0126",
+    "repeat_caller": false,
+    "talk_s": 77,
+    "note": "Central time."
+  },
+  "scenario": {
+    "who_calls": "A customer of the Charlotte Pike shop from long before the purchase, Harlan Pewitt, on first-name terms with Dale.",
+    "vehicle": "2008 Chevrolet Silverado 1500",
+    "job": "a popping in the front end on turns; Dale takes it for the lower ball joint he pointed out before",
+    "wants": "to tell Dale it is doing it again",
+    "what_happens": "Dale asks after the customer's mother, asks whether it is the same side and whether the wheel has play, says it is the ball joint and tells him to bring it by. Asked when, he says whenever, this week or next.",
+    "facts": {
+      "note": "No price is asked for and none is given. catalogue.json ball_joint, class truck, standard: 311.64, for the order that may follow.",
+      "prices": [
+        {
+          "what": "the likely job; not said on the call",
+          "job": "ball_joint",
+          "vehicle_class": "truck",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 311.64
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday",
+      "day": "call+4d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Yeah, Brennan's."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.7,
+      "said": "Dale. It's Harlan."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 5.2,
+      "said": "Harlan! Well, how you doin', buddy? How's your mama gettin' along?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 11.2,
+      "said": "Oh, she's fair. She's still got that walker. Fussin' about it."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 16.8,
+      "said": "I bet she is. Tell her I asked about her."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 22.1,
+      "said": "I will. Listen, that old Chevy's poppin' again. Front end. When I turn."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 28.8,
+      "said": "Same side as before? Driver's side?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 32.6,
+      "said": "Yeah. Driver's side. Does it backin' out, mostly."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 37.6,
+      "said": "Mm. That's that ball joint I told you about last time. Has it got any play in the wheel? Wanderin' on you?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 46.6,
+      "said": "Some. It ain't bad yet."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 50.2,
+      "said": "It will be. Just bring it by."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 53.0,
+      "said": "Yeah.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 54.4,
+      "said": "When you want it?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 57.1,
+      "said": "Whenever. I'm here."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 60.0,
+      "said": "This week?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 62.6,
+      "said": "This week, next week. Just bring it by, we'll get it up in the air."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 70.0,
+      "said": "Alright then. I'll get it over there."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 73.4,
+      "said": "Alright, Harlan."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 75.0,
+      "said": "See ya, Dale."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.37,
+    "restoration_tier": "medium",
+    "noise": "the advisor's voice is low and close to the handset; a radio and an air ratchet behind him",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          3,
+          4,
+          6,
+          9,
+          17,
+          18
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word replaced by a common word that sounds like it",
+        "script_turn": 9,
+        "said": "ball joint",
+        "stored": "bald joint"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 4,
+        "said": "She's still got that walker.",
+        "stored": "{?likely: She's still got that walker}"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the manager's reply is replaced by a plausible wrong phrase",
+        "script_turn": 5,
+        "said": "Tell her I asked about her.",
+        "stored": "Tell her I asked a batter."
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 8,
+        "said": "Does it backin' out, mostly.",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span is marked",
+        "script_turn": 16,
+        "said": "we'll get it up in the air",
+        "stored": "{?likely: we'll get it up in the air}"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          12
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 3,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 0,
+        "as_digits": 0,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 1,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 4,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 135,
+    "stored_words": 132,
+    "strict_word_difference": 0.17
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 150,
+    "duration_s": 77.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, Brennan's.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Dale. It's Harlan.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Harlan! Well, how you doing, buddy? How's your mama getting along?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, she's fair. {?likely: She's still got that walker} Fussing about it.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I bet she is. Tell her I asked a batter.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I will. Listen, that old Chevy's popping again. Front end. When I turn.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Same side as before? Driver's side?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. Driver's side.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "That's that bald joint I told you about last time. Has it got any play in the wheel? Wandering on you?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Some. It ain't bad yet.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It will be. Just bring it by.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "When you want it?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Whenever. I'm here.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "This week?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "This week, next week. Just bring it by, {?likely: we'll get it up in the air}.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right then. I'll get it over there.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right, Harlan.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "See ya, Dale.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Yeah, Brennan's.",
+        "level": 1,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Same side as before? Driver's side?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "offered_time",
+        "quote": "Whenever. I'm here.",
+        "level": 0,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "It will be. Just bring it by.",
+        "level": 1,
+        "segment": 10
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager greets him by name and asks after his mother."
+      },
+      {
+        "key": "price_with_next_step",
+        "why": "The customer did not ask about price."
+      },
+      {
+        "key": "recap",
+        "why": "There was no agreement with a day or a time: the customer said he would get it over there."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [],
+    "strength": {
+      "quote": "Same side as before? Driver's side?",
+      "why": "He remembered the truck and the side, so one question placed the fault.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Whenever. I'm here.",
+      "say": "Bring it tomorrow at 7:30 or Monday at 7:30 and I'll have Gary put it up first thing. A ball joint with play in it isn't one to leave to 'whenever'."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 44.4,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 10
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "price_with_next_step",
+        "recap",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [],
+      "score": 44.4,
+      "applicable": 4,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Yeah, Brennan's",
+        "need_discovery": "Same side as before? Driver's side?",
+        "offered_time": "Whenever. I'm here",
+        "asked_for_booking": "It will be. Just bring it by"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager greets him by name and asks after his mother.",
+        "price_with_next_step": "The customer did not ask about price.",
+        "recap": "There was no agreement with a day or a time: the customer said he would get it over there.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Same side as before? Driver's side?",
+        "why": "He remembered the truck and the side, so one question placed the fault."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Whenever. I'm here.",
+        "say": "Bring it tomorrow at 7:30 or Monday at 7:30 and I'll have Gary put it up first thing. A ball joint with play in it isn't one to leave to 'whenever'."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Three spans were hit by noise, all in the small talk and the goodbye; the quality is ok.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": "na",
+      "offered_time": 0,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": "na"
+    },
+    "score": 44.4,
+    "score_exact": 44.4444,
+    "outcome": "customer_will_call",
+    "tags": []
+  },
+  "why": {
+    "greeting": "1: the business only, as a nickname.",
+    "name_and_number": "N/A: he knows the caller.",
+    "need_discovery": "2: the truck he knows, the job, and what he asked for: the same side as before, some play in the wheel.",
+    "price_with_next_step": "N/A: no price is asked for.",
+    "offered_time": "0: asked 'when you want it', he says 'whenever'.",
+    "asked_for_booking": "1: a step with no date: 'just bring it by'.",
+    "recap": "N/A: nothing with a day was agreed. A judge that reads 'I'll get it over there' as an agreement scores the summary 0, and the call 40.0.",
+    "objection": "N/A: no doubt.",
+    "outcome": "customer_will_call: the next move is the customer's and has no day.",
+    "score": "(1·1 + 2·2 + 3·0 + 3·1) / 2 = 4 of 9 weight points = 44.4. Exactly 44.44; the product rounds a score to one decimal.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "A long-standing customer of west, Harlan Pewitt, 615-555-0126, 2008 Chevrolet Silverado 1500, with a history at the shop (a lower ball joint was pointed out at an earlier visit). No booking is made on this call."
+  ]
+}

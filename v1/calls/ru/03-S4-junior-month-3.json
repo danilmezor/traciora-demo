@@ -1,0 +1,775 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-03-junior-month-3",
+  "configuration": "ru",
+  "number": 3,
+  "story": "S4",
+  "title": "The junior operator in her third month: the caller names the time himself; no name taken, no summary",
+  "purpose": "Story S4, period P3. A man on a bad mobile line books an oil change for the next morning by naming the hour himself. Alina takes the booking and says who receives the car, but asks no name and no number and sums nothing up.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Ринат Хайруллин",
+      "invented": true,
+      "first_time": true,
+      "note": "never named on the call; the name is the order's, taken at the desk next morning"
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P3 (rule R6)",
+    "nominal_offset": "T-100d",
+    "nominal_date": "2026-08-05",
+    "local_start": "17:40",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 9,
+    "caller_phone": "+7 907 318-62-88",
+    "repeat_caller": false,
+    "talk_s": 95
+  },
+  "scenario": {
+    "who_calls": "A first-time caller driving with the phone on speaker; the line breaks up.",
+    "vehicle": "Renault Duster, 2018, 2.0, about 96,000 km",
+    "job": "engine oil and oil filter, the shop's oil",
+    "wants": "to come tomorrow at ten for an oil change",
+    "what_happens": "He names the day and the hour before she can offer one. She asks the car, whose oil and the mileage, gives one figure when asked, and books him with her own name. No name, no number, no summary.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "oil_service_suv_rub": 8600,
+      "note": "catalogue.json oil_service, class suv, standard parts: labour 1 330, oil 4 l x 1 570, filter 990.",
+      "prices": [
+        {
+          "job": "oil_service",
+          "name": "Замена масла в двигателе и масляного фильтра",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 8579.5,
+          "labour_hour_rub": 1900,
+          "said": "восемь шестьсот",
+          "said_rub": 8600
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, здравствуйте."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.4,
+      "said": "Алло! Алло, девушка, слышно меня?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 6.1,
+      "said": "Да, слышу вас, говорите."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 8.8,
+      "said": "Я за рулём просто, тут связь... Мне масло поменять надо. Я завтра к десяти подъеду, можно?"
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 16.3,
+      "said": "Да-да.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 18.0,
+      "said": "Завтра к десяти... Э-э... да, можно, утро свободно. А машина какая?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 24.6,
+      "said": "Дастер. Рено Дастер, восемнадцатого года, двухлитровый."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 29.1,
+      "said": "Дастер, два литра. Масло наше будет или своё привезёте?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 34.5,
+      "said": "Ваше, ваше. Я не разбираюсь, чего там лить."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 40.0,
+      "said": "Хорошо, подберём. А пробег какой сейчас, примерно?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 44.2,
+      "said": "Девяносто шесть. Последний раз на восьмидесяти пяти менял, у дилера ещё."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 49.1,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 51.3,
+      "said": "Ага, поняла, как раз пора."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 55.0,
+      "said": "А сколько это стоить будет?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 58.7,
+      "said": "Восемь шестьсот, с маслом и фильтром."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 62.5,
+      "said": "Сколько? Алло?"
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 64.6,
+      "said": "Восемь тысяч шестьсот. С маслом и с фильтром."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 69.8,
+      "said": "А, понял. Нормально. Долго по времени?"
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 74.3,
+      "said": "Минут сорок, можете у нас подождать."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 78.6,
+      "said": "Всё, добро. Тогда завтра в десять я у вас."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 83.8,
+      "said": "Хорошо, записала. Подойдёте на приёмку — спросите Алину, это я."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 89.7,
+      "said": "Понял. Спасибо!"
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 91.3,
+      "said": "Всё, ждём вас. До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.41,
+    "restoration_tier": "medium",
+    "noise": "the caller is driving with the phone on speaker; the mobile line drops syllables and whole word ends",
+    "applied": [
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          4,
+          6,
+          20
+        ],
+        "said": [
+          "к десяти",
+          "к десяти",
+          "в десять"
+        ],
+        "stored": [
+          "к 10",
+          "к 10",
+          "в 10"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an unfinished phrase restored as a guess",
+        "script_turn": 4,
+        "said": "тут связь... ",
+        "stored": "тут {?likely: связь плохая}. ",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the mileage marked as uncertain, the tail gone",
+        "script_turn": 11,
+        "said": "на восьмидесяти пяти менял, у дилера ещё",
+        "stored": "на {?likely: 85} менял",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the last word gone",
+        "script_turn": 22,
+        "said": "Понял. Спасибо!",
+        "stored": "Понял.",
+        "error": false
+      },
+      {
+        "rule": "R10",
+        "what": "a bad mobile line: the sentence end clipped",
+        "script_turns": [
+          9,
+          18
+        ],
+        "said": [
+          "Я не разбираюсь, чего там лить.",
+          "Долго по времени?"
+        ],
+        "stored": [
+          "Я не раз…",
+          "Долго по врем…"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turn": 2,
+        "said": "Алло! Алло, девушка",
+        "stored": "Алло, девушка",
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          12
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          5
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          7
+        ],
+        "said": [
+          "Дастер",
+          "Рено Дастер"
+        ],
+        "stored": [
+          "Duster",
+          "Renault Duster"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          11,
+          15,
+          17,
+          19
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          6,
+          23
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 3,
+        "latin": 2
+      },
+      "money_time": {
+        "mentions": 7,
+        "as_digits": 7,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 5,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": true,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 2
+    },
+    "script_words": 145,
+    "stored_words": 134,
+    "strict_word_difference": 0.221
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 155,
+    "duration_s": 95.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алло, девушка, слышно меня?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, слышу вас, говорите.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я за рулём просто, тут {?likely: связь плохая}. Мне масло поменять надо. Я завтра к 10 подъеду, можно?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да. Завтра к 10, да, можно, утро свободно. А машина какая?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Duster. Renault Duster, восемнадцатого года, двухлитровый.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Дастер, два литра. Масло наше будет или своё привезёте?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ваше, ваше. Я не раз…",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, подберём. А пробег какой сейчас, примерно?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "96. Последний раз на {?likely: 85} менял.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага, поняла, как раз пора.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А сколько это стоить будет?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "8600, с маслом и фильтром.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сколько? Алло?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "8600. С маслом и с фильтром.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А, понял. Нормально. Долго по врем…",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Минут 40, можете у нас подождать.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, добро. Тогда завтра в 10 я у вас.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понял.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, ждём вас. До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я.",
+        "level": 0,
+        "segment": 18
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А пробег какой сейчас, примерно?",
+        "level": 2,
+        "segment": 8
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "8600, с маслом и фильтром.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я.",
+        "level": 2,
+        "segment": 18
+      },
+      {
+        "key": "recap",
+        "quote": "Всё, ждём вас. До свидания.",
+        "level": 0,
+        "segment": 20
+      }
+    ],
+    "na": [
+      {
+        "key": "offered_time",
+        "why": "Клиент сам назвал день и час раньше, чем менеджер успел что-то предложить."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Масло наше будет или своё привезёте?",
+      "why": "Сразу выяснила, чьё будет масло: от этого зависит и цена, и что готовить к приезду.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я.",
+      "say": "Записала вас на завтра на десять. Как вас зовут? И номер для связи этот, с которого звоните: девятьсот семь, триста восемнадцать, шестьдесят два, восемьдесят восемь?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 63.6,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 18
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 8
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 18
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 20
+        }
+      ],
+      "na": [
+        "offered_time",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 63.6,
+      "applicable": 6,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, здравствуйте",
+        "name_and_number": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я",
+        "need_discovery": "А пробег какой сейчас, примерно?",
+        "price_with_next_step": "8600, с маслом и фильтром",
+        "asked_for_booking": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я",
+        "recap": "Всё, ждём вас. До свидания"
+      },
+      "na": {
+        "offered_time": "Клиент сам назвал день и час раньше, чем менеджер успел что-то предложить.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Масло наше будет или своё привезёте?",
+        "why": "Сразу выяснила, чьё будет масло: от этого зависит и цена, и что готовить к приезду."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "Хорошо, записала. Подойдёте на приёмку, спросите Алину, это я.",
+        "say": "Записала вас на завтра на десять. Как вас зовут? И номер для связи этот, с которого звоните: девятьсот семь, триста восемнадцать, шестьдесят два, восемьдесят восемь?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 0,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": "na",
+      "asked_for_booking": 2,
+      "recap": 0,
+      "objection": "na"
+    },
+    "score": 63.6
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "0: ни имени, ни номера не спросила. Запись осталась на «мужчина на Дастере, завтра к десяти».",
+    "need_discovery": "2: машина, работа и два обстоятельства, о которых спросила сама: чьё масло и какой пробег.",
+    "price_with_next_step": "1: одна сумма без слова о том, от чего она зависит. Время к этой минуте уже названо клиентом.",
+    "offered_time": "Не применяется: клиент назвал время сам.",
+    "asked_for_booking": "2: запись принята, сказано, к кому подойти; день и час те, что назвал клиент репликой раньше.",
+    "recap": "0: перед прощанием ни времени, ни адреса, ни работы, только «ждём вас».",
+    "objection": "Не применяется: сомнений не было.",
+    "bad_line": "Обрывы и пометки о неуверенности стоят на репликах клиента; реплики менеджера, на которые опираются проверки, целы, поэтому asr_quality ok.",
+    "score": "(1·2 + 2·0 + 2·2 + 2·1 + 3·2 + 1·0) / 2 = 7 из 11 весовых баллов = 63.6.",
+    "carried_by": [
+      "asked_for_booking",
+      "name_and_number"
+    ]
+  },
+  "new_facts": [
+    "Новый клиент на Renault Duster 2018, телефон +7 907 318-62-88. Имя на звонке не спрошено; в наряде на следующий день он Ринат Хайруллин. Запись на следующий день, 10:00: замена масла и фильтра, 8 579,50 по прайсу."
+  ]
+}

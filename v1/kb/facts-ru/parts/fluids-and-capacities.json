@@ -1,0 +1,83 @@
+{
+ "path": "parts/fluids-and-capacities.md",
+ "title": "Жидкости и заправочные объёмы",
+ "title_en": "Fluids and capacities",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/fluids-and-capacities.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "Pointer page: what fluid types we use and where the per-vehicle quantities are (only in the attached sheet).",
+ "serves": [
+  "challenge:fact-only-in-attachment",
+  "challenge:unreadable-binary",
+  "operate:contradiction"
+ ],
+ "length_class": "short",
+ "words_ru": 153,
+ "links_to": [
+  "parts/fleet-fluid-sheet.xlsx",
+  "parts/fleet-fluid-sheet.pdf"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Litres, rounded up to the half litre (the catalogue bills 4 l on the Solaris oil service and 6 l on the fleet PM).",
+  "The sheet covers the Russian fleets' models (ГАЗель Next, Largus, Granta, Solaris and others): see ru/_binaries.md."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Жидкости и заправочные объёмы",
+   "item": "Заправочные объёмы (таблица). Рабочий файл. Обновляю его."
+  },
+  {
+   "section": "Жидкости и заправочные объёмы",
+   "item": "Заправочные объёмы (распечатка). Та же таблица, распечатана для постов."
+  },
+  {
+   "section": "Жидкости и заправочные объёмы",
+   "item": "В наряд идут литры, которые залили, с округлением вверх до полулитра. Не цифра из таблицы, если мотор взял меньше."
+  },
+  {
+   "section": "Жидкости и заправочные объёмы",
+   "item": "Масло для вариатора — это не ATF. У Nissan и Renault оно одно, у Toyota другое, у Mitsubishi третье. Нет на полке — не льём ничего."
+  },
+  {
+   "section": "Жидкости и заправочные объёмы",
+   "item": "Антифриз доливаем того же типа и того же цвета. Не смешиваем."
+  },
+  {
+   "section": "Жидкости и заправочные объёмы",
+   "item": "Тормозная жидкость — только из запечатанной тары."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

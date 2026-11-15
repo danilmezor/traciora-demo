@@ -1,0 +1,793 @@
+{
+  "format": "seed-call/1",
+  "id": "en-30-people-mechanic-11-roadside",
+  "configuration": "en",
+  "number": 30,
+  "story": "people",
+  "title": "A customer about slot 11's rushed work, from the shoulder of the highway; the recording is barely usable",
+  "purpose": "People, slot 11, the second complaint, and the set's one heavily damaged recording. An hour after she collected the car it overheated; she rings from the roadside with trucks passing. Maya gets her safe, sends the tow and promises two call backs. In the stored lines whole stretches are unintelligible; the greeting and part of the summary survive. An existing-job call: no score.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Tasha Underwood",
+      "invented": true,
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Dustin Swafford",
+        "slot": 11,
+        "role": "did the job; named by Maya when asked"
+      },
+      {
+        "name": "Greg Whitaker",
+        "slot": 4,
+        "role": "will call her"
+      },
+      {
+        "name": "Mowbray Towing & Recovery",
+        "ref": "vendors.json en.V8",
+        "role": "the towing partner"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Friday of week T-3 (rule R6; people, call 30)",
+    "nominal_offset": "T-21d",
+    "nominal_date": "2026-10-23",
+    "local_start": "16:40",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 5,
+    "caller_phone": "423-555-0199",
+    "repeat_caller": false,
+    "talk_s": 157
+  },
+  "scenario": {
+    "who_calls": "Tasha Underwood, on a mobile phone on the shoulder of a four-lane highway, an hour after paying for a repair.",
+    "vehicle": "2013 Hyundai Santa Fe",
+    "job": "water pump, replaced that day; a hose clamp was left loose and the coolant ran out",
+    "wants": "help, and to know who worked on her car",
+    "what_happens": "Maya asks whether she is safe and the engine is off, tells her not to restart it, apologises, names the mechanic when asked, takes her position, sends the tow at the shop's cost, promises to call back within five minutes with a time and that the service manager will call too, and repeats it.",
+    "facts": {
+      "paid_that_day_usd": 659.37,
+      "note": "catalogue.json water_pump, class suv, standard parts: 583.36, with shop supplies 20.18 and sales tax 659.37; she says 'six hundred and sixty dollars'. The tow is by the towing partner of vendors.json (V8).",
+      "prices": [
+        {
+          "what": "Replace water pump",
+          "job": "water_pump",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 583.36,
+          "shop_supplies_usd": 20.18,
+          "out_the_door_usd": 659.37,
+          "said": "six hundred and sixty dollars",
+          "said_usd": 660,
+          "said_as": "out the door"
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.9,
+      "said": "Hello? Can you hear me?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.6,
+      "said": "Yes ma'am, I can hear you."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 13.5,
+      "said": "This is Tasha Underwood. I just picked my car up from y'all an hour ago and I am sittin' on the side of Highway one fifty-three with steam comin' out from under my hood!"
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 26.9,
+      "said": "Oh my gosh. Okay. Are you okay? Are you off the road?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 32.2,
+      "said": "I'm on the shoulder. There's trucks flyin' by me. I've got my flashers on."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 37.5,
+      "said": "Yes ma'am.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 39.9,
+      "said": "Okay. Is the engine off?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 42.8,
+      "said": "Yes, it's off! The needle went all the way up and I pulled over. There's green stuff all over the ground."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 51.8,
+      "said": "Okay. Don't start it again, okay? Leave it off. You did exactly the right thing."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 59.0,
+      "said": "I paid y'all six hundred and sixty dollars today! For a water pump! And it's worse than when I brought it in!"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 68.7,
+      "said": "I know. I totally understand, and I'm so sorry. We're gonna take care of this."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 75.3,
+      "said": "Who worked on it? Because I want to know who worked on my car."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 81.3,
+      "said": "Um — it was Dustin. But let me get you off that road first, okay? Where are you on one fifty-three?"
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 90.1,
+      "said": "Just past the Shallowford Road exit. Goin' north."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 94.8,
+      "said": "Okay. One fifty-three north, past Shallowford. I'm sending a tow truck to you right now, we use Mowbray, and that's on us. It's a Santa Fe, right?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 105.7,
+      "said": "Yes."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 107.3,
+      "said": "Okay. Stay in the car with your seat belt on if you can't get way off the road."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 115.0,
+      "said": "How long?"
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 117.6,
+      "said": "I'm calling them the second we hang up, and I'll call you right back with a time. And Greg, our service manager, is gonna call you too."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 128.7,
+      "said": "Somebody better. I've got my daughter's recital at six-thirty."
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 132.2,
+      "said": "Yes ma'am.",
+      "overlap": true
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 134.2,
+      "said": "Okay. I'll tell him that. So: tow truck's coming to one fifty-three north past Shallowford, it comes back here to East Main, and I'm calling you back in five minutes with how long."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 148.1,
+      "said": "Fine."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 149.9,
+      "said": "Okay. Don't start the car. I'm calling you right back."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 154.8,
+      "said": "Hello? Are you —"
+    }
+  ],
+  "recognition": {
+    "profile": "heavy",
+    "consensus_score": 0.16,
+    "restoration_tier": "low",
+    "noise": "the caller is outdoors beside traffic on a weak mobile signal; her voice cuts out and clips; the shop's compressor runs behind the advisor",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          3,
+          4,
+          7,
+          14,
+          20,
+          22
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "a name heard as a neighbour in sound",
+        "script_turn": 15,
+        "said": "Shallowford",
+        "stored": "shallow Ford"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          11,
+          14,
+          16,
+          23
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 4,
+        "said": "I just picked my car up from y'all an hour ago",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 4,
+        "said": "Highway one fifty-three with steam",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 9,
+        "said": "The needle went all the way up and I pulled over.",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 11,
+        "said": "And it's worse than when I brought it in!",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 12,
+        "said": "We're gonna take care of this.",
+        "stored": ""
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 13,
+        "said": "Who worked on it? Because",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 14,
+        "said": "But let me get you off that road first, okay?",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 16,
+        "said": "we use Mowbray, and that's on us.",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 18,
+        "said": "Stay in the car with your seat belt on",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 21,
+        "said": "I've got my daughter's recital at six-thirty.",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the models disagree and the span is left unintelligible",
+        "script_turn": 23,
+        "said": "it comes back here to East Main,",
+        "stored": "[unintelligible]"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          7,
+          22
+        ]
+      },
+      {
+        "rule": "R10",
+        "what": "bad mobile line: the caller's sentence ends clipped",
+        "script_turn": 6,
+        "said": "flyin' by me. I've got my flashers on.",
+        "stored": "fly"
+      },
+      {
+        "rule": "R10",
+        "what": "bad mobile line: the caller's sentence ends clipped",
+        "script_turn": 15,
+        "said": "Goin' north.",
+        "stored": "Go"
+      },
+      {
+        "rule": "R10",
+        "what": "bad mobile line: the caller's sentence ends clipped",
+        "script_turn": 26,
+        "said": "Hello? Are you —",
+        "stored": "Hello?"
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 6,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 2,
+        "as_digits": 2,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 2,
+        "joined": 0
+      },
+      "noise_bursts": 14,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": true,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 340,
+    "stored_words": 243,
+    "strict_word_difference": 0.359
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 267,
+    "duration_s": 157.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hello? Can you hear me?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, ma'am, I can hear you.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "This is Tasha Underwood. [unintelligible] and I am sitting on the side of [unintelligible] coming out from under my hood!",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh my gosh. Okay. Are you okay? Are you off the road?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm on the shoulder. There's trucks fly",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Is the engine off?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, it's off! [unintelligible] There's green stuff all over the ground.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Don't start it again, okay? Leave it off. You did exactly the right thing.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I paid y'all $660 today! For a water pump! [unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I know. I totally understand, and I'm so sorry.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible] I want to know who worked on my car.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It was Dustin. [unintelligible] Where are you on 153?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Just past the shallow Ford Road exit. Go",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. 153 north, past Shallowford. I'm sending a tow truck to you right now, [unintelligible] It's a Santa Fe, right?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. [unintelligible] if you can't get way off the road.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "How long?",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm calling them the second we hang up, and I'll call you right back with a time. And Greg, our service manager, is going to call you too.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Somebody better. [unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. I'll tell him that. So: tow truck's coming to 153 north past Shallowford, [unintelligible] and I'm calling you back in 5 minutes with how long.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Fine.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Don't start the car. I'm calling you right back.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hello?",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "and I'm calling you back in 5 minutes with how long",
+        "level": 1,
+        "segment": 20
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint",
+      "customer_angry"
+    ],
+    "strength": {
+      "quote": "Don't start it again, okay? Leave it off. You did exactly the right thing.",
+      "why": "Before the apology and before the blame, she made sure the engine was off and told the customer she had done right.",
+      "segment": 8
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "and I'm calling you back in 5 minutes with how long",
+      "say": "So: the tow truck is coming to you on 153 north past Shallowford and takes the car to our shop at 2106 East Main; I call you back in five minutes with how long it will be; Greg calls you after that."
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 20
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "complaint",
+        "customer_angry"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "poor",
+      "strength_segment": 8,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "recap": "and I'm calling you back in 5 minutes with how long"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Don't start it again, okay? Leave it off. You did exactly the right thing",
+        "why": "Before the apology and before the blame, she made sure the engine was off and told the customer she had done right."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "and I'm calling you back in 5 minutes with how long",
+        "say": "So: the tow truck is coming to you on 153 north past Shallowford and takes the car to our shop at 2106 East Main; I call you back in five minutes with how long it will be; Greg calls you after that."
+      }
+    }
+  },
+  "truth": {
+    "note": "On the clean script the summary holds the tow, where it takes the car and the call back: level 2 in truth. In the stored lines the middle of that summary is unintelligible, so the verdict keeps level 1. Neither level makes a score: only two checks apply.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 2,
+      "objection": "not_applicable"
+    },
+    "what_follows": "The tow brings the car back that evening; a comeback order at main points at that day's water-pump order (a loose hose clamp, coolant refilled, no charge). It counts among slot 11's comebacks.",
+    "score": null,
+    "outcome": "callback_promised",
+    "tags": [
+      "callback_promised",
+      "complaint",
+      "customer_angry"
+    ]
+  },
+  "why": {
+    "call_type": "existing_job: a complaint about work done that day.",
+    "greeting": "2: the business and her own name, on a line the noise spared.",
+    "recap": "1 on the transcript, 2 in truth: where the tow takes the car is under an [unintelligible].",
+    "not_applicable": "The six checks that apply to new enquiries only are not asked of this call.",
+    "tags": "complaint and customer_angry. The customer does not swear; she shouts.",
+    "outcome": "callback_promised: 'I'll call you right back with a time', and the service manager too.",
+    "asr_quality": "poor: eight unintelligible stretches and three clipped sentences in twenty-four turns; a heavy recording is always poor.",
+    "score": "No score: 2 scored checks (greeting, recap), under the three a score needs.",
+    "carried_by": []
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "kept: an outbound call from desk 102 to 423-555-0199 at 16:46 (answered, 35 s: the tow's arrival time), and one from desk 104 at 17:05",
+    "auto_fail": null
+  },
+  "day_report": {
+    "in_report": true,
+    "candidate": {
+      "kind": "callback",
+      "state": "kept"
+    },
+    "says": "In Maya's report of that day this call is the 'callback' highlight: the call back she promised at 16:40 was made six minutes later. The call has no score, and the report quotes no line the recording garbled."
+  },
+  "new_facts": [
+    "A customer of main, Tasha Underwood, 423-555-0199, 2013 Hyundai Santa Fe: a water-pump order completed and paid on the Friday of week T-3 (technician slot 11; 659.37 with tax) and a comeback order the same evening pointing at it (a loose hose clamp; no charge).",
+    "A tow by vendor V8 from the highway to main that evening, at the shop's cost.",
+    "Two outbound calls to her after this one: desk 102 at 16:46 and desk 104 at 17:05."
+  ]
+}

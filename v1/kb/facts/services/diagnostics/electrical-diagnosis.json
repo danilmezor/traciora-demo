@@ -1,0 +1,113 @@
+{
+ "path": "services/diagnostics/electrical-diagnosis.md",
+ "title": "Electrical diagnosis",
+ "first_revision_text": "en/_history/services/diagnostics/electrical-diagnosis.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Electrical faults without a warning light.",
+ "serves": [
+  "smoke",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 233,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job electrical_diag: 1.5 h.",
+  "For faults with no code: drains, intermittent windows, flickering lights, blowers, wet-weather faults.",
+  "Battery test first (free); a drain test keeps the car overnight.",
+  "Aftermarket additions are asked about.",
+  "Who: slot 13 at main, slot 10 for module faults and hybrids, slot 18 at east.",
+  "Voice: slot 13, slow and courteous, dictated to slot 5 (he \"does not chat\")."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Electrical diagnosis",
+   "item": "Electrical work is slow because it is honest work with a meter, one circuit at a time. I would want to check it before I say what it is."
+  },
+  {
+   "section": "Electrical diagnosis",
+   "item": "Ask the customer when it happens and what else is on when it does. \"Every time\" and \"only when it rains\" are different faults."
+  },
+  {
+   "section": "Electrical diagnosis",
+   "item": "A battery that goes flat: test the battery first. It is free and it is the battery half the time. If the battery is good, it is a drain, and a drain test means the car stays overnight."
+  },
+  {
+   "section": "Electrical diagnosis",
+   "item": "Anything added to the car matters: a remote starter, a stereo, a trailer plug, a dash camera. Ask, and write it down."
+  },
+  {
+   "section": "Electrical diagnosis",
+   "item": "If an hour and a half does not find it, I stop and the advisor calls. I say what I have ruled out."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "electrical_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 202.5
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Terry Dotson",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Поиск неисправности электрооборудования», 1.5 н/ч."
+ ]
+}

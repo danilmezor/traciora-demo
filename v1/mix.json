@@ -1,0 +1,1334 @@
+{
+ "seed_version": "v1",
+ "file": "mix",
+ "about": {
+  "what": "The mix of work of demo seed v1 per configuration: parts tiers, what the list price realises, jobs per order, categories, recommended work, the seasonal, weekday and hour curves, and the ledger targets the check uses.",
+  "notes": [
+   "category_mix.share_of_orders counts an order under the category of its lead job; share_of_job_lines counts every priced job; share_of_revenue is at list price.",
+   "computed holds what the catalogue, the parc and this file give when multiplied out; checks/check_catalogue.py recomputes it.",
+   "the ledger has two buckets, labour and parts. Here 'parts' means everything that is not labour: parts, fluids, tyres, fees, shop supplies and sublet work.",
+   "ledger_rows_proposed lists the rows this file asks the ledger to take; each has its class and basis. They are proposals."
+  ]
+ },
+ "configurations": {
+  "en": {
+   "tier_mix": {
+    "economy": 0.25,
+    "standard": 0.55,
+    "premium": 0.2
+   },
+   "tier_mix_basis": "designed (X), range economy 0.15 to 0.35: a general repair shop quotes the mainstream aftermarket line first; premium and original parts go on newer cars and on request. The supplier west kept sells more economy (story S6); that split is a story row, not this one.",
+   "realisation": {
+    "company_account_share_of_sales": 0.0553,
+    "company_account_discount": 0.1,
+    "discounts_and_coupons": 0.01,
+    "warranty_and_goodwill": 0.0264,
+    "basis": {
+     "company_account_share_of_sales": "ledger acct.big_two_share: the company-account price class is held by the two big accounts (A1, A2); their orders of the last 30 days over the company's monthly revenue",
+     "company_account_discount": "catalogue: company-account price class, 10 % under list",
+     "discounts_and_coupons": "designed (X), range 0.5 to 2 %: 3 % of cash orders carry a discount outside story S2, plus first-visit and seasonal coupons",
+     "warranty_and_goodwill": "ledger comeback.company: the share of orders that come back, redone at no charge; a comeback order is taken as an average order"
+    }
+   },
+   "jobs_per_order": {
+    "counts": "priced jobs on an order; the free courtesy inspection is not counted",
+    "distribution": {
+     "1": 0.1971,
+     "2": 0.3201,
+     "3": 0.26,
+     "4": 0.1408,
+     "5": 0.0572,
+     "6": 0.0186,
+     "7": 0.005,
+     "8": 0.0012
+    },
+    "mean": 2.623
+   },
+   "category_mix": {
+    "maintenance": {
+     "share_of_orders": 0.3438,
+     "share_of_job_lines": 0.3168,
+     "share_of_revenue": 0.1835
+    },
+    "brakes": {
+     "share_of_orders": 0.1305,
+     "share_of_job_lines": 0.1431,
+     "share_of_revenue": 0.2263
+    },
+    "tyres_alignment": {
+     "share_of_orders": 0.0913,
+     "share_of_job_lines": 0.1616,
+     "share_of_revenue": 0.0864
+    },
+    "diagnostics": {
+     "share_of_orders": 0.1475,
+     "share_of_job_lines": 0.0834,
+     "share_of_revenue": 0.0516
+    },
+    "suspension_steering": {
+     "share_of_orders": 0.0691,
+     "share_of_job_lines": 0.0716,
+     "share_of_revenue": 0.1532
+    },
+    "air_conditioning": {
+     "share_of_orders": 0.0511,
+     "share_of_job_lines": 0.0405,
+     "share_of_revenue": 0.0549
+    },
+    "battery_electrical": {
+     "share_of_orders": 0.0669,
+     "share_of_job_lines": 0.0747,
+     "share_of_revenue": 0.0602
+    },
+    "engine_cooling": {
+     "share_of_orders": 0.0612,
+     "share_of_job_lines": 0.0711,
+     "share_of_revenue": 0.1153
+    },
+    "transmission_driveline": {
+     "share_of_orders": 0.025,
+     "share_of_job_lines": 0.032,
+     "share_of_revenue": 0.0648
+    },
+    "inspections": {
+     "share_of_orders": 0.0136,
+     "share_of_job_lines": 0.0052,
+     "share_of_revenue": 0.0037
+    }
+   },
+   "recommended_work": {
+    "orders_with_recommended_work": 0.65,
+    "sold_share": 0.5373,
+    "basis": "sold_share is the ledger row sold.company (53.73 %), which follows from the advisors' rows. orders_with_recommended_work is designed (X), range 0.55 to 0.70, and never above the share of orders that get the courtesy inspection (80 %). recommended_jobs_per_such_order is the ledger row mix.rec_jobs_per_such_order: jobs raised, whoever sells them. sold_recommended_jobs_per_order is their product and equals the catalogue's recommended_share times share_of_orders, summed.",
+    "recommended_jobs_per_such_order": 3.094,
+    "sold_recommended_jobs_per_order": 1.0806,
+    "average_list_value_of_a_recommended_job": 233.37,
+    "declined_value_per_order": 217.16
+   },
+   "seasonal": {
+    "about": "Index of orders per open day by calendar month, mean 1 over the year (day-weighted). A job follows its category's curve unless job_curve names another. The total is the lead-share-weighted sum. Class X (designed) except where a basis is given in ledger_rows_proposed.",
+    "curves": {
+     "maintenance": {
+      "by_month": [
+       1.0,
+       1.0,
+       1.03,
+       1.03,
+       1.01,
+       0.96,
+       0.94,
+       0.95,
+       0.99,
+       1.02,
+       1.04,
+       1.03
+      ]
+     },
+     "brakes": {
+      "by_month": [
+       1.01,
+       1.01,
+       1.02,
+       1.02,
+       1.0,
+       0.97,
+       0.96,
+       0.97,
+       1.0,
+       1.02,
+       1.01,
+       1.01
+      ]
+     },
+     "tyres_other": {
+      "by_month": [
+       0.96,
+       0.94,
+       1.05,
+       1.08,
+       1.02,
+       0.97,
+       0.94,
+       0.94,
+       0.98,
+       1.06,
+       1.1,
+       0.96
+      ]
+     },
+     "tyres_seasonal": {
+      "by_month": [
+       0.499,
+       0.2,
+       1.496,
+       1.995,
+       0.299,
+       0.0,
+       0.0,
+       0.0,
+       0.2,
+       1.496,
+       3.292,
+       2.494
+      ]
+     },
+     "diagnostics": {
+      "by_month": [
+       1.078,
+       1.048,
+       0.989,
+       0.969,
+       0.979,
+       0.979,
+       0.979,
+       0.979,
+       0.969,
+       0.969,
+       1.009,
+       1.058
+      ]
+     },
+     "suspension": {
+      "by_month": [
+       0.96,
+       0.98,
+       1.08,
+       1.1,
+       1.04,
+       0.98,
+       0.95,
+       0.96,
+       0.98,
+       1.0,
+       0.99,
+       0.98
+      ]
+     },
+     "air_conditioning": {
+      "by_month": [
+       0.149,
+       0.149,
+       0.447,
+       0.845,
+       1.889,
+       2.485,
+       2.485,
+       2.087,
+       0.895,
+       0.298,
+       0.099,
+       0.099
+      ]
+     },
+     "battery": {
+      "by_month": [
+       1.45,
+       1.1,
+       0.8,
+       0.7,
+       0.7,
+       0.85,
+       0.95,
+       0.9,
+       0.75,
+       1.0,
+       1.5,
+       1.3
+      ]
+     },
+     "electrical": {
+      "by_month": [
+       1.08,
+       1.03,
+       0.98,
+       0.95,
+       0.95,
+       0.97,
+       0.98,
+       0.98,
+       0.97,
+       1.0,
+       1.05,
+       1.06
+      ]
+     },
+     "engine_cooling": {
+      "by_month": [
+       1.0,
+       0.97,
+       0.96,
+       0.96,
+       1.0,
+       1.06,
+       1.1,
+       1.06,
+       0.98,
+       0.96,
+       0.96,
+       0.99
+      ]
+     },
+     "transmission": {
+      "by_month": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "inspections": {
+      "by_month": [
+       0.9,
+       1.0,
+       1.1,
+       1.1,
+       1.05,
+       1.0,
+       1.0,
+       1.0,
+       0.95,
+       0.95,
+       0.95,
+       1.0
+      ]
+     }
+    },
+    "category_curve": {
+     "maintenance": "maintenance",
+     "brakes": "brakes",
+     "tyres_alignment": "tyres_other",
+     "diagnostics": "diagnostics",
+     "suspension_steering": "suspension",
+     "air_conditioning": "air_conditioning",
+     "battery_electrical": "electrical",
+     "engine_cooling": "engine_cooling",
+     "transmission_driveline": "transmission",
+     "inspections": "inspections"
+    },
+    "job_curve": {
+     "battery_test": "battery",
+     "battery_replace": "battery",
+     "seasonal_tyre_change": "tyres_seasonal",
+     "seasonal_wheel_swap": "tyres_seasonal",
+     "tyre_storage": "tyres_seasonal"
+    },
+    "derived_by_month": {
+     "total": [
+      0.981,
+      0.96,
+      0.984,
+      1.002,
+      1.036,
+      1.046,
+      1.04,
+      1.021,
+      0.969,
+      0.972,
+      1.001,
+      0.985
+     ],
+     "maintenance": [
+      1.0,
+      1.0,
+      1.03,
+      1.03,
+      1.01,
+      0.96,
+      0.94,
+      0.95,
+      0.99,
+      1.02,
+      1.04,
+      1.03
+     ],
+     "brakes": [
+      1.01,
+      1.01,
+      1.02,
+      1.02,
+      1.0,
+      0.97,
+      0.96,
+      0.97,
+      1.0,
+      1.02,
+      1.01,
+      1.01
+     ],
+     "tyres_alignment": [
+      0.951,
+      0.926,
+      1.058,
+      1.097,
+      1.007,
+      0.952,
+      0.922,
+      0.922,
+      0.965,
+      1.068,
+      1.141,
+      0.989
+     ],
+     "diagnostics": [
+      1.078,
+      1.048,
+      0.989,
+      0.969,
+      0.979,
+      0.979,
+      0.979,
+      0.979,
+      0.969,
+      0.969,
+      1.009,
+      1.058
+     ],
+     "suspension_steering": [
+      0.96,
+      0.98,
+      1.08,
+      1.1,
+      1.04,
+      0.98,
+      0.95,
+      0.96,
+      0.98,
+      1.0,
+      0.99,
+      0.98
+     ],
+     "air_conditioning": [
+      0.149,
+      0.149,
+      0.447,
+      0.845,
+      1.889,
+      2.485,
+      2.485,
+      2.087,
+      0.895,
+      0.298,
+      0.099,
+      0.099
+     ],
+     "battery_electrical": [
+      1.306,
+      1.073,
+      0.87,
+      0.798,
+      0.798,
+      0.897,
+      0.962,
+      0.931,
+      0.836,
+      1.0,
+      1.324,
+      1.206
+     ],
+     "engine_cooling": [
+      1.0,
+      0.97,
+      0.96,
+      0.96,
+      1.0,
+      1.06,
+      1.1,
+      1.06,
+      0.98,
+      0.96,
+      0.96,
+      0.99
+     ],
+     "transmission_driveline": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "inspections": [
+      0.9,
+      1.0,
+      1.1,
+      1.1,
+      1.05,
+      1.0,
+      1.0,
+      1.0,
+      0.95,
+      0.95,
+      0.95,
+      1.0
+     ]
+    }
+   },
+   "weekday": {
+    "index": {
+     "mon": 1.12,
+     "tue": 1.02,
+     "wed": 0.96,
+     "thu": 0.94,
+     "fri": 0.96
+    },
+    "saturday_at_main": 0.3,
+    "basis": "designed (X). Orders opened per weekday against the weekday mean; Monday is the heaviest drop-off day (ledger: busiest call day Monday). The Saturday morning at main opens 0.30 of a weekday's orders: three mechanics on a five-hour overtime shift (ledger volume.saturday_orders.main, 5.15 against 17.04). That gives the ledger's 808 orders a month: (17.04 + 10.98 + 8.98) x 21.24 + 5.15 x 4.35."
+   },
+   "hour_of_day": {
+    "share_of_arrivals": {
+     "07:30": 0.16,
+     "08:00": 0.24,
+     "09:00": 0.13,
+     "10:00": 0.09,
+     "11:00": 0.07,
+     "12:00": 0.06,
+     "13:00": 0.07,
+     "14:00": 0.07,
+     "15:00": 0.06,
+     "16:00": 0.04,
+     "17:00": 0.01
+    },
+    "basis": "designed (X). When the car is checked in, by the hour that starts at the key (07:30 and 17:00 are half hours). Forty per cent arrive in the first hour and a half: drop-offs before work, which is what loads the desk in story S3. Calls peak later, at 11:00 (ledger)."
+   },
+   "ledger_targets": {
+    "where_from": "ledger.json: volume.hours_per_order, labour (hours x price.hour.posted x price.effective_rate_list), volume.parts_per_order_list, volume.average_order_list and its three shop rows, sold.company and the shop rows, price.rise.last_pct, s8.price_now and s8.price_quoted. Design: S11's 2.5 for air conditioning. Research: the season band (AAA, about 4 %) and the parts margin band (survey). checks/check_files.py fails when a target here differs from its ledger row.",
+    "billed_hours_per_order": 2.5,
+    "labour_per_order": 286.9,
+    "parts_per_order": 235.0,
+    "average_order": 521.9,
+    "effective_labour_rate": 0.85,
+    "posted_labour_hour": 135.0,
+    "price_rise": 0.08,
+    "recommended_work_sold": 0.5373,
+    "parts_margin_range": [
+     0.5,
+     0.59
+    ],
+    "s8_current_price": 720.0,
+    "s8_story_old_price": 688.0,
+    "seasonal": {
+     "season_band": 0.04,
+     "peaks": {
+      "air_conditioning": 2.5
+     },
+     "peak_basis": {
+      "air_conditioning": "month"
+     }
+    },
+    "parc": {
+     "mean_age": 12.8
+    },
+    "average_order_by_shop": {
+     "main": 511.6,
+     "east": 565.4,
+     "west": 489.6
+    },
+    "billed_hours_per_order_by_shop": {
+     "main": 2.456,
+     "east": 2.683,
+     "west": 2.364
+    },
+    "recommended_work_sold_by_shop": {
+     "main": 0.5144,
+     "east": 0.634,
+     "west": 0.4655
+    }
+   },
+   "class_shares_from_parc": {
+    "truck": 0.2152,
+    "car": 0.5263,
+    "suv": 0.1991,
+    "van": 0.0595
+   },
+   "computed": {
+    "billed_hours_per_order": 2.478,
+    "labour_per_order": 286.73,
+    "parts_and_other_per_order": 236.33,
+    "average_order": 523.06,
+    "labour_per_order_before_rise": 265.49,
+    "parts_gross_margin": 0.5114,
+    "realisation_factor": 0.9585,
+    "busiest_day_index_all_orders": 1.046,
+    "parc_mean_age": 12.83,
+    "parc_share_older_than_ten": 0.6644,
+    "effective_labour_rate": 0.8572
+   }
+  },
+  "ru": {
+   "tier_mix": {
+    "economy": 0.4,
+    "standard": 0.42,
+    "premium": 0.18
+   },
+   "tier_mix_basis": "designed (X), range economy 0.30 to 0.50: an older parc and price-led customers; original parts mostly on cars under ten years.",
+   "realisation": {
+    "company_account_share_of_sales": 0.0555,
+    "company_account_discount": 0.1,
+    "discounts_and_coupons": 0.01,
+    "warranty_and_goodwill": 0.0255,
+    "basis": {
+     "company_account_share_of_sales": "ledger acct.big_two_share: the company-account price class is held by the two big accounts (A1, A2); their orders of the last 30 days over the company's monthly revenue",
+     "company_account_discount": "catalogue: company-account price class, about 10 % under list",
+     "discounts_and_coupons": "designed (X), range 0.5 to 2 %",
+     "warranty_and_goodwill": "ledger comeback.company: the share of orders that come back, redone at no charge; a comeback order is taken as an average order"
+    }
+   },
+   "jobs_per_order": {
+    "counts": "priced jobs on an order; the free courtesy inspection is not counted",
+    "distribution": {
+     "1": 0.2552,
+     "2": 0.3485,
+     "3": 0.2381,
+     "4": 0.1084,
+     "5": 0.037,
+     "6": 0.0101,
+     "7": 0.0023,
+     "8": 0.0004
+    },
+    "mean": 2.365
+   },
+   "category_mix": {
+    "maintenance": {
+     "share_of_orders": 0.2792,
+     "share_of_job_lines": 0.3395,
+     "share_of_revenue": 0.2593
+    },
+    "brakes": {
+     "share_of_orders": 0.0862,
+     "share_of_job_lines": 0.1058,
+     "share_of_revenue": 0.1262
+    },
+    "tyres_alignment": {
+     "share_of_orders": 0.157,
+     "share_of_job_lines": 0.1218,
+     "share_of_revenue": 0.0793
+    },
+    "diagnostics": {
+     "share_of_orders": 0.1163,
+     "share_of_job_lines": 0.1096,
+     "share_of_revenue": 0.0254
+    },
+    "suspension_steering": {
+     "share_of_orders": 0.128,
+     "share_of_job_lines": 0.1253,
+     "share_of_revenue": 0.1812
+    },
+    "air_conditioning": {
+     "share_of_orders": 0.034,
+     "share_of_job_lines": 0.0298,
+     "share_of_revenue": 0.039
+    },
+    "battery_electrical": {
+     "share_of_orders": 0.0563,
+     "share_of_job_lines": 0.0534,
+     "share_of_revenue": 0.0793
+    },
+    "engine_cooling": {
+     "share_of_orders": 0.0833,
+     "share_of_job_lines": 0.0733,
+     "share_of_revenue": 0.1161
+    },
+    "transmission_driveline": {
+     "share_of_orders": 0.0481,
+     "share_of_job_lines": 0.0366,
+     "share_of_revenue": 0.0916
+    },
+    "inspections": {
+     "share_of_orders": 0.0116,
+     "share_of_job_lines": 0.0049,
+     "share_of_revenue": 0.0028
+    }
+   },
+   "recommended_work": {
+    "orders_with_recommended_work": 0.6,
+    "sold_share": 0.5334,
+    "basis": "sold_share is the ledger row sold.company (53.34 %), which follows from the advisors' rows. orders_with_recommended_work is designed (X), range 0.50 to 0.65, and never above the share of orders that get the free check-list inspection (70 %). recommended_jobs_per_such_order is the ledger row mix.rec_jobs_per_such_order: jobs raised, whoever sells them. sold_recommended_jobs_per_order is their product and equals the catalogue's recommended_share times share_of_orders, summed.",
+    "recommended_jobs_per_such_order": 3.14,
+    "sold_recommended_jobs_per_order": 1.0049,
+    "average_list_value_of_a_recommended_job": 5139.0,
+    "declined_value_per_order": 4518.0
+   },
+   "seasonal": {
+    "about": "Index of orders per open day by calendar month, mean 1 over the year (day-weighted). The seasonal tyre jobs follow the two four-week windows, given by date. The total is the lead-share-weighted sum.",
+    "curves": {
+     "maintenance": {
+      "by_month": [
+       0.701,
+       1.021,
+       1.051,
+       1.071,
+       1.071,
+       1.021,
+       1.001,
+       1.021,
+       1.031,
+       1.041,
+       1.001,
+       0.971
+      ]
+     },
+     "brakes": {
+      "by_month": [
+       0.721,
+       0.981,
+       1.001,
+       1.071,
+       1.081,
+       1.051,
+       1.061,
+       1.061,
+       1.051,
+       1.021,
+       0.971,
+       0.931
+      ]
+     },
+     "tyres_other": {
+      "by_month": [
+       0.599,
+       0.699,
+       0.849,
+       1.499,
+       1.449,
+       1.049,
+       0.949,
+       0.899,
+       0.899,
+       1.299,
+       1.099,
+       0.699
+      ]
+     },
+     "tyres_seasonal": {
+      "base": 0.0534,
+      "windows": [
+       {
+        "name": "spring shoulder",
+        "from": "04-06",
+        "to": "04-12",
+        "index": 0.5
+       },
+       {
+        "name": "spring change to summer tyres",
+        "from": "04-13",
+        "to": "05-10",
+        "index": 6.0
+       },
+       {
+        "name": "spring shoulder",
+        "from": "05-11",
+        "to": "05-17",
+        "index": 0.5
+       },
+       {
+        "name": "autumn shoulder",
+        "from": "10-06",
+        "to": "10-12",
+        "index": 0.5
+       },
+       {
+        "name": "autumn change to winter tyres",
+        "from": "10-13",
+        "to": "11-09",
+        "index": 6.0
+       },
+       {
+        "name": "autumn shoulder",
+        "from": "11-10",
+        "to": "11-16",
+        "index": 0.5
+       }
+      ]
+     },
+     "diagnostics": {
+      "by_month": [
+       0.78,
+       1.031,
+       1.021,
+       1.071,
+       1.051,
+       1.001,
+       0.981,
+       0.981,
+       1.001,
+       1.031,
+       1.031,
+       1.031
+      ]
+     },
+     "suspension": {
+      "by_month": [
+       0.679,
+       0.929,
+       1.019,
+       1.199,
+       1.219,
+       1.149,
+       1.049,
+       1.019,
+       0.999,
+       0.979,
+       0.899,
+       0.859
+      ]
+     },
+     "air_conditioning": {
+      "by_month": [
+       0.05,
+       0.05,
+       0.199,
+       0.894,
+       2.583,
+       2.881,
+       2.583,
+       1.689,
+       0.596,
+       0.199,
+       0.099,
+       0.099
+      ]
+     },
+     "battery": {
+      "by_month": [
+       1.502,
+       1.251,
+       0.951,
+       0.751,
+       0.651,
+       0.651,
+       0.651,
+       0.701,
+       0.851,
+       1.101,
+       1.402,
+       1.552
+      ]
+     },
+     "electrical": {
+      "by_month": [
+       1.051,
+       1.081,
+       1.001,
+       0.95,
+       0.92,
+       0.92,
+       0.92,
+       0.95,
+       1.001,
+       1.051,
+       1.081,
+       1.081
+      ]
+     },
+     "engine_cooling": {
+      "by_month": [
+       0.882,
+       1.072,
+       1.002,
+       0.962,
+       0.962,
+       1.002,
+       1.022,
+       1.002,
+       0.982,
+       1.002,
+       1.052,
+       1.062
+      ]
+     },
+     "transmission": {
+      "by_month": [
+       0.762,
+       1.022,
+       1.022,
+       1.052,
+       1.052,
+       1.022,
+       1.002,
+       1.002,
+       1.022,
+       1.032,
+       1.022,
+       0.992
+      ]
+     },
+     "inspections": {
+      "by_month": [
+       0.7,
+       0.9,
+       1.1,
+       1.2,
+       1.15,
+       1.05,
+       1.0,
+       1.05,
+       1.1,
+       1.0,
+       0.9,
+       0.85
+      ]
+     }
+    },
+    "category_curve": {
+     "maintenance": "maintenance",
+     "brakes": "brakes",
+     "tyres_alignment": "tyres_other",
+     "diagnostics": "diagnostics",
+     "suspension_steering": "suspension",
+     "air_conditioning": "air_conditioning",
+     "battery_electrical": "electrical",
+     "engine_cooling": "engine_cooling",
+     "transmission_driveline": "transmission",
+     "inspections": "inspections"
+    },
+    "job_curve": {
+     "battery_test": "battery",
+     "battery_replace": "battery",
+     "seasonal_tyre_change": "tyres_seasonal",
+     "seasonal_wheel_swap": "tyres_seasonal",
+     "tyre_storage": "tyres_seasonal"
+    },
+    "derived_by_month": {
+     "total": [
+      0.666,
+      0.869,
+      0.888,
+      1.354,
+      1.238,
+      0.989,
+      0.954,
+      0.924,
+      0.894,
+      1.294,
+      1.077,
+      0.849
+     ],
+     "maintenance": [
+      0.701,
+      1.021,
+      1.051,
+      1.071,
+      1.071,
+      1.021,
+      1.001,
+      1.021,
+      1.031,
+      1.041,
+      1.001,
+      0.971
+     ],
+     "brakes": [
+      0.721,
+      0.981,
+      1.001,
+      1.071,
+      1.081,
+      1.051,
+      1.061,
+      1.061,
+      1.051,
+      1.021,
+      0.971,
+      0.931
+     ],
+     "tyres_alignment": [
+      0.245,
+      0.28,
+      0.333,
+      2.943,
+      1.853,
+      0.403,
+      0.368,
+      0.351,
+      0.351,
+      2.92,
+      1.645,
+      0.28
+     ],
+     "diagnostics": [
+      0.78,
+      1.031,
+      1.021,
+      1.071,
+      1.051,
+      1.001,
+      0.981,
+      0.981,
+      1.001,
+      1.031,
+      1.031,
+      1.031
+     ],
+     "suspension_steering": [
+      0.679,
+      0.929,
+      1.019,
+      1.199,
+      1.219,
+      1.149,
+      1.049,
+      1.019,
+      0.999,
+      0.979,
+      0.899,
+      0.859
+     ],
+     "air_conditioning": [
+      0.05,
+      0.05,
+      0.199,
+      0.894,
+      2.583,
+      2.881,
+      2.583,
+      1.689,
+      0.596,
+      0.199,
+      0.099,
+      0.099
+     ],
+     "battery_electrical": [
+      1.276,
+      1.166,
+      0.976,
+      0.851,
+      0.786,
+      0.786,
+      0.786,
+      0.826,
+      0.926,
+      1.076,
+      1.241,
+      1.316
+     ],
+     "engine_cooling": [
+      0.882,
+      1.072,
+      1.002,
+      0.962,
+      0.962,
+      1.002,
+      1.022,
+      1.002,
+      0.982,
+      1.002,
+      1.052,
+      1.062
+     ],
+     "transmission_driveline": [
+      0.762,
+      1.022,
+      1.022,
+      1.052,
+      1.052,
+      1.022,
+      1.002,
+      1.002,
+      1.022,
+      1.032,
+      1.022,
+      0.992
+     ],
+     "inspections": [
+      0.7,
+      0.9,
+      1.1,
+      1.2,
+      1.15,
+      1.05,
+      1.0,
+      1.05,
+      1.1,
+      1.0,
+      0.9,
+      0.85
+     ]
+    }
+   },
+   "weekday": {
+    "index": {
+     "mon": 0.98,
+     "tue": 1.05,
+     "wed": 1.02,
+     "thu": 1.0,
+     "fri": 1.03,
+     "sat": 1.1,
+     "sun": 0.82
+    },
+    "basis": "designed (X). The shops open every day. Saturday is the private owner's day and the heaviest; Sunday the lightest (Callibri 2025: inquiries peak on Tuesday and are lowest on Sunday, no values published)."
+   },
+   "hour_of_day": {
+    "share_of_arrivals": {
+     "09:00": 0.15,
+     "10:00": 0.12,
+     "11:00": 0.1,
+     "12:00": 0.09,
+     "13:00": 0.08,
+     "14:00": 0.08,
+     "15:00": 0.08,
+     "16:00": 0.08,
+     "17:00": 0.09,
+     "18:00": 0.09,
+     "19:00": 0.04
+    },
+    "basis": "designed (X). When the car is checked in, by the hour that starts at the key. A morning peak at opening and a second one after office hours; work is mostly booked by time, so the curve is flatter than the American one. The first two and a half hours take 32 % (story S3)."
+   },
+   "ledger_targets": {
+    "where_from": "ledger.json: the same rows as the English configuration (labour is 2.2 x 1 900 = 4 180). Design: S11's six times for tyres, 'over fifteen' years. This file's own proposals, not ledger rows: the parts margin range, the air-conditioning peak.",
+    "billed_hours_per_order": 2.2,
+    "labour_per_order": 4180.0,
+    "parts_per_order": 7800.0,
+    "average_order": 11980.0,
+    "posted_labour_hour": 1900.0,
+    "price_rise": 0.0795,
+    "recommended_work_sold": 0.5334,
+    "parts_margin_range": [
+     0.25,
+     0.35
+    ],
+    "s8_current_price": 16000.0,
+    "s8_story_old_price": 15552.0,
+    "seasonal": {
+     "peaks": {
+      "tyres_seasonal": 6.0,
+      "air_conditioning": 2.9
+     },
+     "peak_basis": {
+      "tyres_seasonal": "day",
+      "air_conditioning": "month"
+     }
+    },
+    "parc": {
+     "mean_age_min": 15.0,
+     "mean_age_gap_reported": true,
+     "older_than_ten": 0.69
+    },
+    "average_order_by_shop": {
+     "main": 11770,
+     "east": 12826,
+     "west": 11402
+    },
+    "billed_hours_per_order_by_shop": {
+     "main": 2.162,
+     "east": 2.355,
+     "west": 2.094
+    },
+    "recommended_work_sold_by_shop": {
+     "main": 0.5108,
+     "east": 0.6245,
+     "west": 0.4712
+    }
+   },
+   "class_shares_from_parc": {
+    "car": 0.6091,
+    "van": 0.0741,
+    "suv": 0.2757,
+    "truck": 0.0411
+   },
+   "computed": {
+    "billed_hours_per_order": 2.206,
+    "labour_per_order": 4238.06,
+    "parts_and_other_per_order": 7854.83,
+    "average_order": 12092.89,
+    "labour_per_order_before_rise": 3925.74,
+    "parts_gross_margin": 0.302,
+    "realisation_factor": 0.9594,
+    "busiest_day_index_all_orders": 1.637,
+    "parc_mean_age": 13.58,
+    "parc_share_older_than_ten": 0.69
+   }
+  }
+ },
+ "ledger_rows_proposed": [
+  {
+   "key": "job mix: share of orders by category of the lead job",
+   "en": "maintenance 34.4 %, diagnostics 14.8 %, brakes 13.1 %, tyres_alignment 9.1 %, suspension_steering 6.9 %, battery_electrical 6.7 %, engine_cooling 6.1 %, air_conditioning 5.1 %, transmission_driveline 2.5 %, inspections 1.4 %",
+   "ru": "maintenance 27.9 %, tyres_alignment 15.7 %, suspension_steering 12.8 %, diagnostics 11.6 %, brakes 8.6 %, engine_cooling 8.3 %, battery_electrical 5.6 %, transmission_driveline 4.8 %, air_conditioning 3.4 %, inspections 1.2 %",
+   "class": "X",
+   "basis": "designed: no source gives shares of orders by job type in either market (us-shop.md gap 4, ru-shop.md gap 4). Shaped by what is known: oil service leads the US ranking (Car Care Council), brakes are the most profitable service for half of US owners, diagnostics lead the Russian job counts and шиномонтаж is the fastest-growing (Fit Service 2026). Fixed so that hours, labour and parts per order meet the ledger.",
+   "check": "orders by category of their first job, over two years at full density, within 1.5 points of the row"
+  },
+  {
+   "key": "job mix: share of revenue by category",
+   "en": "brakes 22.6 %, maintenance 18.4 %, suspension_steering 15.3 %, engine_cooling 11.5 %, tyres_alignment 8.6 %, transmission_driveline 6.5 %, battery_electrical 6.0 %, air_conditioning 5.5 %, diagnostics 5.2 %, inspections 0.4 %",
+   "ru": "maintenance 25.9 %, suspension_steering 18.1 %, brakes 12.6 %, engine_cooling 11.6 %, transmission_driveline 9.2 %, tyres_alignment 7.9 %, battery_electrical 7.9 %, air_conditioning 3.9 %, diagnostics 2.5 %, inspections 0.3 %",
+   "class": "D",
+   "basis": "catalogue list prices x share of orders, summed by category. US cross-check: maintenance 30 to 39 % of sales is the survey's most common band counting fluids and filters; tyres under 10 % for 59 % of shops.",
+   "check": "revenue of paid orders by category of the job, within 2 points"
+  },
+  {
+   "key": "jobs per order, priced",
+   "en": "mean 2.62",
+   "ru": "mean 2.37",
+   "class": "D",
+   "basis": "sum of share_of_orders over the catalogue; the distribution is 1 + Poisson cut at eight jobs",
+   "check": "mean priced jobs per order within 3 %"
+  },
+  {
+   "key": "orders that carry recommended work",
+   "en": "65.0 %",
+   "ru": "60.0 %",
+   "class": "X",
+   "basis": "no source (us-shop.md gap 9); range 55 to 70 % EN, 50 to 65 % RU; kept under the share of orders that get the free inspection (80 % EN, 70 % RU)",
+   "check": "orders with at least one inspection-raised job, approved or declined"
+  },
+  {
+   "key": "recommended jobs on such an order",
+   "en": "3.09",
+   "ru": "3.14",
+   "class": "D",
+   "basis": "sold recommended jobs per order (catalogue) / (orders with recommended work x share sold)",
+   "check": "mean inspection-raised jobs on those orders"
+  },
+  {
+   "key": "seasonal curve by month, all orders (index of orders per open day)",
+   "en": "0.98 0.96 0.98 1.00 1.04 1.05 1.04 1.02 0.97 0.97 1.00 0.98",
+   "ru": "0.67 0.87 0.89 1.35 1.24 0.99 0.95 0.92 0.89 1.29 1.08 0.85",
+   "class": "D",
+   "basis": "lead-share-weighted sum of the category curves. EN: every season within 4.5 % of the mean (AAA roadside calls by season, about +/-4 %, us-shop.md gap 5, snippet). RU: January low after the holidays, February about 30 to 40 % over January (independents +40 %, auto.ru 2022), peaks in April and October from the tyre windows (Fit Service: peak load April-May, a second rise October-November).",
+   "check": "orders per open day by calendar month over the two years, within 5 % of the index"
+  },
+  {
+   "key": "seasonal curve: air conditioning",
+   "en": "0.15 0.15 0.45 0.84 1.89 2.48 2.48 2.09 0.90 0.30 0.10 0.10",
+   "ru": "0.05 0.05 0.20 0.89 2.58 2.88 2.58 1.69 0.60 0.20 0.10 0.10",
+   "class": "X",
+   "basis": "EN: design S11, 2.5 times the yearly mean at the peak, May to August. RU: May visits peak and April depends on the weather (zr.ru 2026-06-24); season two to four months.",
+   "check": "air-conditioning jobs by month"
+  },
+  {
+   "key": "seasonal curve: battery jobs",
+   "en": "1.45 1.10 0.80 0.70 0.70 0.85 0.95 0.90 0.75 1.00 1.50 1.30",
+   "ru": "1.50 1.25 0.95 0.75 0.65 0.65 0.65 0.70 0.85 1.10 1.40 1.55",
+   "class": "X",
+   "basis": "EN: design S11, the first cold weeks (November in Tennessee), with a smaller summer-heat rise. RU: winter",
+   "check": "battery_test and battery_replace jobs by month"
+  },
+  {
+   "key": "seasonal tyre windows",
+   "en": "none (the three seasonal tyre jobs together are under 0.2 % of orders)",
+   "ru": "13 April to 10 May and 13 October to 9 November at 6.0 times the yearly mean, a shoulder week either side at 0.5, 0.053 otherwise",
+   "class": "X",
+   "basis": "design S11 (six times the average for four weeks). Dates: spring change in the centre runs from 10 April to the May holidays (zr.ru 2026); autumn dates are general knowledge, not read.",
+   "check": "seasonal tyre jobs per day inside and outside the windows"
+  },
+  {
+   "key": "seasonal tyre jobs as a share of orders",
+   "en": "0.2 %",
+   "ru": "10.2 %",
+   "class": "X",
+   "basis": "RU, range 8 to 14 %: sized so that a window stays workable with one seasonal fitter a shop. With the ledger's 1.25 service visits and 2 tyre changes a year it means 7 % of customers' cars change tyres here; the rest go to tyre shops or do it themselves. Inside a window the shops open 1.64 times their mean daily orders (design S11 has calls up 40 %).",
+   "check": "orders led by a seasonal tyre job over a year"
+  },
+  {
+   "key": "weekday curve",
+   "en": "mon 1.12 tue 1.02 wed 0.96 thu 0.94 fri 0.96; Saturday at main 0.30 of a weekday",
+   "ru": "mon 0.98 tue 1.05 wed 1.02 thu 1.00 fri 1.03 sat 1.10 sun 0.82",
+   "class": "X",
+   "basis": "designed (X). Orders opened per weekday against the weekday mean; Monday is the heaviest drop-off day (ledger: busiest call day Monday). The Saturday morning at main opens 0.30 of a weekday's orders (ledger volume.saturday_orders.main), which gives the ledger's 808 orders a month: (17.04 + 10.98 + 8.98) x 21.24 + 5.15 x 4.35. RU: designed (X). The shops open every day. Saturday is the private owner's day and the heaviest; Sunday the lightest (Callibri 2025: inquiries peak on Tuesday and are lowest on Sunday, no values published).",
+   "check": "orders opened by weekday"
+  },
+  {
+   "key": "hour-of-day curve of arrivals",
+   "en": "07:30 16% 08:00 24% 09:00 13% 10:00 9% 11:00 7% 12:00 6% 13:00 7% 14:00 7% 15:00 6% 16:00 4% 17:00 1%",
+   "ru": "09:00 15% 10:00 12% 11:00 10% 12:00 9% 13:00 8% 14:00 8% 15:00 8% 16:00 8% 17:00 9% 18:00 9% 19:00 4%",
+   "class": "X",
+   "basis": "no source in either market; shaped by opening hours and story S3",
+   "check": "orders by hour of check-in"
+  },
+  {
+   "key": "parts tier mix (economy / standard / premium)",
+   "en": "25 / 55 / 20 %",
+   "ru": "40 / 42 / 18 %",
+   "class": "X",
+   "basis": "designed (X), range economy 0.15 to 0.35: a general repair shop quotes the mainstream aftermarket line first; premium and original parts go on newer cars and on request. The supplier west kept sells more economy (story S6); that split is a story row, not this one. RU: designed (X), range economy 0.30 to 0.50: an older parc and price-led customers; original parts mostly on cars under ten years.",
+   "check": "part lines by tier of the catalogue option"
+  },
+  {
+   "key": "parts gross margin, tier-weighted",
+   "en": "51.1 %",
+   "ru": "30.2 %",
+   "class": "M / X",
+   "basis": "EN: inside the survey's most common band, 50 to 59 % (Ratchet+Wrench 2026). RU: designed, range 25 to 35 %, reasoning in catalogue.json configurations.ru.parts_margin",
+   "check": "1 - cost / price over part lines"
+  },
+  {
+   "key": "labour rate before the rise",
+   "en": "125.00 USD",
+   "ru": "1 760 RUB before the last rise; 1 500 and 1 620 before the two earlier ones (ledger price.hour.history)",
+   "class": "D",
+   "basis": "posted hour / 1.08, rounded to the price list (135 / 1.08 = 125.00; 1 900 / 1.08 = 1 759)",
+   "check": "labor_rate rows by date"
+  },
+  {
+   "key": "company-account labour rate",
+   "en": "121.50 USD (112.50 before)",
+   "ru": "1 700 RUB (1 580 before the last rise; 1 350 and 1 460 earlier)",
+   "class": "X",
+   "basis": "for the two big accounts: 10 % under the posted hour, range 5 to 15 %; parts 10 % off list. Taken as 5.5 % of sales in both configurations when the list price is turned into money (ledger acct.big_two_share)",
+   "check": "labor_rate rows of the price class"
+  },
+  {
+   "key": "shop supplies",
+   "en": "5 % of hourly labour, at most 35 USD an order",
+   "ru": "3 % of hourly work, at most 500 RUB an order",
+   "class": "X",
+   "basis": "common practice, no measured figure; chosen so that story S8's bill reads 742 USD (720 + 21.60)",
+   "check": "order_fee rows"
+  },
+  {
+   "key": "discounts and coupons, share of sales",
+   "en": "1.0 %",
+   "ru": "1.0 %",
+   "class": "X",
+   "basis": "range 0.5 to 2 %; outside story S2",
+   "check": "discount totals over sales"
+  },
+  {
+   "key": "menu pricing: labour at list over billed hours x posted hour",
+   "en": "0.894",
+   "ru": "1.054",
+   "class": "D",
+   "basis": "EN: oil service, rotation, inspections and tests are sold under their hours, which is most of the gap between the posted and the effective rate (ledger: 85 %). RU: fixed-price jobs (шиномонтаж, сход-развал, диагностика) sit above the hour, which offsets the account rate, discounts and free rework, so the ledger's 2.2 x 1 900 holds.",
+   "check": "labour sales / (sold hours x posted hour)"
+  },
+  {
+   "key": "parts sent back to the supplier",
+   "en": "6 % (ledger)",
+   "ru": "4 %",
+   "class": "X",
+   "basis": "RU: no figure found. Range 3 to 6 %. Set under the US 5 to 8 % because parts are ordered by VIN from wholesalers that take returns slowly and often keep a fee, so advisers confirm the part before ordering; wrong-part returns still happen on cars with several fitments.",
+   "check": "part_return rows over purchase_order_line rows"
+  },
+  {
+   "key": "vehicle classes of customers' cars (car / suv / truck / van)",
+   "en": "52.6 % / 19.9 % / 21.5 % / 5.9 %",
+   "ru": "60.9 % / 27.6 % / 4.1 % / 7.4 %",
+   "class": "D",
+   "basis": "sum of parc.json shares by class",
+   "check": "vehicles by class"
+  },
+  {
+   "key": "age of customers' cars",
+   "en": "mean 12.8 years",
+   "ru": "mean 13.6 years, 69.0 % older than ten",
+   "class": "M / X",
+   "basis": "EN: S&P Global Mobility 2025, 12.8 years. RU: 69 % older than ten is Автостат's figure for the parc (2026-01-01). The mean is a reported gap: the design asks for over 15 years (the parc), cars seen at independent services average 12.7 (Fit Service 2025), and 28.0 % of this shop's cars are models that did not exist fifteen years ago, so with this list of models the mean cannot pass 14.7 even with implausible age weights. Proposed: accept the value here.",
+   "check": "mean of (year of T - vehicle.year) and the share over ten"
+  }
+ ]
+}

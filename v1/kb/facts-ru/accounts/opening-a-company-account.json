@@ -1,0 +1,109 @@
+{
+ "path": "accounts/opening-a-company-account.md",
+ "title": "Как заключить договор с организацией",
+ "title_en": "Opening a company account",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/opening-a-company-account.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Who qualifies for an account and the steps to open one.",
+ "serves": [
+  "S1",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_ru": 178,
+ "links_to": [
+  "accounts/company-account-terms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The account is a service contract with deferred payment: 14 days under ten vehicles, 30 from ten (A3 with 9 and A4 with 8 at 14 days; the rest at 30).",
+  "The company sends its details card (ИНН, КПП, bank) instead of a credit application.",
+  "One more step: a power of attorney for the drivers."
+ ],
+ "new_facts": [
+  "The fleet-size rule for the days; six months as a paying customer first (as in English).",
+  "A power of attorney for drivers is a condition of the contract."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Пять автомобилей и больше, и не меньше полугода работы с нами с оплатой при выдаче."
+  },
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Организация присылает карточку с реквизитами (бланк есть у Ирины Владимировны) и называет двух людей: кто согласует работы и кто отвечает за оплату. Это может быть один человек."
+  },
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Договор подписываю я и я же устанавливаю лимит задолженности. Больше договоры не заключает никто."
+  },
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Отсрочка: 14 дней, если в парке меньше десяти машин, 30 дней — от десяти."
+  },
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Организация выдаёт доверенность на водителей, которые сдают и забирают машины. Без неё водитель не может подписать ни заказ-наряд, ни акт."
+  },
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Сергей Анатольевич пишет страницу клиента в этом разделе и добавляет строку в таблицу условий: кто согласует работы и что нужно знать сервису. Нет страницы — нет договора."
+  },
+  {
+   "section": "Как заключить договор с организацией",
+   "item": "Ирина Владимировна заводит договор и отсрочку в программе. С этого дня на приёмке с машин клиента денег не берём."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирины Владимировны",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-10mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

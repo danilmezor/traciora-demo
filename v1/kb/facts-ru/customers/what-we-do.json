@@ -1,0 +1,121 @@
+{
+ "path": "customers/what-we-do.md",
+ "title": "Что мы делаем и чего не делаем",
+ "title_en": "What we work on, and what we don't",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/what-we-do.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Scope of work for the public: services offered, and the work we send out or decline.",
+ "serves": [
+  "S7",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_ru": 187,
+ "links_to": [
+  "customers/hybrids-and-electric-cars.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Seasonal tyre changeover and tyre storage are on the list (10.2 % of a year's orders, ledger season.tyre.share_of_orders).",
+  "Sublet: gearbox rebuild and steering-rack repair (catalogue ru: steering_rack is a sublet repair), glass by V7 at the Ulyanovsk shops.",
+  "Technical inspection (техосмотр) and diagnostic cards are deliberately mentioned nowhere: the Russian twin of the planted \"emissions test\" gap."
+ ],
+ "new_facts": [
+  "Not done: accident body repair and paint, high-voltage repairs, diesel engine overhaul, motorcycles, motorhomes, trucks heavier than a ГАЗель."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что делаем",
+   "item": "ТО по регламенту: масло, фильтры, жидкости, свечи, ремни"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Тормозная система"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Шиномонтаж, сезонная замена шин и их хранение, балансировка, сход-развал"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Компьютерная диагностика двигателя и поиск неисправностей электрики"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Ходовая часть и рулевое управление"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Кондиционеры: диагностика, заправка, ремонт"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Аккумуляторы, стартеры, генераторы"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Система охлаждения, ремни ГРМ, течи, опоры двигателя, выхлопная система"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Масло в коробке, сцепление, ШРУСы"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Проверка автомобиля перед покупкой"
+  },
+  {
+   "section": "Что делаем",
+   "item": "Обслуживание автомобилей организаций по договору"
+  },
+  {
+   "section": "Что делаем через подрядчика",
+   "item": "Капитальный ремонт АКПП и ремонт рулевых реек. Снимаем и ставим агрегат мы, перебирает его специализированная мастерская в Ульяновске. Заказ-наряд и оплата — у нас."
+  },
+  {
+   "section": "Что делаем через подрядчика",
+   "item": "Стёкла. Лобовые и боковые стёкла меняет стекольная компания, мастер приезжает в наши ульяновские сервисы по записи."
+  },
+  {
+   "section": "Чего не делаем",
+   "item": "Кузовной ремонт и покраску"
+  },
+  {
+   "section": "Чего не делаем",
+   "item": "Ремонт высоковольтной части гибридов и электромобилей (подробнее)"
+  },
+  {
+   "section": "Чего не делаем",
+   "item": "Капитальный ремонт дизельных двигателей"
+  },
+  {
+   "section": "Чего не делаем",
+   "item": "Мотоциклы, автодома и грузовики тяжелее «Газели»"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

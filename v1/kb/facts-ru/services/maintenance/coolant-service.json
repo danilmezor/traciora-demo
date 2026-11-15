@@ -1,0 +1,112 @@
+{
+ "path": "services/maintenance/coolant-service.md",
+ "title": "Замена антифриза",
+ "title_en": "Coolant service",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/coolant-service.json",
+ "first_revision_text": "ru/_history/services/maintenance/coolant-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Coolant drain, flush and fill.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 123,
+ "links_to": [
+  "services/engine/cooling-system-repairs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Замена охлаждающей жидкости», 1.2 н/ч, six litres. Coolant is chosen by the maker's approval, not by colour."
+ ],
+ "new_facts": [
+  "Five years as the interval."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Замена антифриза",
+   "item": "Продаётся из осмотра: механик проверяет антифриз тестером и пишет результат."
+  },
+  {
+   "section": "Замена антифриза",
+   "item": "Антифриз подбирается по допуску производителя, а не по цвету. У Renault он один, у Hyundai и Kia другой, у «Газели» третий. «Любой красный» в машину моложе десяти лет не льём."
+  },
+  {
+   "section": "Замена антифриза",
+   "item": "Антифриза мало — это течь, а не замена. Сначала опрессовка (950 ₽): Ремонт системы охлаждения."
+  },
+  {
+   "section": "Замена антифриза",
+   "item": "В любую работу, где система охлаждения вскрывается (помпа, термостат, радиатор, ремень ГРМ на части моторов), антифриз уже входит. Сверху эту работу не продаём."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "coolant_exchange",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "coolant_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4560.0
+  },
+  {
+   "catalogue_key": "cooling_pressure_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 950.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  950.0,
+  4560.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,101 @@
+{
+ "path": "shops/main/README.md",
+ "title": "Московское шоссе",
+ "title_en": "East Main",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/main/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Front page of the flagship's own pages.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "operate:overview"
+ ],
+ "length_class": "tiny",
+ "words_ru": 79,
+ "links_to": [
+  "shops/main/hours-and-getting-here.md",
+  "shops/main/who-is-who.md",
+  "shops/main/opening-and-closing.md",
+  "shops/main/how-the-day-runs.md",
+  "shops/main/saturdays.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Only at the flagship: slot 10 and hard diagnostics, hybrids, R1234yf, an alignment stand for long-wheelbase ГАЗель vans, two tyre machines, the office and the parts store.",
+  "The fifth link is «Выходные и праздничные дни»: the Russian counterpart of the Saturday page."
+ ],
+ "new_facts": [
+  "An alignment stand that takes a long ГАЗель; two tyre-fitting machines (colour; slot 15 and the seasonal fitter work side by side)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Московское шоссе",
+   "item": "Часы и как проехать"
+  },
+  {
+   "section": "Московское шоссе",
+   "item": "Кто есть кто"
+  },
+  {
+   "section": "Московское шоссе",
+   "item": "Открытие и закрытие"
+  },
+  {
+   "section": "Московское шоссе",
+   "item": "Как проходит день"
+  },
+  {
+   "section": "Московское шоссе",
+   "item": "Выходные и праздничные дни"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирины Владимировны",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паши",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

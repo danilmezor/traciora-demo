@@ -1,0 +1,99 @@
+{
+  "format": "seed-conversation/1",
+  "id": "07-s13-web-stocktake-question",
+  "configuration": "ru",
+  "number": 7,
+  "story": "S13",
+  "title": "Про день инвентаризации спрашивают на сайте: ассистент отвечает сам",
+  "demonstrates": "Web chat, assistant sends: two customer lines, two answers from the dated hours, no person. The chat stays the assistant's: pending at T, in All with the Agent mark, owed nothing.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {"name": "Посетитель сайта", "invented": true, "first_time": true},
+    "staff": []
+  },
+  "scenario": {
+    "who_writes": "Человек, который хочет поменять масло в определённый день после обеда.",
+    "what_happens": "Он спрашивает, работает ли сервис 19-го после обеда. Ассистент отвечает: нет, почему и когда открыто; предлагает передать заявку на утро и не настаивает, когда отказываются.",
+    "facts": {
+      "stocktake": "четверг недели W+1: все сервисы работают до 12:00 (card S13; ledger site.stocktake). Номинально четверг, 19 ноября 2026.",
+      "hours": "9:00–20:00, без выходных",
+      "public_pages_used": ["часы работы и адреса, с датой инвентаризации"]
+    }
+  },
+  "days": {
+    "T-4d": {"anchor": "the Monday of week W0", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 0}, "nominal": "Mon 2026-11-09", "what": "the customer's question (card S13: the Monday of week W0 when it is before T)"},
+    "T+6d": {"anchor": "the Thursday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": -1}, "nominal": "Thu 2026-11-19", "what": "the stocktake: every shop closes at 12:00"}
+  },
+  "floating_days": [
+    {"word": "19го", "said_on": "T-4d", "day": "T+6d", "form": "date"},
+    {"word": "19 ноября", "said_on": "T-4d", "day": "T+6d", "form": "date"},
+    {"word": "в пятницу", "said_on": "T-4d", "day": "not fixed: he may mean either Friday, and the assistant does not guess", "form": "в + accusative"},
+    {"word": "По пятницам", "said_on": "T-4d", "day": "any Friday", "form": "по + dative"}
+  ],
+  "disagrees_with": "DESIGN.md section 6 puts this chat on the 2nd full open day before T; card S13 puts it on the Monday of week W0 when that day is before T. The card is followed. The card's footprint says 'resolved'; the ledger (conv.open_at_t) and the design name it as pending at T, and it is pending here: under seven silent days have passed.",
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0007-4e00-8000-00000000a007",
+      "peer": {"id": "seedv1-browser-ru-0388", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0388",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-4d", "at": "13:22:40", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-4d", "at": "13:22:40", "kind": "message", "from": "customer", "text": "добрый день. 19го после обеда работаете? масло поменять хотел"},
+        {"n": 2, "day": "T-4d", "at": "13:23:02", "kind": "message", "from": "assistant", "text": "Добрый день! 19 ноября все три сервиса «Ермак-Сервис» работают до 12:00: во второй половине дня у нас инвентаризация. С 9:00 до 12:00 принимаем как обычно, в остальные дни работаем с 9:00 до 20:00. Передать мастерам, чтобы вас записали на утро?"},
+        {"n": 3, "day": "T-4d", "at": "13:24:15", "kind": "message", "from": "customer", "text": "не, с утра не могу. в пятницу тогда заеду"},
+        {"n": 4, "day": "T-4d", "at": "13:24:38", "kind": "message", "from": "assistant", "text": "Хорошо! По пятницам работаем как обычно, с 9:00 до 20:00. Хорошего дня!"}
+      ],
+      "assignee_history": [],
+      "state_at_t": {
+        "status": "pending",
+        "owner": null,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "shown_as": "in All with the Agent mark; not in the Queue: nobody is owed an answer",
+        "later": "Chatwoot resolves it after 7 silent days, three days after T: not in the data"
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 22},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 22},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 23}
+        ],
+        "message_kinds": {"customer": 2, "assistant": 2, "manager": 0, "note": 0},
+        "resolutions": [],
+        "draft_outcomes": [],
+        "operator_credit": "nobody: the assistant is not an operator"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "hours, address, do you work on this",
+    "handled": "the assistant alone",
+    "outcome": "answered; pending at T, the assistant's",
+    "facts": [
+      "no: every shop closes at 12:00 that day for the stocktake",
+      "the morning is open from 9:00",
+      "a hand-over for a morning time was offered and declined"
+    ],
+    "questions": ["S13.1", "S13.3"]
+  },
+  "why": [
+    "Такие переписки в жизни именно такой длины.",
+    "Ассистент предлагает передать заявку на утро и не настаивает, когда отказываются.",
+    "Ответ на вопрос «работаем ли мы в этот день после обеда» есть здесь словами ассистента, а в файле 08 — словами человека."
+  ],
+  "new_facts": []
+}

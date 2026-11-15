@@ -1,0 +1,136 @@
+{
+  "format": "seed-conversation/1",
+  "id": "12-people-p06-telegram-naydennye-raboty",
+  "configuration": "ru",
+  "number": 12,
+  "story": "people",
+  "title": "Алина в Telegram: при ТО нашли две работы, одна согласована, от другой отказались",
+  "demonstrates": "Found work on a messenger. Slot 6 answers in under five minutes with photos, the urgent finding first with its price and what it does, the second offered without pressure. The customer takes one; the assistant's summary of the decision goes out as it was. A closing 'еду' needs no answer, so she clears the draft, labels and resolves.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Эльвира Насибуллина",
+      "invented": true,
+      "first_time": false,
+      "note": "клиентка сервиса на Московском шоссе; Kia Sportage 2017, приехала на ТО"
+    },
+    "staff": [
+      {"slot": 6, "name": "Алина Хасанова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Клиентка, чья машина с утра на ТО.",
+    "vehicle": "Kia Sportage 2017",
+    "what_happens": "Спрашивает, не нашли ли чего. Нашли: разбитые стойки стабилизатора и щётки, которые полосят. Стойки она согласует, щётки муж купит сам.",
+    "facts": {
+      "approved": "стойки стабилизатора, 4 463",
+      "declined": "щётки стеклоочистителя, 3 403",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "4 463 ₽", "amount": 4463.0, "what": "замена стоек стабилизатора передних, пара, класс suv", "from": {"catalogue": "sway_bar_links", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "3 403 ₽", "amount": 3403.0, "what": "замена щёток стеклоочистителя, класс suv", "from": {"catalogue": "wiper_blades", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-35d": {"anchor": "slot 6's first working day on or after the Friday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 5, "on_or_after_for_slot": 6}, "nominal": "Fri 2026-10-09"}
+  },
+  "floating_days": [
+    {"word": "сегодня", "said_on": "T-35d", "day": "T-35d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "4503599627372788",
+      "peer": {"id": "4503599627372788", "name": "Эльвира"},
+      "contact": {
+        "identifier": "telegram_4503599627372788",
+        "name": "Эльвира",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "opened": {
+        "day": "T-35d",
+        "at": "13:10:20",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-35d", "at": "13:10:20", "kind": "message", "from": "customer", "text": "Алина, здравствуйте. как там мой спортейдж, что-то нашли?"},
+        {"n": 2, "day": "T-35d", "at": "13:11:05", "kind": "draft", "id": "d1", "text": "Эльвира, здравствуйте! Данных по вашей машине у меня сейчас нет. Уточню у мастера и сразу напишу.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 6, "day": "T-35d", "at": "13:14:50", "became": 4}},
+        {"n": 3, "day": "T-35d", "at": "13:14:48", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 4, "day": "T-35d", "at": "13:14:50", "kind": "message", "from": "staff", "slot": 6, "text": "Эльвира, здравствуйте! Как раз собиралась вам писать. ТО сделали, при осмотре нашли две вещи, фото ниже. Стойки стабилизатора спереди разбиты, это они стучат на кочках: 4 463 ₽ за пару с работой, минут сорок. И щётки стеклоочистителя полосят, 3 403 ₽, но с ними можно и подождать. Делаем что-то из этого сегодня?", "files": [{"kind": "image", "file": "sportage_stoyka.jpg", "pool": "worn-part-sway-link", "shows": "стойка стабилизатора в руке механика, пыльник порван, палец шарнира болтается"}, {"kind": "image", "file": "sportage_schetki.jpg", "pool": "worn-wiper", "shows": "лобовое стекло под дождём, от щётки остаются полосы"}]},
+        {"n": 5, "day": "T-35d", "at": "13:19:30", "kind": "message", "from": "customer", "text": "стойки делайте. щётки муж сам купит)"},
+        {"n": 6, "day": "T-35d", "at": "13:20:10", "kind": "draft", "id": "d2", "text": "Хорошо, Эльвира. Стойки стабилизатора меняем сегодня, 4 463 ₽, щётки не трогаем. Напишем, когда машина будет готова.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-35d", "at": "13:21:30", "became": 7}},
+        {"n": 7, "day": "T-35d", "at": "13:21:30", "kind": "message", "from": "staff", "slot": 6, "text": "Хорошо, Эльвира. Стойки стабилизатора меняем сегодня, 4 463 ₽, щётки не трогаем. Напишем, когда машина будет готова."},
+        {"n": 8, "day": "T-35d", "at": "13:21:50", "kind": "activity", "what": "label_added", "label": "согласование", "by": 6},
+        {"n": 9, "day": "T-35d", "at": "15:02:10", "kind": "message", "from": "staff", "slot": 6, "text": "Эльвира, машина готова, можно забирать. Мы до 20:00."},
+        {"n": 10, "day": "T-35d", "at": "15:05:20", "kind": "message", "from": "customer", "text": "еду"},
+        {"n": 11, "day": "T-35d", "at": "15:06:00", "kind": "draft", "id": "d3", "text": "Ждём вас!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 6, "day": "T-35d", "at": "15:07:10", "because": "cleared from the reply box"}},
+        {"n": 12, "day": "T-35d", "at": "15:07:20", "kind": "activity", "what": "resolved", "by": 6}
+      ],
+      "assignee_history": [
+        {"day": "T-35d", "at": "13:14:48", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["согласование"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 6, "working_minutes": 4.5},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 6, "working_minutes": 4.5, "wall_minutes": 4.5, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 6, "working_minutes": 2.0, "wall_minutes": 2.0, "measured_from": "n 5", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 4,
+          "working_minutes": 4.5,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-35d", "at": "15:07:20", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 6},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 6},
+          {"draft": "d3", "outcome": "discarded", "manager": 6}
+        ],
+        "operator_credit": "slot 6: first answer 4.5 minutes (her ledger row is 4), three replies, one draft edited, one sent as it was, one cleared, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "slot 6; the assistant drafts",
+    "outcome": "стойки стабилизатора согласованы (4 463), щётки — отказ; закрыт слотом 6",
+    "facts": [
+      "two findings, each with a photo",
+      "approved: front sway bar links; declined: wiper blades",
+      "ready the same afternoon"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Первый черновик пуст, потому что ассистент не видит машину; Алина оставляет приветствие и пишет остальное.",
+    "Срочное — первым, с причиной и ценой; второе предложено, а не навязано.",
+    "На «еду» отвечать нечего: черновик она убирает."
+  ],
+  "new_facts": [
+    "Эльвира Насибуллина (в Telegram «Эльвира»), Kia Sportage 2017, main, первый рабочий день слота 6 начиная с пятницы недели T-5: ТО; стойки стабилизатора согласованы, 4 463; щётки стеклоочистителя — отказ, 3 403.",
+    "Фото sportage_stoyka.jpg и sportage_schetki.jpg (пулы 'worn-part-sway-link', 'worn-wiper').",
+    "У контакта нет картинки."
+  ]
+}

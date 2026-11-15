@@ -1,0 +1,114 @@
+{
+ "path": "services/brakes/brake-questions.md",
+ "title": "Brake questions",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "F3",
+ "purpose": "An old FAQ by an advisor who has left: still carries the labour rate and brake prices from before the rise. Stale on purpose (S12).",
+ "serves": [
+  "S12",
+  "S8",
+  "challenge:near-duplicate",
+  "operate:contradiction",
+  "operate:propose"
+ ],
+ "length_class": "short",
+ "words_en": 149,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S12: old labour rate and brake prices",
+ "facts": [
+  "STALE ON PURPOSE (S12): the second of the two pages that still carry the labour rate from before the rise. Labour rate 125.00; front pads and rotors 475.00; rear pads and rotors 452.27; front pads 223.86; rear pads 214.77; inspection 46.25; fluid flush 141.00 (all catalogue before_rise totals, standard tier, class car).",
+  "Current figures on the price list: 493.00; 470.27; 234.86; 225.77; 49.95; 151.00.",
+  "Written by slot F3 (Brad Keller, resigned the Monday of week T-30), signed \"BK\", dated T-9 months; nobody owns it and no index links to it.",
+  "Public (ledger s12.pages): the website assistant can read it and could quote the old figures to a customer.",
+  "Story call 12 (the Tuesday of week T-5): slot 7 priced front brakes from this page (475.00 against 493.00: ledger s12.brake_price); his second wrong promise.",
+  "No correction has been proposed for this page: only the timing belt page has one waiting.",
+  "Its other answers (no rotor turning, 24/24, pads 12/12, no lifetime pads) agree with the current pages."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "configurations.en.labour_rate.standard.before_rise",
+   "what": "labour hour",
+   "value": 125.0,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 475.0
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 452.27
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 223.86
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 214.77
+  },
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 46.25
+  },
+  {
+   "catalogue_key": "brake_fluid_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 141.0
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian stale page at 1 760 руб./н-ч with the before_rise totals of the same four jobs; signed by slot F3's initials (ВС)."
+ ]
+}

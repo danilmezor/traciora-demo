@@ -1,0 +1,736 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-17-a5-complaint",
+  "configuration": "ru",
+  "number": 17,
+  "story": "S1",
+  "title": "The electricians' manager on the two brake comebacks and the bill; the shop manager promises to call back",
+  "purpose": "Story S1, call 17. The contact of account A5 rings the Kazan shop: two vans in a row came back after brake jobs, and the invoice for the first job on the second van is still on his desk. The shop manager defends the pads and the mechanic, then promises to look into it and call back \"one of these days\". He never does. A complaint about existing jobs: no score.",
+  "cast": {
+    "advisor": {
+      "slot": 22,
+      "name": "Ринат Фаридович Галиев",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Рустем Ильгизович Фаттахов",
+      "company": "Идель-Электромонтаж",
+      "account": "A5",
+      "ref": "accounts.json ru.A5 contacts[0]",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "slot": 27,
+        "name": "Виталий Сомов"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Tuesday of week T-19 (rule R6; card S01, call 17)",
+    "nominal_offset": "T-136d",
+    "nominal_date": "2026-06-30",
+    "local_start": "11:10",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "301",
+    "ring_s": 19,
+    "caller_phone": "+7 907 906-45-83",
+    "repeat_caller": false,
+    "talk_s": 142
+  },
+  "scenario": {
+    "who_calls": "Рустем Ильгизович Фаттахов, deputy director of account A5, a customer of the shop since before it was bought.",
+    "vehicle": "units Э-1 (ГАЗель Next van, 2018, Р418ВХ116) and Э-10 (Ford Transit van, 2018, В763РЕ716)",
+    "job": "front pads fitted by slot 27 with the supplier's house brand; both came back inside the 30-day warranty and were redone free",
+    "wants": "an explanation, and not to pay the invoice for the first job on the Transit until he has one",
+    "what_happens": "He lays out the two comebacks and the invoice. The shop manager says both were redone under warranty, that the invoice is for work done, that the pads are the ones the supplier brings and the mechanic is experienced. The customer says he will not pay until it is sorted out and that a third comeback will end it. The shop manager says he will pull the orders, talk to the mechanic and call back; asked when, \"one of these days\".",
+    "facts": {
+      "comeback_orders_opened": [
+        "the Tuesday of week T-26 (Э-1)",
+        "the Tuesday of week T-22 (Э-10)"
+      ],
+      "pads": "BREMHOF (vendors.json V2 house brand)",
+      "disputed_invoice": "the invoice of the first pad job on Э-10",
+      "warranty": "30 days on mechanical work",
+      "callback": "promised without a date; never made",
+      "note": "Ledger s1.a5. No amount is named on the call."
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Сервис, да."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 1.7,
+      "said": "Ринат Фаридович? Фаттахов, «Идель-Электромонтаж»."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 4.3,
+      "said": "А, Рустем Ильгизович. Здравствуйте. Слушаю вас."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 8.8,
+      "said": "Ринат Фаридович, я по тормозам. У меня вторая машина подряд после вашего ремонта возвращается. Сначала Газель, месяца полтора назад, теперь Транзит. Колодки меняли — через три недели опять скрип и педаль ватная."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 24.2,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 26.1,
+      "said": "Ну, мы же обе по гарантии переделали. Бесплатно."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 31.4,
+      "said": "Переделали. А машина при этом два дня стоит, бригада сидит без колёс. И счёт за Транзит — за ту, первую замену — вы мне всё равно выставили. Он у меня на столе лежит."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 46.9,
+      "said": "Ну.",
+      "overlap": true
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 49.0,
+      "said": "Счёт за первую работу, всё правильно. Работа сделана, колодки поставлены."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 55.6,
+      "said": "Какие колодки-то? Я в акте читаю: Бремхоф. Мне механик мой говорит — это самые дешёвые, какие есть. Вы зачем на коммерческую машину такое ставите?"
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 68.9,
+      "said": "Э-э... какие поставщик привёз, такие и ставим. Мы с ними давно работаем, нормальные колодки."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 77.1,
+      "said": "Нормальные — это когда не возвращаются. У вас кто их менял? Один и тот же мастер?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 86.2,
+      "said": "Виталий менял. Он у нас тормозами занимается, опытный."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 91.3,
+      "said": "Ну вот, опытный. Две машины из двух. Ринат Фаридович, я вас давно знаю, ещё при старом хозяине к вам ездил, я ругаться не хочу. Но этот счёт я платить не буду, пока не разберёмся. И если третья машина так вернётся — мы уйдём, честно говорю."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 113.6,
+      "said": "Ну.",
+      "overlap": true
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 115.1,
+      "said": "Ну зачем сразу — уйдём... Давайте так. Я наряды подниму, с Виталием поговорю и вам перезвоню."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 123.5,
+      "said": "Когда?"
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 125.7,
+      "said": "На днях. Как разберусь."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 128.4,
+      "said": "На днях... Хорошо. Я жду звонка. И по счёту тоже жду ответа."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 135.9,
+      "said": "Перезвоню."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 138.1,
+      "said": "До свидания."
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 140.0,
+      "said": "Всего доброго."
+    }
+  ],
+  "recognition": {
+    "profile": "marked",
+    "consensus_score": 0.38,
+    "restoration_tier": "medium",
+    "noise": "the shop manager takes the call at the workshop door: an impact wrench and a radio behind him",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "one т lost in the surname",
+        "script_turn": 2,
+        "said": "Фаттахов",
+        "stored": "Фатахов",
+        "error": true
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name heard as plain words",
+        "script_turn": 2,
+        "said": "«Идель-Электромонтаж»",
+        "stored": "идеал электромонтаж",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "the pad brand heard approximately",
+        "script_turn": 10,
+        "said": "Бремхоф",
+        "stored": "Бремхов",
+        "error": true
+      },
+      {
+        "rule": "R6",
+        "what": "noise: an uncertain span marked",
+        "script_turns": [
+          4,
+          11
+        ],
+        "said": [
+          "и педаль ватная",
+          "Мы с ними давно работаем, нормальные колодки."
+        ],
+        "stored": [
+          "{?likely: и педаль ватная}",
+          "{?likely: Мы с ними давно работаем}, нормальные колодки."
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: words gone without a trace",
+        "script_turns": [
+          6,
+          7,
+          12,
+          14,
+          16,
+          19,
+          19
+        ],
+        "said": [
+          " Бесплатно.",
+          " Он у меня на столе лежит.",
+          "Один и тот же мастер?",
+          "Ну вот, опытный. ",
+          "Ну зачем сразу — уйдём... ",
+          "На днях... Хорошо. ",
+          "И по счёту тоже жду ответа."
+        ],
+        "stored": [
+          "",
+          "",
+          "Один и тот же?",
+          "",
+          "",
+          "",
+          "И по счёту тоже."
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a phrase replaced by a plausible wrong one",
+        "script_turn": 7,
+        "said": "бригада сидит без колёс",
+        "stored": "бригада сидит без дела",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: uncertain spans marked",
+        "script_turn": 10,
+        "said": "это самые дешёвые, какие есть",
+        "stored": "{?likely: это самые дешёвые}",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: seven words gone without a trace",
+        "script_turn": 14,
+        "said": "ещё при старом хозяине к вам ездил, ",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          4,
+          6
+        ],
+        "said": [
+          "месяца полтора назад",
+          "Ну, мы же обе"
+        ],
+        "stored": [
+          "месяц-полтора назад",
+          "Мы же обе"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          8,
+          15
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          5
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4,
+          7
+        ],
+        "said": [
+          "Транзит",
+          "Транзит"
+        ],
+        "stored": [
+          "Transit",
+          "Transit"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "'Газель' as a common noun, in lower case",
+        "script_turns": [
+          4
+        ],
+        "said": "Газель",
+        "stored": "газель",
+        "error": true
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          11
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 3,
+        "lost": 2,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 6,
+        "dropped": 6
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 2
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 5,
+        "wrong": 2
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 2
+      },
+      "money_time": {
+        "mentions": 1,
+        "as_digits": 0,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 12,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 3
+    },
+    "script_words": 236,
+    "stored_words": 206,
+    "strict_word_difference": 0.203
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 225,
+    "duration_s": 142.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сервис, да.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ринат Фаридович? Фатахов, идеал электромонтаж.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А, Рустем Ильгизович. Здравствуйте. Слушаю вас.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ринат Фаридович, я по тормозам. У меня вторая машина подряд после вашего ремонта возвращается. Сначала газель, месяц-полтора назад, теперь Transit. Колодки меняли, через три недели опять скрип {?likely: и педаль ватная}.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Угу. Мы же обе по гарантии переделали.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Переделали. А машина при этом два дня стоит, бригада сидит без дела. И счёт за Transit, за ту, первую замену, вы мне всё равно выставили.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Счёт за первую работу, всё правильно. Работа сделана, колодки поставлены.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Какие колодки-то? Я в акте читаю: Бремхов. Мне механик мой говорит, {?likely: это самые дешёвые}. Вы зачем на коммерческую машину такое ставите?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Какие поставщик привёз, такие и ставим. {?likely: Мы с ними давно работаем}, нормальные колодки.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Нормальные, это когда не возвращаются. У вас кто их менял? Один и тот же?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Виталий менял. Он у нас тормозами занимается, опытный.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Две машины из двух. Ринат Фаридович, я вас давно знаю, я ругаться не хочу. Но этот счёт я платить не буду, пока не разберёмся. И если третья машина так вернётся, мы уйдём, честно говорю.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте так. Я наряды подниму, с Виталием поговорю и вам перезвоню.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Когда?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На днях. Как разберусь.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я жду звонка. И по счёту тоже.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Перезвоню.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всего доброго.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Сервис, да.",
+        "level": 0,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "Перезвоню.",
+        "level": 0,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint",
+      "warranty"
+    ],
+    "strength": {
+      "quote": "Давайте так. Я наряды подниму, с Виталием поговорю и вам перезвоню.",
+      "why": "Предложил конкретные действия: поднять наряды и поговорить с механиком. Это единственное место, где он перестал защищаться.",
+      "segment": 12
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "Перезвоню.",
+      "say": "Рустем Ильгизович, значит, так: сегодня поднимаю оба наряда и говорю с Виталием, завтра до обеда звоню вам на этот номер с ответом и по колодкам, и по счёту за Транзит."
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 0,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "complaint",
+        "warranty"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "poor",
+      "strength_segment": 12,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Сервис, да",
+        "recap": "Перезвоню"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Давайте так. Я наряды подниму, с Виталием поговорю и вам перезвоню",
+        "why": "Предложил конкретные действия: поднять наряды и поговорить с механиком. Это единственное место, где он перестал защищаться."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "Перезвоню.",
+        "say": "Рустем Ильгизович, значит, так: сегодня поднимаю оба наряда и говорю с Виталием, завтра до обеда звоню вам на этот номер с ответом и по колодкам, и по счёту за Транзит."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 0,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 0,
+      "objection": "not_applicable"
+    },
+    "score": null
+  },
+  "why": {
+    "call_type": "existing_job: разговор о выполненных работах, гарантийных переделках и счёте.",
+    "greeting": "0: «Сервис, да»: ни названия компании, ни имени.",
+    "recap": "0: договорились о звонке, но перед прощанием он сказал только «перезвоню», без срока и без того, о чём.",
+    "score": "Оценки нет: применимых проверок две.",
+    "tags": "complaint: клиент оспаривает работу и счёт. warranty: обе машины переделаны по гарантии, и клиент ссылается на это.",
+    "outcome": "callback_promised: «с Виталием поговорю и вам перезвоню», срок «на днях». Звонка не было ни в 24 часа, ни позже, поэтому журнал звонков ставит автопровал callback_not_kept. Следом три звонка с этого номера остались без ответа (звонки 18–20).",
+    "asr_quality": "poor: в трёх строках из девятнадцати стоят пометки о неуверенности, название компании записано как «идеал электромонтаж», из реплики клиента выпали семь слов.",
+    "carried_by": []
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "not_kept",
+    "auto_fail": "callback_not_kept",
+    "note": "no outbound call to this number in the 24 hours after the call, or ever; the caller's next three calls (1, 6 and 9 days later) ring out: calls 18 to 20"
+  },
+  "day_report": {
+    "would_say": "В отчёте дня у Рината Фаридовича звонок без оценки: жалоба корпоративного клиента по двум гарантийным возвратам и счёту, обещан звонок без срока. Через сутки отчёт показывает автопровал: обещанный звонок не сделан."
+  },
+  "new_facts": []
+}

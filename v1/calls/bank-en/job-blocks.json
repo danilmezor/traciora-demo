@@ -1,0 +1,3700 @@
+{
+  "format": "bank-en/job-blocks/1",
+  "about": "The 24 jobs people phone about, chosen from catalogue.json by share of orders as the lead job (share_of_orders.lead). Three blocks fold a second catalogue job into the same phone conversation: front brakes (pads and rotors, pads alone), rear brakes (the same), the A/C (performance check, then a recharge). The 24 blocks cover catalogue jobs that are lead job on 74 % of English orders. Left out by share: rear shock absorbers (tied with the control arm, the CV axle and the water pump at 0.79 %; the last three are taken because callers describe them in their own words more often), and every job under 0.79 %.",
+  "chosen": [
+    [
+      "oil_service",
+      "oil_service",
+      0.2441
+    ],
+    [
+      "check_engine",
+      "check_engine_diag",
+      0.0885
+    ],
+    [
+      "front_brakes",
+      "front_pads_rotors + front_brake_pads",
+      0.0749
+    ],
+    [
+      "fleet_pm",
+      "fleet_pm_van",
+      0.051
+    ],
+    [
+      "battery",
+      "battery_replace + battery_test",
+      0.0408
+    ],
+    [
+      "scheduled_maintenance",
+      "scheduled_maintenance",
+      0.034
+    ],
+    [
+      "alignment",
+      "wheel_alignment",
+      0.0272
+    ],
+    [
+      "electrical",
+      "electrical_diag",
+      0.0272
+    ],
+    [
+      "rear_brakes",
+      "rear_pads_rotors + rear_brake_pads",
+      0.0318
+    ],
+    [
+      "new_tires",
+      "new_tyres_fitted",
+      0.0238
+    ],
+    [
+      "front_end_noise",
+      "suspension_diag",
+      0.0227
+    ],
+    [
+      "flat_repair",
+      "tyre_repair",
+      0.0227
+    ],
+    [
+      "air_conditioning",
+      "ac_performance_check + ac_recharge",
+      0.0341
+    ],
+    [
+      "front_struts",
+      "front_struts_pair",
+      0.0159
+    ],
+    [
+      "wheel_bearing",
+      "wheel_bearing",
+      0.0159
+    ],
+    [
+      "brake_inspection",
+      "brake_inspection",
+      0.0136
+    ],
+    [
+      "pre_purchase",
+      "pre_purchase_inspection",
+      0.0136
+    ],
+    [
+      "alternator",
+      "alternator",
+      0.0102
+    ],
+    [
+      "spark_plugs",
+      "spark_plugs",
+      0.0091
+    ],
+    [
+      "coolant_leak",
+      "cooling_pressure_test",
+      0.0091
+    ],
+    [
+      "starter",
+      "starter",
+      0.0091
+    ],
+    [
+      "control_arm",
+      "lower_control_arm",
+      0.0079
+    ],
+    [
+      "cv_axle",
+      "cv_axle",
+      0.0079
+    ],
+    [
+      "water_pump",
+      "water_pump",
+      0.0079
+    ]
+  ],
+  "jobs": [
+    {
+      "key": "oil_service",
+      "catalogue": {
+        "price": "oil_service",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.2441,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": false,
+      "job_said": [
+        "an oil change",
+        "a full synthetic oil change",
+        "the oil and filter"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need an oil change"
+        },
+        {
+          "kind": "accurate",
+          "need": "I'm about due for an oil change, the sticker says I'm past it"
+        },
+        {
+          "kind": "accurate",
+          "need": "I wanted to get the oil changed, it takes the full synthetic"
+        },
+        {
+          "kind": "vague",
+          "need": "I need to get it serviced, the little wrench light come on"
+        },
+        {
+          "kind": "vague",
+          "need": "it's time for its — its regular thing, the oil and all that"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a tune-up, I think, it's been forever since the oil was done"
+        },
+        {
+          "kind": "wrong",
+          "need": "my oil light's on, so I guess I just need an oil change"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is that the reminder on the dash that says service, or the red oil light, the little can?",
+          "answers": [
+            "the reminder, I think. It says oil life's real low",
+            "the little wrench one, the reminder",
+            "I don't know. It's a light"
+          ]
+        },
+        {
+          "q": "do you know about when it was done last, or what the sticker says?",
+          "answers": [
+            "the sticker says I was due a good while back",
+            "shoot, back in the spring sometime",
+            "I've got the receipt somewhere in the glovebox",
+            "it's been a good while, I'll tell you that"
+          ]
+        },
+        {
+          "q": "is it using any oil between changes, or leaving spots where you park?",
+          "answers": [
+            "no, not that I've seen",
+            "there's a little spot in the driveway, yeah",
+            "I had to add some a while back",
+            "not that I've noticed"
+          ]
+        },
+        {
+          "q": "about how many miles are on it?",
+          "answers": [
+            "right at a hundred and twenty thousand",
+            "it just rolled over ninety",
+            "I'd have to look, it's a lot"
+          ]
+        },
+        {
+          "q": "do you want to wait on it, or drop it off?",
+          "answers": [
+            "I'd wait, if it's not long",
+            "I'll drop it on my way to work",
+            "whichever's quicker"
+          ]
+        }
+      ],
+      "since_answers": [
+        "I've let it go a little long, honestly",
+        "the light come on a week or so ago",
+        "the little light's been on a while now",
+        "it's way past the sticker, I'm embarrassed to say"
+      ],
+      "explain": [
+        "it's oil and filter, and the guys top off the fluids and look it over while it's up",
+        "most everything now takes full synthetic, so it's the oil, a good filter, and a once-over"
+      ],
+      "price_statement": [
+        "a full synthetic oil change on the {car_model} is {price}",
+        "you're at {price} for the oil and filter"
+      ],
+      "depends": [
+        "That's up to five quarts, so a truck or a big engine runs a little more.",
+        "It just depends on how much oil it holds and what kind it calls for."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "{price}? The quick lube place does it for less than that",
+            "that's kinda high for an oil change",
+            "the place by my work does them cheaper",
+            "I've seen coupons for way less than that"
+          ],
+          "probe": "is theirs the full synthetic, or the regular oil?",
+          "probe_reply": [
+            "I don't know, they just say oil change",
+            "I think it's the regular"
+          ],
+          "answer_2": "a lot of those prices are conventional oil and whatever filter's on the shelf, and the {car_model} calls for full synthetic. Mine's the full synthetic and a good filter, and a tech actually looks the car over while it's up.",
+          "answer_1": "We use good oil and good filters.",
+          "answer_0": "Yeah, it's {price}."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "last place I went, they tried to sell me a bunch of stuff I didn't need",
+            "y'all ain't gonna try to sell me a bunch of extra junk, are you?",
+            "the last place tried to sell me everything under the sun",
+            "last time somebody tried to sell me a bunch of filters"
+          ],
+          "probe": "was it filters and flushes, or did they find something actually wrong?",
+          "probe_reply": [
+            "filters, a flush, I don't even know what all",
+            "they said I needed a whole bunch of fluids changed"
+          ],
+          "answer_2": "we do the oil change, and if the tech sees something he takes a picture and tells you if it's now or if it can wait. You say no, it's no, and you just pay for the oil change.",
+          "answer_1": "We're not like that.",
+          "answer_0": "No, no. So, when did you want to come in?"
+        },
+        {
+          "type": "time",
+          "customer": [
+            "how long does that take? I can't sit there half the day",
+            "I gotta be at work, I can't leave it all day",
+            "do I have to leave it, or can I sit there?",
+            "I can't be without it long, I've got stuff to do"
+          ],
+          "probe": "would you rather wait on it, or drop it off on your way in?",
+          "probe_reply": [
+            "I'd rather wait, if it's quick",
+            "I'd have to drop it on the way to work"
+          ],
+          "answer_2": "then come first thing. It's {job_duration} if you're the first one in, and if you drop it, it'll be done {ready_time}.",
+          "answer_1": "It doesn't take too long.",
+          "answer_0": "Okay."
+        }
+      ],
+      "found": "it's past due on the oil, it's real dark and about a quart low"
+    },
+    {
+      "key": "check_engine",
+      "catalogue": {
+        "price": "check_engine_diag",
+        "price_alt": null,
+        "inspection_price": "check_engine_diag"
+      },
+      "lead_share": 0.0885,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "the check engine light",
+        "a diagnostic on the check engine light"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "my check engine light came on and I need somebody to look at it"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need my check engine light checked, it come on this morning"
+        },
+        {
+          "kind": "accurate",
+          "need": "I wanted to see what y'all charge to read a check engine light"
+        },
+        {
+          "kind": "vague",
+          "need": "there's a light on my dash, the orange one, the — the engine-looking one"
+        },
+        {
+          "kind": "vague",
+          "need": "my car's got a light on and it's running kinda funny"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need my computer reset, the light keeps coming on"
+        },
+        {
+          "kind": "wrong",
+          "need": "the parts store read it and said it's a sensor, I just need the sensor put in"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is the light just on steady, or is it flashing at you?",
+          "answers": [
+            "just on. Steady",
+            "it was blinking for a minute there, then it quit",
+            "steady, I think. I didn't watch it real close"
+          ]
+        },
+        {
+          "q": "is it driving any different, like shaking, or hesitating when you pull off?",
+          "answers": [
+            "little rough at a red light, maybe",
+            "no, it drives fine, it's just the light",
+            "it kinda stumbles when I give it gas"
+          ]
+        },
+        {
+          "q": "has anybody pulled the code on it yet, like the parts store?",
+          "answers": [
+            "the parts store did, said something about a sensor",
+            "no, nobody's looked at it",
+            "my buddy plugged his little thing in, but I don't remember what it said"
+          ]
+        },
+        {
+          "q": "any smell, or smoke, or a noise along with it?",
+          "answers": [
+            "no, nothing like that",
+            "maybe a little rotten-egg smell",
+            "there's a little tick I hadn't heard before"
+          ]
+        }
+      ],
+      "since_answers": [
+        "it came on a couple days ago",
+        "it's been on since last week, I been ignoring it",
+        "just this morning, on the way in",
+        "maybe a week? It went off and came back"
+      ],
+      "explain": [
+        "a steady light's usually not an emergency, but we want to find what's setting it before it turns into something",
+        "the code just tells the tech where to look, he has to test it to know what's actually bad"
+      ],
+      "price_statement": [
+        "the diagnostic is {price}",
+        "to hook it up and test it, that's {price}"
+      ],
+      "depends": [
+        "That's the first hour of testing, and most of them he finds inside that; if it needs longer, we call you first.",
+        "That covers finding it, and the fix depends on what he finds, and you get that price before anything's done."
+      ],
+      "inspection_line": "We can't price the repair till he tests it, the code just points him somewhere — the diagnostic's {inspection_price}, and that tells us exactly what it needs.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "{price} just to tell me what's wrong with it?",
+            "the parts store reads it for free, though"
+          ],
+          "probe": "did they give you the code itself, or just tell you a part?",
+          "probe_reply": [
+            "just said it was a sensor, maybe",
+            "they printed something out, I don't know what it says"
+          ],
+          "answer_2": "the parts store reads the code, and the code says which system, not which part. Our tech tests the actual part and the wiring, so you don't buy a sensor and still have the light on, and the diagnostic gets you a real price on the fix.",
+          "answer_1": "That's about what a diagnostic runs anywhere.",
+          "answer_0": "Yeah. So, when do you want to bring it?"
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "how do I know y'all ain't just gonna find something expensive?",
+            "every time I take it somewhere they find a whole list of stuff"
+          ],
+          "probe": "has that happened to you, somebody found a big repair that didn't fix it?",
+          "probe_reply": [
+            "the last place said I needed a whole catalytic converter",
+            "my brother-in-law got took on one"
+          ],
+          "answer_2": "the tech writes down what he tested and what he found, and I show you the reading or a picture before you say yes to anything. If you want a second opinion after that, you've got it in writing.",
+          "answer_1": "We're honest, we'll tell you what it needs.",
+          "answer_0": "No, we'll look at it. So — you want to bring it in?"
+        },
+        {
+          "type": "think",
+          "customer": [
+            "let me see if it goes off on its own first",
+            "I'm gonna wait and see if it clears"
+          ],
+          "probe": "is it driving okay right now, or is it doing something?",
+          "probe_reply": [
+            "it's driving alright",
+            "it's a little rough, but it goes"
+          ],
+          "answer_2": "if it's steady and driving normal, you've got a little time. If it starts flashing or shaking, pull over and call us, and honestly a lot of times it's a cheap fix that gets expensive if you let it ride.",
+          "answer_1": "Sure, you can wait and see.",
+          "answer_0": "Okay, sounds good."
+        }
+      ],
+      "found": "the engine's got a misfire on one cylinder and the tech wants to test the coil"
+    },
+    {
+      "key": "front_brakes",
+      "catalogue": {
+        "price": "front_pads_rotors",
+        "price_alt": "front_brake_pads",
+        "inspection_price": "brake_inspection"
+      },
+      "lead_share": 0.0749,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "front brakes",
+        "pads and rotors on the front",
+        "the front brakes"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "my brakes are making a grinding noise when I stop"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a price on front brakes, pads and rotors"
+        },
+        {
+          "kind": "accurate",
+          "need": "it's squealing every time I come to a stop, I think it's the brakes"
+        },
+        {
+          "kind": "vague",
+          "need": "something's off with my brakes, they just don't feel right"
+        },
+        {
+          "kind": "vague",
+          "need": "my car's making a noise kinda in the front when I'm slowing down"
+        },
+        {
+          "kind": "wrong",
+          "need": "I think I need my rotors turned"
+        },
+        {
+          "kind": "wrong",
+          "need": "the brake light's on, so I guess I need pads"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it more of a high squeal, or a grinding, like metal?",
+          "answers": [
+            "grinding. Like metal on metal",
+            "it's a squeal. Real high",
+            "kinda both, depends on the day"
+          ]
+        },
+        {
+          "q": "does the steering wheel shake at all when you brake, like coming off the interstate?",
+          "answers": [
+            "yeah, a little shimmy",
+            "no, it's just the noise",
+            "it pulses in the pedal some"
+          ]
+        },
+        {
+          "q": "is it the front or the back, can you tell?",
+          "answers": [
+            "front, I'm pretty sure",
+            "sounds like the front, driver's side",
+            "I can't tell, honestly"
+          ]
+        },
+        {
+          "q": "when were the brakes done last, do you know?",
+          "answers": [
+            "I don't think they've ever been done",
+            "maybe two years back",
+            "the last owner, I guess"
+          ]
+        }
+      ],
+      "since_answers": [
+        "about a week now",
+        "a couple weeks, and it's getting louder",
+        "it started last week, now it does it every stop",
+        "a month or so, I been putting it off"
+      ],
+      "explain": [
+        "grinding's usually the pads worn all the way down to the metal",
+        "a squeal's usually the little wear tab telling you the pads are getting low"
+      ],
+      "price_statement": [
+        "front pads and rotors on the {car_model} are {price}",
+        "pads by themselves are {price_alt}, and pads and rotors are {price}"
+      ],
+      "depends": [
+        "It depends on the rotors — if they measure thick enough we just do pads, and if they're chewed up they get replaced.",
+        "That's with standard pads, and if a caliper's sticking that's extra, and we'd call you first."
+      ],
+      "inspection_line": "The tech has to pull the wheels and measure the rotors to know for sure — the brake inspection's {inspection_price}, and then you get the exact price.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "{competitor_place} told me {competitor_price}",
+            "that's more than I wanted to spend on brakes"
+          ],
+          "probe": "did they say if that's with new rotors, or just pads?",
+          "probe_reply": [
+            "I think just pads, maybe",
+            "he didn't really say"
+          ],
+          "answer_2": "that's probably the difference. If it's grinding, the rotors are usually cut up, and new pads on bad rotors squeal and wear out fast. Mine's pads and rotors both, and if your rotors measure good, I take them off and you're at {price_alt}.",
+          "answer_1": "Ours come with a good warranty.",
+          "answer_0": "Yeah. So did you want to bring it in?"
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "y'all are gonna tell me I need calipers and everything",
+            "how do I know I really need rotors?"
+          ],
+          "probe": "did a shop tell you that before, or are you just worried about it?",
+          "probe_reply": [
+            "the last shop did, yeah",
+            "I just know how it goes"
+          ],
+          "answer_2": "fair enough. The tech measures everything and I show you the numbers or a picture before you say yes, and if a caliper's fine, it stays on the car.",
+          "answer_1": "We only do what it needs.",
+          "answer_0": "No. Anyway —"
+        },
+        {
+          "type": "time",
+          "customer": [
+            "can I keep driving on it a while?",
+            "I can't really get it in for a week or two"
+          ],
+          "probe": "is it grinding now, or still just squealing?",
+          "probe_reply": [
+            "grinding",
+            "squeal, mostly"
+          ],
+          "answer_2": "if it's grinding, I wouldn't put it off — every stop is metal on the rotor, and it costs you more the longer you go. If it's still just squealing, you've got a little time, but I'd get it in this week.",
+          "answer_1": "I wouldn't wait too long.",
+          "answer_0": "Uh, probably. So —"
+        }
+      ],
+      "found": "the front pads are down to almost nothing and the rotors are scored"
+    },
+    {
+      "key": "fleet_pm",
+      "catalogue": {
+        "price": "fleet_pm_van",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.051,
+      "vehicle_classes": [
+        "van"
+      ],
+      "symptom": false,
+      "job_said": [
+        "the PM service",
+        "the P-M on the van",
+        "its regular service"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need to get the PM done on one of our vans"
+        },
+        {
+          "kind": "accurate",
+          "need": "it's due for its service, the oil and the grease and all"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need to get the regular service on the books for one of ours"
+        },
+        {
+          "kind": "vague",
+          "need": "I need the usual on one of the vans"
+        },
+        {
+          "kind": "vague",
+          "need": "one of my vans has got a sticker in the window says it's past due"
+        },
+        {
+          "kind": "wrong",
+          "need": "I just need a quick oil change on one of the vans, nothing fancy"
+        },
+        {
+          "kind": "wrong",
+          "need": "the van needs looked over, the — the fifty-point whatever"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is the driver saying anything about it, or is it just due?",
+          "answers": [
+            "just due, far as I know",
+            "he says it's pulling a little to the right",
+            "he said something about a noise, but he always says that"
+          ]
+        },
+        {
+          "q": "does it need to be back by a certain time for a route?",
+          "answers": [
+            "it's got a route this afternoon",
+            "I need it back the same day if I can",
+            "it can sit, I've got a spare"
+          ]
+        },
+        {
+          "q": "is there a unit number on the key tag, so I pull up the right one?",
+          "answers": [
+            "it says {unit} on the tag",
+            "hang on, let me look at the sheet — yeah, {unit}",
+            "I'd have to ask the driver"
+          ]
+        }
+      ],
+      "since_answers": [
+        "it's past due by a good bit, the sticker says",
+        "it's coming up on its mileage this week",
+        "the driver says it's overdue on the sticker",
+        "it's right at its mileage now"
+      ],
+      "explain": [
+        "that's oil and filter, grease the chassis, and the fifty-point inspection",
+        "we service it and go over it, and anything the inspection turns up, you get a call before we touch it"
+      ],
+      "price_statement": [
+        "the PM on a cargo van is {price} at your account rate",
+        "you're at {price} for the PM service"
+      ],
+      "depends": [
+        "That's with the oil it takes, and anything the inspection finds is separate and gets a call first.",
+        "A diesel or a bigger engine takes more oil, so it can move a little on those."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "it used to be less than that, I've got the old number on my sheet",
+            "that's higher than what we budgeted for it"
+          ],
+          "probe": "do you know about when that number on your sheet is from?",
+          "probe_reply": [
+            "it's off last year's sheet, I think",
+            "I don't, it's just what's wrote down"
+          ],
+          "answer_2": "our labor rate went up this year, the first time in a good while, and that's the difference you're seeing. Your account rate's still under the counter price, and it's the same PM, the oil, the grease and the inspection.",
+          "answer_1": "Yeah, everything's gone up.",
+          "answer_0": "Yeah. So which day you want it?"
+        },
+        {
+          "type": "time",
+          "customer": [
+            "I can't have it down more than a morning, I've got routes",
+            "it's gotta be back on the road quick"
+          ],
+          "probe": "what time does it need to be back on the road?",
+          "probe_reply": [
+            "by lunch at the latest",
+            "it's gotta go out this afternoon"
+          ],
+          "answer_2": "then bring it right at opening and I'll have it out {ready_time}. If the inspection finds something, I'll call you and we'll schedule it another day so you don't lose the route.",
+          "answer_1": "We'll get it done quick as we can.",
+          "answer_0": "Okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "last time y'all had one, it came back with a list a mile long",
+            "I don't want a bunch of extra stuff added on"
+          ],
+          "probe": "was it stuff that needed doing, or stuff that felt extra?",
+          "probe_reply": [
+            "half of it was keep an eye on it",
+            "I couldn't tell you, I just know the bill"
+          ],
+          "answer_2": "that's fair. I'll mark each thing as now, soon or just watch it, with the cost on each, and nothing gets done past the PM unless you say so, in writing.",
+          "answer_1": "We only call you on what matters.",
+          "answer_0": "Yeah, well — so when's good?"
+        }
+      ],
+      "found": "the van's front pads are getting thin and a front tire's wearing on the inside"
+    },
+    {
+      "key": "battery",
+      "catalogue": {
+        "price": "battery_replace",
+        "price_alt": null,
+        "inspection_price": "battery_test"
+      },
+      "lead_share": 0.0408,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a battery",
+        "a new battery, put in"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I think I need a new battery, it's real slow to start"
+        },
+        {
+          "kind": "accurate",
+          "need": "I wanted to see what a battery runs, put in"
+        },
+        {
+          "kind": "accurate",
+          "need": "my car wouldn't start this morning, I had to get a jump"
+        },
+        {
+          "kind": "vague",
+          "need": "my car's doing the clicking thing when I turn the key"
+        },
+        {
+          "kind": "vague",
+          "need": "it didn't want to start, and then it did, I don't know what that is"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need an alternator, I think, it keeps dying on me in the mornings"
+        },
+        {
+          "kind": "wrong",
+          "need": "my starter's going out, it's real slow"
+        }
+      ],
+      "questions": [
+        {
+          "q": "do you know how old the battery is?",
+          "answers": [
+            "it's the one that come in it, far as I know",
+            "a few years, I guess",
+            "I have no idea"
+          ]
+        },
+        {
+          "q": "is it slow to turn over, or does it just click and do nothing?",
+          "answers": [
+            "slow. Real lazy",
+            "it just clicks",
+            "it cranked fine yesterday, and this morning nothing"
+          ]
+        },
+        {
+          "q": "do the lights dim, or has a battery light come on while you're driving?",
+          "answers": [
+            "the lights went kinda dim, yeah",
+            "no light, no",
+            "there was a little battery light the other day"
+          ]
+        }
+      ],
+      "since_answers": [
+        "it's been slow a week or so, then this morning it wouldn't go",
+        "it's been getting worse since it turned cold",
+        "it's been slow a couple weeks now",
+        "this is the third time this week"
+      ],
+      "explain": [
+        "a slow crank like that is usually the battery, but we test the charging too, because if the alternator's not keeping up, a new battery won't fix it",
+        "we test it first, and if it's the battery we put one in and you're gone"
+      ],
+      "price_statement": [
+        "a battery for the {car_model}, put in, is {price}",
+        "you're at {price} for the battery installed"
+      ],
+      "depends": [
+        "That's a standard battery; some of the newer ones with the stop-start take the bigger kind, and that runs more.",
+        "It depends on the size it takes, and if the test says it's the alternator and not the battery, I call you before anything."
+      ],
+      "inspection_line": "We test the battery and the charging first, and that test is {inspection_price}; then you know if it's the battery or something else.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "the parts store's got them cheaper than that",
+            "I can get a battery a whole lot cheaper at the parts store"
+          ],
+          "probe": "is that for the battery off the shelf, or put in?",
+          "probe_reply": [
+            "just the battery, I'd put it in myself",
+            "I think they'd put it in"
+          ],
+          "answer_2": "you can absolutely buy one there. Ours is put in, the terminals cleaned, the charging tested, and on a lot of newer cars it has to be registered to the computer, which they won't do. If it's an older simple one and you're handy, buying it there's fine.",
+          "answer_1": "Ours has a good warranty on it.",
+          "answer_0": "Yeah. Okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "how do I know it's the battery and not something else?",
+            "the last battery I bought didn't fix it"
+          ],
+          "probe": "has it done anything else, like dim lights or a light on the dash?",
+          "probe_reply": [
+            "no, just slow",
+            "the lights flicker sometimes"
+          ],
+          "answer_2": "that's why we test before we sell you anything. It takes a few minutes and it tells us if it's the battery, the alternator or a cable, and if the battery tests good, you don't buy one.",
+          "answer_1": "We'll check it out.",
+          "answer_0": "It's probably the battery."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll try jumping it a few more times and see",
+            "it's starting okay right now, I might wait"
+          ],
+          "probe": "is it getting you there right now, or are you worried it won't start?",
+          "probe_reply": [
+            "it starts if I jump it",
+            "I'm scared it won't start at work"
+          ],
+          "answer_2": "if it needs a jump every morning, it's going to leave you somewhere, and jumping it every day is hard on the alternator too. Bring it by for the test and you'll know for sure.",
+          "answer_1": "Sure, you can try that.",
+          "answer_0": "Okay, well, call us."
+        }
+      ],
+      "found": "the battery failed the load test"
+    },
+    {
+      "key": "scheduled_maintenance",
+      "catalogue": {
+        "price": "scheduled_maintenance",
+        "price_alt": "oil_service",
+        "inspection_price": null
+      },
+      "lead_share": 0.034,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck"
+      ],
+      "symptom": false,
+      "job_said": [
+        "the scheduled maintenance",
+        "the mileage service",
+        "the factory maintenance"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need the — the sixty-thousand-mile service done"
+        },
+        {
+          "kind": "accurate",
+          "need": "it's due for its scheduled maintenance, it says so in the book"
+        },
+        {
+          "kind": "accurate",
+          "need": "the dealer wants a fortune for the ninety-thousand service, what do y'all charge"
+        },
+        {
+          "kind": "vague",
+          "need": "it's about time for the big service, I think"
+        },
+        {
+          "kind": "vague",
+          "need": "the manual says it's due for a bunch of stuff and I don't know what all"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a tune-up"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need it gone over before a road trip, like a full service"
+        }
+      ],
+      "questions": [
+        {
+          "q": "what's the mileage on it right now, about?",
+          "answers": [
+            "right about sixty thousand",
+            "a hundred and twelve, I think",
+            "I'd have to go look"
+          ]
+        },
+        {
+          "q": "do you have the records, like when it last had plugs or fluids done?",
+          "answers": [
+            "I've got a folder somewhere",
+            "no, I just bought it",
+            "the dealer did everything till now"
+          ]
+        },
+        {
+          "q": "is it doing anything, or is this just keeping up with it?",
+          "answers": [
+            "just keeping up with it",
+            "there's a little vibration I wanted y'all to look at too",
+            "it's fine, I'm just trying to do right by it"
+          ]
+        }
+      ],
+      "since_answers": [
+        "it's past it a little, a few thousand miles maybe",
+        "it just hit the mileage",
+        "it turned over the mileage last week",
+        "I'm a little past it, I think"
+      ],
+      "explain": [
+        "that's inspecting, adjusting and lubing what the maker calls for at that mileage, and we go by your car's own schedule",
+        "we pull up what your car's book says for that mileage and do that, nothing extra"
+      ],
+      "price_statement": [
+        "the scheduled service is {price}",
+        "for the mileage service, you're right around {price}"
+      ],
+      "depends": [
+        "Some of the bigger ones call for plugs or fluids, and those go on at their own price — I'll tell you exactly what yours calls for before you come.",
+        "It depends on what your car's schedule says at that mileage."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "the place on the corner does a full service way cheaper",
+            "that's more than the quick lube's full service"
+          ],
+          "probe": "do you know what all's in theirs?",
+          "probe_reply": [
+            "oil change and a check-over, I think",
+            "they didn't say"
+          ],
+          "answer_2": "a lot of the cheap full services are an oil change with a look-over. This is what your maker lists at that mileage, item by item, and you get the list. If all you want is oil and a look, I can do that for {price_alt}.",
+          "answer_1": "Ours is done right.",
+          "answer_0": "Okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "the dealer said I have to go to them or I lose my warranty",
+            "won't that mess up my warranty if I don't go to the dealer?"
+          ],
+          "probe": "is it still under the factory warranty, mileage-wise?",
+          "probe_reply": [
+            "I think just barely",
+            "I don't know, honestly"
+          ],
+          "answer_2": "you don't have to go to the dealer. Any shop can do the maintenance as long as it's done to the schedule and you keep the receipts, and we put every item on the invoice so you've got your records.",
+          "answer_1": "We can do it, it's fine.",
+          "answer_0": "Yeah, no, we do it."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "let me look in the book and see what it says first",
+            "let me find out what all's due and call y'all back"
+          ],
+          "probe": "do you want me to look it up while you're on the phone?",
+          "probe_reply": [
+            "sure, if you can",
+            "no, I'll look"
+          ],
+          "answer_2": "I can pull it up right now with the year and the mileage and tell you what's in it, so you're not guessing, and if it's mostly oil and a look, it'll be less.",
+          "answer_1": "Sure, take a look.",
+          "answer_0": "Okay, sounds good."
+        }
+      ],
+      "found": "it's due by the book for its mileage service"
+    },
+    {
+      "key": "alignment",
+      "catalogue": {
+        "price": "wheel_alignment",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.0272,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "an alignment",
+        "a four-wheel alignment"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I think I need an alignment, my steering wheel's crooked"
+        },
+        {
+          "kind": "accurate",
+          "need": "it pulls to the right on me, I want an alignment"
+        },
+        {
+          "kind": "accurate",
+          "need": "I just got new tires and they said I need an alignment"
+        },
+        {
+          "kind": "vague",
+          "need": "my car kinda wanders on the road"
+        },
+        {
+          "kind": "vague",
+          "need": "I hit a pothole real hard and now it don't drive right"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need my tires balanced, it pulls to the left"
+        },
+        {
+          "kind": "wrong",
+          "need": "my front end's out, I think, it shakes"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is the wheel crooked when you're going straight, or does it pull when you let go?",
+          "answers": [
+            "it's cocked to the left a little",
+            "it pulls right if I let go",
+            "both, kinda"
+          ]
+        },
+        {
+          "q": "did it start after you hit something, or after any work?",
+          "answers": [
+            "I hit a pothole real good last week",
+            "after I got tires put on",
+            "it's just gradually got worse"
+          ]
+        },
+        {
+          "q": "any shaking, or a tire wearing on the inside edge?",
+          "answers": [
+            "no shake",
+            "the front ones are wore on the inside, yeah",
+            "it shakes a little at highway speed"
+          ]
+        }
+      ],
+      "since_answers": [
+        "since I hit that pothole",
+        "a month or so",
+        "ever since I got the tires",
+        "a couple weeks, it's getting worse"
+      ],
+      "explain": [
+        "if it's pulling or the wheel's off center, that's usually alignment, and if you hit something hard, the tech looks for anything bent while it's on the rack",
+        "an alignment sets all four wheels back so it tracks straight and doesn't eat your tires"
+      ],
+      "price_statement": [
+        "a four-wheel alignment is {price}",
+        "the alignment runs {price}"
+      ],
+      "depends": [
+        "That's if nothing's bent; if a tie rod or something got knocked, the tech shows you before anything else.",
+        "On some trucks it runs a little more, and if a part's too worn to adjust, we'd call you."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "the tire place does it for less",
+            "that seems like a lot for an alignment"
+          ],
+          "probe": "is theirs a front-end alignment, or all four wheels?",
+          "probe_reply": [
+            "I think just the front",
+            "I don't know"
+          ],
+          "answer_2": "that's probably it, a lot of places quote the front only. Yours needs all four set, and you get the printout of before and after so you can see it was done.",
+          "answer_1": "Ours is a good alignment.",
+          "answer_0": "Okay. So when —"
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "the last alignment didn't fix it, it still pulls",
+            "I had one done and it didn't do nothing"
+          ],
+          "probe": "did it pull right after, or did it come back later?",
+          "probe_reply": [
+            "right after",
+            "it was good for a while"
+          ],
+          "answer_2": "if it pulled right out the door, that's usually not the alignment — it can be a tire pulling, or a worn part. We'd check the tires and the front end first, and if it's not the alignment, I'll tell you before we charge you for one.",
+          "answer_1": "We'll make sure it's right.",
+          "answer_0": "Yeah, okay."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll just live with it a while",
+            "it ain't that bad, I might wait"
+          ],
+          "probe": "is it wearing the tires, can you see it on the edges?",
+          "probe_reply": [
+            "maybe a little",
+            "I haven't looked"
+          ],
+          "answer_2": "that's what I'd watch — if it's eating the inside of the tires, you're buying tires a lot sooner than you'd pay for an alignment. If they still look even, you've got some time.",
+          "answer_1": "Okay, sure.",
+          "answer_0": "Alright, sounds good."
+        }
+      ],
+      "found": "the front tires are wearing on the inside edge, it needs an alignment"
+    },
+    {
+      "key": "electrical",
+      "catalogue": {
+        "price": "electrical_diag",
+        "price_alt": null,
+        "inspection_price": "electrical_diag"
+      },
+      "lead_share": 0.0272,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "an electrical diagnosis",
+        "chasing down the electrical problem"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "something's draining my battery overnight"
+        },
+        {
+          "kind": "accurate",
+          "need": "half my dash lights quit and my radio cuts out"
+        },
+        {
+          "kind": "accurate",
+          "need": "my power window stopped working on the one side"
+        },
+        {
+          "kind": "vague",
+          "need": "the electric stuff is going crazy on my car"
+        },
+        {
+          "kind": "vague",
+          "need": "it's got a short somewhere, I think"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a new fuse box"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need another battery, but I just put one in"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it one thing that quit, or a bunch of things acting up at once?",
+          "answers": [
+            "just the one window",
+            "a bunch of stuff, the radio, the lights",
+            "it's random, honestly"
+          ]
+        },
+        {
+          "q": "does it do it all the time, or only when it rains or it's hot?",
+          "answers": [
+            "mostly when it rains",
+            "all the time",
+            "I can't tell any pattern"
+          ]
+        },
+        {
+          "q": "has anybody worked on anything electrical lately, a stereo or a remote start?",
+          "answers": [
+            "my nephew put a radio in",
+            "no, nothing",
+            "it's got a remote start the last owner put on"
+          ]
+        }
+      ],
+      "since_answers": [
+        "it started a couple weeks ago",
+        "off and on for months",
+        "it's been doing it about a week",
+        "since it rained real hard last week"
+      ],
+      "explain": [
+        "electrical, the tech has to trace it — find which circuit, then test it till he finds the bad spot",
+        "on a drain like that he puts a meter on it and pulls fuses till he finds what's pulling power"
+      ],
+      "price_statement": [
+        "electrical diagnosis is {price}",
+        "the testing starts at {price}"
+      ],
+      "depends": [
+        "That's the first hour and a half, and most he finds in that; if it's taking longer, we call you before going on.",
+        "It depends how quick he can find it — an off-and-on one can take longer, and you'd get a call first."
+      ],
+      "inspection_line": "We can't tell you the repair until he traces it — the testing's {inspection_price}, and then you get a price on the fix.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "so I'm paying that and you still might not fix it?",
+            "that's a lot just for looking"
+          ],
+          "probe": "is it the cost of the testing, or that it might not be the whole answer?",
+          "probe_reply": [
+            "both, honestly",
+            "just that it's a lot to pay for looking"
+          ],
+          "answer_2": "the testing's what keeps you from buying parts that don't fix it. He stops at the time I quoted and calls with what he's found, and you decide from there, so no surprise bill for hours of chasing.",
+          "answer_1": "That's just what electrical runs.",
+          "answer_0": "Yeah, it is."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "the last shop threw parts at it and it's still doing it",
+            "I've already paid one place and it ain't fixed"
+          ],
+          "probe": "what all did they replace?",
+          "probe_reply": [
+            "battery and the alternator",
+            "a relay and something else"
+          ],
+          "answer_2": "bring me that invoice. Our tech tests the circuit before he replaces anything, and if the battery and alternator are new, he starts from there instead of buying them again.",
+          "answer_1": "Our tech's good with electrical.",
+          "answer_0": "Okay, well, bring it by."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "it's not hurting nothing right now, I might wait",
+            "I'll live with it for now"
+          ],
+          "probe": "is the battery dying on you, or is it just something that doesn't work?",
+          "probe_reply": [
+            "it's just the window",
+            "the battery's dead every couple days"
+          ],
+          "answer_2": "if it's just the window, you can wait. If it's killing the battery, I'd get it in — that'll leave you stranded and wear out a good battery.",
+          "answer_1": "That's fine.",
+          "answer_0": "Okay."
+        }
+      ],
+      "found": "there's a corroded ground that's making the lights flicker"
+    },
+    {
+      "key": "rear_brakes",
+      "catalogue": {
+        "price": "rear_pads_rotors",
+        "price_alt": "rear_brake_pads",
+        "inspection_price": "brake_inspection"
+      },
+      "lead_share": 0.0318,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "rear brakes",
+        "the back brakes",
+        "rear pads and rotors"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need a price on rear brakes, pads and rotors"
+        },
+        {
+          "kind": "accurate",
+          "need": "the back brakes are squeaking and the oil change place said they're about gone"
+        },
+        {
+          "kind": "accurate",
+          "need": "my back brakes are grinding"
+        },
+        {
+          "kind": "vague",
+          "need": "there's a noise from the back when I stop"
+        },
+        {
+          "kind": "vague",
+          "need": "they said something at my last oil change about the brakes in the back"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need new shoes on the back"
+        },
+        {
+          "kind": "wrong",
+          "need": "my parking brake's making a noise"
+        }
+      ],
+      "questions": [
+        {
+          "q": "did somebody measure them, or is it the noise that's telling you?",
+          "answers": [
+            "the oil change place measured them",
+            "it's just the noise",
+            "they wrote it on my last receipt"
+          ]
+        },
+        {
+          "q": "is it grinding, or more of a squeak?",
+          "answers": [
+            "grinding now",
+            "squeak, mostly",
+            "kind of a scrape"
+          ]
+        },
+        {
+          "q": "does the parking brake hold okay on a hill?",
+          "answers": [
+            "I think so",
+            "I don't really use it",
+            "it rolls a little, now that you mention it"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a few weeks",
+        "since my last oil change, they told me then",
+        "it started up a week or so ago",
+        "it's been squeaking a month or more"
+      ],
+      "explain": [
+        "rear pads usually outlast the fronts, but on a lot of newer cars the back does more of the work",
+        "if it's grinding, the rotors probably need to go too"
+      ],
+      "price_statement": [
+        "rear pads and rotors on the {car_model} are {price}",
+        "you're at {price} for the back, pads and rotors"
+      ],
+      "depends": [
+        "If the rotors measure good, we just do pads, and that's {price_alt}.",
+        "That's if the calipers slide like they should, and a stuck one is extra and you'd get a call."
+      ],
+      "inspection_line": "The tech measures the pads and rotors to know — that inspection's {inspection_price}, and you get the exact number.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that's more than I was hoping",
+            "{price}? For the back?"
+          ],
+          "probe": "is it the rotors that's throwing you, or the whole thing?",
+          "probe_reply": [
+            "the whole thing, I guess",
+            "I didn't think I'd need rotors"
+          ],
+          "answer_2": "the rotors are the big part. If they measure thick enough, we leave them and do pads only, and that's {price_alt}. I'd rather you pay for what it needs than what's on a menu.",
+          "answer_1": "It's a fair price for brakes.",
+          "answer_0": "Yeah. Um — anyway."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "do I really need rotors every time?",
+            "seems like every shop says rotors"
+          ],
+          "probe": "did the last shop do rotors when they did your brakes?",
+          "probe_reply": [
+            "every time, seems like",
+            "I don't know"
+          ],
+          "answer_2": "not every time. Rotors have a minimum thickness stamped right on them; the tech measures, and if yours are above it, they stay on. I'll tell you the measurement.",
+          "answer_1": "Usually, yeah.",
+          "answer_0": "Yeah. So —"
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll have my husband look at them first",
+            "let me have my brother look at them, he does brakes"
+          ],
+          "probe": "is he going to check the pads himself, or is it more the price he wants to see?",
+          "probe_reply": [
+            "he likes to look at stuff himself",
+            "the price, mostly"
+          ],
+          "answer_2": "that's fine — tell him to look at the inside pad, that's the one that wears. And I'll write the price down for y'all so you're not working from memory.",
+          "answer_1": "Sure, no problem.",
+          "answer_0": "Okay, sounds good."
+        }
+      ],
+      "found": "the rear pads are worn down to the indicators"
+    },
+    {
+      "key": "new_tires",
+      "catalogue": {
+        "price": "new_tyres_fitted",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.0238,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": false,
+      "job_said": [
+        "four new tires, mounted and balanced",
+        "a set of tires"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need four new tires"
+        },
+        {
+          "kind": "accurate",
+          "need": "I was wondering what a set of tires would run me, mounted and all"
+        },
+        {
+          "kind": "accurate",
+          "need": "my tires are bald, I need new ones"
+        },
+        {
+          "kind": "vague",
+          "need": "I need tires, I don't know what size"
+        },
+        {
+          "kind": "vague",
+          "need": "they told me my tread's getting low"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need my tires rotated, they're pretty bald"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need two tires — well, maybe all four, I don't know"
+        }
+      ],
+      "questions": [
+        {
+          "q": "do you know the size? It's printed on the side of the tire",
+          "answers": [
+            "hang on, I'll go look",
+            "no idea",
+            "I've got it wrote down from last time"
+          ]
+        },
+        {
+          "q": "how do you drive it, mostly highway or around town?",
+          "answers": [
+            "mostly interstate to work",
+            "around town",
+            "I drive a lot, back and forth to Atlanta"
+          ]
+        },
+        {
+          "q": "are they wearing even, or more on one edge?",
+          "answers": [
+            "the front ones are worse on the inside",
+            "they look even",
+            "I couldn't tell you"
+          ]
+        }
+      ],
+      "since_answers": [
+        "they've been getting low a while",
+        "they failed the penny thing",
+        "the guy at the oil change said it's time",
+        "I noticed last week they're getting slick"
+      ],
+      "explain": [
+        "we'd find your size and give you a couple of choices, and the price is mounted, balanced, new valve stems and disposal",
+        "the price depends a lot on the tire, so I'd give you a good one and a better one"
+      ],
+      "price_statement": [
+        "a good set in your size is about {price}, mounted and balanced",
+        "you're around {price} for four, put on and balanced"
+      ],
+      "depends": [
+        "That depends on the brand and the size, and I can give you a cheaper one and a longer-lasting one.",
+        "That's a middle tire; the economy ones are less and the premium ones more."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "I can get tires online cheaper than that",
+            "that's a lot for tires"
+          ],
+          "probe": "is that the same tire, or just the cheapest one in the size?",
+          "probe_reply": [
+            "the cheapest one, I think",
+            "same brand, I think"
+          ],
+          "answer_2": "online the tire's cheap, but you still pay mounting, balancing, stems and disposal somewhere. If you find the same tire, I'll look at it, and if you buy online, we can mount them, and I'll tell you that price.",
+          "answer_1": "Ours are good tires.",
+          "answer_0": "Yeah, okay."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "let me shop around a little",
+            "I'm gonna call a couple tire places first"
+          ],
+          "probe": "is it the price you're comparing, or the brand?",
+          "probe_reply": [
+            "price, mostly",
+            "I want something that lasts"
+          ],
+          "answer_2": "then let me give you two numbers to compare, the economy set and the one that lasts longer, both out the door, so you're comparing the same thing.",
+          "answer_1": "Sure, shop around.",
+          "answer_0": "Okay, sounds good."
+        },
+        {
+          "type": "time",
+          "customer": [
+            "how long does that take? I can't be without it",
+            "do I have to leave it all day?"
+          ],
+          "probe": "would you rather wait on it, or drop it?",
+          "probe_reply": [
+            "I'd wait",
+            "I could drop it in the morning"
+          ],
+          "answer_2": "if we have them in stock, it's {job_duration} and you can wait. If we have to order your size, I'll get them in first and then book you, so the car only comes in once.",
+          "answer_1": "It doesn't take too long.",
+          "answer_0": "Okay."
+        }
+      ],
+      "found": "two of the tires are down to the wear bars"
+    },
+    {
+      "key": "front_end_noise",
+      "catalogue": {
+        "price": "suspension_diag",
+        "price_alt": "sway_bar_links",
+        "inspection_price": "suspension_diag"
+      },
+      "lead_share": 0.0227,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a front-end inspection",
+        "the steering and suspension inspection"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I've got a clunk in the front end when I go over bumps"
+        },
+        {
+          "kind": "accurate",
+          "need": "it's knocking over the railroad tracks"
+        },
+        {
+          "kind": "accurate",
+          "need": "the front end's making a racket and I want somebody to look at it"
+        },
+        {
+          "kind": "vague",
+          "need": "it's making a noise underneath somewhere"
+        },
+        {
+          "kind": "vague",
+          "need": "my car feels loose, kinda, on the road"
+        },
+        {
+          "kind": "wrong",
+          "need": "I think I need struts"
+        },
+        {
+          "kind": "wrong",
+          "need": "my ball joints are going, I need them replaced"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it a clunk over bumps, or a creak when you turn the wheel?",
+          "answers": [
+            "clunk over bumps",
+            "it creaks when I turn into the driveway",
+            "both, kinda"
+          ]
+        },
+        {
+          "q": "is it one side or the other, can you tell?",
+          "answers": [
+            "passenger side",
+            "sounds like the driver's side",
+            "I can't tell"
+          ]
+        },
+        {
+          "q": "does it bounce after a bump, or feel loose in the steering?",
+          "answers": [
+            "it bounces some",
+            "the steering's got some play",
+            "no, just the noise"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a couple weeks",
+        "it started after I hit a curb",
+        "it's been knocking about a month",
+        "since I bounced through a pothole"
+      ],
+      "explain": [
+        "a clunk can be a sway bar link, which is cheap, or a strut mount or a ball joint, which is more, and the inspection tells us which",
+        "the tech drives it, puts it on the lift and checks every joint, so we fix the right thing"
+      ],
+      "price_statement": [
+        "the inspection is {price}",
+        "to put it on the lift and find the noise, that's {price}"
+      ],
+      "depends": [
+        "Then the fix depends on what it is — links are a lot less than struts — and you get that price before we do anything.",
+        "That's the looking, and what it costs to fix depends on which part, and I call you first."
+      ],
+      "inspection_line": "I can't tell you the repair till the tech finds it — the inspection's {inspection_price}, and that's what sets the exact price.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "y'all charge just to look at it?",
+            "I gotta pay for y'all to look at it?"
+          ],
+          "probe": "is it the inspection cost, or worry it turns into a big bill?",
+          "probe_reply": [
+            "the big bill, honestly",
+            "just paying to look"
+          ],
+          "answer_2": "the inspection's what keeps you from buying struts when it's a link. You get the exact part and the price before anything, and if it's something small, it's done and you're out the door.",
+          "answer_1": "Everybody charges for that.",
+          "answer_0": "Yeah. So when do you want to bring it?"
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "the last place said struts, and it still clunks",
+            "I already had stuff replaced up front and it's still doing it"
+          ],
+          "probe": "did they put in complete strut assemblies, or just the struts?",
+          "probe_reply": [
+            "I don't know",
+            "just the struts, I think"
+          ],
+          "answer_2": "then it might be the mount or a link they left. We'd check everything up front, what they put in too, and show you what's loose before you pay for anything.",
+          "answer_1": "We'll find it.",
+          "answer_0": "Okay. Well —"
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll wait till it gets worse",
+            "it's just a noise, I'll see how it does"
+          ],
+          "probe": "does it feel safe to drive, or is the steering getting loose?",
+          "probe_reply": [
+            "feels okay",
+            "the steering's a little loose"
+          ],
+          "answer_2": "if it's just a noise, you can wait some. If the steering's getting loose, I wouldn't — a ball joint that lets go is a tow and a lot more money.",
+          "answer_1": "Okay, sure.",
+          "answer_0": "Okay, sounds good."
+        }
+      ],
+      "found": "both front sway bar links are loose"
+    },
+    {
+      "key": "flat_repair",
+      "catalogue": {
+        "price": "tyre_repair",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.0227,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a flat repair",
+        "patching the tire"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I've got a tire that keeps going low, I think I picked up a nail"
+        },
+        {
+          "kind": "accurate",
+          "need": "I wanted to see what y'all charge to fix a flat"
+        },
+        {
+          "kind": "accurate",
+          "need": "I've got a screw in my tire"
+        },
+        {
+          "kind": "vague",
+          "need": "my tire light keeps coming on"
+        },
+        {
+          "kind": "vague",
+          "need": "I got a low tire, I keep airing it up"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a new tire, I got a nail in it"
+        },
+        {
+          "kind": "wrong",
+          "need": "my tire sensor's bad, the light won't go off"
+        }
+      ],
+      "questions": [
+        {
+          "q": "can you see it? Is it in the tread, the flat part, or over toward the sidewall?",
+          "answers": [
+            "in the tread, kinda the middle",
+            "it's right on the edge",
+            "I can't find it"
+          ]
+        },
+        {
+          "q": "have you been driving on it low?",
+          "answers": [
+            "just airing it up every couple days",
+            "I drove on it flat a little ways",
+            "it's never been all the way flat"
+          ]
+        },
+        {
+          "q": "which tire is it?",
+          "answers": [
+            "passenger rear",
+            "front, driver's side",
+            "the back one"
+          ]
+        }
+      ],
+      "since_answers": [
+        "about a week",
+        "since the weekend",
+        "I noticed it yesterday",
+        "it's been low three or four times now"
+      ],
+      "explain": [
+        "if it's in the tread, we patch it from the inside and rebalance it",
+        "if it's on the shoulder or it's been run flat, it can't be patched safely, and then it's a tire"
+      ],
+      "price_statement": [
+        "a patch and rebalance is {price}",
+        "to fix it right, patched from the inside, that's {price}"
+      ],
+      "depends": [
+        "That's if it's in the tread; if it's in the shoulder or the tire got hurt running low, it can't be fixed and we'd talk about a tire.",
+        "It depends where the nail is, and the tech has to look."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "the tire place plugs them for free",
+            "I can plug it myself for nothing"
+          ],
+          "probe": "is that a plug from the outside, or a patch?",
+          "probe_reply": [
+            "just a plug, I think",
+            "I don't know"
+          ],
+          "answer_2": "a plug from the outside can hold, but it can work loose. We take the tire off and patch it from the inside, the way the tire makers say to, and rebalance it. If a free plug's all you want, that's okay too.",
+          "answer_1": "Ours is done right.",
+          "answer_0": "Yeah."
+        },
+        {
+          "type": "time",
+          "customer": [
+            "I'm at work, I can't come till late",
+            "I can't get away till after work"
+          ],
+          "probe": "is it holding air through a day, or going flat in a few hours?",
+          "probe_reply": [
+            "it holds a day",
+            "it's going down fast"
+          ],
+          "answer_2": "if it holds through the day, come before {closing_time} and it's a short wait. If it's dropping fast, don't drive on it low — air it up and come straight here.",
+          "answer_1": "Come by whenever.",
+          "answer_0": "Okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "last time they said they couldn't fix it and sold me a tire",
+            "y'all are just gonna tell me I need a new tire"
+          ],
+          "probe": "do you remember where the nail was that time?",
+          "probe_reply": [
+            "close to the edge, they said",
+            "no idea"
+          ],
+          "answer_2": "near the edge it can't be patched safely, that's real. If yours is in the tread, we fix it, and if it's not, the tech shows you where it is before we talk about a tire.",
+          "answer_1": "We'll try to patch it.",
+          "answer_0": "Okay."
+        }
+      ],
+      "found": "there's a nail in one of the rear tires, in the tread, and it can be patched"
+    },
+    {
+      "key": "air_conditioning",
+      "catalogue": {
+        "price": "ac_recharge",
+        "price_alt": null,
+        "inspection_price": "ac_performance_check"
+      },
+      "lead_share": 0.0341,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "the A-C",
+        "an A-C check",
+        "the air conditioning"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "my A-C's blowing hot air"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need my A-C recharged"
+        },
+        {
+          "kind": "accurate",
+          "need": "the air conditioner's not getting cold like it used to"
+        },
+        {
+          "kind": "vague",
+          "need": "it's just not cool in my car, it's miserable"
+        },
+        {
+          "kind": "vague",
+          "need": "the air works sometimes and then it don't"
+        },
+        {
+          "kind": "wrong",
+          "need": "I just need freon, that's all, just a can of freon"
+        },
+        {
+          "kind": "wrong",
+          "need": "my A-C smells funny, so I think it needs a charge"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it blowing warm all the time, or cold for a while and then warm?",
+          "answers": [
+            "warm the whole time",
+            "it's cold on the interstate, warm at red lights",
+            "it goes in and out"
+          ]
+        },
+        {
+          "q": "is the fan blowing hard and it's just not cold, or is the air barely coming out?",
+          "answers": [
+            "fan blows fine, just not cold",
+            "it barely blows",
+            "blows good, it's just warm"
+          ]
+        },
+        {
+          "q": "has it been recharged before?",
+          "answers": [
+            "I put one of them cans in it last summer",
+            "never",
+            "the dealer did it a year or two back"
+          ]
+        }
+      ],
+      "since_answers": [
+        "since it got hot",
+        "about a week, it just quit",
+        "it's been getting weaker all summer",
+        "it was fine last week, then just quit"
+      ],
+      "explain": [
+        "if it's low on refrigerant, it's leaking somewhere, so we check the pressures and look for the leak before we fill it",
+        "the check tells us if it just needs a charge or if a part's gone"
+      ],
+      "price_statement": [
+        "if it's just low, an evacuate and recharge is {price}",
+        "a recharge runs {price}"
+      ],
+      "depends": [
+        "That's if it's just low; if a part's leaking or the compressor won't kick on, that's a different price, and we find that out first.",
+        "Newer cars take the newer refrigerant, and that's more."
+      ],
+      "inspection_line": "We start with the A-C check, that's {inspection_price}, so we know if it's a charge or a part before you pay for either.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "I can get a can at the parts store for way less",
+            "can't I just put a can in it myself?"
+          ],
+          "probe": "have you tried a can before, and did it last?",
+          "probe_reply": [
+            "it lasted a month or so",
+            "never tried it"
+          ],
+          "answer_2": "that's the thing — if it needed a can, it's leaking, so it'll be warm again. We put gauges on it, find the leak, and charge it to the exact amount, and too much out of a can can hurt the compressor.",
+          "answer_1": "Ours is the right way to do it.",
+          "answer_0": "Yeah, okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "y'all are gonna tell me it needs a whole compressor",
+            "I bet it's something expensive"
+          ],
+          "probe": "when you turn it on, do you hear the compressor click on under the hood?",
+          "probe_reply": [
+            "I hear a click",
+            "I don't know what that sounds like"
+          ],
+          "answer_2": "could be, could not. The check's what tells us, and if it's a small leak or a switch, that's what we fix, and you see the readings before you say yes to a compressor.",
+          "answer_1": "Hopefully not.",
+          "answer_0": "We'll see."
+        },
+        {
+          "type": "time",
+          "customer": [
+            "I need it fixed before the weekend, I've got a trip",
+            "I got kids in the car all day, I need it quick"
+          ],
+          "probe": "when do you need it by?",
+          "probe_reply": [
+            "end of the week",
+            "soon as possible"
+          ],
+          "answer_2": "then let's get the check done first thing, so if it needs a part there's time to get it in. Most recharges are done the same visit.",
+          "answer_1": "We'll try.",
+          "answer_0": "Okay."
+        }
+      ],
+      "found": "the A-C is low and there's dye showing a leak at the condenser"
+    },
+    {
+      "key": "front_struts",
+      "catalogue": {
+        "price": "front_struts_pair",
+        "price_alt": null,
+        "inspection_price": "suspension_diag"
+      },
+      "lead_share": 0.0159,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "front struts",
+        "the front strut assemblies"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I wanted to see what y'all charge to put front struts on"
+        },
+        {
+          "kind": "accurate",
+          "need": "my car bounces like a boat, I think it's the struts"
+        },
+        {
+          "kind": "accurate",
+          "need": "the shop told me my front struts are leaking"
+        },
+        {
+          "kind": "vague",
+          "need": "it rides real rough lately"
+        },
+        {
+          "kind": "vague",
+          "need": "it's dipping in the front every time I brake"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need new shocks on the front"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need springs, it's sitting low"
+        }
+      ],
+      "questions": [
+        {
+          "q": "does it keep bouncing after a dip, or is it more of a clunk?",
+          "answers": [
+            "keeps on going",
+            "there's a clunk too",
+            "both"
+          ]
+        },
+        {
+          "q": "how many miles are on it, and are those the original struts?",
+          "answers": [
+            "about a hundred and forty, the originals",
+            "a hundred and twenty, I don't know about the struts",
+            "I just bought it"
+          ]
+        },
+        {
+          "q": "did somebody see them leaking, or is that just how it rides?",
+          "answers": [
+            "the oil change place said they're wet",
+            "just how it rides",
+            "they said there's oil on them"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a few months, getting worse",
+        "since I bought it",
+        "it's been riding rough a good while",
+        "since winter, I'd say"
+      ],
+      "explain": [
+        "at that mileage struts are about worn out, and a complete assembly gets you a new spring and mount too, which is usually where the noise is",
+        "you'd want an alignment after, because new struts move the wheels"
+      ],
+      "price_statement": [
+        "front strut assemblies on the {car_model}, the pair, are {price}",
+        "you're at {price} for both fronts"
+      ],
+      "depends": [
+        "That's complete assemblies; you'd want an alignment after, and the tech checks the links and mounts while he's in there.",
+        "It depends if anything else up front is worn, and we'd inspect it first."
+      ],
+      "inspection_line": "I'd have the tech drive it and put it on the lift first — the inspection's {inspection_price}, and it tells us if it's struts or something cheaper.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "a fella down the road said he'd do it for a lot less",
+            "{competitor_place} told me {competitor_price}"
+          ],
+          "probe": "did his price include the alignment after?",
+          "probe_reply": [
+            "he didn't say",
+            "I don't think so"
+          ],
+          "answer_2": "that's worth asking him, because you need one after struts or it'll eat your tires, and whether it's complete assemblies with new mounts. Mine's the assemblies, the alignment's its own price, and I'll tell you both up front.",
+          "answer_1": "Ours are good parts.",
+          "answer_0": "Yeah. Um, so —"
+        },
+        {
+          "type": "think",
+          "customer": [
+            "let me think on it, that's a lot of money",
+            "I need to think about that one"
+          ],
+          "probe": "is it the total, or not being sure it needs it?",
+          "probe_reply": [
+            "the total",
+            "not being sure"
+          ],
+          "answer_2": "if you're not sure, start with the inspection. If the struts aren't leaking and it's a link or a mount, you save a lot, and if it is the struts, you see it before you spend it.",
+          "answer_1": "Sure, take your time.",
+          "answer_0": "Okay, no problem."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "are you sure it needs both sides?",
+            "why both? It's just the one side clunking"
+          ],
+          "probe": "is one side worse, the clunk on one side?",
+          "probe_reply": [
+            "passenger side, mostly",
+            "I think both"
+          ],
+          "answer_2": "even if one's worse, they go in pairs so it rides and brakes even side to side. If only one's leaking, you'll see it, but the other one's the same age and the same miles.",
+          "answer_1": "You always do them in pairs.",
+          "answer_0": "Yeah."
+        }
+      ],
+      "found": "the front struts are leaking and the mounts are cracked"
+    },
+    {
+      "key": "wheel_bearing",
+      "catalogue": {
+        "price": "wheel_bearing",
+        "price_alt": null,
+        "inspection_price": "suspension_diag"
+      },
+      "lead_share": 0.0159,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a wheel bearing",
+        "the front hub assembly"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I think I've got a wheel bearing going out"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a price on a wheel bearing"
+        },
+        {
+          "kind": "accurate",
+          "need": "it's got a hum that gets louder the faster I go"
+        },
+        {
+          "kind": "vague",
+          "need": "it's making a noise like an airplane"
+        },
+        {
+          "kind": "vague",
+          "need": "there's a roar coming from one of the wheels"
+        },
+        {
+          "kind": "wrong",
+          "need": "my tires are real loud, I think I need new tires"
+        },
+        {
+          "kind": "wrong",
+          "need": "I think it's my transmission, it hums"
+        }
+      ],
+      "questions": [
+        {
+          "q": "does it change when you turn, like louder going one way on a curve?",
+          "answers": [
+            "louder going left",
+            "louder turning right",
+            "I haven't noticed"
+          ]
+        },
+        {
+          "q": "is it more of a hum, or a grind?",
+          "answers": [
+            "a hum. A roar",
+            "it's starting to grind",
+            "humming"
+          ]
+        },
+        {
+          "q": "does it get louder with speed?",
+          "answers": [
+            "yeah, the faster the worse",
+            "about the same",
+            "at highway speed it's bad"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a couple weeks, getting worse",
+        "since a long trip",
+        "it's been humming about a month",
+        "I noticed it on the interstate last week"
+      ],
+      "explain": [
+        "louder going one way usually points at the opposite side",
+        "tires can make that same noise, so the tech drives it first to be sure it's the bearing"
+      ],
+      "price_statement": [
+        "a front hub assembly on the {car_model} is {price}",
+        "you're at {price} for one side"
+      ],
+      "depends": [
+        "That's one side, after the tech confirms it, because sometimes it's a tire making the noise.",
+        "It depends which side and whether yours is a bolt-in hub or a press-in bearing."
+      ],
+      "inspection_line": "The tech has to drive it to be sure it's the bearing and not a tire — that check's {inspection_price}.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that's more than I figured",
+            "for one wheel?"
+          ],
+          "probe": "is it the price of the part, or you're not sure it's the bearing?",
+          "probe_reply": [
+            "not sure it's that",
+            "just the price"
+          ],
+          "answer_2": "then let the tech drive it first. If it's a tire, it's a lot less, and if it's the bearing, you know which side, and that's the price for one side, not both.",
+          "answer_1": "Bearings just cost that.",
+          "answer_0": "Yeah. So, {time_1}?"
+        },
+        {
+          "type": "time",
+          "customer": [
+            "can it wait a couple weeks?",
+            "I can't get it in right now, is that okay?"
+          ],
+          "probe": "is it humming, or starting to grind?",
+          "probe_reply": [
+            "humming",
+            "grinding some"
+          ],
+          "answer_2": "a hum, you've got a little time, but don't let it go long. If it grinds or the wheel feels loose, park it — a bearing that lets go can lock up or let the wheel wobble.",
+          "answer_1": "I wouldn't wait too long.",
+          "answer_0": "It might."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "how do you know it's that without seeing it?",
+            "you can't know that over the phone"
+          ],
+          "probe": "does the hum change when you turn?",
+          "probe_reply": [
+            "yeah",
+            "I don't know"
+          ],
+          "answer_2": "I don't, not for sure — that's why the tech road-tests it and checks for play on the lift. I'm telling you what it sounds like, and he tells you what it is before you pay for a part.",
+          "answer_1": "That's what it sounds like.",
+          "answer_0": "It's the bearing, probably."
+        }
+      ],
+      "found": "one front wheel bearing has play and it's humming"
+    },
+    {
+      "key": "brake_inspection",
+      "catalogue": {
+        "price": "brake_inspection",
+        "price_alt": "front_pads_rotors",
+        "inspection_price": "brake_inspection"
+      },
+      "lead_share": 0.0136,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a brake inspection",
+        "a look at the brakes"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I want somebody to check my brakes"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need y'all to look at my brakes, the pedal feels soft"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a brake inspection, it's making a little noise"
+        },
+        {
+          "kind": "vague",
+          "need": "my brakes just feel weird"
+        },
+        {
+          "kind": "vague",
+          "need": "I don't trust my brakes right now"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need brake fluid, the pedal goes down"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need y'all to bleed my brakes"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is the pedal soft, like it sinks, or does it feel normal?",
+          "answers": [
+            "it sinks a little",
+            "it feels normal, it's the noise",
+            "kinda spongy"
+          ]
+        },
+        {
+          "q": "any warning light on the dash?",
+          "answers": [
+            "the brake light came on once",
+            "no lights",
+            "the ABS light's on"
+          ]
+        },
+        {
+          "q": "any leaks you've seen, like a wet spot next to one of the wheels?",
+          "answers": [
+            "no",
+            "there's something wet on the back tire",
+            "I haven't looked"
+          ]
+        }
+      ],
+      "since_answers": [
+        "just the last few days",
+        "a week or so",
+        "since yesterday, really",
+        "it's felt off a couple weeks"
+      ],
+      "explain": [
+        "the tech pulls the wheels, measures the pads and rotors, and checks the fluid and the lines",
+        "a soft pedal I want looked at soon, that can be air or a leak"
+      ],
+      "price_statement": [
+        "a brake inspection is {price}",
+        "the inspection's {price}, wheels off and everything measured"
+      ],
+      "depends": [
+        "That's the inspection, and if it needs work, you get the price before anything's done.",
+        "What it costs after depends on what they find, and I'll show you."
+      ],
+      "inspection_line": "The inspection's {inspection_price}, and that's what tells us the exact price on any work.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "I thought y'all did that free",
+            "y'all charge for that?"
+          ],
+          "probe": "is it the free look with an oil change you're thinking of?",
+          "probe_reply": [
+            "yeah, I guess",
+            "somebody said it was free"
+          ],
+          "answer_2": "with an oil change the tech looks at the brakes through the wheel, and that's free. A full inspection pulls all four wheels and measures everything, and it's what you want with a soft pedal.",
+          "answer_1": "It's not much for what you get.",
+          "answer_0": "No, it's {price}."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "let me see if it gets worse",
+            "I'll keep an eye on it"
+          ],
+          "probe": "is the pedal getting softer, or staying about the same?",
+          "probe_reply": [
+            "about the same",
+            "a little worse"
+          ],
+          "answer_2": "if it's soft, I'd rather you didn't wait, brakes don't fix themselves and a soft pedal can mean a leak. If it gets lower or the light comes on, don't drive it, call us and we'll get it towed.",
+          "answer_1": "Okay.",
+          "answer_0": "Sounds good."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "y'all just want to sell me brakes",
+            "every time I go somewhere they say I need brakes"
+          ],
+          "probe": "has somebody pushed brakes on you before?",
+          "probe_reply": [
+            "every time I go somewhere",
+            "kinda"
+          ],
+          "answer_2": "I hear that a lot. You get the measurements, and if your pads are good, the sheet says they're good, and you pay for the inspection and that's it.",
+          "answer_1": "We're not like that.",
+          "answer_0": "No, no."
+        }
+      ],
+      "found": "the brake fluid is dark and the rear pads are getting low"
+    },
+    {
+      "key": "pre_purchase",
+      "catalogue": {
+        "price": "pre_purchase_inspection",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.0136,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": false,
+      "job_said": [
+        "a pre-purchase inspection",
+        "checking the car out before you buy it"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I was wondering do y'all check out a used car before somebody buys it"
+        },
+        {
+          "kind": "accurate",
+          "need": "I'm looking at a used truck and I want it looked at first"
+        },
+        {
+          "kind": "accurate",
+          "need": "I wanted to know what a pre-purchase inspection runs"
+        },
+        {
+          "kind": "vague",
+          "need": "I'm fixing to buy a car off a guy and I want to make sure it ain't junk"
+        },
+        {
+          "kind": "vague",
+          "need": "can I bring a car by that's not mine yet"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a history report run on a car I'm buying"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need an inspection sticker on a car I'm buying"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it from a dealer or a private seller?",
+          "answers": [
+            "private, a guy off Marketplace",
+            "a little lot on the other side of town",
+            "a dealer"
+          ]
+        },
+        {
+          "q": "what is it, and about how many miles?",
+          "answers": [
+            "a {car_year_short} {car_model}, about ninety thousand",
+            "it's a {car_model}, I don't know the miles exactly",
+            "it's got a hundred and thirty on it"
+          ]
+        },
+        {
+          "q": "will the seller let you bring it here?",
+          "answers": [
+            "he said I could take it",
+            "I'd have to ask him",
+            "yeah, I'll drive it over"
+          ]
+        }
+      ],
+      "since_answers": [
+        "I'm supposed to give him an answer by the weekend",
+        "I just found it",
+        "I just saw it online last night",
+        "he wants to sell it this week"
+      ],
+      "explain": [
+        "the tech road-tests it, puts it on the lift and scans it, and you get a written report of what's wrong and what's coming",
+        "it won't tell you everything, but it tells you what you'd be buying"
+      ],
+      "price_statement": [
+        "the pre-purchase inspection is {price}",
+        "it's {price} for the inspection and the written report"
+      ],
+      "depends": [
+        "That's the same for most cars, and a big diesel truck or anything unusual, I'd tell you up front.",
+        "It's a flat price, and if you want something special tested, like a compression test, that's extra."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that's a lot just to look at a car I ain't bought",
+            "I don't know if it's worth that for a cheap car"
+          ],
+          "probe": "is the car a lot of money for you, about?",
+          "probe_reply": [
+            "it ain't a lot, it's an older car",
+            "it's a good bit of money for me"
+          ],
+          "answer_2": "then it's cheap insurance — one bad transmission or a head gasket and you'd spend way more than this. And if it finds something small, you use the report to talk the price down.",
+          "answer_1": "It's worth it.",
+          "answer_0": "Yeah."
+        },
+        {
+          "type": "time",
+          "customer": [
+            "the seller wants an answer quick",
+            "he's got somebody else looking at it"
+          ],
+          "probe": "can he get it here, or is it on his schedule?",
+          "probe_reply": [
+            "he can bring it",
+            "he works days"
+          ],
+          "answer_2": "then let's get it in the first open spot so you have the report the same day. If he can't bring it, you drive it over on a test drive, and most sellers will let you.",
+          "answer_1": "We'll get it in quick.",
+          "answer_0": "Okay."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "let me see if he'll even let me",
+            "I gotta ask him first"
+          ],
+          "probe": "has he said anything about it, or you haven't asked?",
+          "probe_reply": [
+            "haven't asked",
+            "he hemmed and hawed"
+          ],
+          "answer_2": "ask him, and honestly, if a seller won't let a shop look at it, that tells you something too. When he says yes, call me and I'll get you in.",
+          "answer_1": "Sure.",
+          "answer_0": "Okay, sounds good."
+        }
+      ],
+      "found": null
+    },
+    {
+      "key": "alternator",
+      "catalogue": {
+        "price": "alternator",
+        "price_alt": null,
+        "inspection_price": "battery_test"
+      },
+      "lead_share": 0.0102,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "an alternator",
+        "the alternator"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I think my alternator's going out"
+        },
+        {
+          "kind": "accurate",
+          "need": "the battery light's on and it died on me"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a price on an alternator for a {car_model}"
+        },
+        {
+          "kind": "vague",
+          "need": "my lights are dimming and it's acting like it's gonna die"
+        },
+        {
+          "kind": "vague",
+          "need": "it died on me at a red light, and the guy that jumped me said it's the charging"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a new battery, it's the second one this year"
+        },
+        {
+          "kind": "wrong",
+          "need": "I think my belt's bad, the battery light come on"
+        }
+      ],
+      "questions": [
+        {
+          "q": "did it die while you were driving, or it just won't start in the morning?",
+          "answers": [
+            "died while I was driving",
+            "won't start in the morning",
+            "both, honestly"
+          ]
+        },
+        {
+          "q": "is the battery light on the dash on?",
+          "answers": [
+            "yeah, the little battery light",
+            "no",
+            "it flickers"
+          ]
+        },
+        {
+          "q": "is the battery new?",
+          "answers": [
+            "I put one in last month",
+            "it's old",
+            "I don't know"
+          ]
+        }
+      ],
+      "since_answers": [
+        "since yesterday",
+        "it's been flickering a week",
+        "the light came on this morning",
+        "it's been dimming a few days"
+      ],
+      "explain": [
+        "if it dies while you're driving and the battery light's on, it's usually the alternator not charging",
+        "we test it to be sure, because sometimes it's a belt or a cable"
+      ],
+      "price_statement": [
+        "an alternator for the {car_model}, put in, is {price}",
+        "you're at {price} for the alternator"
+      ],
+      "depends": [
+        "That's a remanufactured one with a warranty, new is more, and we test it first to be sure it's not the belt.",
+        "It depends where it sits — on some engines it's easy, on some it's buried."
+      ],
+      "inspection_line": "We test the charging system first, and that's {inspection_price}.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "I can get one at the parts store and put it in myself",
+            "that's a lot, my cousin can put one in"
+          ],
+          "probe": "have you done one on this car before?",
+          "probe_reply": [
+            "no, but my cousin has",
+            "I've done them on older cars"
+          ],
+          "answer_2": "then you might be fine. Some are easy and some you pull half the front off. If you'd rather, we test it, so you know it's the alternator before you buy one.",
+          "answer_1": "Ours comes with a warranty.",
+          "answer_0": "Okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "how do I know it ain't just the battery?",
+            "the parts store said the battery's fine"
+          ],
+          "probe": "did it die while it was running?",
+          "probe_reply": [
+            "yeah, at a light",
+            "no"
+          ],
+          "answer_2": "if it died running, that's a charging problem — a battery alone won't do that. But we test both before we sell either one.",
+          "answer_1": "We'll check it.",
+          "answer_0": "It's the alternator, sounds like."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll see if I can get by on a jump",
+            "I might just keep jumping it for now"
+          ],
+          "probe": "how far are you driving it?",
+          "probe_reply": [
+            "back and forth to work",
+            "a good ways"
+          ],
+          "answer_2": "with a bad alternator you're running on the battery, and it'll quit somewhere, usually not a good place. If you have to drive it, drive it here, lights and radio off.",
+          "answer_1": "Okay.",
+          "answer_0": "Sounds good."
+        }
+      ],
+      "found": "the alternator's barely charging"
+    },
+    {
+      "key": "spark_plugs",
+      "catalogue": {
+        "price": "spark_plugs",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.0091,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "spark plugs",
+        "a set of plugs"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need spark plugs done"
+        },
+        {
+          "kind": "accurate",
+          "need": "it's about time for plugs, it's got a hundred thousand on it"
+        },
+        {
+          "kind": "accurate",
+          "need": "I wanted a price on spark plugs on a {car_model}"
+        },
+        {
+          "kind": "vague",
+          "need": "it's running kinda rough, I think it needs a tune-up"
+        },
+        {
+          "kind": "vague",
+          "need": "it's missing a little when I pull off"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a tune-up"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need new spark plug wires"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it running rough, or is this just the mileage?",
+          "answers": [
+            "just the mileage",
+            "it's a little rough at idle",
+            "it hesitates some"
+          ]
+        },
+        {
+          "q": "is the check engine light on, or flashing?",
+          "answers": [
+            "no light",
+            "it's on",
+            "it flashed one time"
+          ]
+        },
+        {
+          "q": "do you know if they've ever been done?",
+          "answers": [
+            "never, far as I know",
+            "I think the last owner did them",
+            "no idea"
+          ]
+        }
+      ],
+      "since_answers": [
+        "it just hit the mileage",
+        "a couple weeks of running rough",
+        "it's been rough for a week or so",
+        "it's been missing off and on since spring"
+      ],
+      "explain": [
+        "most plugs now go about a hundred thousand miles",
+        "if it's running rough, the tech makes sure it's not a coil before he sells you plugs"
+      ],
+      "price_statement": [
+        "plugs on the {car_model} are {price}",
+        "you're at {price} for a set of plugs"
+      ],
+      "depends": [
+        "A four-cylinder's quick; on a V-six the back ones are under the intake, and that's a lot more labor.",
+        "It depends on the engine, some are easy and some aren't."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that's a lot for spark plugs",
+            "{price} for plugs?"
+          ],
+          "probe": "is it the V-six? The back three are what costs",
+          "probe_reply": [
+            "yeah, it's the V-six",
+            "I think it's a four"
+          ],
+          "answer_2": "that's why. On the V-six the back plugs are under the intake, so most of that is labor taking it apart, and the plugs are the small part. On a four-cylinder it's a lot less.",
+          "answer_1": "That's what plugs run.",
+          "answer_0": "Yeah, it is."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll wait till it gets worse",
+            "it's running okay, I'll put it off"
+          ],
+          "probe": "is it running rough now, or just due?",
+          "probe_reply": [
+            "just due",
+            "little rough"
+          ],
+          "answer_2": "if it's just due, it can wait a little. If it's missing, don't let it go — a miss can ruin the converter, and that's a lot more than plugs.",
+          "answer_1": "Okay.",
+          "answer_0": "Okay, sounds good."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "do I need coils too? They always say coils",
+            "they always try to sell me coils with it"
+          ],
+          "probe": "is it misfiring, is the light on?",
+          "probe_reply": [
+            "no light",
+            "it's on"
+          ],
+          "answer_2": "if there's no misfire, no, plugs only. If the light's on, the tech tests the coils first and tells you which one, not all of them.",
+          "answer_1": "Probably not.",
+          "answer_0": "We'll see."
+        }
+      ],
+      "found": "the plugs are worn and it's due for them by the book"
+    },
+    {
+      "key": "coolant_leak",
+      "catalogue": {
+        "price": "cooling_pressure_test",
+        "price_alt": null,
+        "inspection_price": "cooling_pressure_test"
+      },
+      "lead_share": 0.0091,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a cooling system pressure test",
+        "finding the coolant leak"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "my low coolant light keeps coming on"
+        },
+        {
+          "kind": "accurate",
+          "need": "I'm losing coolant and I can't find where"
+        },
+        {
+          "kind": "accurate",
+          "need": "there's a green puddle under my car"
+        },
+        {
+          "kind": "vague",
+          "need": "it smells sweet, like syrup, when I park it"
+        },
+        {
+          "kind": "vague",
+          "need": "the temperature thing went up a little the other day"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a coolant flush"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a new radiator, I think"
+        }
+      ],
+      "questions": [
+        {
+          "q": "have you seen any puddles, or smelled something sweet?",
+          "answers": [
+            "green puddle under the front",
+            "a sweet smell, no puddle",
+            "neither one"
+          ]
+        },
+        {
+          "q": "has the temperature gauge moved at all?",
+          "answers": [
+            "stays in the middle",
+            "went up a little on the hill",
+            "it's been high"
+          ]
+        },
+        {
+          "q": "how often are you adding coolant?",
+          "answers": [
+            "every week or so",
+            "topped it off once",
+            "every couple days"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a couple weeks",
+        "since it got hot",
+        "I've topped it off twice this week",
+        "a month, maybe more"
+      ],
+      "explain": [
+        "the pressure test puts the system under pressure so the tech can see where it's leaking",
+        "it can be a hose, the radiator, the water pump, and the test tells us which"
+      ],
+      "price_statement": [
+        "the pressure test is {price}",
+        "to find the leak, that's {price}"
+      ],
+      "depends": [
+        "Then the fix depends on what's leaking — a hose is a lot less than a radiator — and you get that price first.",
+        "That's the test, and the repair depends on what it finds."
+      ],
+      "inspection_line": "We can't price the fix until we find the leak — the pressure test's {inspection_price}.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "can't you just look at it?",
+            "y'all charge to find a leak?"
+          ],
+          "probe": "do you want to know where it's coming from, or just keep topping it off?",
+          "probe_reply": [
+            "I want it fixed",
+            "just want it to quit"
+          ],
+          "answer_2": "then we need to find it. A slow leak doesn't always show just looking — the test pressurizes it so it drips where it's leaking, and it keeps you from buying a radiator when it's a hose.",
+          "answer_1": "That's what we have to do.",
+          "answer_0": "It's {price}."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll just keep adding coolant",
+            "I'll keep a jug in the trunk for now"
+          ],
+          "probe": "is the gauge staying normal?",
+          "probe_reply": [
+            "yeah",
+            "it's crept up"
+          ],
+          "answer_2": "if it stays normal, you've got a little time, but carry a jug. If that gauge climbs, pull over and shut it off — overheating can ruin the engine, and that's a lot more than a leak.",
+          "answer_1": "Okay.",
+          "answer_0": "Okay, sounds good."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "the last shop flushed it and now it's leaking",
+            "it never leaked till somebody worked on it"
+          ],
+          "probe": "did it start leaking right after?",
+          "probe_reply": [
+            "right after",
+            "a while after"
+          ],
+          "answer_2": "if it started right after, it could be a hose they disturbed, and that'd be worth calling them about. Either way the test shows where it's leaking, and you'll have that in writing.",
+          "answer_1": "We'll find it.",
+          "answer_0": "Okay."
+        }
+      ],
+      "found": "the radiator's seeping at the seam"
+    },
+    {
+      "key": "starter",
+      "catalogue": {
+        "price": "starter",
+        "price_alt": null,
+        "inspection_price": "battery_test"
+      },
+      "lead_share": 0.0091,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a starter",
+        "the starter"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I think my starter's going out"
+        },
+        {
+          "kind": "accurate",
+          "need": "it just clicks when I turn the key"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a price on a starter for a {car_model}"
+        },
+        {
+          "kind": "vague",
+          "need": "it won't start sometimes and then it will"
+        },
+        {
+          "kind": "vague",
+          "need": "I turn the key and nothing happens, the lights come on though"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a battery, it just clicks"
+        },
+        {
+          "kind": "wrong",
+          "need": "my ignition's bad, the key won't do nothing"
+        }
+      ],
+      "questions": [
+        {
+          "q": "do you hear one click, or a bunch of fast clicking?",
+          "answers": [
+            "one big click",
+            "fast clicking",
+            "nothing at all"
+          ]
+        },
+        {
+          "q": "do the dash lights stay bright when you turn the key?",
+          "answers": [
+            "they stay on",
+            "they dim way down",
+            "I didn't notice"
+          ]
+        },
+        {
+          "q": "does trying again make it go?",
+          "answers": [
+            "second or third try it'll go",
+            "my daddy hit it with a hammer and it started",
+            "no"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a couple weeks, off and on",
+        "it just started this morning",
+        "it did it twice this week",
+        "since the weekend"
+      ],
+      "explain": [
+        "one click with bright lights is usually the starter, and fast clicking is usually the battery",
+        "we test the battery and cables first, so we don't sell you a starter you don't need"
+      ],
+      "price_statement": [
+        "a starter on the {car_model}, put in, is {price}",
+        "you're at {price} for the starter"
+      ],
+      "depends": [
+        "That's after we test the battery and cables, and it depends where it sits on yours.",
+        "That's a reman with a warranty; a new one's more."
+      ],
+      "inspection_line": "We test the battery and cables first, and that's {inspection_price}.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that seems like a lot for a starter",
+            "{price}? For a starter?"
+          ],
+          "probe": "is it the part price, or the labor on yours?",
+          "probe_reply": [
+            "I don't know, just the total",
+            "the labor, I guess"
+          ],
+          "answer_2": "on some engines it's right there, and on others it's under the intake, and on the {car_model} that's most of the labor. The part's a reman with a warranty, and I can price new against reman for you.",
+          "answer_1": "That's what starters run.",
+          "answer_0": "Yeah."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "how do I know it ain't just the battery?",
+            "my buddy said it's prob'ly the battery"
+          ],
+          "probe": "is it fast clicking, or one click?",
+          "probe_reply": [
+            "one click",
+            "fast"
+          ],
+          "answer_2": "one click with bright lights, it's probably the starter, and fast clicking is usually battery. But we test both, so you don't buy a starter if it's the battery.",
+          "answer_1": "We'll test it.",
+          "answer_0": "It's the starter."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "it's still starting most of the time, I'll wait",
+            "I'll ride it out a while"
+          ],
+          "probe": "if it doesn't start, where would you be stuck?",
+          "probe_reply": [
+            "at work",
+            "out of town"
+          ],
+          "answer_2": "that's the thing — they don't give much warning before they quit for good. If you can't be stuck there, I'd get it in this week.",
+          "answer_1": "Okay.",
+          "answer_0": "Okay, sounds good."
+        }
+      ],
+      "found": "the starter's dragging and drawing too much"
+    },
+    {
+      "key": "control_arm",
+      "catalogue": {
+        "price": "lower_control_arm",
+        "price_alt": null,
+        "inspection_price": "suspension_diag"
+      },
+      "lead_share": 0.0079,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a lower control arm",
+        "the control arm"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I need a price on a lower control arm"
+        },
+        {
+          "kind": "accurate",
+          "need": "the tire place said my control arm bushing's tore up"
+        },
+        {
+          "kind": "accurate",
+          "need": "there's a clunk when I brake and the front end shifts"
+        },
+        {
+          "kind": "vague",
+          "need": "it kinda shifts when I hit the brakes"
+        },
+        {
+          "kind": "vague",
+          "need": "there's a knock underneath on bumps"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a ball joint"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need an alignment, it pulls when I stop"
+        }
+      ],
+      "questions": [
+        {
+          "q": "which side, and is it a clunk when you brake, or over bumps?",
+          "answers": [
+            "driver's side, when I brake",
+            "passenger side, on bumps",
+            "I'm not sure which side"
+          ]
+        },
+        {
+          "q": "did somebody already look at it and say control arm?",
+          "answers": [
+            "the tire place did",
+            "I'm just guessing",
+            "my buddy looked under it"
+          ]
+        },
+        {
+          "q": "does the steering wander, or the wheel shake?",
+          "answers": [
+            "it wanders some",
+            "it shakes a little",
+            "no"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a month",
+        "since I hit a curb",
+        "a couple weeks now",
+        "since I hit that curb pulling out"
+      ],
+      "explain": [
+        "on a lot of cars the bushing and the ball joint come with the arm, so you replace the whole arm",
+        "and you'd want an alignment after, because it moves the wheel"
+      ],
+      "price_statement": [
+        "a lower control arm on the {car_model}, one side, is {price}",
+        "you're at {price} for the one side"
+      ],
+      "depends": [
+        "That's one side, and you need an alignment after, and that's its own price.",
+        "If the other side's worn too, I'd show you before doing it."
+      ],
+      "inspection_line": "I'd have the tech confirm it on the lift first — that's {inspection_price}.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that's more than I thought",
+            "I figured it'd just be the bushing"
+          ],
+          "probe": "were you thinking just the bushing?",
+          "probe_reply": [
+            "yeah, the guy said bushing",
+            "I didn't know what it'd be"
+          ],
+          "answer_2": "on a lot of cars the bushing doesn't come by itself, or pressing one in costs nearly as much labor as the whole arm. The arm comes with a new bushing and ball joint, so you're done with it.",
+          "answer_1": "That's what they run.",
+          "answer_0": "Yeah."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll see how it does",
+            "I'll wait a little"
+          ],
+          "probe": "is the clunk getting worse, or is the steering wandering?",
+          "probe_reply": [
+            "about the same",
+            "it wanders"
+          ],
+          "answer_2": "if it's wandering, get it in — a worn arm can let go of the ball joint, and that's a tow. If it's just a little clunk, you've got some time.",
+          "answer_1": "Okay.",
+          "answer_0": "Okay."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "y'all are gonna want to do both sides",
+            "do I have to do both?"
+          ],
+          "probe": "is the other side making any noise?",
+          "probe_reply": [
+            "no",
+            "maybe"
+          ],
+          "answer_2": "not unless it's worn. Control arms don't have to go in pairs like struts; if the other side's loose the tech shows you, and if not, we leave it.",
+          "answer_1": "Just the one, probably.",
+          "answer_0": "Maybe."
+        }
+      ],
+      "found": "a front lower control arm bushing is torn"
+    },
+    {
+      "key": "cv_axle",
+      "catalogue": {
+        "price": "cv_axle",
+        "price_alt": null,
+        "inspection_price": null
+      },
+      "lead_share": 0.0079,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a CV axle",
+        "an axle"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "it clicks when I turn real tight, like in a parking lot"
+        },
+        {
+          "kind": "accurate",
+          "need": "the shop said my CV boot's torn"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a price on an axle for a {car_model}"
+        },
+        {
+          "kind": "vague",
+          "need": "there's a popping noise when I turn"
+        },
+        {
+          "kind": "vague",
+          "need": "it's slinging grease all over the inside of my wheel"
+        },
+        {
+          "kind": "wrong",
+          "need": "I think my steering's going out, it clicks when I turn"
+        },
+        {
+          "kind": "wrong",
+          "need": "I just need the boot replaced"
+        }
+      ],
+      "questions": [
+        {
+          "q": "does it click turning one way more than the other?",
+          "answers": [
+            "turning left",
+            "turning right",
+            "both"
+          ]
+        },
+        {
+          "q": "is there grease slung on the inside of the wheel?",
+          "answers": [
+            "yeah, it's all over",
+            "I haven't looked",
+            "a little"
+          ]
+        },
+        {
+          "q": "any shudder when you speed up?",
+          "answers": [
+            "a little shudder taking off",
+            "no",
+            "on the interstate some"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a few weeks",
+        "it's gotten louder lately",
+        "about a month, it's getting louder",
+        "since last week"
+      ],
+      "explain": [
+        "clicking on turns is the outer joint, and once the boot tears and the grease slings out, the joint wears",
+        "these days it's usually less to put in a whole axle than to rebuild the boot"
+      ],
+      "price_statement": [
+        "a CV axle on the {car_model}, one side, is {price}",
+        "you're at {price} for the one axle"
+      ],
+      "depends": [
+        "That's a new axle, one side, and if the other boot's torn, I'd show you.",
+        "It depends on the side, because on some cars the right one's longer."
+      ],
+      "inspection_line": null,
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "can't you just do the boot?",
+            "all that for a boot?"
+          ],
+          "probe": "is it clicking yet, or is the boot just torn?",
+          "probe_reply": [
+            "it clicks",
+            "just torn"
+          ],
+          "answer_2": "if it's clicking, the joint's already worn and a boot won't fix it. If it's just torn and quiet, a boot can work, but the labor's about the same as an axle, and the axle comes with its own warranty.",
+          "answer_1": "The whole axle's better.",
+          "answer_0": "No, it's the axle."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "it's just a noise, I'll wait",
+            "I'll let it go a while"
+          ],
+          "probe": "is the click getting louder?",
+          "probe_reply": [
+            "louder",
+            "same"
+          ],
+          "answer_2": "it'll keep getting louder, and if the joint lets go, the car won't move, and that's a tow. I wouldn't wait more than a couple weeks.",
+          "answer_1": "Okay.",
+          "answer_0": "Okay, sounds good."
+        },
+        {
+          "type": "time",
+          "customer": [
+            "I need it back the same day",
+            "I can't be without it overnight"
+          ],
+          "probe": "when do you need it by?",
+          "probe_reply": [
+            "by the end of the day",
+            "by the afternoon"
+          ],
+          "answer_2": "if the axle's in stock it's {job_duration}, so bring it first thing and you'll have it {ready_time}. I'll check stock when I book you.",
+          "answer_1": "We'll try.",
+          "answer_0": "Should be fine."
+        }
+      ],
+      "found": "a front CV boot is torn and the joint's clicking"
+    },
+    {
+      "key": "water_pump",
+      "catalogue": {
+        "price": "water_pump",
+        "price_alt": null,
+        "inspection_price": "cooling_pressure_test"
+      },
+      "lead_share": 0.0079,
+      "vehicle_classes": [
+        "car",
+        "suv",
+        "truck",
+        "van"
+      ],
+      "symptom": true,
+      "job_said": [
+        "a water pump",
+        "the water pump"
+      ],
+      "customer_says": [
+        {
+          "kind": "accurate",
+          "need": "I think my water pump's leaking"
+        },
+        {
+          "kind": "accurate",
+          "need": "the shop said my water pump's weeping"
+        },
+        {
+          "kind": "accurate",
+          "need": "I need a price on a water pump for a {car_model}"
+        },
+        {
+          "kind": "vague",
+          "need": "it's leaking coolant from the front of the engine"
+        },
+        {
+          "kind": "vague",
+          "need": "it's running hot and there's a drip under the front"
+        },
+        {
+          "kind": "wrong",
+          "need": "I need a radiator, it's leaking"
+        },
+        {
+          "kind": "wrong",
+          "need": "my thermostat's bad, it's overheating"
+        }
+      ],
+      "questions": [
+        {
+          "q": "is it dripping from the front of the engine, behind the belts?",
+          "answers": [
+            "right behind the belts, yeah",
+            "I can't tell",
+            "under the middle somewhere"
+          ]
+        },
+        {
+          "q": "has it run hot?",
+          "answers": [
+            "the gauge went up yesterday",
+            "no",
+            "it overheated once"
+          ]
+        },
+        {
+          "q": "any noise up front, like a squeal or a grind?",
+          "answers": [
+            "a little squeal",
+            "no",
+            "grinding at idle"
+          ]
+        }
+      ],
+      "since_answers": [
+        "a couple weeks",
+        "since a long drive",
+        "I noticed the puddle this week",
+        "a week or two"
+      ],
+      "explain": [
+        "a weeping pump drips from the little hole under it, that's the seal going",
+        "on some engines the timing belt drives the pump, so you'd do both together"
+      ],
+      "price_statement": [
+        "a water pump on the {car_model} is {price}",
+        "you're at {price} for the pump"
+      ],
+      "depends": [
+        "That's with coolant; on engines where the timing belt drives it, you do the belt too, and that's more.",
+        "It depends on the engine, because some are right in front and some are buried."
+      ],
+      "inspection_line": "I'd pressure-test it first to make sure it's the pump — that's {inspection_price}.",
+      "objections": [
+        {
+          "type": "price",
+          "customer": [
+            "that's a lot for a little pump",
+            "{price} for a water pump?"
+          ],
+          "probe": "is it the price, or you're not sure it's the pump?",
+          "probe_reply": [
+            "not sure",
+            "the price"
+          ],
+          "answer_2": "most of it's labor getting to it and filling the system back right. If you're not sure it's the pump, start with the pressure test — that tells us if it's the pump or a hose.",
+          "answer_1": "That's what they run.",
+          "answer_0": "Yeah."
+        },
+        {
+          "type": "think",
+          "customer": [
+            "I'll keep adding coolant for now",
+            "I'll just watch it for now"
+          ],
+          "probe": "is it running hot at all?",
+          "probe_reply": [
+            "no",
+            "a little"
+          ],
+          "answer_2": "if it's not running hot, carry coolant and watch the gauge. If it climbs, shut it off — overheating does a lot more damage than a pump costs.",
+          "answer_1": "Okay.",
+          "answer_0": "Okay, sounds good."
+        },
+        {
+          "type": "trust",
+          "customer": [
+            "are you gonna tell me I need a timing belt too?",
+            "they always tack a timing belt on that"
+          ],
+          "probe": "do you know if yours has a belt or a chain?",
+          "probe_reply": [
+            "no idea",
+            "a chain, I think"
+          ],
+          "answer_2": "only if yours is belt-driven, and I'll look it up by the engine. If it's a chain, it's just the pump, and if it's a belt and the belt's old, I'll give you both prices and you choose.",
+          "answer_1": "Probably not.",
+          "answer_0": "Maybe."
+        }
+      ],
+      "found": "the water pump's weeping from the weep hole"
+    }
+  ],
+  "generic_objections": {
+    "time": [
+      {
+        "type": "time",
+        "customer": [
+          "I work late, I can't get there when y'all are open",
+          "I don't have a way to get there during the day",
+          "I'm at work all day, that's the problem"
+        ],
+        "probe": "is it getting here, or being without the car all day?",
+        "probe_reply": [
+          "being without it",
+          "getting there"
+        ],
+        "answer_2": "what I can do is take it first thing when we open and have somebody run you to work, and it'll be ready when you get off.",
+        "answer_1": "We'll work with you.",
+        "answer_0": "Okay. Well — we're here {shop_hours}."
+      },
+      {
+        "type": "time",
+        "customer": [
+          "that doesn't work for me",
+          "I can't do that, I'm at work",
+          "I can't do that one"
+        ],
+        "probe": "what's your week look like, mornings or afternoons?",
+        "probe_reply": [
+          "afternoons",
+          "mornings, early"
+        ],
+        "answer_2": "then let's do {time_2}, or tell me the day that's good and I'll find you a time on it.",
+        "answer_1": "We can find something.",
+        "answer_0": "Okay."
+      },
+      {
+        "type": "time",
+        "customer": [
+          "I can't be without my car, I got nobody to bring me",
+          "I don't have a ride if I leave it",
+          "I can't leave it, I got no ride"
+        ],
+        "probe": "do you want to wait on it, or would a ride help?",
+        "probe_reply": [
+          "a ride",
+          "I'd wait"
+        ],
+        "answer_2": "we can run you home or to work and come get you when it's ready, or you can wait in the lobby, it's {job_duration}.",
+        "answer_1": "We can figure something out.",
+        "answer_0": "Okay."
+      }
+    ],
+    "think": [
+      {
+        "type": "think",
+        "customer": [
+          "let me talk to my husband",
+          "I gotta check with my wife first"
+        ],
+        "probe": "is it the price y'all need to talk over, or the timing?",
+        "probe_reply": [
+          "the price",
+          "both"
+        ],
+        "answer_2": "let me hold you a spot {time_1} so you don't lose it, and I'll write the price down; if y'all decide no, just call and I'll take it off.",
+        "answer_1": "Sure, talk it over.",
+        "answer_0": "Okay, sounds good!"
+      },
+      {
+        "type": "think",
+        "customer": [
+          "I'm gonna call around a little",
+          "let me get a couple more prices"
+        ],
+        "probe": "is it the price you're comparing, or what's included?",
+        "probe_reply": [
+          "price",
+          "what's in it"
+        ],
+        "answer_2": "ask if theirs is the same parts and the same warranty — ours is {warranty}. If it's the same job, I'm happy for you to compare.",
+        "answer_1": "Sure, no problem.",
+        "answer_0": "Okay, sounds good."
+      },
+      {
+        "type": "think",
+        "customer": [
+          "I'll think about it and call y'all back",
+          "let me think on it"
+        ],
+        "probe": "is there something about it you're not sure on?",
+        "probe_reply": [
+          "just the money",
+          "just bad timing"
+        ],
+        "answer_2": "if it's the money, I can tell you what has to be done now and what can wait, and if it's the timing, let me pencil you in, and it costs nothing to move it.",
+        "answer_1": "Okay, take your time.",
+        "answer_0": "Alright, sounds good."
+      }
+    ]
+  }
+}

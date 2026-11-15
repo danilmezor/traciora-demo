@@ -1,0 +1,132 @@
+{
+ "path": "services/maintenance/spark-plugs.md",
+ "title": "Spark plugs and the \"tune-up\"",
+ "first_revision_text": "en/_history/services/maintenance/spark-plugs.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "What a customer means by a tune-up and what the plug job costs by engine.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:combine-policy-and-price",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 280,
+ "links_to": [
+  "services/diagnostics/check-engine-light.md",
+  "prices/labour-rates-and-fees.md",
+  "services/engine/ignition-sensors-and-fuel-pump.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "\"Tune-up\" = spark plugs, filters, inspection; a warning light means diagnosis first.",
+  "Catalogue job spark_plugs: 1.0 h for a four-cylinder car; standard NGK; iridium plugs last 60,000 to 100,000 miles.",
+  "V6 (class SUV) labour multiplier 2.4: labour at the SUV figure, plus two more plugs; trucks 1.6, vans 1.8.",
+  "The V6 total is not printed: it must be computed from the class table (six plugs: 135.00 x 2.4 = 324.00 labour; six plugs at 21.82 x 1.15 to the cent, 25.09 each = 150.54; total 474.54 before supplies and tax)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Spark plugs",
+   "item": "Four-cylinder car: 1 hour, $222.28 with NGK plugs."
+  },
+  {
+   "section": "Spark plugs",
+   "item": "A V6 is not the same job. The back three plugs are under the intake manifold, and it comes off. Labour is $324.00 instead of $135.00, plus two more plugs. Price it by the class table, not by this page."
+  },
+  {
+   "section": "Spark plugs",
+   "item": "Trucks and vans with V8s: in between."
+  },
+  {
+   "section": "Ask",
+   "item": "How many cylinders? If they do not know: year, make, model, and look it up."
+  },
+  {
+   "section": "Ask",
+   "item": "Is the check engine light on? If it is, book the diagnosis, not the plugs. Plugs on a car with a bad coil is money spent twice."
+  },
+  {
+   "section": "Ask",
+   "item": "When were they last done? \"Never\" at 120,000 miles is common."
+  },
+  {
+   "section": "They say",
+   "item": "\"I just want a tune-up, how much?\" \"On a modern car that is plugs and filters. For your four-cylinder the plugs are $222.28. Let us look at the filters when it is here; they may be fine.\""
+  },
+  {
+   "section": "They say",
+   "item": "\"Why is my V6 double?\" \"Half the plugs are under the intake. It is two and a half hours instead of one.\""
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 222.28
+  },
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "labour",
+   "class": "suv",
+   "when": "after_rise",
+   "value": 324.0
+  },
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 135.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "Expected answer for \"spark plugs on a V6 SUV, standard\": 474.54 USD = labour 324.00 + six plugs at 25.09 (21.82 x 1.15 to the cent). The catalogue prices four plugs; the per-plug count for six cylinders is the reader's arithmetic and should be confirmed as the seeder prices it."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian: «замена свечей» is 0.6 н/ч for four; no \"tune-up\" word; customers say «троит», «плохо заводится»."
+ ]
+}

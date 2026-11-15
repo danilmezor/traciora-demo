@@ -1,0 +1,696 @@
+{
+  "format": "seed-call/1",
+  "id": "en-35-people-bright-spot-early",
+  "configuration": "en",
+  "number": 35,
+  "story": "people",
+  "title": "The Nashville shop's bright spot, early: a careful intake and a caller let go",
+  "purpose": "People, slot 24, in the product's first month. Everything a dealership taught her is here: the full greeting, the name, the number read back, the questions that find the fault. What is not here yet is the time: she asks when would be good, offers the schedule, and lets 'can I call you back' end the call.",
+  "cast": {
+    "advisor": {
+      "slot": 24,
+      "name": "Jasmine Bolden",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Brianna Gentry",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "the Tuesday of week T-21 (rule R6; people, call 35)",
+    "nominal_offset": "T-150d",
+    "nominal_date": "2026-06-16",
+    "local_start": "11:10",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "303",
+    "ring_s": 4,
+    "caller_phone": "615-555-0139",
+    "repeat_caller": false,
+    "talk_s": 119,
+    "note": "Central time. Before the price rise."
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Brianna Gentry, ringing from work.",
+    "vehicle": "2014 Ford Fusion",
+    "job": "balance four wheels (a shake in the steering wheel from 65 mph)",
+    "wants": "to know what it would cost to have a shake looked at",
+    "what_happens": "Jasmine takes the name and the number and reads the number back, asks where the shake is felt, from what speed, whether braking changes it and when the tires were fitted, names the likely job and its price, asks when would be a good time and offers to put her on the schedule. The caller has to go and will call back.",
+    "facts": {
+      "note": "Before the rise (P). catalogue.json wheel_balance, a menu price: 55.56 at the hour before the rise (60.00 today).",
+      "prices": [
+        {
+          "what": "Balance 4 wheels",
+          "job": "wheel_balance",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 125.0,
+          "usd": 55.56,
+          "said": "fifty-five fifty-six",
+          "said_usd": 55.56,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday through Friday",
+      "day": "any"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.2,
+      "said": "Hi. Um, my car's been shakin' on the interstate and I wanted to see how much it'd be to get it looked at."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 15.8,
+      "said": "Sure, I can help you with that. May I get your name?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 21.7,
+      "said": "Brianna Gentry."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 23.6,
+      "said": "Thank you, Brianna. And a good phone number, in case we get disconnected?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 29.9,
+      "said": "Six one five, five five five, oh one three nine."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 35.0,
+      "said": "Six one five, five five five, oh one three nine. And what are you driving?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 42.0,
+      "said": "A twenty-fourteen Ford Fusion."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 44.3,
+      "said": "Okay, a fourteen Fusion. Tell me about the shake. Do you feel it in the steering wheel, or more in the seat?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 53.1,
+      "said": "The steerin' wheel. It starts around sixty-five."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 56.6,
+      "said": "And does it change when you brake?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 60.9,
+      "said": "No. It's just there. It went away for a while after I got tires, and now it's back."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 69.5,
+      "said": "How long ago were the tires?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 72.5,
+      "said": "Like, a year?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 75.5,
+      "said": "Okay. That sounds like the wheels need balancing. They lose their weights sometimes. Balancing all four is fifty-five fifty-six."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 84.2,
+      "said": "Okay. That's not bad."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 86.8,
+      "said": "When would be a good time for you to bring it in?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 92.8,
+      "said": "Um... I'm not sure yet."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 95.9,
+      "said": "Would you like me to go ahead and put you on the schedule?"
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 102.2,
+      "said": "Um — can I call you back? I'm at work, I gotta go."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 107.9,
+      "said": "Of course. We're open seven-thirty to five-thirty, Monday through Friday."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 112.8,
+      "said": "Okay. Thank you."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 114.9,
+      "said": "Thank you for calling, Brianna. Have a good day."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.74,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          10,
+          18,
+          20
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a model that is also a word, in lower case",
+        "script_turn": 8,
+        "said": "Fusion",
+        "stored": "fusion"
+      },
+      {
+        "rule": "R5",
+        "what": "the phone number loses a digit in the caller's line and is whole in the advisor's",
+        "script_turn": 6,
+        "said": "Six one five, five five five, oh one three nine",
+        "stored": "615-555-013"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          7,
+          8,
+          9,
+          15,
+          21
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 3,
+        "dropped": 2
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 4,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "overlaps": {
+        "said": 0,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 242,
+    "stored_words": 222,
+    "strict_word_difference": 0.132
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 245,
+    "duration_s": 119.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi. My car's been shaking on the interstate and I wanted to see how much it'd be to get it looked at.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sure, I can help you with that. May I get your name?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brianna Gentry.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you, Brianna. And a good phone number, in case we get disconnected?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "615-555-013.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "615-555-0139. And what are you driving?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "A 2014 Ford fusion.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, a '14 Fusion. Tell me about the shake. Do you feel it in the steering wheel, or more in the seat?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The steering wheel. It starts around sixty-five.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "And does it change when you brake?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "No. It's just there. It went away for a while after I got tires, and now it's back.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "How long ago were the tires?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Like, a year?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. That sounds like the wheels need balancing. They lose their weights sometimes. Balancing all four is $55.56.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. That's not bad.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "When would be a good time for you to bring it in?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Um. I'm not sure yet.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Would you like me to go ahead and put you on the schedule?",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Can I call you back? I'm at work, I got to go.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Of course. We're open 7:30 to 5:30, Monday through Friday.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Thank you.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you for calling, Brianna. Have a good day.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "615-555-0139. And what are you driving?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "need_discovery",
+        "quote": "And does it change when you brake?",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Balancing all four is $55.56.",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "offered_time",
+        "quote": "When would be a good time for you to bring it in?",
+        "level": 1,
+        "segment": 16
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Would you like me to go ahead and put you on the schedule?",
+        "level": 1,
+        "segment": 18
+      },
+      {
+        "key": "objection",
+        "quote": "Can I call you back? I'm at work, I got to go.",
+        "level": 0,
+        "segment": 19
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Nothing was agreed on the call."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "And does it change when you brake?",
+      "why": "The question that separates a wheel out of balance from a warped rotor, asked before she named a job or a price.",
+      "segment": 10
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "When would be a good time for you to bring it in?",
+      "say": "It takes about forty minutes. I have today at 4:30 or tomorrow at 7:30, before work. Which is better?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 60.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 16
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 18
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 19
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted"
+      ],
+      "score": 60.0,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 10,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine",
+        "name_and_number": "615-555-0139. And what are you driving?",
+        "need_discovery": "And does it change when you brake?",
+        "price_with_next_step": "Balancing all four is $55.56",
+        "offered_time": "When would be a good time for you to bring it in?",
+        "asked_for_booking": "Would you like me to go ahead and put you on the schedule?",
+        "objection": "Can I call you back? I'm at work, I got to go"
+      },
+      "na": {
+        "recap": "Nothing was agreed on the call."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "And does it change when you brake?",
+        "why": "The question that separates a wheel out of balance from a warped rotor, asked before she named a job or a price."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "When would be a good time for you to bring it in?",
+        "say": "It takes about forty minutes. I have today at 4:30 or tomorrow at 7:30, before work. Which is better?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. The caller's number lost its last digit in her own line; the advisor's read-back is whole, and that is the line the check quotes.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 2,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 60.0,
+    "score_exact": 60.0,
+    "outcome": "customer_will_call",
+    "tags": [
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business, the shop and her own name.",
+    "name_and_number": "2: the name, the number, and the number said back.",
+    "need_discovery": "2: the car, the job and what she asked for: in the wheel, from 65, no change on braking, tires a year old.",
+    "price_with_next_step": "1: the price of the likely job, bare; she does not say it depends on what the balancer shows.",
+    "offered_time": "1: she asks openly when would be a good time.",
+    "asked_for_booking": "1: she offers the schedule and the caller pauses.",
+    "recap": "N/A: nothing was agreed.",
+    "objection": "0: 'can I call you back' is the last thing the caller says and it gets 'of course' and the opening hours.",
+    "score": "(1·2 + 2·2 + 2·2 + 2·1 + 3·1 + 3·1 + 2·0) / 2 = 9 of 15 weight points = 60.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Brianna Gentry, 615-555-0139, 2014 Ford Fusion; no order follows."
+  ]
+}

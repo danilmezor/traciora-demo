@@ -1,0 +1,159 @@
+# Assistant texts (en) at T 2026-11-13 10:30: each loaded item's computed slots, the instant each was read at (UTC) and the value written into the text.
+
+
+## s2-discounts#1
+{{#by_advisor}} | #by_advisor | 2026-06-02 01:40 | 
+| Advisor | Cash orders | 10 % or more off | Share | Money off |
+|---|---|---|---|---|
+| Brent Lassiter | 175 | 34 | 19 % | $4,043 |
+| Jasmine Bolden | 44 | 1 | 2 % | $45 |
+| Chad Binkley | 134 | 3 | 2 % | $406 |
+| All other advisors, three shops | 1,403 | 39 | 3 % | $2,790 |
+{{=orders.discounted|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|n:cash order/cash orders}} | orders.discounted | 2026-06-02 01:40 | 34 cash orders
+{{=orders.discounted_share|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|pct}} | orders.discounted_share | 2026-06-02 01:40 | 19 %
+{{=orders.discounted_share|site=all&advisor=!F1&pay=cash&min=10|@now-12mo..@now|pct}} | orders.discounted_share | 2026-06-02 01:40 | 3 %
+
+## s2-discounts#2
+{{=orders.discounted|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|int}} | orders.discounted | 2026-06-02 01:42 | 34
+
+## s2-discounts#3
+{{=orders.on_walkin|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|int}} | orders.on_walkin | 2026-06-02 01:43 | 34
+
+## s2-discounts#4
+{{=orders.voided|site=west&advisor=F1&after_payment=yes|@now-12mo..@now|n:order/orders}} | orders.voided | 2026-06-02 01:45 | 14 orders
+{{=orders.voided_money|site=west&advisor=F1&after_payment=yes|@now-12mo..@now|money0}} | orders.voided_money | 2026-06-02 01:45 | $5,600
+{{=orders.voided_max_per_advisor|site=all&advisor=!F1&after_payment=yes|@now-12mo..@now|int}} | orders.voided_max_per_advisor | 2026-06-02 01:45 | 0
+{{=till.short_days|site=west&closed_by=F1&min=20|@now-12mo..@now|int}} | till.short_days | 2026-06-02 01:45 | 17
+{{=till.closes|site=west&closed_by=F1|@now-12mo..@now|int}} | till.closes | 2026-06-02 01:45 | 61
+{{=till.short_money|site=west&closed_by=F1&min=20|@now-12mo..@now|money0}} | till.short_money | 2026-06-02 01:45 | $1,620
+
+## s2-cost#1
+{{=leak.total|site=west&advisor=F1|@leak_start..@now|money0}} | leak.total | 2026-06-09 01:15 | $11,301
+{{#by_month}} | #by_month | 2026-06-09 01:15 | 
+| Month | Discounts | Voids | Till short | Sum |
+|---|---|---|---|---|
+| December 2025 | $817 | $478 | $592 | $1,886 |
+| January 2026 | $457 | $1,083 | $52 | $1,593 |
+| February 2026 | $164 | $791 | $95 | $1,050 |
+| March 2026 | $763 | $259 | $131 | $1,152 |
+| April 2026 | $1,197 | $354 | $466 | $2,018 |
+| May 2026 | $644 | $2,174 | $283 | $3,102 |
+| June 2026 | $0 | $461 | $38 | $500 |
+| Total | $4,043 | $5,600 | $1,658 | $11,301 |
+
+## s2-cost#2
+{{=orders.discounted_share|site=all&advisor=!F1&pay=cash&min=10|@leak_start..@now|pct}} | orders.discounted_share | 2026-06-09 01:17 | 3 %
+{{=orders.voided_max_per_advisor|site=all&advisor=!F1&after_payment=yes|@leak_start..@now|int}} | orders.voided_max_per_advisor | 2026-06-09 01:17 | 0
+{{=till.short_days_max_per_closer|site=all&closed_by=!F1&min=20|@leak_start..@now|int}} | till.short_days_max_per_closer | 2026-06-09 01:17 | 0
+
+## s2-cost#3
+{{=leak.total|site=west&advisor=F1|@leak_start..@now|money0}} | leak.total | 2026-06-09 01:18 | $11,301
+
+## s2-rule#2
+{{=tasks.next_run|task=discounts-over-10|at|day}} | tasks.next_run | 2026-06-17 00:51 | Friday, June 19
+
+## s4-default-shop#1
+{{=bookings.count|site=main|next_day|int}} | bookings.count | 2026-05-28 20:35 | 13
+{{=bookings.count|site=east|next_day|int}} | bookings.count | 2026-05-28 20:35 | 5
+
+## s4-default-shop#3
+{{=bookings.first|site=main|next_day|text}} | bookings.first | 2026-05-28 20:38 | 7:30 a.m., Moccasin Bend Janitorial Services LLC, Four-wheel alignment
+
+## s4-money-dates#1
+{{=catalogue.list_price|job=oil_service&class=car&tier=standard|at|money0}} | catalogue.list_price | 2026-06-09 17:40 | $89
+
+## s4-money-dates#2
+{{=catalogue.list_price|job=oil_service&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-06-09 17:42 | $88.51
+
+## s4-prices-source#1
+{{=catalogue.price_at_old_hour|job=front_pads_rotors&class=car&tier=standard|at|money}} | catalogue.price_at_old_hour | 2026-09-24 13:50 | $475.00
+
+## s4-prices-source#2
+{{=catalogue.list_price|job=front_pads_rotors&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-09-24 13:51 | $493.00
+{{=catalogue.list_price|job=front_pads_rotors&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-09-24 13:52 | $493.00
+
+## s8-prices-source#1
+{{=catalogue.list_price|job=timing_belt_kit&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-11-11 21:20 | $720.00
+{{=catalogue.price_at_old_hour|job=timing_belt_kit&class=car&tier=standard|at|money}} | catalogue.price_at_old_hour | 2026-11-11 21:20 | $688.00
+
+## accounts-this-week flagged/1 2026-11-02
+{{=acct.flagged|terms=yes|prev_week|n:account needs/accounts need}} | acct.flagged | 2026-11-02 14:05 | 3 accounts need
+{{#accounts}} | #accounts | 2026-11-02 14:05 | 
+| Account | Visits last week | Usual week | Estimates waiting | Past terms | Days since last visit |
+|---|---|---|---|---|---|
+| Cumberland Bend Electric LLC | 0 | 0 | 0 | $4,423 | 130 |
+| Sourwood Catering Co. LLC | 0 | 1 | 1 | $0 | 20 |
+| Nickajack Delivery LLC | 6 | 6 | 0 | $15,234 | 0 |
+| Missionary Ridge Driving School LLC | 2 | 1 | 0 | $0 | 4 |
+| Millsaps Heating & Plumbing Inc. | 8 | 6 | 0 | $0 | 0 |
+| Moccasin Bend Janitorial Services LLC | 1 | 1 | 0 | $0 | 0 |
+
+## accounts-this-week flagged/1 2026-11-09
+{{=acct.flagged|terms=yes|prev_week|n:account needs/accounts need}} | acct.flagged | 2026-11-09 13:00 | 3 accounts need
+{{#accounts}} | #accounts | 2026-11-09 13:00 | 
+| Account | Visits last week | Usual week | Estimates waiting | Past terms | Days since last visit |
+|---|---|---|---|---|---|
+| Cumberland Bend Electric LLC | 0 | 0 | 0 | $4,423 | 137 |
+| Sourwood Catering Co. LLC | 1 | 1 | 1 | $0 | 6 |
+| Nickajack Delivery LLC | 5 | 6 | 0 | $15,234 | 0 |
+| Millsaps Heating & Plumbing Inc. | 6 | 6 | 0 | $0 | 0 |
+| Moccasin Bend Janitorial Services LLC | 1 | 1 | 0 | $0 | 0 |
+| Missionary Ridge Driving School LLC | 1 | 1 | 0 | $0 | 0 |
+
+## discounts-over-10 unapproved/1 2026-10-23
+{{=orders.discounted|site=all&min_over=10&approved=no|week|n:order has/orders have}} | orders.discounted | 2026-10-23 20:00 | 1 order has
+{{=orders.discounted|site=all&min_over=10|week|int}} | orders.discounted | 2026-10-23 20:00 | 1
+{{#orders}} | #orders | 2026-10-23 20:00 | 
+| Shop | Advisor | Date | Bill before tax | Discount | Approved by |
+|---|---|---|---|---|---|
+| Charlotte Pike | Chad Binkley | Wed, Oct 21 | $189.93 | 12.0 % | — |
+
+## discounts-over-10 unapproved/1 2026-11-06
+{{=orders.discounted|site=all&min_over=10&approved=no|week|n:order has/orders have}} | orders.discounted | 2026-11-06 21:00 | 1 order has
+{{=orders.discounted|site=all&min_over=10|week|int}} | orders.discounted | 2026-11-06 21:00 | 2
+{{#orders}} | #orders | 2026-11-06 21:00 | 
+| Shop | Advisor | Date | Bill before tax | Discount | Approved by |
+|---|---|---|---|---|---|
+| Charlotte Pike | Chad Binkley | Thu, Nov 5 | $259.11 | 12.0 % | — |
+| East Main | Travis Burnette | Tue, Nov 3 | $682.04 | 12.2 % | Greg Whitaker |
+
+## charlotte-pike-against-plan open/1 2026-11-09
+{{=plan.orders_share|site=west|prev_week|pct}} | plan.orders_share | 2026-11-09 14:00 | 65 %
+{{=plan.revenue_share|site=west|prev_week|pct}} | plan.revenue_share | 2026-11-09 14:00 | 84 %
+{{#weeks}} | #weeks | 2026-11-09 14:00 | 
+| Week of | Orders | Of plan | Billed before tax | Of plan |
+|---|---|---|---|---|
+| Mon, Nov 2 | 39 | 65 % | $24,331 | 84 % |
+| Mon, Oct 26 | 37 | 62 % | $18,635 | 64 % |
+| Mon, Oct 19 | 43 | 72 % | $19,117 | 66 % |
+| Mon, Oct 12 | 44 | 73 % | $22,636 | 78 % |
+| Mon, Oct 5 | 41 | 68 % | $21,771 | 75 % |
+{{=orders.closed|site=west|prev_week|int}} | orders.closed | 2026-11-09 14:00 | 39
+{{=orders.waiting_parts|site=west|at|n:car is/cars are}} | orders.waiting_parts | 2026-11-09 14:00 | 2 cars are
+{{=orders.waiting_days_max|site=west|at|n:day/days}} | orders.waiting_days_max | 2026-11-09 14:00 | 5 days
+
+## tomorrows-gaps nothing/1 2026-11-12
+{{=roster.on_shift|site=main|next_day|int}} | roster.on_shift | 2026-11-12 21:30 | 13
+{{=roster.on_shift|site=east|next_day|int}} | roster.on_shift | 2026-11-12 21:30 | 6
+
+## brief-1 at_t
+{{=board.days_overdue|card=s6.supplier_change|at|n:day/days}} | board.days_overdue | 2026-11-13 11:40 | 25 days
+
+## brief-2 at_t
+{{=orders.waiting_days_max|site=west|at|n:day/days}} | orders.waiting_days_max | 2026-11-13 11:40 | 9 days
+{{=board.days_overdue|card=s6.supplier_change|at|n:day/days}} | board.days_overdue | 2026-11-13 11:40 | 25 days
+{{=orders.waiting_parts|site=west|at|n:car waits/cars wait}} | orders.waiting_parts | 2026-11-13 11:40 | 5 cars wait
+
+## Held back
+thread s4-two-times: undefined bookings.free_slot: no capacity per appointment time: kb.booking.slots names when a visit may be booked, not how many (loaded: its note turns alone)
+
+## Not in v1
+thread s3-missed-calls: reads what v1 does not load: calls.missed_share; calls.wait_median; roster.shifts (loaded: its note turns alone)
+thread s4-call-summary: her scored calls (01 to 07) are about a month apart, so her last shift before the thread has none, while the thread speaks of several (loaded: its note turns alone)
+job yesterday-three-numbers: reads what v1 does not load: calls.inbound; calls.missed; calls.missed_top_site; calls.out_of_hours; calls.waiting (loaded: not made)
+job missed-calls-today: reads what v1 does not load: calls.called_back; calls.inbound; calls.missed; calls.missed_share; calls.oldest_waiting; calls.out_of_hours; calls.waiting (loaded: not made)
+job my-call-backs: reads what v1 does not load: calls.oldest_waiting; calls.waiting (loaded: not made)
+brief-1 point 2: reads what v1 does not load: calls.waiting (loaded: brief-1 without it)
+brief-2 point 3: reads what v1 does not load: calls.missed_share (loaded: brief-2 without it)
+brief-4 point 3: the roster's one cover band does not show the desk one short; the ledger's s5.week_off and card G-cover-week-off say it is (loaded: brief-4 without it)
+brief-6 point 2: reads what v1 does not load: calls.oldest_waiting; calls.waiting (loaded: brief-6 without it)

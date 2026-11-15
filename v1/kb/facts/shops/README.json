@@ -1,0 +1,203 @@
+{
+ "path": "shops/README.md",
+ "title": "Our three shops",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The three shops side by side: bays, people, hours, time zone, who runs each.",
+ "serves": [
+  "S9",
+  "S13",
+  "S15",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate-shop-pages",
+  "operate:contradiction"
+ ],
+ "length_class": "medium",
+ "words_en": 342,
+ "links_to": [
+  "shops/main/README.md",
+  "shops/east/README.md",
+  "shops/west/README.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Bays 8 / 6 / 6; technicians 6 / 4 / 4; advisors 3 / 2 / 2 (ledger).",
+  "East Main opened 30 years ago by slot 1; Bonny Oaks opened 11 years ago (cast: slot 16 opened its counter eleven years ago); Charlotte Pike bought at {{@purchase}} (T-14 months).",
+  "Run by: slot 4 for main and east, slot 16 leads the east counter, slot 22 for west.",
+  "Hours and main lines as on the public page; Charlotte Pike is on Central time, one hour behind; the times in its pages and orders are its own clock, and the phone system shows each call in the reader's own time (design 2.4; S15.4: calls are stored as instants, orders in local time).",
+  "Main and east share staff (slot 21 floats; advisors are lent), parts (slot 9) and the office; fifteen minutes apart.",
+  "Charlotte Pike is two hours' drive (about 135 miles), with its own roster and parts ordering.",
+  "Rule for conflicts: company policy beats a Charlotte Pike page.",
+  "Saturday, hybrids and R-1234yf are East Main only.",
+  "The Monday meeting at 6:45 Eastern is 5:45 at Charlotte Pike, an hour and three quarters before it opens: the page gives the fact, not the conclusion (S9).",
+  "The Charlotte Pike column was added a month after the purchase (@purchase+1mo): a change from before go-live, so it is a sentence of the page and not a revision (ledger kb.history.before_go_live)."
+ ],
+ "tables": [
+  {
+   "section": "Our three shops",
+   "columns": [
+    "",
+    "East Main",
+    "Bonny Oaks",
+    "Charlotte Pike"
+   ],
+   "rows": [
+    [
+     "City",
+     "Chattanooga",
+     "Chattanooga",
+     "Nashville"
+    ],
+    [
+     "Ours since",
+     "Ray opened it 30 years ago",
+     "Opened 11 years ago",
+     "Bought {{@purchase|month}}"
+    ],
+    [
+     "Bays",
+     "8",
+     "6",
+     "6"
+    ],
+    [
+     "Technicians",
+     "6",
+     "4",
+     "4"
+    ],
+    [
+     "Advisors",
+     "3",
+     "2",
+     "2"
+    ],
+    [
+     "Run by",
+     "Greg Whitaker, service manager",
+     "Greg Whitaker; Angie Holloway leads the counter",
+     "Dale Hutchins, shop manager"
+    ],
+    [
+     "Hours",
+     "Mon to Fri 7:30 to 5:30, Sat 8:00 to 1:00",
+     "Mon to Fri 7:30 to 5:30",
+     "Mon to Fri 7:30 to 5:30"
+    ],
+    [
+     "Clock",
+     "Eastern",
+     "Eastern",
+     "Central"
+    ],
+    [
+     "Main line",
+     "(423) 555-0142",
+     "(423) 555-0167",
+     "(615) 555-0119"
+    ],
+    [
+     "Pages",
+     "East Main",
+     "Bonny Oaks",
+     "Charlotte Pike"
+    ]
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Things that follow from the table",
+   "item": "Charlotte Pike is an hour behind. When it is 8:00 in Chattanooga it is 7:00 there. Their 7:30 opening is our 8:30. Every time in their pages and their orders is their own clock; the phone system shows each call in your own time."
+  },
+  {
+   "section": "Things that follow from the table",
+   "item": "East Main and Bonny Oaks are one crew in two buildings, fifteen minutes apart. Greg plans both schedules together, Jordan works at both, and an advisor may be sent across for a day. Marcus buys parts for both and the office at East Main does the books for all three."
+  },
+  {
+   "section": "Things that follow from the table",
+   "item": "Charlotte Pike is two hours' drive away. It has its own schedule, its own parts ordering and its own way of doing some things, written on its own pages. Where its page and a company policy disagree, the policy is right and the page is old."
+  },
+  {
+   "section": "Things that follow from the table",
+   "item": "Only East Main opens on Saturday, works on hybrids and stocks the newer A/C refrigerant."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale Hutchins",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}",
+  "{{@purchase|month}}",
+  "{{@purchase+1mo|date}}"
+ ],
+ "new_facts": [
+  "East Main and Bonny Oaks are fifteen minutes apart. Reason: staff sharing needs a plausible distance; the ledger puts the two addresses about 11 km apart by road (geo.address.east)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Ульяновск: two shops (Московское шоссе; Инженерный, across the Volga, so more like 30-40 minutes apart: say what is true for the Russian addresses). Казань is an hour behind (UTC+3 against UTC+4), about 225 km by the Р-241. Hours 9:00-20:00 every day."
+ ]
+}

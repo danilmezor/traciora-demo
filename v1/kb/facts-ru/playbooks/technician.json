@@ -1,0 +1,199 @@
+{
+ "path": "playbooks/technician.md",
+ "title": "Памятка: механики",
+ "title_en": "Playbook: technicians",
+ "exists_in": "both",
+ "english_sheet": "facts/playbooks/technician.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Worker rank: what a technician does in Traciora and what the assistant will and will not answer.",
+ "serves": [
+  "S14",
+  "visibility:administrator"
+ ],
+ "length_class": "short",
+ "words_ru": 220,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Screen names are the product's Russian ones: Главная, Смены, Спросить, Календарь.",
+  "The product has no swap (stories/S14): the request is a move of the shift to another day, naming who comes in."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что у вас есть",
+   "item": "Главная: сегодняшняя смена, кнопка отметки прихода и всё, что вас ждёт: забытая отметка ухода, ответ на просьбу."
+  },
+  {
+   "section": "Что у вас есть",
+   "item": "Смены: ваша неделя и две недели вперёд. Просьба об изменении оставляется на самой смене, с причиной."
+  },
+  {
+   "section": "Что у вас есть",
+   "item": "Спросить: помощник. Для вас он знает ваш собственный график и то, что написано в разделе «Цех»."
+  },
+  {
+   "section": "Что у вас есть",
+   "item": "Календарь: ваш. Встречи, на которые вас позвали; ответьте «да» или «нет»."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Когда я работаю на следующей неделе?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Кто со мной в субботу?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Вчера забыл отметить уход, что делать?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Можно перенести мою смену с четверга?» Просьбу он оформит: перенос на другой день, с тем, кто выйдет вместо вас. Согласовать её он не может."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Что проверить перед тем, как отдать машину?»"
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не покажет чужие часы, отметки и опоздания."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не покажет цены, клиентов, наряды и доску. Это дело приёмки."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не скажет про зарплату и дни отпуска. С этим — к Ирине Владимировне."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Ничего не согласует."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "11",
+   "written_as": "Рябов",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Карпов",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "14",
+   "written_as": "Сурков",
+   "role": "apprentice_technician",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Чугунов",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Егоров",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "19",
+   "written_as": "Кудряшов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "20",
+   "written_as": "Блинов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Аюпов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "25",
+   "written_as": "Зиннатуллин",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "26",
+   "written_as": "Орехов",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Сомов",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "28",
+   "written_as": "Гарипов",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирине Владимировне",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@newcomers|date}}",
+   "what": "the list of technicians at the head gained the apprentice, who started the week before; message: \"Hunter is on the list.\"",
+   "message_ru": "Добавила Суркова."
+  }
+ ],
+ "has_history": true
+}

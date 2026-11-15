@@ -1,0 +1,146 @@
+{
+  "format": "seed-conversation/1",
+  "id": "23-people-p24-telegram-smeta-faylom",
+  "configuration": "ru",
+  "number": 23,
+  "story": "people",
+  "title": "Светлое пятно на Технической: находки по пунктам, смета файлом, итог до копейки",
+  "demonstrates": "Slot 24 in writing: seven minutes to a first reply, the findings as a numbered list with the estimate as a file, «давайте сделаем так» and a deadline for the answer, then the approved work and the total with supplies, VAT inside. Two drafts edited, one sent as it was; labelled and resolved.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Тимур Валеев",
+      "invented": true,
+      "first_time": false,
+      "note": "клиент сервиса на Технической; Hyundai Creta 2018, уходит антифриз"
+    },
+    "staff": [
+      {"slot": 24, "name": "Камила Шакирова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Клиент, чья машина с утра на диагностике.",
+    "vehicle": "Hyundai Creta 2018",
+    "what_happens": "Есть новости? Диагностика закончена: течёт помпа, ремень в трещинах. Обе работы сегодня к 19:00, если подтвердит до 15:00. Он пишет «обе» и спрашивает итог.",
+    "facts": {
+      "approved": "замена помпы и ремня привода навесных агрегатов",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "13 366 ₽", "amount": 13366.0, "what": "замена водяного насоса (помпы), класс suv", "from": {"catalogue": "water_pump", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "3 313,50 ₽", "amount": 3313.5, "what": "замена ремня привода навесных агрегатов, класс suv", "from": {"catalogue": "drive_belt", "class": "suv", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "950 ₽", "amount": 950.0, "what": "опрессовка системы охлаждения, поиск утечки", "from": {"catalogue": "cooling_pressure_test", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "17 836,41 ₽", "amount": 17836.41, "what": "помпа, ремень и опрессовка с расходными материалами: к оплате, НДС в том числе", "from": {"sum_of": [{"catalogue": "water_pump", "class": "suv"}, {"catalogue": "drive_belt", "class": "suv"}, {"catalogue": "cooling_pressure_test", "class": "suv"}], "with_supplies": true, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-68d": {"anchor": "slot 24's first working day on or after the Friday of week T-10", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 10, "on_or_after_for_slot": 24}, "nominal": "Sun 2026-09-06"}
+  },
+  "floating_days": [
+    {"word": "утром", "said_on": "T-68d", "day": "T-68d", "form": "adverb"},
+    {"word": "сегодня", "said_on": "T-68d", "day": "T-68d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "4503599627373837",
+      "peer": {"id": "4503599627373837", "name": "Тимур Валеев"},
+      "contact": {
+        "identifier": "telegram_4503599627373837",
+        "name": "Тимур Валеев",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "белая Hyundai Creta у подъезда",
+          "person_in_it": false,
+          "matches_vehicle": "Hyundai Creta 2018"
+        }
+      },
+      "opened": {
+        "day": "T-68d",
+        "at": "14:05:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-68d", "at": "14:05:10", "kind": "message", "from": "customer", "text": "Камила, добрый день. По Крете есть новости?"},
+        {"n": 2, "day": "T-68d", "at": "14:05:55", "kind": "draft", "id": "d1", "text": "Тимур, добрый день! Данных по вашей машине у меня сейчас нет. Уточню у мастера и сразу напишу.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-68d", "at": "14:12:20", "became": 4}},
+        {"n": 3, "day": "T-68d", "at": "14:12:18", "kind": "activity", "what": "assigned", "derived": true, "to": 24, "by": 24, "how": "first reply"},
+        {"n": 4, "day": "T-68d", "at": "14:12:20", "kind": "message", "from": "staff", "slot": 24, "text": "Тимур, добрый день! Да, диагностику закончили, смета во вложении.\n1. Течёт помпа: подтёки антифриза на блоке, поэтому и уровень уходит. Замена — 13 366 ₽.\n2. Ремень навесного оборудования в трещинах, менять лучше сразу, заодно с помпой: 3 313,50 ₽.\n3. Опрессовка системы, которую вы согласовали утром, — 950 ₽.\nДавайте сделаем так: если подтвердите до 15:00, обе работы сделаем сегодня и машину отдадим к 19:00. Делаем обе или только помпу?", "files": [{"kind": "file", "file": "Smeta_Creta_Valeev.pdf", "pool": "estimate-pdf", "shows": "смета на одну страницу: опрессовка, помпа, ремень, расходные материалы; итог — в том числе НДС 5 %"}]},
+        {"n": 5, "day": "T-68d", "at": "14:20:40", "kind": "message", "from": "customer", "text": "обе. итого сколько?"},
+        {"n": 6, "day": "T-68d", "at": "14:21:20", "kind": "draft", "id": "d2", "text": "Спасибо, Тимур. Делаем обе работы. Итоговую сумму с расходными материалами сейчас уточню.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-68d", "at": "14:24:10", "became": 7}},
+        {"n": 7, "day": "T-68d", "at": "14:24:10", "kind": "message", "from": "staff", "slot": 24, "text": "Спасибо, Тимур. Согласовано: помпа и ремень. Итого с опрессовкой и расходными материалами — 17 836,41 ₽, НДС в том числе. Будет готово к 19:00, напишу сюда."},
+        {"n": 8, "day": "T-68d", "at": "14:24:30", "kind": "activity", "what": "label_added", "label": "согласование", "by": 24},
+        {"n": 9, "day": "T-68d", "at": "18:41:30", "kind": "message", "from": "staff", "slot": 24, "text": "Тимур, Крета готова. Антифриз в норме, подтёков нет. Мы до 20:00."},
+        {"n": 10, "day": "T-68d", "at": "18:50:10", "kind": "message", "from": "customer", "text": "выезжаю"},
+        {"n": 11, "day": "T-68d", "at": "18:50:50", "kind": "draft", "id": "d3", "text": "Ждём вас, Тимур.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 24, "day": "T-68d", "at": "18:52:00", "became": 12}},
+        {"n": 12, "day": "T-68d", "at": "18:52:00", "kind": "message", "from": "staff", "slot": 24, "text": "Ждём вас, Тимур."},
+        {"n": 13, "day": "T-68d", "at": "18:52:20", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-68d", "at": "14:12:18", "to": 24, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 24,
+        "labels": ["согласование"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 24, "working_minutes": 7.2},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 24, "working_minutes": 7.2, "wall_minutes": 7.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 24, "working_minutes": 3.5, "wall_minutes": 3.5, "measured_from": "n 5", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 24, "working_minutes": 1.8, "wall_minutes": 1.8, "measured_from": "n 10", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 24,
+          "n": 4,
+          "working_minutes": 7.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 4, "note": 0},
+        "resolutions": [
+          {"day": "T-68d", "at": "18:52:20", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 24},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 24},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 24}
+        ],
+        "operator_credit": "slot 24: first answer 7.2 minutes (her ledger row is 7), four replies, two drafts edited and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "slot 24; the assistant drafts",
+    "outcome": "помпа и ремень согласованы; итого с расходными материалами по смете, НДС в том числе; закрыт слотом 24",
+    "facts": [
+      "the findings came as a numbered list with the estimate attached",
+      "both jobs approved in eight minutes",
+      "ready before the time she gave"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Список, файл, срок и выбор из двух: клиент отвечает одним словом.",
+    "«Давайте сделаем так» там, где на другой смене сказали бы «сегодня не успеем».",
+    "Тот же сервис, что в файлах 21 и 22."
+  ],
+  "new_facts": [
+    "Тимур Валеев, Hyundai Creta 2018, west, первый рабочий день слота 24 начиная с пятницы недели T-10: опрессовка 950, замена помпы 13 366, замена ремня 3 313,50; итог с расходными материалами в чате: 17 836,41, НДС в том числе.",
+    "Файл Smeta_Creta_Valeev.pdf (пул 'estimate-pdf').",
+    "Картинка контакта: белая Creta у подъезда."
+  ]
+}

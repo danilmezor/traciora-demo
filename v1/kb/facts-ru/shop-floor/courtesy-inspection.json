@@ -1,0 +1,72 @@
+{
+ "path": "shop-floor/courtesy-inspection.md",
+ "title": "Осмотр по чек-листу",
+ "title_en": "The courtesy inspection",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/courtesy-inspection.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "Step one of the inspection-to-approval procedure: what the technician checks and records.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S7",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_ru": 182,
+ "links_to": [
+  "how-to/writing-an-estimate.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The inspection is «осмотр по чек-листу», free with any repair; states are «Норма», «Наблюдать», «Менять» (ERP good, watch, bad). Tread depth in millimetres.",
+  "The last line is harder than in English: work with no order line is one of the three signatures of the Russian story S2."
+ ],
+ "new_facts": [
+  "State names «Норма», «Наблюдать», «Менять»."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Как отмечать",
+   "item": "Норма: делать нечего."
+  },
+  {
+   "section": "Как отмечать",
+   "item": "Наблюдать: изношено, но ездить можно. Пиши замер: «колодки перед 4 мм», а не «колодки подходят»."
+  },
+  {
+   "section": "Как отмечать",
+   "item": "Менять: нужно делать сейчас. Замер и фото. Нет фото — приёмка это не продаст, а я отправлю тебя фотографировать."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

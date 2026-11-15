@@ -1,0 +1,72 @@
+{
+ "path": "customers/payment.md",
+ "title": "Paying your bill",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "3",
+ "purpose": "Public payment terms: methods, when due, deposits, tax.",
+ "serves": [
+  "S2",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 144,
+ "links_to": [
+  "customers/company-vehicles.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Payment due at pick-up; cards and cash; business checks from account holders only; no personal checks.",
+  "Deposit before special-order or electrical (non-returnable) parts over 300 USD and before a transmission rebuild; amounts are on policies/deposits.md.",
+  "Sales tax on parts and labour: 9.25 % at East Main and Bonny Oaks, 9.75 % at Charlotte Pike (ledger tax.rate.main, .east, .west).",
+  "No cash discount (the public echo of the S2 rule).",
+  "Accounting is reached through the main line (slot 3, extension 111)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Paying your bill",
+   "item": "When: payment is due when you pick up the car."
+  },
+  {
+   "section": "Paying your bill",
+   "item": "How: credit and debit cards, or cash. We take checks from businesses that hold an account with us. We do not take personal checks."
+  },
+  {
+   "section": "Paying your bill",
+   "item": "Deposits: we ask for a deposit before ordering a part we cannot send back (special-order and electrical parts) when it costs over $300, and before a transmission goes out for rebuild. The deposit comes off your bill."
+  },
+  {
+   "section": "Paying your bill",
+   "item": "Tax: Tennessee sales tax applies to parts and to labour: 9.25 % at our two Chattanooga shops, 9.75 % at Charlotte Pike in Nashville."
+  },
+  {
+   "section": "Paying your bill",
+   "item": "Company accounts are billed on a monthly statement. See Company vehicles."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "No personal checks; business checks from account holders only.",
+  "Deposit threshold 300 USD."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian payment: cards, cash, СБП (fast payments by QR), bank transfer for companies. VAT 5 % since 2025-01-01. No cash discount holds in both."
+ ]
+}

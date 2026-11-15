@@ -1,0 +1,72 @@
+{
+ "path": "shops/east/how-the-day-runs.md",
+ "title": "Инженерный: как проходит день",
+ "title_en": "Bonny Oaks: how the day runs",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/east/how-the-day-runs.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "The east shop's habits in its lead advisor's words: the photo before the price, Mondays, cover.",
+ "serves": [
+  "S5",
+  "S4",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 218,
+ "links_to": [
+  "accounts/a2.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The same habits in slot 16's Russian voice («Делаем?» is her own word in the cast).",
+  "Mondays belong to A2 until about 11:00; private customers from 10:30.",
+  "The phone paragraph is sharper: there is one advisor at this desk each day."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Валерий Геннадьевич",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубина",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

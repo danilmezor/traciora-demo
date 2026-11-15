@@ -1,0 +1,128 @@
+{
+ "path": "policies/storage-of-uncollected-cars.md",
+ "title": "Невостребованные автомобили",
+ "title_en": "Cars not collected",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/storage-of-uncollected-cars.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Storage of finished cars: free days, daily charge, the 30-day step. Contradicted on purpose by a team note.",
+ "serves": [
+  "challenge:policy-vs-team-note",
+  "operate:contradiction",
+  "S15"
+ ],
+ "length_class": "short",
+ "words_ru": 205,
+ "links_to": [
+  "how-to/getting-approval.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Five free calendar days (the shops are open every day), then 300 RUB a day.",
+  "The storage clause is printed on the order the customer signs at check-in.",
+  "At 30 days the bookkeeper sends a registered letter with notice; advisors never speak of court or sale.",
+  "THE PLANTED CONTRADICTION is the same: a team note approved by slot 22 says «Хранение берём с третьего дня после готовности машины»."
+ ],
+ "new_facts": [
+  "Storage: five free days, 300 RUB a day from the sixth, a registered letter at 30 days. No storage fee is planted in the ERP.",
+  "FOR THE MEMORY STORE: one active team note, proposed by slot 23 and approved by slot 22 at about T-4 months: subject «Невостребованные автомобили», text «Хранение берём с третьего дня после готовности машины.»"
+ ],
+ "new_amounts": [
+  {
+   "value": 300,
+   "why": "хранение готового автомобиля, за сутки"
+  }
+ ],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "What a contractor may do with a car the customer does not collect (Civil Code rules on the customer evading acceptance) is not in the research; the page names no right to sell and no term beyond the letter.",
+   "outcome": "verified",
+   "note": "The Civil Code gives a contractor the right to sell after a written warning and two months. The page still names no such right and no term beyond the letter, on purpose: advisors never speak of sale.",
+   "url": "https://legalacts.ru/kodeks/GK-RF-chast-2/razdel-iv/glava-37/ss-2/statja-738/",
+   "sentence": "ст. 738 ГК РФ: при неявке заказчика за результатом работы «подрядчик вправе, письменно предупредив заказчика», по истечении двух месяцев со дня предупреждения продать результат работы за разумную цену."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Невостребованные автомобили",
+   "item": "Пять дней бесплатно после того, как мы сообщили клиенту, что машина готова. «Сообщили» значит: поговорили с ним или он ответил на сообщение, и в наряде записано когда."
+  },
+  {
+   "section": "Невостребованные автомобили",
+   "item": "С шестого дня — 300 ₽ в сутки. Сумма добавляется в заказ-наряд как хранение. На третий день скажите клиенту, что с шестого стоянка платная. Никаких сюрпризов."
+  },
+  {
+   "section": "Невостребованные автомобили",
+   "item": "Звоним в первый, третий и пятый день. Каждый звонок записываем в наряд."
+  },
+  {
+   "section": "Невостребованные автомобили",
+   "item": "Машина, которая ждёт решения клиента (смета отправлена, ответа нет), — не «готова». Пять дней по ней не идут, но ответа добивайтесь: Как согласовать работы."
+  },
+  {
+   "section": "Невостребованные автомобили",
+   "item": "Тридцать дней: скажите Ирине Владимировне. Она отправляет заказное письмо с уведомлением и готовит документы. О суде и о продаже машины мастера-приёмщики с клиентом не говорят. Никогда."
+  },
+  {
+   "section": "Невостребованные автомобили",
+   "item": "Сергей Анатольевич или Ринат Фаридович могут снять плату за хранение, если есть причина: больница, командировка, вахта. Записывается в наряд, как любая скидка."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирине Владимировне",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "amounts": [
+  300.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

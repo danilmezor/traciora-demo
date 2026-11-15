@@ -1,0 +1,145 @@
+{
+  "format": "seed-conversation/1",
+  "id": "09-people-p05-telegram-out-the-door",
+  "configuration": "en",
+  "number": 9,
+  "story": "people",
+  "title": "The lead advisor at the flagship on Telegram: is the truck done, and why is the number bigger",
+  "demonstrates": "Slot 5 in writing: a first reply after 13 minutes, typed slowly with the typos left in, the out-the-door number and the pick-up time in one line, 'call me, easier' when a question takes more than a line. He writes his own text over two drafts and sends the third as it was. He does not resolve; Chatwoot does, a week later.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Darryl Poteet",
+      "invented": true,
+      "first_time": false,
+      "note": "a regular of the East Main shop; 2011 Chevrolet Silverado 1500; an alternator replaced that day"
+    },
+    "staff": [
+      {"slot": 5, "name": "Travis Burnette"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A regular, from a job site, about a truck left that morning.",
+    "vehicle": "2011 Chevrolet Silverado 1500",
+    "what_happens": "He asks if the truck is done. Travis gives the state, the out-the-door figure and the time. The figure is higher than the one he heard on the phone; Travis says why in a line and offers the phone. He comes at 4.",
+    "facts": {
+      "main_line": "(423) 555-0142 (phones.md)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "766", "amount": 766.37, "what": "alternator replaced, class truck, standard parts, list (766.37)", "from": {"catalogue": "alternator", "class": "truck", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$766.37", "amount": 766.37, "what": "the same, to the cent", "from": {"catalogue": "alternator", "class": "truck", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$852.01", "amount": 852.01, "what": "the same with shop supplies and sales tax: out the door", "from": {"catalogue": "alternator", "class": "truck", "tier": "standard", "price_class": "list", "with_supplies": true, "with_tax": true}}
+      ],
+      "numbers": [
+        {"said": "852", "what": "the customer's rounding of the out-the-door figure"}
+      ]
+    }
+  },
+  "days": {
+    "T-127d": {"anchor": "the Thursday of week T-18", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 18}, "nominal": "Thu 2026-07-09"},
+    "T-120d": {"anchor": "7 calendar days after the Thursday of week T-18", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 18, "plus_days": 7}, "nominal": "Thu 2026-07-16", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "4503599627372611",
+      "peer": {"id": "4503599627372611", "name": "Darryl Poteet"},
+      "contact": {
+        "identifier": "telegram_4503599627372611",
+        "name": "Darryl Poteet",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "a red Chevrolet Silverado parked at a boat ramp",
+          "person_in_it": false,
+          "matches_vehicle": "2011 Chevrolet Silverado 1500"
+        }
+      },
+      "opened": {
+        "day": "T-127d",
+        "at": "14:02:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of his one Telegram conversation; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-127d", "at": "14:02:10", "kind": "message", "from": "customer", "text": "hey travis is the silverado done"},
+        {"n": 2, "day": "T-127d", "at": "14:02:55", "kind": "draft", "id": "d1", "text": "Hi Darryl. I don't have the status of the Silverado in front of me. I'll check with the shop and message you right back.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 5, "day": "T-127d", "at": "14:15:30", "because": "he sent his own text (n 5)"}},
+        {"n": 3, "day": "T-127d", "at": "14:14", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-127d", "at": "14:15:28", "kind": "activity", "what": "assigned", "derived": true, "to": 5, "by": 5, "how": "first reply"},
+        {"n": 5, "day": "T-127d", "at": "14:15:30", "kind": "message", "from": "staff", "slot": 5, "text": "almost. alternator is in and chargin good, there road testing it now. $852.01 out the door, ready at 4"},
+        {"n": 6, "day": "T-127d", "at": "14:15:32", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-127d", "at": "14:17:05", "kind": "message", "from": "customer", "text": "852?? you told me 766 on the phone"},
+        {"n": 8, "day": "T-127d", "at": "14:17:50", "kind": "draft", "id": "d2", "text": "Darryl, the $766.37 was the alternator job before shop supplies and sales tax. With those it comes to $852.01. I'm sorry that wasn't clear on the phone.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 5, "day": "T-127d", "at": "14:24:10", "because": "he sent his own text (n 9)"}},
+        {"n": 9, "day": "T-127d", "at": "14:24:10", "kind": "message", "from": "staff", "slot": 5, "text": "766 was before tax and shop supplies. same job nothing added. call me if its easier 423 555 0142"},
+        {"n": 10, "day": "T-127d", "at": "14:26:40", "kind": "message", "from": "customer", "text": "nah im good. see you at 4"},
+        {"n": 11, "day": "T-127d", "at": "14:27:20", "kind": "draft", "id": "d3", "text": "Sounds good, Darryl. See you at 4:00.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 5, "day": "T-127d", "at": "14:31:00", "became": 12}},
+        {"n": 12, "day": "T-127d", "at": "14:31:00", "kind": "message", "from": "staff", "slot": 5, "text": "Sounds good, Darryl. See you at 4:00."},
+        {"n": 13, "day": "T-120d", "at": "14:31", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-127d", "at": "14:15:28", "to": 5, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 5,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 5, "working_minutes": 13.3},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 5, "working_minutes": 13.3, "wall_minutes": 13.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 5, "working_minutes": 7.1, "wall_minutes": 7.1, "measured_from": "n 7", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 5, "working_minutes": 4.3, "wall_minutes": 4.3, "measured_from": "n 10", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 5,
+          "n": 5,
+          "working_minutes": 13.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-120d", "at": "14:31", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 5},
+          {"draft": "d2", "outcome": "discarded", "manager": 5},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 5}
+        ],
+        "operator_credit": "slot 5: first answer 13.3 minutes (his ledger row is 14), three replies, two drafts discarded and one sent as it was, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "is my car ready, has the part come",
+    "handled": "slot 5; the assistant drafts",
+    "outcome": "ready at 4:00; 852.01 out the door; resolved by 7 silent days",
+    "facts": [
+      "the alternator job is 766.37 at list for a truck; with shop supplies and tax 852.01",
+      "the customer had heard the figure before tax on the phone",
+      "slot 5 did not resolve the chat"
+    ],
+    "questions": []
+  },
+  "why": [
+    "'chargin good, there road testing it now': slow thumbs, typos left in, and still the two things a customer needs: the total and the time.",
+    "The second draft explains the bill better than he does; he writes his own and offers the phone.",
+    "The third draft is one he can use, and he does."
+  ],
+  "new_facts": [
+    "Darryl Poteet, 2011 Chevrolet Silverado 1500, alternator replaced on the Thursday of week T-18 at main: 766.37 at list, 852.01 with shop supplies and tax; he was given the pre-tax figure on the phone that morning.",
+    "The contact's picture: a red Chevrolet Silverado at a boat ramp."
+  ]
+}

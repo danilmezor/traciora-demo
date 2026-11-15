@@ -1,0 +1,4296 @@
+{
+ "_meta": {
+  "seed_version": "v1",
+  "file": "accounts.json",
+  "status": "draft by a wave-1 agent; proposals, not decisions",
+  "source": "design story S1 and section 1.6; counts 35, 25, 9, 8, 11, 10",
+  "how_formed": {
+   "names": "every company name was searched on the web with its home city on 2026-11-13 and no business of that name was found there; the rejected names are in the agent's report. Russian sole traders (ИП) carry a surname and initials only, as the shop's system writes them, so they name nobody; they were not searched.",
+   "us_vin": "17 characters: the maker's real world manufacturer identifier (WMI), a five-character descriptor in that model's style (best effort, not taken from a decoding table), the correct check digit in position 9, the real model-year letter in position 10, a plant character, a random serial. A decoder will confirm maker, year and check digit; it may not confirm the model. A coincidence with a real vehicle is unlikely but cannot be excluded.",
+   "ru_vin": "17 characters: the WMI of the plant that built the model for the Russian market (X96 ГАЗ, XTA LADA, XTT УАЗ, Z6F Ford Sollers, X7L Renault, Z94 Hyundai and Kia, XW8 Volkswagen and Škoda, VF7 Citroën), a descriptor in the maker's style, the model-year letter where the maker uses one, a random serial. No check digit: these makers do not use the North American one.",
+   "us_plates": "Tennessee's plates of the series issued since 2022, the county on a sticker and not in the serial. The cars a story names (fleets, named customers) are drawn from BRC-2190 to BRC-8000, serials that were never issued (Wikipedia, Vehicle registration plates of Tennessee, read 2026-11-13), so none can be on a real car. Background cars: ledger erp.vehicle.plates.",
+   "ru_plates": "format А123ВС + region, letters АВЕКМНОРСТУХ only; the region is that of the shop the customer uses: 73 and 173 (Ульяновская область) at main and east, 16, 116 and 716 (Татарстан) at west. Background cars: ledger erp.vehicle.plates. No unissued series was researched, so a plate may coincide with a real registration.",
+   "phones_and_email": "phones.md: English tier A (NPA-555-01XX); Russian mobiles in the reserve code 907, city numbers beginning with 1; e-mail under .example"
+  },
+  "proposed_ledger_rows": [
+   "home shop per account: A1 main, A2 east, A3 main, A4 east, A5 west, A6 main (the design fixes only that the two big ones are at the home shops and that A5's comebacks were at west)",
+   "payment terms: 30 days for A1, A2, A5, A6; 15 days (en) and 14 days (ru) for A3 and A4",
+   "fleet composition by model and year for each account, and typical yearly mileage per vehicle type (en: 13,000 to 28,000 miles; ru: 18,000 to 50,000 km)",
+   "A4 grew by two cars: one joined 8 months before T, one 3 months before T",
+   "the two A5 vehicles of the brake comebacks are named (en E-2 and E-6; ru Э-1 and Э-10)",
+   "contacts' start dates; A6's old contact held the role from 52 to 5 months before T, the new one from 5",
+   "30 small business customers per configuration with 53 (en) and 52 (ru) vehicles, split main / east / west 15 / 6 / 9 (en) and 14 / 7 / 9 (ru)"
+  ]
+ },
+ "en": {
+  "company": "Brennan Auto Care",
+  "accounts": [
+   {
+    "id": "A1",
+    "kind": "delivery service",
+    "size": "big, the anchor",
+    "state_at_t": "healthy, the largest single customer; pays later every month (about 30 days, now about 50)",
+    "name": "Nickajack Delivery",
+    "legal_form": "LLC",
+    "home_shop": "main",
+    "address": "4310 Amnicola Hwy, Chattanooga, TN 37406",
+    "phone": "(423) 555-0133",
+    "email_domain": "nickajackdelivery.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Lonnie Coffey",
+      "role": "Fleet Manager",
+      "from_months_before_t": 48,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0103",
+      "email": "lcoffey@nickajackdelivery.example"
+     },
+     {
+      "name": "Linda Qualls",
+      "role": "Accounts Payable",
+      "from_months_before_t": 62,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0159",
+      "email": "ap@nickajackdelivery.example"
+     },
+     {
+      "name": "Stuart Haney",
+      "role": "Director of Operations",
+      "from_months_before_t": 90,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0184",
+      "email": "shaney@nickajackdelivery.example"
+     }
+    ],
+    "fleet_count": 35,
+    "fleet": [
+     {
+      "unit": "ND-01",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C82KKA02507",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-3015",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-02",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C8XKKA82106",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4934",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-03",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C84KKA81940",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-2947",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-04",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C82LKB70486",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4250",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-05",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C81LKB07654",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4342",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-06",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C84LKA21576",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5475",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-07",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C86LKB65808",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-2657",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-08",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C80MKB65871",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-6125",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-09",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C86MKB40022",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4832",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-10",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C84MKA17528",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5581",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-11",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C84MKA65336",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-2649",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-12",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2022,
+      "vin": "1FTBR1C89NKB19182",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5955",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-13",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2022,
+      "vin": "1FTBR1C87NKA86912",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-3756",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-14",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2022,
+      "vin": "1FTBR1C89NKA98902",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-6474",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-15",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2022,
+      "vin": "1FTBR1C81NKB92837",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5439",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-16",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2023,
+      "vin": "1FTBR1C87PKB08409",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4861",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-17",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2023,
+      "vin": "1FTBR1C81PKA65850",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4941",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-18",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2023,
+      "vin": "1FTBR1C82PKB16322",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-2579",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-19",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2019,
+      "vin": "3C6TRVDG5KE630931",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-7907",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-20",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2019,
+      "vin": "3C6TRVDG1KE638296",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-5875",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-21",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2020,
+      "vin": "3C6TRVDG7LE385163",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-4107",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-22",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2020,
+      "vin": "3C6TRVDG7LE141934",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-4700",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-23",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2020,
+      "vin": "3C6TRVDG8LE674388",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-7841",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-24",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2021,
+      "vin": "3C6TRVDG0ME396085",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-5251",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-25",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2021,
+      "vin": "3C6TRVDG2ME899228",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-2997",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-26",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2021,
+      "vin": "3C6TRVDG8ME214651",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-2516",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-27",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2022,
+      "vin": "3C6TRVDG3NE390797",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-3360",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-28",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2022,
+      "vin": "3C6TRVDG5NE172912",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-6986",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-29",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2023,
+      "vin": "3C6TRVDG3PE526168",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-3062",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-30",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2018,
+      "vin": "NM0LS7E26J1359081",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-2813",
+      "typical_yearly_miles": 22000
+     },
+     {
+      "unit": "ND-31",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2019,
+      "vin": "NM0LS7E21K1201443",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-4223",
+      "typical_yearly_miles": 22000
+     },
+     {
+      "unit": "ND-32",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2020,
+      "vin": "NM0LS7E23L1483926",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-4096",
+      "typical_yearly_miles": 22000
+     },
+     {
+      "unit": "ND-33",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2021,
+      "vin": "NM0LS7E24M1525487",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-3066",
+      "typical_yearly_miles": 22000
+     },
+     {
+      "unit": "ND-34",
+      "make": "Mercedes-Benz",
+      "model": "Sprinter 2500 Cargo Van",
+      "year": 2019,
+      "vin": "WD3PE7CD9KP272896",
+      "vehicle_class": "van",
+      "parc_model": "Sprinter 2500",
+      "plate": "BRC-5609",
+      "typical_yearly_miles": 28000
+     },
+     {
+      "unit": "ND-35",
+      "make": "Mercedes-Benz",
+      "model": "Sprinter 2500 Cargo Van",
+      "year": 2020,
+      "vin": "W1Y4ECHY0LP741934",
+      "vehicle_class": "van",
+      "parc_model": "Sprinter 2500",
+      "plate": "BRC-6411",
+      "typical_yearly_miles": 28000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/en/23-S1-a1-no-po.json",
+      "facts": [
+       "An appointment and an order at main for ND-22 on call+1d at 07:30 (the Thursday of week T-17), opened with no purchase-order number: check engine diagnosis at the company-account rate."
+      ]
+     },
+     {
+      "source": "calls/en/24-S1-a1-po-first.json",
+      "facts": [
+       "A purchase-order number of A1, ND-60418, on an appointment and an order at main for ND-08 on call+2d at 07:30 (the Friday of week T-4): fleet PM service A and a wheel-balance check, at the company-account rate.",
+       "The bookkeeper (slot 3) has told the desk not to open A1 orders without a purchase-order number; two front tires were fitted to ND-08 by another business about a month before."
+      ]
+     },
+     {
+      "source": "conversations/en/05-s1-telegram-weekly-vans.json",
+      "facts": [
+       "The Monday lists: week T-22: M-103, M-107, M-110, M-114, M-121; week T-15: five vans, M-112 among them; week T-5: M-104, M-106, M-111, M-115, M-119 (M-108 swapped out); week T-4: M-108 added; week W+1: M-102, M-109, M-113, M-116, M-122.",
+       "M-112's front struts and alignment were done on the Monday of week T-15 for 1,119.98 before tax under purchase order 4398A (the 'front struts back in the summer' of story call 25).",
+       "M-110 pulled to the right in week T-22; M-113's heater is weak in week W0; M-122's rear brakes were low at its last service.",
+       "The photo M112_front_strut.jpg (picture pool 'worn-part-strut').",
+       "The contact's picture: a golden retriever looking out of a truck window."
+      ]
+     }
+    ]
+   },
+   {
+    "id": "A2",
+    "kind": "heating and plumbing service company",
+    "size": "big",
+    "state_at_t": "healthy, the most frequent visitor; standing weekly slot",
+    "name": "Millsaps Heating & Plumbing",
+    "legal_form": "Inc.",
+    "home_shop": "east",
+    "address": "6120 Bonny Oaks Dr, Chattanooga, TN 37416",
+    "phone": "(423) 555-0166",
+    "email_domain": "millsapshp.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Tina Ragsdale",
+      "role": "Dispatcher (books the weekly slot)",
+      "from_months_before_t": 70,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0121",
+      "email": "dispatch@millsapshp.example"
+     },
+     {
+      "name": "Hal Millsaps",
+      "role": "President",
+      "from_months_before_t": 300,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0163",
+      "email": "hal@millsapshp.example"
+     },
+     {
+      "name": "Joyce Millsaps",
+      "role": "Office Manager, payables",
+      "from_months_before_t": 240,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0125",
+      "email": "office@millsapshp.example"
+     }
+    ],
+    "fleet_count": 25,
+    "fleet": [
+     {
+      "unit": "M-101",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2015,
+      "vin": "1GCWGAFP8F1301912",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-7802",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-102",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2015,
+      "vin": "1GCWGAFP1F1700659",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-4089",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-103",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2016,
+      "vin": "1GCWGAFP1G1485205",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-2409",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-104",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2017,
+      "vin": "1GCWGAFP2H1529665",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-2917",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-105",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2017,
+      "vin": "1GCWGAFP4H1490609",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-3408",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-106",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2018,
+      "vin": "1GCWGAFP0J1690523",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-4957",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-107",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2019,
+      "vin": "1GCWGAFP8K1210357",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-7423",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-108",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2020,
+      "vin": "1GCWGAFP9L1622501",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-4684",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-109",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2022,
+      "vin": "1GCWGAFP7N1675829",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-2929",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-110",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2017,
+      "vin": "1FTBR1C86HKA31436",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-6254",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-111",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2018,
+      "vin": "1FTBR1C84JKA92578",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4873",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-112",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C83KKB34482",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-7445",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-113",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C81KKB56626",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5347",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-114",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C88LKB13080",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-7743",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-115",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C80MKA05098",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4712",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-116",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C8XMKA64594",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5885",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-117",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2023,
+      "vin": "1FTBR1C81PKA85533",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-6299",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-118",
+      "make": "Ram",
+      "model": "ProMaster 1500 Cargo Van",
+      "year": 2019,
+      "vin": "3C6TRVAG9KE880015",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-3961",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-119",
+      "make": "Ram",
+      "model": "ProMaster 1500 Cargo Van",
+      "year": 2020,
+      "vin": "3C6TRVAG5LE842685",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-7239",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-120",
+      "make": "Ram",
+      "model": "ProMaster 1500 Cargo Van",
+      "year": 2022,
+      "vin": "3C6TRVAG2NE892740",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-7368",
+      "typical_yearly_miles": 18000
+     },
+     {
+      "unit": "M-121",
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "year": 2016,
+      "vin": "1FT7W2B68GEA69784",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-3204",
+      "typical_yearly_miles": 15000
+     },
+     {
+      "unit": "M-122",
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "year": 2019,
+      "vin": "1FT7W2B62KEA55548",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-3099",
+      "typical_yearly_miles": 15000
+     },
+     {
+      "unit": "M-123",
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "year": 2021,
+      "vin": "1FT7W2B6XMEB65539",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-7925",
+      "typical_yearly_miles": 15000
+     },
+     {
+      "unit": "M-124",
+      "make": "Ford",
+      "model": "Escape",
+      "year": 2019,
+      "vin": "1FMCU9GD3KUA69884",
+      "vehicle_class": "car",
+      "parc_model": "Escape",
+      "plate": "BRC-5575",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "M-125",
+      "make": "Ford",
+      "model": "Escape",
+      "year": 2021,
+      "vin": "1FMCU9GD6MUB57038",
+      "vehicle_class": "car",
+      "parc_model": "Escape",
+      "plate": "BRC-6407",
+      "typical_yearly_miles": 14000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/en/25-S5-good-call-damaged.json",
+      "facts": [
+       "A driver of account A2 called Darnell (first name only), who drives unit M-112.",
+       "A purchase-order number of A2, 4471B, on an appointment and an order at east for M-112 on call+1d at 07:30: front pads and rotors at the company-account price.",
+       "M-112 had front struts fitted at east some months before; the unit is white."
+      ]
+     },
+     {
+      "source": "conversations/en/05-s1-telegram-weekly-vans.json",
+      "facts": [
+       "The Monday lists: week T-22: M-103, M-107, M-110, M-114, M-121; week T-15: five vans, M-112 among them; week T-5: M-104, M-106, M-111, M-115, M-119 (M-108 swapped out); week T-4: M-108 added; week W+1: M-102, M-109, M-113, M-116, M-122.",
+       "M-112's front struts and alignment were done on the Monday of week T-15 for 1,119.98 before tax under purchase order 4398A (the 'front struts back in the summer' of story call 25).",
+       "M-110 pulled to the right in week T-22; M-113's heater is weak in week W0; M-122's rear brakes were low at its last service.",
+       "The photo M112_front_strut.jpg (picture pool 'worn-part-strut').",
+       "The contact's picture: a golden retriever looking out of a truck window."
+      ]
+     }
+    ]
+   },
+   {
+    "id": "A3",
+    "kind": "cleaning company",
+    "size": "medium",
+    "state_at_t": "healthy",
+    "name": "Moccasin Bend Janitorial Services",
+    "legal_form": "LLC",
+    "home_shop": "main",
+    "address": "2330 Rossville Blvd, Chattanooga, TN 37408",
+    "phone": "(423) 555-0127",
+    "email_domain": "moccasinbendjanitorial.example",
+    "payment_terms_days": 15,
+    "contacts": [
+     {
+      "name": "Yolanda Fitch",
+      "role": "Operations Manager",
+      "from_months_before_t": 36,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0180",
+      "email": "yfitch@moccasinbendjanitorial.example"
+     },
+     {
+      "name": "Dennis Fitch",
+      "role": "Owner",
+      "from_months_before_t": 132,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0178",
+      "email": "dennis@moccasinbendjanitorial.example"
+     }
+    ],
+    "fleet_count": 9,
+    "fleet": [
+     {
+      "unit": "MB-1",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2016,
+      "vin": "NM0LS7E25G1223923",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-3746",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-2",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2018,
+      "vin": "NM0LS7E25J1712619",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-3683",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-3",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2020,
+      "vin": "NM0LS7E20L1500794",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-6821",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-4",
+      "make": "Nissan",
+      "model": "NV200 Compact Cargo",
+      "year": 2017,
+      "vin": "3N6CM0KN4HK543668",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-3818",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-5",
+      "make": "Nissan",
+      "model": "NV200 Compact Cargo",
+      "year": 2019,
+      "vin": "3N6CM0KN2KK343394",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-2252",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-6",
+      "make": "Kia",
+      "model": "Soul",
+      "year": 2018,
+      "vin": "KNDJ23AU5J7265202",
+      "vehicle_class": "car",
+      "parc_model": "Soul",
+      "plate": "BRC-7972",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-7",
+      "make": "Kia",
+      "model": "Soul",
+      "year": 2020,
+      "vin": "KNDJ23AU0L7630422",
+      "vehicle_class": "car",
+      "parc_model": "Soul",
+      "plate": "BRC-7588",
+      "typical_yearly_miles": 13000
+     },
+     {
+      "unit": "MB-8",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2015,
+      "vin": "1GCWGAFP8F1358983",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-2702",
+      "typical_yearly_miles": 9000
+     },
+     {
+      "unit": "MB-9",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2019,
+      "vin": "5YFBURHE0KP181787",
+      "vehicle_class": "car",
+      "parc_model": "Corolla",
+      "plate": "BRC-2466",
+      "typical_yearly_miles": 13000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/en/07-S4-driver-says-go-ahead.json",
+      "facts": [
+       "Ronnie Eaves, a driver of account A3 (not a contact), mobile 423-555-0116, drives unit MB-6.",
+       "An order at main on slot 6's 2nd working day before T for MB-6: oil service 90.95 and, added on the driver's word, a right front CV axle 379.64 (technician slot 12); completed by 16:00 the same day.",
+       "An outbound 'car ready' call from desk 102 to the driver at 15:52 that day (it keeps the promise of this call).",
+       "The fleet contact of A3 was not called about the added work."
+      ]
+     }
+    ]
+   },
+   {
+    "id": "A4",
+    "kind": "driving school",
+    "size": "medium",
+    "state_at_t": "healthy, growing",
+    "name": "Missionary Ridge Driving School",
+    "legal_form": "LLC",
+    "home_shop": "east",
+    "address": "5512 Brainerd Rd, Chattanooga, TN 37411",
+    "phone": "(423) 555-0111",
+    "email_domain": "missionaryridgedriving.example",
+    "payment_terms_days": 15,
+    "contacts": [
+     {
+      "name": "Denise Atchley",
+      "role": "Owner",
+      "from_months_before_t": 110,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0154",
+      "email": "denise@missionaryridgedriving.example"
+     },
+     {
+      "name": "Rob Atchley",
+      "role": "Lead Instructor, looks after the cars",
+      "from_months_before_t": 110,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0195",
+      "email": "rob@missionaryridgedriving.example"
+     }
+    ],
+    "fleet_count": 8,
+    "fleet": [
+     {
+      "unit": "Car 1",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2019,
+      "vin": "5YFBURHE8KP523941",
+      "vehicle_class": "car",
+      "parc_model": "Corolla",
+      "plate": "BRC-7135",
+      "typical_yearly_miles": 17000
+     },
+     {
+      "unit": "Car 2",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2021,
+      "vin": "5YFEPMAE1MP189739",
+      "vehicle_class": "car",
+      "parc_model": "Corolla",
+      "plate": "BRC-3033",
+      "typical_yearly_miles": 17000
+     },
+     {
+      "unit": "Car 3",
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2020,
+      "vin": "5NPD84LF9LH205048",
+      "vehicle_class": "car",
+      "parc_model": "Elantra",
+      "plate": "BRC-7546",
+      "typical_yearly_miles": 17000
+     },
+     {
+      "unit": "Car 4",
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2022,
+      "vin": "5NPLL4AG6NH106910",
+      "vehicle_class": "car",
+      "parc_model": "Elantra",
+      "plate": "BRC-7629",
+      "typical_yearly_miles": 17000
+     },
+     {
+      "unit": "Car 5",
+      "make": "Nissan",
+      "model": "Sentra",
+      "year": 2021,
+      "vin": "3N1AB8CVXMY126966",
+      "vehicle_class": "car",
+      "parc_model": "Sentra",
+      "plate": "BRC-4760",
+      "typical_yearly_miles": 17000
+     },
+     {
+      "unit": "Car 6",
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2018,
+      "vin": "2HGFC2F65JH408906",
+      "vehicle_class": "car",
+      "parc_model": "Civic",
+      "plate": "BRC-6871",
+      "typical_yearly_miles": 17000
+     },
+     {
+      "unit": "Car 7",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "vin": "5YFEPMAE9PP356806",
+      "vehicle_class": "car",
+      "parc_model": "Corolla",
+      "plate": "BRC-5108",
+      "typical_yearly_miles": 17000,
+      "joined_fleet_months_before_t": 8
+     },
+     {
+      "unit": "Car 8",
+      "make": "Nissan",
+      "model": "Sentra",
+      "year": 2024,
+      "vin": "3N1AB8CV6RY626078",
+      "vehicle_class": "car",
+      "parc_model": "Sentra",
+      "plate": "BRC-6497",
+      "typical_yearly_miles": 17000,
+      "joined_fleet_months_before_t": 3
+     }
+    ],
+    "from_story_files": []
+   },
+   {
+    "id": "A5",
+    "kind": "electrical contractor",
+    "size": "medium, left",
+    "state_at_t": "no visit for four and a half months",
+    "name": "Cumberland Bend Electric",
+    "legal_form": "LLC",
+    "home_shop": "west",
+    "address": "5745 Centennial Blvd, Nashville, TN 37209",
+    "phone": "(615) 555-0143",
+    "email_domain": "cumberlandbendelectric.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Wade Carlisle",
+      "role": "Operations Manager (the caller who was not called back)",
+      "from_months_before_t": 40,
+      "to_months_before_t": null,
+      "phone": "(615) 555-0134",
+      "email": "wcarlisle@cumberlandbendelectric.example"
+     },
+     {
+      "name": "Sherry Lane",
+      "role": "Bookkeeper",
+      "from_months_before_t": 85,
+      "to_months_before_t": null,
+      "phone": "(615) 555-0150",
+      "email": "accounting@cumberlandbendelectric.example"
+     }
+    ],
+    "fleet_count": 11,
+    "fleet": [
+     {
+      "unit": "E-1",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2014,
+      "vin": "1GCWGAFP2E1665953",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-4985",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-2",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2016,
+      "vin": "1GCWGAFP0G1657305",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-5572",
+      "typical_yearly_miles": 20000,
+      "story": "S1/S6: brake job at `west` that came back (T-6 and T-5 months), done by slot 27"
+     },
+     {
+      "unit": "E-3",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2017,
+      "vin": "1GCWGAFPXH1764282",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-5982",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-4",
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2019,
+      "vin": "1GCWGAFP2K1100467",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-7080",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-5",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2018,
+      "vin": "1FTBR1C80JKA61649",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-3376",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-6",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C8XLKB49336",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-3674",
+      "typical_yearly_miles": 20000,
+      "story": "S1/S6: brake job at `west` that came back (T-6 and T-5 months), done by slot 27"
+     },
+     {
+      "unit": "E-7",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C85MKA51249",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4529",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-8",
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2017,
+      "vin": "1FTEW1E5XHFB61222",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-7479",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-9",
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2020,
+      "vin": "1FTEW1E51LFA71479",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-7812",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-10",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2019,
+      "vin": "3C6TRVDG9KE149189",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-7163",
+      "typical_yearly_miles": 20000
+     },
+     {
+      "unit": "E-11",
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "year": 2016,
+      "vin": "1GC1KVEG9GF483738",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 2500HD",
+      "plate": "BRC-4259",
+      "typical_yearly_miles": 20000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/en/17-S1-a5-complaint.json",
+      "facts": [
+       "Which van is which: the first comeback (the Tuesday of week T-26) is E-2, the second (the Tuesday of week T-22) is E-6; each came back about three weeks after its pad job, so the first orders are about three weeks before those days and the disputed line is E-6's pad job.",
+       "Both comebacks were done without charge (warranty orders).",
+       "Slot 27 told A5's driver the noise was 'just bedding in'."
+      ]
+     },
+     {
+      "source": "calls/en/18-S1-a5-miss-1.json",
+      "facts": [
+       "The time of this miss: 08:05 Central on its day; 35 seconds of ringing; the first desk 302, then desks 301, 302 and 303 together."
+      ]
+     },
+     {
+      "source": "calls/en/19-S1-a5-miss-2.json",
+      "facts": [
+       "The time of this miss: 13:40 Central on its day; 35 seconds of ringing; the first desk 303, then desks 301, 302 and 303 together."
+      ]
+     },
+     {
+      "source": "calls/en/20-S1-a5-miss-3.json",
+      "facts": [
+       "The time of this miss: 16:15 Central on its day; 35 seconds of ringing; the first desk 302, then desks 301, 302 and 303 together."
+      ]
+     }
+    ]
+   },
+   {
+    "id": "A6",
+    "kind": "catering company",
+    "size": "medium, fading",
+    "state_at_t": "from eight visits a month to one over five months",
+    "name": "Sourwood Catering Co.",
+    "legal_form": "LLC",
+    "home_shop": "main",
+    "address": "1612 E 23rd St, Chattanooga, TN 37404",
+    "phone": "(423) 555-0183",
+    "email_domain": "sourwoodcatering.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Bobby Shadden",
+      "role": "Kitchen and Fleet Manager (the old fleet contact)",
+      "from_months_before_t": 52,
+      "to_months_before_t": 5,
+      "phone": "(423) 555-0108",
+      "email": "bshadden@sourwoodcatering.example"
+     },
+     {
+      "name": "Erin Castillo",
+      "role": "Operations Coordinator (the new fleet contact)",
+      "from_months_before_t": 5,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0106",
+      "email": "ecastillo@sourwoodcatering.example"
+     },
+     {
+      "name": "Marianne Tolliver",
+      "role": "Owner, Executive Chef; pays the bills",
+      "from_months_before_t": 96,
+      "to_months_before_t": null,
+      "phone": "(423) 555-0147",
+      "email": "marianne@sourwoodcatering.example"
+     }
+    ],
+    "fleet_count": 10,
+    "fleet": [
+     {
+      "unit": "SC-1",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2018,
+      "vin": "1FTBR1C80JKB58933",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-7671",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-2",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C82LKA10530",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-2362",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-3",
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2022,
+      "vin": "1FTBR1C89NKB51761",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-5313",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-4",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2019,
+      "vin": "3C6TRVDG2KE485802",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-4958",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-5",
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2021,
+      "vin": "3C6TRVDG8ME713286",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-7728",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-6",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2017,
+      "vin": "NM0LS7E27H1858241",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-2345",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-7",
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2019,
+      "vin": "NM0LS7E27K1820161",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-2508",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-8",
+      "make": "Chevrolet",
+      "model": "Express 3500 Cutaway",
+      "year": 2015,
+      "vin": "1GB0GRFG6F1795034",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-3980",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-9",
+      "make": "Chevrolet",
+      "model": "Express 3500 Cutaway",
+      "year": 2017,
+      "vin": "1GB0GRFG6H1383375",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-6984",
+      "typical_yearly_miles": 14000
+     },
+     {
+      "unit": "SC-10",
+      "make": "Toyota",
+      "model": "Sienna",
+      "year": 2018,
+      "vin": "5TDKZ3DC4JS311711",
+      "vehicle_class": "suv",
+      "parc_model": "Sienna",
+      "plate": "BRC-6464",
+      "typical_yearly_miles": 14000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/en/21-S1-a6-the-usual.json",
+      "facts": [
+       "An appointment at main for SC-2 on call+2d at 07:30 (the Thursday of week T-20): fleet PM service A at list, 270.59; it is one of A6's visits in its first 30-day block after the rise.",
+       "Several of A6's vans are white (he says 'about five'); no colour is recorded in accounts.json.",
+       "Her predecessor left her a sheet with 'usual, 255' against the van."
+      ]
+     },
+     {
+      "source": "calls/en/22-S1-a6-quote-promised.json",
+      "facts": [
+       "An estimate for A6 at main opened on this call's day for SC-4 (front and rear brakes) and SC-5 (PM service) and sent on call+2d; it is the 'quote sent two days late' of card S01.",
+       "Her e-mail is the account's own, ecastillo@sourwoodcatering.example; the account still held her predecessor's."
+      ]
+     },
+     {
+      "source": "conversations/en/04-s1-web-fleet-quote-waited.json",
+      "facts": [
+       "The quote is for SC-4 (front brake pads and rotors, 640.91 at list) and SC-9 (battery, 304.45 at list); it was asked for the owner's sign-off on the Friday of week T-4.",
+       "ERP: the estimate made from this chat is proposed as one of A6's five slow estimates (ledger s1.a6), expired; no order followed.",
+       "The file Sourwood_quote_SC4_SC9.pdf (picture pool 'estimate-pdf').",
+       "SC-4's brakes were quoted once before, after call 22 (the Tuesday of week T-9), and not booked; this quote, front pads and rotors only, is A6's second estimate on SC-4."
+      ]
+     }
+    ]
+   }
+  ],
+  "small_business_customers": [
+   {
+    "name": "Greeson Lawn & Landscape",
+    "kind": "landscaping",
+    "town": "Hixson, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "year": 2017,
+      "vin": "1FT7W2B6XHEA35833",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-7072"
+     },
+     {
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "year": 2019,
+      "vin": "1GCRYDED1KZ221074",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 1500",
+      "plate": "BRC-6947"
+     }
+    ]
+   },
+   {
+    "name": "Tellico Pest Solutions",
+    "kind": "pest control",
+    "town": "Chattanooga, TN",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Ranger",
+      "year": 2020,
+      "vin": "1FTER4EH7LPA29069",
+      "vehicle_class": "truck",
+      "parc_model": null,
+      "plate": "BRC-3908"
+     },
+     {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "year": 2018,
+      "vin": "5TFCZ5AN0JX404872",
+      "vehicle_class": "truck",
+      "parc_model": "Tacoma",
+      "plate": "BRC-2812"
+     },
+     {
+      "make": "Ford",
+      "model": "Ranger",
+      "year": 2022,
+      "vin": "1FTER4EHXNPA06520",
+      "vehicle_class": "truck",
+      "parc_model": null,
+      "plate": "BRC-6006"
+     }
+    ]
+   },
+   {
+    "name": "Clabough Brothers Roofing",
+    "kind": "roofing",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ram",
+      "model": "2500",
+      "year": 2016,
+      "vin": "3C6UR5DLXGG272089",
+      "vehicle_class": "truck",
+      "parc_model": null,
+      "plate": "BRC-6976"
+     },
+     {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2019,
+      "vin": "1FTEW1E56KFA50089",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-4277"
+     }
+    ]
+   },
+   {
+    "name": "Cloudland Pool Service",
+    "kind": "pool service",
+    "town": "Chattanooga, TN",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2018,
+      "vin": "NM0LS7E27J1171525",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-7561"
+     },
+     {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "year": 2017,
+      "vin": "5TFCZ5AN6HX881042",
+      "vehicle_class": "truck",
+      "parc_model": "Tacoma",
+      "plate": "BRC-4257"
+     }
+    ]
+   },
+   {
+    "name": "Hales Bar Lock & Key",
+    "kind": "locksmith",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2017,
+      "vin": "NM0LS7E26H1591397",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-5440"
+     }
+    ]
+   },
+   {
+    "name": "Dogwood Lane Florals",
+    "kind": "florist",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ram",
+      "model": "ProMaster City",
+      "year": 2019,
+      "vin": "ZFBHRFAB5K6738438",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-2448"
+     }
+    ]
+   },
+   {
+    "name": "Raccoon Mountain Home Inspections",
+    "kind": "home inspection",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2018,
+      "vin": "2T3BFREV9JW533591",
+      "vehicle_class": "car",
+      "parc_model": "RAV4",
+      "plate": "BRC-7956"
+     }
+    ]
+   },
+   {
+    "name": "Suck Creek Tree Service",
+    "kind": "tree service",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "year": 2015,
+      "vin": "1FT8W3BT8FEA98832",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-3889"
+     },
+     {
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "year": 2018,
+      "vin": "1GC1KVEG9JF562236",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 2500HD",
+      "plate": "BRC-3306"
+     }
+    ]
+   },
+   {
+    "name": "Wauhatchie Mobile Grooming",
+    "kind": "mobile pet grooming",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Mercedes-Benz",
+      "model": "Sprinter 2500 Cargo Van",
+      "year": 2019,
+      "vin": "WD3PE7CD7KP876284",
+      "vehicle_class": "van",
+      "parc_model": "Sprinter 2500",
+      "plate": "BRC-6093"
+     }
+    ]
+   },
+   {
+    "name": "Ooltewah Bread Company",
+    "kind": "bakery",
+    "town": "Ooltewah, TN",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2018,
+      "vin": "1FTBR1C86JKB83349",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-6423"
+     },
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2020,
+      "vin": "NM0LS7E23L1255621",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-7006"
+     }
+    ]
+   },
+   {
+    "name": "Red Bank Sign Works",
+    "kind": "sign shop",
+    "town": "Red Bank, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "year": 2014,
+      "vin": "1FT7W2B69EEA60217",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-5738"
+     },
+     {
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C84KKA34438",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-7716"
+     }
+    ]
+   },
+   {
+    "name": "Kirkland & Daughters Painting",
+    "kind": "painting contractor",
+    "town": "Chattanooga, TN",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2016,
+      "vin": "1GCWGAFP9G1408503",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-3559"
+     },
+     {
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2020,
+      "vin": "1FTBR1C87LKA48142",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-3776"
+     }
+    ]
+   },
+   {
+    "name": "Soddy Appliance Repair",
+    "kind": "appliance repair",
+    "town": "Soddy-Daisy, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2015,
+      "vin": "1GCWGAFP8F1566801",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-6369"
+     },
+     {
+      "make": "Nissan",
+      "model": "NV200 Compact Cargo",
+      "year": 2018,
+      "vin": "3N6CM0KNXJK249441",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-2840"
+     }
+    ]
+   },
+   {
+    "name": "Ringgold Road Carpet Care",
+    "kind": "carpet cleaning",
+    "town": "East Ridge, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2017,
+      "vin": "1GCWGAFP2H1481875",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-7185"
+     },
+     {
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2021,
+      "vin": "1FTBR1C84MKB41427",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-4155"
+     }
+    ]
+   },
+   {
+    "name": "St. Elmo Property Management",
+    "kind": "property management",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2018,
+      "vin": "1FTEW1E53JFB89076",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-2866"
+     },
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2019,
+      "vin": "NM0LS7E23K1561667",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-7879"
+     }
+    ]
+   },
+   {
+    "name": "Battlefield Flooring",
+    "kind": "flooring installer",
+    "town": "East Ridge, TN",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Ram",
+      "model": "ProMaster 2500 Cargo Van",
+      "year": 2018,
+      "vin": "3C6TRVDG2JE898141",
+      "vehicle_class": "van",
+      "parc_model": "ProMaster 1500 / 2500",
+      "plate": "BRC-3172"
+     },
+     {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2016,
+      "vin": "1FTEW1E57GFA47175",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-5030"
+     }
+    ]
+   },
+   {
+    "name": "Walden Mobile Vet",
+    "kind": "mobile veterinarian",
+    "town": "Signal Mountain, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2019,
+      "vin": "NM0LS7E20K1709662",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-4265"
+     }
+    ]
+   },
+   {
+    "name": "Dallas Bay Dock Repair",
+    "kind": "dock building and repair",
+    "town": "Hixson, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "year": 2017,
+      "vin": "1FT7W2B6XHEA11452",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-6082"
+     },
+     {
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "year": 2015,
+      "vin": "1GC1KVEG4FF557047",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 2500HD",
+      "plate": "BRC-4742"
+     }
+    ]
+   },
+   {
+    "name": "Apison Fence Company",
+    "kind": "fencing",
+    "town": "Apison, TN",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "year": 2019,
+      "vin": "1GC1KVEG8KF272832",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 2500HD",
+      "plate": "BRC-7526"
+     },
+     {
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "year": 2017,
+      "vin": "1FT8W3BT9HEB60452",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-5114"
+     },
+     {
+      "make": "Ram",
+      "model": "1500",
+      "year": 2021,
+      "vin": "1C6RR7FT1MS836974",
+      "vehicle_class": "truck",
+      "parc_model": "1500",
+      "plate": "BRC-2635"
+     }
+    ]
+   },
+   {
+    "name": "Frazier Avenue Coffee Roasters",
+    "kind": "coffee roaster",
+    "town": "Chattanooga, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2020,
+      "vin": "NM0LS7E27L1151813",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-7512"
+     }
+    ]
+   },
+   {
+    "name": "Hamill Road Handyman",
+    "kind": "handyman",
+    "town": "Hixson, TN",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Colorado",
+      "year": 2019,
+      "vin": "1GCGSBEA1K1137063",
+      "vehicle_class": "truck",
+      "parc_model": "Colorado",
+      "plate": "BRC-3092"
+     }
+    ]
+   },
+   {
+    "name": "Newsom Station Landscaping",
+    "kind": "landscaping",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "year": 2017,
+      "vin": "1GC1KVEG1HF322382",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 2500HD",
+      "plate": "BRC-5405"
+     },
+     {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2020,
+      "vin": "1FTEW1E55LFA85241",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-2741"
+     }
+    ]
+   },
+   {
+    "name": "Sylvan Heights Painting",
+    "kind": "painting contractor",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit-250 Cargo Van",
+      "year": 2019,
+      "vin": "1FTBR1C80KKB56276",
+      "vehicle_class": "van",
+      "parc_model": "Transit 150 / 250 / 350",
+      "plate": "BRC-3249"
+     }
+    ]
+   },
+   {
+    "name": "White Bridge Pharmacy",
+    "kind": "independent pharmacy (delivery cars)",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Kia",
+      "model": "Soul",
+      "year": 2019,
+      "vin": "KNDJ23AU2K7138778",
+      "vehicle_class": "car",
+      "parc_model": "Soul",
+      "plate": "BRC-4485"
+     },
+     {
+      "make": "Nissan",
+      "model": "Versa",
+      "year": 2021,
+      "vin": "3N1CN7AP9ML818888",
+      "vehicle_class": "car",
+      "parc_model": "Versa",
+      "plate": "BRC-5673"
+     }
+    ]
+   },
+   {
+    "name": "Richland Creek Florist",
+    "kind": "florist",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2018,
+      "vin": "NM0LS7E25J1401417",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-6239"
+     }
+    ]
+   },
+   {
+    "name": "Cockrill Bend Courier",
+    "kind": "courier",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Ram",
+      "model": "ProMaster City",
+      "year": 2019,
+      "vin": "ZFBHRFAB0K6676575",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-4883"
+     },
+     {
+      "make": "Ram",
+      "model": "ProMaster City",
+      "year": 2021,
+      "vin": "ZFBHRFAB0M6502752",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-6833"
+     },
+     {
+      "make": "Ford",
+      "model": "Transit Connect Cargo Van",
+      "year": 2020,
+      "vin": "NM0LS7E28L1387354",
+      "vehicle_class": "van",
+      "parc_model": "Transit Connect",
+      "plate": "BRC-2585"
+     }
+    ]
+   },
+   {
+    "name": "Lankford Heating & Air",
+    "kind": "heating and air contractor",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2016,
+      "vin": "1GCWGAFP5G1150366",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-4887"
+     },
+     {
+      "make": "Chevrolet",
+      "model": "Express 2500 Cargo Van",
+      "year": 2019,
+      "vin": "1GCWGAFPXK1497412",
+      "vehicle_class": "van",
+      "parc_model": "Express 2500",
+      "plate": "BRC-6327"
+     },
+     {
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "year": 2018,
+      "vin": "1GCRYDED5JZ371722",
+      "vehicle_class": "truck",
+      "parc_model": "Silverado 1500",
+      "plate": "BRC-3307"
+     }
+    ]
+   },
+   {
+    "name": "Kingston Springs Tree Care",
+    "kind": "tree service",
+    "town": "Kingston Springs, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "year": 2016,
+      "vin": "1FT8W3BT2GEB65331",
+      "vehicle_class": "truck",
+      "parc_model": "F-250 Super Duty",
+      "plate": "BRC-5833"
+     }
+    ]
+   },
+   {
+    "name": "Pasquo Lock & Key",
+    "kind": "locksmith",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Nissan",
+      "model": "NV200 Compact Cargo",
+      "year": 2019,
+      "vin": "3N6CM0KN1KK403097",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "BRC-7429"
+     }
+    ]
+   },
+   {
+    "name": "Dozier Drywall",
+    "kind": "drywall contractor",
+    "town": "Nashville, TN",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2015,
+      "vin": "1FTEW1E5XFFB24166",
+      "vehicle_class": "truck",
+      "parc_model": "F-150",
+      "plate": "BRC-3767"
+     },
+     {
+      "make": "Ram",
+      "model": "1500",
+      "year": 2019,
+      "vin": "1C6RR7FT5KS438440",
+      "vehicle_class": "truck",
+      "parc_model": "1500",
+      "plate": "BRC-2920"
+     }
+    ]
+   }
+  ]
+ },
+ "ru": {
+  "company": "«Ермак-Сервис»",
+  "accounts": [
+   {
+    "id": "A1",
+    "kind": "служба доставки",
+    "size": "big, the anchor",
+    "state_at_t": "healthy, the largest single customer; pays later every month (about 30 days, now about 50)",
+    "name": "Симбирский гонец",
+    "legal_form": "ООО",
+    "home_shop": "main",
+    "address": "г. Ульяновск, ул. Локомотивная, 14",
+    "phone": "+7 (8422) 12-38-29",
+    "email_domain": "simbirsky-gonets.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Олег Вячеславович Кравцов",
+      "role": "начальник транспортного отдела",
+      "from_months_before_t": 48,
+      "to_months_before_t": null,
+      "phone": "+7 907 346-93-67",
+      "email": "kravtsov@simbirsky-gonets.example"
+     },
+     {
+      "name": "Надежда Ивановна Зотова",
+      "role": "бухгалтер по расчётам с поставщиками",
+      "from_months_before_t": 62,
+      "to_months_before_t": null,
+      "phone": "+7 907 726-93-95",
+      "email": "buh@simbirsky-gonets.example"
+     },
+     {
+      "name": "Тимур Рашидович Бикмаев",
+      "role": "исполнительный директор",
+      "from_months_before_t": 90,
+      "to_months_before_t": null,
+      "phone": "+7 907 961-65-48",
+      "email": "bikmaev@simbirsky-gonets.example"
+     }
+    ],
+    "fleet_count": 35,
+    "fleet": [
+     {
+      "unit": "01",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2018,
+      "vin": "X96A31R32J0799451",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "К496МТ173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "02",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2018,
+      "vin": "X96A31R32J0683681",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "О178ТА173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "03",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2019,
+      "vin": "X96A31R32K0555023",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "К943ХС173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "04",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2019,
+      "vin": "X96A31R32K0672797",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "А145ТН73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "05",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2019,
+      "vin": "X96A31R32K0980428",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "В753РЕ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "06",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2020,
+      "vin": "X96A31R32L0594049",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "К311ТУ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "07",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2020,
+      "vin": "X96A31R32L0621759",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Т198ОК73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "08",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2020,
+      "vin": "X96A31R32L0341687",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "С271ВР173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "09",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2021,
+      "vin": "X96A31R32M0754347",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "В720МТ173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "10",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2021,
+      "vin": "X96A31R32M0942155",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Т474ЕР173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "11",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2021,
+      "vin": "X96A31R32M0808920",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Р823ЕТ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "12",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2022,
+      "vin": "X96A31R32N0074817",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "А867СР73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "13",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2022,
+      "vin": "X96A31R32N0964001",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "А366УУ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "14",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2023,
+      "vin": "X96A31R32P0223846",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Е541РН173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "15",
+      "make": "ГАЗ",
+      "model": "ГАЗель NN, цельнометаллический фургон",
+      "year": 2022,
+      "vin": "X96A31R35N0300050",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "С838ТО173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "16",
+      "make": "ГАЗ",
+      "model": "ГАЗель NN, цельнометаллический фургон",
+      "year": 2022,
+      "vin": "X96A31R35N0636509",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "У876ВМ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "17",
+      "make": "ГАЗ",
+      "model": "ГАЗель NN, цельнометаллический фургон",
+      "year": 2023,
+      "vin": "X96A31R35P0956860",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Т109ТР73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "18",
+      "make": "ГАЗ",
+      "model": "ГАЗель NN, цельнометаллический фургон",
+      "year": 2023,
+      "vin": "X96A31R35P0083874",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Х957ТК73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "19",
+      "make": "ГАЗ",
+      "model": "ГАЗель NN, цельнометаллический фургон",
+      "year": 2024,
+      "vin": "X96A31R35R0017464",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "К961НВ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "20",
+      "make": "ГАЗ",
+      "model": "ГАЗель NN, цельнометаллический фургон",
+      "year": 2024,
+      "vin": "X96A31R35R0365665",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "С478ЕН73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "21",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2017,
+      "vin": "XTAFS045LH6092700",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Х306ВО73",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "22",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ0930672",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О791СН73",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "23",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ8142228",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "В967АР73",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "24",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK1682961",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Р358ТН173",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "25",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK2867219",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "М684ВУ73",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "26",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2020,
+      "vin": "XTAFS045LL4700369",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Н783ЕХ73",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "27",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM8155493",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Н730МК73",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "28",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM7781342",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Т126АУ173",
+      "typical_yearly_km": 40000
+     },
+     {
+      "unit": "29",
+      "make": "Ford",
+      "model": "Transit, фургон",
+      "year": 2017,
+      "vin": "Z6FXXXESGXHU17207",
+      "vehicle_class": "van",
+      "parc_model": "Transit",
+      "plate": "С794ВР73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "30",
+      "make": "Ford",
+      "model": "Transit, фургон",
+      "year": 2018,
+      "vin": "Z6FXXXESGXJL37446",
+      "vehicle_class": "van",
+      "parc_model": "Transit",
+      "plate": "К598УА173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "31",
+      "make": "Ford",
+      "model": "Transit, фургон",
+      "year": 2019,
+      "vin": "Z6FXXXESGXKC60068",
+      "vehicle_class": "van",
+      "parc_model": "Transit",
+      "plate": "Р383ЕР173",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "32",
+      "make": "Ford",
+      "model": "Transit, фургон",
+      "year": 2021,
+      "vin": "Z6FXXXESGXMS40270",
+      "vehicle_class": "van",
+      "parc_model": "Transit",
+      "plate": "Х892ЕЕ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "33",
+      "make": "ГАЗ",
+      "model": "ГАЗель Бизнес 2705, фургон",
+      "year": 2014,
+      "vin": "X96270500E0022490",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель (3302 / 2705), включая «Бизнес»",
+      "plate": "У600АУ73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "34",
+      "make": "ГАЗ",
+      "model": "ГАЗель Бизнес 2705, фургон",
+      "year": 2015,
+      "vin": "X96270500F0800484",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель (3302 / 2705), включая «Бизнес»",
+      "plate": "С461КС73",
+      "typical_yearly_km": 50000
+     },
+     {
+      "unit": "35",
+      "make": "ГАЗ",
+      "model": "ГАЗель Бизнес 2705, фургон",
+      "year": 2016,
+      "vin": "X96270500G0662937",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель (3302 / 2705), включая «Бизнес»",
+      "plate": "Н826КА73",
+      "typical_yearly_km": 50000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/ru/07-S4-driver-says-go-ahead.json",
+      "facts": [
+       "Фёдор, водитель «Симбирского гонца» (A1), машина № 12 (ГАЗель Next 2022, А867СР73), телефон +7 907 351-38-85.",
+       "В день звонка у A1 открыт наряд на № 12: ТО коммерческого автомобиля по договорной цене (8 724) и добавленные по звонку работы на 9 500: замена левой шаровой опоры, сход-развал, замена тормозной жидкости. Работы согласовал водитель, а не Кравцов.",
+       "Исходящий звонок с 102 на номер водителя около 17:50 того же дня: машина готова (обещанный звонок выполнен)."
+      ]
+     },
+     {
+      "source": "calls/ru/21-S1-a6-why-dearer.json",
+      "facts": [
+       "У A6 наряд на машину № 1 (Х176АХ73) на следующий день после звонка: ТО коммерческого автомобиля 9 710 и замена лампы ближнего света 800, по прайсу.",
+       "Предыдущее ТО этой машины было примерно за три месяца до звонка, по старому нормо-часу: 9 500."
+      ]
+     },
+     {
+      "source": "calls/ru/23-S1-a1-no-request-number.json",
+      "facts": [
+       "У A1 наряд на машину № 07 (Т198ОК73) на следующий день после звонка: ТО коммерческого автомобиля по договорной цене 8 724, без номера заявки клиента."
+      ]
+     },
+     {
+      "source": "calls/ru/24-S1-a1-request-number-first.json",
+      "facts": [
+       "У A1 наряд на машину № 24 (Р358ТН173) в день звонка, 14:00: замена передних колодок, номер заявки клиента 247/10."
+      ]
+     },
+     {
+      "source": "conversations/ru/05-s1-telegram-weekly-vans.json",
+      "facts": [
+       "Заявки на понедельник: неделя T-22: Т-02, Т-06, Т-11, Т-15, Т-22; неделя T-5: Т-04, Т-05, Т-13, Т-18, Т-24 (Т-08 заменён); неделя T-4: добавлен Т-08; неделя W+1: Т-03, Т-07, Т-12, Т-16, Т-25.",
+       "Largus Т-09 приехал в понедельник недели T-16 на ТО, у него нашли течь помпы; слот 17 обещал перезвонить с ценой и не перезвонил; помпу заменили в первый рабочий день слота 16 после этого, 12 279,80 по договору, заявка 96/07.",
+       "ГАЗель Т-15 тянуло вправо (неделя T-22); у Granta Т-12 слабо греет печка (неделя W0); у Duster Т-25 задние колодки были на исходе на прошлом ТО; Т-08 в начале октября работал на объекте в Димитровграде.",
+       "Фото T-09_pompa.jpg (пул 'worn-part-water-pump').",
+       "Картинка контакта: герань на подоконнике, за окном двор в снегу."
+      ]
+     }
+    ]
+   },
+   {
+    "id": "A2",
+    "kind": "сервисная компания (отопление и сантехника)",
+    "size": "big",
+    "state_at_t": "healthy, the most frequent visitor; standing weekly slot",
+    "name": "Тёплый контур",
+    "legal_form": "ООО",
+    "home_shop": "east",
+    "address": "г. Ульяновск, пр-т Гая, 71",
+    "phone": "+7 (8422) 11-70-79",
+    "email_domain": "teply-kontur.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Лариса Геннадьевна Шишкина",
+      "role": "диспетчер (записывает машины на еженедельное окно)",
+      "from_months_before_t": 70,
+      "to_months_before_t": null,
+      "phone": "+7 907 514-79-22",
+      "email": "dispetcher@teply-kontur.example"
+     },
+     {
+      "name": "Виктор Семёнович Агафонов",
+      "role": "директор",
+      "from_months_before_t": 180,
+      "to_months_before_t": null,
+      "phone": "+7 907 820-54-59",
+      "email": "agafonov@teply-kontur.example"
+     },
+     {
+      "name": "Ольга Петровна Агафонова",
+      "role": "главный бухгалтер",
+      "from_months_before_t": 170,
+      "to_months_before_t": null,
+      "phone": "+7 907 806-21-97",
+      "email": "buh@teply-kontur.example"
+     },
+     {
+      "name": "Рамиль",
+      "role": "механик",
+      "from_months_before_t": 24,
+      "to_months_before_t": null,
+      "phone": "+7 907 471-16-40",
+      "email": null
+     }
+    ],
+    "fleet_count": 25,
+    "fleet": [
+     {
+      "unit": "Т-01",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2016,
+      "vin": "XTAFS045LG6323533",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "К102СХ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-02",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2017,
+      "vin": "XTAFS045LH9947119",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "У801ЕН173",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-03",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2017,
+      "vin": "XTAFS045LH3351388",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Е517АЕ173",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-04",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ3288733",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "В141ОМ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-05",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ2267526",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "В598СТ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-06",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK8504002",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "М804УВ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-07",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK3823965",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Т753КМ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-08",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2020,
+      "vin": "XTAFS045LL3143089",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Е316ЕН173",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-09",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM9043535",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "К519ХА73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-10",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM2036149",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "А152СЕ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-11",
+      "make": "LADA",
+      "model": "Granta, универсал",
+      "year": 2018,
+      "vin": "XTA219410J0551839",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "У309РО73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-12",
+      "make": "LADA",
+      "model": "Granta, универсал",
+      "year": 2019,
+      "vin": "XTA219410K0516264",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "М331МО173",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-13",
+      "make": "LADA",
+      "model": "Granta, универсал",
+      "year": 2021,
+      "vin": "XTA219410M0588681",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "Е126РТ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-14",
+      "make": "LADA",
+      "model": "Granta, универсал",
+      "year": 2022,
+      "vin": "XTA219410N0349442",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "У973МТ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-15",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2017,
+      "vin": "X96A21R22H0345280",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "О208ТО73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-16",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2020,
+      "vin": "X96A21R22L0178567",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "О841ЕА73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-17",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2019,
+      "vin": "X96A31R32K0049457",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Н358НЕ173",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-18",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2021,
+      "vin": "X96A31R32M0558463",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "С979ХО73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-19",
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2019,
+      "vin": "XTA212140K0158097",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "К549УУ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-20",
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2021,
+      "vin": "XTA212140M0794571",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "О779ОУ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-21",
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2023,
+      "vin": "XTA212140P0271539",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "У468ММ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-22",
+      "make": "УАЗ",
+      "model": "3909",
+      "year": 2017,
+      "vin": "XTT390995H1964470",
+      "vehicle_class": "van",
+      "parc_model": "СГР «Буханка» (3909 / 2206 / 3303)",
+      "plate": "О595НТ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-23",
+      "make": "УАЗ",
+      "model": "3909",
+      "year": 2020,
+      "vin": "XTT390995L1130007",
+      "vehicle_class": "van",
+      "parc_model": "СГР «Буханка» (3909 / 2206 / 3303)",
+      "plate": "Р714НН73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-24",
+      "make": "Renault",
+      "model": "Duster",
+      "year": 2017,
+      "vin": "X7LHSRH8N15466586",
+      "vehicle_class": "suv",
+      "parc_model": "Duster",
+      "plate": "Х581ХТ73",
+      "typical_yearly_km": 28000
+     },
+     {
+      "unit": "Т-25",
+      "make": "Renault",
+      "model": "Duster",
+      "year": 2019,
+      "vin": "X7LHSRH8N06829468",
+      "vehicle_class": "suv",
+      "parc_model": "Duster",
+      "plate": "Х640СР73",
+      "typical_yearly_km": 28000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/ru/21-S1-a6-why-dearer.json",
+      "facts": [
+       "У A6 наряд на машину № 1 (Х176АХ73) на следующий день после звонка: ТО коммерческого автомобиля 9 710 и замена лампы ближнего света 800, по прайсу.",
+       "Предыдущее ТО этой машины было примерно за три месяца до звонка, по старому нормо-часу: 9 500."
+      ]
+     },
+     {
+      "source": "calls/ru/25-S5-good-call-damaged.json",
+      "facts": [
+       "Рамиль, сотрудник «Тёплого контура» (A2), который ведёт машины компании, телефон +7 907 471-16-40, и водитель Ильдус.",
+       "Номер заявки клиента 118/11 на замену сцепления машины Т-17; запись на следующий день, 9:00."
+      ]
+     },
+     {
+      "source": "conversations/ru/05-s1-telegram-weekly-vans.json",
+      "facts": [
+       "Заявки на понедельник: неделя T-22: Т-02, Т-06, Т-11, Т-15, Т-22; неделя T-5: Т-04, Т-05, Т-13, Т-18, Т-24 (Т-08 заменён); неделя T-4: добавлен Т-08; неделя W+1: Т-03, Т-07, Т-12, Т-16, Т-25.",
+       "Largus Т-09 приехал в понедельник недели T-16 на ТО, у него нашли течь помпы; слот 17 обещал перезвонить с ценой и не перезвонил; помпу заменили в первый рабочий день слота 16 после этого, 12 279,80 по договору, заявка 96/07.",
+       "ГАЗель Т-15 тянуло вправо (неделя T-22); у Granta Т-12 слабо греет печка (неделя W0); у Duster Т-25 задние колодки были на исходе на прошлом ТО; Т-08 в начале октября работал на объекте в Димитровграде.",
+       "Фото T-09_pompa.jpg (пул 'worn-part-water-pump').",
+       "Картинка контакта: герань на подоконнике, за окном двор в снегу."
+      ]
+     }
+    ]
+   },
+   {
+    "id": "A3",
+    "kind": "клининговая компания",
+    "size": "medium",
+    "state_at_t": "healthy",
+    "name": "Чистый Венец",
+    "legal_form": "ООО",
+    "home_shop": "main",
+    "address": "г. Ульяновск, ул. Радищева, 140",
+    "phone": "+7 (8422) 17-35-70",
+    "email_domain": "chisty-venets.example",
+    "payment_terms_days": 14,
+    "contacts": [
+     {
+      "name": "Гульнара Наилевна Садыкова",
+      "role": "управляющая",
+      "from_months_before_t": 36,
+      "to_months_before_t": null,
+      "phone": "+7 907 896-87-92",
+      "email": "sadykova@chisty-venets.example"
+     },
+     {
+      "name": "Борис Игоревич Лебедев",
+      "role": "директор, владелец",
+      "from_months_before_t": 110,
+      "to_months_before_t": null,
+      "phone": "+7 907 925-55-72",
+      "email": "lebedev@chisty-venets.example"
+     }
+    ],
+    "fleet_count": 9,
+    "fleet": [
+     {
+      "unit": "1",
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2017,
+      "vin": "XTAKS045LH5021800",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "Е818ОС73",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "2",
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2019,
+      "vin": "XTAKS045LK2313573",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "С839НВ173",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "3",
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2021,
+      "vin": "XTAKS045LM3589707",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "В618ВН173",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "4",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ0272559",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Н470НР173",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "5",
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2019,
+      "vin": "XTA219010K0545605",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "Е169РР73",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "6",
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2022,
+      "vin": "XTA219010N0681026",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "Х705ОК73",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "7",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2018,
+      "vin": "X96A31R32J0552734",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Е859ММ73",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "8",
+      "make": "Kia",
+      "model": "Rio",
+      "year": 2018,
+      "vin": "Z94C241BBJR759252",
+      "vehicle_class": "car",
+      "parc_model": "Rio",
+      "plate": "К745КХ73",
+      "typical_yearly_km": 18000
+     },
+     {
+      "unit": "9",
+      "make": "Renault",
+      "model": "Logan",
+      "year": 2017,
+      "vin": "X7L4SRAV436001449",
+      "vehicle_class": "car",
+      "parc_model": "Logan",
+      "plate": "С123ТО73",
+      "typical_yearly_km": 18000
+     }
+    ],
+    "from_story_files": []
+   },
+   {
+    "id": "A4",
+    "kind": "автошкола",
+    "size": "medium",
+    "state_at_t": "healthy, growing",
+    "name": "Автошкола «Первая передача»",
+    "legal_form": "ООО",
+    "home_shop": "east",
+    "address": "г. Ульяновск, пр-т Созидателей, 17",
+    "phone": "+7 (8422) 11-30-38",
+    "email_domain": "pervaya-peredacha.example",
+    "payment_terms_days": 14,
+    "contacts": [
+     {
+      "name": "Елена Анатольевна Мартьянова",
+      "role": "директор",
+      "from_months_before_t": 110,
+      "to_months_before_t": null,
+      "phone": "+7 907 390-20-74",
+      "email": "direktor@pervaya-peredacha.example"
+     },
+     {
+      "name": "Юрий Николаевич Тюрин",
+      "role": "старший мастер производственного обучения, отвечает за автомобили",
+      "from_months_before_t": 96,
+      "to_months_before_t": null,
+      "phone": "+7 907 870-59-48",
+      "email": "tyurin@pervaya-peredacha.example"
+     }
+    ],
+    "fleet_count": 8,
+    "fleet": [
+     {
+      "unit": "Учебный 1",
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2019,
+      "vin": "XTA219010K0603101",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "В451ТХ73",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Учебный 2",
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2020,
+      "vin": "XTA219010L0264612",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "Е379ЕР73",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Учебный 3",
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2022,
+      "vin": "XTA219010N0426583",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "Е223ВУ73",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Учебный 4",
+      "make": "LADA",
+      "model": "Vesta, седан",
+      "year": 2021,
+      "vin": "XTAGFL110MY659495",
+      "vehicle_class": "car",
+      "parc_model": "Vesta",
+      "plate": "Т519НО73",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Учебный 5",
+      "make": "Renault",
+      "model": "Logan",
+      "year": 2018,
+      "vin": "X7L4SRAV422392604",
+      "vehicle_class": "car",
+      "parc_model": "Logan",
+      "plate": "С792ХУ73",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Учебный 6",
+      "make": "Kia",
+      "model": "Rio",
+      "year": 2019,
+      "vin": "Z94C241BBKR544775",
+      "vehicle_class": "car",
+      "parc_model": "Rio",
+      "plate": "Т784ТР73",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Учебный 7",
+      "make": "LADA",
+      "model": "Vesta, седан",
+      "year": 2023,
+      "vin": "XTAGFL110P0026767",
+      "vehicle_class": "car",
+      "parc_model": "Vesta",
+      "plate": "В850ВА173",
+      "typical_yearly_km": 30000,
+      "joined_fleet_months_before_t": 8
+     },
+     {
+      "unit": "Учебный 8",
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2024,
+      "vin": "XTA219010R0516034",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "К751КХ73",
+      "typical_yearly_km": 30000,
+      "joined_fleet_months_before_t": 3
+     }
+    ],
+    "from_story_files": []
+   },
+   {
+    "id": "A5",
+    "kind": "электромонтажная компания",
+    "size": "medium, left",
+    "state_at_t": "no visit for four and a half months",
+    "name": "Идель-Электромонтаж",
+    "legal_form": "ООО",
+    "home_shop": "west",
+    "address": "г. Казань, ул. Тихорецкая, 9",
+    "phone": "+7 (843) 186-58-48",
+    "email_domain": "idel-elektromontazh.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Рустем Ильгизович Фаттахов",
+      "role": "заместитель директора по производству (тот, кому не перезвонили)",
+      "from_months_before_t": 40,
+      "to_months_before_t": null,
+      "phone": "+7 907 906-45-83",
+      "email": "fattakhov@idel-elektromontazh.example"
+     },
+     {
+      "name": "Алсу Маратовна Гайнутдинова",
+      "role": "бухгалтер",
+      "from_months_before_t": 85,
+      "to_months_before_t": null,
+      "phone": "+7 907 622-94-30",
+      "email": "buh@idel-elektromontazh.example"
+     }
+    ],
+    "fleet_count": 11,
+    "fleet": [
+     {
+      "unit": "Э-1",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2018,
+      "vin": "X96A31R32J0082364",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Р418ВХ116",
+      "typical_yearly_km": 30000,
+      "story": "S1/S6: brake job at `west` that came back (T-6 and T-5 months), done by slot 27"
+     },
+     {
+      "unit": "Э-2",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2020,
+      "vin": "X96A31R32L0538923",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "М473КУ716",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-3",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2019,
+      "vin": "X96A21R22K0525640",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "М844ОМ716",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-4",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2017,
+      "vin": "XTAFS045LH7814689",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "У207ВХ716",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-5",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK6792716",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О584ВК116",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-6",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM9369001",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "С160АО116",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-7",
+      "make": "УАЗ",
+      "model": "3909",
+      "year": 2016,
+      "vin": "XTT390995G1344958",
+      "vehicle_class": "van",
+      "parc_model": "СГР «Буханка» (3909 / 2206 / 3303)",
+      "plate": "У987ХХ716",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-8",
+      "make": "УАЗ",
+      "model": "Профи",
+      "year": 2019,
+      "vin": "XTT236020K1563105",
+      "vehicle_class": "truck",
+      "parc_model": null,
+      "plate": "О175ОХ116",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-9",
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2020,
+      "vin": "XTA212140L0236028",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "С742ТН716",
+      "typical_yearly_km": 30000
+     },
+     {
+      "unit": "Э-10",
+      "make": "Ford",
+      "model": "Transit, фургон",
+      "year": 2018,
+      "vin": "Z6FXXXESGXJL02190",
+      "vehicle_class": "van",
+      "parc_model": "Transit",
+      "plate": "В763РЕ716",
+      "typical_yearly_km": 30000,
+      "story": "S1/S6: brake job at `west` that came back (T-6 and T-5 months), done by slot 27"
+     },
+     {
+      "unit": "Э-11",
+      "make": "Renault",
+      "model": "Duster",
+      "year": 2018,
+      "vin": "X7LHSRH8N86775162",
+      "vehicle_class": "suv",
+      "parc_model": "Duster",
+      "plate": "О565КЕ116",
+      "typical_yearly_km": 30000
+     }
+    ],
+    "from_story_files": []
+   },
+   {
+    "id": "A6",
+    "kind": "кейтеринговая компания",
+    "size": "medium, fading",
+    "state_at_t": "from eight visits a month to one over five months",
+    "name": "Вкусный выезд",
+    "legal_form": "ООО",
+    "home_shop": "main",
+    "address": "г. Ульяновск, ул. Минаева, 32",
+    "phone": "+7 (8422) 16-94-84",
+    "email_domain": "vkusny-vyezd.example",
+    "payment_terms_days": 30,
+    "contacts": [
+     {
+      "name": "Геннадий Павлович Лукьянов",
+      "role": "заведующий хозяйством, отвечал за транспорт (прежний контакт)",
+      "from_months_before_t": 52,
+      "to_months_before_t": 5,
+      "phone": "+7 907 429-58-87",
+      "email": "lukyanov@vkusny-vyezd.example"
+     },
+     {
+      "name": "Дарья Олеговна Вершинина",
+      "role": "менеджер по логистике (новый контакт)",
+      "from_months_before_t": 5,
+      "to_months_before_t": null,
+      "phone": "+7 907 747-46-46",
+      "email": "vershinina@vkusny-vyezd.example"
+     },
+     {
+      "name": "Марина Александровна Белоусова",
+      "role": "директор, шеф-повар; согласует оплату",
+      "from_months_before_t": 96,
+      "to_months_before_t": null,
+      "phone": "+7 907 929-49-79",
+      "email": "belousova@vkusny-vyezd.example"
+     }
+    ],
+    "fleet_count": 10,
+    "fleet": [
+     {
+      "unit": "1",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, изотермический фургон",
+      "year": 2018,
+      "vin": "X96A21R22J0901822",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Х176АХ73",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "2",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, изотермический фургон",
+      "year": 2020,
+      "vin": "X96A21R22L0469792",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Х800ЕТ173",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "3",
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, изотермический фургон",
+      "year": 2022,
+      "vin": "X96A21R22N0693525",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "А708ТН73",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "4",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ5896202",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "В407МА73",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "5",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK6237181",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Р792УС73",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "6",
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM1945096",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О419УА73",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "7",
+      "make": "Ford",
+      "model": "Transit, фургон",
+      "year": 2019,
+      "vin": "Z6FXXXESGXKS96504",
+      "vehicle_class": "van",
+      "parc_model": "Transit",
+      "plate": "К599МК73",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "8",
+      "make": "Citroën",
+      "model": "Jumper, фургон",
+      "year": 2017,
+      "vin": "VF7YCUMFC12494696",
+      "vehicle_class": "van",
+      "parc_model": null,
+      "plate": "С152ХЕ173",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "9",
+      "make": "Hyundai",
+      "model": "Solaris",
+      "year": 2019,
+      "vin": "Z94K241CBKR647976",
+      "vehicle_class": "car",
+      "parc_model": "Solaris",
+      "plate": "О664МО173",
+      "typical_yearly_km": 20000
+     },
+     {
+      "unit": "10",
+      "make": "LADA",
+      "model": "Vesta SW",
+      "year": 2020,
+      "vin": "XTAGFK110LY549517",
+      "vehicle_class": "car",
+      "parc_model": "Vesta",
+      "plate": "Н545КР73",
+      "typical_yearly_km": 20000
+     }
+    ],
+    "from_story_files": [
+     {
+      "source": "calls/ru/21-S1-a6-why-dearer.json",
+      "facts": [
+       "У A6 наряд на машину № 1 (Х176АХ73) на следующий день после звонка: ТО коммерческого автомобиля 9 710 и замена лампы ближнего света 800, по прайсу.",
+       "Предыдущее ТО этой машины было примерно за три месяца до звонка, по старому нормо-часу: 9 500."
+      ]
+     },
+     {
+      "source": "calls/ru/22-S1-a6-quote-promised.json",
+      "facts": [
+       "Смета для «Вкусного выезда» на две машины (№ 2: передние колодки и диски, 16 276; № 5: ТО) отправлена через два дня после звонка. Звонка клиенту в течение 24 часов не было."
+      ]
+     },
+     {
+      "source": "conversations/ru/04-s1-web-fleet-quote-waited.json",
+      "facts": [
+       "Смета — на машины № 7 (Ford Transit: передние диски и колодки, 16 276 по прайсу) и № 8 (Citroën Jumper: аккумулятор, 11 274 по прайсу); нужна к согласованию у директора в пятницу недели T-4.",
+       "ERP: смету из этого чата предлагается считать одной из пяти «медленных» смет A6 (ledger s1.a6), просрочена; заказа не было.",
+       "Файл Smeta_Vkusny_vyezd_Transit_Jumper.pdf (пул 'estimate-pdf').",
+       "Запрос пришёл во вторник в 20:41, после закрытия: так день карточки сохранён, а первая реплика человека приходится на смену слотов 5 и 7.",
+       "Смета звонка 22 (неделя T-9) была на машины № 2 (передние колодки и диски, 16 276) и № 5 (ТО); эта, на № 7 и № 8, — другая: обе входят в пять «медленных» смет A6."
+      ]
+     }
+    ]
+   }
+  ],
+  "small_business_customers": [
+   {
+    "name": "ИП Сафиуллин Р. Н.",
+    "kind": "доставка питьевой воды",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2019,
+      "vin": "X96A31R32K0042033",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "С929УТ173"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ5762044",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О585РН173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Кузьмичёв А. В.",
+    "kind": "натяжные потолки",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK0889974",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "У768ТР173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Абрамова Е. С.",
+    "kind": "цветочный салон с доставкой",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2020,
+      "vin": "XTAFS045LL9753566",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "М502ТУ73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Юнусов Ф. Р.",
+    "kind": "грузоперевозки по городу",
+    "town": "Ульяновск",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Бизнес 3302, бортовая",
+      "year": 2014,
+      "vin": "X96330200E0272477",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель (3302 / 2705), включая «Бизнес»",
+      "plate": "Е578СК73"
+     },
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2018,
+      "vin": "X96A21R22J0142319",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Е591УВ173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Трофимов Д. А.",
+    "kind": "установка окон и дверей",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2017,
+      "vin": "X96A21R22H0126570",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Т430РХ73"
+     },
+     {
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2019,
+      "vin": "XTA219010K0664524",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "О318АВ73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Мясникова О. П.",
+    "kind": "пекарня",
+    "town": "Ульяновск",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2017,
+      "vin": "XTAFS045LH3953151",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Р949АУ173"
+     },
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2021,
+      "vin": "X96A31R32M0823295",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Т532РК73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Назмутдинов И. И.",
+    "kind": "ремонт бытовой техники на дому",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2018,
+      "vin": "XTA219010J0883384",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "К847ЕЕ73"
+     },
+     {
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2021,
+      "vin": "XTA219010M0205382",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "М201КС173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Чекалин С. В.",
+    "kind": "такси, три машины",
+    "town": "Ульяновск",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "Hyundai",
+      "model": "Solaris",
+      "year": 2018,
+      "vin": "Z94K241CBJR648462",
+      "vehicle_class": "car",
+      "parc_model": "Solaris",
+      "plate": "Р630ВА173"
+     },
+     {
+      "make": "Kia",
+      "model": "Rio",
+      "year": 2019,
+      "vin": "Z94C241BBKR026328",
+      "vehicle_class": "car",
+      "parc_model": "Rio",
+      "plate": "Х781МО173"
+     },
+     {
+      "make": "Volkswagen",
+      "model": "Polo, седан",
+      "year": 2019,
+      "vin": "XW8ZZZ61ZKG642273",
+      "vehicle_class": "car",
+      "parc_model": "Polo седан",
+      "plate": "Х969РО173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Кириллов В. Н.",
+    "kind": "доставка стройматериалов",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2019,
+      "vin": "X96A21R22K0451518",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "В528ЕЕ173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Бикбаева Г. Ш.",
+    "kind": "швейный цех",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2018,
+      "vin": "XTAKS045LJ8661088",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "Х156УУ173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Ерофеев М. Ю.",
+    "kind": "сборка и доставка мебели",
+    "town": "Ульяновск",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2018,
+      "vin": "X96A31R32J0059296",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "А687ОЕ173"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM0371688",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "У282НР73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Хайруллин Д. Р.",
+    "kind": "вывоз мусора, услуги грузчиков",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Бизнес 3302, бортовая",
+      "year": 2015,
+      "vin": "X96330200F0125632",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель (3302 / 2705), включая «Бизнес»",
+      "plate": "Р490КО73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Соловьёва Т. Г.",
+    "kind": "кондитерская",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK0864907",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "А769ЕО73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Петрухин Н. С.",
+    "kind": "пасека, фермерские продукты",
+    "town": "Ульяновская область, Чердаклинский район",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2018,
+      "vin": "XTA212140J0344057",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "В622АУ173"
+     },
+     {
+      "make": "УАЗ",
+      "model": "3909",
+      "year": 2015,
+      "vin": "XTT390995F1367506",
+      "vehicle_class": "van",
+      "parc_model": "СГР «Буханка» (3909 / 2206 / 3303)",
+      "plate": "У288УВ173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Гайсин Р. Ф.",
+    "kind": "ремонт квартир",
+    "town": "Ульяновск",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2017,
+      "vin": "XTAKS045LH1405308",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "О812ТМ73"
+     },
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2020,
+      "vin": "X96A21R22L0875578",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "С715ОС173"
+     }
+    ]
+   },
+   {
+    "name": "ООО «ВентКлимат-Симбирск»",
+    "kind": "вентиляция и кондиционеры",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ3930145",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Р754ОН173"
+     },
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2020,
+      "vin": "X96A31R32L0943246",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "М931КЕ73"
+     }
+    ]
+   },
+   {
+    "name": "ООО «Пожтехконтроль 73»",
+    "kind": "монтаж и обслуживание пожарной сигнализации",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2019,
+      "vin": "XTA212140K0989508",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "К478РК173"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2020,
+      "vin": "XTAFS045LL9767865",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О616КМ73"
+     }
+    ]
+   },
+   {
+    "name": "ООО «ГеоСимбирск»",
+    "kind": "кадастровые и геодезические работы",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "УАЗ",
+      "model": "Патриот",
+      "year": 2018,
+      "vin": "XTT316300J1910648",
+      "vehicle_class": "truck",
+      "parc_model": "Patriot",
+      "plate": "Т820РЕ173"
+     },
+     {
+      "make": "LADA",
+      "model": "Niva Legend",
+      "year": 2021,
+      "vin": "XTA212140M0335189",
+      "vehicle_class": "suv",
+      "parc_model": "Niva Legend (2121 / 21213 / 21214)",
+      "plate": "У174МС173"
+     }
+    ]
+   },
+   {
+    "name": "ООО «Кофе-вендинг 73»",
+    "kind": "кофейные автоматы",
+    "town": "Ульяновск",
+    "home_shop": "east",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK1178689",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Х790РВ73"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM6839438",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "М252ЕС73"
+     }
+    ]
+   },
+   {
+    "name": "ООО «Дезцентр Волга»",
+    "kind": "дезинфекция и дератизация",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2020,
+      "vin": "XTA219010L0062586",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "В466КР73"
+     }
+    ]
+   },
+   {
+    "name": "ИП Маркелов А. А.",
+    "kind": "монтаж видеонаблюдения",
+    "town": "Ульяновск",
+    "home_shop": "main",
+    "vehicles": [
+     {
+      "make": "Renault",
+      "model": "Logan",
+      "year": 2016,
+      "vin": "X7L4SRAV413406188",
+      "vehicle_class": "car",
+      "parc_model": "Logan",
+      "plate": "Т986СУ173"
+     }
+    ]
+   },
+   {
+    "name": "ИП Гарифуллин А. М.",
+    "kind": "доставка обедов в офисы",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Kia",
+      "model": "Rio",
+      "year": 2018,
+      "vin": "Z94C241BBJR862935",
+      "vehicle_class": "car",
+      "parc_model": "Rio",
+      "plate": "С826ВС16"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2020,
+      "vin": "XTAFS045LL1537776",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "М722ЕА116"
+     }
+    ]
+   },
+   {
+    "name": "ИП Шайдуллина Л. Р.",
+    "kind": "кондитерская",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK5328435",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О325АС116"
+     }
+    ]
+   },
+   {
+    "name": "ИП Мухаметшин Р. Р.",
+    "kind": "грузоперевозки",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2019,
+      "vin": "X96A31R32K0994775",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Х287ОТ716"
+     },
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2017,
+      "vin": "X96A21R22H0395555",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "М873ТХ716"
+     }
+    ]
+   },
+   {
+    "name": "ИП Валиуллин Т. И.",
+    "kind": "монтаж кондиционеров",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2018,
+      "vin": "XTAFS045LJ5779762",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "Е184КН716"
+     }
+    ]
+   },
+   {
+    "name": "ИП Садыков Б. Н.",
+    "kind": "такси, три машины",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "Hyundai",
+      "model": "Solaris",
+      "year": 2019,
+      "vin": "Z94K241CBKR296795",
+      "vehicle_class": "car",
+      "parc_model": "Solaris",
+      "plate": "М974КС716"
+     },
+     {
+      "make": "Volkswagen",
+      "model": "Polo, седан",
+      "year": 2018,
+      "vin": "XW8ZZZ61ZJG195229",
+      "vehicle_class": "car",
+      "parc_model": "Polo седан",
+      "plate": "Н952ЕХ716"
+     },
+     {
+      "make": "Kia",
+      "model": "Rio",
+      "year": 2020,
+      "vin": "Z94C241BBLR273049",
+      "vehicle_class": "car",
+      "parc_model": "Rio",
+      "plate": "Н832ЕХ116"
+     }
+    ]
+   },
+   {
+    "name": "ИП Овчинников К. Е.",
+    "kind": "натяжные потолки",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2019,
+      "vin": "XTAKS045LK1873570",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "М910КА716"
+     }
+    ]
+   },
+   {
+    "name": "ООО «Дастархан-Доставка»",
+    "kind": "доставка готовой еды",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2019,
+      "vin": "XTAFS045LK4365241",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "А936РР16"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2021,
+      "vin": "XTAFS045LM5644640",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "О601КК116"
+     },
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, цельнометаллический фургон",
+      "year": 2020,
+      "vin": "X96A31R32L0386326",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Н588СО716"
+     }
+    ]
+   },
+   {
+    "name": "ООО «Чистая Казанка»",
+    "kind": "клининговая компания",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "LADA",
+      "model": "Granta, седан",
+      "year": 2019,
+      "vin": "XTA219010K0809384",
+      "vehicle_class": "car",
+      "parc_model": "Granta",
+      "plate": "Е900НТ716"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, универсал",
+      "year": 2020,
+      "vin": "XTAKS045LL2761777",
+      "vehicle_class": "car",
+      "parc_model": "Largus универсал",
+      "plate": "Т583ЕС716"
+     }
+    ]
+   },
+   {
+    "name": "ООО «КазВентМонтаж»",
+    "kind": "монтаж вентиляции",
+    "town": "Казань",
+    "home_shop": "west",
+    "vehicles": [
+     {
+      "make": "ГАЗ",
+      "model": "ГАЗель Next, бортовая",
+      "year": 2018,
+      "vin": "X96A21R22J0140210",
+      "vehicle_class": "van",
+      "parc_model": "ГАЗель Next",
+      "plate": "Т816ТР116"
+     },
+     {
+      "make": "LADA",
+      "model": "Largus, фургон",
+      "year": 2020,
+      "vin": "XTAFS045LL5876864",
+      "vehicle_class": "van",
+      "parc_model": "Largus фургон",
+      "plate": "У736ЕН716"
+     }
+    ]
+   }
+  ]
+ }
+}

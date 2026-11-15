@@ -1,0 +1,313 @@
+{
+ "sources": [
+  {
+   "name": "erp",
+   "kind": "postgres",
+   "system": null,
+   "include": [
+    "shop.*"
+   ],
+   "access": {
+    "junior": {
+     "schemas": [
+      "shop"
+     ],
+     "tables": [
+      {
+       "schema": "shop",
+       "table": "employee",
+       "denied_columns": [
+        "pay_type"
+       ]
+      },
+      {
+       "schema": "shop",
+       "table": "cash_drawer_close",
+       "denied_columns": [
+        "float_amount",
+        "expected_cash",
+        "counted_cash",
+        "difference",
+        "note"
+       ]
+      }
+     ]
+    },
+    "middle": {
+     "tables": [
+      {
+       "schema": "shop",
+       "table": "employee",
+       "denied_columns": []
+      },
+      {
+       "schema": "shop",
+       "table": "cash_drawer_close",
+       "denied_columns": []
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "core",
+   "kind": "postgres",
+   "system": "traciora",
+   "applied_defaults": [
+    "phone_calls",
+    "call_log",
+    "phone_day_reports"
+   ],
+   "access": {
+    "junior": {
+     "tables": [
+      {
+       "schema": "interactions",
+       "table": "recording_job"
+      },
+      {
+       "schema": "core",
+       "table": "location"
+      },
+      {
+       "schema": "core",
+       "table": "location_alias"
+      },
+      {
+       "schema": "core",
+       "table": "location_hours_exception"
+      },
+      {
+       "schema": "core",
+       "table": "position"
+      },
+      {
+       "schema": "identity",
+       "table": "person",
+       "denied_columns": [
+        "name_tokens"
+       ]
+      },
+      {
+       "schema": "identity",
+       "table": "person_location"
+      }
+     ],
+     "views": [
+      "interactions.phone_call",
+      "interactions.phone_call_participant",
+      "interactions.phone_call_transcript",
+      "interactions.phone_call_transcript_segment",
+      "interactions.phone_call_analysis",
+      "interactions.phone_call_leg",
+      "interactions.phone_call_missed"
+     ]
+    },
+    "middle": {
+     "tables": [
+      {
+       "schema": "workforce",
+       "table": "shift",
+       "denied_columns": [
+        "tips_declared_enc",
+        "warning_override_comment_enc"
+       ]
+      },
+      {
+       "schema": "workforce",
+       "table": "punch",
+       "denied_columns": [
+        "coordinates_enc",
+        "note_enc"
+       ]
+      },
+      {
+       "schema": "workforce",
+       "table": "shift_template"
+      }
+     ]
+    },
+    "senior": {
+     "tables": [
+      {
+       "schema": "workforce",
+       "table": "shift",
+       "denied_columns": [
+        "tips_declared_enc"
+       ]
+      },
+      {
+       "schema": "workforce",
+       "table": "punch",
+       "denied_columns": [
+        "coordinates_enc"
+       ]
+      },
+      {
+       "schema": "workforce",
+       "table": "shift_change_request"
+      },
+      {
+       "schema": "workforce",
+       "table": "availability"
+      },
+      {
+       "schema": "workforce",
+       "table": "coverage_requirement"
+      },
+      {
+       "schema": "workforce",
+       "table": "roster_publish"
+      },
+      {
+       "schema": "workforce",
+       "table": "shift_schedule"
+      },
+      {
+       "schema": "platform",
+       "table": "event"
+      },
+      {
+       "schema": "work",
+       "table": "work_item"
+      },
+      {
+       "schema": "work",
+       "table": "work_participant"
+      },
+      {
+       "schema": "work",
+       "table": "work_state"
+      },
+      {
+       "schema": "platform",
+       "table": "activity"
+      }
+     ],
+     "views": [
+      "interactions.phone_call_day_report"
+     ]
+    },
+    "admin": {
+     "schemas": [
+      "core",
+      "identity",
+      "interactions",
+      "workforce",
+      "work"
+     ],
+     "tables": [
+      {
+       "schema": "platform",
+       "table": "event_type"
+      },
+      {
+       "schema": "platform",
+       "table": "event"
+      },
+      {
+       "schema": "platform",
+       "table": "activity"
+      },
+      {
+       "schema": "platform",
+       "table": "notification_type"
+      },
+      {
+       "schema": "platform",
+       "table": "notification_setting"
+      },
+      {
+       "schema": "platform",
+       "table": "notification_queue"
+      },
+      {
+       "schema": "platform",
+       "table": "config_version"
+      },
+      {
+       "schema": "platform",
+       "table": "alert"
+      },
+      {
+       "schema": "platform",
+       "table": "job_run"
+      },
+      {
+       "schema": "platform",
+       "table": "feedback_report"
+      },
+      {
+       "schema": "platform",
+       "table": "usage_event"
+      },
+      {
+       "schema": "platform",
+       "table": "push_subscription"
+      },
+      {
+       "schema": "platform",
+       "table": "metric_rollup"
+      },
+      {
+       "schema": "platform",
+       "table": "pii_access_log"
+      },
+      {
+       "schema": "platform",
+       "table": "utility_clock"
+      },
+      {
+       "schema": "platform",
+       "table": "saved_utility"
+      },
+      {
+       "schema": "platform",
+       "table": "notification_alert"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "chatwoot",
+   "kind": "postgres",
+   "system": "chatwoot",
+   "access": {
+    "junior": {
+     "tables": [
+      {
+       "schema": "public",
+       "table": "conversations"
+      },
+      {
+       "schema": "public",
+       "table": "messages"
+      },
+      {
+       "schema": "public",
+       "table": "inboxes"
+      },
+      {
+       "schema": "public",
+       "table": "users"
+      },
+      {
+       "schema": "public",
+       "table": "account_users"
+      }
+     ],
+     "views": [
+      "traciora.conversation_facts",
+      "traciora.message_facts",
+      "traciora.reply_episodes",
+      "traciora.resolutions"
+     ]
+    },
+    "admin": {
+     "everything": true
+    }
+   }
+  }
+ ]
+}

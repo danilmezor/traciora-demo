@@ -1,0 +1,614 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-34-shop-manager-first-name-terms",
+  "configuration": "ru",
+  "number": 34,
+  "story": "people",
+  "title": "The Kazan shop manager and a customer of many years: \"when you get time off, ring me\"",
+  "purpose": "People, slot 22, the second call. An old customer wants front pads. The shop manager says \"come, we will change them\", gives a round price, meets \"it used to be cheaper\" with \"everything is dear now\", asks when it suits him and leaves it at \"ring me\".",
+  "cast": {
+    "advisor": {
+      "slot": 22,
+      "name": "Ринат Фаридович Галиев",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Рашид",
+      "invented": true,
+      "first_time": false,
+      "note": "a customer of many years, the shop manager's age; they say \"ты\""
+    }
+  },
+  "call": {
+    "day": "the Monday of week T-2 (rule R6; call 34)",
+    "nominal_offset": "T-18d",
+    "nominal_date": "2026-10-26",
+    "local_start": "16:40",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "301",
+    "ring_s": 13,
+    "caller_phone": "+7 907 412-16-80",
+    "repeat_caller": false,
+    "talk_s": 61
+  },
+  "scenario": {
+    "who_calls": "Рашид, who has not been in for a while.",
+    "vehicle": "Toyota Camry, 2012",
+    "job": "front brake pads",
+    "wants": "the pads changed, and to know what it costs now",
+    "what_happens": "They exchange a few words. He asks for front pads; the shop manager says to come. Asked the price he says about four and a half with the pads. The customer says it used to be cheaper; the answer is that everything is dear now. Asked when to come, the shop manager asks when it suits him; the customer has to get time off work, and is told to ring when he has.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "front_brake_pads_rub": 4560,
+      "note": "catalogue.json front_brake_pads, class car, standard: 1.0 h x 1 900 + pads 2 660 = 4 560; he says \"about four and a half\".",
+      "prices": [
+        {
+          "job": "front_brake_pads",
+          "name": "Замена передних тормозных колодок",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 4560.0,
+          "labour_hour_rub": 1900,
+          "said": "четыре с половиной",
+          "said_rub": 4500
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, да."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.0,
+      "said": "Ринат, здравствуй. Рашид это."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 4.9,
+      "said": "О, Рашид, здорово. Давно не слышно тебя. Как сам?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 10.4,
+      "said": "Да потихоньку. Слушай, мне колодки на Камри поменять надо, передние."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 16.9,
+      "said": "Передние. Ну, приезжай, поменяем."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 20.0,
+      "said": "Сколько сейчас это у вас?"
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 23.9,
+      "said": "Четыре с половиной где-то, с колодками."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 27.9,
+      "said": "Четыре с половиной? Дороговато, Ринат. Было же дешевле."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 33.3,
+      "said": "Ну, сейчас всё дорого, сам знаешь. Запчасти, то-сё."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 38.2,
+      "said": "Это да... Ладно. А когда подъехать?"
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 41.8,
+      "said": "А когда тебе удобно?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 44.5,
+      "said": "Да мне, э-э, с работы отпроситься надо. Среди недели как-нибудь."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 48.9,
+      "said": "Ну.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 50.4,
+      "said": "Ну отпросишься — набери, я скажу, когда подъезжать."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 55.5,
+      "said": "Добро. Наберу."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 57.1,
+      "said": "Давай, Рашид. Не пропадай."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.63,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          3,
+          4,
+          9
+        ],
+        "said": [
+          "здорово",
+          "Слушай, ",
+          "то-сё"
+        ],
+        "stored": [
+          "здорова",
+          "",
+          "то сё"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4
+        ],
+        "said": [
+          "Камри"
+        ],
+        "stored": [
+          "Camry"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          5,
+          10,
+          14
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 1,
+        "lost": 0,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 4,
+        "dropped": 2
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 2,
+        "as_digits": 0,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 90,
+    "stored_words": 89,
+    "strict_word_difference": 0.1
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 105,
+    "duration_s": 61.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, да.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ринат, здравствуй. Рашид это.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "О, Рашид, здорова. Давно не слышно тебя. Как сам?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да потихоньку. Мне колодки на Camry поменять надо, передние.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Передние. Приезжай, поменяем.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сколько сейчас это у вас?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Четыре с половиной где-то, с колодками.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Четыре с половиной? Дороговато, Ринат. Было же дешевле.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну, сейчас всё дорого, сам знаешь. Запчасти, то сё.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Это да. Ладно. А когда подъехать?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А когда тебе удобно?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да мне, э-э, с работы отпроситься надо. Среди недели как-нибудь.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Отпросишься, набери, я скажу, когда подъезжать.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добро. Наберу.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давай, Рашид. Не пропадай.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, да.",
+        "level": 1,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Передние. Приезжай, поменяем.",
+        "level": 1,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Четыре с половиной где-то, с колодками.",
+        "level": 1,
+        "segment": 6
+      },
+      {
+        "key": "offered_time",
+        "quote": "А когда тебе удобно?",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Отпросишься, набери, я скажу, когда подъезжать.",
+        "level": 1,
+        "segment": 13
+      },
+      {
+        "key": "objection",
+        "quote": "Ну, сейчас всё дорого, сам знаешь.",
+        "level": 1,
+        "segment": 8
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер называет его по имени."
+      },
+      {
+        "key": "recap",
+        "why": "Договорённости нет: клиент позвонит, когда отпросится с работы."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "Давно не слышно тебя. Как сам?",
+      "why": "Узнал по голосу и по имени, спросил, как дела. Для давнего клиента это и есть причина звонить сюда.",
+      "segment": 2
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "А когда тебе удобно?",
+      "say": "Рашид, давай завтра к девяти, к открытию: колодки это сорок минут. Или послезавтра в десять. Что записать?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 50.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 6
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 13
+        },
+        {
+          "key": "objection",
+          "level": 1,
+          "segment": 8
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted",
+        "price_objection"
+      ],
+      "score": 50.0,
+      "applicable": 6,
+      "asr_quality": "ok",
+      "strength_segment": 2,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, да",
+        "need_discovery": "Передние. Приезжай, поменяем",
+        "price_with_next_step": "Четыре с половиной где-то, с колодками",
+        "offered_time": "А когда тебе удобно?",
+        "asked_for_booking": "Отпросишься, набери, я скажу, когда подъезжать",
+        "objection": "Ну, сейчас всё дорого, сам знаешь"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер называет его по имени.",
+        "recap": "Договорённости нет: клиент позвонит, когда отпросится с работы."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Давно не слышно тебя. Как сам?",
+        "why": "Узнал по голосу и по имени, спросил, как дела. Для давнего клиента это и есть причина звонить сюда."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "А когда тебе удобно?",
+        "say": "Рашид, давай завтра к девяти, к открытию: колодки это сорок минут. Или послезавтра в десять. Что записать?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "na",
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": 1
+    },
+    "score": 50.0
+  },
+  "why": {
+    "greeting": "1: компания без имени.",
+    "name_and_number": "Не применяется: клиента знают.",
+    "need_discovery": "1: машина и работа со слов клиента; он ни о чём не спросил.",
+    "price_with_next_step": "1: круглая сумма, без слова о том, от чего она зависит.",
+    "offered_time": "1: спросил, когда удобно; своего времени не назвал.",
+    "asked_for_booking": "1: шаг без даты: «отпросишься — набери».",
+    "recap": "Не применяется.",
+    "objection": "1: на «было же дешевле» ответил «сейчас всё дорого, сам знаешь».",
+    "score": "(1·1 + 2·1 + 2·1 + 3·1 + 3·1 + 2·1) / 2 = 6.5 из 13 весовых баллов = 50.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Клиент казанского сервиса Рашид, Toyota Camry 2012, телефон +7 907 412-16-80. Позвонил ли он снова, история не говорит."
+  ]
+}

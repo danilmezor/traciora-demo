@@ -1,0 +1,115 @@
+{
+ "_what": "the nine feedback reports from staff",
+ "reports": [
+  {
+   "id": "FB1",
+   "slot": 3,
+   "category": "praise",
+   "severity": "suggestion",
+   "status": "resolved",
+   "sent": "W-12.wed@o+3:10",
+   "status_set": "W-12.thu@o+2:00",
+   "screen": "home",
+   "summary": "I can see who corrected a clock-out and when without calling the shop. Payroll hours took me half the time this period. Thank you."
+  },
+  {
+   "id": "FB2",
+   "slot": 15,
+   "category": "notifications",
+   "severity": "annoying",
+   "status": "seen",
+   "sent": "W-7.wed@o+0:20",
+   "status_set": "W-7.thu@o+2:00",
+   "screen": "inbox",
+   "summary": "When the new week comes out my phone goes off five times, once for every day. One buzz with the whole week would do me fine!"
+  },
+  {
+   "id": "FB3",
+   "slot": 14,
+   "category": "bug",
+   "severity": "blocks_work",
+   "status": "resolved",
+   "sent": "W-2.wed@o+0:12",
+   "status_set": "W-2.fri@o+3:00",
+   "screen": "home",
+   "summary": "it wont let me fix yesterdays clock out. the question was there this morning then it was gone after i clocked in"
+  },
+  {
+   "id": "FB4",
+   "slot": 5,
+   "category": "slow",
+   "severity": "annoying",
+   "status": "resolved",
+   "sent": "W-15.thu>=p5@o+4:30",
+   "status_set": "W-13.mon@o+2:00",
+   "screen": "conversations",
+   "summary": "Opening a chat with photos in it takes forever on the counter computer. Customer is standing there and I'm watching it spin."
+  },
+  {
+   "id": "FB5",
+   "slot": 6,
+   "category": "wrong_answer",
+   "severity": "annoying",
+   "status": "seen",
+   "sent": "W-6.tue>=p6@o+2:40",
+   "status_set": "W-5.mon@o+2:00",
+   "screen": "ask",
+   "summary": "Asked what front pads and rotors cost and it gave me {ledger:s12.brake_price.stale} from the old brake page. The price list says {ledger:s12.brake_price.now}. It should know which page is the price list."
+  },
+  {
+   "id": "FB6",
+   "slot": 22,
+   "category": "confusing",
+   "severity": "annoying",
+   "status": "wont_fix",
+   "sent": "W-10.sun@20:55",
+   "status_set": "W-9.wed@o+2:00",
+   "screen": "planner",
+   "summary": "Planner says 3 unpublished and I can't tell which 3. Let me print the week like I used to."
+  },
+  {
+   "id": "FB7",
+   "slot": 16,
+   "category": "missing_feature",
+   "severity": "suggestion",
+   "status": "open",
+   "sent": "W-4.mon>=p16@o+1:30",
+   "status_set": null,
+   "screen": "calendar",
+   "summary": "I would like to put the customer on a calendar entry. The Millsaps vans come every Monday at opening and all I can do is type their name in the title."
+  },
+  {
+   "id": "FB8",
+   "slot": 24,
+   "category": "notifications",
+   "severity": "annoying",
+   "status": "open",
+   "sent": "W-1.tue>=p24@o+5:00",
+   "status_set": null,
+   "screen": "conversations",
+   "summary": "A new chat alerts all of us at once, and twice this week two of us answered the same customer. Could it go to whoever is on the desk first?"
+  },
+  {
+   "id": "FB9",
+   "slot": 4,
+   "category": "missing_feature",
+   "severity": "annoying",
+   "status": "open",
+   "sent": "east-2@c-1:00",
+   "status_set": null,
+   "screen": "planner",
+   "summary": "A no-show gets flagged and I can't find where. I learned Austin was out from the counter at 8:15, not from the app. Put it in my Inbox."
+  }
+ ],
+ "notes": {
+  "s10": "FB1, FB2 and FB3 are card S10's three: the Wednesdays of weeks T-12, T-7 and T-2",
+  "status_by": "slot 2, as the tenant's admin (operations.set_feedback_status); the report itself is written as its reporter",
+  "device": {
+   "FB2": "phone",
+   "FB3": "phone",
+   "FB6": "phone",
+   "FB9": "phone",
+   "others": "desktop"
+  }
+ }
+}

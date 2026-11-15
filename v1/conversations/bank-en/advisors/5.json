@@ -1,0 +1,241 @@
+{
+  "format": "bank-en/advisor/1",
+  "slot": 5,
+  "name": "Travis Burnette",
+  "shop": "East Main",
+  "voice": "Friendly and plain, explains with a comparison, always the out-the-door number and the pick-up time. Types slowly, leaves the typos, lower case, and would rather you called: 'call me if its easier'.",
+  "sheet": {
+    "draft_outcomes": {
+      "sent_as_is": 50,
+      "sent_edited": 10,
+      "discarded": 40
+    },
+    "first_reply_min": 14,
+    "ask_chance": 75,
+    "label_share": 50,
+    "resolves": 50
+  },
+  "signoff": null,
+  "pickup": [
+    "{first_name} this is Travis at east main. got your message",
+    "hey {first_name}, Travis here at Brennan east main. saw your note from last night",
+    "{first_name} its Travis at the main st shop. read what you wrote",
+    "Travis at east main here {first_name}. sorry for the wait, been a morning"
+  ],
+  "replies": {
+    "price": {
+      "quote": [
+        "{job} on the {model} runs {job_price} plus tax, about {job_total} out the door. call me if its easier {shop_phone}",
+        "for yours its {job_price}, {job_total} out the door with tax and shop supplies. ready same day if you get it here early",
+        "{job_price} before tax on the {model}. out the door your looking at {job_total}",
+        "its {job_price}. think of it like tires on a bike, the cheap ones go flat quicker. out the door {job_total}"
+      ],
+      "after": [
+        "thats parts and labor both. tax and shop supplies is what takes it to {job_total}",
+        "about {duration}. you can wait on it or we can run you home on the shuttle",
+        "honest answer, I cant tell till its on the lift. bring it by and ill call you before we touch anything",
+        "{job_total} is the whole thing, nothing hiding in there"
+      ]
+    },
+    "booking": {
+      "offer": [
+        "bring it on by {day_a}, I can get it on the lift at {time_a}",
+        "I got {day_a} at {time_a} or {day_b} at {time_b}. which is better for you",
+        "can do {time_a} {day_a}. drop it then and youll have it back by {ready_time}",
+        "{day_a} {time_a} works on my end. call me if its easier {shop_phone}"
+      ],
+      "confirm": [
+        "ok your down for {day_agreed} at {time_agreed}. ask for me at the counter",
+        "got you {day_agreed} {time_agreed}. {job} on the {model}, should have it back to you by {ready_time}",
+        "{time_agreed} {day_agreed} it is. see you then {first_name}",
+        "your on the book {day_agreed} at {time_agreed}. if somethin comes up just text here"
+      ]
+    },
+    "hours": {
+      "answer": [
+        "were open {open_time} to {close_time} weekdays and saturday mornings here at main",
+        "yes we do that here, bring it by",
+        "we are at {shop_address}, right past the light. open till {close_time}",
+        "we work on just about anything with four wheels, just no body work"
+      ],
+      "after": [
+        "saturday its {sat_hours} at this shop only",
+        "no appointment for that, just pull in",
+        "if its after {close_time} use the key drop by the office door, envelope tells you what to write",
+        "bonny oaks might be closer for you but there closed saturdays out there"
+      ]
+    },
+    "symptom": {
+      "advise": [
+        "dont drive it far. brakes are like the soles on your shoes, once they wear through your on the metal. bring it by {day_a} at {time_a}",
+        "could be a couple things. bring it by and ill have {tech_first} look. inspection is {diag_price}",
+        "if that light is flashing park it. steady you can drive it in. diagnosis is {diag_price}",
+        "a cooling system is like a pressure cooker, it only works sealed up. dont top it off with water, bring it in {day_a}"
+      ],
+      "confirm": [
+        "ok see you {day_agreed} at {time_agreed}. ill have it looked at first thing",
+        "good. bring it by {time_agreed} and ill walk out to it with you",
+        "{tech_first} will look at it soon as it gets here",
+        "ok {time_agreed}. if it gets worse on the way pull over and call me"
+      ]
+    },
+    "status": {
+      "ready": [
+        "its ready. {job_total} out the door, were here till {close_time}",
+        "all done {first_name}. {job_total} with tax. come get it whenever",
+        "almost. there road testing it now. {job_total} out the door, ready at {ready_time}",
+        "{model} is done and parked out front. total is {job_total}"
+      ],
+      "not_yet": [
+        "not yet. {tech_first} is on it now, should be done by {ready_time}",
+        "still waitin on the part, supplier says {eta_day}. ill call you when its in",
+        "its on the lift now. give me till {ready_time} and ill text you",
+        "running behind today, sorry about that. {ready_time} is more like it"
+      ]
+    },
+    "found_work": {
+      "present": [
+        "{first_name} {tech_first} found {finding}. thats {finding_price}. its like a tire with the cords showing, I wouldnt wait on it. want me to do it",
+        "while it was up we found {finding}, {finding_price} more. rest of it looks good",
+        "found {finding} and {finding_b}. first one is {finding_price} and I would do it now, the other is {finding_b_price} and can wait",
+        "got a picture for you. {finding}, {finding_price}. your call"
+      ],
+      "confirm": [
+        "ok we'll do the {finding_item}. out the door {job_total}, ready at {ready_time}",
+        "got it. just the {finding_item} today",
+        "ok doing it now. ill text you when its done",
+        "you got it. {finding_item} it is, ready by {ready_time}"
+      ],
+      "declined": [
+        "ok holding off on the rest. ill put it on your paper so we dont forget",
+        "no problem we'll leave it. just dont wait too long on it",
+        "ok we wont touch it. its on your paper for next time",
+        "fair enough. ill leave it alone, call me if it gets worse"
+      ]
+    },
+    "moving": {
+      "moved": [
+        "no problem. I can do {day_a} at {time_a} instead",
+        "moved you. {day_a} {time_a} or {day_b} {time_b}, pick one",
+        "ok I took you off {appt_day}. let me know when",
+        "thats fine, things happen. how bout {day_a} at {time_a}"
+      ],
+      "cancelled": [
+        "ok cancelled. text me when your ready to bring it",
+        "got it, your off the book. no charge or nothin",
+        "no worries, just holler when you want back on",
+        "ok, cancelled {appt_day}. hope everything is ok"
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        "{first_name} sorry about that. bring it back and ill look at it myself, no charge",
+        "thats not right and Im sorry. can you bring it by {day_a} at {time_a}, ill have {tech_first} pull it in first thing",
+        "Im sorry, thats on us. call me if its easier {shop_phone}, I want to hear exactly what its doing",
+        "I hate that. bring it in when you can and we will make it right"
+      ],
+      "fix": [
+        "{tech_first} found it, a clip wasnt seated. fixed it and road tested, no charge",
+        "went through the bill, the extra is tax and shop supplies. same job nothing added",
+        "ok it should be good now. if it does it again I want to know",
+        "talked to {manager_first}, were gonna take care of it. come by when you can"
+      ],
+      "bill": [
+        "{heard_price} was before tax and shop supplies. same job nothing added",
+        "the difference is tax and shop supplies, I should of said that up front. sorry",
+        "went over your ticket, nothing extra on it. its the tax and the supplies line. call me if its easier {shop_phone}",
+        "your right I didnt say the out the door number. thats on me. {job_total} was the total with everything"
+      ]
+    },
+    "fleet": {
+      "list": [
+        "got it, {unit} and {unit_b} {day_said}. drop em first thing",
+        "ok {contact_first}, have {unit} here {day_a} at {time_a} and well get it right back out",
+        "{unit} and {unit_b} on the board for {day_said}. anything past the service I call you first",
+        "yes we can do {unit} today, have the driver bring it now"
+      ],
+      "paperwork": [
+        "ill have the office email it over today",
+        "{contact_first} I will get that invoice to you, give me till end of day",
+        "quote is coming. I got slammed this morning sorry",
+        "PO {po} is on it now"
+      ]
+    }
+  },
+  "moves": {
+    "ask": [
+      "which noise, front or back",
+      "is it doin it when you brake or all the time",
+      "what year is it",
+      "call me if its easier {shop_phone}, I can figure it out quicker on the phone"
+    ],
+    "decline_discount": [
+      "cant do a discount on that one, price is the price. but I wont sell you anything you dont need",
+      "wish I could. what I can do is hold off on the rest till payday",
+      "no coupons on repairs sorry. the menu stuff is already as low as we go",
+      "I hear you. its {job_price} here, same for everybody"
+    ],
+    "close": [
+      "see you then",
+      "ok thanks {first_name}",
+      "you bet",
+      "anytime. drive safe"
+    ],
+    "pass_on": [
+      "let me get {manager_first} to call you on that one",
+      "{colleague_first} can help you with that, Im out on the lot",
+      "ill have {colleague_first} text you the estimate, faster on here than me",
+      "hang on let me check with {tech_first}"
+    ],
+    "call_me": [
+      "call me, easier {shop_phone}",
+      "easier on the phone {shop_phone}",
+      "just call me {shop_phone}, I type slow",
+      "can you call me {shop_phone} ask for Travis"
+    ]
+  },
+  "edits": [
+    {
+      "draft_key": "status.dont_have",
+      "draft": "Hi {first_name}. I don't have the status of the {model} in front of me. I'll check with the shop and message you right back.",
+      "sent": "its on the lift now. give me till {ready_time} and ill text you",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "price.extras",
+      "draft": "Good question, {first_name}. That's the price of the job; shop supplies and sales tax are added on the bill, so the total will be a little higher.",
+      "sent": "{heard_price} was before tax and shop supplies. same job nothing added. call me if its easier {shop_phone}",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "booking.confirm_echo",
+      "draft": "Thank you, {first_name}. {day_agreed} at {time_agreed} works. See you then!",
+      "sent": "Thank you, {first_name}. {day_agreed} at {time_agreed} works. See you then!",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "generic.close",
+      "draft": "See you soon, {first_name}.",
+      "sent": "See you soon, {first_name}.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "booking.ask_day",
+      "draft": "Hi {first_name}! We'd be glad to take care of the {model}. Which day works best for you? I'll confirm a time.",
+      "sent": "we'd be glad to take care of the {model}. which day works for you, I got {day_a} open",
+      "outcome": "sent_edited"
+    },
+    {
+      "draft_key": "symptom.advise",
+      "draft": "Thanks for letting us know, {first_name}. I can't tell from here what it is, but we'd like to take a look. Which day works for you?",
+      "sent": "thanks for lettin me know {first_name}. dont drive it far, bring it by and we'll look",
+      "outcome": "sent_edited"
+    }
+  ],
+  "notes": [
+    "@{colleague_first} can u answer the lady in chat about the {model}, im slammed at the counter",
+    "@{tech_first} customer says its worse cold. try it first thing before it warms up",
+    "@{colleague_first} called him back, hes bringing it {day_agreed}",
+    "@{manager_first} comeback on the {model}, i told her no charge to look"
+  ]
+}

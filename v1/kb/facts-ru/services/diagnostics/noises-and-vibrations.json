@@ -1,0 +1,115 @@
+{
+ "path": "services/diagnostics/noises-and-vibrations.md",
+ "title": "Стуки и вибрации",
+ "title_en": "Noises and vibrations",
+ "exists_in": "both",
+ "english_sheet": "facts/services/diagnostics/noises-and-vibrations.json",
+ "first_revision_text": "ru/_history/services/diagnostics/noises-and-vibrations.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "How a noise complaint is taken and inspected.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 214,
+ "links_to": [
+  "services/brakes/brake-inspection.md",
+  "services/suspension/front-end-parts.md",
+  "services/tires/rotation-balance-and-flat-repair.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Диагностика ходовой части», a fixed 800 RUB; one order in eight carries it (catalogue share 0.129: the roads).",
+  "Customers say «посмотрите ходовую», «сделайте ходовую»."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Стуки и вибрации",
+   "columns": [
+    "Спросить",
+    "Потому что"
+   ],
+   "rows": [
+    {
+     "Спросить": "На кочках или на ровной дороге?",
+     "Потому что": "На кочках — стойки стабилизатора, сайлентблоки, амортизаторы. На ровной — подшипники, шины"
+    },
+    {
+     "Спросить": "В повороте или на прямой?",
+     "Потому что": "В повороте — ШРУС, ступичный подшипник, опора стойки"
+    },
+    {
+     "Спросить": "При торможении?",
+     "Потому что": "Тогда это диагностика тормозов"
+    },
+    {
+     "Спросить": "Сильнее со скоростью?",
+     "Потому что": "Гул, который растёт со скоростью, — подшипник или шина"
+    },
+    {
+     "Спросить": "Спереди или сзади, слева или справа?",
+     "Потому что": "Обычно клиент знает"
+    },
+    {
+     "Спросить": "Только на холодную?",
+     "Потому что": "На морозе скрипят сайлентблоки и ремни"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "suspension_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  800.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

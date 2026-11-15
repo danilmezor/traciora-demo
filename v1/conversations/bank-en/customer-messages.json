@@ -1,0 +1,2302 @@
+{
+ "format": "bank-en/customer-messages/1",
+ "about": "How customers of three Tennessee shops type into a website chat and into Telegram. Lower case where a thumb leaves it, apostrophes dropped, autocorrect left in (breaks for brakes, tired for tires), y'all and yall both. Every opening carries its voice and the channels it fits; a Telegram opening may name the advisor, a web opening never knows one.",
+ "voices": [
+  {
+   "key": "fragment",
+   "says": "lower-case fragments, no punctuation, one line",
+   "habits": [
+    "yall",
+    "u",
+    "rn",
+    "tmrw",
+    "pls",
+    "thx",
+    "no apostrophes",
+    "no question mark"
+   ]
+  },
+  {
+   "key": "run_on",
+   "says": "dictated or typed in one breath, run-on, no full stops, a voice-to-text word gone wrong",
+   "habits": [
+    "and then",
+    "like",
+    "so yeah",
+    "a homophone left in"
+   ]
+  },
+  {
+   "key": "polite",
+   "says": "polite and complete: a greeting, a full sentence, thank you",
+   "habits": [
+    "Hi",
+    "I was wondering",
+    "Thank you!"
+   ]
+  },
+  {
+   "key": "emoji",
+   "says": "short, an emoji doing the work of a sentence",
+   "habits": [
+    "🙏",
+    "😩",
+    "😬",
+    "👍",
+    "lol",
+    "!!"
+   ]
+  },
+  {
+   "key": "business",
+   "says": "a desk, a keyboard, full sentences, unit numbers, wants it itemized",
+   "habits": [
+    "Please advise",
+    "Good morning",
+    "parts and labor separate"
+   ]
+  },
+  {
+   "key": "elderly",
+   "says": "older and formal, signs the message, explains more than asked",
+   "habits": [
+    "Good afternoon.",
+    "my late husband",
+    "Thank you kindly",
+    "full name at the end"
+   ]
+  },
+  {
+   "key": "photo_first",
+   "says": "a photo first, two or three words after",
+   "habits": [
+    "is this bad",
+    "this",
+    "whats this"
+   ]
+  },
+  {
+   "key": "one_word",
+   "says": "one word or two, the rest is the reader's problem",
+   "habits": [
+    "price?",
+    "open?",
+    "ready?"
+   ]
+  }
+ ],
+ "jobs": [
+  {
+   "key": "oil_change",
+   "catalogue": "oil_service",
+   "staff_says": "full synthetic oil change",
+   "said": [
+    "an oil change",
+    "oil and filter",
+    "a synthetic oil change",
+    "oil changes"
+   ],
+   "symptom_said": [
+    "oil light came on",
+    "the maintenance light is on",
+    "sticker says im past due"
+   ],
+   "photo": [
+    "dash-maintenance-required",
+    "dash-oil-life-low"
+   ],
+   "price_kind": "menu",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Full synthetic oil and filter change",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the engine air filter is dirty",
+     "catalogue": "engine_air_filter",
+     "item": "engine air filter"
+    },
+    {
+     "text": "the wiper blades are streaking",
+     "catalogue": "wiper_blades",
+     "item": "wiper blades"
+    }
+   ],
+   "symptom_more": [
+    "its past due on the sticker",
+    "the light came on last week"
+   ]
+  },
+  {
+   "key": "brake_check",
+   "catalogue": "brake_inspection",
+   "staff_says": "brake inspection",
+   "said": [
+    "a brake check",
+    "a brake inspection",
+    "brakes",
+    "breaks"
+   ],
+   "symptom_said": [
+    "squeaking when i stop",
+    "brakes feel soft",
+    "a grinding when i brake"
+   ],
+   "photo": [
+    "dash-red-brake-lamp"
+   ],
+   "price_kind": "menu",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Brake inspection",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the front pads are down to {measure}",
+     "catalogue": "front_brake_pads",
+     "item": "front brake pads"
+    },
+    {
+     "text": "the rear pads are getting low",
+     "catalogue": "rear_brake_pads",
+     "item": "rear brake pads"
+    }
+   ],
+   "symptom_more": [
+    "only when i brake",
+    "its worse in the mornings"
+   ]
+  },
+  {
+   "key": "front_brakes",
+   "catalogue": "front_pads_rotors",
+   "staff_says": "front pads and rotors",
+   "said": [
+    "front brakes",
+    "brakes and rotors",
+    "pads and rotors",
+    "front breaks",
+    "new brakes on the front",
+    "brakes and rotars"
+   ],
+   "symptom_said": [
+    "grinding when i stop",
+    "metal on metal sound",
+    "steering wheel shakes when i brake"
+   ],
+   "photo": [
+    "rotor-grooved-through-wheel",
+    "wheel-brake-dust"
+   ],
+   "price_kind": "range",
+   "page": "customers/brake-noise",
+   "page_item": "front pads and discs",
+   "first_step": "brake_inspection",
+   "finding": [
+    {
+     "text": "the front pads are metal to metal and the rotors are scored",
+     "catalogue": "front_pads_rotors",
+     "item": "front pads and rotors"
+    },
+    {
+     "text": "the front rotors are warped",
+     "catalogue": "front_pads_rotors",
+     "item": "front pads and rotors"
+    }
+   ],
+   "symptom_more": [
+    "only when i brake",
+    "its louder coming down hills"
+   ]
+  },
+  {
+   "key": "rear_brakes",
+   "catalogue": "rear_brake_pads",
+   "staff_says": "rear brake pads",
+   "said": [
+    "back brakes",
+    "rear pads",
+    "brakes on the back",
+    "rear breaks"
+   ],
+   "symptom_said": [
+    "squeal from the back when i stop",
+    "scraping from the back"
+   ],
+   "photo": [
+    "wheel-brake-dust"
+   ],
+   "price_kind": "depends",
+   "page": "customers/brake-noise",
+   "page_item": "brake inspection",
+   "first_step": "brake_inspection",
+   "finding": [
+    {
+     "text": "the rear pads are at {measure}",
+     "catalogue": "rear_brake_pads",
+     "item": "rear brake pads"
+    },
+    {
+     "text": "the rear pads are worn unevenly, one caliper is sticking",
+     "catalogue": "brake_caliper",
+     "item": "rear caliper"
+    }
+   ],
+   "symptom_more": [
+    "sounds like its coming from the back",
+    "only when i stop"
+   ]
+  },
+  {
+   "key": "brake_fluid",
+   "catalogue": "brake_fluid_exchange",
+   "staff_says": "brake fluid flush",
+   "said": [
+    "a brake fluid flush",
+    "brake fluid changes",
+    "a brake flush"
+   ],
+   "symptom_said": [
+    "pedal feels spongy"
+   ],
+   "photo": [],
+   "price_kind": "list",
+   "page": "prices/price-list",
+   "page_item": "Brake fluid flush",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the brake fluid tested dark and wet",
+     "catalogue": "brake_fluid_exchange",
+     "item": "brake fluid flush"
+    }
+   ],
+   "symptom_more": [
+    "pedal goes down further than it used to"
+   ]
+  },
+  {
+   "key": "new_tires",
+   "catalogue": "new_tyres_fitted",
+   "staff_says": "four new tires mounted and balanced",
+   "said": [
+    "new tires",
+    "four tires",
+    "a set of tires",
+    "new tired",
+    "two front tires",
+    "tires"
+   ],
+   "symptom_said": [
+    "tires are bald",
+    "tread is gone on the edges"
+   ],
+   "photo": [
+    "tire-worn-edge",
+    "tire-sidewall-size"
+   ],
+   "price_kind": "range",
+   "page": "customers/tires",
+   "page_item": "Four tires for a typical sedan",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the front tires are at {measure} and worn on the inside edge",
+     "catalogue": "new_tyres_fitted",
+     "item": "new tires"
+    }
+   ],
+   "symptom_more": [
+    "the fronts are worse than the backs"
+   ]
+  },
+  {
+   "key": "flat",
+   "catalogue": "tyre_repair",
+   "staff_says": "flat repair",
+   "said": [
+    "a flat repair",
+    "a nail in my tire",
+    "flat tires",
+    "tire patching"
+   ],
+   "symptom_said": [
+    "tire keeps going low",
+    "theres a screw in my tire"
+   ],
+   "photo": [
+    "tire-nail-tread",
+    "tire-sidewall-bulge"
+   ],
+   "price_kind": "menu",
+   "page": "customers/tires",
+   "page_item": "patch-plug from the inside and rebalance",
+   "first_step": null,
+   "finding": [],
+   "symptom_more": [
+    "i put air in it this morning"
+   ]
+  },
+  {
+   "key": "alignment",
+   "catalogue": "wheel_alignment",
+   "staff_says": "four-wheel alignment",
+   "said": [
+    "an alignment",
+    "alignment",
+    "front end alignment",
+    "alinement",
+    "wheels aligned"
+   ],
+   "symptom_said": [
+    "pulls to the right",
+    "steering wheel is crooked",
+    "drifts on the interstate"
+   ],
+   "photo": [
+    "tire-worn-edge"
+   ],
+   "price_kind": "menu",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Four-wheel alignment",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the alignment is out and the front tires are wearing on the inside",
+     "catalogue": "wheel_alignment",
+     "item": "alignment"
+    }
+   ],
+   "symptom_more": [
+    "it pulls more on the interstate"
+   ]
+  },
+  {
+   "key": "balance",
+   "catalogue": "wheel_balance",
+   "staff_says": "balance on all four",
+   "said": [
+    "tire balancing",
+    "a wheel balance",
+    "balancing"
+   ],
+   "symptom_said": [
+    "shakes on the interstate",
+    "steering wheel vibrates at highway speed"
+   ],
+   "photo": [],
+   "price_kind": "menu",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Balance four wheels",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "a wheel weight is missing on the front left",
+     "catalogue": "wheel_balance",
+     "item": "wheel balance"
+    }
+   ],
+   "symptom_more": [
+    "only at highway speed",
+    "its fine around town"
+   ]
+  },
+  {
+   "key": "rotation",
+   "catalogue": "tyre_rotation",
+   "staff_says": "tire rotation",
+   "said": [
+    "a tire rotation",
+    "tire rotations",
+    "a rotation"
+   ],
+   "symptom_said": [],
+   "photo": [],
+   "price_kind": "menu",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Tire rotation",
+   "first_step": null,
+   "finding": [],
+   "symptom_more": []
+  },
+  {
+   "key": "tpms",
+   "catalogue": "tpms_sensor",
+   "staff_says": "tire pressure sensor",
+   "said": [
+    "a tire pressure sensor",
+    "a tpms sensor",
+    "tire sensors"
+   ],
+   "symptom_said": [
+    "tire pressure light stays on",
+    "the tire light wont go off",
+    "tire pressure light is on"
+   ],
+   "photo": [
+    "dash-tpms-lamp"
+   ],
+   "price_kind": "list",
+   "page": "customers/tires",
+   "page_item": "Replacing one sensor",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the sensor in the left rear wheel is dead",
+     "catalogue": "tpms_sensor",
+     "item": "tire pressure sensor"
+    }
+   ],
+   "symptom_more": [
+    "i aired them up and its still on"
+   ]
+  },
+  {
+   "key": "check_engine",
+   "catalogue": "check_engine_diag",
+   "staff_says": "check engine diagnosis",
+   "said": [
+    "check engine light diagnosis",
+    "a diagnostic",
+    "the check engine light",
+    "engine light diagnostics"
+   ],
+   "symptom_said": [
+    "check engine light is on",
+    "engine light came on",
+    "check engine like came on"
+   ],
+   "photo": [
+    "dash-check-engine-steady",
+    "dash-check-engine-flashing"
+   ],
+   "price_kind": "menu",
+   "page": "customers/check-engine-light",
+   "page_item": "Our diagnosis",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "an ignition coil has failed on one cylinder",
+     "catalogue": "ignition_coil",
+     "item": "ignition coil"
+    },
+    {
+     "text": "the upstream oxygen sensor has failed",
+     "catalogue": "oxygen_sensor",
+     "item": "oxygen sensor"
+    }
+   ],
+   "symptom_more": [
+    "its steady not blinking",
+    "it drives fine otherwise"
+   ]
+  },
+  {
+   "key": "battery",
+   "catalogue": "battery_replace",
+   "staff_says": "battery",
+   "said": [
+    "a battery",
+    "a new battery",
+    "battery testing",
+    "batteries"
+   ],
+   "symptom_said": [
+    "wont start just clicks",
+    "slow to crank",
+    "had to jump it this morning"
+   ],
+   "photo": [
+    "dash-battery-lamp",
+    "battery-corrosion"
+   ],
+   "price_kind": "range",
+   "page": "customers/battery",
+   "page_item": "Replacement",
+   "first_step": "battery_test",
+   "finding": [
+    {
+     "text": "the battery tested bad, it's original",
+     "catalogue": "battery_replace",
+     "item": "new battery"
+    },
+    {
+     "text": "the battery terminals are corroded",
+     "catalogue": "battery_replace",
+     "item": "battery"
+    }
+   ],
+   "symptom_more": [
+    "it started after a jump",
+    "worse when its cold out"
+   ]
+  },
+  {
+   "key": "alternator",
+   "catalogue": "alternator",
+   "staff_says": "alternator",
+   "said": [
+    "an alternator",
+    "a new alternator",
+    "alternators"
+   ],
+   "symptom_said": [
+    "battery light on while driving",
+    "lights dim at idle"
+   ],
+   "photo": [
+    "dash-battery-lamp"
+   ],
+   "price_kind": "depends",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Battery, starting and charging test",
+   "first_step": "battery_test",
+   "finding": [
+    {
+     "text": "the alternator is putting out low voltage",
+     "catalogue": "alternator",
+     "item": "alternator"
+    }
+   ],
+   "symptom_more": [
+    "the lights flicker at stoplights"
+   ]
+  },
+  {
+   "key": "ac",
+   "catalogue": "ac_performance_check",
+   "staff_says": "A/C performance check",
+   "said": [
+    "ac repair",
+    "freon",
+    "an ac recharge",
+    "a/c work"
+   ],
+   "symptom_said": [
+    "ac blowing hot",
+    "ac not cold",
+    "air is warm"
+   ],
+   "photo": [
+    "ac-vent-thermometer"
+   ],
+   "price_kind": "menu",
+   "page": "customers/air-conditioning",
+   "page_item": "A/C performance check",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the A/C is low and has a leak at the condenser",
+     "catalogue": "ac_condenser",
+     "item": "A/C condenser"
+    },
+    {
+     "text": "the cabin filter is clogged",
+     "catalogue": "cabin_air_filter",
+     "item": "cabin air filter"
+    }
+   ],
+   "symptom_more": [
+    "its worse when im sitting still",
+    "it was fine last summer"
+   ]
+  },
+  {
+   "key": "suspension_check",
+   "catalogue": "suspension_diag",
+   "staff_says": "steering and suspension inspection",
+   "said": [
+    "front end work",
+    "a suspension check",
+    "a front end inspection"
+   ],
+   "symptom_said": [
+    "clunk over bumps",
+    "knocking when i turn",
+    "rattle from the front end"
+   ],
+   "photo": [],
+   "price_kind": "menu",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Steering and suspension inspection",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "both front sway bar links are worn",
+     "catalogue": "sway_bar_links",
+     "item": "sway bar links"
+    },
+    {
+     "text": "the outer tie rod on the driver side has play",
+     "catalogue": "outer_tie_rod",
+     "item": "tie rod end"
+    }
+   ],
+   "symptom_more": [
+    "mostly over bumps",
+    "its worse on rough roads"
+   ]
+  },
+  {
+   "key": "struts",
+   "catalogue": "front_struts_pair",
+   "staff_says": "front struts",
+   "said": [
+    "struts",
+    "shocks",
+    "new shocks",
+    "front struts"
+   ],
+   "symptom_said": [
+    "bounces like a boat",
+    "nose dives when i stop"
+   ],
+   "photo": [],
+   "price_kind": "depends",
+   "page": "customers/prices-for-common-services",
+   "page_item": "Steering and suspension inspection",
+   "first_step": "suspension_diag",
+   "finding": [
+    {
+     "text": "both front struts are leaking",
+     "catalogue": "front_struts_pair",
+     "item": "front struts"
+    }
+   ],
+   "symptom_more": [
+    "it rides rough now"
+   ]
+  },
+  {
+   "key": "coolant_leak",
+   "catalogue": "cooling_pressure_test",
+   "staff_says": "cooling system pressure test",
+   "said": [
+    "a coolant leak",
+    "an antifreeze leak",
+    "radiator leaks"
+   ],
+   "symptom_said": [
+    "leaking green stuff",
+    "smells sweet when the heat is on",
+    "temp gauge going up"
+   ],
+   "photo": [
+    "puddle-under-car",
+    "dash-temp-gauge-high",
+    "steam-from-hood"
+   ],
+   "price_kind": "list",
+   "page": "prices/price-list",
+   "page_item": "Cooling system pressure test",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the water pump is seeping",
+     "catalogue": "water_pump",
+     "item": "water pump"
+    },
+    {
+     "text": "the radiator is leaking at the seam",
+     "catalogue": "radiator",
+     "item": "radiator"
+    }
+   ],
+   "symptom_more": [
+    "gauge is normal so far",
+    "theres a sweet smell"
+   ]
+  },
+  {
+   "key": "spark_plugs",
+   "catalogue": "spark_plugs",
+   "staff_says": "spark plugs",
+   "said": [
+    "a tune up",
+    "a tune-up",
+    "spark plugs",
+    "the plugs changed"
+   ],
+   "symptom_said": [
+    "runs rough at idle",
+    "kind of sputters"
+   ],
+   "photo": [],
+   "price_kind": "list",
+   "page": "prices/price-list",
+   "page_item": "Replace spark plugs",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the spark plugs are the originals and worn",
+     "catalogue": "spark_plugs",
+     "item": "spark plugs"
+    }
+   ],
+   "symptom_more": [
+    "the light flashes sometimes"
+   ]
+  },
+  {
+   "key": "scheduled",
+   "catalogue": "scheduled_maintenance",
+   "staff_says": "scheduled maintenance service",
+   "said": [
+    "the {mileage_said} service",
+    "{mileage_said} mile service",
+    "the big service",
+    "the factory maintenance"
+   ],
+   "symptom_said": [],
+   "photo": [
+    "dash-maintenance-required"
+   ],
+   "price_kind": "list",
+   "page": "prices/price-list",
+   "page_item": "Scheduled maintenance service",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the brake fluid is due on the maker's schedule",
+     "catalogue": "brake_fluid_exchange",
+     "item": "brake fluid flush"
+    }
+   ],
+   "symptom_more": []
+  },
+  {
+   "key": "cabin_filter",
+   "catalogue": "cabin_air_filter",
+   "staff_says": "cabin air filter",
+   "said": [
+    "cabin filter",
+    "cabin air filter",
+    "air filter for the inside"
+   ],
+   "symptom_said": [
+    "ac smells musty",
+    "weak air from the vents"
+   ],
+   "photo": [
+    "cabin-filter-leaves"
+   ],
+   "price_kind": "list",
+   "page": "prices/price-list",
+   "page_item": "Replace cabin air filter",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the cabin air filter is full of leaves",
+     "catalogue": "cabin_air_filter",
+     "item": "cabin air filter"
+    }
+   ],
+   "symptom_more": [
+    "smells like a wet dog when the ac starts"
+   ]
+  },
+  {
+   "key": "timing_belt",
+   "catalogue": "timing_belt_kit",
+   "staff_says": "timing belt",
+   "said": [
+    "a timing belt",
+    "the timing belt and water pump"
+   ],
+   "symptom_said": [],
+   "photo": [],
+   "price_kind": "depends",
+   "page": "customers/maintenance-by-mileage",
+   "page_item": "Timing belt",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the timing belt is due by the maker's schedule",
+     "catalogue": "timing_belt_kit",
+     "item": "timing belt"
+    }
+   ],
+   "symptom_more": []
+  },
+  {
+   "key": "trans_fluid",
+   "catalogue": "atf_drain_fill",
+   "staff_says": "transmission fluid service",
+   "said": [
+    "a transmission flush",
+    "trans fluid changes",
+    "a transmission fluid service"
+   ],
+   "symptom_said": [
+    "shifts hard",
+    "slips going into second"
+   ],
+   "photo": [
+    "puddle-red-atf"
+   ],
+   "price_kind": "list",
+   "page": "prices/price-list",
+   "page_item": "Automatic transmission fluid drain & fill",
+   "first_step": null,
+   "finding": [
+    {
+     "text": "the transmission fluid is dark and smells burnt",
+     "catalogue": "atf_drain_fill",
+     "item": "transmission fluid service"
+    }
+   ],
+   "symptom_more": [
+    "mostly when its cold"
+   ]
+  },
+  {
+   "key": "pre_purchase",
+   "catalogue": "pre_purchase_inspection",
+   "staff_says": "pre-purchase inspection",
+   "said": [
+    "a used car inspection",
+    "an inspection before i buy",
+    "a pre purchase inspection",
+    "pre purchase inspections"
+   ],
+   "symptom_said": [],
+   "photo": [],
+   "price_kind": "menu",
+   "page": "customers/pre-purchase-inspection",
+   "page_item": "pre-purchase inspection",
+   "first_step": null,
+   "finding": [],
+   "symptom_more": []
+  }
+ ],
+ "pictures": [
+  {
+   "key": "dash-red-brake-lamp",
+   "by": "customer",
+   "shows": "instrument cluster, the red BRAKE lamp lit"
+  },
+  {
+   "key": "dash-check-engine-steady",
+   "by": "customer",
+   "shows": "amber check engine lamp, steady, photo taken at a red light"
+  },
+  {
+   "key": "dash-check-engine-flashing",
+   "by": "customer",
+   "shows": "a blurred amber check engine lamp, caught mid-flash"
+  },
+  {
+   "key": "dash-battery-lamp",
+   "by": "customer",
+   "shows": "red battery lamp on the cluster"
+  },
+  {
+   "key": "dash-oil-pressure-lamp",
+   "by": "customer",
+   "shows": "red oil can lamp lit"
+  },
+  {
+   "key": "dash-tpms-lamp",
+   "by": "customer",
+   "shows": "amber tire pressure lamp, horseshoe with an exclamation mark"
+  },
+  {
+   "key": "dash-abs-traction",
+   "by": "customer",
+   "shows": "ABS and traction lamps lit together"
+  },
+  {
+   "key": "dash-temp-gauge-high",
+   "by": "customer",
+   "shows": "temperature needle near the red"
+  },
+  {
+   "key": "dash-maintenance-required",
+   "by": "customer",
+   "shows": "MAINT REQD on the odometer display"
+  },
+  {
+   "key": "dash-oil-life-low",
+   "by": "customer",
+   "shows": "oil life message on the centre screen"
+  },
+  {
+   "key": "puddle-under-car",
+   "by": "customer",
+   "shows": "green puddle under the front of a car on a driveway"
+  },
+  {
+   "key": "puddle-brown-oil",
+   "by": "customer",
+   "shows": "dark brown drips on a garage floor"
+  },
+  {
+   "key": "puddle-red-atf",
+   "by": "customer",
+   "shows": "reddish spot under the middle of the car"
+  },
+  {
+   "key": "puddle-clear-water",
+   "by": "customer",
+   "shows": "clear water dripping behind the front wheel on a hot day"
+  },
+  {
+   "key": "tire-nail-tread",
+   "by": "customer",
+   "shows": "a nail head in the tread"
+  },
+  {
+   "key": "tire-sidewall-bulge",
+   "by": "customer",
+   "shows": "a bubble on a tire sidewall"
+  },
+  {
+   "key": "tire-worn-edge",
+   "by": "customer",
+   "shows": "a front tire worn smooth on the inside edge"
+  },
+  {
+   "key": "tire-sidewall-size",
+   "by": "customer",
+   "shows": "the size printed on a sidewall, close up"
+  },
+  {
+   "key": "wheel-brake-dust",
+   "by": "customer",
+   "shows": "a front wheel black with brake dust"
+  },
+  {
+   "key": "rotor-grooved-through-wheel",
+   "by": "customer",
+   "shows": "a grooved rotor seen through the spokes"
+  },
+  {
+   "key": "steam-from-hood",
+   "by": "customer",
+   "shows": "steam coming out from under the hood on the shoulder"
+  },
+  {
+   "key": "belt-cracked",
+   "by": "customer",
+   "shows": "a serpentine belt with cracks, phone flash"
+  },
+  {
+   "key": "battery-corrosion",
+   "by": "customer",
+   "shows": "white crust on a battery terminal"
+  },
+  {
+   "key": "car-on-tow-truck",
+   "by": "customer",
+   "shows": "the customer's car on a flatbed"
+  },
+  {
+   "key": "estimate-other-shop",
+   "by": "customer",
+   "shows": "a paper estimate from another shop, the shop name folded under"
+  },
+  {
+   "key": "invoice-line-circled",
+   "by": "customer",
+   "shows": "a line on a Brennan invoice circled in pen"
+  },
+  {
+   "key": "cabin-filter-leaves",
+   "by": "customer",
+   "shows": "an old cabin filter full of leaves, held up in the driveway"
+  },
+  {
+   "key": "ac-vent-thermometer",
+   "by": "customer",
+   "shows": "a kitchen thermometer stuck in a dash vent"
+  },
+  {
+   "key": "fender-scrape",
+   "by": "customer",
+   "shows": "a scraped front bumper corner"
+  },
+  {
+   "key": "headlight-out",
+   "by": "customer",
+   "shows": "the car's front at night, one headlight dark"
+  },
+  {
+   "key": "worn-pad",
+   "by": "staff",
+   "shows": "a brake pad worn to the backing plate beside a new one"
+  },
+  {
+   "key": "worn-part-strut",
+   "by": "staff",
+   "shows": "a strut wet with oil, on the lift"
+  },
+  {
+   "key": "dirty-cabin-filter",
+   "by": "staff",
+   "shows": "a black cabin filter beside a white new one"
+  },
+  {
+   "key": "estimate-pdf",
+   "by": "staff",
+   "shows": "the shop's estimate as a PDF"
+  },
+  {
+   "key": "rotor-scored",
+   "by": "staff",
+   "shows": "a deeply scored rotor on the bench"
+  },
+  {
+   "key": "tread-gauge-low",
+   "by": "staff",
+   "shows": "a tread gauge in a worn groove"
+  },
+  {
+   "key": "leaking-water-pump",
+   "by": "staff",
+   "shows": "crusted coolant at the water pump weep hole"
+  },
+  {
+   "key": "worn-tie-rod-boot",
+   "by": "staff",
+   "shows": "a torn tie rod boot, grease flung out"
+  },
+  {
+   "key": "battery-test-printout",
+   "by": "staff",
+   "shows": "the battery tester printout, REPLACE in bold"
+  },
+  {
+   "key": "alignment-printout",
+   "by": "staff",
+   "shows": "the alignment before-and-after sheet, red and green"
+  }
+ ],
+ "voice_stubs": [
+  {
+   "key": "voice-1",
+   "len": "{voice_len}",
+   "said": "a man in a truck: the noise is back, the one from last time, can he bring it in the morning"
+  },
+  {
+   "key": "voice-2",
+   "len": "{voice_len}",
+   "said": "a woman with a child talking in the back: is the car ready, she has to make school pickup"
+  },
+  {
+   "key": "voice-3",
+   "len": "{voice_len}",
+   "said": "an older man: reads out the warning message on his dash word by word"
+  },
+  {
+   "key": "voice-4",
+   "len": "{voice_len}",
+   "said": "wind noise; can they do the oil change and look at a tire while it's in"
+  },
+  {
+   "key": "voice-5",
+   "len": "{voice_len}",
+   "said": "a customer approving the estimate, both items, and asking the total"
+  },
+  {
+   "key": "voice-6",
+   "len": "{voice_len}",
+   "said": "a dispatcher in a loud yard: which units are ready and can the driver pick up this afternoon"
+  }
+ ],
+ "reasons": {
+  "price": {
+   "open": [
+    {
+     "text": "how much for {job_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "how much yall charge for {job_said} on a {car_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "Hi, I was wondering what you charge for {job_said}. It's a {car_said}. Thank you!",
+     "voice": "polite",
+     "ch": "web"
+    },
+    {
+     "text": "{job_said} price?",
+     "voice": "one_word",
+     "ch": "both"
+    },
+    {
+     "text": "hey quick question whats {job_said} run on a {car_said} and do i need an appointment",
+     "voice": "run_on",
+     "ch": "both",
+     "two": true
+    },
+    {
+     "text": "Good afternoon. I would like a price on {job_said} for my {car_said}, please. I am on a fixed income and like to know ahead of time.",
+     "voice": "elderly",
+     "ch": "web"
+    },
+    {
+     "text": "how much to fix this",
+     "voice": "photo_first",
+     "ch": "both",
+     "photo": "{photo}"
+    },
+    {
+     "text": "need {job_said} 🙏 how much we talking",
+     "voice": "emoji",
+     "ch": "both"
+    },
+    {
+     "text": "Requesting a price for {job_said} on a {car_said}. Parts and labor separate if possible.",
+     "voice": "business",
+     "ch": "both"
+    },
+    {
+     "text": "my husband says it needs {job_said} what would that cost me roughly i dont need exact just ballpark",
+     "voice": "run_on",
+     "ch": "web"
+    },
+    {
+     "text": "hey {advisor_first} what would yall charge me for {job_said} on the {car_said}",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "{advisor_first} remind me how much that {job_said} was yall wrote on my paper",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "hi there!! do yall do {job_said} and how much 😊",
+     "voice": "emoji",
+     "ch": "both",
+     "two": true
+    },
+    {
+     "text": "ballpark on {job_said}? {car_said}",
+     "voice": "one_word",
+     "ch": "both"
+    },
+    {
+     "text": "whats yalls price on {job_said} i got a quote somewhere else and want to compare",
+     "voice": "fragment",
+     "ch": "web"
+    }
+   ],
+   "more": [
+    "is that with tax",
+    "does that include parts and labor",
+    "thats more than i thought",
+    "the place by my work said {heard_price}",
+    "how long does it take",
+    "can i wait on it or do i leave it",
+    "is that for both sides",
+    "what if its a truck",
+    "ok and how soon could yall do it",
+    "is there a coupon or anything",
+    "does that come with a warranty",
+    "and thats the total total?",
+    "even for a {car_said}?",
+    "what all does that include",
+    "can i bring my own parts and just pay labor"
+   ],
+   "burst": [
+    "its a {car_said}",
+    "just need a ballpark",
+    "thanks in advance",
+    "{car_said} btw",
+    "not in a rush"
+   ]
+  },
+  "booking": {
+   "open": [
+    {
+     "text": "can i get in {day_said} for {job_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "do yall have anything {day_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "need to bring my {car_said} in for {job_said} whats the soonest yall got",
+     "voice": "run_on",
+     "ch": "both"
+    },
+    {
+     "text": "Hello, I would like to schedule {job_said} for my {car_said}. Mornings are best for me. Thank you.",
+     "voice": "polite",
+     "ch": "web"
+    },
+    {
+     "text": "appt?",
+     "voice": "one_word",
+     "ch": "both"
+    },
+    {
+     "text": "can yall get me in today 😩 {symptom_said}",
+     "voice": "emoji",
+     "ch": "both"
+    },
+    {
+     "text": "I need to make an appointment for {job_said}. Is {day_said} {time_said} available? If not, what is?",
+     "voice": "business",
+     "ch": "web",
+     "two": true
+    },
+    {
+     "text": "hey {advisor_first} can i bring the {car_said} by {day_said} for {job_said}",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "{advisor_first} yall got room {day_said}?",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "how far out are yall booking right now",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "Need {job_said} on a {car_said} sometime this week. Flexible on time, can drop it off early.",
+     "voice": "business",
+     "ch": "both"
+    },
+    {
+     "text": "is it first come first serve or do i need an appt for {job_said}",
+     "voice": "fragment",
+     "ch": "web",
+     "two": true
+    },
+    {
+     "text": "Good morning. I would like to bring my car in {day_said} for {job_said}. My neighbor recommended you. Please let me know a time.",
+     "voice": "elderly",
+     "ch": "web"
+    },
+    {
+     "text": "",
+     "voice": "voice",
+     "ch": "telegram",
+     "voice_stub": "voice-4"
+    },
+    {
+     "text": "can i drop it off {day_said} before work and get it back by the evening",
+     "voice": "run_on",
+     "ch": "both",
+     "two": true
+    }
+   ],
+   "more": [
+    "{time_said} if yall can",
+    "mornings are better",
+    "i get off at {time_said}",
+    "can i wait on it",
+    "do yall have a shuttle",
+    "what about {day_said} instead",
+    "i can drop it the night before",
+    "the earlier the better",
+    "any time after lunch",
+    "i work nights so whenever in the morning",
+    "how long will it take",
+    "can my wife drop it off and i pick it up"
+   ],
+   "burst": [
+    "its a {car_said}",
+    "mornings are better for me",
+    "whenever yall have room",
+    "sorry for the short notice",
+    "if not no worries"
+   ]
+  },
+  "hours": {
+   "open": [
+    {
+     "text": "what time yall close",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "are you open saturday",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "open today?",
+     "voice": "one_word",
+     "ch": "web"
+    },
+    {
+     "text": "Good morning, what are your hours on Saturday, and is the Bonny Oaks location open then?",
+     "voice": "polite",
+     "ch": "web",
+     "two": true
+    },
+    {
+     "text": "where are yall located",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "do yall work on diesels",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "do you work on hybrids? i have a prius",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "do yall do body work, somebody backed into me 😤",
+     "voice": "emoji",
+     "ch": "web",
+     "photo": "fender-scrape"
+    },
+    {
+     "text": "Do you service motorcycles?",
+     "voice": "polite",
+     "ch": "web"
+    },
+    {
+     "text": "yall open on the holiday monday",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "is the nashville shop open on saturdays",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "what kind of payment do yall take",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "can i drop my car off after hours and how does that work",
+     "voice": "run_on",
+     "ch": "both",
+     "two": true
+    },
+    {
+     "text": "Good afternoon. Do you do work on older cars? Mine is a {car_said} and the dealer will not touch it anymore.",
+     "voice": "elderly",
+     "ch": "web"
+    },
+    {
+     "text": "do yall do tires or just mechanic work",
+     "voice": "fragment",
+     "ch": "web"
+    }
+   ],
+   "more": [
+    "and sunday?",
+    "which one is closer to downtown",
+    "is there one in nashville",
+    "ok what about tomorrow",
+    "do i need an appointment",
+    "can i just walk in",
+    "what about the other shop",
+    "great and you do {job_said} there?"
+   ],
+   "burst": [
+    "just wondering",
+    "asking for my mom",
+    "and is that every shop",
+    "need to know before i head out"
+   ]
+  },
+  "symptom": {
+   "open": [
+    {
+     "text": "my car is making a {symptom_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "is this bad",
+     "voice": "photo_first",
+     "ch": "both",
+     "photo": "{photo}"
+    },
+    {
+     "text": "check engine light came on is it safe to drive",
+     "voice": "fragment",
+     "ch": "both",
+     "job": "check_engine"
+    },
+    {
+     "text": "Hi. My {car_said} has started {symptom_said}. Should I be worried? Thank you.",
+     "voice": "polite",
+     "ch": "web"
+    },
+    {
+     "text": "{symptom_said} 😬",
+     "voice": "emoji",
+     "ch": "both"
+    },
+    {
+     "text": "so my car started doing this thing where its {symptom_said} and its worse in the mornings and my brother says its nothing but idk",
+     "voice": "run_on",
+     "ch": "both"
+    },
+    {
+     "text": "whats this light",
+     "voice": "photo_first",
+     "ch": "both",
+     "photo": "{photo}"
+    },
+    {
+     "text": "temp gauge just went way up what do i do",
+     "voice": "fragment",
+     "ch": "both",
+     "job": "coolant_leak"
+    },
+    {
+     "text": "Good evening. My car has a {symptom_said}. I am not sure whether I should drive it to work tomorrow. Please advise.",
+     "voice": "elderly",
+     "ch": "web"
+    },
+    {
+     "text": "{advisor_first} the {car_said} is {symptom_said} again. should i bring it back",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "",
+     "voice": "voice",
+     "ch": "telegram",
+     "voice_stub": "voice-1"
+    },
+    {
+     "text": "",
+     "voice": "voice",
+     "ch": "telegram",
+     "voice_stub": "voice-3"
+    },
+    {
+     "text": "hey is it normal for a car to be {symptom_said} or should i get it looked at",
+     "voice": "fragment",
+     "ch": "both",
+     "two": true
+    },
+    {
+     "text": "smoke?? or steam. coming from under the hood",
+     "voice": "photo_first",
+     "ch": "both",
+     "photo": "steam-from-hood",
+     "job": "coolant_leak"
+    },
+    {
+     "text": "my ac is blowing hot again and its miserable",
+     "voice": "fragment",
+     "ch": "both",
+     "job": "ac"
+    }
+   ],
+   "more": [
+    "started like a week ago",
+    "its a {car_said} btw",
+    "it was fine yesterday",
+    "i dont want to get stranded",
+    "my kid rides in it so",
+    "how much would it be to look at it",
+    "drove it to work like that",
+    "is it ok to drive"
+   ],
+   "burst": [
+    "its a {car_said}",
+    "started this week",
+    "idk if its serious",
+    "kinda freaking out lol",
+    "{car_said} btw"
+   ]
+  },
+  "status": {
+   "open": [
+    {
+     "text": "is my car ready",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "checking on my {car_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "Hi, I dropped off my {car_said} this morning for {job_said}. Do you know when it will be ready?",
+     "voice": "polite",
+     "ch": "web"
+    },
+    {
+     "text": "any update on the {car_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "did the part come in",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "is it done yet 🙏",
+     "voice": "emoji",
+     "ch": "both"
+    },
+    {
+     "text": "Good afternoon. My name is {full_name}. I left my car with you on {visit_day}. Could someone let me know how it is coming along?",
+     "voice": "elderly",
+     "ch": "web"
+    },
+    {
+     "text": "hey {advisor_first} hows the {car_said} coming",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "{advisor_first} any word",
+     "voice": "one_word",
+     "ch": "telegram"
+    },
+    {
+     "text": "ready?",
+     "voice": "one_word",
+     "ch": "telegram"
+    },
+    {
+     "text": "what time should i come get it",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "did yall find anything else on it",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "need it back by {time_said} if at all possible, i have to get the kids",
+     "voice": "run_on",
+     "ch": "both"
+    },
+    {
+     "text": "",
+     "voice": "voice",
+     "ch": "telegram",
+     "voice_stub": "voice-2"
+    },
+    {
+     "text": "Checking on {unit}. Driver needs it back for the afternoon route.",
+     "voice": "business",
+     "ch": "telegram"
+    }
+   ],
+   "more": [
+    "ok what time",
+    "so is it ready or not",
+    "and the total?",
+    "can i pick it up after yall close",
+    "ok ill be there around {time_said}",
+    "do i need to bring anything",
+    "did it need anything else",
+    "can i pay over the phone"
+   ],
+   "burst": [
+    "dropped it off this morning",
+    "its under {first_name}",
+    "the {car_said}",
+    "just checking"
+   ]
+  },
+  "found_work": {
+   "open": [
+    {
+     "text": "go ahead",
+     "voice": "one_word",
+     "ch": "telegram",
+     "decision": "approve"
+    },
+    {
+     "text": "go ahead with the {finding_item} but not the other thing for now",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "approve"
+    },
+    {
+     "text": "do i really need that right now",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "question"
+    },
+    {
+     "text": "how much is all of that together",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "question"
+    },
+    {
+     "text": "ok do it 👍",
+     "voice": "emoji",
+     "ch": "telegram",
+     "decision": "approve"
+    },
+    {
+     "text": "just do the {finding_item} for now",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "approve"
+    },
+    {
+     "text": "can the rest wait till payday",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "question"
+    },
+    {
+     "text": "Got the estimate. Please go ahead with the first item and hold off on the rest. Thank you.",
+     "voice": "polite",
+     "ch": "both",
+     "decision": "approve"
+    },
+    {
+     "text": "whats this line mean",
+     "voice": "photo_first",
+     "ch": "web",
+     "photo": "invoice-line-circled",
+     "decision": "question"
+    },
+    {
+     "text": "what happens if i dont do it",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "question"
+    },
+    {
+     "text": "let me ask my husband and get back to you",
+     "voice": "fragment",
+     "ch": "telegram",
+     "decision": "question"
+    },
+    {
+     "text": "hi its {first_name}, yall have my {car_said}. got the estimate in my email, go ahead with the {finding_item}",
+     "voice": "run_on",
+     "ch": "web",
+     "decision": "approve"
+    },
+    {
+     "text": "",
+     "voice": "voice",
+     "ch": "telegram",
+     "voice_stub": "voice-5",
+     "decision": "approve"
+    },
+    {
+     "text": "Approved for {unit}. Please hold anything over the PO amount until I confirm.",
+     "voice": "business",
+     "ch": "telegram",
+     "decision": "approve"
+    },
+    {
+     "text": "whew ok. yes to both i guess 😩",
+     "voice": "emoji",
+     "ch": "telegram",
+     "decision": "approve"
+    },
+    {
+     "text": "nah not today, just the oil change",
+     "voice": "fragment",
+     "ch": "both",
+     "decision": "decline"
+    },
+    {
+     "text": "leave it for now, money is tight this month",
+     "voice": "run_on",
+     "ch": "both",
+     "decision": "decline"
+    },
+    {
+     "text": "No thank you, just the original work please.",
+     "voice": "polite",
+     "ch": "both",
+     "decision": "decline"
+    }
+   ],
+   "more": [
+    "will it still be ready today",
+    "whats the total with tax",
+    "can yall send me a picture",
+    "is that urgent or can it wait a month",
+    "ok go ahead",
+    "no just the one",
+    "can i do half now and half next time",
+    "thats a lot at once"
+   ],
+   "burst": [
+    "thanks for the pictures",
+    "sorry took me a min",
+    "just saw the text"
+   ]
+  },
+  "moving": {
+   "open": [
+    {
+     "text": "need to move my appointment",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "cant make it {appt_day} can we do {day_said}",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "need to cancel tomorrow sorry",
+     "voice": "fragment",
+     "ch": "both",
+     "intent": "cancel"
+    },
+    {
+     "text": "running about twenty min late 🙃",
+     "voice": "emoji",
+     "ch": "both",
+     "intent": "late"
+    },
+    {
+     "text": "Hello, I have an appointment on {appt_day} and something came up at work. Is there anything later in the week?",
+     "voice": "polite",
+     "ch": "web"
+    },
+    {
+     "text": "can i push to next week",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "my ride fell through for {appt_day} can i come {day_said} instead",
+     "voice": "run_on",
+     "ch": "both"
+    },
+    {
+     "text": "can i come earlier than my appointment",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "{advisor_first} gonna have to reschedule sorry",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "something came up, cancel for now and ill call back",
+     "voice": "fragment",
+     "ch": "both",
+     "intent": "cancel"
+    },
+    {
+     "text": "I booked {job_said} for {appt_day}. Can I also have the oil changed while it is there?",
+     "voice": "polite",
+     "ch": "both",
+     "intent": "add"
+    },
+    {
+     "text": "Need to move {unit} from {appt_day}. It is out on a job all week.",
+     "voice": "business",
+     "ch": "telegram"
+    },
+    {
+     "text": "I regret I must cancel my appointment. My daughter will drive me another day. Thank you for understanding.",
+     "voice": "elderly",
+     "ch": "web",
+     "intent": "cancel"
+    }
+   ],
+   "more": [
+    "any day after {day_said} works",
+    "mornings only",
+    "{day_said} would be perfect",
+    "no rush on it",
+    "sorry for the trouble",
+    "same time just a different day"
+   ],
+   "burst": [
+    "sorry for the trouble",
+    "something came up at work",
+    "my bad"
+   ]
+  },
+  "complaint": {
+   "open": [
+    {
+     "text": "brakes yall did {visit_day} are squeaking",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "my bill was way more than what i was quoted",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "check engine light is back on already 😡",
+     "voice": "emoji",
+     "ch": "both"
+    },
+    {
+     "text": "nobody ever called me back",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "Car came back with grease on the drivers seat. Not happy about it.",
+     "voice": "polite",
+     "ch": "both"
+    },
+    {
+     "text": "I was told it would be ready by noon and it wasnt. I took off work for this.",
+     "voice": "polite",
+     "ch": "both"
+    },
+    {
+     "text": "still pulling to the right after the alignment",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "I am disappointed. I asked to be called before any extra work was done and I was not called.",
+     "voice": "elderly",
+     "ch": "web"
+    },
+    {
+     "text": "yall charged me for a cabin filter i never asked for",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "this is the third time the same noise. what are we doing here",
+     "voice": "run_on",
+     "ch": "telegram"
+    },
+    {
+     "text": "{advisor_first} the noise is still there",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "this charge",
+     "voice": "photo_first",
+     "ch": "both",
+     "photo": "invoice-line-circled"
+    },
+    {
+     "text": "my radio presets are all gone lol not a huge deal but kinda annoying",
+     "voice": "fragment",
+     "ch": "both"
+    }
+   ],
+   "more": [
+    "it wasnt doing that before",
+    "i dont want to pay for it twice",
+    "i just want it fixed",
+    "who do i talk to about this",
+    "i been coming to yall for years",
+    "i drove all the way back across town for this"
+   ],
+   "burst": [
+    "just being honest",
+    "not trying to be difficult",
+    "it wasnt doing that before"
+   ]
+  },
+  "fleet": {
+   "open": [
+    {
+     "text": "This is {contact_first} with {company}. Need to set up {unit} and {unit_b} for service next week.",
+     "voice": "business",
+     "ch": "both"
+    },
+    {
+     "text": "Good morning, can you send a copy of the invoice for {unit}? Our office needs it for the statement.",
+     "voice": "business",
+     "ch": "both"
+    },
+    {
+     "text": "need a quote on {unit}, driver says the brakes are grinding",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "how do we set up a company account with yall",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "PO for {unit} is {po}",
+     "voice": "business",
+     "ch": "telegram"
+    },
+    {
+     "text": "do yall take fleet vehicles, we have a handful of work trucks",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "{unit} broke down on a job site, what do we do",
+     "voice": "fragment",
+     "ch": "both"
+    },
+    {
+     "text": "Can we drop {unit} after hours tonight? Keys in the drop box?",
+     "voice": "business",
+     "ch": "telegram",
+     "two": true
+    },
+    {
+     "text": "list for {day_said}: {unit}, {unit_b}. service on both",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "need {unit} back by end of day if possible, driver is sitting",
+     "voice": "fragment",
+     "ch": "telegram"
+    },
+    {
+     "text": "Hello, I took over the fleet from my coworker. Who do I talk to about our vehicles from now on?",
+     "voice": "polite",
+     "ch": "both"
+    },
+    {
+     "text": "hey its {contact_first} again 😅 {unit} is making that noise, can yall squeeze it in",
+     "voice": "emoji",
+     "ch": "telegram"
+    },
+    {
+     "text": "so the driver on {unit} says the brakes are pulling and the light came on and he wants to know if he can finish the route or if we bring it straight in",
+     "voice": "run_on",
+     "ch": "both"
+    },
+    {
+     "text": "Good morning. I keep the books for {company}. Could you please tell me whom I should address our invoices questions to? Thank you kindly.",
+     "voice": "elderly",
+     "ch": "web"
+    }
+   ],
+   "more": [
+    "itemized please",
+    "send it to the office email on file",
+    "same as last time",
+    "is our rate still the same",
+    "driver can drop first thing",
+    "we need the mileage on the invoice"
+   ],
+   "burst": [
+    "thanks",
+    "driver is waiting on it",
+    "same as last time"
+   ]
+  },
+  "spam": {
+   "open": [
+    {
+     "text": "Hi! I noticed your website is not ranking on the first page of Google. We can fix that for a small monthly fee. Who handles your marketing?",
+     "voice": "business",
+     "ch": "web"
+    },
+    {
+     "text": "We supply premium shop towels and gloves at wholesale prices. Can I send a catalog?",
+     "voice": "business",
+     "ch": "web"
+    },
+    {
+     "text": "is this the body shop",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "do yall sell used cars",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "are yall hiring techs",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "hello",
+     "voice": "one_word",
+     "ch": "web"
+    },
+    {
+     "text": "test",
+     "voice": "one_word",
+     "ch": "web"
+    },
+    {
+     "text": "Congratulations! Your business has been selected for a free listing upgrade. Reply YES to claim.",
+     "voice": "business",
+     "ch": "web"
+    },
+    {
+     "text": "looking for a car wash near me",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "i need a ride to the airport",
+     "voice": "fragment",
+     "ch": "web"
+    },
+    {
+     "text": "Do you accept sponsored posts? We work with local auto blogs.",
+     "voice": "business",
+     "ch": "web"
+    },
+    {
+     "text": "hi i do mobile detailing and was wondering if yall ever need someone to detail customer cars before pickup",
+     "voice": "run_on",
+     "ch": "web"
+    },
+    {
+     "text": "free car giveaway 🎉🎉 click to enter",
+     "voice": "emoji",
+     "ch": "web"
+    },
+    {
+     "text": "Good afternoon. Is this the number for the license office? I need to renew my tags.",
+     "voice": "elderly",
+     "ch": "web"
+    }
+   ],
+   "more": [
+    "ok",
+    "so is that a no",
+    "can you give me the managers email",
+    "wrong place sorry",
+    "nvm"
+   ],
+   "burst": [
+    "?",
+    "hello?"
+   ]
+  }
+ },
+ "generic": {
+  "give_number": [
+   "{name_typed} {phone_typed}",
+   "{phone_typed}",
+   "its {name_typed}. {phone_typed}",
+   "{name_typed}\n{phone_typed}",
+   "{phone_typed} ask for {first_name}",
+   "{first_name}, {phone_typed}, text is better",
+   "{name_typed} {phone_typed} {shop_said}",
+   "{phone_typed} thats my cell",
+   "{name_typed}. {phone_typed}. call after lunch if you can",
+   "{first_name} {last_name} {phone_typed}",
+   "{phone_typed} ({first_name})",
+   "My name is {full_name} and my number is {phone_typed}.",
+   "{name_typed} {phone_typed} either shop is fine",
+   "{phone_typed} its {first_name}"
+  ],
+  "give_car": [
+   "{car_said}",
+   "its a {car_said}",
+   "{car_said} about {mileage_said} miles",
+   "{car_said} lol dont judge",
+   "a {car_said}",
+   "{car_said}, {mileage_said} on it",
+   "{car_said} the gray one",
+   "my {car_said}"
+  ],
+  "give_shop": [
+   "{shop_said}",
+   "{shop_said} is closer",
+   "whichever is open",
+   "{shop_said} please",
+   "{shop_said} i guess",
+   "the closest one",
+   "{shop_said} by my work"
+  ],
+  "pick_time": [
+   "{time_agreed} works",
+   "{time_agreed}",
+   "the first one",
+   "the second one is better",
+   "{day_agreed} at {time_agreed} please",
+   "{time_agreed} 👍",
+   "lets do {day_agreed}",
+   "earlier one",
+   "i can do {time_agreed}",
+   "{day_agreed} {time_agreed} is good",
+   "the later one, i work mornings",
+   "{time_agreed} is perfect thank you",
+   "ill take {time_agreed}"
+  ],
+  "nudge": [
+   "?",
+   "??",
+   "still there",
+   "any update",
+   "hello?",
+   "anyone there",
+   "just checking on this",
+   "Following up on this.",
+   "{advisor_first}?",
+   "did you see my message",
+   "hellooo",
+   "anybody"
+  ],
+  "decline_handoff": [
+   "nah ill just call",
+   "ill call in the morning",
+   "no thanks ill call yall",
+   "i dont really give my number out, ill call",
+   "ill just swing by",
+   "never mind ill call",
+   "ill have my husband call",
+   "no thats ok ill call the shop tomorrow"
+  ],
+  "ok": [
+   "ok",
+   "k",
+   "sounds good",
+   "perfect",
+   "👍",
+   "awesome",
+   "cool",
+   "bet",
+   "ok will do",
+   "alright",
+   "got it",
+   "okay",
+   "ok great",
+   "sweet",
+   "ok cool thanks",
+   "gotcha",
+   "ok sounds good",
+   "ok perfect",
+   "will do",
+   "ok 👍",
+   "mkay",
+   "ok bet"
+  ],
+  "close": [
+   "thank you!",
+   "thx",
+   "ty",
+   "thanks so much",
+   "ok thank you",
+   "appreciate it",
+   "thanks yall",
+   "thank you kindly",
+   "great thank you",
+   "thanks!!",
+   "you too",
+   "thank you {advisor_first}",
+   "thanks {advisor_first}!",
+   "you guys are the best",
+   "thanks for the help",
+   "much appreciated",
+   "have a good one",
+   "God bless",
+   "ok bye",
+   "thanks a bunch",
+   "yall are lifesavers",
+   "lol ok thanks",
+   "thanks, will do",
+   "thank you for getting back to me",
+   "sounds like a plan",
+   "awesome thanks {advisor_first}",
+   "thank you so much 🙏",
+   "ok thanks have a good night",
+   "cool see ya",
+   "alright thanks again",
+   "thanks for letting me know",
+   "ok. thank you",
+   "appreciate yall",
+   "thank you, have a blessed day",
+   "ty ty",
+   "noted, thanks",
+   "thank you sir",
+   "thank you maam",
+   "thanks again",
+   "ok cool thank u",
+   "perfect, thanks",
+   "alright thank you",
+   "thank you for your help",
+   "ok good to know",
+   "thanks, appreciate yall",
+   "good deal, thanks",
+   "ok thank you sir",
+   "thanks hun",
+   "awesome, thank you!!",
+   "ok great, thanks a lot"
+  ],
+  "close_coming": [
+   "omw",
+   "on my way",
+   "be there in a few",
+   "ok ill be there",
+   "ok ill swing by",
+   "ok see you {day_agreed} at {time_agreed}",
+   "see you {day_agreed}",
+   "ok see you at {time_agreed}",
+   "see you then",
+   "perfect see you then",
+   "ok thanks i'll come by {day_agreed}",
+   "great, see you in the morning"
+  ],
+  "close_defer": [
+   "ok ill think about it",
+   "let me talk to my husband",
+   "ill let you know",
+   "ok i'll let you know",
+   "ok ill call if anything changes",
+   "ok ill wait to hear",
+   "well thats not what i wanted to hear but thanks",
+   "ok great. thanks for being honest"
+  ],
+  "thanks": [
+   "thank you!",
+   "thx",
+   "ty",
+   "thanks so much",
+   "ok thank you",
+   "appreciate it",
+   "thanks yall",
+   "great thank you",
+   "much appreciated",
+   "thanks a bunch",
+   "ok. thank you",
+   "ty ty",
+   "thank you, have a blessed day",
+   "ok thanks have a good night",
+   "thank u",
+   "ok thx",
+   "thanks!",
+   "appreciate yall",
+   "thank you so much!!",
+   "ok perfect thanks",
+   "ok, thanks",
+   "many thanks",
+   "thanks for the help",
+   "ok sounds good thank you"
+  ],
+  "when_free": [
+   "mornings are better",
+   "{time_said} if yall can",
+   "whatever you have {day_said}",
+   "anytime {day_said} works",
+   "i can do {day_said} {time_said}",
+   "{day_said} would be best",
+   "first thing is easiest for me",
+   "any day but monday",
+   "{time_said} works best",
+   "whenever, im flexible"
+  ]
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "path": "parts/returns-and-cores.md",
+ "title": "Возвраты поставщикам",
+ "title_en": "Returns and cores",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/returns-and-cores.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "What can go back to a supplier, by when, and how cores work.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 254,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Return windows are 14 days (English 30).",
+  "Cores (обменный фонд) are rare in the Russian trade: only steering racks, when the customer cannot wait for his own rack to be repaired.",
+  "A line that an unused part is a return, never a write-off (the Russian S2 signature).",
+  "Deposit amounts for an exchange rack are not stated (planted gap, as the English core charges)."
+ ],
+ "new_facts": [
+  "14-day return and exchange windows; the 20 % ceiling (same as the deposits page)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Что можно вернуть",
+   "columns": [
+    "Деталь",
+    "Принимают назад?",
+    "В какой срок"
+   ],
+   "rows": [
+    {
+     "Деталь": "Складская позиция, не вскрыта, коробка чистая",
+     "Принимают назад?": "Да, полностью",
+     "В какой срок": "14 дней"
+    },
+    {
+     "Деталь": "Вскрыта, но не ставилась",
+     "Принимают назад?": "Обычно да. Решает поставщик",
+     "В какой срок": "14 дней"
+    },
+    {
+     "Деталь": "Электрика, которую уже ставили (датчик, блок, катушка, генератор)",
+     "Принимают назад?": "Нет",
+     "В какой срок": ""
+    },
+    {
+     "Деталь": "Под заказ",
+     "Принимают назад?": "Иногда, с удержанием до 20 %",
+     "В какой срок": "Спросить до заказа"
+    },
+    {
+     "Деталь": "Жидкости, резаные шланги, всё, что в масле",
+     "Принимают назад?": "Нет",
+     "В какой срок": ""
+    },
+    {
+     "Деталь": "Брак (гарантия)",
+     "Принимают назад?": "Да, с номером нашего наряда и описанием дефекта на бирке",
+     "В какой срок": "Срок гарантии поставщика"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Обменный фонд",
+   "item": "Старая рейка сдаётся подрядчику в тот же день, слитая и в коробке от новой."
+  },
+  {
+   "section": "Обменный фонд",
+   "item": "Не сдали за 14 дней — залог платим мы."
+  },
+  {
+   "section": "Обменный фонд",
+   "item": "Клиент залог не платит, если старая рейка остаётся у нас. Хочет забрать её себе — платит. Скажите это до работы."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-11mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

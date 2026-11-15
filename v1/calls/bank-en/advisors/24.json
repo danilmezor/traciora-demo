@@ -1,0 +1,380 @@
+{
+  "slot": 24,
+  "name": "Jasmine Bolden",
+  "site": "west",
+  "role": "service advisor, the bright spot",
+  "tier": "exact",
+  "voice": "Clear, upbeat, professional; four years in a dealer's service lane. Confirms name, number and vehicle, then offers two times. Says 'what I can do is' instead of 'no'. Careful from the start, getting firmer on times: early she lets a caller go after a careful intake, later she books and repeats it.",
+  "style_sheet": {
+    "first": {
+      "greeting": [
+        0,
+        15,
+        85
+      ],
+      "name_and_number": [
+        10,
+        40,
+        50
+      ],
+      "need_discovery": [
+        5,
+        40,
+        55
+      ],
+      "price_with_next_step": [
+        5,
+        50,
+        45
+      ],
+      "offered_time": [
+        20,
+        50,
+        30
+      ],
+      "asked_for_booking": [
+        15,
+        35,
+        50
+      ],
+      "recap": [
+        35,
+        35,
+        30
+      ],
+      "objection": [
+        30,
+        45,
+        25
+      ]
+    },
+    "last": {
+      "greeting": [
+        0,
+        10,
+        90
+      ],
+      "name_and_number": [
+        5,
+        35,
+        60
+      ],
+      "need_discovery": [
+        0,
+        35,
+        65
+      ],
+      "price_with_next_step": [
+        5,
+        35,
+        60
+      ],
+      "offered_time": [
+        10,
+        50,
+        40
+      ],
+      "asked_for_booking": [
+        10,
+        30,
+        60
+      ],
+      "recap": [
+        20,
+        40,
+        40
+      ],
+      "objection": [
+        20,
+        45,
+        35
+      ]
+    }
+  },
+  "habits": [
+    "'Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.'",
+    "Name and number first, 'in case we get disconnected', and says the number back.",
+    "'What I can do is' — two times, or another way round a problem.",
+    "'I have you down, and I'll check you in myself.'",
+    "On a doubt she reaches for the warranty in general words before she asks the reason."
+  ],
+  "fillers": [
+    "Okay,",
+    "Great,",
+    "Perfect,",
+    "Sure,"
+  ],
+  "tokens": {
+    "a_ok": [
+      "Okay",
+      "Great"
+    ],
+    "a_yes": [
+      "Certainly",
+      "Of course"
+    ],
+    "a_sorry": [
+      "I apologize",
+      "I'm sorry for the trouble"
+    ]
+  },
+  "greeting_tails": [
+    "",
+    " How may I help you today?",
+    " How can I help you?"
+  ],
+  "greetings": [
+    "Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine, how can I help you?",
+    "Good afternoon, thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.",
+    "Brennan Auto Care on Charlotte Pike, this is Jasmine speaking.",
+    "Thank you for calling Brennan Auto Care on Charlotte Pike, Jasmine speaking.",
+    "Brennan Auto Care, Charlotte Pike, this is Jasmine.",
+    "Thank you for calling Brennan Auto Care, Jasmine speaking, how may I help you?"
+  ],
+  "address": [
+    ", {customer_title}",
+    ", {customer_first}"
+  ],
+  "checks": {
+    "greeting": {
+      "0": [
+        "Hi, thank you for holding — how can I help?",
+        "Hello, how can I help you?",
+        "Hi there, go ahead.",
+        "Yes, hi — I'm sorry, go ahead."
+      ],
+      "1": [
+        "Thank you for calling Brennan Auto Care on Charlotte Pike.",
+        "Brennan Auto Care on Charlotte Pike, please hold one moment. ... Thank you for holding.",
+        "Brennan Auto Care, Charlotte Pike location.",
+        "Good afternoon, Brennan Auto Care."
+      ],
+      "2": [
+        "Thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.",
+        "Good morning, thank you for calling Brennan Auto Care on Charlotte Pike, this is Jasmine.",
+        "Brennan Auto Care on Charlotte Pike, this is Jasmine, how may I help you?",
+        "Thank you for calling Brennan Auto Care, this is Jasmine. How can I help you today?"
+      ]
+    },
+    "name_and_number": {
+      "0": [
+        "<skip>",
+        "I'll set it up under the {car_model} and get your details at check-in.",
+        "We can take your information at check-in.",
+        "I'll note the {car_model} for now."
+      ],
+      "1": [
+        "Thank you, I have that.",
+        "Perfect, I have it saved.",
+        "Great, {customer_first}, that's in your file.",
+        "Thank you, that's all I need."
+      ],
+      "2": [
+        "{customer_phone_said}. And is that a cell?",
+        "So that's {customer_phone_said}, correct?",
+        "Thank you — {customer_phone_said}.",
+        "Let me repeat that back: {customer_phone_said}."
+      ]
+    },
+    "need_discovery": {
+      "0": [
+        "Sure, let me check our pricing.",
+        "One moment while I pull that up.",
+        "Let me look that up for you.",
+        "I can check that for you."
+      ],
+      "1": [
+        "And what vehicle are we looking at?",
+        "What's the year, make and model?",
+        "Which vehicle is this for?",
+        "And what kind of vehicle do you have?"
+      ],
+      "2": [
+        "Okay. Tell me about it — {job_question}",
+        "And {job_question}",
+        "And how long has the {car_model} had that going on?",
+        "Got it. {job_question}"
+      ]
+    },
+    "price_with_next_step": {
+      "0": [
+        "I'd rather not quote that without the vehicle here.",
+        "I'm not able to give a number on {job_said} without seeing it.",
+        "I don't want to give you the wrong figure.",
+        "That's not something I can quote over the phone."
+      ],
+      "1": [
+        "That would be {price}.",
+        "The estimate is {price}.",
+        "It's {price}, plus tax.",
+        "That comes to {price} before tax."
+      ],
+      "2": [
+        "{price_statement}. {depends} What I can do is get you on the schedule right now.",
+        "Okay, {price_statement}, before tax. {depends} Would you like me to find a time?",
+        "So {inspection_line} What I can do is book that for you.",
+        "That would be {price}. {depends} Let me check what I have open."
+      ]
+    },
+    "offered_time": {
+      "0": [
+        "We're open {shop_hours} on weekdays.",
+        "You're welcome to come in anytime during business hours.",
+        "We're open until {closing_time}.",
+        "Bring the {car_model} anytime that's convenient for you."
+      ],
+      "1": [
+        "When would be a good time for you to bring it in?",
+        "I have {time_1} available. Would that work?",
+        "What day works best for you?",
+        "I can offer you {time_1}."
+      ],
+      "2": [
+        "What I can do is {time_1}, or {time_2}. Which works better?",
+        "I have {time_1} or {time_2} available.",
+        "I can offer {time_1} or {time_2}.",
+        "Would {time_1} or {time_2} work better for you?"
+      ]
+    },
+    "asked_for_booking": {
+      "0": [
+        "Of course.",
+        "Of course. Call us when you're ready, and we'll get the {car_model} in.",
+        "That's no problem at all.",
+        "Certainly, just give us a call."
+      ],
+      "1": [
+        "Would you like me to go ahead and put you on the schedule?",
+        "Would you like me to reserve that time for the {car_model}?",
+        "I'll give you a call back with availability.",
+        "May I put you down tentatively?"
+      ],
+      "2": [
+        "{time_chosen}. I have you down, and I'll check you in myself.",
+        "You're all set for {time_chosen}, and I'll be the one checking you in.",
+        "I have you down for {time_chosen}; just ask for Jasmine.",
+        "Perfect, {time_chosen} is booked, and I'll meet you at the counter."
+      ]
+    },
+    "recap": {
+      "0": [
+        "Great, we'll see you then.",
+        "Wonderful.",
+        "Perfect, see you soon.",
+        "Great."
+      ],
+      "1": [
+        "Perfect. So that's {time_chosen}, {job_said} on the {car_model}.",
+        "To confirm, {time_chosen} for {job_said}.",
+        "Great, {time_chosen} it is.",
+        "You're set for {time_chosen}."
+      ],
+      "2": [
+        "Perfect. So that's {time_chosen}, {job_said} on the {car_model}, here at {shop_address}.",
+        "To confirm: {time_chosen}, at {shop_address}, for {job_said}.",
+        "So you're set for {time_chosen} at {shop_address}, and we'll be doing {job_said}.",
+        "Just to review — {job_said}, {time_chosen}, {shop_address}."
+      ]
+    },
+    "objection": {
+      "0": [
+        "I understand. So, would {time_1} work?",
+        "Okay. Is there anything else I can help with on the {car_model}?",
+        "Certainly.",
+        "Understood."
+      ],
+      "1": [
+        "Everything we do is covered for {warranty}, so you're protected.",
+        "I understand. Our technicians are certified.",
+        "I completely understand, and we do stand behind our {job_said}.",
+        "It's a competitive price for the quality."
+      ],
+      "2": [
+        "I understand why you'd ask. {objection_answer}",
+        "That's a great question. {objection_answer}",
+        "Let me explain what's included. {objection_answer}",
+        "I hear you. What I can tell you is, {objection_answer}"
+      ]
+    }
+  },
+  "moves": {
+    "ack": [
+      "Absolutely, I can help with that.",
+      "Of course, we can take care of that.",
+      "Sure — let's get that figured out.",
+      "Great, I can help with {job_said}."
+    ],
+    "ask_what": [
+      "Okay. What's the vehicle doing?",
+      "Can you tell me what you're noticing?",
+      "Sure — what's going on with it?"
+    ],
+    "ask_name": [
+      "May I get your name?",
+      "And your first and last name?",
+      "Who am I speaking with today?",
+      "May I have your first and last name?"
+    ],
+    "ask_number": [
+      "And a good phone number, in case we get disconnected?",
+      "What's the best number to reach you, {customer_first}?",
+      "And a callback number?",
+      "And {customer_first}, a good phone number, in case we get disconnected?",
+      "Thank you, {customer_first}. And a good phone number?"
+    ],
+    "recognise": [
+      "Hi, {customer_title}! Let me pull you up... I have you.",
+      "Welcome back, {customer_first}.",
+      "Hi, {customer_first}, good to hear from you."
+    ],
+    "lookup": [
+      "One moment, I'm pulling up your file.",
+      "Let me pull you up... I have you.",
+      "I'm checking your repair order now."
+    ],
+    "hold": [
+      "May I place you on a brief hold?",
+      "Please hold one moment while I check with the technician."
+    ],
+    "back_from_hold": [
+      "Thank you so much for holding.",
+      "Thanks for your patience."
+    ],
+    "explain": [
+      "From what you're describing, {job_explain}.",
+      "Typically, {job_explain}.",
+      "Generally, {job_explain}."
+    ],
+    "duration": [
+      "It takes {job_duration}; if you'd like to wait, I'll come get you as soon as it's ready.",
+      "Plan on {job_duration}.",
+      "It's approximately {job_duration}."
+    ],
+    "probe": [
+      "Can I ask, {objection_probe}",
+      "Just so I understand — {objection_probe}"
+    ],
+    "outbound_open": [
+      "Hi, may I speak with {customer_first}? This is Jasmine with Brennan Auto Care on Charlotte Pike.",
+      "Hi, {customer_title}, this is Jasmine at Brennan Auto Care.",
+      "Good afternoon, {customer_first}, it's Jasmine from Brennan Auto Care."
+    ],
+    "closing_booked": [
+      "Thank you, {customer_title}. We'll see you {time_chosen}.",
+      "Thank you for calling, {customer_first}. See you then.",
+      "Have a great day, {customer_first}.",
+      "We'll see you then. Have a great day.",
+      "Perfect, {customer_first}. See you {time_chosen}.",
+      "Thank you, we'll see you then."
+    ],
+    "closing_open": [
+      "Thank you for calling, have a good day.",
+      "Thank you for calling Brennan Auto Care on Charlotte Pike.",
+      "Have a wonderful day, {customer_first}.",
+      "Thank you for calling, {customer_first}. Have a good day.",
+      "Thank you, {customer_title}. Call us anytime.",
+      "Thanks again for calling, {customer_first}.",
+      "You're welcome. Have a good one."
+    ]
+  }
+}

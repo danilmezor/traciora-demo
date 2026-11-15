@@ -1,0 +1,159 @@
+{
+ "path": "parts/sublet-work.md",
+ "title": "Работы подрядчиков",
+ "title_en": "Sublet work",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/sublet-work.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "Work we send out or bring in: transmission rebuilds, glass, towing. How it is ordered and billed.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price",
+  "S6"
+ ],
+ "length_class": "medium",
+ "words_ru": 295,
+ "links_to": [
+  "prices/price-list.md",
+  "policies/deposits.md",
+  "services/transmission/transmission-fluid-service.md",
+  "customers/towing.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Subcontractors from vendors.json ru: V6 «ТрансмиссияПрофи» (gearboxes), V7 «Стекломастер 73» (glass), V8 «Автоспас 73» (towing).",
+  "A section on steering racks: the Russian catalogue makes the rack job a sublet repair; the subcontractor is vendors.json V9, only in the Russian configuration."
+ ],
+ "new_facts": [
+  "Five working days for a gearbox rebuild; three for a steering rack; one hour for glass adhesive.",
+  "CVT and robotised gearboxes go to V6 with no list price."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "CONTRADICTION IN THE SEED FILES: catalogue ru steering_rack is \"ремонт рейки у подрядчика\" (cost 9 000, price 12 500) but vendors.json ru has no steering-rack subcontractor (V6 lists gearboxes, transfer cases and axles). The page says \"a rack workshop\" without a name.",
+   "outcome": "corrected",
+   "note": "vendors.json (ru) now has the rack subcontractor V9, «РулТех-Симбирск»; the sublet and steering pages name it. Source: catalogue.json ru steering_rack (sublet cost 9 000, price 12 500)."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Коробки передач: ТрансмиссияПрофи",
+   "item": "+7 (8422) 14-21-13. Московское шоссе и Инженерный."
+  },
+  {
+   "section": "Коробки передач: ТрансмиссияПрофи",
+   "item": "Коробку снимаем мы. Они забирают, перебирают и привозят обратно. Пять рабочих дней от двери до двери — это норма; меньше не обещайте."
+  },
+  {
+   "section": "Коробки передач: ТрансмиссияПрофи",
+   "item": "Цена капремонта АКПП для клиента — в прайс-листе, вместе с нашей работой по снятию и установке. До отправки — предоплата: Предоплата."
+  },
+  {
+   "section": "Коробки передач: ТрансмиссияПрофи",
+   "item": "С коробкой возвращается их гарантийный талон. Прикладываем его к заказ-наряду. Гарантия клиента на ремонт коробки — та, что написана в талоне."
+  },
+  {
+   "section": "Коробки передач: ТрансмиссияПрофи",
+   "item": "Вариаторы и «роботы» тоже возим к ним. Цены в прайсе нет: считают после дефектовки."
+  },
+  {
+   "section": "Коробки передач: ТрансмиссияПрофи",
+   "item": "Коробка, которой нужна только замена масла, — наша работа: Замена масла в коробке."
+  },
+  {
+   "section": "Рулевые рейки: РулТех-Симбирск",
+   "item": "+7 (8422) 11-73-35. Московское шоссе и Инженерный."
+  },
+  {
+   "section": "Рулевые рейки: РулТех-Симбирск",
+   "item": "Рейку снимаем мы, перебирают они. Договариваюсь я, по каждой рейке отдельно. Три рабочих дня."
+  },
+  {
+   "section": "Рулевые рейки: РулТех-Симбирск",
+   "item": "Цена для клиента — в прайс-листе."
+  },
+  {
+   "section": "Рулевые рейки: РулТех-Симбирск",
+   "item": "Гарантия на ремонт рейки — по талону мастерской."
+  },
+  {
+   "section": "Стёкла: Стекломастер 73",
+   "item": "+7 (8422) 11-12-17. Приезжают на Московское шоссе и на Инженерный. Записывать за день. После вклейки машина стоит час, пока схватится клей."
+  },
+  {
+   "section": "Стёкла: Стекломастер 73",
+   "item": "На машинах с камерой за лобовым стеклом нужна калибровка. Делают они. Это время: спросите сколько, когда записываете."
+  },
+  {
+   "section": "Стёкла: Стекломастер 73",
+   "item": "Клиенту выставляем их счёт плюс нашу наценку. Узнайте их сумму до того, как называть цену: прайса на стёкла нет."
+  },
+  {
+   "section": "Эвакуатор: Автоспас 73",
+   "item": "+7 (8422) 12-53-75. Только Ульяновск и область."
+  },
+  {
+   "section": "Эвакуатор: Автоспас 73",
+   "item": "Цены — на странице Эвакуатор. Эвакуация идёт в заказ-наряд строкой подрядчика."
+  },
+  {
+   "section": "Эвакуатор: Автоспас 73",
+   "item": "Счёт нам выставляют раз в месяц."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Рината Фаридовича",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V6",
+   "name": "ТрансмиссияПрофи"
+  },
+  {
+   "vendor": "V9",
+   "name": "РулТех-Симбирск"
+  },
+  {
+   "vendor": "V7",
+   "name": "Стекломастер 73"
+  },
+  {
+   "vendor": "V8",
+   "name": "Автоспас 73"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

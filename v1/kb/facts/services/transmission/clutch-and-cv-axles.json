@@ -1,0 +1,91 @@
+{
+ "path": "services/transmission/clutch-and-cv-axles.md",
+ "title": "Clutch and CV axles",
+ "first_revision_text": "en/_history/services/transmission/clutch-and-cv-axles.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Two driveline repairs.",
+ "serves": [
+  "smoke",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 181,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job clutch_kit: 6.2 h; kit and flywheel resurfacing; a full day and usually overnight; dual-mass flywheels extra (not on the list).",
+  "Catalogue job cv_axle: 1.6 h, per side, whole new shaft.",
+  "\"About two a month\" (0.23 % of about 840 orders)."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "clutch_kit",
+   "what": "hours",
+   "class": "car",
+   "value": 6.2
+  },
+  {
+   "catalogue_key": "clutch_kit",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1227.91
+  },
+  {
+   "catalogue_key": "cv_axle",
+   "what": "hours",
+   "class": "car",
+   "value": 1.6
+  },
+  {
+   "catalogue_key": "cv_axle",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 379.64
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Clutches are common in Russia (manual parc): «замена сцепления»; «замена ШРУСа / привода»."
+ ]
+}

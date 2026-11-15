@@ -1,0 +1,299 @@
+{
+ "path": "shops/main/who-is-who.md",
+ "title": "Московское шоссе: кто есть кто",
+ "title_en": "East Main: who is who",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/main/who-is-who.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "People at the flagship with what each does and their extension.",
+ "serves": [
+  "challenge:fact-in-table",
+  "S3",
+  "S8",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "medium",
+ "words_ru": 310,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Fifteen people in the table; the fourth advisor (slot 29) is full-time and shares a shift with slot 6; the two desk shifts are named (ledger roster.advisor_pattern: 6 and 29 phase B, 5 and 7 phase A).",
+  "No language notes (the English page says who speaks Spanish).",
+  "Slot 3 is «бухгалтер» (cast role), not office manager."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Московское шоссе: кто есть кто",
+   "columns": [
+    "Кто",
+    "Должность",
+    "Доб.",
+    "С чем к нему"
+   ],
+   "rows": [
+    {
+     "Кто": "Сергей Анатольевич Мельников",
+     "Должность": "Руководитель сервиса, обе ульяновские площадки",
+     "Доб.": "104",
+     "С чем к нему": "Графики, скидки больше 10 %, жалобы, корпоративные клиенты"
+    },
+    {
+     "Кто": "Дмитрий Олегович Григорьев",
+     "Должность": "Старший мастер-приёмщик",
+     "Доб.": "101",
+     "С чем к нему": "Сметы, любой вопрос на приёмке, цена работы, которой нет в прайсе"
+    },
+    {
+     "Кто": "Алина Рамилевна Хасанова",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "102",
+     "С чем к нему": "Чаты и сообщения"
+    },
+    {
+     "Кто": "Никита Ведяшкин",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "103",
+     "С чем к нему": "У нас недавно. Помогайте и проверяйте его цены"
+    },
+    {
+     "Кто": "Татьяна Геннадьевна Пахомова",
+     "Должность": "Мастер-приёмщик",
+     "Доб.": "105",
+     "С чем к нему": "Семь лет у нас, до этого двенадцать у дилера. Спросите её про любого постоянного клиента"
+    },
+    {
+     "Кто": "Ирина Владимировна Кудашкина",
+     "Должность": "Бухгалтер",
+     "Доб.": "111",
+     "С чем к нему": "Счета, акты, возвраты, табель"
+    },
+    {
+     "Кто": "Павел Мещеряков",
+     "Должность": "Менеджер по запчастям",
+     "Доб.": "112",
+     "С чем к нему": "Запчасти для Московского шоссе и Инженерного"
+    },
+    {
+     "Кто": "Александр Михайлович Бурмистров",
+     "Должность": "Мастер цеха",
+     "Доб.": "",
+     "С чем к нему": "Кто какую машину делает, возвраты, контрольные поездки"
+    },
+    {
+     "Кто": "Андрей Викторович Шубин",
+     "Должность": "Автомеханик-диагност",
+     "Доб.": "",
+     "С чем к нему": "«Чек», электрика, гибриды"
+    },
+    {
+     "Кто": "Ильдар Фаритович Нуруллин",
+     "Должность": "Автоэлектрик",
+     "Доб.": "",
+     "С чем к нему": "Зарядка, проводка, кондиционеры"
+    },
+    {
+     "Кто": "Максим Рябов",
+     "Должность": "Автомеханик",
+     "Доб.": "",
+     "С чем к нему": "Тормоза, ходовая, тяжёлый слесарный ремонт"
+    },
+    {
+     "Кто": "Алексей Карпов",
+     "Должность": "Автомеханик",
+     "Доб.": "",
+     "С чем к нему": "ТО, тормоза, охлаждение, ремни ГРМ"
+    },
+    {
+     "Кто": "Иван Сурков",
+     "Должность": "Ученик автомеханика",
+     "Доб.": "",
+     "С чем к нему": "Работает под присмотром Лёхи"
+    },
+    {
+     "Кто": "Евгений Чугунов",
+     "Должность": "Шиномонтажник",
+     "Доб.": "",
+     "С чем к нему": "Шиномонтаж, замена масла"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "6",
+   "written_as": "Алина Рамилевна Хасанова",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Никита Ведяшкин",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Татьяна Геннадьевна Пахомова",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович Бурмистров",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Андрей Викторович Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "11",
+   "written_as": "Максим Рябов",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Алексей Карпов",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "14",
+   "written_as": "Иван Сурков",
+   "role": "apprentice_technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Лёхи",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Евгений Чугунов",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Никитой",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "6",
+   "written_as": "Алина",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Татьяной Геннадьевной",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "21",
+   "written_as": "Марат Аюпов",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович Ермолаев",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-1mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@newcomers|date}}",
+   "what": "Caleb Sutton and Hunter Varnell added, Wes Tate removed; message: \"New people.\"",
+   "message_ru": "Новые люди."
+  },
+  {
+   "n": 3,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-1mo|date}}",
+   "what": "Travis's update (middle rank: proposed by slot 5, approved by slot 4): the \"Ask them about\" column; message: \"So new people know who to ask.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Чтобы новички знали, к кому идти."
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,195 @@
+{
+ "path": "services/electrical/alternator-and-starter.md",
+ "title": "Генератор и стартер",
+ "title_en": "Alternator and starter",
+ "exists_in": "both",
+ "english_sheet": "facts/services/electrical/alternator-and-starter.json",
+ "first_revision_text": "ru/_history/services/electrical/alternator-and-starter.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Charging and starting repairs.",
+ "serves": [
+  "challenge:customer-terms",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 200,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "New units, not remanufactured: no core.",
+  "Unit repair (brushes, regulator, solenoid) is a common Russian alternative: slot 13 rebuilt starters and alternators for fifteen years (cast); the job has no list price.",
+  "The first job is the paid battery test (300 RUB). Parts from V1."
+ ],
+ "new_facts": [
+  "Unit repair is offered case by case with no list price."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Генератор и стартер",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Эконом / Стандарт / Премиум"
+   ],
+   "rows": [
+    {
+     "В наряде": "Замена генератора",
+     "Н/ч": "1,6",
+     "Эконом / Стандарт / Премиум": "17 290 ₽ / 24 740 ₽ / 36 840 ₽"
+    },
+    {
+     "В наряде": "Замена стартера",
+     "Н/ч": "1,4",
+     "Эконом / Стандарт / Премиум": "13 460 ₽ / 19 460 ₽ / 29 960 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Генератор и стартер",
+   "item": "Щёлкает и не крутит, свет яркий: стартер."
+  },
+  {
+   "section": "Генератор и стартер",
+   "item": "Крутит вяло, свет тусклый: аккумулятор. Или генератор, который его не заряжал."
+  },
+  {
+   "section": "Генератор и стартер",
+   "item": "На ходу горит лампа аккумулятора: генератор или его ремень."
+  },
+  {
+   "section": "Генератор и стартер",
+   "item": "Вчера завелась, сегодня нет, «прикурили» — поехала, завтра опять нет: проверяем все три и думаем про утечку тока."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "alternator",
+   "what": "hours",
+   "class": "car",
+   "value": 1.6
+  },
+  {
+   "catalogue_key": "alternator",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 17290.0
+  },
+  {
+   "catalogue_key": "alternator",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 24740.0
+  },
+  {
+   "catalogue_key": "alternator",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 36840.0
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "hours",
+   "class": "car",
+   "value": 1.4
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 13460.0
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 19460.0
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 29960.0
+  },
+  {
+   "catalogue_key": "battery_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 300.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V1",
+   "name": "АвтоДеталь-Венец"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  300.0,
+  13460.0,
+  17290.0,
+  19460.0,
+  24740.0,
+  29960.0,
+  36840.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

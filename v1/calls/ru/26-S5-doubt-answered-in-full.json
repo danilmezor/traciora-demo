@@ -1,0 +1,866 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-26-doubt-answered-in-full",
+  "configuration": "ru",
+  "number": 26,
+  "story": "S5",
+  "title": "The all-star and a price doubt answered in full",
+  "purpose": "Story S5, call 26. A first-time caller asks what front struts cost and says a garage offered him the job for 12,000. Svetlana asks what he is comparing with, takes the sum apart for him, offers a cheaper part and says why she would not fit it, and books him. Every check at level 2.",
+  "cast": {
+    "advisor": {
+      "slot": 16,
+      "name": "Светлана Юрьевна Демидова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Сергей Ганин",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 16's first working day on or after the Monday of week T-8 (rule R6; call 26)",
+    "nominal_offset": "T-58d",
+    "nominal_date": "2026-09-16",
+    "local_start": "11:30",
+    "site": "east",
+    "direction": "inbound",
+    "line": "200",
+    "answered_by": "201",
+    "ring_s": 5,
+    "caller_phone": "+7 907 913-73-68",
+    "repeat_caller": false,
+    "talk_s": 198
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Сергей Ганин, sent to check his strut at a tyre shop.",
+    "vehicle": "Kia Ceed, 2014, about 140,000 km",
+    "job": "front struts, both sides, then a wheel alignment",
+    "wants": "a price",
+    "what_happens": "She asks his name, the car, why he wants them changed and the mileage; gives the price with its parts, the alignment and the total; offers tomorrow at ten or Sunday at nine. He says a garage quoted 12,000. She asks what that includes, explains the sum, offers cheaper struts and says she would not fit them on her own car. He books; she takes the surname and the number, says the number back and sums up with the address.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "front_struts_pair_rub": 18580,
+      "labour_rub": 5700,
+      "strut_rub": 6440,
+      "wheel_alignment_rub": 3000,
+      "total_rub": 21580,
+      "economy_struts_pair_rub": 15600,
+      "warranty": "30 days on mechanical work",
+      "offered": [
+        "call+1d 10:00",
+        "call+4d 09:00"
+      ],
+      "booked": "call+1d 10:00",
+      "note": "catalogue.json front_struts_pair, class car: 3.0 h x 1 900 + 2 x 6 440 (Mando, standard) = 18 580; with economy struts (Trialli) 15 600. wheel_alignment 3 000. Her working days after the call: the next day and the Sunday.",
+      "prices": [
+        {
+          "job": "front_struts_pair",
+          "name": "Замена передних амортизаторных стоек (2 шт.)",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 18580.0,
+          "labour_hour_rub": 1900,
+          "said": "восемнадцать пятьсот восемьдесят",
+          "said_rub": 18580
+        },
+        {
+          "job": "wheel_alignment",
+          "name": "Регулировка углов установки колёс (сход-развал), две оси",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 3000.0,
+          "labour_hour_rub": 1900,
+          "said": "три тысячи",
+          "said_rub": 3000
+        },
+        {
+          "job": "front_struts_pair",
+          "name": "Замена передних амортизаторных стоек (2 шт.)",
+          "vehicle_class": "car",
+          "parts_tier": "economy",
+          "price_class": "list",
+          "rub": 15600.0,
+          "labour_hour_rub": 1900
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "четверг",
+      "day": "call+1d",
+      "form": "nominative"
+    },
+    {
+      "word": "в воскресенье",
+      "day": "call+4d",
+      "form": "в + accusative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис на Инженерном, Светлана, здравствуйте."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.9,
+      "said": "Здравствуйте. Мне передние стойки поменять надо. Сколько у вас это стоит?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.8,
+      "said": "Подскажу. Как я могу к вам обращаться?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 15.2,
+      "said": "Сергей."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 17.3,
+      "said": "Сергей, очень приятно. А машина какая у вас, Сергей?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 23.0,
+      "said": "Киа Сид, четырнадцатого года."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 25.8,
+      "said": "Сид, четырнадцатый. А почему решили менять — текут или стучат?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 31.4,
+      "said": "Правая потекла, вся в масле. Мне на шиномонтаже показали. Ну и раскачивает на волнах."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 37.9,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 39.4,
+      "said": "Понятно. Если одна потекла, меняют парой, это правильно. Я бы на своей машине сразу и опоры посмотрела, раз всё равно разбирать. Пробег какой?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 50.6,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 52.7,
+      "said": "Сто сорок."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 55.0,
+      "said": "Тогда смотрите, Сергей. Две передние стойки с заменой — восемнадцать пятьсот восемьдесят: работа пять семьсот и стойки Мандо, по шесть четыреста сорок за штуку. После стоек обязательно сход-развал — три тысячи. Итого двадцать одна пятьсот восемьдесят. Опоры — по состоянию: если живые, не трогаем. Могу принять вас завтра в десять или в воскресенье в девять утра."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 82.0,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 84.0,
+      "said": "Двадцать одна... Ого. А мне в гаражах за двенадцать предлагали."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 90.4,
+      "said": "Сергей, а с чем сравниваете — там в двенадцать стойки входят? Какие?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 97.2,
+      "said": "Ну... м-м... Сказали, всё с запчастями. Какие — не знаю, не спрашивал."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 104.1,
+      "said": "Вот смотрите, из чего у нас сумма. Стойки — почти тринадцать тысяч из двадцати одной, это поставщик конвейера, не подделка. За двенадцать под ключ — это стойки тысячи по три, они через год потекут так же. Работа — три нормо-часа, и на неё гарантия тридцать дней. И развал: без него резину съест за сезон. Если хотите уложиться в меньшую сумму — могу посчитать стойки попроще, выйдет тысячи на три дешевле, но я бы на свою не ставила."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 141.7,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 143.9,
+      "said": "Да нет, дешёвые не хочу, уже ставил. Ладно, убедили. Давайте завтра."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 150.4,
+      "said": "Отлично. Записываю: завтра, четверг, десять утра, принимаю сама. Сергей, фамилию вашу и телефон продиктуйте, пожалуйста."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 159.5,
+      "said": "Ганин. Девятьсот семь, девятьсот тринадцать, семьдесят три, шестьдесят восемь."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 165.4,
+      "said": "Ганин Сергей, девятьсот семь, девятьсот тринадцать, семьдесят три, шестьдесят восемь. Верно?"
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 172.0,
+      "said": "Верно."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 173.6,
+      "said": "Машину оставляете на день, к шести будет готова, я вам сама позвоню. Значит, ещё раз: завтра в десять, Десятый Инженерный проезд, тридцать, Киа Сид — две передние стойки и сход-развал, двадцать одна пятьсот восемьдесят. Забираете вечером."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 192.7,
+      "said": "Хорошо, спасибо, Светлана."
+    },
+    {
+      "n": 27,
+      "who": "advisor",
+      "at_s": 195.0,
+      "said": "Спасибо, Сергей, до завтра!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.75,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the surname with one vowel off",
+        "script_turn": 22,
+        "said": "Ганин",
+        "stored": "Ганен",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "'сход-развал' as two words",
+        "script_turn": 13,
+        "said": "сход-развал",
+        "stored": "сход развал",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "a brand said in Russian comes out in Latin",
+        "script_turn": 13,
+        "said": "Мандо",
+        "stored": "Mando",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          13,
+          13,
+          25
+        ],
+        "said": [
+          "в девять утра",
+          "Итого двадцать одна пятьсот восемьдесят",
+          "к шести"
+        ],
+        "stored": [
+          "в 9 утра",
+          "Итого 21 580",
+          "к 6"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "a number split in two by the recogniser",
+        "script_turns": [
+          13,
+          25
+        ],
+        "said": [
+          "шесть четыреста сорок",
+          "двадцать одна пятьсот восемьдесят"
+        ],
+        "stored": [
+          "6400 40",
+          "21 500 80"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          9,
+          14,
+          19
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          25
+        ],
+        "said": [
+          "Киа Сид"
+        ],
+        "stored": [
+          "Kia Ceed"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          12,
+          13,
+          15,
+          16,
+          18,
+          21,
+          22,
+          23,
+          25
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          15,
+          17,
+          27
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 4,
+        "lost": 3,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 4,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 5,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 10,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 9,
+        "wrong": 1
+      },
+      "script_choice": {
+        "foreign_names": 4,
+        "latin": 2
+      },
+      "money_time": {
+        "mentions": 32,
+        "as_digits": 27,
+        "wrong": 2
+      },
+      "phones": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 336,
+    "stored_words": 317,
+    "strict_word_difference": 0.182
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 343,
+    "duration_s": 198.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис на Инженерном, Светлана, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здравствуйте. Мне передние стойки поменять надо. Сколько у вас это стоит?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Подскажу. Как я могу к вам обращаться?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сергей.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сергей, очень приятно. А машина какая у вас, Сергей?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Киа Сид, четырнадцатого года.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сид, четырнадцатый. А почему решили менять, текут или стучат?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Правая потекла, вся в масле. Мне на шиномонтаже показали. Ну и раскачивает на волнах.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно. Если одна потекла, меняют парой, это правильно. Я бы на своей машине сразу и опоры посмотрела, раз всё равно разбирать. Пробег какой?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "140.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Тогда смотрите, Сергей. Две передние стойки с заменой — 18 580: работа 5700 и стойки Mando, по 6400 40 за штуку. После стоек обязательно сход развал — 3000. Итого 21 580. Опоры, по состоянию: если живые, не трогаем. Могу принять вас завтра в 10 или в воскресенье в 9 утра.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "21. Ого. А мне в гаражах за 12 предлагали.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сергей, а с чем сравниваете, там в 12 стойки входят? Какие?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну. Сказали, всё с запчастями. Какие, не знаю, не спрашивал.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вот смотрите, из чего у нас сумма. Стойки, почти 13 000 из двадцати одной, это поставщик конвейера, не подделка. За 12 под ключ, это стойки тысячи по три, они через год потекут так же. Работа, три нормо-часа, и на неё гарантия 30 дней. И развал: без него резину съест за сезон. Если хотите уложиться в меньшую сумму, могу посчитать стойки попроще, выйдет тысячи на три дешевле, но я бы на свою не ставила.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да нет, дешёвые не хочу, уже ставил. Ладно, убедили. Давайте завтра.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Отлично. Записываю: завтра, четверг, 10 утра, принимаю сама. Сергей, фамилию вашу и телефон продиктуйте, пожалуйста.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ганен. 907 913 73 68.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ганин Сергей, 907 913 73 68. Верно?",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Верно.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Машину оставляете на день, к 6 будет готова, я вам сама позвоню. Значит, ещё раз: завтра в 10, Десятый Инженерный проезд, 30, Kia Ceed, две передние стойки и сход-развал, 21 500 80. Забираете вечером.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, спасибо, Светлана.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, Сергей, до завтра.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис на Инженерном, Светлана, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Ганин Сергей, 907 913 73 68. Верно?",
+        "level": 2,
+        "segment": 19
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А почему решили менять, текут или стучат?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Тогда смотрите, Сергей. Две передние стойки с заменой — 18 580: работа 5700 и стойки Mando, по 6400 40 за штуку. После стоек обязательно сход развал — 3000. Итого 21 580. Опоры, по состоянию: если живые, не трогаем. Могу принять вас завтра в 10 или в воскресенье в 9 утра.",
+        "level": 2,
+        "segment": 11
+      },
+      {
+        "key": "offered_time",
+        "quote": "Могу принять вас завтра в 10 или в воскресенье в 9 утра.",
+        "level": 2,
+        "segment": 11
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записываю: завтра, четверг, 10 утра, принимаю сама.",
+        "level": 2,
+        "segment": 17
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, ещё раз: завтра в 10, Десятый Инженерный проезд, 30, Kia Ceed, две передние стойки и сход-развал, 21 500 80.",
+        "level": 2,
+        "segment": 21
+      },
+      {
+        "key": "objection",
+        "quote": "Сергей, а с чем сравниваете, там в 12 стойки входят?",
+        "level": 2,
+        "segment": 13
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "Сергей, а с чем сравниваете, там в 12 стойки входят?",
+      "why": "Услышав «в гаражах за двенадцать», не стала ни оправдываться, ни сбавлять: спросила, что входит в ту цену. Клиент сам понял, что не знает, с чем сравнивает.",
+      "segment": 13
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Могу принять вас завтра в 10 или в воскресенье в 9 утра.",
+      "say": "Могу принять вас завтра в десять или в воскресенье в девять утра. Завтра удобнее: к вечеру машина уже будет у вас."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 100.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "200",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 2,
+          "segment": 19
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 11
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 11
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 17
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 21
+        },
+        {
+          "key": "objection",
+          "level": 2,
+          "segment": 13
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 100.0,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 13,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис на Инженерном, Светлана, здравствуйте",
+        "name_and_number": "Ганин Сергей, 907 913 73 68. Верно?",
+        "need_discovery": "А почему решили менять, текут или стучат?",
+        "price_with_next_step": "Тогда смотрите, Сергей. Две передние стойки с заменой — 18 580: работа 5700 и стойки Mando, по 6400 40 за штуку. После стоек обязательно сход развал — 3000. Итого 21 580. Опоры, по состоянию: если живые, не трогаем. Могу принять вас завтра в 10 или в воскресенье в 9 утра",
+        "offered_time": "Могу принять вас завтра в 10 или в воскресенье в 9 утра",
+        "asked_for_booking": "Записываю: завтра, четверг, 10 утра, принимаю сама",
+        "recap": "Значит, ещё раз: завтра в 10, Десятый Инженерный проезд, 30, Kia Ceed, две передние стойки и сход-развал, 21 500 80",
+        "objection": "Сергей, а с чем сравниваете, там в 12 стойки входят?"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Сергей, а с чем сравниваете, там в 12 стойки входят?",
+        "why": "Услышав «в гаражах за двенадцать», не стала ни оправдываться, ни сбавлять: спросила, что входит в ту цену. Клиент сам понял, что не знает, с чем сравнивает."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Могу принять вас завтра в 10 или в воскресенье в 9 утра.",
+        "say": "Могу принять вас завтра в десять или в воскресенье в девять утра. Завтра удобнее: к вечеру машина уже будет у вас."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 2,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": 2
+    },
+    "score": 100.0
+  },
+  "why": {
+    "greeting": "2: компания, площадка и имя в первой фразе.",
+    "name_and_number": "2: имя, фамилия, номер, и номер повторён вслух с вопросом «верно?».",
+    "need_discovery": "2: машина, работа и обстоятельства: почему меняет (правая потекла) и пробег.",
+    "price_with_next_step": "2: сумма по строкам, что в неё может добавиться, и в той же реплике два времени.",
+    "offered_time": "2: два конкретных варианта.",
+    "asked_for_booking": "2: день, час и кто принимает.",
+    "recap": "2: время, адрес, работа и сумма; когда забирать.",
+    "objection": "2: выяснила, с чем он сравнивает, разложила сумму, предложила вариант дешевле и сказала, почему сама бы его не взяла.",
+    "day_report": "Для отчёта дня это «спасённый звонок»: визит согласован после сомнения, на которое ответили полностью.",
+    "score": "(1·2 + 2·2 + 2·2 + 2·2 + 3·2 + 3·2 + 1·2 + 2·2) / 2 = 16 из 16 весовых баллов = 100.0.",
+    "carried_by": [
+      "objection",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Новый клиент Сергей Ганин, Kia Ceed 2014, телефон +7 907 913-73-68. Запись на следующий день, 10:00: замена передних стоек (18 580) и сход-развал (3 000)."
+  ]
+}

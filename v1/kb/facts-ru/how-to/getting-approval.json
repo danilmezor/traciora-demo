@@ -1,0 +1,127 @@
+{
+ "path": "how-to/getting-approval.md",
+ "title": "Как согласовать работы",
+ "title_en": "Getting approval",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/getting-approval.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Step three of the inspection-to-approval procedure: sending the estimate, chasing it, recording the answer.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S1",
+  "S7",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 294,
+ "links_to": [
+  "how-to/writing-an-estimate.md",
+  "how-to/company-vehicle-at-the-counter.md",
+  "parts/ordering-parts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Approval in Russia is mostly by phone, with the photos sent by messenger: a phone yes is read back and then confirmed by a message.",
+  "The second chase is at 18:00 (closing is 20:00)."
+ ],
+ "new_facts": [
+  "The 30-minute call and the three-step chase (2 hours, 18:00, the next morning)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Дозвон",
+   "columns": [
+    "Когда",
+    "Что делать"
+   ],
+   "rows": [
+    {
+     "Когда": "Прошло 2 часа, ответа нет",
+     "Что делать": "Звоните. Не взял — короткое сообщение: кто звонил и зачем"
+    },
+    {
+     "Когда": "18:00 того же дня",
+     "Что делать": "Звоните ещё раз. Скажите, где стоит машина: на посту или на улице, закрытая"
+    },
+    {
+     "Когда": "На следующее утро, в первый час",
+     "Что делать": "Третий звонок, последний. После него машина ждёт клиента, и это записано в наряде"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Отправить, потом позвонить",
+   "item": "Отправьте смету сообщением, с фотографиями, — туда, где клиент на связи: в мессенджер или в чат."
+  },
+  {
+   "section": "Отправить, потом позвонить",
+   "item": "Если в смете есть «Менять», звоните в течение 30 минут после отправки. Не ждите, пока откроет. «Я отправила вам фотографии. Если коротко…» Сначала фото, потом цена, потом два времени."
+  },
+  {
+   "section": "Отправить, потом позвонить",
+   "item": "Если всё плановое и клиент сказал «просто напишите», дайте клиенту два часа на ответ."
+  },
+  {
+   "section": "Записать",
+   "item": "Отметьте «согласовано» или «отказ» по каждой работе. Не по наряду целиком."
+  },
+  {
+   "section": "Записать",
+   "item": "Кто сказал «да», как (сообщением, по телефону, на приёмке) и во сколько. По телефону — сначала назовите работу и сумму ещё раз, а после разговора попросите подтвердить сообщением."
+  },
+  {
+   "section": "Записать",
+   "item": "Автомобили организаций: лимит водителя, выше — ответственный по договору. Правило."
+  },
+  {
+   "section": "Записать",
+   "item": "Отказался, а делать всё равно придётся — поставьте «отложено». Вернётся напоминанием, и с этого начнём следующий визит."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паше",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

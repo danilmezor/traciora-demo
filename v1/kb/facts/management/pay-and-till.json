@@ -1,0 +1,141 @@
+{
+ "path": "management/pay-and-till.md",
+ "title": "Pay and till",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: how each job is paid, without amounts, and who sees the till counts. The page a junior is refused (stories S12.5).",
+ "serves": [
+  "visibility:senior",
+  "S12",
+  "S2",
+  "challenge:kb-does-not-say",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 330,
+ "links_to": [
+  "how-to/closing-the-till.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Ledger s12.pages: \"Pay and till\" is the senior page. A junior asking what it says is refused by rank and the answer does not quote it (stories S12.5).",
+  "Pay types: line technicians flat rate on sold hours; diagnostic and electrical technicians salary plus quarterly bonus; apprentice, lube, part-time, seasonal hourly; advisors salary plus monthly bonus on labour hours sold; leads, foreman, parts manager salary plus quarterly bonus; office, service and shop managers salary.",
+  "No amounts anywhere (planted gap).",
+  "Comebacks are done on the flat-rate technician's own time; waiting on parts is unpaid.",
+  "Charlotte Pike staff are still on their old pay.",
+  "Till: counted at closing (expected, counted, difference); advisors see their own count; the history by shop and person is for managers and slot 3 (design 2.6: till counts hidden below senior, the bookkeeper excepted).",
+  "Differences over 5.00 reach the shop manager the same evening; slot 3 totals differences by closer monthly; Charlotte Pike counts twice.",
+  "Slot 11 is paid flat rate (cast)."
+ ],
+ "tables": [
+  {
+   "section": "Pay",
+   "columns": [
+    "Job",
+    "Paid by"
+   ],
+   "rows": [
+    {
+     "Job": "Line technicians",
+     "Paid by": "Flat rate: the hours sold on their jobs"
+    },
+    {
+     "Job": "Diagnostic and electrical technicians",
+     "Paid by": "Salary, with a quarterly bonus"
+    },
+    {
+     "Job": "Apprentice, lube and tire, part-time and seasonal",
+     "Paid by": "Hourly"
+    },
+    {
+     "Job": "Service advisors",
+     "Paid by": "Salary, with a monthly bonus on labour hours sold"
+    },
+    {
+     "Job": "Lead advisors, foreman, parts manager",
+     "Paid by": "Salary, with a quarterly bonus"
+    },
+    {
+     "Job": "Office manager, service manager, shop manager",
+     "Paid by": "Salary"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Pay",
+   "item": "A comeback is done on the technician's own time. That is why they argue about whose comeback it is, and why the foreman decides, not the advisor."
+  },
+  {
+   "section": "Pay",
+   "item": "A technician waiting on parts earns nothing. Parts that are late cost him before they cost us."
+  },
+  {
+   "section": "Pay",
+   "item": "An advisor's bonus is on hours sold, not on discounts avoided. The discount rule is there for that."
+  },
+  {
+   "section": "Till",
+   "item": "Every shop's drawer is counted at closing and the count is in the shop system: what the system expected, what was counted, the difference. Advisors see their own count on the day. The history of counts, by shop and by person, is for managers and Donna."
+  },
+  {
+   "section": "Till",
+   "item": "A difference of more than $5.00 reaches you the same evening: Closing the till. Ask about it the next morning, not at month end."
+  },
+  {
+   "section": "Till",
+   "item": "Donna totals the differences by the person who closed, every month. If one name keeps coming up short, she tells me and I tell you. Do not start your own investigation."
+  },
+  {
+   "section": "Till",
+   "item": "At Charlotte Pike the drawer is counted twice. That stays until I say otherwise."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "new_facts": [
+  "Pay types per role. The ERP employee.pay_type must match: flat rate for the line technicians; salary for slots 10 and 13; hourly for 14, 15, 28, F4."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "section \"Till\" added; the page, until then \"Pay plans\", renamed \"Pay and till\"; message: \"Till counts: who sees what.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian: сдельная оплата (процент от нормо-часов) for mechanics, оклад плюс процент for advisors; касса: Z-отчёт and the differences."
+ ]
+}

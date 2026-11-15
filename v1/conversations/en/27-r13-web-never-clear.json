@@ -1,0 +1,110 @@
+{
+  "format": "seed-conversation/1",
+  "id": "27-r13-web-never-clear",
+  "configuration": "en",
+  "number": 27,
+  "story": "R13",
+  "title": "Unclear and never cleared: 'how much for the 60'",
+  "demonstrates": "Rule R13, the session that ends unclear. The assistant asks one plain question, then offers two readings from the price list, then offers a way out (a name and a number, or come back when he knows). It never guesses. The customer stops answering; with no number there is no hand-off, the chat stays the assistant's, and Chatwoot resolves it after seven silent days with no person on the event.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {"name": "Website visitor", "invented": true, "first_time": true},
+    "staff": []
+  },
+  "scenario": {
+    "who_writes": "Somebody passing on what a friend told him.",
+    "what_happens": "Three customer lines, three answers, no result.",
+    "facts": {
+      "public_pages_used": ["price list: tires and alignment", "price list: maintenance"],
+      "prices": [
+        {"said": "$60.00", "amount": 60.0, "what": "balance four wheels, menu price", "from": {"catalogue": "wheel_balance", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$243.00", "amount": 243.0, "what": "scheduled maintenance service (30K / 60K / 90K)", "from": {"catalogue": "scheduled_maintenance", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "60", "what": "what the customer asks for; it could be the 60.00 wheel balance or the 60,000-mile service"},
+        {"said": "60,000-mile", "what": "the 60K scheduled maintenance of the catalogue"}
+      ]
+    },
+    "unclear": {
+      "kind": "two readings of one word: 'the 60' is a price or a mileage",
+      "loops": 2,
+      "resolved": false,
+      "how": "The assistant asks what he means; he repeats himself. It offers the two things on the price list that fit; he does not know. It asks for the friend's word or a number to pass on, and he does not answer."
+    }
+  },
+  "days": {
+    "T-16d": {"anchor": "the Wednesday of week T-2", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 2}, "nominal": "Wed 2026-10-28", "what": "the Wednesday of week T-2 (DESIGN.md section 6, row 27)"},
+    "T-9d": {"anchor": "7 calendar days after the Wednesday of week T-2", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 2, "plus_days": 7}, "nominal": "Wed 2026-11-04", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0027-4e00-8000-00000000e01b",
+      "peer": {"id": "seedv1-browser-en-0902", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0902",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-16d", "at": "12:40:05", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-16d", "at": "12:40:05", "kind": "message", "from": "customer", "text": "how much for the 60"},
+        {"n": 2, "day": "T-16d", "at": "12:40:29", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. Happy to help. What do you mean by \"the 60\", and what kind of car is it?"},
+        {"n": 3, "day": "T-16d", "at": "12:41:10", "kind": "message", "from": "customer", "text": "the 60 thing. my buddy said yall do it"},
+        {"n": 4, "day": "T-16d", "at": "12:41:35", "kind": "message", "from": "assistant", "text": "Thanks. So I give you the right price, which of these is it: balancing four wheels, which is $60.00, or the 60,000-mile scheduled maintenance service, which is $243.00? If it's something else, tell me what the car needs or what it's doing."},
+        {"n": 5, "day": "T-16d", "at": "12:42:30", "kind": "message", "from": "customer", "text": "idk he just said the 60"},
+        {"n": 6, "day": "T-16d", "at": "12:42:54", "kind": "message", "from": "assistant", "text": "No problem. If you can find out from him which service it was, or tell me what the car is doing, I can give you a price. Or leave your name and a number and I'll ask an advisor to call you."},
+        {"n": 7, "day": "T-9d", "at": "12:42", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": null,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "resolved_how": "by Chatwoot after 7 silent days; no person, no hand-off, no card"
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 25},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 24}
+        ],
+        "message_kinds": {"customer": 3, "assistant": 3, "manager": 0, "note": 0},
+        "resolutions": [
+          {"day": "T-9d", "at": "12:42", "by": null}
+        ],
+        "draft_outcomes": [],
+        "operator_credit": "nobody: the assistant is not an operator"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "the assistant alone",
+    "outcome": "ended unclear; resolved by 7 silent days",
+    "facts": [
+      "the request was never made clear",
+      "the assistant asked, offered two readings from the price list (60.00 and 243.00) and did not guess",
+      "no name or number was left, so no hand-over was made"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Both readings are real rows of the price list: a wheel balance is 60.00 and there is a 60,000-mile service.",
+    "The assistant stays on the question and names no job as his.",
+    "This is one of the three sessions in a hundred that end unclear."
+  ],
+  "new_facts": []
+}

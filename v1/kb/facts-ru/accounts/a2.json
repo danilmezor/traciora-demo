@@ -1,0 +1,153 @@
+{
+ "path": "accounts/a2.md",
+ "title": "Тёплый контур",
+ "title_en": "Millsaps Heating & Plumbing",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/a2.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Standing instructions for account A2, the happy path.",
+ "serves": [
+  "S1",
+  "S5",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 342,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Тёплый контур», heating and plumbing: 25 vehicles (Largus vans, Granta estates, Niva, two УАЗ 3909, ГАЗель), garage numbers Т-01 to Т-25.",
+  "The Monday slot is at 9:00 (ledger acct.A2.weekly_slot). Lead advisors work two on, two off in the Russian configuration (R12): the page says who takes the slot when Monday is not her shift.",
+  "Public holidays are working days; only 1 and 2 January move the slot.",
+  "Documents per order, on paper, weekly with a driver: the customer has no ЭДО.",
+  "Back by 17:00, the dispatcher called by 13:00 otherwise."
+ ],
+ "new_facts": [
+  "When Monday is not slot 16's shift, slot 17 takes the vans from the list on the customer record and calls the dispatcher.",
+  "Paper originals weekly for A2; roof racks with pipes do not clear bay 2 (colour, no data footprint)."
+ ],
+ "new_amounts": [
+  {
+   "value": 25000,
+   "why": "лимит согласования диспетчера A2 на одну машину"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Согласование",
+   "item": "Водители оставляют машины и уходят. Согласовать до 8 000 ₽ водитель может, как у любого корпоративного клиента, но не любит: звоните диспетчеру."
+  },
+  {
+   "section": "Согласование",
+   "item": "Лариса Геннадьевна согласует до 25 000 ₽ на машину: +7 907 514-79-22."
+  },
+  {
+   "section": "Согласование",
+   "item": "Больше — сам Виктор Семёнович, директор: +7 907 820-54-59. Трубку берёт."
+  },
+  {
+   "section": "Согласование",
+   "item": "По срочным поломкам звонит Рамиль, их механик: +7 907 471-16-40. Заявка от него — это заявка «Тёплого контура»; сумму выше 25 000 ₽ в тот же день подтверждает Виктор Семёнович."
+  },
+  {
+   "section": "Что я знаю про эти машины",
+   "item": "Гаражные номера с Т-01 по Т-25, наклейка на задней двери."
+  },
+  {
+   "section": "Что я знаю про эти машины",
+   "item": "Largus-фургоны ездят гружёные и едят передние колодки. Меряйте колодки при каждом заезде и предупреждайте диспетчера за один заезд вперёд, чтобы это никогда не было сюрпризом."
+  },
+  {
+   "section": "Что я знаю про эти машины",
+   "item": "На крыше у фургонов багажники с трубами, во второй пост они не проходят по высоте. Ставьте на первый или четвёртый."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Артём",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Светлана",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A2",
+   "contact": "Лариса Геннадьевна Шишкина",
+   "role": "диспетчер (записывает машины на еженедельное окно)",
+   "written_as": "Лариса Геннадьевна"
+  },
+  {
+   "account": "A2",
+   "contact": "Лариса Геннадьевна Шишкина",
+   "role": "диспетчер (записывает машины на еженедельное окно)",
+   "written_as": "Ларисе Геннадьевне"
+  },
+  {
+   "account": "A2",
+   "contact": "Виктор Семёнович Агафонов",
+   "role": "директор",
+   "written_as": "Виктор Семёнович"
+  },
+  {
+   "account": "A2",
+   "contact": "Ольга Петровна Агафонова",
+   "role": "главный бухгалтер",
+   "written_as": "Ольга Петровна"
+  }
+ ],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [
+  8000.0,
+  25000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "Monday priority moved here from a team note, in Angie's words (she is middle rank: her proposal, approved by slot 4); message: \"Monday slot written down.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Окно по понедельникам записано."
+  }
+ ],
+ "has_history": true
+}

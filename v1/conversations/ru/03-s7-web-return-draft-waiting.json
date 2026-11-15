@@ -1,0 +1,146 @@
+{
+  "format": "seed-conversation/1",
+  "id": "03-s7-web-return-draft-waiting",
+  "configuration": "ru",
+  "number": 3,
+  "story": "S7",
+  "title": "Она возвращается за амортизаторами: ассистент называет цену и передаёт заявку, Алина берёт чат; в момент T её ответ не прочитан и ждёт черновик",
+  "demonstrates": "The live-demo chat. A returning visitor asks to book the deferred work. The assistant answers from the public price list, cannot book, hands over; from Alina's first line the chat is hers and the assistant only drafts. Thirty minutes before T the customer writes again: the chat is open, owned by slot 6, unread, with one draft in the box that is honest about what the assistant cannot see. Editing it (two free times on the evenings she asked for, the total to pay) and sending it is the demo.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json ru.S7",
+      "name": "Ольга Сергеевна Тимофеева",
+      "in_chat": "Ольга",
+      "first_time": false,
+      "phone": "+7 907 378-60-35"
+    },
+    "staff": [
+      {"slot": 6, "name": "Алина Хасанова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Та же клиентка, с того же телефона, через 16 дней после визита.",
+    "vehicle": "Hyundai Solaris 2016",
+    "wants": "Записаться на задние амортизаторы, от которых отказалась, и узнать итог.",
+    "what_happens": "Во вторник в 15:40 она спрашивает цену и можно ли на этой неделе. Ассистент называет цену из прайса и передаёт заявку. В 16:05 Алина предлагает два времени. В тот день ответа нет. В пятницу в 10:00 клиентка пишет, что ни одно не подходит, просит вторник или среду вечером и спрашивает итог. Ассистент готовит черновик; к моменту T его никто не открывал.",
+    "facts": {
+      "declined_at_the_visit": "задние амортизаторы, пара",
+      "to_pay_with_supplies": 11811.2,
+      "before_vat": 11248.76,
+      "expected_reply": "два свободных времени на main во вторник или в среду недели W+1 вечером, как она просит, и цена: 11 720 плюс расходные материалы, 11 811,20 к оплате, НДС в том числе (card S07, question S7.3)",
+      "public_pages_used": ["прайс: замена задних амортизаторов"],
+      "prices": [
+        {"said": "11 720 ₽", "amount": 11720.0, "what": "замена задних амортизаторов, пара, класс car, стандартные запчасти, прайс на сегодня", "from": {"catalogue": "rear_shocks_pair", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-3d": {"anchor": "slot 6's last working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -1}, "nominal": "Tue 2026-11-10", "what": "the return chat, 15:40; slot 6 replies at 16:05"},
+    "T": {"anchor": "T's date", "rule": {"kind": "T"}, "nominal": "Fri 2026-11-13", "what": "she writes again 30 minutes before T"},
+    "T+1d": {"anchor": "slot 6's last working day after T", "rule": {"kind": "slot_working_day", "slot": 6, "n": 1}, "nominal": "Sat 2026-11-14", "what": "'в субботу': slot 6's next working day after T"},
+    "T+4d": {"anchor": "slot 6's 2nd working day after T", "rule": {"kind": "slot_working_day", "slot": 6, "n": 2}, "nominal": "Tue 2026-11-17", "what": "'во вторник': slot 6's 2nd working day after T"},
+    "T+5d": {"anchor": "slot 6's 3rd working day after T", "rule": {"kind": "slot_working_day", "slot": 6, "n": 3}, "nominal": "Wed 2026-11-18", "what": "'в среду': her 3rd"}
+  },
+  "floating_days": [
+    {"word": "на этой неделе", "said_on": "T-3d", "day": "the week W0", "form": "на + prepositional"},
+    {"word": "на пятницу на 16:00", "said_on": "T-3d", "day": "T", "form": "на + accusative"},
+    {"word": "на субботу на 12:30", "said_on": "T-3d", "day": "T+1d", "form": "на + accusative"},
+    {"word": "в пятницу и субботу", "said_on": "T", "day": "T and T+1d", "form": "в + accusative"},
+    {"word": "на следующей неделе", "said_on": "T", "day": "the week W+1", "form": "на + prepositional"},
+    {"word": "во вторник или среду вечером", "said_on": "T", "day": "T+4d or T+5d", "form": "в + accusative"},
+    {"word": "на вторник или среду вечером", "said_on": "T", "day": "T+4d or T+5d", "form": "на + accusative"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0003-4e00-8000-00000000a003",
+      "peer": {"id": "seedv1-browser-ru-0001", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0001",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-3d", "at": "15:40:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-3d", "at": "15:40:10", "kind": "message", "from": "customer", "text": "здравствуйте, это снова Ольга, солярис. созрела на задние амортизаторы)"},
+        {"n": 2, "day": "T-3d", "at": "15:40:35", "kind": "message", "from": "customer", "text": "сколько это будет и можно ли на этой неделе"},
+        {"n": 3, "day": "T-3d", "at": "15:41:00", "kind": "message", "from": "assistant", "text": "Ольга, здравствуйте, рад вас снова видеть! По прайсу замена задних амортизаторов, пара, для вашего класса машины стоит 11 720 ₽ с запчастями; точная сумма по вашей смете есть у мастера. Сам записать я не могу, передам заявку на Московское шоссе, время вам подтвердят. Номер прежний, +7 907 378-60-35?"},
+        {"n": 4, "day": "T-3d", "at": "15:41:30", "kind": "message", "from": "customer", "text": "да, тот же"},
+        {"n": 5, "day": "T-3d", "at": "15:41:54", "kind": "message", "from": "assistant", "text": "Спасибо. Заявку передал, с вами свяжутся в ближайшее время."},
+        {"n": 6, "day": "T-3d", "at": "15:41:55", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Ольга", "phone": "+7 907 378-60-35", "site": "Московское шоссе", "context": "Ольга, Hyundai Solaris 2016, Московское шоссе. Хочет записаться на замену задних амортизаторов, которую отложила в прошлый визит, на этой неделе. Я назвал цену из прайса за пару, 11 720 ₽ с запчастями, время не называл."}}, "note": {"from": "assistant", "private": true, "text": "Ольга, Hyundai Solaris 2016, Московское шоссе. Хочет записаться на замену задних амортизаторов, которую отложила в прошлый визит, на этой неделе. Я назвал цену из прайса за пару, 11 720 ₽ с запчастями, время не называл."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-3d 20:00, закрытие дня"}},
+        {"n": 7, "day": "T-3d", "at": "15:53", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-3d", "at": "16:05:13", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 9, "day": "T-3d", "at": "16:05:15", "kind": "message", "from": "staff", "slot": 6, "text": "Ольга, добрый день! Это Алина. Хорошо, что решились, с амортизаторами тянуть не стоит. Могу записать вас на пятницу на 16:00 или на субботу на 12:30, по времени это часа полтора. Как вам удобнее?", "late": "story: the card's 16:05 (ledger s7.thread.taken_by_6)"},
+        {"n": 10, "day": "T-3d", "at": "16:05:16", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-3d", "at": "16:05:17", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T", "at": "10:00:10", "kind": "message", "from": "customer", "text": "Алина, доброе утро. простите что пропала, только увидела"},
+        {"n": 13, "day": "T", "at": "10:00:42", "kind": "message", "from": "customer", "text": "в пятницу и субботу никак, на работе завал. а на следующей неделе во вторник или среду вечером можно? и сколько всего с меня будет"},
+        {"n": 14, "day": "T", "at": "10:01:20", "kind": "draft", "id": "d1", "text": "Ольга, доброе утро! Ничего страшного. Замена задних амортизаторов, пара, стоит 11 720 ₽ с запчастями. Итог по вашей смете и свободное время на вторник или среду вечером уточню и сразу вам напишу.", "why_a_draft": "the chat is owned by a person", "outcome": null},
+        {"n": 15, "day": "T", "at": "10:24", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"}
+      ],
+      "assignee_history": [
+        {"day": "T-3d", "at": "16:05:13", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "open",
+        "owner": 6,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "high"},
+        "waiting_since": {"day": "T", "at": "10:00:10"},
+        "waited_working_minutes_at_t": 29.8,
+        "unread": 2,
+        "draft_in_box": "d1",
+        "contact_note": "One website visitor: the browser of the first chat, remembered for 30 days (ledger conv.web_visitor_memory_days). The contact holds no name and no phone; both are in the hand-off notes and on the cards.",
+        "live_demo": "a web chat owned by slot 6, so the waiting draft can be edited and sent in a live demo (ledger conv.live_demo, conv.open_at_t)"
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 25},
+          {"asked": 4, "answered": 5, "by": "assistant", "wall_seconds": 24},
+          {"asked": 6, "answered": 9, "by": 6, "working_minutes": 23.3, "wall_minutes": 23.3, "measured_from": "n 6", "reply": "first", "late": "story: the card's 16:05 (ledger s7.thread.taken_by_6)"},
+          {"asked": 12, "answered": null, "note": "open at T"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 9,
+          "working_minutes": 23.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 2, "manager": 1, "note": 1},
+        "resolutions": [],
+        "draft_outcomes": [],
+        "operator_credit": "the chat's first answer is nobody's; slot 6: one reply 23 minutes after the hand-off, nothing resolved; the second hand-over card was taken by her at 16:05"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "assistant first, handed over (scheduling), slot 6; then drafts",
+    "outcome": "open at T, owned by slot 6, unread, one unsent draft",
+    "facts": [
+      "she asked on slot 6's last working day before T to book the rear shock absorbers she had declined",
+      "the assistant gave the list price, 11 720 with parts, and handed over",
+      "slot 6 offered Friday 16:00 or Saturday 12:30; she cannot come either day and asks for Tuesday or Wednesday evening of the next week and for the total",
+      "the right answer offers two free times on the Tuesday or the Wednesday evening of week W+1 and the price: 11 720 plus supplies, 11 811,20 to pay, VAT inside",
+      "nothing is sent without slot 6"
+    ],
+    "questions": ["S7.1", "S7.2", "S7.3"]
+  },
+  "why": [
+    "В черновике то, что ассистент знает (цена из прайса), и обещание выяснить остальное. Правка Алины — два времени и итог.",
+    "В её реплике в 16:05 цены нет: сначала время, а цену только что назвали.",
+    "Вторник и среда следующей недели — её рабочие дни: Алина может ответить «приму сама»."
+  ],
+  "new_facts": [
+    "Алина предложила пятницу (день T) в 16:00 и субботу в 12:30; клиентка не может в оба дня и просит вторник или среду следующей недели, вечером.",
+    "О замене задних амортизаторов говорят «часа полтора» (каталог: 1,6 нормо-часа)."
+  ]
+}

@@ -1,0 +1,1567 @@
+{
+ "path": "prices/price-list.md",
+ "title": "Price list",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "The current price of every catalogue job; the single page a price is quoted from. Long: over the read limit, so it is read by section.",
+ "serves": [
+  "S8",
+  "S12",
+  "S7",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:long-page-by-section",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "long",
+ "words_en": 2425,
+ "links_to": [
+  "prices/labour-rates-and-fees.md",
+  "prices/counter-price-sheet.pdf"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "All 70 catalogue jobs in ten sections named after the catalogue categories; columns Job, Hours, Labour, Economy, Standard, Premium, Parts in the standard quote (brand, part, quantity from the standard tier of the catalogue).",
+  "Class car only; other classes by multiplier or the PDF price sheet.",
+  "Menu-priced rows are marked (menu) and carry no shop supplies; hourly rows add 5 % of labour, cap 35 USD per bill.",
+  "Timing belt (Replace timing belt, tensioner, idlers & water pump) standard total is 720.00: the figure the stale service page gets wrong.",
+  "Tyre fees 19.40 for four; tyre storage 80.00 a season; rebuild sublet price 3,400.00 by vendor V6.",
+  "A job that is not on the list has no price: ask the lead advisor named unpriced jobs: key and remote programming, wheel-lock removal, headlight lens restoration, trailer wiring, diesel work beyond fluids and filters (planted: the honest answer to their price is that the base has none)."
+ ],
+ "tables": [
+  {
+   "section": "Maintenance",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Full synthetic oil & filter change (menu)",
+     "Hours": "0.5",
+     "Labour": "$32.95",
+     "Economy": "$65.95",
+     "Standard": "$90.95",
+     "Premium": "$120.95",
+     "Parts in the standard quote": "Valvoline Advanced Full Synthetic (bulk) engine oil 0W-20 / 5W-30, 5 qt; WIX oil filter, 1 ea"
+    },
+    {
+     "Job": "Replace engine air filter",
+     "Hours": "0.2",
+     "Labour": "$27.00",
+     "Economy": "$45.75",
+     "Standard": "$53.14",
+     "Premium": "$58.73",
+     "Parts in the standard quote": "WIX engine air filter, 1 ea"
+    },
+    {
+     "Job": "Replace cabin air filter",
+     "Hours": "0.3",
+     "Labour": "$40.50",
+     "Economy": "$55.50",
+     "Standard": "$64.36",
+     "Premium": "$71.27",
+     "Parts in the standard quote": "FRAM Fresh Breeze cabin air filter, 1 ea"
+    },
+    {
+     "Job": "Replace wiper blades (pair) (menu)",
+     "Hours": "0.1",
+     "Labour": "$0.00",
+     "Economy": "$27.50",
+     "Standard": "$47.73",
+     "Premium": "$55.77",
+     "Parts in the standard quote": "Rain-X Latitude wiper blades 26 in + 18 in, 1 pair"
+    },
+    {
+     "Job": "Replace spark plugs",
+     "Hours": "1",
+     "Labour": "$135.00",
+     "Economy": "$199.00",
+     "Standard": "$222.28",
+     "Premium": "$222.68",
+     "Parts in the standard quote": "NGK Laser Iridium iridium spark plug, 4 ea"
+    },
+    {
+     "Job": "Coolant drain, flush & fill",
+     "Hours": "1",
+     "Labour": "$135.00",
+     "Economy": "",
+     "Standard": "$193.00",
+     "Premium": "",
+     "Parts in the standard quote": "Zerex Asian Vehicle 50/50 coolant, Asian pink 50/50, 2 gal"
+    },
+    {
+     "Job": "Replace fuel filter",
+     "Hours": "0.7",
+     "Labour": "$94.50",
+     "Economy": "$114.50",
+     "Standard": "$121.77",
+     "Premium": "$125.27",
+     "Parts in the standard quote": "WIX fuel filter, 1 ea"
+    },
+    {
+     "Job": "Scheduled maintenance service (30K / 60K / 90K) - inspect, adjust, lubricate",
+     "Hours": "1.8",
+     "Labour": "$243.00",
+     "Economy": "",
+     "Standard": "$243.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Fleet PM service A - cargo van (oil & filter, chassis lube, 50-point inspection)",
+     "Hours": "1.5",
+     "Labour": "$202.50",
+     "Economy": "$243.00",
+     "Standard": "$270.59",
+     "Premium": "$306.49",
+     "Parts in the standard quote": "Valvoline Advanced Full Synthetic (bulk) engine oil 0W-20 / 5W-30, 6 qt; WIX oil filter, 1 ea"
+    },
+    {
+     "Job": "Fuel induction & injector cleaning service",
+     "Hours": "0.8",
+     "Labour": "$108.00",
+     "Economy": "$135.50",
+     "Standard": "$151.18",
+     "Premium": "$167.62",
+     "Parts in the standard quote": "BG 44K Fuel System Cleaner fuel system cleaning chemicals, 1 kit"
+    }
+   ]
+  },
+  {
+   "section": "Brakes",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Brake system inspection (menu)",
+     "Hours": "0.5",
+     "Labour": "$49.95",
+     "Economy": "",
+     "Standard": "$49.95",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Replace front brake pads, clean & lube hardware",
+     "Hours": "1.1",
+     "Labour": "$148.50",
+     "Economy": "$208.50",
+     "Standard": "$234.86",
+     "Premium": "$248.50",
+     "Parts in the standard quote": "Wagner ThermoQuiet front brake pad set (FMSI D1222), 1 set"
+    },
+    {
+     "Job": "Replace front brake pads & rotors",
+     "Hours": "1.8",
+     "Labour": "$243.00",
+     "Economy": "$428.00",
+     "Standard": "$493.00",
+     "Premium": "$523.76",
+     "Parts in the standard quote": "Wagner ThermoQuiet front brake pad set (FMSI D1222), 1 set; Bosch QuietCast front brake rotor, 2 ea"
+    },
+    {
+     "Job": "Replace rear brake pads, clean & lube hardware",
+     "Hours": "1.1",
+     "Labour": "$148.50",
+     "Economy": "$201.00",
+     "Standard": "$225.77",
+     "Premium": "$236.96",
+     "Parts in the standard quote": "Wagner ThermoQuiet rear brake pad set (FMSI D1212), 1 set"
+    },
+    {
+     "Job": "Replace rear brake pads & rotors",
+     "Hours": "1.8",
+     "Labour": "$243.00",
+     "Economy": "$410.50",
+     "Standard": "$470.27",
+     "Premium": "$496.84",
+     "Parts in the standard quote": "Wagner ThermoQuiet rear brake pad set (FMSI D1212), 1 set; Bosch QuietCast rear brake rotor, 2 ea"
+    },
+    {
+     "Job": "Replace rear brake shoes & hardware (drum)",
+     "Hours": "2",
+     "Labour": "$270.00",
+     "Economy": "$337.95",
+     "Standard": "$351.81",
+     "Premium": "$353.91",
+     "Parts in the standard quote": "Wagner rear brake shoe set, 1 set; Carlson drum brake hardware kit, 1 kit"
+    },
+    {
+     "Job": "Brake fluid flush",
+     "Hours": "1",
+     "Labour": "$135.00",
+     "Economy": "",
+     "Standard": "$151.00",
+     "Premium": "",
+     "Parts in the standard quote": "Valvoline DOT 3 & 4 brake fluid DOT 3, 1 qt"
+    },
+    {
+     "Job": "Replace front brake caliper (one side), bleed",
+     "Hours": "1.3",
+     "Labour": "$175.50",
+     "Economy": "$295.50",
+     "Standard": "$316.41",
+     "Premium": "$344.73",
+     "Parts in the standard quote": "Cardone reman front brake caliper, remanufactured, 1 ea"
+    }
+   ]
+  },
+  {
+   "section": "Tires & alignment",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Seasonal tire changeover - dismount, mount & balance 4 (menu)",
+     "Hours": "1",
+     "Labour": "$100.00",
+     "Economy": "",
+     "Standard": "$100.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Seasonal wheel swap (4 mounted wheels) (menu)",
+     "Hours": "0.4",
+     "Labour": "$40.00",
+     "Economy": "",
+     "Standard": "$40.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Seasonal tire storage (set of 4, per season) (menu)",
+     "Hours": "0",
+     "Labour": "$0.00",
+     "Economy": "",
+     "Standard": "$80.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Mount & balance 4 new tires (menu)",
+     "Hours": "1",
+     "Labour": "$100.00",
+     "Economy": "$519.40",
+     "Standard": "$693.76",
+     "Premium": "$1,001.44",
+     "Parts in the standard quote": "Hankook tire 215/55R17, 4 ea"
+    },
+    {
+     "Job": "Flat repair - patch-plug, rebalance (menu)",
+     "Hours": "0.3",
+     "Labour": "$25.00",
+     "Economy": "",
+     "Standard": "$31.00",
+     "Premium": "",
+     "Parts in the standard quote": "Rema Tip Top patch-plug unit, 1 ea"
+    },
+    {
+     "Job": "Balance 4 wheels (menu)",
+     "Hours": "0.6",
+     "Labour": "$60.00",
+     "Economy": "",
+     "Standard": "$60.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Tire rotation (menu)",
+     "Hours": "0.3",
+     "Labour": "$25.00",
+     "Economy": "",
+     "Standard": "$25.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Four-wheel alignment (menu)",
+     "Hours": "1",
+     "Labour": "$119.95",
+     "Economy": "",
+     "Standard": "$119.95",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Replace TPMS sensor & relearn (one wheel)",
+     "Hours": "0.5",
+     "Labour": "$67.50",
+     "Economy": "$115.00",
+     "Standard": "$128.86",
+     "Premium": "$146.35",
+     "Parts in the standard quote": "Schrader EZ-sensor tPMS sensor, 1 ea"
+    }
+   ]
+  },
+  {
+   "section": "Diagnostics",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Check engine light - scan, test & diagnose (1 hr)",
+     "Hours": "1",
+     "Labour": "$135.00",
+     "Economy": "",
+     "Standard": "$135.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Electrical system diagnosis",
+     "Hours": "1.5",
+     "Labour": "$202.50",
+     "Economy": "",
+     "Standard": "$202.50",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Steering & suspension inspection - noise / vibration (menu)",
+     "Hours": "0.5",
+     "Labour": "$49.95",
+     "Economy": "",
+     "Standard": "$49.95",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Cooling system pressure test",
+     "Hours": "0.5",
+     "Labour": "$67.50",
+     "Economy": "",
+     "Standard": "$67.50",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    }
+   ]
+  },
+  {
+   "section": "Suspension & steering",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Replace front strut assemblies (pair)",
+     "Hours": "2.6",
+     "Labour": "$351.00",
+     "Economy": "$661.00",
+     "Standard": "$841.90",
+     "Premium": "$874.08",
+     "Parts in the standard quote": "Monroe Quick-Strut front complete strut assembly, 2 ea"
+    },
+    {
+     "Job": "Replace rear shock absorbers (pair)",
+     "Hours": "1.2",
+     "Labour": "$162.00",
+     "Economy": "$297.00",
+     "Standard": "$339.28",
+     "Premium": "$362.00",
+     "Parts in the standard quote": "Monroe OESpectrum rear shock absorber, 2 ea"
+    },
+    {
+     "Job": "Replace front sway bar links (pair)",
+     "Hours": "0.8",
+     "Labour": "$108.00",
+     "Economy": "$168.00",
+     "Standard": "$194.36",
+     "Premium": "$227.24",
+     "Parts in the standard quote": "Moog front sway bar link, 2 ea"
+    },
+    {
+     "Job": "Replace front sway bar bushings",
+     "Hours": "1",
+     "Labour": "$135.00",
+     "Economy": "$155.00",
+     "Standard": "$164.55",
+     "Premium": "$171.54",
+     "Parts in the standard quote": "Moog sway bar bushing set, 1 set"
+    },
+    {
+     "Job": "Replace front lower control arm (one side)",
+     "Hours": "1.5",
+     "Labour": "$202.50",
+     "Economy": "$347.50",
+     "Standard": "$393.41",
+     "Premium": "$494.81",
+     "Parts in the standard quote": "Moog front lower control arm with ball joint, 1 ea"
+    },
+    {
+     "Job": "Replace lower ball joint (one side)",
+     "Hours": "1.3",
+     "Labour": "$175.50",
+     "Economy": "$223.00",
+     "Standard": "$245.95",
+     "Premium": "$275.50",
+     "Parts in the standard quote": "Moog lower ball joint, 1 ea"
+    },
+    {
+     "Job": "Replace outer tie rod end (one side)",
+     "Hours": "0.8",
+     "Labour": "$108.00",
+     "Economy": "$143.00",
+     "Standard": "$162.55",
+     "Premium": "$192.62",
+     "Parts in the standard quote": "Moog outer tie rod end, 1 ea"
+    },
+    {
+     "Job": "Replace front wheel bearing / hub assembly (one side)",
+     "Hours": "1.8",
+     "Labour": "$243.00",
+     "Economy": "$358.00",
+     "Standard": "$420.27",
+     "Premium": "$427.62",
+     "Parts in the standard quote": "Timken front wheel hub & bearing assembly, 1 ea"
+    },
+    {
+     "Job": "Replace rack & pinion assembly",
+     "Hours": "4.2",
+     "Labour": "$567.00",
+     "Economy": "$1,029.50",
+     "Standard": "$1,169.27",
+     "Premium": "$1,326.62",
+     "Parts in the standard quote": "Cardone new rack & pinion assembly, 1 ea"
+    }
+   ]
+  },
+  {
+   "section": "Air conditioning",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "A/C performance check (menu)",
+     "Hours": "0.5",
+     "Labour": "$49.95",
+     "Economy": "",
+     "Standard": "$49.95",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "A/C evacuate & recharge (R-134a)",
+     "Hours": "1.2",
+     "Labour": "$162.00",
+     "Economy": "",
+     "Standard": "$207.40",
+     "Premium": "",
+     "Parts in the standard quote": "R-134a, 30 lb cylinder refrigerant R-134a, 1.3 lb; PAG 46 with UV dye pAG oil and UV dye charge, 1 ea"
+    },
+    {
+     "Job": "A/C evacuate & recharge (R-1234yf)",
+     "Hours": "1.2",
+     "Labour": "$162.00",
+     "Economy": "",
+     "Standard": "$278.80",
+     "Premium": "",
+     "Parts in the standard quote": "R-1234yf, 10 lb cylinder refrigerant R-1234yf, 1.1 lb; PAG 46 with UV dye pAG oil and UV dye charge, 1 ea"
+    },
+    {
+     "Job": "Replace A/C compressor, receiver-drier & expansion valve; evacuate & recharge",
+     "Hours": "3.6",
+     "Labour": "$486.00",
+     "Economy": "$1,087.09",
+     "Standard": "$1,176.86",
+     "Premium": "$1,261.13",
+     "Parts in the standard quote": "Four Seasons a/C compressor with clutch, 1 ea; Four Seasons receiver-drier, 1 ea; Four Seasons expansion valve, 1 ea; R-134a, 30 lb cylinder refrigerant R-134a, 1.3 lb; PAG 46 with UV dye pAG oil and UV dye charge, 1 ea"
+    },
+    {
+     "Job": "Replace A/C condenser; evacuate & recharge",
+     "Hours": "2.8",
+     "Labour": "$378.00",
+     "Economy": "$618.40",
+     "Standard": "$659.76",
+     "Premium": "$696.48",
+     "Parts in the standard quote": "Spectra Premium a/C condenser, 1 ea; R-134a, 30 lb cylinder refrigerant R-134a, 1.3 lb; PAG 46 with UV dye pAG oil and UV dye charge, 1 ea"
+    },
+    {
+     "Job": "A/C evaporator cleaning & deodorizer service (menu)",
+     "Hours": "0.5",
+     "Labour": "$59.95",
+     "Economy": "$77.45",
+     "Standard": "$84.95",
+     "Premium": "$96.49",
+     "Parts in the standard quote": "BG Frigi-Fresh evaporator cleaner, 1 ea"
+    }
+   ]
+  },
+  {
+   "section": "Battery & electrical",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Battery, starting & charging system test (menu)",
+     "Hours": "0.1",
+     "Labour": "$0.00",
+     "Economy": "",
+     "Standard": "$0.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Replace battery, clean terminals (menu)",
+     "Hours": "0.3",
+     "Labour": "$24.95",
+     "Economy": "$198.28",
+     "Standard": "$239.95",
+     "Premium": "$334.95",
+     "Parts in the standard quote": "Interstate MTP battery, group 24F, 1 ea"
+    },
+    {
+     "Job": "Replace alternator",
+     "Hours": "1.6",
+     "Labour": "$216.00",
+     "Economy": "$536.00",
+     "Standard": "$597.82",
+     "Premium": "$654.46",
+     "Parts in the standard quote": "Remy reman alternator, remanufactured, 1 ea"
+    },
+    {
+     "Job": "Replace starter motor",
+     "Hours": "1.5",
+     "Labour": "$202.50",
+     "Economy": "$447.50",
+     "Standard": "$502.50",
+     "Premium": "$540.96",
+     "Parts in the standard quote": "Remy reman starter, remanufactured, 1 ea"
+    },
+    {
+     "Job": "Replace headlight bulb (one side)",
+     "Hours": "0.3",
+     "Labour": "$40.50",
+     "Economy": "$59.25",
+     "Standard": "$62.09",
+     "Premium": "$80.88",
+     "Parts in the standard quote": "Philips Standard headlight bulb H11, 1 ea"
+    }
+   ]
+  },
+  {
+   "section": "Engine & cooling",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Replace timing belt, tensioner, idlers & water pump",
+     "Hours": "3.2",
+     "Labour": "$432.00",
+     "Economy": "$690.00",
+     "Standard": "$720.00",
+     "Premium": "$760.00",
+     "Parts in the standard quote": "Gates PowerGrip Premium timing belt kit with water pump, 1 kit; Zerex Asian Vehicle 50/50 coolant, Asian blue 50/50, 1 gal"
+    },
+    {
+     "Job": "Replace serpentine belt",
+     "Hours": "0.6",
+     "Labour": "$81.00",
+     "Economy": "$113.50",
+     "Standard": "$124.18",
+     "Premium": "$127.15",
+     "Parts in the standard quote": "Gates Micro-V serpentine belt, 1 ea"
+    },
+    {
+     "Job": "Replace water pump",
+     "Hours": "2.6",
+     "Labour": "$351.00",
+     "Economy": "$475.00",
+     "Standard": "$507.27",
+     "Premium": "$522.31",
+     "Parts in the standard quote": "Gates water pump, 1 ea; Zerex Asian Vehicle 50/50 coolant, Asian pink 50/50, 1 gal"
+    },
+    {
+     "Job": "Replace thermostat & gasket",
+     "Hours": "1.3",
+     "Labour": "$175.50",
+     "Economy": "$227.00",
+     "Standard": "$236.32",
+     "Premium": "$250.65",
+     "Parts in the standard quote": "Stant thermostat with gasket, 1 ea; Zerex Asian Vehicle 50/50 coolant, Asian pink 50/50, 1 gal"
+    },
+    {
+     "Job": "Replace radiator",
+     "Hours": "2.2",
+     "Labour": "$297.00",
+     "Economy": "$570.00",
+     "Standard": "$609.55",
+     "Premium": "$639.62",
+     "Parts in the standard quote": "Spectra Premium radiator, 1 ea; Zerex Asian Vehicle 50/50 coolant, Asian pink 50/50, 2 gal"
+    },
+    {
+     "Job": "Replace valve cover gasket",
+     "Hours": "1.6",
+     "Labour": "$216.00",
+     "Economy": "$251.00",
+     "Standard": "$266.00",
+     "Premium": "$281.38",
+     "Parts in the standard quote": "Fel-Pro valve cover gasket set, 1 set"
+    },
+    {
+     "Job": "Replace ignition coil (one cylinder)",
+     "Hours": "0.5",
+     "Labour": "$67.50",
+     "Economy": "$132.50",
+     "Standard": "$153.86",
+     "Premium": "$167.50",
+     "Parts in the standard quote": "Standard Motor Products ignition coil, 1 ea"
+    },
+    {
+     "Job": "Replace oxygen / air-fuel sensor",
+     "Hours": "0.8",
+     "Labour": "$108.00",
+     "Economy": "$203.00",
+     "Standard": "$226.18",
+     "Premium": "$250.31",
+     "Parts in the standard quote": "NTK oxygen sensor, 1 ea"
+    },
+    {
+     "Job": "Replace engine mount (one)",
+     "Hours": "1.5",
+     "Labour": "$202.50",
+     "Economy": "$272.50",
+     "Standard": "$307.05",
+     "Premium": "$379.42",
+     "Parts in the standard quote": "Beck/Arnley engine mount, 1 ea"
+    },
+    {
+     "Job": "Replace muffler / rear exhaust section",
+     "Hours": "1.2",
+     "Labour": "$162.00",
+     "Economy": "$317.00",
+     "Standard": "$384.73",
+     "Premium": "$408.15",
+     "Parts in the standard quote": "Walker Quiet-Flow SS muffler assembly, 1 ea"
+    },
+    {
+     "Job": "Replace fuel pump module",
+     "Hours": "2.2",
+     "Labour": "$297.00",
+     "Economy": "$542.00",
+     "Standard": "$633.36",
+     "Premium": "$704.69",
+     "Parts in the standard quote": "Delphi fuel pump module assembly, 1 ea"
+    }
+   ]
+  },
+  {
+   "section": "Transmission & driveline",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Automatic transmission fluid drain & fill",
+     "Hours": "0.9",
+     "Labour": "$121.50",
+     "Economy": "$171.02",
+     "Standard": "$191.98",
+     "Premium": "$214.82",
+     "Parts in the standard quote": "Aisin aTF, Toyota WS type, 4 qt"
+    },
+    {
+     "Job": "Transmission fluid exchange (machine)",
+     "Hours": "1.3",
+     "Labour": "$175.50",
+     "Economy": "$324.06",
+     "Standard": "$386.94",
+     "Premium": "$455.46",
+     "Parts in the standard quote": "Aisin aTF, Toyota WS type, 12 qt"
+    },
+    {
+     "Job": "Differential / manual transmission gear oil service",
+     "Hours": "0.7",
+     "Labour": "$94.50",
+     "Economy": "",
+     "Standard": "$169.50",
+     "Premium": "",
+     "Parts in the standard quote": "Valvoline Full Synthetic 75W-90 gear oil 75W-90 full synthetic, 3 qt"
+    },
+    {
+     "Job": "Replace clutch kit, resurface flywheel",
+     "Hours": "6.2",
+     "Labour": "$837.00",
+     "Economy": "$1,132.00",
+     "Standard": "$1,227.91",
+     "Premium": "$1,275.46",
+     "Parts in the standard quote": "LuK RepSet clutch kit (disc, pressure plate, release bearing), 1 kit"
+    },
+    {
+     "Job": "Replace CV axle shaft (one side)",
+     "Hours": "1.6",
+     "Labour": "$216.00",
+     "Economy": "$351.00",
+     "Standard": "$379.64",
+     "Premium": "$404.46",
+     "Parts in the standard quote": "GSP cV axle shaft assembly, new, 1 ea"
+    },
+    {
+     "Job": "Remove & reinstall transmission - rebuild by transmission specialist (sublet)",
+     "Hours": "7.5",
+     "Labour": "$1,012.50",
+     "Economy": "",
+     "Standard": "$4,412.50",
+     "Premium": "",
+     "Parts in the standard quote": "rebuild by the transmission specialist"
+    }
+   ]
+  },
+  {
+   "section": "Inspections",
+   "columns": [
+    "Job",
+    "Hours",
+    "Labour",
+    "Economy",
+    "Standard",
+    "Premium",
+    "Parts in the standard quote"
+   ],
+   "rows": [
+    {
+     "Job": "Courtesy digital vehicle inspection (menu)",
+     "Hours": "0.1",
+     "Labour": "$0.00",
+     "Economy": "",
+     "Standard": "$0.00",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    },
+    {
+     "Job": "Pre-purchase inspection with road test & written report (menu)",
+     "Hours": "1.5",
+     "Labour": "$149.95",
+     "Economy": "",
+     "Standard": "$149.95",
+     "Premium": "",
+     "Parts in the standard quote": "labour only"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "rule": "one row per catalogue job, vehicle class car, after the rise, all three tiers; generated from catalogue.json",
+   "rows": [
+    {
+     "catalogue_key": "oil_service",
+     "name": "Full synthetic oil & filter change",
+     "hours": 0.5,
+     "labour": 32.95,
+     "labour_pricing": "menu",
+     "economy": 65.95,
+     "standard": 90.95,
+     "premium": 120.95
+    },
+    {
+     "catalogue_key": "engine_air_filter",
+     "name": "Replace engine air filter",
+     "hours": 0.2,
+     "labour": 27.0,
+     "labour_pricing": "hourly",
+     "economy": 45.75,
+     "standard": 53.14,
+     "premium": 58.73
+    },
+    {
+     "catalogue_key": "cabin_air_filter",
+     "name": "Replace cabin air filter",
+     "hours": 0.3,
+     "labour": 40.5,
+     "labour_pricing": "hourly",
+     "economy": 55.5,
+     "standard": 64.36,
+     "premium": 71.27
+    },
+    {
+     "catalogue_key": "wiper_blades",
+     "name": "Replace wiper blades (pair)",
+     "hours": 0.1,
+     "labour": 0.0,
+     "labour_pricing": "menu",
+     "economy": 27.5,
+     "standard": 47.73,
+     "premium": 55.77
+    },
+    {
+     "catalogue_key": "spark_plugs",
+     "name": "Replace spark plugs",
+     "hours": 1.0,
+     "labour": 135.0,
+     "labour_pricing": "hourly",
+     "economy": 199.0,
+     "standard": 222.28,
+     "premium": 222.68
+    },
+    {
+     "catalogue_key": "coolant_exchange",
+     "name": "Coolant drain, flush & fill",
+     "hours": 1.0,
+     "labour": 135.0,
+     "labour_pricing": "hourly",
+     "economy": 193.0,
+     "standard": 193.0,
+     "premium": 193.0
+    },
+    {
+     "catalogue_key": "fuel_filter",
+     "name": "Replace fuel filter",
+     "hours": 0.7,
+     "labour": 94.5,
+     "labour_pricing": "hourly",
+     "economy": 114.5,
+     "standard": 121.77,
+     "premium": 125.27
+    },
+    {
+     "catalogue_key": "scheduled_maintenance",
+     "name": "Scheduled maintenance service (30K / 60K / 90K) - inspect, adjust, lubricate",
+     "hours": 1.8,
+     "labour": 243.0,
+     "labour_pricing": "hourly",
+     "economy": 243.0,
+     "standard": 243.0,
+     "premium": 243.0
+    },
+    {
+     "catalogue_key": "fleet_pm_van",
+     "name": "Fleet PM service A - cargo van (oil & filter, chassis lube, 50-point inspection)",
+     "hours": 1.5,
+     "labour": 202.5,
+     "labour_pricing": "hourly",
+     "economy": 243.0,
+     "standard": 270.59,
+     "premium": 306.49
+    },
+    {
+     "catalogue_key": "fuel_system_cleaning",
+     "name": "Fuel induction & injector cleaning service",
+     "hours": 0.8,
+     "labour": 108.0,
+     "labour_pricing": "hourly",
+     "economy": 135.5,
+     "standard": 151.18,
+     "premium": 167.62
+    },
+    {
+     "catalogue_key": "brake_inspection",
+     "name": "Brake system inspection",
+     "hours": 0.5,
+     "labour": 49.95,
+     "labour_pricing": "menu",
+     "economy": 49.95,
+     "standard": 49.95,
+     "premium": 49.95
+    },
+    {
+     "catalogue_key": "front_brake_pads",
+     "name": "Replace front brake pads, clean & lube hardware",
+     "hours": 1.1,
+     "labour": 148.5,
+     "labour_pricing": "hourly",
+     "economy": 208.5,
+     "standard": 234.86,
+     "premium": 248.5
+    },
+    {
+     "catalogue_key": "front_pads_rotors",
+     "name": "Replace front brake pads & rotors",
+     "hours": 1.8,
+     "labour": 243.0,
+     "labour_pricing": "hourly",
+     "economy": 428.0,
+     "standard": 493.0,
+     "premium": 523.76
+    },
+    {
+     "catalogue_key": "rear_brake_pads",
+     "name": "Replace rear brake pads, clean & lube hardware",
+     "hours": 1.1,
+     "labour": 148.5,
+     "labour_pricing": "hourly",
+     "economy": 201.0,
+     "standard": 225.77,
+     "premium": 236.96
+    },
+    {
+     "catalogue_key": "rear_pads_rotors",
+     "name": "Replace rear brake pads & rotors",
+     "hours": 1.8,
+     "labour": 243.0,
+     "labour_pricing": "hourly",
+     "economy": 410.5,
+     "standard": 470.27,
+     "premium": 496.84
+    },
+    {
+     "catalogue_key": "rear_brake_shoes",
+     "name": "Replace rear brake shoes & hardware (drum)",
+     "hours": 2.0,
+     "labour": 270.0,
+     "labour_pricing": "hourly",
+     "economy": 337.95,
+     "standard": 351.81,
+     "premium": 353.91
+    },
+    {
+     "catalogue_key": "brake_fluid_exchange",
+     "name": "Brake fluid flush",
+     "hours": 1.0,
+     "labour": 135.0,
+     "labour_pricing": "hourly",
+     "economy": 151.0,
+     "standard": 151.0,
+     "premium": 151.0
+    },
+    {
+     "catalogue_key": "brake_caliper",
+     "name": "Replace front brake caliper (one side), bleed",
+     "hours": 1.3,
+     "labour": 175.5,
+     "labour_pricing": "hourly",
+     "economy": 295.5,
+     "standard": 316.41,
+     "premium": 344.73
+    },
+    {
+     "catalogue_key": "seasonal_tyre_change",
+     "name": "Seasonal tire changeover - dismount, mount & balance 4",
+     "hours": 1.0,
+     "labour": 100.0,
+     "labour_pricing": "menu",
+     "economy": 100.0,
+     "standard": 100.0,
+     "premium": 100.0
+    },
+    {
+     "catalogue_key": "seasonal_wheel_swap",
+     "name": "Seasonal wheel swap (4 mounted wheels)",
+     "hours": 0.4,
+     "labour": 40.0,
+     "labour_pricing": "menu",
+     "economy": 40.0,
+     "standard": 40.0,
+     "premium": 40.0
+    },
+    {
+     "catalogue_key": "tyre_storage",
+     "name": "Seasonal tire storage (set of 4, per season)",
+     "hours": 0.0,
+     "labour": 0.0,
+     "labour_pricing": "menu",
+     "economy": 80.0,
+     "standard": 80.0,
+     "premium": 80.0
+    },
+    {
+     "catalogue_key": "new_tyres_fitted",
+     "name": "Mount & balance 4 new tires",
+     "hours": 1.0,
+     "labour": 100.0,
+     "labour_pricing": "menu",
+     "economy": 519.4,
+     "standard": 693.76,
+     "premium": 1001.44
+    },
+    {
+     "catalogue_key": "tyre_repair",
+     "name": "Flat repair - patch-plug, rebalance",
+     "hours": 0.3,
+     "labour": 25.0,
+     "labour_pricing": "menu",
+     "economy": 31.0,
+     "standard": 31.0,
+     "premium": 31.0
+    },
+    {
+     "catalogue_key": "wheel_balance",
+     "name": "Balance 4 wheels",
+     "hours": 0.6,
+     "labour": 60.0,
+     "labour_pricing": "menu",
+     "economy": 60.0,
+     "standard": 60.0,
+     "premium": 60.0
+    },
+    {
+     "catalogue_key": "tyre_rotation",
+     "name": "Tire rotation",
+     "hours": 0.3,
+     "labour": 25.0,
+     "labour_pricing": "menu",
+     "economy": 25.0,
+     "standard": 25.0,
+     "premium": 25.0
+    },
+    {
+     "catalogue_key": "wheel_alignment",
+     "name": "Four-wheel alignment",
+     "hours": 1.0,
+     "labour": 119.95,
+     "labour_pricing": "menu",
+     "economy": 119.95,
+     "standard": 119.95,
+     "premium": 119.95
+    },
+    {
+     "catalogue_key": "tpms_sensor",
+     "name": "Replace TPMS sensor & relearn (one wheel)",
+     "hours": 0.5,
+     "labour": 67.5,
+     "labour_pricing": "hourly",
+     "economy": 115.0,
+     "standard": 128.86,
+     "premium": 146.35
+    },
+    {
+     "catalogue_key": "check_engine_diag",
+     "name": "Check engine light - scan, test & diagnose (1 hr)",
+     "hours": 1.0,
+     "labour": 135.0,
+     "labour_pricing": "hourly",
+     "economy": 135.0,
+     "standard": 135.0,
+     "premium": 135.0
+    },
+    {
+     "catalogue_key": "electrical_diag",
+     "name": "Electrical system diagnosis",
+     "hours": 1.5,
+     "labour": 202.5,
+     "labour_pricing": "hourly",
+     "economy": 202.5,
+     "standard": 202.5,
+     "premium": 202.5
+    },
+    {
+     "catalogue_key": "suspension_diag",
+     "name": "Steering & suspension inspection - noise / vibration",
+     "hours": 0.5,
+     "labour": 49.95,
+     "labour_pricing": "menu",
+     "economy": 49.95,
+     "standard": 49.95,
+     "premium": 49.95
+    },
+    {
+     "catalogue_key": "cooling_pressure_test",
+     "name": "Cooling system pressure test",
+     "hours": 0.5,
+     "labour": 67.5,
+     "labour_pricing": "hourly",
+     "economy": 67.5,
+     "standard": 67.5,
+     "premium": 67.5
+    },
+    {
+     "catalogue_key": "front_struts_pair",
+     "name": "Replace front strut assemblies (pair)",
+     "hours": 2.6,
+     "labour": 351.0,
+     "labour_pricing": "hourly",
+     "economy": 661.0,
+     "standard": 841.9,
+     "premium": 874.08
+    },
+    {
+     "catalogue_key": "rear_shocks_pair",
+     "name": "Replace rear shock absorbers (pair)",
+     "hours": 1.2,
+     "labour": 162.0,
+     "labour_pricing": "hourly",
+     "economy": 297.0,
+     "standard": 339.28,
+     "premium": 362.0
+    },
+    {
+     "catalogue_key": "sway_bar_links",
+     "name": "Replace front sway bar links (pair)",
+     "hours": 0.8,
+     "labour": 108.0,
+     "labour_pricing": "hourly",
+     "economy": 168.0,
+     "standard": 194.36,
+     "premium": 227.24
+    },
+    {
+     "catalogue_key": "sway_bar_bushings",
+     "name": "Replace front sway bar bushings",
+     "hours": 1.0,
+     "labour": 135.0,
+     "labour_pricing": "hourly",
+     "economy": 155.0,
+     "standard": 164.55,
+     "premium": 171.54
+    },
+    {
+     "catalogue_key": "lower_control_arm",
+     "name": "Replace front lower control arm (one side)",
+     "hours": 1.5,
+     "labour": 202.5,
+     "labour_pricing": "hourly",
+     "economy": 347.5,
+     "standard": 393.41,
+     "premium": 494.81
+    },
+    {
+     "catalogue_key": "ball_joint",
+     "name": "Replace lower ball joint (one side)",
+     "hours": 1.3,
+     "labour": 175.5,
+     "labour_pricing": "hourly",
+     "economy": 223.0,
+     "standard": 245.95,
+     "premium": 275.5
+    },
+    {
+     "catalogue_key": "outer_tie_rod",
+     "name": "Replace outer tie rod end (one side)",
+     "hours": 0.8,
+     "labour": 108.0,
+     "labour_pricing": "hourly",
+     "economy": 143.0,
+     "standard": 162.55,
+     "premium": 192.62
+    },
+    {
+     "catalogue_key": "wheel_bearing",
+     "name": "Replace front wheel bearing / hub assembly (one side)",
+     "hours": 1.8,
+     "labour": 243.0,
+     "labour_pricing": "hourly",
+     "economy": 358.0,
+     "standard": 420.27,
+     "premium": 427.62
+    },
+    {
+     "catalogue_key": "steering_rack",
+     "name": "Replace rack & pinion assembly",
+     "hours": 4.2,
+     "labour": 567.0,
+     "labour_pricing": "hourly",
+     "economy": 1029.5,
+     "standard": 1169.27,
+     "premium": 1326.62
+    },
+    {
+     "catalogue_key": "ac_performance_check",
+     "name": "A/C performance check",
+     "hours": 0.5,
+     "labour": 49.95,
+     "labour_pricing": "menu",
+     "economy": 49.95,
+     "standard": 49.95,
+     "premium": 49.95
+    },
+    {
+     "catalogue_key": "ac_recharge",
+     "name": "A/C evacuate & recharge (R-134a)",
+     "hours": 1.2,
+     "labour": 162.0,
+     "labour_pricing": "hourly",
+     "economy": 207.4,
+     "standard": 207.4,
+     "premium": 207.4
+    },
+    {
+     "catalogue_key": "ac_recharge_1234yf",
+     "name": "A/C evacuate & recharge (R-1234yf)",
+     "hours": 1.2,
+     "labour": 162.0,
+     "labour_pricing": "hourly",
+     "economy": 278.8,
+     "standard": 278.8,
+     "premium": 278.8
+    },
+    {
+     "catalogue_key": "ac_compressor",
+     "name": "Replace A/C compressor, receiver-drier & expansion valve; evacuate & recharge",
+     "hours": 3.6,
+     "labour": 486.0,
+     "labour_pricing": "hourly",
+     "economy": 1087.09,
+     "standard": 1176.86,
+     "premium": 1261.13
+    },
+    {
+     "catalogue_key": "ac_condenser",
+     "name": "Replace A/C condenser; evacuate & recharge",
+     "hours": 2.8,
+     "labour": 378.0,
+     "labour_pricing": "hourly",
+     "economy": 618.4,
+     "standard": 659.76,
+     "premium": 696.48
+    },
+    {
+     "catalogue_key": "ac_evaporator_cleaning",
+     "name": "A/C evaporator cleaning & deodorizer service",
+     "hours": 0.5,
+     "labour": 59.95,
+     "labour_pricing": "menu",
+     "economy": 77.45,
+     "standard": 84.95,
+     "premium": 96.49
+    },
+    {
+     "catalogue_key": "battery_test",
+     "name": "Battery, starting & charging system test",
+     "hours": 0.1,
+     "labour": 0.0,
+     "labour_pricing": "menu",
+     "economy": 0.0,
+     "standard": 0.0,
+     "premium": 0.0
+    },
+    {
+     "catalogue_key": "battery_replace",
+     "name": "Replace battery, clean terminals",
+     "hours": 0.3,
+     "labour": 24.95,
+     "labour_pricing": "menu",
+     "economy": 198.28,
+     "standard": 239.95,
+     "premium": 334.95
+    },
+    {
+     "catalogue_key": "alternator",
+     "name": "Replace alternator",
+     "hours": 1.6,
+     "labour": 216.0,
+     "labour_pricing": "hourly",
+     "economy": 536.0,
+     "standard": 597.82,
+     "premium": 654.46
+    },
+    {
+     "catalogue_key": "starter",
+     "name": "Replace starter motor",
+     "hours": 1.5,
+     "labour": 202.5,
+     "labour_pricing": "hourly",
+     "economy": 447.5,
+     "standard": 502.5,
+     "premium": 540.96
+    },
+    {
+     "catalogue_key": "headlight_bulb",
+     "name": "Replace headlight bulb (one side)",
+     "hours": 0.3,
+     "labour": 40.5,
+     "labour_pricing": "hourly",
+     "economy": 59.25,
+     "standard": 62.09,
+     "premium": 80.88
+    },
+    {
+     "catalogue_key": "timing_belt_kit",
+     "name": "Replace timing belt, tensioner, idlers & water pump",
+     "hours": 3.2,
+     "labour": 432.0,
+     "labour_pricing": "hourly",
+     "economy": 690.0,
+     "standard": 720.0,
+     "premium": 760.0
+    },
+    {
+     "catalogue_key": "drive_belt",
+     "name": "Replace serpentine belt",
+     "hours": 0.6,
+     "labour": 81.0,
+     "labour_pricing": "hourly",
+     "economy": 113.5,
+     "standard": 124.18,
+     "premium": 127.15
+    },
+    {
+     "catalogue_key": "water_pump",
+     "name": "Replace water pump",
+     "hours": 2.6,
+     "labour": 351.0,
+     "labour_pricing": "hourly",
+     "economy": 475.0,
+     "standard": 507.27,
+     "premium": 522.31
+    },
+    {
+     "catalogue_key": "thermostat",
+     "name": "Replace thermostat & gasket",
+     "hours": 1.3,
+     "labour": 175.5,
+     "labour_pricing": "hourly",
+     "economy": 227.0,
+     "standard": 236.32,
+     "premium": 250.65
+    },
+    {
+     "catalogue_key": "radiator",
+     "name": "Replace radiator",
+     "hours": 2.2,
+     "labour": 297.0,
+     "labour_pricing": "hourly",
+     "economy": 570.0,
+     "standard": 609.55,
+     "premium": 639.62
+    },
+    {
+     "catalogue_key": "valve_cover_gasket",
+     "name": "Replace valve cover gasket",
+     "hours": 1.6,
+     "labour": 216.0,
+     "labour_pricing": "hourly",
+     "economy": 251.0,
+     "standard": 266.0,
+     "premium": 281.38
+    },
+    {
+     "catalogue_key": "ignition_coil",
+     "name": "Replace ignition coil (one cylinder)",
+     "hours": 0.5,
+     "labour": 67.5,
+     "labour_pricing": "hourly",
+     "economy": 132.5,
+     "standard": 153.86,
+     "premium": 167.5
+    },
+    {
+     "catalogue_key": "oxygen_sensor",
+     "name": "Replace oxygen / air-fuel sensor",
+     "hours": 0.8,
+     "labour": 108.0,
+     "labour_pricing": "hourly",
+     "economy": 203.0,
+     "standard": 226.18,
+     "premium": 250.31
+    },
+    {
+     "catalogue_key": "engine_mount",
+     "name": "Replace engine mount (one)",
+     "hours": 1.5,
+     "labour": 202.5,
+     "labour_pricing": "hourly",
+     "economy": 272.5,
+     "standard": 307.05,
+     "premium": 379.42
+    },
+    {
+     "catalogue_key": "exhaust_muffler",
+     "name": "Replace muffler / rear exhaust section",
+     "hours": 1.2,
+     "labour": 162.0,
+     "labour_pricing": "hourly",
+     "economy": 317.0,
+     "standard": 384.73,
+     "premium": 408.15
+    },
+    {
+     "catalogue_key": "fuel_pump",
+     "name": "Replace fuel pump module",
+     "hours": 2.2,
+     "labour": 297.0,
+     "labour_pricing": "hourly",
+     "economy": 542.0,
+     "standard": 633.36,
+     "premium": 704.69
+    },
+    {
+     "catalogue_key": "atf_drain_fill",
+     "name": "Automatic transmission fluid drain & fill",
+     "hours": 0.9,
+     "labour": 121.5,
+     "labour_pricing": "hourly",
+     "economy": 171.02,
+     "standard": 191.98,
+     "premium": 214.82
+    },
+    {
+     "catalogue_key": "atf_exchange",
+     "name": "Transmission fluid exchange (machine)",
+     "hours": 1.3,
+     "labour": 175.5,
+     "labour_pricing": "hourly",
+     "economy": 324.06,
+     "standard": 386.94,
+     "premium": 455.46
+    },
+    {
+     "catalogue_key": "gear_oil_service",
+     "name": "Differential / manual transmission gear oil service",
+     "hours": 0.7,
+     "labour": 94.5,
+     "labour_pricing": "hourly",
+     "economy": 169.5,
+     "standard": 169.5,
+     "premium": 169.5
+    },
+    {
+     "catalogue_key": "clutch_kit",
+     "name": "Replace clutch kit, resurface flywheel",
+     "hours": 6.2,
+     "labour": 837.0,
+     "labour_pricing": "hourly",
+     "economy": 1132.0,
+     "standard": 1227.91,
+     "premium": 1275.46
+    },
+    {
+     "catalogue_key": "cv_axle",
+     "name": "Replace CV axle shaft (one side)",
+     "hours": 1.6,
+     "labour": 216.0,
+     "labour_pricing": "hourly",
+     "economy": 351.0,
+     "standard": 379.64,
+     "premium": 404.46
+    },
+    {
+     "catalogue_key": "transmission_rebuild",
+     "name": "Remove & reinstall transmission - rebuild by transmission specialist (sublet)",
+     "hours": 7.5,
+     "labour": 1012.5,
+     "labour_pricing": "hourly",
+     "economy": 4412.5,
+     "standard": 4412.5,
+     "premium": 4412.5
+    },
+    {
+     "catalogue_key": "courtesy_inspection",
+     "name": "Courtesy digital vehicle inspection",
+     "hours": 0.1,
+     "labour": 0.0,
+     "labour_pricing": "menu",
+     "economy": 0.0,
+     "standard": 0.0,
+     "premium": 0.0
+    },
+    {
+     "catalogue_key": "pre_purchase_inspection",
+     "name": "Pre-purchase inspection with road test & written report",
+     "hours": 1.5,
+     "labour": 149.95,
+     "labour_pricing": "menu",
+     "economy": 149.95,
+     "standard": 149.95,
+     "premium": 149.95
+    }
+   ]
+  },
+  {
+   "catalogue_key": "configurations.en.labour_rate.standard.after_rise",
+   "what": "labour hour",
+   "value": 135.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V6",
+   "name": "Coulter Transmission & Driveline"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}"
+ ],
+ "new_facts": [
+  "A job missing from the list is priced by the lead advisor from the labour guide at the posted rate and reported to slot 2."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "every labour figure and total replaced with the new list (posted hour 125.00 to 135.00, menu labour up 8 %; parts unchanged); message: \"New prices from today. Labour hour $135.\""
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the first line \"This is the only page a price is quoted from\" and the section \"Not on this list\"; message: \"After the timing belt.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Generate the same table from catalogue ru (after_rise). Columns: Работа, н/ч, Работа руб., Эконом, Стандарт, Премиум. The Russian list has several rises a year (R11): the page text may carry the date of the latest one only."
+ ]
+}

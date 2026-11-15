@@ -1,0 +1,129 @@
+{
+  "format": "seed-conversation/1",
+  "id": "21-people-p23-telegram-anytime",
+  "configuration": "en",
+  "number": 21,
+  "story": "people",
+  "title": "The weak desk on a booking: 'come by monday', 'anytime'",
+  "demonstrates": "Slot 23 in writing on an ordinary day: 44 minutes to a first reply, four words, a day and no time. Asked what time, he answers at five to five: 'anytime'. Both drafts written over; nothing labelled, nothing resolved.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Terrence Boyd",
+      "invented": true,
+      "first_time": false,
+      "note": "2010 Honda Accord; he has been to the Charlotte Pike shop before"
+    },
+    "staff": [
+      {"slot": 23, "name": "Chad Binkley"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer who wants an oil change on a Saturday.",
+    "vehicle": "2010 Honda Accord",
+    "what_happens": "The shop is closed on Saturdays. 'come by monday.' 'what time' waits seven hours for 'anytime'. Whether he came is the ERP's to say.",
+    "facts": {"hours": "west: Monday to Friday, 7:30 to 5:30 (ledger site.open_days)", "public_pages_used": []}
+  },
+  "days": {
+    "T-95d": {"anchor": "the Monday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 13}, "nominal": "Mon 2026-08-10"},
+    "T-88d": {"anchor": "7 calendar days after the Monday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 13, "plus_days": 7}, "nominal": "Mon 2026-08-17", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "saturday", "said_on": "T-95d", "day": "the Saturday of week T-13"},
+    {"word": "saturdays", "said_on": "T-95d", "day": "any Saturday"},
+    {"word": "monday", "said_on": "T-95d", "day": "the Monday of week T-12"},
+    {"word": "Monday", "said_on": "T-95d", "day": "the Monday of week T-12"},
+    {"word": "Monday to Friday", "said_on": "T-95d", "day": "every weekday"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "4503599627373715",
+      "peer": {"id": "4503599627373715", "name": "T Boyd"},
+      "contact": {
+        "identifier": "telegram_4503599627373715",
+        "name": "T Boyd",
+        "phone": null,
+        "avatar": {"has": true, "kind": "pet", "shows": "a brown pit bull lying on a porch", "person_in_it": false}
+      },
+      "opened": {"day": "T-95d", "at": "09:05:15", "status": "open", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-95d", "at": "09:05:15", "kind": "message", "from": "customer", "text": "yall got time for an oil change saturday"},
+        {"n": 2, "day": "T-95d", "at": "09:06:00", "kind": "draft", "id": "d1", "text": "Hi! The Charlotte Pike shop is open Monday to Friday, 7:30 to 5:30, so Saturday isn't available. We could do an oil change any weekday. Which day works for you?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 23, "day": "T-95d", "at": "09:49:40", "because": "he sent his own text (n 6)"}},
+        {"n": 3, "day": "T-95d", "at": "09:17", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-95d", "at": "09:41", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 5, "day": "T-95d", "at": "09:49:38", "kind": "activity", "what": "assigned", "derived": true, "to": 23, "by": 23, "how": "first reply"},
+        {"n": 6, "day": "T-95d", "at": "09:49:40", "kind": "message", "from": "staff", "slot": 23, "text": "closed saturdays. come by monday"},
+        {"n": 7, "day": "T-95d", "at": "09:49:42", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 8, "day": "T-95d", "at": "09:55:10", "kind": "message", "from": "customer", "text": "what time"},
+        {"n": 9, "day": "T-95d", "at": "09:55:50", "kind": "draft", "id": "d2", "text": "Would Monday morning or afternoon suit you better? I'll confirm a time.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-95d", "at": "13:12:50", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 10, "day": "T-95d", "at": "10:19", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 11, "day": "T-95d", "at": "11:07", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 12, "day": "T-95d", "at": "13:12:05", "kind": "message", "from": "customer", "text": "?"},
+        {"n": 13, "day": "T-95d", "at": "13:12:50", "kind": "draft", "id": "d3", "text": "Sorry for the wait. Would Monday morning or afternoon suit you better? I'll confirm a time.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 23, "day": "T-95d", "at": "16:58:30", "because": "he sent his own text (n 14)"}},
+        {"n": 14, "day": "T-95d", "at": "16:58:30", "kind": "message", "from": "staff", "slot": 23, "text": "anytime", "late": "his replies come at the end of the day (cast.json; ledger conv.slowest_tenth)"},
+        {"n": 15, "day": "T-95d", "at": "16:58:32", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 16, "day": "T-88d", "at": "16:58", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-95d", "at": "09:49:38", "to": 23, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 23,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 23, "working_minutes": 44.4},
+        "waits": [
+          {"asked": 1, "answered": 6, "by": 23, "working_minutes": 44.4, "wall_minutes": 44.4, "measured_from": "n 1", "reply": "first"},
+          {"asked": 8, "answered": 14, "by": 23, "working_minutes": 423.3, "wall_minutes": 423.3, "measured_from": "n 8", "reply": "later", "late": "his replies come at the end of the day (cast.json; ledger conv.slowest_tenth)"}
+        ],
+        "first_person_line": {
+          "by": 23,
+          "n": 6,
+          "working_minutes": 44.4,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-88d", "at": "16:58", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 23},
+          {"draft": "d2", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d3", "outcome": "discarded", "manager": 23}
+        ],
+        "operator_credit": "slot 23: first answer 44.4 minutes (his ledger row is 40), two replies, two drafts discarded and one replaced before he looked, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "slot 23; the assistant drafts",
+    "outcome": "no time agreed; resolved by 7 silent days",
+    "facts": [
+      "no time was offered; asked for one, and asked again with a question mark, slot 23 answered 'anytime' seven hours later",
+      "no draft was used"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Nothing here is rude or wrong, and nothing is booked.",
+    "Each draft ended with a question that would have fixed a time.",
+    "Set it beside file 24: the same desk, the same kind of request, the other advisor."
+  ],
+  "new_facts": [
+    "Terrence Boyd (Telegram name 'T Boyd'), 2010 Honda Accord, asked west for a Saturday oil change on the Monday of week T-13; no appointment was made.",
+    "The contact's picture: a brown pit bull on a porch."
+  ]
+}

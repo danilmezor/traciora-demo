@@ -1,0 +1,122 @@
+{
+ "path": "shops/main/opening-and-closing.md",
+ "title": "East Main: opening and closing",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Opening and closing checklist for the flagship: who, till float, where the deposit goes.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S3",
+  "S2"
+ ],
+ "length_class": "short",
+ "words_en": 238,
+ "links_to": [
+  "how-to/missed-calls-and-call-backs.md",
+  "how-to/closing-the-till.md",
+  "shops/main/saturdays.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Doors at 7:30; the early desk shift starts at opening (stories/S03: \"a desk shift from opening\") and exists since {{@early_desk}} = the Monday of week T-3.",
+  "Opening order: alarm, key drop box, voicemail and missed calls, till float 200 USD, front door.",
+  "The foreman opens the bays and compressor.",
+  "Closing: cars in or locked, keys in the cabinet; till closed with 200 USD left as float; deposit bag in the office safe, banked next morning by slot 3; key drop empty; bays, compressor, lights, alarm.",
+  "The alarm code is never written down."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Opening",
+   "item": "Alarm off. The code is given in person, never written down, and that includes here."
+  },
+  {
+   "section": "Opening",
+   "item": "Empty the key drop box first. Each envelope becomes an order before the phones start."
+  },
+  {
+   "section": "Opening",
+   "item": "Listen to the voicemail and work the missed-call list: Missed calls and call backs."
+  },
+  {
+   "section": "Opening",
+   "item": "Count the till float: $200. Write it on the count sheet."
+  },
+  {
+   "section": "Opening",
+   "item": "Coffee on, waiting room lights, front door at 7:30 sharp. People are standing there at 7:25."
+  },
+  {
+   "section": "Closing",
+   "item": "Every customer car is inside or locked on the lot, keys in the key cabinet, cabinet locked."
+  },
+  {
+   "section": "Closing",
+   "item": "Close the till: Closing the till. Float of $200 stays in the drawer. The rest goes in the deposit bag."
+  },
+  {
+   "section": "Closing",
+   "item": "The deposit bag goes in the office safe. Donna banks it the next morning."
+  },
+  {
+   "section": "Closing",
+   "item": "Check the key drop box is empty and its slot is clear."
+  },
+  {
+   "section": "Closing",
+   "item": "Bay doors down, compressor off (ask the last technician), lights, alarm on."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "new_facts": [
+  "Till float at East Main 200 USD; the deposit goes to the office safe and is banked by slot 3 next morning. The ERP cash_drawer_close expected figure excludes or includes the float consistently with how-to/closing-the-till.md."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "opening section rewritten for the early desk shift, missed-call list added as step 3; message: \"Early desk from today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Opening 9:00; early desk from 8:30 (new fact, mirrors S3 in the Russian hours 9:00-11:30). Float in RUB as a new fact (for example 5 000)."
+ ]
+}

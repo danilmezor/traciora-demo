@@ -1,0 +1,143 @@
+{
+  "format": "seed-conversation/1",
+  "id": "23-people-p24-telegram-estimate-attached",
+  "configuration": "en",
+  "number": 23,
+  "story": "people",
+  "title": "The bright spot at Charlotte Pike: findings by number, the estimate attached, a total to the cent",
+  "demonstrates": "Slot 24 in writing: six minutes to a first reply, the findings as a numbered list with the estimate as a file, 'what I can do is' and a deadline for the answer, then the approved work and the total with shop supplies and tax. Two drafts edited, one sent as it was; labelled and resolved.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Latoya Greene",
+      "invented": true,
+      "first_time": false,
+      "note": "a customer of the Charlotte Pike shop; 2014 Chevrolet Equinox, in for a check engine light"
+    },
+    "staff": [
+      {"slot": 24, "name": "Jasmine Bolden"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer whose car is in for a diagnosis, from work.",
+    "vehicle": "2014 Chevrolet Equinox",
+    "what_happens": "Any update? The diagnosis is done: a failed coil on cylinder 2 and worn original plugs. Both by 4:30 if she says yes by 2:00. She says both and asks the total.",
+    "facts": {
+      "approved": "ignition coil and spark plugs",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "$153.86", "amount": 153.86, "what": "ignition coil, one cylinder, class car", "from": {"catalogue": "ignition_coil", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$222.28", "amount": 222.28, "what": "spark plugs, four, class car", "from": {"catalogue": "spark_plugs", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$135.00", "amount": 135.0, "what": "check engine light diagnosis, one hour", "from": {"catalogue": "check_engine_diag", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "$579.50", "amount": 579.5, "what": "coil, plugs and diagnosis with shop supplies and Nashville's sales tax (528.02 x 1.0975; ledger tax.rate.west)", "from": {"sum_of": [{"catalogue": "ignition_coil", "class": "car"}, {"catalogue": "spark_plugs", "class": "car"}, {"catalogue": "check_engine_diag", "class": "car"}], "with_supplies": true, "with_tax": true, "tax_shop": "west"}}
+      ],
+      "numbers": [
+        {"said": "96,000 miles", "what": "the car's mileage; invented"}
+      ]
+    }
+  },
+  "days": {
+    "T-70d": {"anchor": "the Friday of week T-10", "rule": {"kind": "weekday_of_week", "weekday": "Fri", "week": 10}, "nominal": "Fri 2026-09-04"}
+  },
+  "floating_days": [
+    {"word": "this morning", "said_on": "T-70d", "day": "T-70d"},
+    {"word": "today", "said_on": "T-70d", "day": "T-70d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "4503599627373837",
+      "peer": {"id": "4503599627373837", "name": "Latoya Greene"},
+      "contact": {
+        "identifier": "telegram_4503599627373837",
+        "name": "Latoya Greene",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "car",
+          "shows": "a gray Chevrolet Equinox on the top deck of a parking garage",
+          "person_in_it": false,
+          "matches_vehicle": "2014 Chevrolet Equinox"
+        }
+      },
+      "opened": {"day": "T-70d", "at": "13:02:10", "status": "open", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-70d", "at": "13:02:10", "kind": "message", "from": "customer", "text": "Hi Jasmine, any update on my Equinox?"},
+        {"n": 2, "day": "T-70d", "at": "13:02:55", "kind": "draft", "id": "d1", "text": "Hi Latoya! I don't have the status of the Equinox in front of me. I'll check with the technician and message you right back.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-70d", "at": "13:08:30", "became": 4}},
+        {"n": 3, "day": "T-70d", "at": "13:08:28", "kind": "activity", "what": "assigned", "derived": true, "to": 24, "by": 24, "how": "first reply"},
+        {"n": 4, "day": "T-70d", "at": "13:08:30", "kind": "message", "from": "staff", "slot": 24, "text": "Hi Latoya! Yes, the diagnosis is done. Estimate attached.\n1. The ignition coil on cylinder 2 has failed: that's the misfire and the light. $153.86.\n2. The spark plugs are the originals at 96,000 miles and worn: $222.28 for all four.\n3. The diagnosis you approved this morning: $135.00.\nWhat I can do is have both done today by 4:30 if I hear from you by 2:00. Would you like both, or the coil only?", "files": [{"kind": "file", "file": "Estimate_Equinox_Greene.pdf", "pool": "estimate-pdf", "shows": "a one-page estimate: diagnosis, ignition coil, spark plugs, shop supplies, tax"}]},
+        {"n": 5, "day": "T-70d", "at": "13:15:40", "kind": "message", "from": "customer", "text": "both. total?"},
+        {"n": 6, "day": "T-70d", "at": "13:16:20", "kind": "draft", "id": "d2", "text": "Thank you, Latoya. Both it is. I'll confirm the total with shop supplies and tax.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-70d", "at": "13:19:10", "became": 7}},
+        {"n": 7, "day": "T-70d", "at": "13:19:10", "kind": "message", "from": "staff", "slot": 24, "text": "Thank you, Latoya. Both approved: coil and plugs. The total with the diagnosis, shop supplies and tax is $579.50. Ready by 4:30, and I'll message you here."},
+        {"n": 8, "day": "T-70d", "at": "13:19:30", "kind": "activity", "what": "label_added", "label": "approval", "by": 24},
+        {"n": 9, "day": "T-70d", "at": "16:22:40", "kind": "message", "from": "staff", "slot": 24, "text": "The Equinox is ready, Latoya. The light is off and it idles smooth. We're here until 5:30."},
+        {"n": 10, "day": "T-70d", "at": "16:35:10", "kind": "message", "from": "customer", "text": "on my way"},
+        {"n": 11, "day": "T-70d", "at": "16:35:50", "kind": "draft", "id": "d3", "text": "See you soon, Latoya.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 24, "day": "T-70d", "at": "16:37:00", "became": 12}},
+        {"n": 12, "day": "T-70d", "at": "16:37:00", "kind": "message", "from": "staff", "slot": 24, "text": "See you soon, Latoya."},
+        {"n": 13, "day": "T-70d", "at": "16:37:20", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-70d", "at": "13:08:28", "to": 24, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 24,
+        "labels": ["approval"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 24, "working_minutes": 6.3},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 24, "working_minutes": 6.3, "wall_minutes": 6.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 24, "working_minutes": 3.5, "wall_minutes": 3.5, "measured_from": "n 5", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 24, "working_minutes": 1.8, "wall_minutes": 1.8, "measured_from": "n 10", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 24,
+          "n": 4,
+          "working_minutes": 6.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 4, "note": 0},
+        "resolutions": [
+          {"day": "T-70d", "at": "16:37:20", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 24},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 24},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 24}
+        ],
+        "operator_credit": "slot 24: first answer 6.3 minutes (her ledger row is 7), four replies, two drafts edited and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "slot 24; the assistant drafts",
+    "outcome": "coil and plugs approved; 579.50 with shop supplies and tax; resolved by slot 24",
+    "facts": [
+      "the findings came as a numbered list with the estimate attached",
+      "both jobs approved in seven minutes",
+      "ready before the time she gave"
+    ],
+    "questions": []
+  },
+  "why": [
+    "A list, a file, a deadline and a choice: the customer answers in two words.",
+    "'What I can do is' where another desk would say it can't be done today.",
+    "Same shop as files 21 and 22."
+  ],
+  "new_facts": [
+    "Latoya Greene, 2014 Chevrolet Equinox, 96,000 miles, at west on the Friday of week T-10: check engine diagnosis 135.00, ignition coil 153.86, spark plugs 222.28; 579.50 with shop supplies (16.88) and Nashville's sales tax (tax.rate.west, 9.75 %).",
+    "The file Estimate_Equinox_Greene.pdf (picture pool 'estimate-pdf').",
+    "The contact's picture: a gray Chevrolet Equinox in a parking garage."
+  ]
+}

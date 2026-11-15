@@ -1,0 +1,752 @@
+# Скелеты для Telegram (t), ВКонтакте (v) и Авито (a): первым отвечает человек, ассистент готовит черновик.
+# У хода S: draft — ключ черновика, reply — что человек пишет сам, если черновик убрал; исход берётся из листа приёмщика.
+# S без reply: черновик уходит как есть или с правкой; если его убрали, ответа нет.
+# {price_draft} берётся из блока работы. advisors= — для кого написан скелет.
+
+# ------------------------------------------------------------ цена
+= price | tva | person | цена, запись, подтверждение
+U vague,wrong,reversed
+C price.open burst=.45
+S draft=generic.ask_car reply=ask if=nocar
+C generic.give_car if=nocar
+S draft={price_draft} reply=price.quote
+X vat,own_parts,how_long p=.6
+C price.want_book
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+X address,pay p=.5
+C generic.close p=.8
+S draft=generic.thanks reply=close p=.5
+V label_added цена
+E person
+
+= price | tva | person | цена и свои запчасти | kinds=list
+C price.open
+S draft=generic.ask_car reply=ask if=nocar
+C generic.give_car if=nocar
+S draft={price_draft} reply=price.quote
+C price.own_parts
+S draft=price.own_parts reply=price.own_parts
+C generic.ok
+S draft=generic.close reply=close p=.4
+V label_added цена
+E person
+
+= price | tva | silent | «дороговато»: возражение, клиент пропадает
+U wrong
+C price.open
+S draft={price_draft} reply=price.quote
+C price.dear
+S draft=price.objection reply=price.objection
+C price.more p=.4
+E inactivity
+
+= price | tva | person | назвали без расходных материалов, клиент уточняет | advisors=7,17,23
+C price.open
+S draft={price_draft} reply=price.quote
+C price.vat
+S draft=price.extras reply=price.total
+C generic.ok
+V label_added цена
+E person
+
+= price | a | person | Авито: «ещё актуально?», год машины, точная цена
+U vague,wrong
+C price.open
+S draft={price_draft} reply=price.quote
+C generic.give_car
+S draft=booking.ask_day reply=booking.offer
+X vat,pay p=.5
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+X address p=.6
+C generic.close p=.7
+V label_added цена
+E person
+
+= price | tv | person | чужая смета на фото: «у вас сколько?» | photo=1
+C price.open voice=photo_first
+S draft=generic.ask_car reply=ask
+C generic.give_car
+S draft={price_draft} reply=price.quote
+C price.incl
+S draft=price.incl
+C price.want_book
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= price | tva | person | два вопроса в одном: ответили на первый | advisors=7,17,22,23 two=1
+C price.open two=1
+S draft={price_draft} reply=price.quote
+C
+  | а когда можно то?
+  | так когда подъехать?
+  | ок. а записаться когда можно
+  | и когда приезжать
+  | а подъехать когда?
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= price | tva | person | два вопроса в одном: ответили на оба | advisors=5,6,29,16,24 two=1
+C price.open two=1
+S draft={price_draft} reply=price.quote+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.close p=.6
+V label_added цена
+E person
+
+= price | tva | silent | цена только после осмотра, клиент думает | kinds=depends,range,depends_ac,depends_engine
+U vague,wrong
+C price.open
+S draft={price_draft} reply=price.depends
+C price.more
+E inactivity
+
+= price | tva | silent | никто не отвечает: «ау», поздний ответ
+C price.open
+C generic.nudge
+S draft={price_draft} reply=sorry+price.quote
+C generic.ok p=.5
+E inactivity
+
+= price | tva | person | «с запчастями?», потом запись | kinds=list,menu
+C price.open
+S draft=generic.ask_car reply=ask if=nocar
+C generic.give_car if=nocar
+S draft={price_draft} reply=price.quote
+C price.incl
+S draft=price.incl
+C price.how_long
+S draft=price.how_long reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+# ------------------------------------------------------------ запись
+= booking | tva | person | запись: два времени, выбор, подтверждение
+U vague,two,reversed
+C booking.open burst=.45
+S draft=generic.ask_car reply=ask if=nocar
+C generic.give_car if=nocar
+S draft=booking.ask_day reply=booking.offer
+X how_long,wait,storage p=.6
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+X address,pay p=.5
+C generic.close p=.8
+S draft=generic.thanks reply=close p=.6
+V label_added запись
+E person
+
+= booking | tva | person | называет день: «время подтвержу»
+U vague
+C booking.open
+S draft=booking.day_ok reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+X address,pay p=.6
+C generic.close p=.7
+V label_added запись
+E person
+
+= booking | tv | person | постоянный клиент пишет своему мастеру
+C booking.open voice=polite
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.close
+V label_added запись
+E person
+
+= booking | tva | person | «без записи можно?»
+C booking.walk_in
+S draft=booking.walk_in reply=booking.offer
+C
+  | ну ладно, запишите тогда
+  | хорошо, давайте по записи
+  | ок, тогда по записи
+  | понял, записывайте @@ g=m
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= booking | tva | person | сезон: переобуться и оставить резину на хранение | jobs=seasonal_tyres,wheel_swap
+C booking.open burst=.45
+S draft={price_draft} reply=booking.offer
+C generic.pick_time
+C
+  | и хранение летней резины есть у вас? почём
+  | а старые колёса у вас оставить можно?
+  | и ещё: резину на хранение берёте? негде держать
+  | хранение сколько стоит? заодно бы сдал @@ g=m
+S draft=tyres.storage reply=tyres.storage
+C generic.ok
+S draft=generic.close_echo reply=booking.confirm
+V label_added шины
+E person
+
+= booking | tva | person | запись и цена в одном сообщении: ответили на первое | advisors=7,17,22,23 two=1
+C booking.open two=1
+S draft=booking.day_ok reply=booking.offer
+C
+  | а по цене что?
+  | а сколько это стоит то
+  | цену не сказали
+  | а по деньгам?
+S draft={price_draft} reply=price.quote
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= booking | tva | silent | не ответили вовремя: клиент ушёл
+C booking.open
+C generic.nudge
+S draft=booking.ask_day reply=sorry+booking.offer
+E inactivity
+
+= booking | t | person | голосовое: черновик его не слышит, человек слушает
+C booking.open stub=1
+S draft=symptom.voice reply=booking.offer force=discarded
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= booking | va | person | сначала спрашивает, можно ли подождать
+C booking.open
+S draft=booking.ask_day reply=booking.offer
+C booking.wait
+S draft=booking.wait
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+= booking | a | person | Авито: «актуально? на завтра есть время»
+U vague,two
+C booking.open
+S draft=booking.day_ok reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.ok p=.5
+E person
+
+= booking | tva | silent | предложили время, клиент не выбрал
+C booking.open
+S draft=booking.ask_day reply=booking.offer
+C price.more p=.5
+E inactivity
+
+# ------------------------------------------------------------ часы, адрес, берётесь ли
+= hours | tva | person | часы работы
+C hours.open kind=time
+S draft=hours.answer reply=hours.answer
+C generic.close p=.7
+E person
+
+= hours | tva | person | адрес
+C hours.open kind=address
+S draft=hours.address reply=hours.answer
+C generic.close p=.7
+E person
+
+= hours | tva | person | берётесь ли за такую машину
+C hours.open kind=do_yes
+S draft=hours.we_do reply=hours.we_do
+C generic.give_car p=.5
+C price.more p=.5
+E person
+
+= hours | tva | person | кузовной и покраска: нет
+C hours.open kind=do_no
+S draft=hours.we_dont reply=hours.we_dont
+C hours.more p=.5
+E person
+
+= hours | tva | person | как платить
+C hours.open kind=pay
+S draft=hours.pay reply=hours.pay
+C generic.ok p=.6
+E person
+
+= hours | tva | silent | часы: ответили на следующий день
+C hours.open kind=time
+C generic.nudge p=.6
+S draft=hours.answer reply=hours.answer
+E inactivity
+
+# ------------------------------------------------------------ симптом
+= symptom | tva | person | симптом: вопрос, ответ, диагностика, запись | advice=1
+U vague,wrong,two
+C symptom.open burst=.45
+S draft=symptom.ask reply=symptom.ask
+C symptom.detail+generic.give_car
+S draft=symptom.advise reply=symptom.advise
+C booking.day_time
+S draft=booking.day_ok reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+X address,pay p=.5
+C generic.close p=.7
+V label_added запись
+E person
+
+= symptom | tva | person | фото панели: «это что?» | advice=1 photo=1
+C symptom.open photo=1
+S draft=symptom.photo reply=symptom.advise
+C price.want_book
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= symptom | t | person | голосовое вместо текста | advice=1
+C symptom.open stub=1
+S draft=symptom.voice reply=symptom.advise force=discarded
+C booking.day_time
+S draft=booking.day_ok reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= symptom | tva | silent | назвали цену диагностики, клиент думает | advice=1
+U vague,wrong
+C symptom.open
+S draft=symptom.advise reply=symptom.advise
+C price.more
+E inactivity
+
+= symptom | tva | silent | «ездить можно?»: первое «не сегодня» принято | advice=1 advisors=17,7,23,22
+C symptom.open
+S draft=symptom.advise reply=symptom.advise
+C
+  | не сегодня тогда
+  | ну пока ездит. потом как-нибудь
+  | до зарплаты не получится
+  | не, щас не до этого
+  | ладно, понаблюдаю пока
+S draft=symptom.serious reply=price.objection
+E inactivity
+
+= symptom | tva | person | «это серьёзно?»: объяснили, записали | advice=1 advisors=5,6,29,16,24
+C symptom.open
+S draft=symptom.advise reply=symptom.advise
+C symptom.serious
+S draft=symptom.serious reply=symptom.serious+booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+= symptom | tva | person | симптом и «можно ли сегодня»: ответили на первое | advice=1 advisors=7,17,22,23 two=1
+C symptom.open two=1
+S draft=symptom.advise reply=symptom.advise
+C
+  | так сегодня можно или нет?
+  | а сегодня примете?
+  | сегодня получится?
+  | ну так что, ехать?
+S draft=booking.day_ok reply=moving.late
+C generic.coming
+E person
+
+= symptom | a | person | Авито: симптом и «сколько стоит посмотреть» | advice=1
+U vague,wrong
+C symptom.open
+S draft=symptom.advise reply=symptom.advise
+C generic.give_car if=nocar
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+= symptom | tv | silent | написал, не дождался, пишет «ау» | advice=1
+C symptom.open
+C generic.nudge
+S draft=symptom.ask reply=sorry+symptom.ask
+E inactivity
+
+= symptom | va | person | симптом: сразу диагностика и время | advice=1
+C symptom.open
+S draft=symptom.advise reply=symptom.advise
+C generic.yes
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added запись
+E person
+
+# ------------------------------------------------------------ готова ли машина
+= status | tva | person | готова: сумма и до скольки забирать
+C status.open
+S draft=status.dont_have reply=status.ready
+X pay p=.4
+C generic.coming
+S draft=generic.close reply=close p=.6
+V label_added статус
+E person
+
+= status | tva | person | ещё в работе, потом «готова»
+C status.open burst=.45
+S draft=status.dont_have reply=status.not_yet
+C generic.ok
+S reply=status.ready p=.7
+X pay p=.5
+C generic.coming
+S draft=generic.close reply=close p=.7
+V label_added статус
+E person
+
+= status | tva | person | пришла ли запчасть; позже мастер пишет, что готово
+C status.open kind=part burst=.45
+S draft=status.part reply=status.part
+C generic.ok p=.8
+S reply=status.ready p=.5
+X total,pay p=.5
+C generic.coming p=.8
+S draft=generic.close reply=close p=.6
+E person
+
+= status | tva | silent | «ау»: ответ под вечер
+C status.open
+C generic.nudge
+S draft=status.sorry_wait reply=status.not_yet
+E inactivity
+
+= status | tva | person | готова, «а после восьми забрать можно?»
+C status.open
+S draft=status.dont_have reply=status.ready
+C status.pickup_late
+S draft=status.pickup_after
+C generic.ok p=.7
+E person
+
+= status | tva | person | готова ли и сколько платить | two=1
+C status.open two=1
+S draft=status.dont_have reply=status.ready
+C generic.close
+V label_added статус
+E person
+
+= status | t | person | голосовое: «ну что там»
+C status.open stub=1
+S draft=symptom.voice reply=status.not_yet force=discarded
+C generic.ok
+E person
+
+= status | tv | person | мастер пишет первым: машина готова
+S reply=status.ready
+C generic.coming
+S draft=generic.close reply=close p=.6
+C generic.thanks_after p=.3
+S draft=generic.after_thanks p=.6
+V label_added статус
+E person
+
+= status | tva | person | запчасть переносят второй раз
+C status.open kind=part burst=.5
+S draft=status.part reply=status.part
+C
+  | опять перенос? мне машина нужна
+  | это уже второй раз обещают
+  | а точно будет? в прошлый раз тоже говорили
+  | сколько можно ждать то
+S draft=status.sorry_wait reply=sorry+status.part
+N to_manager p=.4
+E person
+
+= status | va | person | не готова: «когда точно?»
+C status.open
+S draft=status.dont_have reply=status.not_yet
+C status.more
+S draft=status.sorry_wait reply=status.not_yet p=.6
+E person
+
+# ------------------------------------------------------------ найденные работы
+= found | tv | person | мастер пишет первым: находка с фото, клиент согласен
+S reply=found.present file={finding_photo}
+C found.open kind=yes
+S draft=found.ack reply=found.confirm
+X total,how_long p=.6
+C found.more p=.5
+V label_added согласование
+S reply=status.ready p=.8
+C generic.coming p=.8
+S draft=generic.close reply=close p=.6
+E person
+
+= found | tv | person | две находки: одну делать, от другой отказ
+S reply=found.two file={finding_photo}
+C found.open kind=one
+S draft=found.ack_one reply=found.confirm
+X total,how_long p=.6
+C generic.ok p=.6
+V label_added согласование
+S reply=status.ready p=.7
+C generic.coming p=.8
+S draft=generic.close reply=close p=.6
+E person
+
+= found | tv | person | «это срочно?»: объяснили, согласился
+S reply=found.present file={finding_photo}
+C found.open kind=ask
+S draft=found.can_wait reply=found.why
+C
+  | ладно, делайте
+  | ну раз так, меняйте
+  | уговорили, делайте)
+  | хорошо. делайте, только покажите потом старую
+S draft=found.ack reply=found.confirm
+V label_added согласование
+E person
+
+= found | tv | person | «это срочно?»: объяснили, отложил
+S reply=found.present file={finding_photo}
+C found.open kind=ask
+S draft=found.can_wait reply=found.why
+C
+  | тогда в другой раз
+  | понял, пока не надо @@ g=m
+  | раз терпит, потом сделаю
+  | не, в этот раз без этого
+S draft=found.declined reply=found.declined
+E person
+
+= found | tv | person | отказ от дополнительных работ
+S reply=found.present file={finding_photo}
+C found.open kind=no
+S draft=found.declined reply=found.declined
+C generic.ok p=.4
+E person
+
+= found | tv | person | спрашивает, что нашли; две находки; «итого сколько?»
+C status.open
+S draft=status.dont_have reply=found.two file={finding_photo} force=discarded
+C found.total
+S draft=found.total reply=found.confirm
+C found.open kind=yes voice=one_word
+S draft=found.ack
+V label_added согласование
+E person
+
+# ------------------------------------------------------------ перенос и отмена
+= moving | tva | person | перенос: новое время
+U reversed
+C moving.open kind=move
+S draft=moving.ack reply=moving.moved
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+C generic.close p=.7
+S draft=generic.thanks reply=close p=.5
+V label_added запись
+E person
+
+= moving | tva | person | отмена
+C moving.open kind=cancel
+S draft=moving.cancel reply=moving.cancelled
+C generic.close p=.5
+E person
+
+= moving | tva | person | опаздывает
+C moving.open kind=late
+S draft=moving.late reply=moving.late
+C generic.coming p=.5
+E person
+
+= moving | tva | silent | перенос: ответили поздно
+C moving.open kind=move
+C generic.nudge p=.7
+S draft=moving.ack reply=sorry+moving.moved
+E inactivity
+
+= moving | tva | person | перенос: первое время не подошло
+C moving.open kind=move burst=.45
+S draft=moving.ack reply=moving.moved
+C
+  | не, в это время работаю. а попозже?
+  | не подходит. вечером есть что-нибудь?
+  | а в другой день никак?
+  | не успею. есть после шести?
+S draft=moving.other_time reply=booking.offer reroll=1
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+E person
+
+# ------------------------------------------------------------ жалоба
+= complaint | tva | person | после ремонта то же самое: осмотр вне очереди
+C complaint.open kind=comeback burst=.45
+S draft=complaint.sorry reply=complaint.first
+V priority high p=.5
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added жалоба
+E person
+
+= complaint | tva | person | сумма больше, чем называли
+C complaint.open kind=bill
+S draft=complaint.bill reply=complaint.bill
+C
+  | могли бы сразу сказать. ладно
+  | ясно. в следующий раз называйте итог сразу
+  | понятно. но осадок остался
+  | да ладно, понял @@ g=m
+  | теперь понятно, спасибо
+V label_added жалоба
+E person
+
+= complaint | tva | person | обещали перезвонить и пропали
+C complaint.open kind=service
+S draft=complaint.service reply=sorry+status.not_yet
+C complaint.more p=.5
+N to_manager p=.5
+V label_added жалоба
+E person
+
+= complaint | tva | person | царапина или грязь после сервиса
+C complaint.open kind=damage
+S draft=complaint.damage reply=complaint.first
+V priority high p=.6
+N to_manager p=.7
+C generic.ok p=.6
+V label_added жалоба
+E person
+
+= complaint | tva | silent | жалоба, короткий ответ, клиент замолкает | advisors=22,23,17,7
+C complaint.open kind=comeback
+S draft=complaint.sorry reply=complaint.first
+C complaint.more
+E inactivity
+
+# ------------------------------------------------------------ организации
+= fleet | t | person | заявка на две машины
+C fleet.open kind=units
+S draft=fleet.list_ack reply=fleet.confirm
+C fleet.more p=.7
+V label_added юрлицо
+E person
+
+= fleet | t | person | закрывающие документы
+C fleet.open kind=docs
+S draft=fleet.paperwork reply=fleet.docs
+C generic.close p=.6
+V label_added юрлицо
+E person
+
+= fleet | t | person | смета до ремонта, файлом
+C
+  | {advisor_addr}, {hello_lc}. {company}. Нужна смета на {unit} до ремонта: {job_said}. С разбивкой.
+  | {Hello_lc}. По {unit}: посчитайте {job_said_acc}, директор согласует. Работы и запчасти отдельно.
+  | {advisor_addr}, пришлите смету на {unit}, {job_said}. Без неё заявку не подпишут.
+  | {Hello_lc}. {company}, {contact_first}. Смету на {unit} можно сегодня? {Job_said}.
+S draft=fleet.quote reply=price.quote file=estimate-pdf
+C
+  | Получили, спасибо. Передаю директору.
+  | Спасибо. Согласуем и вернёмся с заявкой.
+  | Принято, жду решения.
+  | Спасибо, смета у нас.
+V label_added юрлицо
+E person
+
+= fleet | t | person | мастер пишет первым: находка на машине организации
+S reply=found.present file={finding_photo}
+C
+  | Делайте. Заявка {po}
+  | Согласовано, заявка {po}. Делайте сегодня.
+  | Сейчас у директора спрошу
+  | Да, меняйте. Номер заявки {po}.
+S draft=found.ack reply=found.confirm
+V label_added согласование
+E person
+
+= fleet | t | person | заявка: первой отвечает не тот, кто ведёт клиента
+C fleet.open kind=units
+S draft=fleet.list_ack reply=fleet.confirm
+N next_shift p=.6
+C generic.close p=.5
+V label_added юрлицо
+E person
+
+= fleet | a | person | Авито: «с юрлицами работаете?»
+C fleet.open kind=units
+S draft=fleet.contract reply=fleet.contract
+C fleet.more p=.5
+V label_added юрлицо
+E person
+
+= fleet | a | person | Авито: сколько машин, какие, договор
+C fleet.open kind=units
+S draft=fleet.contract reply=fleet.contract
+C
+  | пять газелей и два ларгуса
+  | три машины, все в доставке
+  | пока две, к весне будет пять
+  | семь, из них четыре фургона
+S draft=fleet.contract reply=fleet.contract
+V priority high p=.4
+V label_added юрлицо
+E person
+
+= fleet | a | silent | Авито: спросили про договор, ответили через день
+C fleet.open kind=units
+C generic.nudge p=.6
+S draft=fleet.contract reply=sorry+fleet.contract
+E inactivity
+
+= fleet | a | person | Авито: документы и НДС
+C fleet.open kind=units voice=one_word
+S draft=fleet.contract reply=fleet.contract
+C generic.ok p=.6
+E person
+
+= fleet | a | person | Авито: организация записывает машину
+C fleet.open kind=units voice=business
+S draft=fleet.contract reply=fleet.contract
+C
+  | Понятно. Тогда запишите первую машину на этой неделе.
+  | Хорошо. Одну машину можем пригнать завтра, примете?
+  | Ясно. Давайте начнём с одной, там видно будет.
+S draft=booking.ask_day reply=booking.offer
+C generic.pick_time
+S draft=generic.close_echo reply=booking.confirm
+V label_added юрлицо
+E person
+
+# ------------------------------------------------------------ спам и не туда
+= spam | va | person | продавец: короткий отказ
+C spam.open kind=seller
+S draft=generic.spam reply=spam.dismiss
+E person
+
+= spam | va | person | ошиблись адресом
+C spam.open kind=wrong
+S draft=generic.spam_wrong reply=spam.wrong
+C spam.more p=.4
+E person
+
+= spam | va | silent | продавцу никто не ответил
+C spam.open kind=seller
+E inactivity
+
+= spam | v | silent | точка или смайлик
+C spam.open kind=noise
+E inactivity
+
+= spam | va | silent | продавец настаивает, ему не отвечают
+C spam.open kind=seller
+S draft=generic.spam reply=spam.dismiss
+C
+  | а кому тогда написать?
+  | дайте контакт руководителя
+  | с кем можно обсудить?
+  | хотя бы почту директора
+E inactivity
+
+= spam | a | silent | Авито: предлагают купить оборудование или обмен
+C spam.open kind=wrong
+C generic.nudge p=.4
+E inactivity

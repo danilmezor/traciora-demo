@@ -1,0 +1,171 @@
+{
+ "path": "services/transmission/transmission-fluid-service.md",
+ "title": "Замена масла в коробке",
+ "title_en": "Transmission fluid service",
+ "exists_in": "both",
+ "english_sheet": "facts/services/transmission/transmission-fluid-service.json",
+ "first_revision_text": "ru/_history/services/transmission/transmission-fluid-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Drain and fill against machine exchange, and gear oil; what customers call a flush.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "short",
+ "words_ru": 227,
+ "links_to": [
+  "services/transmission/transmission-rebuild.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Частичная замена масла в АКПП» against «Аппаратная (полная) замена масла в АКПП»: the same pair and the same confusion (6 900 against 16 300); the third job is manual gearbox oil, not differentials.",
+  "Customers say «поменять масло в автомате», «промыть коробку»."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Замена масла в коробке",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Масла",
+    "Стандарт"
+   ],
+   "rows": [
+    {
+     "В наряде": "Частичная замена масла в АКПП",
+     "Н/ч": "1",
+     "Масла": "4 л",
+     "Стандарт": "6 900 ₽"
+    },
+    {
+     "В наряде": "Аппаратная (полная) замена масла в АКПП",
+     "Н/ч": "2",
+     "Масла": "10 л",
+     "Стандарт": "16 300 ₽"
+    },
+    {
+     "В наряде": "Замена масла в МКПП",
+     "Н/ч": "0,6",
+     "Масла": "2 л",
+     "Стандарт": "3 320 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Замена масла в коробке",
+   "item": "Частичная замена обновляет примерно треть масла. Это щадящий вариант, и именно его описывает большинство производителей. Для машины, которую обслуживали вовремя, — она."
+  },
+  {
+   "section": "Замена масла в коробке",
+   "item": "Аппаратная замена меняет почти всё масло, на установке. Для машины, которая возит прицеп или работает под нагрузкой и раньше обслуживалась."
+  },
+  {
+   "section": "Замена масла в коробке",
+   "item": "Автомат за сто пятьдесят тысяч, в котором масло не меняли ни разу: только частичная. И честно говорим клиенту: новое масло иногда проявляет износ, который старое скрывало. За то, что объяснили заранее, нас потом не винят. Запишите это в наряд."
+  },
+  {
+   "section": "Замена масла в коробке",
+   "item": "Коробка уже пинается или буксует — масло её не вылечит. Больной коробке замену масла не продаём. Это контрольная поездка и разговор о капитальном ремонте."
+  },
+  {
+   "section": "Замена масла в коробке",
+   "item": "У вариаторов и «роботов» масло своё, у каждого производителя. Нет на полке — работа ждёт."
+  },
+  {
+   "section": "Замена масла в коробке",
+   "item": "Механика: масло в МКПП меняют редко и вспоминают о нём при замене сцепления. Предложите."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "atf_drain_fill",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "atf_drain_fill",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 6900.0
+  },
+  {
+   "catalogue_key": "atf_exchange",
+   "what": "hours",
+   "class": "car",
+   "value": 2.0
+  },
+  {
+   "catalogue_key": "atf_exchange",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 16300.0
+  },
+  {
+   "catalogue_key": "gear_oil_service",
+   "what": "hours",
+   "class": "car",
+   "value": 0.6
+  },
+  {
+   "catalogue_key": "gear_oil_service",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3320.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  3320.0,
+  6900.0,
+  16300.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

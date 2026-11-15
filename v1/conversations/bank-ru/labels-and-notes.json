@@ -1,0 +1,734 @@
+{
+ "format": "bank-ru/labels-and-notes/1",
+ "about": "Сотрудники пишут друг другу внутри чата, и короткие строки, которые оставляют ярлыки и приоритет. У заметки есть ключ и слот автора: генератор берёт заметку того, кто ведёт чат.",
+ "notes": [
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 5,
+   "text": "{colleague_mention} посчитай смету по {car}, клиент ждёт. цены по прайсу. я на выдаче зашиваюсь"
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 5,
+   "text": "смене: {car}, клиент {first_name}. обещал набрать по цене, не успел. наберите с утра"
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 5,
+   "text": "{manager_mention} клиент по {car} недоволен, пишет не первый раз. суть выше в чате. если наберёт вас — он на взводе"
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 5,
+   "text": "цену называл по прайсу, {job_total_bare} с ндс. запчасти стандарт"
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 5,
+   "text": "клиент наберёт сам после обеда. если не наберёт — завтра напомнить"
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 6,
+   "text": "{colleague_mention} посмотри, пожалуйста, {car}: клиент просит смету до приезда. Я на приёмке до обеда."
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 6,
+   "text": "Для смены: {first_name}, {car}, запись {day_agreed_for} на {time_agreed}, {job}. Просили напомнить за день."
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 6,
+   "text": "{manager_mention}, по {car} жалоба, всё в переписке выше. Я извинилась, но клиенту важно услышать руководителя. Позвоните ему, пожалуйста."
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 6,
+   "text": "Цену называла по прайсу: {job}, {job_total} с НДС. Смету не отправляла."
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 6,
+   "text": "Обещала написать, когда придёт запчасть ({eta_day_on}). Если меня не будет, напишите, пожалуйста, вы."
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 7,
+   "text": "{colleague_mention} подскажите, пожалуйста, по {car}: клиент спрашивает скидку. Я сказал, что уточню."
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 7,
+   "text": "Клиент по {car} придёт {day_agreed_on} к {time_agreed}. Телефон не спросил, извините."
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 7,
+   "text": "{manager_mention} клиент по {car} недоволен, выше всё написал. Я не знаю, что ему ответить. Подскажите, пожалуйста!"
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 7,
+   "text": "Назвал {job_price}, с прайса. Про расходные материалы не сказал."
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 7,
+   "text": "Обещал перезвонить по готовности. Напомните мне, пожалуйста!"
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 16,
+   "text": "{colleague_mention}, завтра к {time_agreed} приедет клиент по {car}, {job}. Я обещала, что его встретят и что без согласования ничего не делаем. Не подведи, пожалуйста."
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 16,
+   "text": "Смене. {first_name}, {car}: согласовано {job}, итог {job_total}. Клиенту обещала написать по готовности, {ready_time}. Напишите обязательно."
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 16,
+   "text": "{manager_mention}, по {car} у клиента претензия, подробности выше. Я взяла на себя и держу в курсе, но ваш звонок ему нужен сегодня."
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 16,
+   "text": "Назвала {job_total} с НДС, запчасти стандарт. От второй рекомендации отказались, отложено, напоминание через месяц."
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 16,
+   "text": "Обещала клиенту написать утром по запчасти ({eta_day_on}). Если меня не будет, напишите за меня, это важно."
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 17,
+   "text": "{colleague_mention} клиент по {car} спрашивает про гарантию, я не уверен. Глянете, когда освободитесь?"
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 17,
+   "text": "Смене: по {car} обещал перезвонить с ценой. Не успел. Наберите, плиз."
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 17,
+   "text": "{manager_mention} клиент по {car} ругается, см. выше. Если позвонит вам — предупреждаю."
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 17,
+   "text": "Назвал {job_price_num}, по прайсу. Клиент думает."
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 17,
+   "text": "Перезвонить клиенту по {car} после обеда. Не забыть!"
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 22,
+   "text": "{colleague_mention} ответь клиенту по {car}"
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 22,
+   "text": "по {car} клиент приедет {day_agreed_on}. примите"
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 22,
+   "text": "разберусь сам"
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 22,
+   "text": "цену не называл. посмотрим на месте"
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 22,
+   "text": "набрать клиента по {car}"
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 23,
+   "text": "{colleague_mention} ответь по {car}. я на выдаче"
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 23,
+   "text": "{car}. клиент спрашивал. сказал завтра"
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 23,
+   "text": "{manager_mention} клиент по {car} ругается. что говорить"
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 23,
+   "text": "сказал {job_price_bare}"
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 23,
+   "text": "перезвонить по {car}"
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 24,
+   "text": "{colleague_mention}, по {car} смета в карточке, клиент согласовал первую работу. Вторую не делать. Пожалуйста, назовите ему итог при выдаче: {job_total}."
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 24,
+   "text": "Смене. {first_name}, {car}: запись {day_agreed_for} на {time_agreed}, {job}. Обещано напоминание за день. Смета приложена."
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 24,
+   "text": "{manager_mention}, клиент по {car} пишет повторно и недоволен, переписка выше. Предлагаю сегодня же позвонить ему и сказать как есть. Что решаем?"
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 24,
+   "text": "Цена: {job}, {job_price} по прайсу, {job_total} с расходными материалами. Смета отправлена файлом. Запчасти стандарт."
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 24,
+   "text": "Обещала клиенту написать по поставке {eta_day_on} до обеда. Если срок сорвётся, сообщить сразу."
+  },
+  {
+   "key": "ask_colleague",
+   "reasons": [
+    "price",
+    "booking",
+    "found_work"
+   ],
+   "slot": 29,
+   "text": "{colleague_mention}, напишите, пожалуйста, клиенту по {car} как надо: нужно отправить смету и фотографии. У меня это займёт полдня."
+  },
+  {
+   "key": "next_shift",
+   "reasons": [
+    "booking",
+    "status",
+    "fleet"
+   ],
+   "slot": 29,
+   "text": "Для следующей смены. {first_name}, {car}: запись {day_agreed_for}, {time_agreed}, {job}. Клиент просит вернуть старые детали."
+  },
+  {
+   "key": "to_manager",
+   "reasons": [
+    "complaint",
+    "status"
+   ],
+   "slot": 29,
+   "text": "{manager_mention}, по {car} клиент недоволен и просит связаться с руководителем. Обстоятельства изложены в переписке выше. Прошу вас ему позвонить."
+  },
+  {
+   "key": "price_basis",
+   "reasons": [
+    "price"
+   ],
+   "slot": 29,
+   "text": "Цена названа по прайс-листу: {job}, {job_price} по прайсу, {job_total} с расходными материалами. Запчасти стандартной категории."
+  },
+  {
+   "key": "callback",
+   "reasons": [
+    "status",
+    "price"
+   ],
+   "slot": 29,
+   "text": "Клиенту обещан ответ по сроку поставки запчасти. Срок от поставщика: {eta_day_on}. Проверить утром."
+  },
+  {
+   "key": "voice_heard",
+   "reasons": [
+    "symptom",
+    "booking",
+    "status"
+   ],
+   "slot": 6,
+   "text": "Послушала голосовое: клиент просит перезвонить после шести, по {car}. Ассистент его не слышит, поэтому пишу сюда."
+  },
+  {
+   "key": "voice_heard",
+   "reasons": [
+    "symptom",
+    "booking",
+    "status"
+   ],
+   "slot": 16,
+   "text": "В голосовом клиент описывает стук спереди на кочках. Записала с его слов, чтобы мастер не переспрашивал."
+  },
+  {
+   "key": "voice_heard",
+   "reasons": [
+    "symptom",
+    "booking",
+    "status"
+   ],
+   "slot": 24,
+   "text": "Голосовое прослушала. Суть: {car}, просит записать на вечер. Отвечаю текстом."
+  },
+  {
+   "key": "draft_wrong",
+   "reasons": [
+    "any"
+   ],
+   "slot": 16,
+   "text": "Черновик убрала: ассистент не знает, что клиент был у нас на прошлой неделе. Ответила сама."
+  },
+  {
+   "key": "draft_wrong",
+   "reasons": [
+    "any"
+   ],
+   "slot": 5,
+   "text": "черновик не то. клиент про другую машину, ответил сам"
+  },
+  {
+   "key": "draft_wrong",
+   "reasons": [
+    "any"
+   ],
+   "slot": 24,
+   "text": "Черновик без суммы. Дописала итог с НДС и приложила смету."
+  },
+  {
+   "key": "unclear_note",
+   "reasons": [
+    "any"
+   ],
+   "slot": 29,
+   "text": "Клиент написал неясно. Спросила дважды; оказалось: {clear_words}. Записала в заявку его словами."
+  },
+  {
+   "key": "unclear_note",
+   "reasons": [
+    "any"
+   ],
+   "slot": 6,
+   "text": "Сначала было непонятно, чего хочет клиент. Уточнила: {clear_words}."
+  },
+  {
+   "key": "unclear_note",
+   "reasons": [
+    "any"
+   ],
+   "slot": 17,
+   "text": "Клиент не объяснил, что нужно. Назвал цену наугад, он пропал."
+  },
+  {
+   "key": "no_show",
+   "reasons": [
+    "booking",
+    "moving"
+   ],
+   "slot": 6,
+   "text": "Клиент по {car} не приехал к {time_agreed}. Набрала, не берёт. Запись сняла, напоминание оставила."
+  },
+  {
+   "key": "no_show",
+   "reasons": [
+    "booking",
+    "moving"
+   ],
+   "slot": 23,
+   "text": "не приехал. запись снял"
+  },
+  {
+   "key": "shop_other",
+   "reasons": [
+    "any"
+   ],
+   "slot": 7,
+   "text": "Клиент спрашивал про Новый город, а чат взял я. Передал Светлане Юрьевне, извините!"
+  },
+  {
+   "key": "shop_other",
+   "reasons": [
+    "any"
+   ],
+   "slot": 24,
+   "text": "Вопрос был про ульяновский сервис. Клиенту ответила, что передам; {manager_mention}, посмотрите, пожалуйста."
+  }
+ ],
+ "acks": [
+  {
+   "slot": 5,
+   "text": "сделаю, как освобожусь"
+  },
+  {
+   "slot": 5,
+   "text": "ок, посчитаю"
+  },
+  {
+   "slot": 6,
+   "text": "Хорошо, напишу клиенту!"
+  },
+  {
+   "slot": 6,
+   "text": "Да, конечно, сделаю сегодня."
+  },
+  {
+   "slot": 7,
+   "text": "да-да, сделаю"
+  },
+  {
+   "slot": 7,
+   "text": "Понял, уже считаю!"
+  },
+  {
+   "slot": 29,
+   "text": "Хорошо, сделаю."
+  },
+  {
+   "slot": 29,
+   "text": "Приняла, отвечу клиенту."
+  },
+  {
+   "slot": 16,
+   "text": "Сделаю, не переживай."
+  },
+  {
+   "slot": 16,
+   "text": "Взяла на себя, клиенту напишу сама."
+  },
+  {
+   "slot": 17,
+   "text": "Понял, принял"
+  },
+  {
+   "slot": 17,
+   "text": "Ок, гляну после обеда"
+  },
+  {
+   "slot": 22,
+   "text": "принял"
+  },
+  {
+   "slot": 22,
+   "text": "хорошо"
+  },
+  {
+   "slot": 23,
+   "text": "ладно"
+  },
+  {
+   "slot": 23,
+   "text": "угу"
+  },
+  {
+   "slot": 24,
+   "text": "Принято, напишу клиенту до обеда."
+  },
+  {
+   "slot": 24,
+   "text": "Сделаю и отмечу в заказ-наряде."
+  }
+ ],
+ "labels": {
+  "available": [
+   "запись",
+   "цена",
+   "статус",
+   "согласование",
+   "жалоба",
+   "юрлицо",
+   "шины"
+  ],
+  "product": "handoff",
+  "by_reason": {
+   "price": "цена",
+   "booking": "запись",
+   "hours": null,
+   "symptom": "запись",
+   "status": "статус",
+   "found_work": "согласование",
+   "moving": "запись",
+   "complaint": "жалоба",
+   "fleet": "юрлицо",
+   "spam": null
+  },
+  "tires_instead": "когда работа — seasonal_tyres, wheel_swap, tyre_storage, puncture, balance или alignment, ярлык «шины» заменяет «цена» или «запись»",
+  "when": "ставит тот, кто ведёт чат, после своего ответа и до закрытия; чат о симптоме получает «запись», только если договорились о времени",
+  "handoff": "ярлык handoff ставит продукт при передаче заявки, и его снимает первый ответ человека; банк для него строк не пишет",
+  "use": [
+   {
+    "label": "запись",
+    "reasons": [
+     "booking",
+     "symptom",
+     "moving"
+    ],
+    "when": "договорились о времени"
+   },
+   {
+    "label": "цена",
+    "reasons": [
+     "price"
+    ],
+    "when": "назвали цену, записи пока нет"
+   },
+   {
+    "label": "статус",
+    "reasons": [
+     "status"
+    ],
+    "when": "клиент спрашивал о готовности или о запчасти"
+   },
+   {
+    "label": "согласование",
+    "reasons": [
+     "found_work"
+    ],
+    "when": "клиент согласовал найденную работу или отказался от неё"
+   },
+   {
+    "label": "жалоба",
+    "reasons": [
+     "complaint"
+    ],
+    "when": "недовольство работой, счётом или обслуживанием"
+   },
+   {
+    "label": "юрлицо",
+    "reasons": [
+     "fleet"
+    ],
+    "when": "пишет организация"
+   },
+   {
+    "label": "шины",
+    "reasons": [
+     "booking",
+     "price"
+    ],
+    "when": "сезонная замена шин и хранение"
+   }
+  ]
+ },
+ "priority": {
+  "base_shares": {
+   "high": 4,
+   "urgent": 0.5,
+   "low": 1
+  },
+  "patterns": [
+   {
+    "level": "high",
+    "reasons": [
+     "complaint"
+    ],
+    "by": "приёмщик",
+    "when": "жалоба на повторную неисправность или на повреждение после сервиса",
+    "note_with_it": "to_manager"
+   },
+   {
+    "level": "high",
+    "reasons": [
+     "fleet"
+    ],
+    "by": "приёмщик",
+    "when": "новая организация спрашивает о договоре или встала рабочая машина",
+    "note_with_it": "to_manager"
+   },
+   {
+    "level": "urgent",
+    "reasons": [
+     "complaint"
+    ],
+    "by": "руководитель",
+    "when": "клиент пишет третий раз и говорит о другом сервисе или об эвакуаторе",
+    "note_with_it": "to_manager"
+   },
+   {
+    "level": "low",
+    "reasons": [
+     "spam",
+     "hours"
+    ],
+    "by": "приёмщик",
+    "when": "продавец или вопрос, который не требует ответа сегодня",
+    "note_with_it": null
+   }
+  ],
+  "by_wait": "всё остальное двигает ожидание, как его считает продукт; банк таких строк не пишет"
+ }
+}

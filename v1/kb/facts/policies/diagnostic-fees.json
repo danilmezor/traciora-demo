@@ -1,0 +1,128 @@
+{
+ "path": "policies/diagnostic-fees.md",
+ "title": "Diagnostic and inspection fees",
+ "first_revision_text": "en/_history/policies/diagnostic-fees.md",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "1",
+ "purpose": "Why diagnosis is charged and never credited; the founder's hobby-horse.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 208,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Fees from the catalogue: check_engine_diag, electrical_diag, brake_inspection (the same menu price as suspension_diag and ac_performance_check), cooling_pressure_test; battery_test and courtesy_inspection are free.",
+  "The fee is never credited toward the repair and never waived.",
+  "More diagnostic time needs the customer's approval.",
+  "A wrong diagnosis: the customer does not pay for the part that did not fix it.",
+  "Voice: slot 1, first person plural, short sentences."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Diagnostic and inspection fees",
+   "item": "Check engine light: one hour, $135.00."
+  },
+  {
+   "section": "Diagnostic and inspection fees",
+   "item": "Electrical fault: an hour and a half to start, $202.50."
+  },
+  {
+   "section": "Diagnostic and inspection fees",
+   "item": "Brakes, steering and suspension, A/C: an inspection at $49.95 each."
+  },
+  {
+   "section": "Diagnostic and inspection fees",
+   "item": "Cooling system pressure test: $67.50."
+  },
+  {
+   "section": "Diagnostic and inspection fees",
+   "item": "Battery and charging test: free. It takes ten minutes and sells batteries."
+  },
+  {
+   "section": "Diagnostic and inspection fees",
+   "item": "The courtesy inspection with a service: free."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 135.0
+  },
+  {
+   "catalogue_key": "electrical_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 202.5
+  },
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "cooling_pressure_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 67.5
+  }
+ ],
+ "people": [
+  {
+   "slot": "1",
+   "written_as": "Ray Brennan",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}"
+ ],
+ "new_facts": [
+  "No crediting of diagnostic fees. Reason: a crediting rule would need discount lines in the ERP on every diagnosed repair; \"never credited\" needs none."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "fees updated to the new list; message: \"New prices from today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian shops often do credit diagnostics when the repair is done there; this company does not, and the founder says so. Russian fees from the catalogue (computer diagnostics 1 200, running gear 800, brakes 700, battery test 300)."
+ ]
+}

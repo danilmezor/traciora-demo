@@ -1,0 +1,183 @@
+{
+ "path": "services/maintenance/oil-change.md",
+ "title": "Замена масла",
+ "title_en": "Oil change",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/oil-change.json",
+ "first_revision_text": "ru/_history/services/maintenance/oil-change.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The most common job: what it includes, the three oils, what to ask, the upsell that is not an upsell.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:customer-terms",
+  "smoke"
+ ],
+ "length_class": "medium",
+ "words_ru": 336,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The Russian oil service is priced by the hour (0.7 н/ч) with four litres and carries shop supplies; a quarter of orders carry it (catalogue share 0.244).",
+  "Tiers: Лукойл Люкс with BIG Filter, Лукойл Genesis with MANN-FILTER, Shell Helix Ultra with the original filter.",
+  "Interval 7 500 to 10 000 km or a year; the objection is «в гараже дешевле».",
+  "A paragraph on customers who bring their own oil."
+ ],
+ "new_facts": [
+  "Own oil is accepted in a sealed can: labour and the filter are charged."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Три цены",
+   "columns": [
+    "Масло",
+    "Фильтр",
+    "Цена"
+   ],
+   "rows": [
+    {
+     "Масло": "Лукойл Люкс 5W-40 SL/CF",
+     "Фильтр": "BIG Filter",
+     "Цена": "4 760 ₽"
+    },
+    {
+     "Масло": "Лукойл Genesis Armortech 5W-40 (его и считаем в смету)",
+     "Фильтр": "MANN-FILTER",
+     "Цена": "6 700 ₽"
+    },
+    {
+     "Масло": "Shell Helix Ultra 5W-40",
+     "Фильтр": "Оригинал",
+     "Цена": "9 200 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Спросить",
+   "item": "Год, марка, модель, двигатель. От двигателя зависят литры, допуск масла и фильтр."
+  },
+  {
+   "section": "Спросить",
+   "item": "Пробег сейчас и при прошлой замене, если помнит."
+  },
+  {
+   "section": "Спросить",
+   "item": "«А что-нибудь ещё беспокоит?» Это самый дешёвый визит, на котором находят самую дорогую неисправность."
+  },
+  {
+   "section": "Сказать",
+   "item": "«Около часа. Заодно осмотрим машину и пришлём фотографии»."
+  },
+  {
+   "section": "Сказать",
+   "item": "Спрашивает, как часто: по сервисной книжке, а для города с короткими поездками — каждые 7 500–10 000 км или раз в год. Не каждые пять тысяч: лишних замен мы не продаём."
+  },
+  {
+   "section": "Сказать",
+   "item": "Своё масло — обычное дело. Канистра должна быть запечатана. Тогда клиент платит за работу, 1 330 ₽, и за фильтр; гарантия — на работу."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«В гараже за пятьсот рублей поменяют». «Поменяют. Только машину там никто не осмотрит, а что залили и что написали — узнать будет не у кого. У нас с маслом эконом — 4 760 ₽, и механик смотрит машину по чек-листу»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«А зачем дорогое масло?» Смотрим допуск в сервисной книжке. Требует производитель определённый допуск — льём масло с этим допуском. Не требует — выбор за клиентом, и на старом моторе эконом вполне годится."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "oil_service",
+   "what": "hours",
+   "class": "car",
+   "value": 0.7
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4760.0
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 6700.0
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 9200.0
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "part list price each: Масло моторное 5W-30 / 5W-40, на розлив",
+   "tier": "standard",
+   "qty": 4,
+   "unit": "л",
+   "brand": "Лукойл Genesis Armortech 5W-40",
+   "value": 1160
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1330.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  1160.0,
+  1330.0,
+  4760.0,
+  6700.0,
+  9200.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

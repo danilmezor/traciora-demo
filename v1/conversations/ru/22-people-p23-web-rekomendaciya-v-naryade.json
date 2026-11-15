@@ -1,0 +1,139 @@
+{
+  "format": "seed-conversation/1",
+  "id": "22-people-p23-web-rekomendaciya-v-naryade",
+  "configuration": "ru",
+  "number": 22,
+  "story": "people",
+  "title": "Рекомендация в наряде, о которой не сказали вслух: клиентка спрашивает на сайте",
+  "demonstrates": "Slot 23 writes up what he is asked for and mentions the rest at pick-up, or not at all. A customer finds «рекомендовано: замена передних тормозных колодок, остаток 2 мм» in her order at home. The assistant says what 2 mm means in general and hands over. His reply comes at 19:10: come and we will change them. Asked the price, he gives it the next morning: two words.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Регина",
+      "invented": true,
+      "first_time": false,
+      "note": "клиентка сервиса на Технической; накануне забрала машину",
+      "phone": "+7 907 612-05-84"
+    },
+    "staff": [
+      {"slot": 23, "name": "Вячеслав Крюков"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Клиентка, которая дома прочитала заказ-наряд.",
+    "what_happens": "Можно ли с этим ездить? Ассистент: 2 мм — почти предел; передаю мастеру. Мастер, под закрытие: приезжайте, поменяем. Сколько и как долго? Наутро: «4560. час».",
+    "facts": {
+      "recommended": "замена передних тормозных колодок; записано в наряде, при выдаче не сказано",
+      "sold": "нет",
+      "public_pages_used": ["вопросы о тормозах: остаток колодок"],
+      "prices": [
+        {"said": "4 560 ₽", "amount": 4560.0, "what": "замена передних тормозных колодок, класс car, стандартные колодки", "from": {"catalogue": "front_brake_pads", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "4560", "amount": 4560.0, "what": "то же, как он пишет", "from": {"catalogue": "front_brake_pads", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "2 мм", "what": "остаток колодок в её наряде"}
+      ]
+    }
+  },
+  "days": {
+    "T-34d": {"anchor": "slot 23's first working day on or after the Thursday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 5, "on_or_after_for_slot": 23}, "nominal": "Sat 2026-10-10"},
+    "T-33d": {"anchor": "1 calendar day after slot 23's first working day on or after the Thursday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 5, "on_or_after_for_slot": 23, "plus_days": 1}, "nominal": "Sun 2026-10-11", "what": "the next day: slot 23's second working day"},
+    "T-26d": {"anchor": "8 calendar days after slot 23's first working day on or after the Thursday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 5, "on_or_after_for_slot": 23, "plus_days": 8}, "nominal": "Sun 2026-10-18", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "Вчера", "said_on": "T-34d", "day": "the day before", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "5eedc0de-0022-4e00-8000-00000000a016",
+      "peer": {"id": "seedv1-browser-ru-0760", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0760",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-34d", "at": "12:30:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-34d", "at": "12:30:10", "kind": "message", "from": "customer", "text": "Здравствуйте. Вчера забрала машину на Технической, дома читаю наряд: «рекомендовано: замена передних тормозных колодок, остаток 2 мм». Мне при выдаче ни слова не сказали. С этим вообще ездить можно?"},
+        {"n": 2, "day": "T-34d", "at": "12:30:36", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Ваш заказ-наряд я не вижу и диагноз по переписке поставить не могу, но остаток 2 мм — это почти предел, с заменой передних колодок лучше не тянуть. Передам ваш вопрос мастеру-приёмщику на Технической, он всё объяснит. Напишите, пожалуйста, как к вам обращаться и номер телефона."},
+        {"n": 3, "day": "T-34d", "at": "12:31:20", "kind": "message", "from": "customer", "text": "Регина 89076120584"},
+        {"n": 4, "day": "T-34d", "at": "12:31:44", "kind": "message", "from": "assistant", "text": "Спасибо, Регина. Вопрос передал, с вами свяжутся в ближайшее время."},
+        {"n": 5, "day": "T-34d", "at": "12:31:45", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Регина", "phone": "+7 907 612-05-84", "site": "Техническая", "context": "Регина вчера забрала машину на Технической. В наряде написано «рекомендовано: замена передних тормозных колодок, остаток 2 мм»; при выдаче ей об этом не сказали, спрашивает, можно ли ездить. Я ответил, что 2 мм — почти предел и с заменой лучше не тянуть; наряд я не вижу."}}, "note": {"from": "assistant", "private": true, "text": "Регина вчера забрала машину на Технической. В наряде написано «рекомендовано: замена передних тормозных колодок, остаток 2 мм»; при выдаче ей об этом не сказали, спрашивает, можно ли ездить. Я ответил, что 2 мм — почти предел и с заменой лучше не тянуть; наряд я не вижу."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "west", "owner": null, "due": "T-34d 20:00, закрытие дня"}},
+        {"n": 6, "day": "T-34d", "at": "12:43", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 7, "day": "T-34d", "at": "13:07", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-34d", "at": "19:10:28", "kind": "activity", "what": "assigned", "derived": true, "to": 23, "by": 23, "how": "first reply"},
+        {"n": 9, "day": "T-34d", "at": "19:10:30", "kind": "message", "from": "staff", "slot": 23, "text": "да, колодки на исходе. приезжайте поменяем", "late": "под закрытие: его ответы приходят вечером (cast.json; ledger conv.slowest_tenth)"},
+        {"n": 10, "day": "T-34d", "at": "19:10:31", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 23, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-34d", "at": "19:10:32", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-34d", "at": "19:22:10", "kind": "message", "from": "customer", "text": "Сколько это стоит и сколько по времени?"},
+        {"n": 13, "day": "T-34d", "at": "19:22:50", "kind": "draft", "id": "d1", "text": "Замена передних тормозных колодок стоит 4 560 ₽ с запчастями, по времени около часа. Записать вас?", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 23, "day": "T-33d", "at": "09:50:20", "because": "he sent his own text (n 16)"}},
+        {"n": 14, "day": "T-34d", "at": "19:46", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 15, "day": "T-33d", "at": "09:34", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 16, "day": "T-33d", "at": "09:50:20", "kind": "message", "from": "staff", "slot": 23, "text": "4560. час"},
+        {"n": 17, "day": "T-33d", "at": "09:50:22", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 18, "day": "T-26d", "at": "09:50", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-34d", "at": "19:10:28", "to": 23, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 23,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 26},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 26},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 9, "by": 23, "working_minutes": 398.8, "wall_minutes": 398.8, "measured_from": "n 5", "reply": "first", "late": "под закрытие: его ответы приходят вечером (cast.json; ledger conv.slowest_tenth)"},
+          {"asked": 12, "answered": 16, "by": 23, "working_minutes": 88.2, "wall_minutes": 868.2, "measured_from": "n 12", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 23,
+          "n": 9,
+          "working_minutes": 398.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 2, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-26d", "at": "09:50", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 23}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 23: his first line 398.8 working minutes after the hand-off, two replies, one draft discarded, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "assistant first, handed over (escalation), slot 23",
+    "outcome": "рекомендованные колодки не проданы; закрыт по 7 дням тишины",
+    "facts": [
+      "the recommendation was in the order and was not said at pick-up",
+      "slot 23 answered at 19:10 with no price and no time",
+      "the price, 4 560, came the next morning; no time was offered"
+    ],
+    "questions": []
+  },
+  "why": [
+    "«приезжайте поменяем» — рекомендация, о которой вспомнили, когда уже поздно, только письменно.",
+    "Черновик заканчивался словами «Записать вас?»; его строка заканчивается словом «час».",
+    "Так сервис продаёт четыре рекомендации из десяти."
+  ],
+  "new_facts": [
+    "Регина, +7 907 612-05-84: машину забрала на west накануне чата; в наряде рекомендация «замена передних тормозных колодок, остаток 2 мм» (4 560), не продана. Марка машины в чате не названа."
+  ]
+}

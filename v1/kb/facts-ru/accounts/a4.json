@@ -1,0 +1,123 @@
+{
+ "path": "accounts/a4.md",
+ "title": "Автошкола «Первая передача»",
+ "title_en": "Missionary Ridge Driving School",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/a4.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Standing instructions for account A4; says seven cars, which is out of date by one.",
+ "serves": [
+  "S1",
+  "challenge:combine-kb-and-data",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_ru": 182,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "STALE BY ONE ON PURPOSE, as in English: the page says seven cars (true at its review date); the ERP has eight since the eighth joined three months before T (accounts.json ru: «Учебный 8»).",
+  "Russian training cars are manual: the clutch remark is reversed (clutches wear fast).",
+  "The senior instructor approves up to 12 000 RUB; the director above; instructors up to 8 000 RUB.",
+  "Saturday and Sunday are the school's busiest days (the shop is open both)."
+ ],
+ "new_facts": [
+  "The dual-control pedals rule: checked for free travel and return and recorded; never adjusted or repaired; who fitted them is not stated (planted gap)."
+ ],
+ "new_amounts": [
+  {
+   "value": 12000,
+   "why": "лимит согласования старшего мастера A4"
+  }
+ ],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Whether dual controls on a training car are a legal requirement is the English writer's note, not the research; the page states only the shop's own rule.",
+   "outcome": "verified",
+   "note": "A training car must have extra clutch and brake pedals, an instructor's mirror and the sign. The page keeps only the shop's own rule (check free travel and return, never adjust). Read in the verify pass (section 5).",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_2709/6d8c7fbd95f0b2f282a790182c6d28e791f15e51/",
+   "sentence": "Основные положения по допуску, п. 5: «Механическое транспортное средство, используемое для обучения вождению, должно быть оборудовано дополнительными педалями» «привода сцепления (кроме транспортных средств с автоматической трансмиссией) и тормоза,» «зеркалом заднего вида для обучающего и опознавательным знаком \"Учебное транспортное средство\"»."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Автошкола «Первая передача»",
+   "item": "Контакт: Юрий Николаевич, старший мастер производственного обучения, отвечает за машины: +7 907 870-59-48. Согласует до 12 000 ₽. Больше — директор, Елена Анатольевна: +7 907 390-20-74."
+  },
+  {
+   "section": "Автошкола «Первая передача»",
+   "item": "Инструкторы, которые пригоняют машины, могут согласовать до 8 000 ₽, как любой водитель организации. Обычно всё равно звонят Юрию Николаевичу."
+  },
+  {
+   "section": "Автошкола «Первая передача»",
+   "item": "Все машины на механике. Курсанты жгут сцепление, тормоза, шины и бордюры. Колодки меряем при каждой замене масла, сход-развал проверяем, как только шину начало есть по краю. Про сцепление предупреждаем заранее: за неделю оно не кончается, а за месяц — запросто."
+  },
+  {
+   "section": "Автошкола «Первая передача»",
+   "item": "Дублирующие педали со стороны инструктора ставила сторонняя организация. Мы проверяем, что педали ходят свободно и возвращаются, и записываем это в осмотр. Не регулируем и не ремонтируем. Если что-то не так — машина от нас на линию не выходит: звоните Юрию Николаевичу."
+  },
+  {
+   "section": "Автошкола «Первая передача»",
+   "item": "В субботу и воскресенье машина стоять не может: у школы это самые загруженные дни. Записывайте их с понедельника по четверг."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Светлана",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A4",
+   "contact": "Юрий Николаевич Тюрин",
+   "role": "старший мастер производственного обучения, отвечает за автомобили",
+   "written_as": "Юрий Николаевич"
+  },
+  {
+   "account": "A4",
+   "contact": "Елена Анатольевна Мартьянова",
+   "role": "директор",
+   "written_as": "Елена Анатольевна"
+  },
+  {
+   "account": "A4",
+   "contact": "Юрий Николаевич Тюрин",
+   "role": "старший мастер производственного обучения, отвечает за автомобили",
+   "written_as": "Юрию Николаевичу"
+  }
+ ],
+ "dates": [
+  "{{T-6mo|date}}"
+ ],
+ "amounts": [
+  8000.0,
+  12000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

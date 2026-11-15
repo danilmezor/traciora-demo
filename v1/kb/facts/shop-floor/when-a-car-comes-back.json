@@ -1,0 +1,88 @@
+{
+ "path": "shop-floor/when-a-car-comes-back.md",
+ "title": "When a car comes back",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "What a technician does with a comeback.",
+ "serves": [
+  "S6",
+  "S1",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_en": 153,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Comeback = a new order of type warranty tied to the original (design 2.3).",
+  "It goes first; the foreman looks first: slot 8 at main, slot 18 (lead technician) at east, slot 22 at west.",
+  "Comebacks are counted per technician monthly.",
+  "Slot 27 at west \"has never been shown his own numbers\" (cast): the page's promise is not kept there."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "When a car comes back",
+   "item": "It goes to the front of the line. The customer has already paid once."
+  },
+  {
+   "section": "When a car comes back",
+   "item": "The advisor opens a new order marked warranty and tied to the first one. You do not work on it under the old order."
+  },
+  {
+   "section": "When a car comes back",
+   "item": "The foreman looks first, with the tech who did the job if he is in. At Bonny Oaks that is Andre; at Charlotte Pike it is Dale."
+  },
+  {
+   "section": "When a car comes back",
+   "item": "Write what you found, plainly. \"Slide pins dry, pad hung up\" is useful. \"Customer states noise\" is not."
+  },
+  {
+   "section": "When a car comes back",
+   "item": "Nobody argues with the customer about whose fault it is. Not at the car, not at the counter."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Who looks first at each shop."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same. The Russian comeback window follows the 30-day warranty."
+ ]
+}

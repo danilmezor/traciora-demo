@@ -1,0 +1,67 @@
+{
+ "path": "customers/company-vehicles.md",
+ "title": "Company vehicles",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Public pointer for businesses; the terms themselves are staff-only.",
+ "serves": [
+  "S1",
+  "visibility:public"
+ ],
+ "length_class": "short",
+ "words_en": 93,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Accounts are offered from five vehicles (accounts/opening-a-company-account.md).",
+  "Largest fleet is 35 vans (account A1, not named to the public).",
+  "Contact for new accounts: slot 4 on the main line.",
+  "Terms, rates and approval limits are not on any public page: a customer asking the assistant for fleet rates gets \"ask the service manager\"."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Company vehicles",
+   "item": "A business with five or more vehicles can apply for an account and pay on a monthly statement."
+  },
+  {
+   "section": "Company vehicles",
+   "item": "Smaller businesses are welcome and pay at pick-up like anyone else. We keep each vehicle's history under your company name."
+  },
+  {
+   "section": "Company vehicles",
+   "item": "A work vehicle that is off the road gets looked at ahead of the line."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Account threshold of five vehicles. Reason: the six named accounts have 8 to 35 vehicles and the small business customers 1 to 3; five separates them."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian companies are billed per order with a closing document each time, not on a monthly statement (design R11): say \"по договору, с отсрочкой платежа\"."
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "path": "services/ac/ac-compressor-and-condenser.md",
+ "title": "A/C compressor and condenser",
+ "first_revision_text": "en/_history/services/ac/ac-compressor-and-condenser.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "The two big A/C repairs.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "S11"
+ ],
+ "length_class": "short",
+ "words_en": 197,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job ac_compressor: 3.6 h; includes receiver-drier, expansion valve and recharge.",
+  "Catalogue job ac_condenser: 2.8 h; recharge included.",
+  "Prices assume R-134a; R-1234yf cars cost more by the difference between the two recharges (278.80 - 207.40 = 71.40).",
+  "Parts from V4 on the noon run, order by 10:30; compressors are not returnable once fitted.",
+  "A job started at 12:30 is a next-morning pick-up."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "A/C compressor and condenser",
+   "item": "Both prices are for R-134a cars. A car on R-1234yf costs more by the difference between the two recharges; price it from the list."
+  },
+  {
+   "section": "A/C compressor and condenser",
+   "item": "Compressors and condensers come from Hiwassee Battery & Electric on the noon run. Order by 10:30 or it is tomorrow."
+  },
+  {
+   "section": "A/C compressor and condenser",
+   "item": "A compressor is an electrical part once fitted: it cannot go back. Diagnose first, then order."
+  },
+  {
+   "section": "A/C compressor and condenser",
+   "item": "In July, be honest about the wait. Four hours of work that starts when the part arrives at 12:30 is a next-morning pick-up."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "ac_compressor",
+   "what": "hours",
+   "class": "car",
+   "value": 3.6
+  },
+  {
+   "catalogue_key": "ac_compressor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1176.86
+  },
+  {
+   "catalogue_key": "ac_condenser",
+   "what": "hours",
+   "class": "car",
+   "value": 2.8
+  },
+  {
+   "catalogue_key": "ac_condenser",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 659.76
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Terry Dotson",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V4",
+   "name": "Hiwassee Battery & Electric"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "Expected answer for \"A/C compressor on a 2019 car with R-1234yf\": 1,176.86 + 71.40 = 1,248.26 before supplies and tax (reader's arithmetic; the catalogue has no such row, so the seeder must price it the same way or the page line changes)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена компрессора кондиционера», «замена радиатора кондиционера»."
+ ]
+}

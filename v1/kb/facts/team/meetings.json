@@ -1,0 +1,128 @@
+{
+ "path": "team/meetings.md",
+ "title": "Meetings",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The standing meetings: the Monday managers' meeting, the morning huddle.",
+ "serves": [
+  "S9",
+  "S16",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_en": 153,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Monday managers' meeting: every Monday 6:45, before the shops open, video, 30 minutes, called by slot 2; invitees slots 4, 5, 16, 3, 22 (ledger s9.meeting). It ends at 7:15, before the 7:20 huddle, so no lead advisor is off a counter in the Monday rush.",
+  "The page gives the time without a time zone. With shops/README.md (Charlotte Pike is an hour behind and opens at 7:30 its time) the meeting is at 5:45 for slot 22, an hour and three quarters before his shop opens: the S9 answer needs both pages.",
+  "No meeting on a holiday Monday (design 7.2 S9: holiday Mondays are cancellations).",
+  "Morning huddle 7:20 at each shop, five minutes, paid.",
+  "Comeback review monthly (slots 4 and 8); A1 review quarterly."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Monday managers' meeting",
+   "item": "Every Monday at 6:45, before the doors open, on video, 30 minutes. I run it."
+  },
+  {
+   "section": "Monday managers' meeting",
+   "item": "Who: Greg, Travis, Angie, Donna, Dale and me."
+  },
+  {
+   "section": "Monday managers' meeting",
+   "item": "What: last week by shop (cars, recommended work sold, missed calls, comebacks), this week's cover, anything about a company account."
+  },
+  {
+   "section": "Monday managers' meeting",
+   "item": "If Monday is a holiday there is no meeting that week."
+  },
+  {
+   "section": "Monday managers' meeting",
+   "item": "Accept or decline the invitation. If you decline, send your numbers before Monday."
+  },
+  {
+   "section": "Reviews",
+   "item": "Comebacks: Greg and Randy, monthly."
+  },
+  {
+   "section": "Reviews",
+   "item": "Nickajack Delivery: quarterly, with them."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Nickajack Delivery"
+  }
+ ],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "Morning huddle at 7:20; meeting length 30 minutes. The calendar series for the Monday meeting should be 30 minutes."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+1w|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian meeting time set against the Russian opening hours (ledger s9.meeting): 8:15 in Ulyanovsk is 7:15 in Kazan, an hour and three quarters before opening. Планёрка each morning."
+ ]
+}

@@ -1,0 +1,179 @@
+{
+ "path": "how-to/tyre-season.md",
+ "title": "Сезон шиномонтажа",
+ "title_en": null,
+ "exists_in": "ru only",
+ "english_sheet": null,
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "How the desk runs in the two tyre seasons: the windows, the people, the booking grid, storage, what else is sold. Exists only in Russian.",
+ "serves": [
+  "S11",
+  "S3",
+  "challenge:combine-kb-and-data",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 446,
+ "links_to": [
+  "shop-floor/shift-changes-and-time-off.md",
+  "prices/price-list.md",
+  "how-to/missed-calls-and-call-backs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Only in Russian. The English season is air conditioning (May to August) and has no page of its own; the Russian season is the tyre change: two four-week windows, orders at 1.64 times the daily mean, calls up 40.7 %, every desk's miss rate at 1.25 times its row (ledger season.tyre.*, calls.season_miss_factor).",
+  "The seasonal hire (cast F4) works six weeks from the first Monday of April and of October; slot 15 and he work six days a week at the flagship (ledger season.hire, season.extra_shifts)."
+ ],
+ "new_facts": [
+  "Booking for a season opens three weeks before the window; customers with stored tyres are written to two weeks before.",
+  "Slots: an hour for a changeover, half an hour for wheels; a slot is held 15 minutes.",
+  "Storage is at the flagship; tyres for the second shop travel on the 13:00 run, ordered a day ahead; Kazan stores its own.",
+  "Each stored tyre is tagged; condition is written on the receipt in front of the customer.",
+  "Customers are told to re-check wheel bolts after fifty kilometres.",
+  "The page's own date: reviewed T-7 months (before the last spring window for most build days)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Когда",
+   "item": "Весна: с 13 апреля по 10 мая."
+  },
+  {
+   "section": "Когда",
+   "item": "Осень: с 13 октября по 9 ноября."
+  },
+  {
+   "section": "Люди",
+   "item": "На Московском шоссе Евгений Чугунов и сезонный шиномонтажник работают шесть дней в неделю, на двух станках. Сезонника берём на шесть недель: с первого понедельника апреля и с первого понедельника октября."
+  },
+  {
+   "section": "Люди",
+   "item": "На Инженерном и на Технической шиномонтаж делают механики. Плановые ремонты длиннее трёх нормо-часов на эти недели стараемся не записывать."
+  },
+  {
+   "section": "Люди",
+   "item": "Отгулы на шиномонтаже в сезон не согласую: Замены смен и отгулы."
+  },
+  {
+   "section": "Запись",
+   "item": "Запись на сезон открываем за три недели до окна."
+  },
+  {
+   "section": "Запись",
+   "item": "Тем, чьи шины лежат у нас на хранении, пишем сами, за две недели: «Пора переобуваться, когда вам удобно?»"
+  },
+  {
+   "section": "Запись",
+   "item": "Окно: час на шиномонтаж с балансировкой, полчаса на колёса в сборе."
+  },
+  {
+   "section": "Запись",
+   "item": "В одном звонке спрашиваем всё: машина, размер, на дисках или нет, лежат ли шины у нас. Если лежат — номер квитанции."
+  },
+  {
+   "section": "Запись",
+   "item": "Опоздал на 15 минут — окно уходит следующему."
+  },
+  {
+   "section": "Запись",
+   "item": "Без записи берём только в освободившееся окно. Не «между делом»: между делом в сезон не бывает."
+  },
+  {
+   "section": "Хранение",
+   "item": "3 000 ₽ за сезон, до семи месяцев, комплект из четырёх."
+  },
+  {
+   "section": "Хранение",
+   "item": "Принимаем при клиенте: моем, смотрим остаток протектора, грыжи и старые ремонты и записываем всё это в квитанцию. Потом никто не скажет, что отдавал целую шину."
+  },
+  {
+   "section": "Хранение",
+   "item": "На каждой шине бирка: номер квитанции, фамилия, госномер, размер, на каком колесе стояла. Место на складе записано в карточке клиента."
+  },
+  {
+   "section": "Хранение",
+   "item": "Склад хранения — на Московском шоссе. Для Инженерного шины возит Паша, рейсом в 13:00: заказывайте за день до записи. Техническая хранит у себя."
+  },
+  {
+   "section": "Хранение",
+   "item": "Клиент не забрал шины за семь месяцев — звоним. Второй сезон оплачивается как второй сезон."
+  },
+  {
+   "section": "Что ещё",
+   "item": "Колёса сняты — колодки и диски видно как никогда. Замер колодок на каждой машине, фото, строка в осмотре. Весной после ям предлагаем проверить сход-развал."
+  },
+  {
+   "section": "Что ещё",
+   "item": "Затяжка — динамометрическим ключом, при клиенте. Клиенту говорим проверить затяжку через пятьдесят километров."
+  },
+  {
+   "section": "Что ещё",
+   "item": "Грузики, вентили и пакеты Паша заказывает за неделю до окна."
+  },
+  {
+   "section": "Что ещё",
+   "item": "Цены — в прайс-листе; для кроссоверов, рамных внедорожников и «Газелей» — с коэффициентом."
+  },
+  {
+   "section": "Что ещё",
+   "item": "Телефон. В сезон каждая стойка пропускает больше звонков, чем обычно. Тот, кто на телефоне, от телефона не отходит: Пропущенные звонки и перезвоны."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "tyre_storage",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Евгений Чугунов",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паша",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-19mo|date}}",
+  "{{T-7mo|date}}"
+ ],
+ "amounts": [
+  3000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live",
+   "message_ru": "Импортировано из файлов компании"
+  }
+ ],
+ "has_history": false
+}

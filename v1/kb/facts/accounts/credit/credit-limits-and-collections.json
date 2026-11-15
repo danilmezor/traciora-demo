@@ -1,0 +1,166 @@
+{
+ "path": "accounts/credit/credit-limits-and-collections.md",
+ "title": "Credit limits and collections",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "Middle rank and up: each account's credit limit and the steps taken when a statement is overdue.",
+ "serves": [
+  "S1",
+  "S16",
+  "visibility:middle",
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_en": 254,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Credit limits: A1 30,000; A2 20,000; A3 5,000; A4 5,000; A5 7,500; A6 7,500 USD (ERP customer.credit_limit).",
+  "Limit = most owed at once, about two months of usual billing; over-limit orders need a call to slot 3 first.",
+  "Collections: day 1 e-mail; day 10 call; day 20 second call, letter and slot 2 told; day 45 no new work without slot 2.",
+  "Disputed invoices go to slot 4 the day they are raised.",
+  "No account has ever been stopped.",
+  "A1 now pays in about 50 days on 30-day terms, so about 20 days past due: by this page slot 3 should be at the \"day 20\" step (S16: her part of the review is not done).",
+  "A5's disputed bill (T-4.5 months) should have gone to slot 4 that day.",
+  "Hidden below middle: a junior or worker asking for a credit limit gets \"not found\"."
+ ],
+ "tables": [
+  {
+   "section": "Credit limits",
+   "columns": [
+    "Account",
+    "Limit"
+   ],
+   "rows": [
+    {
+     "Account": "Nickajack Delivery",
+     "Limit": "$30,000"
+    },
+    {
+     "Account": "Millsaps Heating & Plumbing",
+     "Limit": "$20,000"
+    },
+    {
+     "Account": "Moccasin Bend Janitorial Services",
+     "Limit": "$5,000"
+    },
+    {
+     "Account": "Missionary Ridge Driving School",
+     "Limit": "$5,000"
+    },
+    {
+     "Account": "Cumberland Bend Electric",
+     "Limit": "$7,500"
+    },
+    {
+     "Account": "Sourwood Catering Co.",
+     "Limit": "$7,500"
+    }
+   ]
+  },
+  {
+   "section": "When a statement is overdue",
+   "columns": [
+    "Days past the due date",
+    "What I do"
+   ],
+   "rows": [
+    {
+     "Days past the due date": "1",
+     "What I do": "Send the statement again by e-mail with a polite line"
+    },
+    {
+     "Days past the due date": "10",
+     "What I do": "Telephone the person who pays the bills"
+    },
+    {
+     "Days past the due date": "20",
+     "What I do": "Telephone again, and send a letter. Tell Claire"
+    },
+    {
+     "Days past the due date": "45",
+     "What I do": "No new work is started for the account without Claire's approval"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Nickajack Delivery"
+  },
+  {
+   "account": "A2",
+   "name": "Millsaps Heating & Plumbing"
+  },
+  {
+   "account": "A3",
+   "name": "Moccasin Bend Janitorial Services"
+  },
+  {
+   "account": "A4",
+   "name": "Missionary Ridge Driving School"
+  },
+  {
+   "account": "A5",
+   "name": "Cumberland Bend Electric"
+  },
+  {
+   "account": "A6",
+   "name": "Sourwood Catering Co."
+  }
+ ],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "new_facts": [
+  "The six credit limits and the four collection steps. Reason: the ERP customer table has a credit limit and the design sets none; a middle-rank page makes a rank test.",
+  "Folder accounts/credit is seen from middle."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Limits in RUB as new facts (about two months of billing per account). Collections in Russia: акт сверки, претензионное письмо before court; days the same."
+ ]
+}

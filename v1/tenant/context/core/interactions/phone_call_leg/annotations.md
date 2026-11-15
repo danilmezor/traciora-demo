@@ -1,0 +1,3 @@
+<!-- extends config/sources/traciora/interactions/phone_call_leg/annotations.md; appended under "## Demo tenant, notes v1" -->
+
+The desk a call rang first is the extension of its earliest leg (order by started_at, then id). An inbound call through a shop's group line rings one desk, then the others; a missed call has a leg per desk it rang, every one no_answer or busy. line on a staff leg is the group line or extension dialled: count a shop's calls by line or by the call's location_id, not by every leg, or a call is counted once per desk. Hour of day: started_at of the first leg in the shop's zone.

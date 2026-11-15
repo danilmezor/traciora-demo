@@ -1,0 +1,818 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-02-junior-month-2",
+  "configuration": "ru",
+  "number": 2,
+  "story": "S4",
+  "title": "The junior operator in her second month: she asks when would suit, and the caller pauses",
+  "purpose": "Story S4, period P2, in the Russian configuration. Alina now counts the job out and asks the caller when he could come, but offers no time of her own; he says he will think, and she lets him go.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Виктор Лаптев",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P2 (rule R6)",
+    "nominal_offset": "T-128d",
+    "nominal_date": "2026-07-08",
+    "local_start": "14:05",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 6,
+    "caller_phone": "+7 907 601-84-22",
+    "repeat_caller": false,
+    "talk_s": 121
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Виктор Лаптев, who bought the car used and has no service history for the gearbox.",
+    "vehicle": "Mazda 3, 2012, automatic, about 135,000 km",
+    "job": "automatic transmission fluid: a partial change, or a full machine exchange",
+    "wants": "to know whether the shop changes gearbox oil, and what it costs",
+    "what_happens": "Alina asks the car, the mileage and whether the oil was ever changed, gives both prices and what decides between them, saves the estimate under his name and number, then asks when he could come. He says he will think and call; she tells him she is in until eight.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "partial_change_rub": 6900,
+      "full_exchange_rub": 16300,
+      "note": "After the last rise (P). catalogue.json, class car, standard parts: atf_drain_fill 6 900 (1.0 h + 4 l), atf_exchange 16 300 (2.0 h + 10 l).",
+      "prices": [
+        {
+          "job": "atf_drain_fill",
+          "name": "Частичная замена масла в АКПП",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 6900.0,
+          "labour_hour_rub": 1900,
+          "said": "шесть девятьсот",
+          "said_rub": 6900
+        },
+        {
+          "job": "atf_exchange",
+          "name": "Аппаратная (полная) замена масла в АКПП",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 16300.0,
+          "labour_hour_rub": 1900,
+          "said": "шестнадцать триста",
+          "said_rub": 16300
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, добрый день."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.2,
+      "said": "Добрый. Скажите, масло в коробке вы меняете? В автомате."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.5,
+      "said": "Меняем, да. А машина какая у вас?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 12.9,
+      "said": "Мазда тройка, двенадцатого года."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 16.0,
+      "said": "Мазда три... А пробег какой сейчас?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 19.8,
+      "said": "Сто тридцать пять."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 22.2,
+      "said": "А в коробке масло раньше меняли, не знаете?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 27.5,
+      "said": "Вот не знаю. Я её с пробегом брал, по книжке — ничего нет. Потому и хочу."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 34.5,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 36.2,
+      "said": "Понятно. Э-э, смотрите, тогда есть два варианта. Частичная замена — это шесть девятьсот, с маслом. И полная, аппаратная, — шестнадцать триста."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 45.3,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 47.4,
+      "said": "Если масло ни разу не меняли на таком пробеге, мастера обычно советуют частичную, а через тысячу километров ещё раз. Но это он на месте скажет, по состоянию масла."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 61.2,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 62.9,
+      "said": "Шесть девятьсот, значит. А по времени это сколько?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 67.6,
+      "said": "Частичная — около часа, можно у нас подождать."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 72.4,
+      "said": "Ясно."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 74.5,
+      "said": "Давайте я вас в базу занесу, чтобы расчёт остался. Как вас зовут?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 81.7,
+      "said": "Виктор."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 83.3,
+      "said": "Виктор, а фамилию подскажете?"
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 86.0,
+      "said": "Лаптев."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 87.8,
+      "said": "И номер телефона для связи."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 91.3,
+      "said": "Девятьсот семь, шестьсот один, восемьдесят четыре, двадцать два."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 96.1,
+      "said": "Ага, записала. Виктор, давайте запишу вас на замену — когда вам удобно было бы подъехать?"
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 104.5,
+      "said": "Ой... Не знаю пока. Я подумаю ещё, тогда наберу."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 109.8,
+      "said": "Хорошо, конечно. Если что — звоните, я сегодня до восьми."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 115.5,
+      "said": "Ладно, спасибо."
+    },
+    {
+      "n": 27,
+      "who": "advisor",
+      "at_s": 117.6,
+      "said": "Спасибо за звонок, до свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.71,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          5,
+          12,
+          25
+        ],
+        "said": [
+          "Мазда три",
+          "через тысячу километров",
+          "до восьми"
+        ],
+        "stored": [
+          "Мазда 3",
+          "через 1000 километров",
+          "до 8"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: uncertain spans marked",
+        "script_turn": 8,
+        "said": "по книжке — ничего нет",
+        "stored": "{?likely: по книжке ничего нет}",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turn": 24,
+        "said": "Ой... ",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "a number split in two by the recogniser",
+        "script_turns": [
+          14
+        ],
+        "said": [
+          "Шесть девятьсот"
+        ],
+        "stored": [
+          "6 900"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          9
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          11
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4
+        ],
+        "said": [
+          "Мазда"
+        ],
+        "stored": [
+          "Mazda"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          6,
+          10,
+          14,
+          22
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          5,
+          10,
+          27
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 3,
+        "lost": 1,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 11,
+        "as_digits": 11,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 1
+    },
+    "script_words": 192,
+    "stored_words": 183,
+    "strict_word_difference": 0.151
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 207,
+    "duration_s": 121.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, добрый день.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добрый. Скажите, масло в коробке вы меняете? В автомате.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Меняем, да. А машина какая у вас?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Mazda тройка, двенадцатого года.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Мазда 3. А пробег какой сейчас?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "135.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А в коробке масло раньше меняли, не знаете?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вот не знаю. Я её с пробегом брал, {?likely: по книжке ничего нет}. Потому и хочу.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно. Смотрите, тогда есть два варианта. Частичная замена, это 6900, с маслом. И полная, аппаратная, 16 300. Если масло ни разу не меняли на таком пробеге, мастера обычно советуют частичную, а через 1000 километров ещё раз. Но это он на месте скажет, по состоянию масла.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "6 900, значит. А по времени это сколько?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Частичная, около часа, можно у нас подождать.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ясно.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте я вас в базу занесу, чтобы расчёт остался. Как вас зовут?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Виктор.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Виктор, а фамилию подскажете?",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Лаптев.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "И номер телефона для связи.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "907 601 84 22.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага, записала. Виктор, давайте запишу вас на замену, когда вам удобно было бы подъехать?",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Не знаю пока. Я подумаю ещё, тогда наберу.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, конечно. Если что, звоните, я сегодня до 8.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ладно, спасибо.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо за звонок, до свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, добрый день.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "И номер телефона для связи.",
+        "level": 1,
+        "segment": 17
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А в коробке масло раньше меняли, не знаете?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Частичная замена, это 6900, с маслом. И полная, аппаратная, 16 300.",
+        "level": 1,
+        "segment": 8
+      },
+      {
+        "key": "offered_time",
+        "quote": "когда вам удобно было бы подъехать?",
+        "level": 1,
+        "segment": 19
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "давайте запишу вас на замену",
+        "level": 1,
+        "segment": 19
+      },
+      {
+        "key": "objection",
+        "quote": "Не знаю пока. Я подумаю ещё, тогда наберу.",
+        "level": 0,
+        "segment": 20
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Ни о чём не договорились: клиент сказал, что подумает и позвонит сам."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "А в коробке масло раньше меняли, не знаете?",
+      "why": "Спросила, меняли ли масло в коробке раньше. От ответа зависит, какую замену советовать, и клиент услышал, что его не просто прайсом встретили.",
+      "segment": 6
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "когда вам удобно было бы подъехать?",
+      "say": "Виктор, могу принять вас сегодня в пять или завтра в десять утра, как вам удобнее?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 53.3,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 17
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 8
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 19
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 19
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 20
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted"
+      ],
+      "score": 53.3,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 6,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, добрый день",
+        "name_and_number": "И номер телефона для связи",
+        "need_discovery": "А в коробке масло раньше меняли, не знаете?",
+        "price_with_next_step": "Частичная замена, это 6900, с маслом. И полная, аппаратная, 16 300",
+        "offered_time": "когда вам удобно было бы подъехать?",
+        "asked_for_booking": "давайте запишу вас на замену",
+        "objection": "Не знаю пока. Я подумаю ещё, тогда наберу"
+      },
+      "na": {
+        "recap": "Ни о чём не договорились: клиент сказал, что подумает и позвонит сам."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "А в коробке масло раньше меняли, не знаете?",
+        "why": "Спросила, меняли ли масло в коробке раньше. От ответа зависит, какую замену советовать, и клиент услышал, что его не просто прайсом встретили."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "когда вам удобно было бы подъехать?",
+        "say": "Виктор, могу принять вас сегодня в пять или завтра в десять утра, как вам удобнее?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 53.3
+  },
+  "why": {
+    "greeting": "2: компания и своё имя в первой фразе.",
+    "name_and_number": "1: взяла имя, фамилию и номер, но номер вслух не повторила («Ага, записала»).",
+    "need_discovery": "2: машина, работа и обстоятельство, о котором спросила сама: меняли ли масло в коробке раньше.",
+    "price_with_next_step": "1: обе цены и от чего зависит выбор, но ни времени, ни шага ни в этой, ни в следующей реплике.",
+    "offered_time": "1: спросила, когда удобно. Своего времени не назвала ни одного.",
+    "asked_for_booking": "1: запись предложила, клиент замялся, и на этом всё.",
+    "recap": "Не применяется: ни о чём не договорились.",
+    "objection": "0: «подумаю ещё, тогда наберу» без причины по рубрике считается сомнением. В ответ только «звоните».",
+    "score": "(1·2 + 2·1 + 2·2 + 2·1 + 3·1 + 3·1 + 2·0) / 2 = 8 из 15 весовых баллов = 53.3.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Новый клиент Виктор Лаптев, Mazda 3 2012, телефон +7 907 601-84-22. В учётной программе сохранён расчёт на замену масла в АКПП (частичная 6 900, полная 16 300); записи нет."
+  ]
+}

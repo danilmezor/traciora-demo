@@ -1,0 +1,140 @@
+{
+ "path": "services/maintenance/spark-plugs.md",
+ "title": "Свечи зажигания",
+ "title_en": "Spark plugs and the \"tune-up\"",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/spark-plugs.json",
+ "first_revision_text": "ru/_history/services/maintenance/spark-plugs.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "What a customer means by a tune-up and what the plug job costs by engine.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:combine-policy-and-price",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 230,
+ "links_to": [
+  "services/diagnostics/check-engine-light.md",
+  "prices/labour-rates-and-fees.md",
+  "services/engine/ignition-sensors-and-fuel-pump.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "No \"tune-up\" in Russian: customers say «троит», «плохо заводится», «расход вырос».",
+  "Four plugs, 0.6 н/ч; the heavy case is the body-on-frame class (labour multiplier 2.0), crossovers and vans 1.2.",
+  "The six-plug total for a V6 is not printed and must be computed from the class table (the Russian twin of C2.1)."
+ ],
+ "new_facts": [
+  "Nickel plugs about 30 000 km, iridium 60 000 km and more."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Свечи",
+   "item": "Четырёхцилиндровый легковой: 0,6 нормо-часа, 4 060 ₽ со свечами NGK."
+  },
+  {
+   "section": "Свечи",
+   "item": "На рамном внедорожнике это другая работа. У V6 половина свечей под впускным коллектором, и его снимают. Работа — 2 280 ₽ вместо 1 140 ₽, и свечей шесть, а не четыре. Считайте по таблице классов, а не по этой странице."
+  },
+  {
+   "section": "Свечи",
+   "item": "Кроссоверы и фургоны — посередине."
+  },
+  {
+   "section": "Спросить",
+   "item": "Сколько цилиндров? Не знает — год, марка, модель, и смотрим сами."
+  },
+  {
+   "section": "Спросить",
+   "item": "Горит ли «чек»? Горит — записываем на диагностику, а не на свечи. Свечи на машине с умершей катушкой — деньги, потраченные дважды."
+  },
+  {
+   "section": "Спросить",
+   "item": "Когда меняли в последний раз? «Ни разу» на ста двадцати тысячах — не редкость."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«Поменяйте свечи, сколько это?» «На ваш четырёхцилиндровый — 4 060 ₽. Если троит, давайте сначала посмотрим, в свечах ли дело: диагностика покажет»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«А почему на „Прадо“ вдвое дороже?» «Половина свечей под впускным коллектором. Это больше часа работы вместо получаса, и свечей шесть»."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "hours",
+   "class": "car",
+   "value": 0.6
+  },
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4060.0
+  },
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "labour",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 2280.0
+  },
+  {
+   "catalogue_key": "spark_plugs",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1140.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  1140.0,
+  2280.0,
+  4060.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

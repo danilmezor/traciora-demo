@@ -1,0 +1,149 @@
+{
+  "format": "seed-conversation/1",
+  "id": "25-r13-web-one-question",
+  "configuration": "ru",
+  "number": 25,
+  "story": "R13",
+  "title": "Непонятно, а после одного вопроса понятно: «а вы компьютер делаете?»",
+  "demonstrates": "Rule R13 on the web chat. The customer names a tool, not a need. The assistant asks one plain question (what is wrong with the car?) and the answer settles it: the check-engine lamp, for three days. It prices the diagnosis, hands over, and its note says what was asked. The advisor's own question (steady or blinking) is need discovery, not a second loop.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Сергей",
+      "invented": true,
+      "first_time": true,
+      "note": "LADA Priora 2012; в сервисе впервые",
+      "phone": "+7 907 302-71-45"
+    },
+    "named_in_a_line": [
+      {"slot": 17, "name": "Артём Николаев", "role": "примет машину на следующий день"}
+    ],
+    "staff": [
+      {"slot": 16, "name": "Светлана Демидова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек, который знает, что есть «компьютер», и не знает, как это называется.",
+    "vehicle": "LADA Priora 2012",
+    "what_happens": "Один уточняющий вопрос; потом цена, передача заявки и два времени от Светланы.",
+    "facts": {
+      "booked": "четверг недели T-13, 18:00, east; принимает слот 17",
+      "public_pages_used": ["прайс: компьютерная диагностика двигателя"],
+      "prices": [
+        {"said": "1 200 ₽", "amount": 1200.0, "what": "компьютерная диагностика двигателя: считывание и анализ ошибок", "from": {"catalogue": "check_engine_diag", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    },
+    "unclear": {
+      "kind": "vague: names a tool («компьютер») instead of what is wrong",
+      "loops": 1,
+      "resolved": true,
+      "how": "Ассистент спрашивает, что с машиной: горит ошибка на панели или что-то не работает. Ответ: «чек горит третий день»."
+    }
+  },
+  "days": {
+    "T-93d": {"anchor": "the Wednesday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 13}, "nominal": "Wed 2026-08-12", "what": "the Wednesday of week T-13 (DESIGN.md section 6, row 25); a working day of slot 16"},
+    "T-92d": {"anchor": "the Thursday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 13}, "nominal": "Thu 2026-08-13", "what": "«завтра, четверг»: slot 17's shift"}
+  },
+  "floating_days": [
+    {"word": "третий день", "said_on": "T-93d", "day": "since two days before", "form": "accusative"},
+    {"word": "завтра после работы", "said_on": "T-93d", "day": "the Thursday of week T-13", "form": "adverb"},
+    {"word": "Завтра после работы", "said_on": "T-93d", "day": "the Thursday of week T-13", "form": "adverb"},
+    {"word": "Завтра в 18:00", "said_on": "T-93d", "day": "the Thursday of week T-13", "form": "adverb"},
+    {"word": "завтра, четверг, 18:00", "said_on": "T-93d", "day": "the Thursday of week T-13", "form": "adverb, nominative"},
+    {"word": "Завтра вас примет", "said_on": "T-93d", "day": "the Thursday of week T-13", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "east",
+      "thread_key": "5eedc0de-0025-4e00-8000-00000000a019",
+      "peer": {"id": "seedv1-browser-ru-0835", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0835",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-93d", "at": "13:15:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-93d", "at": "13:15:10", "kind": "message", "from": "customer", "text": "здравствуйте. а вы компьютер делаете?"},
+        {"n": 2, "day": "T-93d", "at": "13:15:34", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Уточните, пожалуйста, что с машиной: на панели горит ошибка или что-то не работает? Тогда подскажу, какая услуга нужна."},
+        {"n": 3, "day": "T-93d", "at": "13:16:20", "kind": "message", "from": "customer", "text": "чек горит третий день. приора 2012"},
+        {"n": 4, "day": "T-93d", "at": "13:16:46", "kind": "message", "from": "assistant", "text": "Понял, спасибо. Когда горит «чек», нужна компьютерная диагностика двигателя: считывание и анализ ошибок, 1 200 ₽. Мастер скажет, что нашёл, и только потом посчитает ремонт. Передать заявку, чтобы вас записали?"},
+        {"n": 5, "day": "T-93d", "at": "13:17:15", "kind": "message", "from": "customer", "text": "да, в новый город, завтра после работы"},
+        {"n": 6, "day": "T-93d", "at": "13:17:40", "kind": "message", "from": "assistant", "text": "Сам записать я не могу, но заявку передам. Напишите, пожалуйста, как к вам обращаться и номер телефона."},
+        {"n": 7, "day": "T-93d", "at": "13:18:05", "kind": "message", "from": "customer", "text": "Сергей 89073027145"},
+        {"n": 8, "day": "T-93d", "at": "13:18:28", "kind": "message", "from": "assistant", "text": "Спасибо, Сергей. Заявку передал, с вами свяжутся в ближайшее время."},
+        {"n": 9, "day": "T-93d", "at": "13:18:29", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Сергей", "phone": "+7 907 302-71-45", "site": "новый город", "context": "Сергей, LADA Priora 2012. Сначала спросил, «делаем ли мы компьютер»; я один раз уточнил, что с машиной: горит «чек», третий день. Назвал компьютерную диагностику двигателя, 1 200 ₽. Хочет приехать завтра после работы, Новый город."}}, "note": {"from": "assistant", "private": true, "text": "Сергей, LADA Priora 2012. Сначала спросил, «делаем ли мы компьютер»; я один раз уточнил, что с машиной: горит «чек», третий день. Назвал компьютерную диагностику двигателя, 1 200 ₽. Хочет приехать завтра после работы, Новый город."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "east", "owner": null, "due": "T-93d 20:00, закрытие дня"}},
+        {"n": 10, "day": "T-93d", "at": "13:24:38", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 11, "day": "T-93d", "at": "13:24:40", "kind": "message", "from": "staff", "slot": 16, "text": "Сергей, добрый день! Это Светлана, сервис в Новом городе. Чек третий день — правильно, что не стали ждать дальше, Сергей. Завтра после работы могу записать вас на 17:30 или на 18:00, диагностика занимает минут тридцать, стоит 1 200 ₽. Подскажите ещё: чек горит ровно или мигает? Если мигает, на машине лучше не ездить."},
+        {"n": 12, "day": "T-93d", "at": "13:24:41", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 16, "how": "a manager's reply takes it off"},
+        {"n": 13, "day": "T-93d", "at": "13:27:30", "kind": "message", "from": "customer", "text": "ровно. на 18"},
+        {"n": 14, "day": "T-93d", "at": "13:28:10", "kind": "draft", "id": "d1", "text": "Хорошо, Сергей. Завтра в 18:00 ждём вас: 10-й Инженерный проезд, 30.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-93d", "at": "13:30:20", "became": 15}},
+        {"n": 15, "day": "T-93d", "at": "13:30:20", "kind": "message", "from": "staff", "slot": 16, "text": "Записала, Сергей: завтра, четверг, 18:00, компьютерная диагностика двигателя, Приора, 1 200 ₽. Адрес: 10-й Инженерный проезд, 30. Раз горит ровно, доехать можно спокойно. Завтра вас примет Артём, я ему всё передам."},
+        {"n": 16, "day": "T-93d", "at": "13:30:40", "kind": "activity", "what": "label_added", "label": "запись", "by": 16},
+        {"n": 17, "day": "T-93d", "at": "13:31:00", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-93d", "at": "13:24:38", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["запись"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 26},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 25},
+          {"asked": 7, "answered": 8, "by": "assistant", "wall_seconds": 23},
+          {"asked": 9, "answered": 11, "by": 16, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 9", "reply": "first"},
+          {"asked": 13, "answered": 15, "by": 16, "working_minutes": 2.8, "wall_minutes": 2.8, "measured_from": "n 13", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 11,
+          "working_minutes": 6.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 4, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-93d", "at": "13:31:00", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 16: her first line 6.2 minutes after the hand-off, two replies, one draft edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "assistant first, handed over (scheduling), slot 16",
+    "outcome": "компьютерная диагностика на следующий день, 18:00, east; закрыт слотом 16",
+    "facts": [
+      "unclear first message; clear after one question by the assistant",
+      "the hand-off note carries his own words and says what was asked",
+      "the price named is the diagnosis, 1 200"
+    ],
+    "questions": []
+  },
+  "why": [
+    "По слову «компьютер» ассистент работу не угадывает: спрашивает, что с машиной.",
+    "Заметка избавляет приёмщика от вопроса, который ассистент уже задал.",
+    "«Ровно или мигает» — тот вопрос, который судья звонков засчитал бы за выяснение потребности."
+  ],
+  "new_facts": [
+    "Сергей, +7 907 302-71-45, LADA Priora 2012: компьютерная диагностика двигателя на east в четверг недели T-13, 18:00; принимает слот 17."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+ "path": "policies/complaints.md",
+ "title": "Complaints",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Staff procedure for a complaint: who hears it, who decides, how fast.",
+ "serves": [
+  "S8",
+  "S1",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 304,
+ "links_to": [
+  "policies/discounts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Five counter steps; the complaint is written on the order and raised as a high-priority card for the shop manager (S8: the lead advisor raised the card, the senior took it).",
+  "Decision table: apology by the advisor; up to 10 % by the advisor; over 10 %, free redo outside warranty and refunds by slot 4 (Chattanooga) or slot 22 (Nashville); technician complaints to the foreman; advisor complaints to slot 4 or 22; company accounts always slot 4 the same day.",
+  "Reply by the person who can fix it within one working day; promised calls back kept the same day.",
+  "Account A5 is served at west, so the rule \"a company account: always slot 4\" was not followed there: its complaint call was taken by slot 22 and never returned (S1)."
+ ],
+ "tables": [
+  {
+   "section": "Who decides what",
+   "columns": [
+    "What the customer needs",
+    "Who"
+   ],
+   "rows": [
+    {
+     "What the customer needs": "An apology, an explanation of the bill",
+     "Who": "The advisor who has them"
+    },
+    {
+     "What the customer needs": "Money off, up to 10 % of the bill",
+     "Who": "The advisor, with the reason on the order"
+    },
+    {
+     "What the customer needs": "Money off over 10 %, a free redo outside warranty, a refund",
+     "Who": "Greg for Chattanooga, Dale for Nashville: Discount policy"
+    },
+    {
+     "What the customer needs": "A complaint about a technician's work",
+     "Who": "The foreman looks at the car. Nobody discusses the technician with the customer"
+    },
+    {
+     "What the customer needs": "A complaint about an advisor",
+     "Who": "Greg or Dale, not the advisor's colleague"
+    },
+    {
+     "What the customer needs": "A company account",
+     "Who": "Always Greg, the same day, whatever the size"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "At the counter or on the phone",
+   "item": "Let them finish. Do not explain, do not defend the technician, do not say \"no problem\"."
+  },
+  {
+   "section": "At the counter or on the phone",
+   "item": "Say what you heard back to them in one sentence."
+  },
+  {
+   "section": "At the counter or on the phone",
+   "item": "Say what happens next and when: \"Greg will call you before noon tomorrow.\" Then make that true."
+  },
+  {
+   "section": "At the counter or on the phone",
+   "item": "Write it on the order, in their words."
+  },
+  {
+   "section": "At the counter or on the phone",
+   "item": "Raise a card on the board for the shop manager, high priority, with the order number. Do it before you take the next call."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}"
+ ],
+ "new_facts": [
+  "Company-account complaints go to slot 4 whatever the shop. Reason: makes the A5 failure a breach of a written rule rather than of good manners."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added step 5 (raise a card before the next call) after the timing-belt complaint; message: \"Card first, then the next call.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Add the written claim (претензия): accepted at any shop, registered, passed to the service manager the same day."
+ ]
+}

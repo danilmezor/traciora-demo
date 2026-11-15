@@ -1,0 +1,91 @@
+{
+ "path": "how-to/handing-a-car-back.md",
+ "title": "Выдача автомобиля",
+ "title_en": "Handing a car back",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/handing-a-car-back.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "The pick-up: walking the bill, old parts, deferred work, the next visit.",
+ "serves": [
+  "S7",
+  "S8",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_ru": 223,
+ "links_to": [
+  "policies/complaints.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The customer signs the completion act; the warranty sentence is the Russian one.",
+  "The next visit includes the tyre changeover.",
+  "S8 in Russian: the argument at the desk happened at this step, with a bill above the quoted 15 552."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Выдача автомобиля",
+   "item": "Машина стоит перед входом, документы готовы до того, как клиент приехал. Посмотрите машину сами: руль чистый, лампы на панели не горят, чехол с сиденья снят."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "Пройдите по акту строка за строкой, простыми словами. Зачем приезжал, что нашли, что сделали. По каждой работе — работа и запчасти. Потом расходные материалы и итог. Итог должен совпадать с тем, что он согласовал. Не совпадает — вы должны были позвонить ему раньше."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "Старые детали. Просил — отдайте. Не просил, но деталь всё объясняет сама (колодка, стёртая до металла) — покажите всё равно."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "Что не сделано. Назовите вслух отказы и строки «Наблюдать», с замером. «Задние амортизаторы потеют. В этом месяце не страшно. До зимы я бы поменял». Это есть в акте; скажите и словами."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "Гарантия одной фразой: 30 дней на работу, на запчасти — гарантия производителя, срок в наряде."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "Следующий визит. Когда менять масло, что отложено, когда переобуваться. Предложите записать сразу."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "Подпись в акте, оплата, чек, ключи. Водитель организации подписывает акт и уезжает: счёт уйдёт в их бухгалтерию."
+  },
+  {
+   "section": "Выдача автомобиля",
+   "item": "«Если что-то покажется не так — звоните мне, а не в отзывы». И ещё раз назовите своё имя."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

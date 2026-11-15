@@ -1,0 +1,159 @@
+{
+ "path": "policies/documents-and-vat.md",
+ "title": "Документы клиенту и НДС",
+ "title_en": null,
+ "exists_in": "ru only",
+ "english_sheet": null,
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "What a private customer and a company get on paper at check-in, at pick-up and at payment, and how VAT at 5 % is shown and said. Exists only in Russian: the counterpart of the English base's scattered lines on sales tax and of its monthly statement.",
+ "serves": [
+  "S7",
+  "S1",
+  "S2",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 477,
+ "links_to": [
+  "accounts/company-account-terms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Only in Russian. English has one sales-tax rate named on the rates page and a monthly statement per account; Russian closes each order with its own documents (ledger acct.ru_documents) and shows VAT at 5 % since 2025-01-01 (ledger tax.rate, tax.ru_vat_from). Every price holds the VAT and nothing is added on top for anyone; a private customer's papers show the total and «в том числе НДС 5 %», an account's счёт and УПД the amount before VAT, the VAT and the total (ledger tax.ru_price_basis, kb.vat_in_list_prices, kb.documents).",
+  "The invoice to a company is due within five calendar days and goes out the same or the next working day; on an advance VAT is counted at 5/105 (ledger kb.documents; НК ст. 168 п. 3, ст. 164 п. 4).",
+  "The worked example is story S7's bill (ledger s7.bill): 700 + 12 520 + 102,60 = 13 322,60 to pay, VAT 634,41 inside it; before VAT 12 688,19 (ledger kb.worked_answers)."
+ ],
+ "new_facts": [
+  "The order is the contract; a check-in act records damage, completeness and fuel level; the car is not released without a signed completion act.",
+  "Companies: an invoice and УПД, or an invoice, an act and a счёт-фактура, per order; through ЭДО or on paper; a reconciliation act on request and once a quarter.",
+  "A driver signs by a power of attorney from the company.",
+  "Advisors say the total the customer will pay, shop supplies included (VAT is already in every price).",
+  "The page's own dates: in force from T-10 months, reviewed T-2 months."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "ПП № 780: a written contract; the check-in act unless the contract carries the same data (п. 12); the car released against the act (п. 23); the заказ-наряд itself is not mandatory (п. 4). Read through a summarising fetch: re-read the primary text.",
+   "outcome": "verified",
+   "note": "Re-read on the text of the rules. The rules name the заказ-наряд only among the samples a shop shows (п. 4); what they require is a written contract.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 9: «Договор заключается в письменной форме»; п. 12: «исполнитель обязан одновременно с договором составить приемо-сдаточный акт», «Исполнитель вправе не составлять приемо-сдаточный акт в случае, если договор содержит информацию» о состоянии автомобиля; п. 23: «Автомототранспортное средство выдается потребителю или его представителю после полной оплаты оказанных услуг»."
+  },
+  {
+   "item": "A company on the simplified system with VAT at 5 % issuing a счёт-фактура or УПД: ordinary since 2025, not in the research.",
+   "outcome": "verified",
+   "note": "As accounts/company-account-terms.md. The page also says that on an advance VAT is counted at 5/105 (НК ст. 164 п. 4 and the same page of the tax service, read).",
+   "url": "https://www.nalog.gov.ru/rn05/taxation/taxes/nds_usn/",
+   "sentence": "«применив расчетную ставку в размере 5/105% или 7/107% (при применении специальной ставки НДС)»."
+  },
+  {
+   "item": "The power of attorney for a driver who signs the order and the act: ordinary practice, not in the research.",
+   "outcome": "verified",
+   "note": "For collecting the car the rules ask a representative for a power of attorney; signing the order by it is the same practice.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 23: автомототранспортное средство выдаётся «потребителю или его представителю» при предъявлении документа, удостоверяющего личность, а представителю — также доверенности."
+  },
+  {
+   "item": "Showing list prices before VAT to private customers: see customers/prices-for-common-services.md.",
+   "outcome": "corrected",
+   "note": "As customers/prices-for-common-services.md: the page now says every price is «с НДС», and its worked example shows 634,41 ₽ of VAT inside 13 322,60 ₽.",
+   "url": "https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-168/"
+  }
+ ],
+ "tables": [
+  {
+   "section": "Частный клиент",
+   "columns": [
+    "Когда",
+    "Документ",
+    "Что в нём должно быть"
+   ],
+   "rows": [
+    {
+     "Когда": "Приёмка",
+     "Документ": "Заказ-наряд — он же наш договор с клиентом — и акт приёма-передачи автомобиля",
+     "Что в нём должно быть": "Клиент и телефон; машина, VIN, госномер, пробег; жалоба словами клиента; работы и запчасти с ценами; срок готовности; гарантийные сроки; условие о платной стоянке. В акте: видимые повреждения, комплектность, уровень топлива. Запчасти клиента, если он привёз свои. Подписи обеих сторон"
+    },
+    {
+     "Когда": "Допработы",
+     "Документ": "Новые строки в том же заказ-наряде",
+     "Что в нём должно быть": "Кто согласовал, как и когда"
+    },
+    {
+     "Когда": "Выдача",
+     "Документ": "Акт выполненных работ",
+     "Что в нём должно быть": "Что сделано, какие запчасти поставлены, суммы, итог и строка «в том числе НДС 5 %», «рекомендовано, не выполнено». Подпись клиента: машину получил, претензий по комплектности нет"
+    },
+    {
+     "Когда": "Оплата",
+     "Документ": "Кассовый чек",
+     "Что в нём должно быть": "Каждая работа и каждая запчасть — своей строкой, итог и «в том числе НДС 5 %». На аванс — отдельный чек. Чек на бумаге или электронный"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "НДС",
+   "item": "С 1 января 2025 года мы на упрощённой системе с НДС 5 %. В документах за более ранние даты НДС нет, и так и должно быть."
+  },
+  {
+   "section": "НДС",
+   "item": "Все цены в базе знаний и в прайс-листе — с НДС. Сверху налог не добавляется никому: ни частному клиенту, ни организации."
+  },
+  {
+   "section": "НДС",
+   "item": "Клиенту называйте итог: это сумма, которую он увидит на терминале, вместе с расходными материалами. «Тринадцать двести» по прайсу и «тринадцать триста с лишним» на кассе — готовая жалоба."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-10mo|date}}",
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [
+  102.6,
+  634.41,
+  700.0,
+  12520.0,
+  12688.19,
+  13322.6
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "3",
+   "text_date": "{{T-2mo|date}}",
+   "what": "added the sentence that the advisor says the total the customer will pay, shop supplies included, after two complaints at the till",
+   "proposer_slot": "3",
+   "approver_slot": "2",
+   "message_ru": "Называем итог, а не цену из прайса. Две жалобы на кассе за месяц."
+  }
+ ],
+ "has_history": true
+}

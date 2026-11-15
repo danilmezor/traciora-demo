@@ -1,0 +1,79 @@
+{
+ "path": "services/inspections/courtesy-inspection.md",
+ "title": "Courtesy inspection",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The free inspection from the counter's side: how the result is presented.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S7",
+  "S5"
+ ],
+ "length_class": "short",
+ "words_en": 236,
+ "links_to": [
+  "shop-floor/courtesy-inspection.md",
+  "how-to/writing-an-estimate.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job courtesy_inspection: free, on 80 % of orders (\"four cars in five\"); not counted as a priced job.",
+  "Customer is told at drop-off; the advisor checks that every Bad has a photo and a measurement.",
+  "Good, Watch, Bad are shown to customers as green, yellow, red.",
+  "Yellow items carry a measurement and a rough \"when\"; they are read before the next visit.",
+  "Work is recommended on about 65 % of orders (\"two cars in three\").",
+  "\"$2,000\" is a figure of speech."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Courtesy inspection",
+   "item": "Green: fine. Say it out loud. People like hearing that most of their car is fine, and it makes the rest believable."
+  },
+  {
+   "section": "Courtesy inspection",
+   "item": "Yellow: worn, safe for now. Give the measurement and a rough \"when\": \"Rear pads at 4 millimetres. Probably two more oil changes.\""
+  },
+  {
+   "section": "Courtesy inspection",
+   "item": "Red: needs doing. It goes on the estimate."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Free with 70 % of Russian orders; recommended on 60 %."
+ ]
+}

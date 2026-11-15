@@ -1,0 +1,92 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-20-a5-miss-3",
+  "configuration": "ru",
+  "number": 20,
+  "story": "S1",
+  "title": "The electricians' manager rings again, 9 calendar days after the complaint call; nobody answers",
+  "purpose": "Story S1, calls 18 to 20. After the complaint call (17) and the promise to call back, the same number rings the Kazan shop three times in nine days. Nobody answers and nobody calls back. The misses stay in state waiting; they are older than the queue's seven days, so they are on no screen and are found only by a query on the number.",
+  "cast": {
+    "customer": {
+      "name": "Рустем Ильгизович Фаттахов",
+      "company": "Идель-Электромонтаж",
+      "account": "A5",
+      "ref": "accounts.json ru.A5 contacts[0]",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "9 calendar days after call 17 (rule R6; card S01; ledger s1.a5)",
+    "nominal_offset": "T-127d",
+    "nominal_date": "2026-07-09",
+    "local_start": "17:30",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": null,
+    "answered": false,
+    "disposition": "no_answer",
+    "ring_s": 35,
+    "talk_s": 0,
+    "caller_phone": "+7 907 906-45-83",
+    "repeat_caller": true,
+    "first_desk": "303",
+    "legs": [
+      {
+        "extension": "303",
+        "status": "no_answer",
+        "ring_s": 20,
+        "stage": "the first desk, 20 s"
+      },
+      {
+        "extension": "301",
+        "status": "no_answer",
+        "ring_s": 15,
+        "stage": "every desk, 15 s"
+      },
+      {
+        "extension": "302",
+        "status": "no_answer",
+        "ring_s": 15,
+        "stage": "every desk, 15 s"
+      },
+      {
+        "extension": "303",
+        "status": "no_answer",
+        "ring_s": 15,
+        "stage": "every desk, 15 s"
+      }
+    ],
+    "first_desk_why": "the desk of the advisor on shift at west on the nominal date: slot 24 (phase B); emitted per build (card S01, ledger s1.a5.miss_first_desks_ru: 303, 302, 303 for T = Fri 2026-11-13)"
+  },
+  "missed_call": {
+    "state": "waiting",
+    "out_of_hours": false,
+    "attempts": 0,
+    "resolved_by": null,
+    "claim": null,
+    "dismissed": false,
+    "in_queue_at_t": false,
+    "why_not_in_queue": "the To call back screen shows the last seven days; this miss is months old"
+  },
+  "scenario": {
+    "who_calls": "Рустем Ильгизович Фаттахов of account A5, waiting for the call back promised in call 17.",
+    "what_happens": "The call rings the first desk for 20 seconds, then every desk for 15, and is not answered. Nobody calls the number back."
+  },
+  "floating_days": [],
+  "script": null,
+  "recognition": null,
+  "transcript": null,
+  "judge_answer": null,
+  "verdict": null,
+  "truth": {
+    "note": "Пропущенный звонок: записи, расшифровки и оценки нет. У пропущенного звонка нет человека, есть только столы, на которые он звонил.",
+    "what_happened": "Звонок с номера Фаттахова прозвенел 20 секунд на первом столе и 15 секунд на всех трёх; никто не ответил, никто не перезвонил."
+  },
+  "why": {
+    "no_person": "Вопрос S1.6 («кто из мастеров пропустил звонки») по данным не решается: можно назвать только первый стол и тех, кто был в смене.",
+    "state": "waiting навсегда: после звонка 17 с этим номером нет ни одного отвеченного звонка ни в одну сторону, иначе правило продукта закрыло бы пропущенные.",
+    "carried_by": []
+  },
+  "new_facts": []
+}

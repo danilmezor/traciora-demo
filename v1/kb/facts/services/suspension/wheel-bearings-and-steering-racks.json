@@ -1,0 +1,105 @@
+{
+ "path": "services/suspension/wheel-bearings-and-steering-racks.md",
+ "title": "Wheel bearings and steering racks",
+ "first_revision_text": "en/_history/services/suspension/wheel-bearings-and-steering-racks.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Two bigger jobs: the humming bearing and the leaking rack.",
+ "serves": [
+  "smoke",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 173,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job wheel_bearing: 1.8 h, per side; the side is confirmed on a road test.",
+  "Catalogue job steering_rack: 4.2 h; standard new aftermarket, economy reman (core); alignment after; parts next-day.",
+  "\"$3,000\" and \"$1,200\" are round illustrative figures in the advisor's speech."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "wheel_bearing",
+   "what": "hours",
+   "class": "car",
+   "value": 1.8
+  },
+  {
+   "catalogue_key": "wheel_bearing",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 420.27
+  },
+  {
+   "catalogue_key": "steering_rack",
+   "what": "hours",
+   "class": "car",
+   "value": 4.2
+  },
+  {
+   "catalogue_key": "steering_rack",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1169.27
+  },
+  {
+   "catalogue_key": "steering_rack",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1029.5
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена ступичного подшипника», «замена рулевой рейки» (ремонт рейки is a common cheaper alternative in Russia: say whether the shop offers it)."
+ ]
+}

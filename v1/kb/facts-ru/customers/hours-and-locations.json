@@ -1,0 +1,108 @@
+{
+ "path": "customers/hours-and-locations.md",
+ "title": "Адреса и часы работы",
+ "title_en": "Hours and locations",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/hours-and-locations.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "The public truth about addresses, phones, hours, holidays and the stocktake afternoon.",
+ "serves": [
+  "S13",
+  "S9",
+  "S7",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_ru": 204,
+ "links_to": [
+  "customers/dropping-off-and-picking-up.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Three shops open every day 9:00-20:00 (ledger site.hours.weekday, site.open_days); no Saturday or Sunday difference.",
+  "Closed dates: 1 and 2 January only; open on public holidays (ledger site.closed_dates).",
+  "Kazan is on Moscow time, one hour behind Ulyanovsk.",
+  "No key drop box in the Russian configuration: after hours the customer leaves a message or writes to a chat.",
+  "The east address is fixed in the Russian configuration, so there is no address placeholder."
+ ],
+ "new_facts": [
+  "Shop names for customers: «Московское шоссе», «Инженерный (Новый город)», «Техническая (Казань)»; staff say the same, and «Казань» for the third.",
+  "Customers may write after hours to the web chat, Telegram or VK (ledger conv.channels)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Три наших сервиса",
+   "columns": [
+    "Сервис",
+    "Телефон",
+    "Часы"
+   ],
+   "rows": [
+    {
+     "Сервис": "Московское шоссе (Ульяновск)",
+     "Телефон": "+7 (8422) 10-40-40",
+     "Часы": "ежедневно с 9:00 до 20:00"
+    },
+    {
+     "Сервис": "Инженерный (Ульяновск, Новый город)",
+     "Телефон": "+7 (8422) 10-40-41",
+     "Часы": "ежедневно с 9:00 до 20:00"
+    },
+    {
+     "Сервис": "Техническая (Казань)",
+     "Телефон": "+7 (843) 100-40-30",
+     "Часы": "ежедневно с 9:00 до 20:00 по московскому времени"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Три наших сервиса",
+   "item": "Московское шоссе: 432045, Ульяновск, Московское шоссе, 40"
+  },
+  {
+   "section": "Три наших сервиса",
+   "item": "Инженерный: 432059, Ульяновск, 10-й Инженерный проезд, 30"
+  },
+  {
+   "section": "Три наших сервиса",
+   "item": "Техническая: 420054, Казань, ул. Техническая, 30"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@stocktake_notice|date}}",
+  "{{@stocktake|day}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@stocktake_notice|date}}",
+   "what": "added the section \"Changed hours\" for the stocktake afternoon; message: \"Stocktake: all shops close at noon.\"",
+   "message_ru": "Инвентаризация: все сервисы до 12:00."
+  }
+ ],
+ "has_history": true
+}

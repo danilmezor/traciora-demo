@@ -1,0 +1,664 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-16-unclear-not-asked",
+  "configuration": "ru",
+  "number": 16,
+  "story": "S6",
+  "title": "The waiting customer again: he is unclear, and the weak desk does not ask what he means",
+  "purpose": "Story S6, call 16, and rule R13. The man whose car has stood at the Kazan shop since T-9d rang in the morning and nobody answered. In the afternoon he gets through: first about the missed call, then about the day that has passed, then he asks whether \"that second thing\" was looked at. Vyacheslav answers something else twice and never asks what he means. The call ends with the request unclear.",
+  "cast": {
+    "advisor": {
+      "slot": 23,
+      "name": "Вячеслав Крюков",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Айрат Гизатуллин",
+      "ref": "named_customers.json ru.S6_waiting_nine_days",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "slot 23's last working day before T (rule R6; card S06, call 16)",
+    "nominal_offset": "T-1d",
+    "nominal_date": "2026-11-12",
+    "local_start": "15:25",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "302",
+    "ring_s": 27,
+    "caller_phone": "+7 907 526-98-79",
+    "repeat_caller": true,
+    "talk_s": 95,
+    "note": "Kazan time. His call at 10:05 that morning rang desk 302 for 20 s and then every desk for 15 s and was not answered; this call resolves that miss as got_through."
+  },
+  "scenario": {
+    "who_calls": "Айрат Гизатуллин, the customer of call 15. His call at 10:05 the same morning rang out.",
+    "vehicle": "Peugeot 308, 2011, О972НВ116",
+    "job": "the pump of the electro-hydraulic power steering, still not delivered",
+    "wants": "unclear on the call. By \"that second thing, to do at the same time\" he means the oil change he asked about in call 15 and dropped; he now wants to know whether anybody wrote it down.",
+    "what_happens": "He complains that nobody answered in the morning, says the promised Tuesday has passed, hears \"next week\" from the supplier, then asks about \"the second thing\". Vyacheslav takes it for the pump, then says everything will be done when the part comes, then reads out that the order holds the pump. The customer says he will call tomorrow himself, and the manager too.",
+    "facts": {
+      "car_in": "T-9d",
+      "promised_in_call_15": "the Tuesday (T-3d), promised on the Sunday (T-5d)",
+      "missed_call_that_morning": "10:05, first desk 302, 20 s then every desk 15 s, no answer",
+      "note": "The supplier's \"next week\" is what the other advisor was told on T-3d, and his own last line in the chat, \"не пришло еще. как придёт наберу\", is of the morning of T-2d (conversations/ru/06). No new date is promised on this call."
+    },
+    "unclear": {
+      "rule": "R13",
+      "kind": "the customer names what he wants only as \"that second thing ... to do at the same time\"",
+      "asked_again": 0,
+      "resolved": false,
+      "what_he_meant": "the oil change he asked for in call 15 while the car stands there",
+      "how_it_ends": "he says he will call tomorrow himself: customer_will_call"
+    }
+  },
+  "floating_days": [
+    {
+      "word": "в воскресенье",
+      "day": "call-4d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "во вторник",
+      "day": "call-2d",
+      "form": "во + accusative"
+    },
+    {
+      "word": "вторник",
+      "day": "call-2d",
+      "form": "nominative"
+    },
+    {
+      "word": "четверг",
+      "day": "call",
+      "form": "nominative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 1.6,
+      "said": "Это Гизатуллин. Я вам утром звонил — никто трубку не взял."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.8,
+      "said": "...Утром приёмка была. Люди стояли."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 12.5,
+      "said": "Ну понятно. Так что, вторник прошёл. Вы в воскресенье сказали — во вторник заберу. Сегодня четверг."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 19.5,
+      "said": "Ну.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 21.0,
+      "said": "Не пришло ещё. Я вам писал вчера."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 25.5,
+      "said": "Писал он... А когда придёт — опять не знаете?"
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 31.1,
+      "said": "Поставщик говорит — на следующей неделе."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 35.1,
+      "said": "На следующей неделе. Восьмой день машина у вас, между прочим."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 41.3,
+      "said": "Ну."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 43.2,
+      "said": "Ладно... Слушайте, а вот то, второе — вы хоть посмотрели? Раз она всё равно стоит."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 51.7,
+      "said": "Да там... э-э... пока запчасти нет, ничего не делали."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 57.0,
+      "said": "Да я не про это. Я про то, о чём в тот раз говорили. Ну, чтобы заодно."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 67.0,
+      "said": "Запчасть придёт — всё сделаем."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 69.6,
+      "said": "Что — всё? Вы записали у себя или нет?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 76.2,
+      "said": "...В наряде насос. Придёт — поставим."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 79.5,
+      "said": "Понятно. Ничего вы не записали. Я завтра сам позвоню, с утра."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 86.1,
+      "said": "Хорошо."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 87.7,
+      "said": "И начальнику вашему тоже позвоню."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 90.8,
+      "said": "Звоните."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 92.8,
+      "said": "До свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.61,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "one л lost in the surname, as in call 15",
+        "script_turn": 2,
+        "said": "Гизатуллин",
+        "stored": "Гизатулин",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turn": 9,
+        "said": "Восьмой",
+        "stored": "8-й",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: the advisor mumbles away from the handset; the sentence is marked as uncertain",
+        "script_turn": 6,
+        "said": "Я вам писал вчера.",
+        "stored": "{?likely: Я вам писал вчера.}",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          7,
+          11,
+          13
+        ],
+        "said": [
+          "Писал он... ",
+          "Ладно... Слушайте, а вот то",
+          "Ну, чтобы заодно."
+        ],
+        "stored": [
+          "",
+          "А вот то",
+          "Чтобы за одно."
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          3,
+          12,
+          16
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 1,
+        "lost": 0,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 5,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 0,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 1,
+        "as_digits": 1,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 1
+    },
+    "script_words": 140,
+    "stored_words": 137,
+    "strict_word_difference": 0.1
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 158,
+    "duration_s": 95.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Это Гизатулин. Я вам утром звонил, никто трубку не взял.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Утром приёмка была. Люди стояли.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну понятно. Так что, вторник прошёл. Вы в воскресенье сказали, во вторник заберу. Сегодня четверг.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Не пришло ещё. {?likely: Я вам писал вчера.}",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А когда придёт, опять не знаете?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поставщик говорит, на следующей неделе.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На следующей неделе. 8-й день машина у вас, между прочим.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А вот то, второе, вы хоть посмотрели? Раз она всё равно стоит.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да там, пока запчасти нет, ничего не делали.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да я не про это. Я про то, о чём в тот раз говорили. Чтобы за одно.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Запчасть придёт, всё сделаем.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Что, всё? Вы записали у себя или нет?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "В наряде насос. Придёт, поставим.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно. Ничего вы не записали. Я завтра сам позвоню, с утра.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "И начальнику вашему тоже позвоню.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Звоните.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис.",
+        "level": 1,
+        "segment": 0
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Договорённости нет: клиент сказал, что позвонит сам."
+      }
+    ],
+    "auto_fails": [
+      {
+        "key": "dropped_customer",
+        "quote": "Понятно. Ничего вы не записали. Я завтра сам позвоню, с утра.",
+        "segment": 16
+      }
+    ],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint"
+    ],
+    "strength": {
+      "quote": "Поставщик говорит, на следующей неделе.",
+      "why": "Сказал то, что знает от поставщика, и не назвал нового дня наугад.",
+      "segment": 7
+    },
+    "try_next": {
+      "check": "greeting",
+      "instead_of": "Ермак Сервис.",
+      "say": "Ермак-Сервис, Вячеслав, здравствуйте."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [
+        {
+          "key": "dropped_customer",
+          "segment": 16
+        }
+      ],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "complaint",
+        "repeat_caller"
+      ],
+      "score": null,
+      "applicable": 1,
+      "asr_quality": "ok",
+      "strength_segment": 7,
+      "try_next_check": "greeting",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис"
+      },
+      "na": {
+        "recap": "Договорённости нет: клиент сказал, что позвонит сам."
+      },
+      "auto_fails": {
+        "dropped_customer": "Понятно. Ничего вы не записали. Я завтра сам позвоню, с утра"
+      },
+      "strength": {
+        "quote": "Поставщик говорит, на следующей неделе",
+        "why": "Сказал то, что знает от поставщика, и не назвал нового дня наугад."
+      },
+      "try_next": {
+        "check": "greeting",
+        "instead_of": "Ермак Сервис.",
+        "say": "Ермак-Сервис, Вячеслав, здравствуйте."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": "na",
+      "objection": "not_applicable"
+    },
+    "score": null
+  },
+  "why": {
+    "call_type": "existing_job: клиент спрашивает о работе, которая уже в наряде. О чём «то, второе», из диалога понять нельзя, поэтому судья не может счесть это новой работой.",
+    "greeting": "1: только компания.",
+    "recap": "Не применяется: ни о чём не договорились.",
+    "score": "Оценки нет: применима одна проверка.",
+    "unclear": "Правило R13. Клиент дважды говорит обиняками («то, второе», «чтобы заодно»), менеджер дважды отвечает про насос и ни разу не спрашивает «вы про что?». Он имел в виду замену масла из звонка 15.",
+    "tags": "complaint от судьи; repeat_caller добавляет журнал звонков: утром с этого номера был пропущенный.",
+    "auto_fails": "dropped_customer: в карточке оценки это «закончил разговор, не решив вопрос клиента». На вопрос про «то, второе» Вячеслав так и не ответил и ни разу не спросил, о чём речь, а на «я завтра сам позвоню» сказал «Хорошо». Нового срока он не называл, поэтому wrong_promise здесь нет. На оценку автопровал не влияет: оценки у звонка нет.",
+    "carried_by": []
+  },
+  "call_log": {
+    "missed_before": "the same number at 10:05 that morning: first desk 302 for 20 s, then every desk for 15 s, no answer; resolved by this call (got_through), so it is not in the queue at T",
+    "repeat_caller": true
+  },
+  "day_report": {
+    "would_say": "В отчёте дня у Вячеслава звонок идёт без оценки: клиент звонил повторно, ушёл без ответа и сказал, что перезвонит сам. Проверка приветствия: назвал только компанию. Автопровал: клиент ушёл без ответа на свой вопрос (dropped_customer)."
+  },
+  "new_facts": []
+}

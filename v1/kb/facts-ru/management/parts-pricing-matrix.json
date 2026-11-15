@@ -1,0 +1,143 @@
+{
+ "path": "management/parts-pricing-matrix.md",
+ "title": "Матрица наценок на запчасти",
+ "title_en": "Parts pricing matrix",
+ "exists_in": "both",
+ "english_sheet": "facts/management/parts-pricing-matrix.json",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: the margins parts are priced at, by tier and kind.",
+ "serves": [
+  "visibility:senior",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 334,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The Russian shop prices by markup on the purchase price: 50 / 40 / 30 % by tier, fluids 60 %, batteries 25 %, tyres 15 % (catalogue configurations.ru.parts_margin), rounded to 10 RUB. English prices by gross margin on list.",
+  "A paragraph on why the markups are modest: the customer sees the online retail price and may bring own parts (the catalogue's own reasoning).",
+  "Tier-weighted gross margin about 30 % (catalogue.md 30.2 %).",
+  "Part prices have not moved since go-live (ledger price.parts_drift_year: the 12 % a year applies before G only); the page says so in the revision of the price rise, as the English page does.",
+  "Gearbox rebuild sublet: cost 68 000, price 85 000."
+ ],
+ "new_facts": [
+  "Alarm at a monthly parts margin under 27 %."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Матрица наценок на запчасти",
+   "columns": [
+    "Что",
+    "Наценка"
+   ],
+   "rows": [
+    {
+     "Что": "Запчасти, эконом",
+     "Наценка": "50 %"
+    },
+    {
+     "Что": "Запчасти, стандарт",
+     "Наценка": "40 %"
+    },
+    {
+     "Что": "Запчасти, премиум",
+     "Наценка": "30 %"
+    },
+    {
+     "Что": "Масла и жидкости",
+     "Наценка": "60 %"
+    },
+    {
+     "Что": "Аккумуляторы",
+     "Наценка": "25 %"
+    },
+    {
+     "Что": "Шины",
+     "Наценка": "15 %"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Матрица наценок на запчасти",
+   "item": "Наценку применяет Павел, когда добавляет запчасть в каталог. Мастера-приёмщики цены запчастей не меняют."
+  },
+  {
+   "section": "Матрица наценок на запчасти",
+   "item": "Изменилась закупка — при следующем обновлении каталога изменится и цена. Закупка растёт примерно на 12 % в год. С нормо-часом это не связано, поэтому запчасти не дорожали {{@price_rise|date}}, а нормо-час дорожал. Цены на запчасти не менялись с {{@golive|date}}, когда мы перешли на Traciora."
+  },
+  {
+   "section": "Матрица наценок на запчасти",
+   "item": "Клиенты с договорным нормо-часом получают минус 10 % от цены запчасти. На стандартной детали от наценки остаётся чуть больше половины. Это цена их объёма."
+  },
+  {
+   "section": "Матрица наценок на запчасти",
+   "item": "По компании в целом валовая маржа на запчастях должна выходить около 30 %. Если месяц ниже 27 % — ищите запчасти, набранные в наряд руками, эконом, проданный там, где в смете стоял стандарт, и выдачи без продажи."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Павел",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}",
+  "{{@golive|date}}"
+ ],
+ "amounts": [
+  1150.0,
+  1720.0,
+  1900.0,
+  2660.0,
+  2900.0,
+  3770.0,
+  68000.0,
+  85000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "the two sentences on the price rise added to the line on supplier costs (parts did not change that day; part prices are those of go-live) and the review date moved; message: \"Why parts did not move today.\"",
+   "message_ru": "Почему запчасти сегодня не подорожали."
+  }
+ ],
+ "has_history": true
+}

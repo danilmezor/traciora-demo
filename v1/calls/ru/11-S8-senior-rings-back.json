@@ -1,0 +1,530 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-11-senior-rings-back",
+  "configuration": "ru",
+  "number": 11,
+  "story": "S8",
+  "title": "The service manager rings the timing-belt customer back and takes 1,800 RUB off",
+  "purpose": "Story S8, the call back. Мельников has listened to both calls and read the order. He says the customer is right, takes 1,800 RUB off the bill (11.1 %, his to approve), says who did the job and what the warranty is. An outbound call: a transcript and no verdict.",
+  "cast": {
+    "advisor": {
+      "slot": 4,
+      "name": "Сергей Анатольевич Мельников",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Игорь Валентинович Фомичёв",
+      "ref": "named_customers.json ru.S8",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "slot": 5,
+        "name": "Дмитрий Олегович Григорьев"
+      },
+      {
+        "slot": 7,
+        "name": "Никита Ведяшкин"
+      },
+      {
+        "slot": 12,
+        "name": "Алексей Карпов"
+      }
+    ]
+  },
+  "call": {
+    "day": "slot 4's next working day after call 10 (rule R6; card S08, call 11)",
+    "nominal_offset": "T-4d",
+    "nominal_date": "2026-11-09",
+    "local_start": "10:15",
+    "site": "main",
+    "direction": "outbound",
+    "line": "100",
+    "answered_by": null,
+    "ring_s": 6,
+    "caller_phone": null,
+    "repeat_caller": false,
+    "callee_phone": "+7 907 641-87-55",
+    "talk_s": 153,
+    "placed_from": "104"
+  },
+  "scenario": {
+    "who_calls": "Сергей Анатольевич Мельников, the service manager, to the customer of calls 9 and 10.",
+    "vehicle": "Renault Logan, 2015, У838КА173",
+    "job": "timing belt with rollers and water pump: done; the bill is being settled",
+    "wants": "to close the complaint",
+    "what_happens": "He says the customer is right, names the discount and the sum to pay, explains what the discount covers, answers the question about the quality of the work, and agrees the pick-up for six in the evening.",
+    "facts": {
+      "discount_rub": 1800,
+      "discount_pct_of_bill": 11.12,
+      "to_pay_rub": 14382.4,
+      "to_pay_before_vat_rub": 13697.52,
+      "warranty": "30 days on mechanical work",
+      "note": "Ledger s8.discount 1 800, s8.paid_with_tax 14 382.40 = 16 182.40 - 1 800, VAT inside (13 697.52 before VAT). 1 800 is 11.1 % of the bill, above 10 %, so the approval is his and is recorded on the order. Of the 1 800, 630.40 brings the bill down to the quoted 15 552 and 1 169.60 is for the lost day.",
+      "ledger": {
+        "s8.discount": 1800,
+        "s8.paid_with_tax": 14382.4
+      }
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "customer",
+      "at_s": 0.0,
+      "said": "Да, слушаю."
+    },
+    {
+      "n": 2,
+      "who": "advisor",
+      "at_s": 2.0,
+      "said": "Игорь Валентинович, доброе утро. Мельников Сергей Анатольевич, руководитель «Ермак-Сервиса». Вам вчера Дмитрий обещал мой звонок."
+    },
+    {
+      "n": 3,
+      "who": "customer",
+      "at_s": 10.6,
+      "said": "Да, жду. Ну и что скажете?"
+    },
+    {
+      "n": 4,
+      "who": "advisor",
+      "at_s": 14.6,
+      "said": "Сначала скажу, что вы правы. Я послушал оба разговора и посмотрел наряд. Цену вам назвали неверную, срок пообещали, не спросив цех. Это наша ошибка, не ваша."
+    },
+    {
+      "n": 5,
+      "who": "customer",
+      "at_s": 27.4,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 29.5,
+      "said": "Приятно слышать. Только мне от этого не легче: я два дня без машины просидел."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 37.4,
+      "said": "Понимаю. Давайте так. Вот что я могу сделать прямо сейчас: снимаю с вашего счёта тысячу восемьсот рублей. К оплате получается четырнадцать тысяч триста восемьдесят два рубля сорок копеек. Это меньше, чем вам называли по телефону."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 56.5,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 58.6,
+      "said": "Четырнадцать триста восемьдесят два... Погодите. А называли пятнадцать пятьсот пятьдесят два."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 65.0,
+      "said": "Да. Разницу в цене мы убрали, а остальное — за сорванный день. Скидку я уже провёл по наряду, под своей фамилией."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 76.8,
+      "said": "Ну... это другой разговор. А с ремнём-то всё нормально сделали? А то, может, тоже впопыхах?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 85.7,
+      "said": "Ремень, ролики и помпу ставил Алексей Карпов, у него эта работа выходит лучше всех в цехе. Я сегодня утром сам смотрел машину. Гарантия на работу — тридцать дней, она в наряде прописана. Если что-то не так — звоните прямо мне."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 104.8,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 106.9,
+      "said": "Хорошо. Когда можно забрать?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 109.8,
+      "said": "Хоть сейчас, мы до восьми. Подойдёте на приёмку, назовёте фамилию — вас проведут без очереди."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 118.0,
+      "said": "После работы заеду, часов в шесть."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 122.5,
+      "said": "Договорились, к шести машина будет стоять у выдачи. И, Игорь Валентинович, страницу с ценой на сайте мы исправляем, а с Никитой я поговорю отдельно."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 136.5,
+      "said": "Да парень-то вежливый, я на него не в обиде. Вы его научите просто."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 144.0,
+      "said": "Научим. Спасибо вам, что позвонили, а не просто ушли. До свидания."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 150.9,
+      "said": "До свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.72,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the company's name loses its quotes and hyphen",
+        "script_turn": 2,
+        "said": "«Ермак-Сервиса»",
+        "stored": "Ермак Сервиса",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          6,
+          7,
+          7,
+          15,
+          16,
+          17
+        ],
+        "said": [
+          "я два дня",
+          "тысячу восемьсот рублей",
+          "четырнадцать тысяч триста восемьдесят два рубля сорок копеек",
+          "до восьми",
+          "часов в шесть",
+          "к шести"
+        ],
+        "stored": [
+          "я 2 дня",
+          "1800 рублей",
+          "14 382 рубля 40 копеек",
+          "до 8",
+          "часов в 6",
+          "к 6"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          11,
+          18
+        ],
+        "said": [
+          "с ремнём-то",
+          "парень-то"
+        ],
+        "stored": [
+          "с ремнём",
+          "парень"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          5,
+          8,
+          13
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          9,
+          12
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          9,
+          11
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 3,
+        "lost": 3,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 0,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 9,
+        "as_digits": 9,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 259,
+    "stored_words": 249,
+    "strict_word_difference": 0.108
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 267,
+    "duration_s": 153.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, слушаю.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Игорь Валентинович, доброе утро. Мельников Сергей Анатольевич, руководитель Ермак Сервиса. Вам вчера Дмитрий обещал мой звонок.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, жду. Ну и что скажете?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сначала скажу, что вы правы. Я послушал оба разговора и посмотрел наряд. Цену вам назвали неверную, срок пообещали, не спросив цех. Это наша ошибка, не ваша.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Приятно слышать. Только мне от этого не легче: я 2 дня без машины просидел.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понимаю. Давайте так. Вот что я могу сделать прямо сейчас: снимаю с вашего счёта 1800 рублей. К оплате получается 14 382 рубля 40 копеек. Это меньше, чем вам называли по телефону.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "14 382. Погодите. А называли 15 552.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да. Разницу в цене мы убрали, а остальное, за сорванный день. Скидку я уже провёл по наряду, под своей фамилией.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну, это другой разговор. А с ремнём всё нормально сделали? А то, может, тоже впопыхах?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ремень, ролики и помпу ставил Алексей Карпов, у него эта работа выходит лучше всех в цехе. Я сегодня утром сам смотрел машину. Гарантия на работу — 30 дней, она в наряде прописана. Если что-то не так, звоните прямо мне.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Когда можно забрать?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хоть сейчас, мы до 8. Подойдёте на приёмку, назовёте фамилию, вас проведут без очереди.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "После работы заеду, часов в 6.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Договорились, к 6 машина будет стоять у выдачи. И, Игорь Валентинович, страницу с ценой на сайте мы исправляем, а с Никитой я поговорю отдельно.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да парень вежливый, я на него не в обиде. Вы его научите просто.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Научим. Спасибо вам, что позвонили, а не просто ушли. До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": null,
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": false,
+      "direction": "outbound",
+      "line": "100",
+      "checks": [],
+      "tags": [],
+      "media_version": 1
+    },
+    "result_enc_plain": null
+  },
+  "truth": {
+    "note": "Исходящий звонок: продукт не судит его и не хранит по нему ни уровней, ни исхода.",
+    "what_happened": "Скидка 1 800 ₽ (11,1 % счёта), к оплате 14 382,40 ₽, в том числе НДС; клиент заберёт машину вечером. Этим звонком закрыто обещание из звонка 10.",
+    "outcome": null,
+    "tags": []
+  },
+  "why": {
+    "not_judged": "Исходящий звонок: строка оценки с judged: false, без проверок и без оценки. В истории он важен как звонок, которым сдержано обещание из звонка 10 (callback_kept)."
+  },
+  "day_report": {
+    "would_say": "В отчёт дня не попадает: Мельников на телефоне не оценивается, звонок исходящий. В отчёте Дмитрия за предыдущий день обещанный звонок отмечен как сделанный."
+  },
+  "new_facts": [
+    "Ремень ГРМ на Логане Фомичёва менял Алексей Карпов (место 12).",
+    "Клиент забирает и оплачивает машину вечером в день звонка 11, около 18:00."
+  ]
+}

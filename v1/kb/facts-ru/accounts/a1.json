@@ -1,0 +1,152 @@
+{
+ "path": "accounts/a1.md",
+ "title": "Симбирский гонец",
+ "title_en": "Nickajack Delivery",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/a1.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Standing instructions for the anchor account A1.",
+ "serves": [
+  "S1",
+  "S16",
+  "S4",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 326,
+ "links_to": [
+  "services/maintenance/fleet-pm-service.md",
+  "accounts/company-account-terms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Anchor account «Симбирский гонец», a delivery service: 35 vans (ГАЗель Next, NN and Бизнес, Largus vans, Ford Transit), garage numbers 01 to 35.",
+  "The purchase-order number is «номер заявки»; an invoice without it is returned by their accounts department.",
+  "The diesel vehicles with limits are the four Transits; the ГАЗель vans (Cummins diesel, the catalogue's reference for the PM job) are serviced in full.",
+  "Opening is 9:00: vans in by 9:00, back by 16:00, a late van reported by 13:00.",
+  "The fleet contact is written only in the nominative and by his department, so a renamed contact in accounts.json needs no rewriting."
+ ],
+ "new_facts": [
+  "PM interval 10 000 km; in by 9:00 and back by 16:00; the 13:00 warning. The ERP's PM orders for A1 should recur about every 10 000 km a van.",
+  "The Transits are limited to fluids, filters, brakes and tyres."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Люди",
+   "columns": [
+    "Кто",
+    "По каким вопросам",
+    "Телефон"
+   ],
+   "rows": [
+    {
+     "Кто": "Олег Вячеславович, начальник транспортного отдела",
+     "По каким вопросам": "Записывает машины, согласует работы",
+     "Телефон": "+7 907 346-93-67"
+    },
+    {
+     "Кто": "Надежда Ивановна, бухгалтерия",
+     "По каким вопросам": "Счета, акты, сверка",
+     "Телефон": "+7 907 726-93-95"
+    },
+    {
+     "Кто": "Тимур Рашидович, исполнительный директор",
+     "По каким вопросам": "Квартальная встреча. По отдельной машине ему не звоним",
+     "Телефон": "+7 907 961-65-48"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Парк",
+   "item": "ТО коммерческого автомобиля каждые 10 000 км: что в него входит. Список машин, которым подошёл срок, транспортный отдел присылает раз в неделю."
+  },
+  {
+   "section": "Парк",
+   "item": "«Транзиты» — дизель с сажевым фильтром. Делаем по ним жидкости, фильтры, тормоза и шины. Двигатель и всё, что связано с выхлопом, — к дилеру: сообщаем в транспортный отдел, сами не берёмся."
+  },
+  {
+   "section": "Парк",
+   "item": "Машины сдают к открытию, к 9:00, и забирают до 16:00, к вечерним рейсам. Не успеваем к 16:00 — транспортный отдел узнаёт об этом до 13:00."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "contact": "Олег Вячеславович Кравцов",
+   "role": "начальник транспортного отдела",
+   "written_as": "Олег Вячеславович"
+  },
+  {
+   "account": "A1",
+   "contact": "Надежда Ивановна Зотова",
+   "role": "бухгалтер по расчётам с поставщиками",
+   "written_as": "Надежда Ивановна"
+  },
+  {
+   "account": "A1",
+   "contact": "Тимур Рашидович Бикмаев",
+   "role": "исполнительный директор",
+   "written_as": "Тимур Рашидович"
+  },
+  {
+   "account": "A1",
+   "name": "Симбирский гонец",
+   "written_as": "«Гонца»"
+  }
+ ],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [
+  8000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "added the section \"The purchase-order number\", moved from a team note; message: \"PO number rule lives here now.\"",
+   "message_ru": "Правило про номер заявки теперь живёт здесь."
+  }
+ ],
+ "has_history": true
+}

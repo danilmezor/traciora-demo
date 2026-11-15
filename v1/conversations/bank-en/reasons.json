@@ -1,0 +1,5697 @@
+{
+ "format": "bank-en/reasons/1",
+ "about": "Skeletons per reason and channel (../DESIGN.md sections 4 and 5). A beat draws from its own alts and from the pool it names. The web chat is the assistant's until a hand-over; Telegram is a person's from the first line, and every customer turn there raises a draft.",
+ "reasons": {
+  "price": {
+   "label": "price",
+   "shares": {
+    "web": 26,
+    "telegram": 14
+   },
+   "alone_on_web": 60,
+   "unclear_weight": 1.3,
+   "skeletons": {
+    "web": [
+     {
+      "id": "price.web.1",
+      "ends": "alone",
+      "summary": "a menu price, and thanks",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_thing"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "price_menu"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "alts": [
+         "ok perfect thats what i needed",
+         "ok cool, thats not bad",
+         "ok ill bring it by this week"
+        ],
+        "p": 0.7
+       },
+       {
+        "who": "assistant",
+        "use": "closing",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "price.web.2",
+      "ends": "alone",
+      "summary": "a menu price, then 'is that with tax'",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "assistant",
+        "use": "price_menu"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "is that with tax",
+         "does that have tax in it or no",
+         "and thats everything? no extra fees",
+         "is that the total or is there more on top"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "price_extras"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok",
+        "p": 0.8
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "price.web.3",
+      "ends": "handed_over",
+      "summary": "a repair that depends on the car: the first step's price, then a hand-over for a time",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_thing",
+         "two_in_one"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "price_depends"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok yeah can yall look at it this week",
+         "how soon can they look at it",
+         "ok lets do the inspection then",
+         "ok makes sense. can i bring it {day_said}"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number",
+         "ask_shop"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_shop",
+        "p": 0.5
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "price"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "price"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "price.web.4",
+      "ends": "abandoned",
+      "summary": "the price depends on the car; the customer leaves without a number",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "assistant",
+        "use": "price_depends"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "oh ok",
+         "hmm ok",
+         "so you cant tell me a price at all?",
+         "ok nvm"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "offer_handoff",
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "abandoned"
+       }
+      ]
+     },
+     {
+      "id": "price.web.5",
+      "ends": "alone",
+      "summary": "a range from the public page",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "assistant",
+        "use": "price_range"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok so somewhere in there",
+         "wow ok thats a lot lol",
+         "ok whats the cheapest option",
+         "dang ok. thanks"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "The cheapest option depends on what your car takes, so an advisor would price the choices for your {model}."
+         },
+         {
+          "text": "Where yours falls depends on the parts it takes; the service desk can give you the exact options."
+         },
+         {
+          "text": "That's the honest range. The exact figure for your {model} comes from an advisor."
+         }
+        ],
+        "p": 0.6
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "price.web.6",
+      "ends": "handed_over",
+      "summary": "a written quote for this car: a hand-over, the advisor's figure, the customer thinks",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "can i get a quote on {job_said} for my {car_said}",
+         "need a written quote for {job_said}, {car_said}, {mileage_said} miles",
+         "can someone price {job_said} on a {car_said} for me"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "quote_needs_look",
+         "offer_handoff"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "yes please have someone reach out",
+         "sure",
+         "ok yeah",
+         "yes. text is better"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "ask_number"
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "price"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "price.quote"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "is that with tax",
+         "thats out the door?",
+         "does that include tax and everything",
+         "and with tax?"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "price.after",
+        "draft": "price.extras"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok ill think about it and let you know",
+         "ok let me check with my wife",
+         "ok thanks for the info",
+         "ok ill get back to you"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "price.web.7",
+      "ends": "handed_over",
+      "summary": "a photo of another shop's estimate: 'is this fair'",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "got this quote from another place is this fair",
+         "is this a good price",
+         "what would yall charge for this"
+        ],
+        "photo": "estimate-other-shop"
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "Thanks for the photo. I can't judge another shop's estimate, or your car, from here. If you'd like, an advisor can go over it with you and tell you what we'd charge. What's your name and the best number?"
+         },
+         {
+          "text": "Thank you. I'm not able to compare an estimate from another shop, and I won't guess at a price for your car. An advisor can look at it with you; who should they ask for, and what's the best number?"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "price"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "price.quote"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok thats a little better than theirs",
+         "about the same then",
+         "thanks, thats helpful"
+        ],
+        "p": 0.7
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "price.web.8",
+      "ends": "alone",
+      "summary": "a menu price, 'the quick lube is cheaper', what ours includes",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "assistant",
+        "use": "price_menu"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "the quick lube place is way cheaper",
+         "thats a lot, {heard_price} down the road",
+         "the other shop does it for {heard_price}",
+         "hm the other place said {heard_price}"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "price_other_shop"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok fair enough",
+         "hm ok",
+         "ill think about it",
+         "ok i didnt know that"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "price.tg.1",
+      "ends": "person",
+      "summary": "a known customer asks a price; booked",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_thing"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok when can yall get me in",
+         "sounds good. when?",
+         "ok lets do it",
+         "ok whats your soonest"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "price"
+       },
+       {
+        "who": "activity",
+        "what": "resolved"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.2",
+      "ends": "person",
+      "summary": "the price, then 'out the door?'",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "is that out the door",
+         "with tax?",
+         "total total?",
+         "and with tax its what"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "price.after",
+        "draft": "price.extras"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.3",
+      "ends": "person",
+      "summary": "it depends: the first step, a day, booked",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.depends"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok ill bring it by",
+         "whens the soonest",
+         "ok when can yall look"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.4",
+      "ends": "silent",
+      "summary": "a price objection; the advisor holds the price",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "dang. place by the house said {heard_price}",
+         "yall went up huh",
+         "{heard_price} somewhere else",
+         "thats more than last time"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.decline_discount",
+        "draft": "price.objection"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok ill let you know",
+         "fine book me then",
+         "ok"
+        ],
+        "p": 0.6
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.ack",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.5",
+      "ends": "person",
+      "summary": "two questions in one: the price now, the time after a nudge",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "how much for {job_said} and do yall have time this week",
+         "whats {job_said} run and can i wait on it",
+         "price on {job_said}? and are yall busy {day_said}"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "use": "generic.nudge",
+        "p": 0.5
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.6",
+      "ends": "silent",
+      "summary": "a price, and the customer goes quiet",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok",
+        "p": 0.4
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.7",
+      "ends": "person",
+      "summary": "the price on the phone instead",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "price.open"
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "moves.call_me",
+         "price.quote"
+        ],
+        "draft": "price.depends"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok calling",
+         "ill call on my lunch",
+         "calling now",
+         "cant talk at work, can you just text it"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "price.tg.8",
+      "ends": "person",
+      "summary": "a truck: the list price will not hold",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "how much for {job_said} on my {car_said}",
+         "whats {job_said} cost on a truck",
+         "{job_said} on the {car_said}, ballpark"
+        ]
+       },
+       {
+        "who": "note",
+        "use": "price.truck_class",
+        "p": 0.3
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "thats for a truck right",
+         "even with the bigger tires?",
+         "ok and how long"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "price.after"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "booking": {
+   "label": "booking",
+   "shares": {
+    "web": 24,
+    "telegram": 18
+   },
+   "alone_on_web": 20,
+   "unclear_weight": 1.3,
+   "skeletons": {
+    "web": [
+     {
+      "id": "booking.web.1",
+      "ends": "handed_over",
+      "summary": "asks for a time: name, number, shop, hand-over, two times, booked",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "two_in_one",
+         "wrong_way_round"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number",
+         "ask_shop"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_shop",
+        "p": 0.5
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "booking"
+       },
+       {
+        "who": "activity",
+        "what": "resolved"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.2",
+      "ends": "declined",
+      "summary": "will not give a number: 'ill just call'",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.decline_handoff"
+       },
+       {
+        "who": "assistant",
+        "use": "declined_ok"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "declined"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.3",
+      "ends": "handed_over",
+      "summary": "after hours: the key drop, a heads-up to the desk",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "can i drop it off tonight and yall look at it tomorrow",
+         "is there a night drop",
+         "can i leave it after hours for {job_said}"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "drop_box"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok cool and someone will call me?",
+         "perfect. do i need to tell anyone",
+         "ok will do"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "Yes, the shop calls you once they've looked at it. I can also let the desk know it's coming: what's your name and the best number?",
+          "page": "customers/dropping-off-and-picking-up"
+         },
+         {
+          "text": "They'll call you once they've had a look. If you'd like, I'll tell the service desk to expect it; who should they ask for, and what's the number?",
+          "page": "customers/dropping-off-and-picking-up"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "symptom.confirm"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.4",
+      "ends": "handed_over",
+      "summary": "Saturday: East Main only",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "yall open saturday? need {job_said}",
+         "can i come saturday morning",
+         "saturday appt possible?",
+         "any saturday hours for {job_said}"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "hours_saturday",
+         "offer_handoff"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "east main is fine",
+         "yes main st works",
+         "ok east main then"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "ask_number"
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.5",
+      "ends": "handed_over",
+      "summary": "a time, and 'can i wait on it'",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "{name_typed} {phone_typed}. can i wait on it?",
+         "{phone_typed}. do yall have a shuttle",
+         "its {first_name}, {phone_typed}. is there somewhere to wait"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "wait_shuttle",
+         "handoff_done"
+        ]
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.6",
+      "ends": "handed_over",
+      "summary": "name and number in the first message",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "hi this is {full_name}, {phone_typed}. need {job_said} on my {car_said} {day_said}",
+         "{name_typed} here, can i get in {day_said} for {job_said}? my number is {phone_typed}",
+         "Hello, {full_name} at {phone_typed}. I would like {job_said} for my {car_said}, {day_said} if possible."
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "handoff_done"
+        ]
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "booking"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.7",
+      "ends": "silent",
+      "summary": "two times offered; the customer never answers",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     },
+     {
+      "id": "booking.web.8",
+      "ends": "handed_over",
+      "summary": "'today?': the desk has nothing that suits",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "can yall get me in today",
+         "any chance today? {symptom_said}",
+         "need it looked at today if possible"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "booking"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "i cant do either of those, ill try another day",
+         "nah that wont work, ill reach back out",
+         "hmm ok let me see and get back to you"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.ack"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "booking.tg.1",
+      "ends": "person",
+      "summary": "a known customer asks for a day; booked",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "two_in_one"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "booking"
+       },
+       {
+        "who": "activity",
+        "what": "resolved"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.2",
+      "ends": "person",
+      "summary": "Saturday at a shop that is closed Saturdays",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "can i come saturday",
+         "saturday morning work?",
+         "yall got anything saturday"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.answer",
+        "draft": "booking.saturday"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok weekday then",
+         "whats the earliest monday",
+         "east main saturday works"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.3",
+      "ends": "person",
+      "summary": "a voice message; the person listens",
+      "beats": [
+       {
+        "who": "customer",
+        "voice": "voice-4"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "symptom.voice",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.4",
+      "ends": "person",
+      "summary": "a burst of three lines before anyone looks",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open",
+        "burst": 1.0
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.5",
+      "ends": "silent",
+      "summary": "two times offered, no answer",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.6",
+      "ends": "person",
+      "summary": "neither time works; a third",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "neither works, anything later in the week",
+         "i work those days. anything else?",
+         "can we do the week after"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "reroll": true,
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.7",
+      "ends": "person",
+      "summary": "a time, and the price",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "booking.open"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "and how much is that again",
+         "whats that gonna run me",
+         "how much for that btw"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "price.quote",
+        "draft": "price.quote_list"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "booking.tg.8",
+      "ends": "person",
+      "summary": "a regular, warm",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "hey {advisor_first} its {first_name}. need to bring the {car_said} in for {job_said} sometime this week",
+         "{advisor_first}! hope yall are good. need {job_said} again",
+         "morning {advisor_first}, the {car_said} is due for {job_said}"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "moves.warm",
+         "booking.offer"
+        ],
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "hours": {
+   "label": null,
+   "shares": {
+    "web": 20,
+    "telegram": 6
+   },
+   "alone_on_web": 95,
+   "unclear_weight": 0.3,
+   "skeletons": {
+    "web": [
+     {
+      "id": "hours.web.1",
+      "ends": "alone",
+      "summary": "opening hours",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "what time yall close",
+         "open today?",
+         "what time do you open tomorrow",
+         "yall open till when",
+         "hours?"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "hours_today"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.2",
+      "ends": "alone",
+      "summary": "where a shop is",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "where are yall located",
+         "whats the address for the bonny oaks one",
+         "which shop is in nashville",
+         "address for the main st shop?"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "address"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.3",
+      "ends": "alone",
+      "summary": "something the shop does not do",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "do yall do body work",
+         "do you work on motorcycles",
+         "can yall rebuild a diesel",
+         "do yall paint cars"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "we_dont"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok thanks anyway",
+         "dang ok",
+         "gotcha thanks",
+         "ok who does"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.4",
+      "ends": "alone",
+      "summary": "Saturday hours",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "are you open saturday",
+         "saturday hours?",
+         "is bonny oaks open saturday",
+         "yall open on the weekend"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "hours_saturday"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.5",
+      "ends": "handed_over",
+      "summary": "'do you work on this', then a time",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "do yall work on {car_said}s",
+         "do you do {job_said}",
+         "do yall do {job_said} on older cars"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "we_do",
+         "offer_handoff"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "yes please",
+         "yeah can i get in {day_said}",
+         "sure"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "hours"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.offer"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.8",
+      "ends": "alone",
+      "summary": "hybrids: the ordinary service, East Main only",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "do you work on hybrids? i have a prius",
+         "can yall fix the hybrid battery on my prius",
+         "do yall service hybrids"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "we_dont_hybrid"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok good to know",
+         "ok east main it is then",
+         "gotcha, thanks"
+        ],
+        "p": 0.7
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.6",
+      "ends": "alone",
+      "summary": "how to pay",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "what kind of payment do yall take",
+         "do yall take cash",
+         "can i pay with a check"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "payment"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok",
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "hours.web.7",
+      "ends": "alone",
+      "summary": "a holiday or a Sunday",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "yall open on the holiday monday",
+         "open sunday?",
+         "are you open on labor day"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "hours_closed_days"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "hours.tg.1",
+      "ends": "person",
+      "summary": "hours, answered by a person",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "yall open saturday",
+         "what time yall close today",
+         "open till when today"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.answer",
+        "draft": "hours.answer"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "hours.tg.2",
+      "ends": "person",
+      "summary": "the address again",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "whats the address again",
+         "which one is yall at",
+         "send me the address pls"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.answer",
+        "draft": "hours.answer"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "hours.tg.3",
+      "ends": "person",
+      "summary": "dropping off after hours",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "can i drop it tonight after yall close",
+         "is the key box still there",
+         "ok to leave it in the drop box tonight?"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.after",
+        "draft": "hours.drop_box"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "hours.tg.4",
+      "ends": "person",
+      "summary": "'do yall do this'",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "do yall do {job_said}",
+         "yall work on hybrids?",
+         "do you do tires too"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.answer",
+        "draft": "hours.we_do"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "hours.tg.5",
+      "ends": "person",
+      "summary": "hours, then a day",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "what time yall open tomorrow",
+         "yall open early?"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.answer",
+        "draft": "hours.answer"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok can i come {day_said} then",
+         "ok put me down for {day_said}"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "symptom": {
+   "label": "booking",
+   "shares": {
+    "web": 12,
+    "telegram": 8
+   },
+   "alone_on_web": 35,
+   "unclear_weight": 1.6,
+   "skeletons": {
+    "web": [
+     {
+      "id": "symptom.web.1",
+      "ends": "handed_over",
+      "summary": "a photo of a warning lamp: the page's advice, a hand-over",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "whats this light",
+         "is this bad",
+         "this came on"
+        ],
+        "photo": "{photo}"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_way_round"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "photo_thanks",
+         "advice_check_engine"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "symptom.more"
+       },
+       {
+        "who": "assistant",
+        "use": "offer_handoff"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "yes please",
+         "yeah {day_said} if possible",
+         "yes. soon as they can"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number",
+         "ask_shop"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_shop",
+        "p": 0.5
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "symptom"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "symptom.advise"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "booking"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "symptom.web.2",
+      "ends": "alone",
+      "summary": "a brake noise: what the page says, the inspection's price",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "brakes are squealing",
+         "grinding noise when i stop",
+         "my brakes make a noise",
+         "squeaky brakes, is it bad"
+        ]
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "wrong_way_round",
+         "vague"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "advice_brakes"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok ill bring it by this week",
+         "ok thanks, ill call them",
+         "good to know thanks",
+         "ok ill come in monday"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "closing",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "symptom.web.3",
+      "ends": "abandoned",
+      "summary": "a puddle photo; gone before a number",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "is this bad",
+         "found this under my car",
+         "whats leaking"
+        ],
+        "photo": "puddle-under-car"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "photo_thanks",
+         "advice_leak"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok",
+         "ill keep an eye on it",
+         "ok thanks"
+        ],
+        "p": 0.6
+       },
+       {
+        "who": "assistant",
+        "use": "offer_handoff",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "abandoned"
+       }
+      ]
+     },
+     {
+      "id": "symptom.web.4",
+      "ends": "handed_over",
+      "summary": "overheating on the road: stop, the tow, a hand-over as an escalation",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "temp gauge just went all the way up",
+         "its overheating, im on the side of the road",
+         "steam coming out the hood what do i do"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "advice_overheat"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok i pulled over what now",
+         "its off. can yall tow it",
+         "ok its off now"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "towing",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "symptom"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "symptom.advise"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok thank you",
+         "ok the truck is coming",
+         "thank you so much"
+        ]
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "urgent",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ],
+      "job": "coolant_leak"
+     },
+     {
+      "id": "symptom.web.5",
+      "ends": "alone",
+      "summary": "the A/C blows hot: the check, then the recharge prices",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "my ac is blowing hot",
+         "ac not cold anymore",
+         "ac is blowing warm air"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "advice_ac"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "how much if it needs freon",
+         "what if its just low",
+         "and a recharge is how much"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "advice_ac_recharge"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ],
+      "job": "ac"
+     },
+     {
+      "id": "symptom.web.6",
+      "ends": "alone",
+      "summary": "won't start: the free test, no appointment",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "car wont start just clicks",
+         "had to jump it this morning",
+         "slow to start in the mornings",
+         "battery keeps dying"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "advice_battery"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "oh nice, free? ill swing by",
+         "can i just come any time",
+         "do i need an appointment for that"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "Yes, any time we're open: {open_time} to {close_time} on weekdays.",
+          "page": "customers/hours-and-locations"
+         },
+         {
+          "text": "No appointment needed for the test. We're open {open_time} to {close_time}, Monday to Friday.",
+          "page": "customers/battery"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "symptom.web.7",
+      "ends": "handed_over",
+      "summary": "a shake at speed: balance or alignment, then a person",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "steering wheel shakes on the interstate",
+         "car vibrates at highway speed",
+         "shimmy in the wheel going fast"
+        ]
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "wrong_thing",
+         "wrong_way_round"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "advice_shake"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "can someone look at it {day_said}",
+         "ok i want to get it checked",
+         "ok can yall do that this week"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_book",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "symptom"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "symptom.advise"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "symptom.web.8",
+      "ends": "declined",
+      "summary": "a nail in the tread; the customer will just come by",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "nail in my tire can yall fix it",
+         "can this be patched",
+         "screw in my tire"
+        ],
+        "photo": "tire-nail-tread"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "photo_thanks",
+         "advice_tire"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "can i just come in",
+         "do i need an appt",
+         "can i come now"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "A flat repair is a short job, and you're welcome to wait for it. I can't book a time, but I can pass it to the desk; what's your name and number?",
+          "page": "customers/dropping-off-and-picking-up"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.decline_handoff"
+       },
+       {
+        "who": "assistant",
+        "use": "declined_ok"
+       },
+       {
+        "who": "end",
+        "how": "declined"
+       }
+      ],
+      "job": "flat"
+     }
+    ],
+    "telegram": [
+     {
+      "id": "symptom.tg.1",
+      "ends": "person",
+      "summary": "what the car is doing; a day",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "symptom.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_way_round",
+         "wrong_thing"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "symptom.tg.2",
+      "ends": "person",
+      "summary": "a photo of the dash",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "this came on",
+         "whats this mean {advisor_first}",
+         "is this bad"
+        ],
+        "photo": "{photo}"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "customer",
+        "use": "symptom.more"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.offer",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "symptom.tg.3",
+      "ends": "person",
+      "summary": "a voice message",
+      "beats": [
+       {
+        "who": "customer",
+        "voice": "voice-1"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.voice",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "symptom.tg.4",
+      "ends": "person",
+      "summary": "'its doing it again': which it",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "{advisor_first} its doing it again",
+         "the noise is back",
+         "its back. same thing"
+        ]
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.ask",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "customer",
+        "use": "symptom.more"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "booking.ask_day"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "symptom.tg.5",
+      "ends": "person",
+      "summary": "'is it safe to drive'",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "is it safe to drive like this",
+         "can i drive it to work or no",
+         "ok to drive it til {day_said}?"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "symptom.tg.6",
+      "ends": "silent",
+      "summary": "advice given; no answer",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "symptom.open"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     },
+     {
+      "id": "symptom.tg.7",
+      "ends": "person",
+      "summary": "overheating: urgent",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "its overheating",
+         "temp gauge in the red what do i do",
+         "steam from under the hood"
+        ]
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "urgent"
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok its off",
+         "ok bringing it slow",
+         "ok getting a tow"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.confirm",
+        "draft": "generic.close"
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "normal"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ],
+      "job": "coolant_leak"
+     },
+     {
+      "id": "symptom.tg.8",
+      "ends": "person",
+      "summary": "the A/C again",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "ac is blowing hot again",
+         "ac quit on me",
+         "no cold air at all"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "symptom.advise",
+        "draft": "symptom.advise"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ],
+      "job": "ac"
+     }
+    ]
+   }
+  },
+  "status": {
+   "label": "status",
+   "shares": {
+    "web": 5,
+    "telegram": 24
+   },
+   "alone_on_web": 0,
+   "unclear_weight": 0.5,
+   "skeletons": {
+    "web": [
+     {
+      "id": "status.web.1",
+      "ends": "handed_over",
+      "summary": "is it ready: the assistant cannot see; a person says ready",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.ready"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close_coming"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "status.web.2",
+      "ends": "handed_over",
+      "summary": "not yet",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.not_yet"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok thanks for letting me know",
+         "ugh ok",
+         "ok can you text me when its done"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "status.web.3",
+      "ends": "handed_over",
+      "summary": "the part",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "did the part come in for my {car_said}",
+         "any word on that part",
+         "is the part in yet"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.not_yet"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "status.more",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "status.web.4",
+      "ends": "handed_over",
+      "summary": "asked at night, answered at opening",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "is my car ready for tomorrow morning",
+         "checking if the {car_said} will be done tomorrow",
+         "will it be ready first thing"
+        ]
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.ready"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "omw",
+         "be there at lunch",
+         "great ill grab it after work"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "status.web.5",
+      "ends": "handed_over",
+      "summary": "'yall have my number'",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "yall have my number",
+         "its on file",
+         "you should have it"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "I'm sorry, I can't see your file from here, so the desk needs it from you to reach you. What's the best number?"
+         },
+         {
+          "text": "I understand. I don't have access to customer records, so could you type the number once more?"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.ready"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "status.web.6",
+      "ends": "abandoned",
+      "summary": "gone before giving a number",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ugh nvm ill call",
+         "forget it",
+         "ill just call"
+        ],
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "abandoned"
+       }
+      ]
+     },
+     {
+      "id": "status.web.7",
+      "ends": "handed_over",
+      "summary": "ready and the total; paying after hours",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "is my car ready and whats the total",
+         "ready? how much do i owe",
+         "done yet and whats the damage"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.ready"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "can i pay over the phone",
+         "can i pick up after yall close",
+         "i cant get there till late"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "hours.after",
+        "draft": "status.pickup_after_hours"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "status.web.8",
+      "ends": "handed_over",
+      "summary": "a slow first reply and a nudge",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "cannot_see",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "status"
+       },
+       {
+        "who": "customer",
+        "use": "generic.nudge"
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "status.not_yet"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "status.tg.1",
+      "ends": "person",
+      "summary": "is it ready: yes",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "two_in_one"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "status.ready",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close_coming"
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "activity",
+        "what": "resolved"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.2",
+      "ends": "person",
+      "summary": "not yet; later the shop writes first",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open"
+       },
+       {
+        "who": "staff",
+        "reply": "status.not_yet",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok",
+         "ok let me know",
+         "ugh ok",
+         "ok thanks",
+         "alright"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "status.ready"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "omw",
+         "be there in a bit",
+         "coming now",
+         "leaving work now"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.3",
+      "ends": "person",
+      "summary": "the shop writes first: ready",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "status.ready"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "omw",
+         "on my way",
+         "coming now",
+         "be there after work"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "generic.close",
+        "p": 0.4
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.4",
+      "ends": "person",
+      "summary": "the part, asked twice",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "did the part come",
+         "part in yet {advisor_first}",
+         "any news on the part"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "status.not_yet",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "use": "generic.nudge",
+        "p": 0.6
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "high",
+        "p": 0.4
+       },
+       {
+        "who": "staff",
+        "reply": "status.not_yet",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.5",
+      "ends": "person",
+      "summary": "three lines before anyone looks",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "status.open",
+        "burst": 1.0
+       },
+       {
+        "who": "staff",
+        "reply": "status.ready",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close_coming"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.6",
+      "ends": "person",
+      "summary": "needed by a time",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "need it by {time_said} if possible",
+         "can it be done by {time_said}",
+         "any way its ready by {time_said}"
+        ]
+       },
+       {
+        "who": "note",
+        "use": "status.wants_by",
+        "p": 0.4
+       },
+       {
+        "who": "staff",
+        "reply": "status.not_yet",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.7",
+      "ends": "person",
+      "summary": "'did yall find anything': found work",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "did yall find anything else",
+         "anything else wrong with it",
+         "find anything?"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.present",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "use": "found_work.open"
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.ack"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "approval"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "status.tg.8",
+      "ends": "person",
+      "summary": "a voice message asking about pick-up",
+      "beats": [
+       {
+        "who": "customer",
+        "voice": "voice-2"
+       },
+       {
+        "who": "staff",
+        "reply": "status.ready",
+        "draft": "symptom.voice",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close_coming"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "found_work": {
+   "label": "approval",
+   "shares": {
+    "web": 2,
+    "telegram": 16
+   },
+   "alone_on_web": 0,
+   "unclear_weight": 1.0,
+   "skeletons": {
+    "web": [
+     {
+      "id": "found_work.web.1",
+      "ends": "handed_over",
+      "summary": "an approval typed into the website",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "hi its {first_name}, yall have my {car_said}. go ahead with the {finding_item}",
+         "got the estimate, yes to the {finding_item} no to the rest",
+         "approve the {finding_item} please, not the other one"
+        ]
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_way_round"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_approval",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "found_work"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "found_work.confirm"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "approval"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "found_work.web.2",
+      "ends": "handed_over",
+      "summary": "a decline",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "dont do the extra stuff just the oil change",
+         "not doing the other things today",
+         "just what i brought it in for please"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_approval",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "found_work"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "found_work.confirm"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "found_work.web.3",
+      "ends": "handed_over",
+      "summary": "'do i really need it'",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "do i really need the {finding_item}",
+         "is the {finding_item} urgent or can it wait",
+         "can the {finding_item} wait a month"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "I can't judge your car from here, so I won't guess. Work you put off is noted on the car's record and you'll be reminded; an advisor can tell you how urgent it is. What's the best number for them?",
+          "page": "customers/estimates-and-approvals"
+         },
+         {
+          "text": "That's a question for the advisor who has your car, not for me. You approve job by job, so nothing is done without your yes. Who should they ask for, and what's the number?",
+          "page": "customers/estimates-and-approvals"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "found_work"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "found_work.present"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "found_work.more"
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.ack"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "found_work.web.4",
+      "ends": "handed_over",
+      "summary": "a photo of an estimate line",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "whats this line mean",
+         "what is this",
+         "what is this charge for"
+        ],
+        "photo": "invoice-line-circled"
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "Thanks for the photo. I can't see your estimate in the shop's system, so I'll ask an advisor to go over that line with you. What's the best number to reach you?"
+         },
+         {
+          "text": "Got the photo, thank you. I'm not able to read your order from here; an advisor can explain that line. Who should they ask for, and what's your number?"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "found_work"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "found_work.present"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "found_work.more"
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.total"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "found_work.web.5",
+      "ends": "handed_over",
+      "summary": "yes to both, and the total",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "go ahead with both. whats the total",
+         "yes to all. how much total with tax",
+         "do it all, how much"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_approval",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "found_work"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "found_work.confirm"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "found_work.tg.1",
+      "ends": "person",
+      "summary": "the shop sends findings and a photo; a yes",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "found_work.present",
+        "files": [
+         "estimate-pdf"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "found_work.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "vague",
+         "wrong_way_round"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.ack"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "approval"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.4
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "found_work.tg.2",
+      "ends": "person",
+      "summary": "findings, the total, then a yes",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "found_work.present",
+        "files": [
+         "estimate-pdf"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "how much all together",
+         "total?",
+         "whats it come to with tax"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.total"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok go ahead",
+         "yes do it",
+         "alright do it"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.ack"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "found_work.tg.3",
+      "ends": "person",
+      "summary": "can it wait",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "found_work.present"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "can it wait",
+         "is it urgent",
+         "how long can i put it off"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.can_wait"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok leave it then",
+         "ok do it then",
+         "next time then"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "found_work.tg.4",
+      "ends": "person",
+      "summary": "'let me ask my husband', then a yes",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "found_work.present"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "let me ask my husband",
+         "let me check with my wife",
+         "gotta ask the boss lol"
+        ]
+       },
+       {
+        "who": "note",
+        "use": "found.husband",
+        "p": 0.5
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "he says go ahead",
+         "ok go ahead",
+         "she said do it"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.ack"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "found_work.tg.5",
+      "ends": "silent",
+      "summary": "findings sent; no answer the same day",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "found_work.present"
+       },
+       {
+        "who": "customer",
+        "use": "generic.nudge",
+        "alts": [
+         "sorry been at work, go ahead"
+        ],
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "moving": {
+   "label": "booking",
+   "shares": {
+    "web": 4,
+    "telegram": 8
+   },
+   "alone_on_web": 0,
+   "unclear_weight": 1.0,
+   "skeletons": {
+    "web": [
+     {
+      "id": "moving.web.1",
+      "ends": "handed_over",
+      "summary": "move a booking",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "moving.open"
+       },
+       {
+        "who": "unclear",
+        "kinds": [
+         "two_in_one"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_move",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "moving"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "moving.moved"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "booking"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "moving.web.2",
+      "ends": "handed_over",
+      "summary": "cancel",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "need to cancel my appointment",
+         "have to cancel for {appt_day} sorry",
+         "cancel my appt please"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_move",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "moving"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "moving.cancelled"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "moving.web.3",
+      "ends": "handed_over",
+      "summary": "running late",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "running late for my appt",
+         "gonna be about fifteen min late",
+         "stuck in traffic, be there soon"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "Thanks for letting us know. I can't see appointments, but I'll pass it to the shop. What's your name, and the best number?"
+         },
+         {
+          "text": "Thank you. I'll let the desk know; could I get your name and number so they can match it to your booking?"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "moving"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "moves.close"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "moving.web.4",
+      "ends": "abandoned",
+      "summary": "asks to move; gone",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "moving.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_move",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "abandoned"
+       }
+      ]
+     },
+     {
+      "id": "moving.web.5",
+      "ends": "handed_over",
+      "summary": "add a job to a booking",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "can i add an oil change to my appointment {appt_day}",
+         "when i come in {appt_day} can yall also do {job_said}"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_move",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "moving"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "booking.confirm"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "moving.tg.1",
+      "ends": "person",
+      "summary": "move a booking",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "moving.open"
+       },
+       {
+        "who": "staff",
+        "reply": "moving.moved",
+        "draft": "moving.ack"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "moving.tg.2",
+      "ends": "person",
+      "summary": "cancel",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "need to cancel",
+         "cancel for {appt_day}",
+         "gotta cancel sorry"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moving.cancelled",
+        "draft": "moving.cancel"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close",
+        "p": 0.5
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "moving.tg.3",
+      "ends": "person",
+      "summary": "running late",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "running late",
+         "be there in twenty",
+         "traffic, gonna be a few min late"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moves.close",
+        "draft": "moving.late"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "moving.tg.4",
+      "ends": "person",
+      "summary": "a company van off the schedule",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "Need to move {unit} from {appt_day}. It is out on a job.",
+         "{unit} cant make {appt_day}, can we push it"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "moving.moved",
+        "draft": "moving.ack"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "moving.tg.5",
+      "ends": "silent",
+      "summary": "moved, no new day chosen",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "moving.open"
+       },
+       {
+        "who": "staff",
+        "reply": "moving.moved",
+        "draft": "moving.ack"
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "complaint": {
+   "label": "complaint",
+   "shares": {
+    "web": 3,
+    "telegram": 4
+   },
+   "alone_on_web": 0,
+   "unclear_weight": 0.0,
+   "skeletons": {
+    "web": [
+     {
+      "id": "complaint.web.1",
+      "ends": "handed_over",
+      "summary": "a noise after a repair",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "complaint.open"
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_complaint",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "complaint"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "complaint.sorry"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "high",
+        "p": 0.6
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "complaint"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "complaint.web.2",
+      "ends": "handed_over",
+      "summary": "the bill was higher than said",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "my bill was more than the quote",
+         "why is there a shop supplies charge",
+         "yall charged more than you said"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "I can't see your bill from here. In general, the listed price is before tax, and repairs billed by the hour carry shop supplies, never more than {page_price} on one bill. For your own bill I'll pass the question to the shop; what's your name and number?",
+          "page": "customers/prices-for-common-services",
+          "item": "Shop supplies"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "complaint"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "complaint.bill"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok thanks for explaining",
+         "would have been nice to know",
+         "ok but somebody should have said"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.bill",
+        "draft": "complaint.bill"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "complaint.web.3",
+      "ends": "handed_over",
+      "summary": "nobody called back",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "nobody called me back",
+         "still waiting on a call from yesterday",
+         "was told someone would call. nobody did"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_complaint",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "complaint"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "complaint.sorry"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "note",
+        "use": "complaint.no_callback",
+        "p": 0.5
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "complaint.web.4",
+      "ends": "handed_over",
+      "summary": "is the repair under warranty",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "the {job_said} yall did is acting up again is that covered",
+         "is the repair under warranty",
+         "its doing the same thing again, is that warranty"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "warranty",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "complaint"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "complaint.sorry"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "complaint.web.5",
+      "ends": "handed_over",
+      "summary": "grease on the seat, the radio presets",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "car came back with grease on the seat",
+         "my radio presets got wiped lol",
+         "theres a handprint on my headliner"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_complaint",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "complaint"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "complaint.sorry"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "complaint.tg.1",
+      "ends": "person",
+      "summary": "a noise after a repair: back in, fixed, explained",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "complaint.open"
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "high"
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.sorry",
+        "draft": "complaint.sorry"
+       },
+       {
+        "who": "customer",
+        "use": "generic.pick_time"
+       },
+       {
+        "who": "staff",
+        "reply": "booking.confirm",
+        "draft": "booking.confirm_echo"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "all good now, what was it",
+         "its quiet now. what happened",
+         "fixed! thanks. what was it"
+        ],
+        "p": 0.6
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.fix"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "complaint"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "complaint.tg.2",
+      "ends": "person",
+      "summary": "why the bill was more",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "why was the bill more",
+         "the total was more than you said",
+         "whats the extra on my bill"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.bill",
+        "draft": "complaint.bill"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok",
+         "would have been nice to know",
+         "ok thanks"
+        ]
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "complaint.tg.3",
+      "ends": "person",
+      "summary": "a comeback, with a note to the manager",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "complaint.open"
+       },
+       {
+        "who": "note",
+        "use": "complaint.comeback"
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.sorry",
+        "draft": "complaint.sorry"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "complaint.tg.4",
+      "ends": "person",
+      "summary": "the third time: passed to the manager",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "this is the third time with the same noise",
+         "still not fixed",
+         "how many times do i have to bring it back"
+        ]
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "high"
+       },
+       {
+        "who": "staff",
+        "reply": "moves.pass_on",
+        "draft": "complaint.sorry"
+       },
+       {
+        "who": "note",
+        "use": "complaint.manager_reply",
+        "p": 0.5
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "i just want it fixed",
+         "ok",
+         "fine"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.sorry"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "complaint.tg.5",
+      "ends": "silent",
+      "summary": "said sorry; no answer",
+      "beats": [
+       {
+        "who": "customer",
+        "use": "complaint.open"
+       },
+       {
+        "who": "staff",
+        "reply": "complaint.sorry",
+        "draft": "complaint.sorry"
+       },
+       {
+        "who": "end",
+        "how": "silent"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "fleet": {
+   "label": "fleet",
+   "shares": {
+    "web": 1,
+    "telegram": 2
+   },
+   "alone_on_web": 0,
+   "unclear_weight": 0.0,
+   "skeletons": {
+    "web": [
+     {
+      "id": "fleet.web.1",
+      "ends": "handed_over",
+      "summary": "how to open a company account",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "how do we set up a company account",
+         "do yall do fleet accounts",
+         "we have a few work trucks, can we get an account"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "A business with five or more vehicles can apply for an account and pay on a monthly statement. To set one up, our page says to call Greg Whitaker, the service manager, at {page_term}.",
+          "page": "customers/company-vehicles",
+          "item": "Greg Whitaker"
+         }
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "ok can someone call me instead",
+         "can he reach out to me",
+         "ok thanks ill call"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "ask_number"
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "fleet"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "moves.pass_on"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "fleet.web.2",
+      "ends": "handed_over",
+      "summary": "a quote for named units",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "need a quote on {unit}, driver says the brakes are grinding",
+         "Requesting an itemized quote for {unit} and {unit_b}.",
+         "Can I get pricing on {unit}? Parts and labor separate."
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_fleet",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "fleet"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "fleet.list"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "high",
+        "p": 0.5
+       },
+       {
+        "who": "note",
+        "use": "fleet.quote_late",
+        "p": 0.3
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "Thank you.",
+         "Received, thanks.",
+         "Thanks, I'll look it over."
+        ]
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "fleet.web.3",
+      "ends": "handed_over",
+      "summary": "a copy of an invoice",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "Can you send a copy of the invoice for {unit}?",
+         "Our office needs the invoice for {unit} for the statement."
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_fleet",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "fleet"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "fleet.paperwork"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "fleet.web.4",
+      "ends": "handed_over",
+      "summary": "a list sent on the website",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "list for {day_said}: {unit}, {unit_b}",
+         "Please schedule {unit} and {unit_b} for {day_said}."
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "relay_fleet",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "scheduling",
+        "note": "fleet"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "fleet.list"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     },
+     {
+      "id": "fleet.web.5",
+      "ends": "handed_over",
+      "summary": "a van broke down",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "{unit} broke down on a job, what do we do",
+         "one of our vans wont start at a job site"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": [
+         "towing",
+         "ask_number"
+        ]
+       },
+       {
+        "who": "customer",
+        "use": "generic.give_number"
+       },
+       {
+        "who": "assistant",
+        "use": "handoff_done"
+       },
+       {
+        "who": "handoff",
+        "kind": "escalation",
+        "note": "fleet"
+       },
+       {
+        "who": "customer",
+        "use": "generic.thanks",
+        "p": 0.25
+       },
+       {
+        "who": "staff",
+        "reply": [
+         "pickup",
+         "fleet.list"
+        ],
+        "draft": "generic.after_handoff_thanks",
+        "draft_outcome": "discarded"
+       },
+       {
+        "who": "activity",
+        "what": "priority",
+        "level": "urgent"
+       },
+       {
+        "who": "end",
+        "how": "handed_over"
+       }
+      ]
+     }
+    ],
+    "telegram": [
+     {
+      "id": "fleet.tg.1",
+      "ends": "person",
+      "summary": "the week's list",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "list for {day_said}: {unit}, {unit_b}. service on both",
+         "For {day_said}: {unit} and {unit_b}, service.",
+         "{day_said} list: {unit}, {unit_b}"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "fleet.list",
+        "draft": "fleet.list_ack"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok"
+       },
+       {
+        "who": "activity",
+        "what": "label_added",
+        "label": "fleet"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "fleet.tg.2",
+      "ends": "person",
+      "summary": "a PO number",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "PO for {unit} is {po}",
+         "PO {po} for {unit}",
+         "Use PO {po} on {unit} please."
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "fleet.paperwork",
+        "draft": "fleet.po_ack"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "fleet.tg.3",
+      "ends": "person",
+      "summary": "is the van ready",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "how are we looking on {unit}",
+         "need {unit} back by end of day",
+         "Status on {unit}?"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "status.not_yet",
+        "draft": "status.dont_have"
+       },
+       {
+        "who": "customer",
+        "use": "generic.ok"
+       },
+       {
+        "who": "staff",
+        "reply": "status.ready"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "fleet.tg.4",
+      "ends": "person",
+      "summary": "found work on a van, under a PO cap",
+      "beats": [
+       {
+        "who": "staff",
+        "reply": "found_work.present",
+        "files": [
+         "estimate-pdf"
+        ]
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "Approved for {unit}. Hold anything over the PO.",
+         "go ahead on {unit}, PO {po}"
+        ]
+       },
+       {
+        "who": "note",
+        "use": "found.po_cap",
+        "p": 0.6
+       },
+       {
+        "who": "staff",
+        "reply": "found_work.confirm",
+        "draft": "found_work.ack"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     },
+     {
+      "id": "fleet.tg.5",
+      "ends": "person",
+      "summary": "a copy of an invoice",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "Can you send the invoice for {unit}? Office needs it.",
+         "need the paperwork on {unit} for accounting"
+        ]
+       },
+       {
+        "who": "staff",
+        "reply": "fleet.paperwork",
+        "draft": "fleet.paperwork"
+       },
+       {
+        "who": "customer",
+        "use": "generic.close"
+       },
+       {
+        "who": "end",
+        "how": "person"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "spam": {
+   "label": null,
+   "shares": {
+    "web": 3,
+    "telegram": 0
+   },
+   "alone_on_web": 100,
+   "unclear_weight": 0.0,
+   "skeletons": {
+    "web": [
+     {
+      "id": "spam.web.1",
+      "ends": "alone",
+      "summary": "a marketing pitch",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "Hi! I noticed your website is not ranking on the first page of Google. We can fix that for a small monthly fee. Who handles your marketing?",
+         "Congratulations! Your business has been selected for a free listing upgrade. Reply YES to claim."
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "off_topic"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "so is that a no",
+         "can i get the managers email"
+        ],
+        "p": 0.4
+       },
+       {
+        "who": "assistant",
+        "use": "off_topic",
+        "p": 0.4
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "spam.web.2",
+      "ends": "alone",
+      "summary": "the wrong business",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "is this the body shop",
+         "do yall sell used cars",
+         "looking for a car wash near me",
+         "i need a ride to the airport"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "wrong_business"
+       },
+       {
+        "who": "customer",
+        "alts": [
+         "oh ok sorry",
+         "wrong place sorry",
+         "nvm"
+        ],
+        "p": 0.6
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "spam.web.3",
+      "ends": "alone",
+      "summary": "a supplier's pitch",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "We supply premium shop towels and gloves at wholesale prices. Can I send a catalog?",
+         "Do you accept sponsored posts? We work with local auto blogs."
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "off_topic"
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "spam.web.4",
+      "ends": "alone",
+      "summary": "a job seeker",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "are yall hiring techs",
+         "hiring?",
+         "do yall need a lube tech"
+        ]
+       },
+       {
+        "who": "assistant",
+        "alts": [
+         {
+          "text": "I don't have information about jobs here. You could call {shop} at {shop_phone} and ask.",
+          "page": "customers/hours-and-locations"
+         },
+         {
+          "text": "That's not something I can answer, I'm afraid. The shop's number is {shop_phone}.",
+          "page": "customers/hours-and-locations"
+         }
+        ]
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     },
+     {
+      "id": "spam.web.5",
+      "ends": "alone",
+      "summary": "'hello', then nothing",
+      "beats": [
+       {
+        "who": "customer",
+        "alts": [
+         "hello",
+         "test",
+         "hi",
+         "hey"
+        ]
+       },
+       {
+        "who": "assistant",
+        "use": "hello_back"
+       },
+       {
+        "who": "end",
+        "how": "alone"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

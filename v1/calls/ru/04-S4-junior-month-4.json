@@ -1,0 +1,829 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-04-junior-month-4",
+  "configuration": "ru",
+  "number": 4,
+  "story": "S4",
+  "title": "The junior operator in her fourth month: one time offered, booked, a summary without the address",
+  "purpose": "Story S4, period P4. A woman who can only say that something knocks at the front. Alina asks where and when, offers one time, meets \"expensive just to look\" with sympathy instead of an answer, books and repeats the time and the work.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Наталья Ефимова",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P4 (rule R6)",
+    "nominal_offset": "T-72d",
+    "nominal_date": "2026-09-02",
+    "local_start": "12:15",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 5,
+    "caller_phone": "+7 907 830-66-80",
+    "repeat_caller": false,
+    "talk_s": 130
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Наталья Ефимова, who cannot describe the noise beyond \"something knocks at the front\".",
+    "vehicle": "Volkswagen Polo sedan, 2016",
+    "job": "suspension diagnosis",
+    "wants": "someone to look at a knock at the front",
+    "what_happens": "Alina asks when it knocks, on which side and for how long, takes the name and number, offers tomorrow at eleven, names the price of the diagnosis, answers \"expensive\" with \"I understand you\", books and repeats the time and the work without the address.",
+    "facts": {
+      "suspension_diag_rub": 800,
+      "note": "catalogue.json suspension_diag, a fixed price: 800.",
+      "prices": [
+        {
+          "job": "suspension_diag",
+          "name": "Диагностика ходовой части",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 800.0,
+          "labour_hour_rub": 1900,
+          "said": "восемьсот рублей",
+          "said_rub": 800
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, добрый день."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.0,
+      "said": "Здравствуйте. Девушка, у меня стучит что-то спереди. Можно к вам приехать, посмотреть?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.7,
+      "said": "Конечно, посмотрим. Какая у вас машина?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 14.8,
+      "said": "Фольксваген Поло, седан. Шестнадцатого года."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 18.5,
+      "said": "Поло, шестнадцатый... А стучит как — на кочках или когда руль поворачиваете?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 25.0,
+      "said": "Ой, я не знаю, как объяснить. Ну вот едешь по двору, по ямкам — и так: тук-тук. Глухо так."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 33.6,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 35.6,
+      "said": "На неровностях, значит. А справа, слева — не понять?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 40.7,
+      "said": "По-моему, справа. Где пассажир."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 44.0,
+      "said": "Угу. И давно?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 46.5,
+      "said": "Недели две. Сначала думала, в багажнике что-то катается."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 51.8,
+      "said": "Поняла. Скорее всего, м-м, что-то по подвеске — стойки стабилизатора, например, но это мастер должен на подъёмнике смотреть. Давайте я вас запишу. Как вас зовут?"
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 63.5,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 65.1,
+      "said": "Наталья. Ефимова."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 67.2,
+      "said": "Наталья, и телефон продиктуйте, пожалуйста."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 70.3,
+      "said": "Девятьсот семь, восемьсот тридцать, шестьдесят шесть, восемьдесят."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 75.1,
+      "said": "Ага, записала. Могу принять вас завтра в одиннадцать."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 80.0,
+      "said": "Завтра... А сколько это стоит — посмотреть?"
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 83.8,
+      "said": "Диагностика ходовой — восемьсот рублей."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 87.2,
+      "said": "Восемьсот? Только за то, чтобы посмотреть? Дорого как-то."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 92.3,
+      "said": "Я вас понимаю, сейчас всё недёшево... Но зато будете точно знать, что стучит."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 98.2,
+      "said": "Мгм.",
+      "overlap": true
+    },
+    {
+      "n": 23,
+      "who": "customer",
+      "at_s": 100.4,
+      "said": "Ну да... Ладно, давайте завтра."
+    },
+    {
+      "n": 24,
+      "who": "advisor",
+      "at_s": 104.3,
+      "said": "Хорошо! Записала: завтра, одиннадцать ноль-ноль, принимаю я, Алина."
+    },
+    {
+      "n": 25,
+      "who": "customer",
+      "at_s": 109.5,
+      "said": "А ждать долго?"
+    },
+    {
+      "n": 26,
+      "who": "advisor",
+      "at_s": 112.3,
+      "said": "Минут тридцать, мастер при вас посмотрит и всё покажет."
+    },
+    {
+      "n": 27,
+      "who": "customer",
+      "at_s": 118.4,
+      "said": "Хорошо."
+    },
+    {
+      "n": 28,
+      "who": "advisor",
+      "at_s": 120.6,
+      "said": "Значит, завтра в одиннадцать, Поло, диагностика ходовой. Ждём вас, Наталья!"
+    },
+    {
+      "n": 29,
+      "who": "customer",
+      "at_s": 126.9,
+      "said": "Спасибо, до свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.69,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the surname turned into a commoner one that sounds close",
+        "script_turn": 14,
+        "said": "Ефимова",
+        "stored": "Анфимова",
+        "error": true
+      },
+      {
+        "rule": "R2",
+        "what": "a first name heard as its neighbour",
+        "script_turn": 15,
+        "said": "Наталья",
+        "stored": "Наталия",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turn": 24,
+        "said": "одиннадцать ноль-ноль",
+        "stored": "11:00",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turn": 10,
+        "said": "Угу. ",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          13,
+          22
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          7
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4
+        ],
+        "said": [
+          "Фольксваген Поло"
+        ],
+        "stored": [
+          "Volkswagen Polo"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          16,
+          17,
+          19,
+          20,
+          26,
+          28
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          5,
+          6,
+          12,
+          18,
+          21,
+          23,
+          24,
+          28
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 3,
+        "lost": 2,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 5,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 5,
+        "wrong": 1
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 3,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 10,
+        "as_digits": 10,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 198,
+    "stored_words": 190,
+    "strict_word_difference": 0.126
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 217,
+    "duration_s": 130.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, добрый день.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здравствуйте. Девушка, у меня стучит что-то спереди. Можно к вам приехать, посмотреть?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Конечно, посмотрим. Какая у вас машина?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Volkswagen Polo, седан. Шестнадцатого года.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поло, шестнадцатый. А стучит как, на кочках или когда руль поворачиваете?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ой, я не знаю, как объяснить. Вот едешь по двору, по ямкам, и так: тук-тук. Глухо так.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Угу. На неровностях, значит. А справа, слева, не понять?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "По-моему, справа. Где пассажир.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "И давно?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Недели две. Сначала думала, в багажнике что-то катается.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Поняла. Скорее всего, что-то по подвеске, стойки стабилизатора, например, но это мастер должен на подъёмнике смотреть. Давайте я вас запишу. Как вас зовут?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Наталья. Анфимова.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Наталия, и телефон продиктуйте, пожалуйста.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "907 830 66 80.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага, записала. Могу принять вас завтра в 11.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Завтра. А сколько это стоит, посмотреть?",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Диагностика ходовой — 800 рублей.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "800? Только за то, чтобы посмотреть? Дорого как-то.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я вас понимаю, сейчас всё недёшево. Но зато будете точно знать, что стучит.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну да. Ладно, давайте завтра.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Записала: завтра, 11:00, принимаю я, Алина.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А ждать долго?",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Минут 30, мастер при вас посмотрит и всё покажет.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 24,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Значит, завтра в 11, Поло, диагностика ходовой. Ждём вас, Наталья.",
+        "confidence": null
+      },
+      {
+        "sequence": 25,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, до свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, добрый день.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Наталия, и телефон продиктуйте, пожалуйста.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А стучит как, на кочках или когда руль поворачиваете?",
+        "level": 2,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Диагностика ходовой — 800 рублей.",
+        "level": 1,
+        "segment": 16
+      },
+      {
+        "key": "offered_time",
+        "quote": "Могу принять вас завтра в 11.",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записала: завтра, 11:00, принимаю я, Алина.",
+        "level": 2,
+        "segment": 20
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, завтра в 11, Поло, диагностика ходовой.",
+        "level": 1,
+        "segment": 24
+      },
+      {
+        "key": "objection",
+        "quote": "Я вас понимаю, сейчас всё недёшево. Но зато будете точно знать, что стучит.",
+        "level": 1,
+        "segment": 18
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "А стучит как, на кочках или когда руль поворачиваете?",
+      "why": "Клиентка не могла объяснить, что стучит. Вопрос «на кочках или когда руль поворачиваете» дал ей два понятных варианта, и дальше разговор пошёл.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "Я вас понимаю, сейчас всё недёшево. Но зато будете точно знать, что стучит.",
+      "say": "А вы с чем сравниваете, где-то смотрят бесплатно? У нас за восемьсот мастер поднимает машину, проверяет всю ходовую и показывает вам, что стучит. Потом сами решите, где чинить."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 68.8,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 16
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 20
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 24
+        },
+        {
+          "key": "objection",
+          "level": 1,
+          "segment": 18
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 68.8,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, добрый день",
+        "name_and_number": "Наталия, и телефон продиктуйте, пожалуйста",
+        "need_discovery": "А стучит как, на кочках или когда руль поворачиваете?",
+        "price_with_next_step": "Диагностика ходовой — 800 рублей",
+        "offered_time": "Могу принять вас завтра в 11",
+        "asked_for_booking": "Записала: завтра, 11:00, принимаю я, Алина",
+        "recap": "Значит, завтра в 11, Поло, диагностика ходовой",
+        "objection": "Я вас понимаю, сейчас всё недёшево. Но зато будете точно знать, что стучит"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "А стучит как, на кочках или когда руль поворачиваете?",
+        "why": "Клиентка не могла объяснить, что стучит. Вопрос «на кочках или когда руль поворачиваете» дал ей два понятных варианта, и дальше разговор пошёл."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "Я вас понимаю, сейчас всё недёшево. Но зато будете точно знать, что стучит.",
+        "say": "А вы с чем сравниваете, где-то смотрят бесплатно? У нас за восемьсот мастер поднимает машину, проверяет всю ходовую и показывает вам, что стучит. Потом сами решите, где чинить."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": 1
+    },
+    "score": 68.8
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "1: имя, фамилия и номер взяты, номер вслух не повторён.",
+    "need_discovery": "2: машина, чего хочет клиентка и обстоятельства, которые Алина выспросила: на неровностях, справа, две недели.",
+    "price_with_next_step": "1: цена названа голой строкой, от чего зависит дальнейшее, не сказано.",
+    "offered_time": "1: одно конкретное время, завтра в одиннадцать. Второго варианта нет.",
+    "asked_for_booking": "2: день, час и кто принимает.",
+    "recap": "1: время и работа повторены, адрес нет.",
+    "objection": "1: на «дорого» ответила сочувствием и общей фразой, не выяснив, с чем клиентка сравнивает.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·1 + 3·1 + 3·2 + 1·1 + 2·1) / 2 = 11 из 16 весовых баллов = 68.8 (точно 68.75; продукт хранит одну цифру после запятой).",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "Новая клиентка Наталья Ефимова, Volkswagen Polo седан 2016, телефон +7 907 830-66-80. Запись на следующий день, 11:00: диагностика ходовой, 800."
+  ]
+}

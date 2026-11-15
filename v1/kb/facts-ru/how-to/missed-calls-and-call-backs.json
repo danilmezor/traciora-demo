@@ -1,0 +1,98 @@
+{
+ "path": "how-to/missed-calls-and-call-backs.md",
+ "title": "Пропущенные звонки и перезвоны",
+ "title_en": "Missed calls and call backs",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/missed-calls-and-call-backs.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "How the missed-call list is worked; the standard after the early desk shift.",
+ "serves": [
+  "S3",
+  "S1",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_ru": 270,
+ "links_to": [
+  "shops/main/how-the-day-runs.md",
+  "how-to/tyre-season.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The rush is 9:00 to 11:30; before @early_desk nearly one call in three was missed in those hours (ledger calls.main.before.miss_morning 31 %).",
+  "No voicemail habit: a short message is sent instead.",
+  "A tyre-season paragraph: calls up about 40 % in a window (ledger season.tyre.calls_up_pct)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "В списке «Перезвонить» — все, чей звонок мы пропустили за последние 7 дней и с кем с тех пор не поговорили. Сверху самые давние."
+  },
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "Прежде чем набирать, возьмите звонок на себя, чтобы двое не звонили одному человеку. У вас на доске появится карточка. Не позвонили за 30 минут — звонок возвращается в общий список."
+  },
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "Стандарт: перезвонить в течение часа, и в тот же день — без исключений."
+  },
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "Не ответил — напишите короткое сообщение: кто звонил и наш номер. Ещё одна попытка через два часа и ещё одна на следующее утро. Три попытки."
+  },
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "Если человек тем временем дозвонился до кого-то из нас, список уберёт его сам."
+  },
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "Вручную убираем только ошибочные номера, роботов и поставщиков. Клиента — никогда."
+  },
+  {
+   "section": "Пропущенные звонки и перезвоны",
+   "item": "Звонок, пропущенный, пока мы были закрыты, ни за кем не закрепляется. Но это тоже клиент: с таких звонков утро и начинаем."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "standard changed from two hours to one, the East Main paragraph added; message: \"Early desk from today.\"",
+   "message_ru": "С сегодняшнего дня утром на приёмке двое; перезваниваем за час."
+  }
+ ],
+ "has_history": true
+}

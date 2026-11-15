@@ -1,0 +1,218 @@
+{
+ "path": "services/suspension/front-end-parts.md",
+ "title": "Front-end parts",
+ "first_revision_text": "en/_history/services/suspension/front-end-parts.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Sway bar links and bushings, control arms, ball joints, tie rods.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 238,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Five catalogue jobs with hours, standard totals, pricing unit and whether an alignment follows: sway_bar_links (pair, no), sway_bar_bushings (set, no), outer_tie_rod (side, yes), ball_joint (side, yes), lower_control_arm (side, yes).",
+  "One alignment covers everything done in a visit.",
+  "Tie rods and ball joints are safety items.",
+  "Standard brand Moog.",
+  "A combined quote needs this table and the alignment price: for example both outer tie rods plus alignment = 2 x 162.55 + 119.95 = 445.05 before supplies and tax."
+ ],
+ "tables": [
+  {
+   "section": "Front-end parts",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Standard",
+    "Priced",
+    "Alignment after?"
+   ],
+   "rows": [
+    {
+     "On the order": "Replace front sway bar links",
+     "Hours": "0.8",
+     "Standard": "$194.36",
+     "Priced": "Pair",
+     "Alignment after?": "No"
+    },
+    {
+     "On the order": "Replace front sway bar bushings",
+     "Hours": "1",
+     "Standard": "$164.55",
+     "Priced": "Set",
+     "Alignment after?": "No"
+    },
+    {
+     "On the order": "Replace outer tie rod end",
+     "Hours": "0.8",
+     "Standard": "$162.55",
+     "Priced": "Each side",
+     "Alignment after?": "Yes"
+    },
+    {
+     "On the order": "Replace lower ball joint",
+     "Hours": "1.3",
+     "Standard": "$245.95",
+     "Priced": "Each side",
+     "Alignment after?": "Yes"
+    },
+    {
+     "On the order": "Replace front lower control arm",
+     "Hours": "1.5",
+     "Standard": "$393.41",
+     "Priced": "Each side",
+     "Alignment after?": "Yes"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Front-end parts",
+   "item": "Links are the cheap, common one: a rattle over small bumps. Replace both."
+  },
+  {
+   "section": "Front-end parts",
+   "item": "A loose tie rod or ball joint is a safety item. Say so in those words, once, without drama: \"This is the joint that steers the wheel. I would not leave it.\""
+  },
+  {
+   "section": "Front-end parts",
+   "item": "On many cars the ball joint comes with the control arm; then the arm is the job and the ball joint line is not used."
+  },
+  {
+   "section": "Front-end parts",
+   "item": "Add the alignment, $119.95, to anything marked Yes. One alignment covers everything done that visit."
+  },
+  {
+   "section": "Front-end parts",
+   "item": "Standard is Moog. On a car over 150,000 miles, do not talk anyone into the original part."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "sway_bar_links",
+   "what": "hours",
+   "class": "car",
+   "value": 0.8
+  },
+  {
+   "catalogue_key": "sway_bar_links",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 194.36
+  },
+  {
+   "catalogue_key": "sway_bar_bushings",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "sway_bar_bushings",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 164.55
+  },
+  {
+   "catalogue_key": "outer_tie_rod",
+   "what": "hours",
+   "class": "car",
+   "value": 0.8
+  },
+  {
+   "catalogue_key": "outer_tie_rod",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 162.55
+  },
+  {
+   "catalogue_key": "ball_joint",
+   "what": "hours",
+   "class": "car",
+   "value": 1.3
+  },
+  {
+   "catalogue_key": "ball_joint",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 245.95
+  },
+  {
+   "catalogue_key": "lower_control_arm",
+   "what": "hours",
+   "class": "car",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "lower_control_arm",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 393.41
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 119.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Стойки стабилизатора», «рулевые наконечники», «шаровые опоры», «рычаги»; much more common in Russia (suspension 12.8 % of orders)."
+ ]
+}

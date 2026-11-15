@@ -1,0 +1,85 @@
+{
+ "path": "shops/main/saturdays.md",
+ "title": "East Main: Saturdays",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What the Saturday morning shift takes and does not take.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "challenge:combine-policy-and-price",
+  "S14"
+ ],
+ "length_class": "short",
+ "words_en": 204,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Saturday 8:00-13:00 at East Main only; two at the desk (slot 29 every Saturday plus one advisor in turn: stories/S03) and two technicians in turn.",
+  "Taken: maintenance, tyres, batteries, small items, pre-inspected brake jobs with parts on the shelf, pick-ups.",
+  "Not taken: diagnostics (slot 10 does not work Saturdays), jobs needing a part ordered that morning (one run at 9:00), jobs over three hours.",
+  "Last car in at 11:30.",
+  "Bonny Oaks's line forwards to East Main on Saturday mornings."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "East Main: Saturdays",
+   "item": "The last car in is 11:30."
+  },
+  {
+   "section": "East Main: Saturdays",
+   "item": "If a Saturday customer needs a diagnosis, book Monday with Kevin's column and say so plainly. Do not let a technician \"have a quick look\" that turns into a car stuck on a lift over the weekend."
+  },
+  {
+   "section": "East Main: Saturdays",
+   "item": "Company vehicles are welcome on Saturday for maintenance. Driver limits apply as on any day."
+  },
+  {
+   "section": "East Main: Saturdays",
+   "item": "Bonny Oaks' phone is forwarded to East Main on Saturday mornings. Take the message and book into Bonny Oaks' Monday."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Brenda",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "No diagnostics on Saturdays; last car 11:30; one parts run at 9:00; Bonny Oaks's Saturday forwarding. The ERP should hold no diagnostic lead jobs on Saturdays and the call log should attribute Saturday calls on the east line to main."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian shops open every day; this page becomes \"weekends\" (Sat index 1.10, Sun 0.82 in mix.json ru) with the 2/2 desks."
+ ]
+}

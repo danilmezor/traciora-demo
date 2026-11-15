@@ -1,0 +1,160 @@
+{
+ "path": "policies/diagnostic-fees.md",
+ "title": "Платная диагностика и осмотры",
+ "title_en": "Diagnostic and inspection fees",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/diagnostic-fees.json",
+ "first_revision_text": "ru/_history/policies/diagnostic-fees.md",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "1",
+ "purpose": "Why diagnosis is charged and never credited; the founder's hobby-horse.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 205,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Russian fees from the catalogue: computer diagnostics 1 200, electrical search 2 850, brakes 700, running gear 800, A/C 900, pressure test 950, battery test 300 (paid).",
+  "The founder says outright that other shops credit diagnostics and this one does not."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Платная диагностика и осмотры",
+   "item": "Компьютерная диагностика двигателя: 1 200 ₽."
+  },
+  {
+   "section": "Платная диагностика и осмотры",
+   "item": "Поиск неисправности электрооборудования: полтора нормо-часа для начала, 2 850 ₽."
+  },
+  {
+   "section": "Платная диагностика и осмотры",
+   "item": "Диагностика тормозов — 700 ₽, ходовой — 800 ₽, кондиционера — 900 ₽."
+  },
+  {
+   "section": "Платная диагностика и осмотры",
+   "item": "Опрессовка системы охлаждения: 950 ₽."
+  },
+  {
+   "section": "Платная диагностика и осмотры",
+   "item": "Проверка аккумулятора и зарядки: 300 ₽. Десять минут, но прибор и руки тоже чего-то стоят."
+  },
+  {
+   "section": "Платная диагностика и осмотры",
+   "item": "Осмотр по чек-листу при любом ремонте: бесплатно."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "electrical_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2850.0
+  },
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 700.0
+  },
+  {
+   "catalogue_key": "suspension_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 800.0
+  },
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 900.0
+  },
+  {
+   "catalogue_key": "cooling_pressure_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 950.0
+  },
+  {
+   "catalogue_key": "battery_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 300.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович Ермолаев",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатериной Николаевной",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}"
+ ],
+ "amounts": [
+  300.0,
+  700.0,
+  800.0,
+  900.0,
+  950.0,
+  1200.0,
+  2850.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "fees updated to the new list; message: \"New prices from today.\"",
+   "message_ru": "Новые цены с сегодняшнего дня."
+  }
+ ],
+ "has_history": true
+}

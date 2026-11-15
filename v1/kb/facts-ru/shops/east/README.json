@@ -1,0 +1,74 @@
+{
+ "path": "shops/east/README.md",
+ "title": "Инженерный",
+ "title_en": "Bonny Oaks",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/east/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Front page of the second home shop's pages.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "tiny",
+ "words_ru": 61,
+ "links_to": [
+  "shops/east/hours-and-getting-here.md",
+  "shops/east/who-is-who.md",
+  "shops/east/opening-and-closing.md",
+  "shops/east/how-the-day-runs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Four bays, open eleven years, in Заволжье (the district is Новый город; staff call the shop «Инженерный», ledger geo.short_name)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Инженерный",
+   "item": "Часы и как проехать"
+  },
+  {
+   "section": "Инженерный",
+   "item": "Кто есть кто"
+  },
+  {
+   "section": "Инженерный",
+   "item": "Открытие и закрытие"
+  },
+  {
+   "section": "Инженерный",
+   "item": "Как проходит день"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,88 @@
+{
+ "path": "accounts/a3.md",
+ "title": "Чистый Венец",
+ "title_en": "Moccasin Bend Janitorial Services",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/a3.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Standing instructions for account A3.",
+ "serves": [
+  "S1",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 119,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Чистый Венец», a cleaning company: nine vehicles, numbers 1 to 9, 14 days, list prices.",
+  "The heavy vehicle is number 7, the ГАЗель van (accounts.json ru).",
+  "Cars arrive 9:00-9:30 and must be ready by 17:00."
+ ],
+ "new_facts": [
+  "Morning crews, ready by 17:00, the economy preference (colour)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Чистый Венец",
+   "item": "Контакт: Гульнара Наилевна, управляющая, +7 907 896-87-92. Записывает и согласует она. Борис Игоревич — директор и владелец, в машины не вникает."
+  },
+  {
+   "section": "Чистый Венец",
+   "item": "Бригады убирают офисы рано утром. Машины приезжают к нам после объектов, с 9:00 до 9:30, и к 17:00 должны быть готовы: вечером вторая смена."
+  },
+  {
+   "section": "Чистый Венец",
+   "item": "Водитель согласует до 8 000 ₽ за заезд. Больше — управляющая."
+  },
+  {
+   "section": "Чистый Венец",
+   "item": "Гаражные номера с 1 по 9. Седьмая — «Газель»-фургон, возит поломоечные машины: она тяжёлая, задние рессоры и шины смотрите при каждом заезде."
+  },
+  {
+   "section": "Чистый Венец",
+   "item": "На тормоза и фильтры просят эконом. В смету всё равно ставьте стандарт, а выбирает пусть Гульнара Наилевна."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A3",
+   "contact": "Гульнара Наилевна Садыкова",
+   "role": "управляющая",
+   "written_as": "Гульнара Наилевна"
+  },
+  {
+   "account": "A3",
+   "contact": "Борис Игоревич Лебедев",
+   "role": "директор, владелец",
+   "written_as": "Борис Игоревич"
+  }
+ ],
+ "dates": [
+  "{{T-7mo|date}}"
+ ],
+ "amounts": [
+  8000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

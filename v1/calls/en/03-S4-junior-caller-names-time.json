@@ -1,0 +1,611 @@
+{
+  "format": "seed-call/1",
+  "id": "en-03-S4-junior-caller-names-time",
+  "configuration": "en",
+  "number": 3,
+  "story": "S4",
+  "title": "The junior operator in her third month: the caller names the time himself; no name taken, nothing summed up",
+  "purpose": "Story S4, period P3. A caller who knows what he wants books himself in. Maya asks the right questions and says yes to his time, then writes the booking against a truck instead of a person and ends on 'see you then'.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Dwight Sizemore",
+      "invented": true,
+      "first_time": true,
+      "note": "His name is never said on the call: the booking is under 'Tacoma, 12:30'."
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P3 (rule R6)",
+    "nominal_offset": "T-101d",
+    "nominal_date": "2026-08-04",
+    "local_start": "11:05",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 5,
+    "caller_phone": "423-555-0146",
+    "repeat_caller": false,
+    "talk_s": 83
+  },
+  "scenario": {
+    "who_calls": "A first-time caller on a break at work; he asks one thing at a time and does not chat.",
+    "vehicle": "2012 Toyota Tacoma, 4.0 V6",
+    "job": "battery, installed",
+    "wants": "a price, then a slot on his lunch break",
+    "what_happens": "Maya asks what the truck is doing and how old the battery is, gives the installed price, agrees to the time he names, says who will be at the counter, and hangs up without a name, a number or a summary.",
+    "facts": {
+      "booked": "the call's day, 12:30",
+      "note": "catalogue.json battery_replace, class truck, standard: 304.45 (a menu price; the battery scales with the class). She says 'right at three hundred and five'.",
+      "prices": [
+        {
+          "what": "Replace battery, clean terminals",
+          "job": "battery_replace",
+          "vehicle_class": "truck",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 304.45,
+          "said": "right at three hundred and five",
+          "said_usd": 305,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Maya, how can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 5.3,
+      "said": "Yeah, what's a battery run for a Tacoma? Put in."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.7,
+      "said": "Sure, I can tell you that. What year's the Tacoma?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 15.4,
+      "said": "Twenty-twelve. The V6."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 17.3,
+      "said": "Okay. And what's it doing — is it not starting at all, or just slow?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 24.4,
+      "said": "Slow. Turns over real lazy in the mornin'. Yesterday I had to jump it off my wife's car."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 31.2,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 32.7,
+      "said": "Ooh. Okay. Do you know how old the battery is?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 37.7,
+      "said": "It's the one that come in it, far as I know."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 43.1,
+      "said": "Oh wow, okay, so it's — yeah, that's a good run for a battery. So for the Tacoma, installed, you're right at three hundred and five."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 53.5,
+      "said": "Three-oh-five. Alright. I take lunch at twelve. Can I run it by there about twelve-thirty today?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 61.2,
+      "said": "Twelve-thirty today? Yeah, absolutely! I'll put you down for twelve-thirty, and I'll be up front, so just ask for Maya."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 69.3,
+      "said": "How long's it take?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 72.1,
+      "said": "Oh, like twenty minutes. You can wait on it."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 76.3,
+      "said": "Sounds good."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 78.4,
+      "said": "Okay, see you then!"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 81.4,
+      "said": "Alright. Bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.76,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          5,
+          6,
+          10,
+          11,
+          17
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          4,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "a number split, merged or changed",
+        "script_turn": 11,
+        "said": "Three-oh-five",
+        "stored": "3.05"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          7
+        ]
+      },
+      {
+        "rule": "R12",
+        "what": "a stock phrase the recogniser put over the silence at the end",
+        "said": "",
+        "stored": "Thank you."
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 7,
+        "as_digits": 6,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 1,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 1,
+      "profanity": 0
+    },
+    "script_words": 170,
+    "stored_words": 169,
+    "strict_word_difference": 0.1
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 186,
+    "duration_s": 83.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Maya, how can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, what's a battery run for a Tacoma? Put in.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sure, I can tell you that. What year's the Tacoma?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "2012. The V6.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And what's it doing, is it not starting at all, or just slow?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Slow. Turns over real lazy in the morning. Yesterday I had to jump it off my wife's car.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ooh. Okay. Do you know how old the battery is?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's the one that come in it, far as I know.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh wow, okay, so yeah, that's a good run for a battery. So for the Tacoma, installed, you're right at $305.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "3.05. All right. I take lunch at twelve. Can I run it by there about 12:30 today?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "12:30 today? Yeah, absolutely! I'll put you down for 12:30, and I'll be up front, so just ask for Maya.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "How long's it take?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, like twenty minutes. You can wait on it.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sounds good.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, see you then!",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Bye.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Maya",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "I'll put you down for 12:30, and I'll be up front, so just ask for Maya.",
+        "level": 0,
+        "segment": 10
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Do you know how old the battery is?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "So for the Tacoma, installed, you're right at $305.",
+        "level": 1,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I'll put you down for 12:30, and I'll be up front, so just ask for Maya.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "recap",
+        "quote": "Okay, see you then!",
+        "level": 0,
+        "segment": 14
+      }
+    ],
+    "na": [
+      {
+        "key": "offered_time",
+        "why": "The customer named a specific time, 12:30 today, before the manager could offer one."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "And what's it doing, is it not starting at all, or just slow?",
+      "why": "She asked what the truck was doing before she priced anything, and the answers made the battery the right quote.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "I'll put you down for 12:30, and I'll be up front, so just ask for Maya.",
+      "say": "I'll put you down for 12:30. What name should I put it under, and is the number you're calling from the best one? Let me read it back."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 63.6,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 10
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 14
+        }
+      ],
+      "na": [
+        "offered_time",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 63.6,
+      "applicable": 6,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Maya",
+        "name_and_number": "I'll put you down for 12:30, and I'll be up front, so just ask for Maya",
+        "need_discovery": "Do you know how old the battery is?",
+        "price_with_next_step": "So for the Tacoma, installed, you're right at $305",
+        "asked_for_booking": "I'll put you down for 12:30, and I'll be up front, so just ask for Maya",
+        "recap": "Okay, see you then!"
+      },
+      "na": {
+        "offered_time": "The customer named a specific time, 12:30 today, before the manager could offer one.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "And what's it doing, is it not starting at all, or just slow?",
+        "why": "She asked what the truck was doing before she priced anything, and the answers made the battery the right quote."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "I'll put you down for 12:30, and I'll be up front, so just ask for Maya.",
+        "say": "I'll put you down for 12:30. What name should I put it under, and is the number you're calling from the best one? Let me read it back."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. The last stored line, 'Thank you.', was never said: the recogniser put it over the silence after the caller hung up (rule R12).",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 0,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": "na",
+      "asked_for_booking": 2,
+      "recap": 0,
+      "objection": "na"
+    },
+    "score": 63.6,
+    "score_exact": 63.6364,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name in the first line.",
+    "name_and_number": "0: a first-time caller is booked and she asks for neither a name nor a number.",
+    "need_discovery": "2: the truck, the job and what she asked for: slow to crank, jumped yesterday, the original battery.",
+    "price_with_next_step": "1: an installed price with nothing about what it depends on; the caller, not she, moves to a time.",
+    "offered_time": "N/A: he names 12:30 before she can offer anything.",
+    "asked_for_booking": "2: the day, the hour and who will be at the counter.",
+    "recap": "0: a booking was taken and the call ends on 'see you then'.",
+    "objection": "N/A: no doubt was voiced.",
+    "score": "(1·2 + 2·0 + 2·2 + 2·1 + 3·2 + 1·0) / 2 = 7 of 11 weight points = 63.6.",
+    "carried_by": [
+      "asked_for_booking",
+      "name_and_number"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Dwight Sizemore, 423-555-0146, 2012 Toyota Tacoma: an appointment at main for the call's day at 12:30, source phone, with no customer name on it; the customer record is made at check-in."
+  ]
+}

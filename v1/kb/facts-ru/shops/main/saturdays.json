@@ -1,0 +1,122 @@
+{
+ "path": "shops/main/saturdays.md",
+ "title": "Московское шоссе: выходные и праздничные дни",
+ "title_en": "East Main: Saturdays",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/main/saturdays.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Weekends and public holidays at the flagship: who is absent, what is taken and what is not. The Russian counterpart of the Saturday page: the shops are open every day.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "challenge:combine-policy-and-price",
+  "S14"
+ ],
+ "length_class": "short",
+ "words_ru": 257,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The English page is about the Saturday morning shift. The Russian shops are open every day (ledger site.open_days), so the page is about what is missing at weekends and on public holidays: managers, the office, the parts manager and the foreman work five weekdays (ledger roster.manager_pattern).",
+  "Saturday is the heaviest day for arrivals, Sunday the lightest (mix.json ru weekday index 1.10 and 0.82).",
+  "No line is forwarded between shops: every desk is staffed every day."
+ ],
+ "new_facts": [
+  "Slot 10's days off are Saturday and Sunday: no hard diagnostics at weekends. The ERP holds no diagnostic lead jobs of his on those days.",
+  "The senior at weekends is the senior advisor of the shift: slot 5 in his, slot 29 in hers.",
+  "A discount above 10 % at a weekend is approved by slot 4 by phone and written on the order; cash refunds wait for Monday.",
+  "No sublet work at weekends."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Московское шоссе: выходные и праздничные дни",
+   "item": "Старший в выходные — старший по смене на приёмке: Дима в свою смену, Татьяна Геннадьевна в свою."
+  },
+  {
+   "section": "Московское шоссе: выходные и праздничные дни",
+   "item": "Скидку больше 10 % в выходные согласую по телефону. Звоните до того, как закрыли наряд. В наряде пишете: «согласовано, Мельников, по телефону» и время."
+  },
+  {
+   "section": "Московское шоссе: выходные и праздничные дни",
+   "item": "Возврат наличных в выходные не проводим. Записываем, что нужно вернуть, и передаём мне на понедельник."
+  },
+  {
+   "section": "Московское шоссе: выходные и праздничные дни",
+   "item": "Жалоба — карточка мне на доску, как в любой день. Клиенту говорим: «Сергей Анатольевич позвонит вам в понедельник до двенадцати». Если ждать нельзя — звоните мне сразу."
+  },
+  {
+   "section": "Московское шоссе: выходные и праздничные дни",
+   "item": "Машины организаций принимаем. Счёт и акт уйдут в понедельник, предупредите водителя."
+  },
+  {
+   "section": "Московское шоссе: выходные и праздничные дни",
+   "item": "Не давайте механику «глянуть одним глазом» машину на диагностику: в итоге она провисит на подъёмнике до понедельника."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паши",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Михалыча",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубина",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Татьяна Геннадьевна",
+   "role": "service_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

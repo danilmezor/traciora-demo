@@ -1,0 +1,107 @@
+{
+ "path": "policies/storage-of-uncollected-cars.md",
+ "title": "Cars not collected",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Storage of finished cars: free days, daily charge, the 30-day step. Contradicted on purpose by a team note.",
+ "serves": [
+  "challenge:policy-vs-team-note",
+  "operate:contradiction",
+  "S15"
+ ],
+ "length_class": "short",
+ "words_en": 197,
+ "links_to": [
+  "how-to/getting-approval.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Free for five working days after the customer was told the car is ready; from the sixth working day 25 USD a day as a storage fee (ERP order_fee).",
+  "Warn on day three; calls on days one, three and five, each written on the order.",
+  "A car awaiting an estimate decision is not \"ready\".",
+  "At 30 days slot 3 sends a certified letter and starts the lien paperwork; advisors never mention liens.",
+  "Slot 4 or 22 may waive storage with a written reason.",
+  "Company accounts are not charged storage.",
+  "CONTRADICTION PLANTED: a team note in memory, approved by slot 22, says \"Storage is charged from day three after the car is ready\". The policy page (slot 2, in force from T-9 months) is the company rule; the note is the old Charlotte Pike habit.",
+  "ERP mess kind 4 (an order at west open five months after the car left) is a different thing: an unclosed order, not an uncollected car."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Cars not collected",
+   "item": "Free for five working days after we tell the customer it is ready. \"Told\" means we spoke to them or they answered a message, and the order says when."
+  },
+  {
+   "section": "Cars not collected",
+   "item": "From the sixth working day: $25 a day, added to the order as a storage fee. Tell the customer on day three that it starts on day six. No surprises."
+  },
+  {
+   "section": "Cars not collected",
+   "item": "Call on day one, day three and day five. Write each call on the order."
+  },
+  {
+   "section": "Cars not collected",
+   "item": "A car waiting on the customer's decision (estimate sent, no answer) is not \"ready\". The five days do not run, but chase the answer: Getting approval."
+  },
+  {
+   "section": "Cars not collected",
+   "item": "Thirty days: tell Donna. She sends the certified letter and starts the paperwork. Advisors do not mention liens or selling the car to a customer, ever."
+  },
+  {
+   "section": "Cars not collected",
+   "item": "Greg or Dale may waive storage for a reason (hospital, deployment). It is written on the order like any discount."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "new_facts": [
+  "Storage: five free working days, 25 USD a day, letter at 30 days. Reason: a storage policy was asked for. No storage fee is planted in the ERP; if one is wanted it follows this page.",
+  "NEW FACT FOR THE MEMORY STORE: one active team note, proposed by slot 23 and approved by slot 22 at about T-4 months: subject \"Uncollected cars\", text \"Storage is charged from day three after the car is ready.\" It must pass the note gate (no customer data)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: платная стоянка after N days is written into the order form the customer signs. Choose RUB amounts as new facts (for example 5 free days, then 300 RUB a day)."
+ ]
+}

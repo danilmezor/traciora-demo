@@ -1,0 +1,81 @@
+{
+ "path": "playbooks/README.md",
+ "title": "Playbooks",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Index of the rank playbooks; states plainly that only the administrator can open them.",
+ "serves": [
+  "visibility:administrator",
+  "operate:overview"
+ ],
+ "length_class": "short",
+ "words_en": 95,
+ "links_to": [
+  "playbooks/technician.md",
+  "playbooks/advisor.md",
+  "playbooks/lead-and-office.md",
+  "playbooks/manager.md",
+  "playbooks/owner.md",
+  "shop-floor/README.md",
+  "how-to/README.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Five playbooks: technician (worker rank), advisor (junior), lead and office (middle), manager (senior), owner (administrator).",
+  "The folder is pinned at administrator by the product's import; staff-facing copies of what matters live in shop-floor/ and how-to/."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Playbooks",
+   "item": "Technicians"
+  },
+  {
+   "section": "Playbooks",
+   "item": "Service advisors"
+  },
+  {
+   "section": "Playbooks",
+   "item": "Lead advisors and the office"
+  },
+  {
+   "section": "Playbooks",
+   "item": "Managers"
+  },
+  {
+   "section": "Playbooks",
+   "item": "Owner and administrator"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@golive+2w|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same playbook for the same rank; examples from the Russian stories and channels. The product pins the playbooks folder at administrator in both configurations."
+ ]
+}

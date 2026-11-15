@@ -1,0 +1,131 @@
+{
+ "path": "management/parts-pricing-matrix.md",
+ "title": "Parts pricing matrix",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: the margins parts are priced at, by tier and kind.",
+ "serves": [
+  "visibility:senior",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 281,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Margins on list price: parts economy 60 %, standard 56 %, premium 48 %; fluids 58 %; batteries 40 %; tyres 22 % (catalogue configurations.en.parts_margin). Formula list = cost / (1 - margin).",
+  "Worked example from catalogue costs of the front pad set (economy, standard, premium cost and list).",
+  "Transmission rebuild sublet: cost 2,600.00, price 3,400.00 (catalogue).",
+  "Slot 9 applies the matrix; advisors do not reprice; parts follow cost and did not move at the rise: part, fluid, fee and sublet prices are today's from go-live on (ledger price.parts_drift_year).",
+  "Company-rate accounts get 10 % off list.",
+  "Tier-weighted parts margin about 51 % (catalogue.md: 51.1 %); the 48 % alarm line is designed.",
+  "Seen from senior rank."
+ ],
+ "tables": [
+  {
+   "section": "Parts pricing matrix",
+   "columns": [
+    "Kind",
+    "Margin"
+   ],
+   "rows": [
+    {
+     "Kind": "Parts, economy tier",
+     "Margin": "60 %"
+    },
+    {
+     "Kind": "Parts, standard tier",
+     "Margin": "56 %"
+    },
+    {
+     "Kind": "Parts, premium tier",
+     "Margin": "48 %"
+    },
+    {
+     "Kind": "Fluids",
+     "Margin": "58 %"
+    },
+    {
+     "Kind": "Batteries",
+     "Margin": "40 %"
+    },
+    {
+     "Kind": "Tires",
+     "Margin": "22 %"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Parts pricing matrix",
+   "item": "Marcus applies the matrix when a part is added to the catalogue. Advisors do not reprice parts."
+  },
+  {
+   "section": "Parts pricing matrix",
+   "item": "When a supplier's cost moves, the list price moves with it at the next catalogue update, not with the labour rate. That is why parts did not change on {{@price_rise|date}} and labour did: part prices are the ones we went live with on {{@golive|date}}."
+  },
+  {
+   "section": "Parts pricing matrix",
+   "item": "Company-rate accounts get 10 % off the list price, which leaves us about half the margin on a standard part. That is the price of their volume."
+  },
+  {
+   "section": "Parts pricing matrix",
+   "item": "The whole business should come out near 51 % on parts. If a month is under 48 %, look for hand-typed parts and for economy sold where standard was quoted."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise|date}}",
+  "{{@golive|date}}"
+ ],
+ "new_facts": [
+  "Alarm at a monthly parts margin under 48 %."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "the two sentences on the price rise added to the line on supplier costs (parts did not change that day; part prices are those of go-live) and the review date moved; message: \"Why parts did not move today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian shop prices by markup on cost: 50 / 40 / 30 % by tier, tyres 15 %, batteries 25 %; weighted margin 30.2 % (catalogue.md)."
+ ]
+}

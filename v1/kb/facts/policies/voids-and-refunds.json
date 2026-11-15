@@ -1,0 +1,89 @@
+{
+ "path": "policies/voids-and-refunds.md",
+ "title": "Voids and refunds",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The rule on voiding orders and giving money back; written with the discount rule after S2.",
+ "serves": [
+  "S2",
+  "S15",
+  "operate:find-what-changed"
+ ],
+ "length_class": "short",
+ "words_en": 201,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Unpaid orders may be voided by their advisor with a reason; paid orders only by the shop manager after slot 3 has traced the payment.",
+  "Voids keep their lines and totals (design 2.4; ERP mess kind 9).",
+  "Refunds return by the original method; cash refunds are counted out by the shop manager and logged; a refund is a refund entry, not a void plus a new order (ERP payment: refund).",
+  "Slot 3 reads the void list weekly against the till.",
+  "Created the same day as the discount rule."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Voids",
+   "item": "An order with no payment on it may be voided by the advisor who opened it, with a reason: wrong customer, duplicate, opened by mistake."
+  },
+  {
+   "section": "Voids",
+   "item": "An order with a payment on it is never voided at the counter. If it is wrong, the shop manager voids it, with a reason, after Donna has seen where the money went."
+  },
+  {
+   "section": "Voids",
+   "item": "A voided order keeps its lines and its totals in the system. Voiding does not make it disappear, and it is not meant to."
+  },
+  {
+   "section": "Refunds",
+   "item": "Back the way the money came. Card to the same card. Cash to cash."
+  },
+  {
+   "section": "Refunds",
+   "item": "A cash refund of any size is counted out by the shop manager, not the advisor, and written in the till log."
+  },
+  {
+   "section": "Refunds",
+   "item": "A refund is entered as a refund against the order. It is never done by voiding the order and writing a new one."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}"
+ ],
+ "new_facts": [
+  "The void and refund rules. Reason: the story names voids after payment as the second leak; a written rule lets \"does anyone break it today\" be asked of voids too. No violation after the rule is planted."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian equivalent: сторнирование and возврат through the cash register with a return receipt (чек возврата, 54-ФЗ). The Russian leak is work past the order, so add: every job has an order before the car is touched."
+ ]
+}

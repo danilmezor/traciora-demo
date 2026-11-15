@@ -1,0 +1,775 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-27-regular-asks-for-her",
+  "configuration": "ru",
+  "number": 27,
+  "story": "S5",
+  "title": "A regular who asks for her by name books his daughter's car",
+  "purpose": "Story S5, call 27. A long-standing customer is glad to find Svetlana in: last time he rang she was off. He wants his daughter's car serviced. She remembers his own car and the last job on it, asks the mileage and the last oil change, prices the service, offers two times on her own shifts, books, and gives the summary with the address for the daughter.",
+  "cast": {
+    "advisor": {
+      "slot": 16,
+      "name": "Светлана Юрьевна Демидова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Николай Иванович Пчелинцев",
+      "invented": true,
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Анастасия",
+        "role": "his daughter, who will bring the car",
+        "invented": true
+      }
+    ]
+  },
+  "call": {
+    "day": "slot 16's first working day on or after the Monday of week T-3 (rule R6; call 27)",
+    "nominal_offset": "T-25d",
+    "nominal_date": "2026-10-19",
+    "local_start": "12:10",
+    "site": "east",
+    "direction": "inbound",
+    "line": "200",
+    "answered_by": "201",
+    "ring_s": 3,
+    "caller_phone": "+7 907 552-45-96",
+    "repeat_caller": false,
+    "talk_s": 155
+  },
+  "scenario": {
+    "who_calls": "Николай Иванович Пчелинцев, a regular of the Novy Gorod shop who drives an УАЗ Патриот.",
+    "vehicle": "his daughter's Lada Granta, 2020, 45,000 km, new to the shop",
+    "job": "scheduled maintenance: engine oil and filter, air filter, cabin filter; the brake fluid tested on the spot",
+    "wants": "to send his daughter in with the car, and to know what it will cost",
+    "what_happens": "She greets him by name and asks after his own car, asks the mileage and the last oil change, names the work, prices it line by line with the total and what could add to it, offers Thursday at ten or Friday at nine, books Thursday, asks who the bill goes to and gives the summary for the daughter with the address.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "oil_service_rub": 6700,
+      "engine_air_filter_rub": 1530,
+      "cabin_air_filter_rub": 1660,
+      "total_rub": 9890,
+      "brake_fluid_exchange_rub": 2480,
+      "offered": [
+        "call+3d 10:00",
+        "call+4d 09:00"
+      ],
+      "booked": "call+3d 10:00",
+      "note": "catalogue.json, class car, standard parts: oil_service 6 700, engine_air_filter 1 530, cabin_air_filter 1 660; brake_fluid_exchange 2 480 only if the tester says so. She is off on the two days after the call; the Thursday and the Friday are her shifts.",
+      "prices": [
+        {
+          "job": "oil_service",
+          "name": "Замена масла в двигателе и масляного фильтра",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 6700.0,
+          "labour_hour_rub": 1900,
+          "said": "шесть семьсот",
+          "said_rub": 6700
+        },
+        {
+          "job": "engine_air_filter",
+          "name": "Замена воздушного фильтра двигателя",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 1530.0,
+          "labour_hour_rub": 1900,
+          "said": "тысяча пятьсот тридцать",
+          "said_rub": 1530
+        },
+        {
+          "job": "cabin_air_filter",
+          "name": "Замена салонного фильтра",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 1660.0,
+          "labour_hour_rub": 1900,
+          "said": "тысяча шестьсот шестьдесят",
+          "said_rub": 1660
+        },
+        {
+          "job": "brake_fluid_exchange",
+          "name": "Замена тормозной жидкости с прокачкой системы",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 2480.0,
+          "labour_hour_rub": 1900,
+          "said": "две четыреста восемьдесят",
+          "said_rub": 2480
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "в четверг",
+      "day": "call+3d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "четверг",
+      "day": "call+3d",
+      "form": "nominative"
+    },
+    {
+      "word": "в пятницу",
+      "day": "call+4d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "до четверга",
+      "day": "call+3d",
+      "form": "до + genitive"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис на Инженерном, Светлана, здравствуйте."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.0,
+      "said": "Светочка, здравствуйте! Это Пчелинцев. Хорошо, что вы сегодня, а то я в прошлый раз звонил — вас не было."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 14.1,
+      "said": "Николай Иванович, здравствуйте! Рада слышать. Как ваш Патриот, бегает после ступицы?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 21.1,
+      "said": "Бегает, тьфу-тьфу. Я не про него. У дочки Гранта, двадцатого года, ей ТО пора, а она в этом не понимает ничего. Хочу к вам её отправить."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 33.9,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 35.9,
+      "said": "Правильно, отправляйте. А пробег у неё какой, Николай Иванович, и когда масло последний раз меняли?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 44.7,
+      "said": "Э-э... сорок пять тысяч. Меняли год назад, на тридцати, у дилера ещё."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 51.9,
+      "said": "Значит, по регламенту: масло с фильтром, воздушный и салонный. Я бы на её месте ещё тормозную жидкость проверила, машине шестой год. Но это на месте, по тестеру, бесплатно."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 65.7,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 67.6,
+      "said": "Проверьте, проверьте. А во что это встанет?"
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 72.7,
+      "said": "Масло с фильтром — шесть семьсот, воздушный — тысяча пятьсот тридцать, салонный — тысяча шестьсот шестьдесят, всего девять восемьсот девяносто, уже с маслом и фильтрами. Если жидкость под замену — плюс две четыреста восемьдесят, но это только если тестер покажет, и я вам сначала позвоню. По времени: могу в четверг в десять или в пятницу в девять, обе смены мои, приму сама."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 102.3,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 104.2,
+      "said": "Давайте в четверг, она с утра свободна."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 108.7,
+      "said": "Записала: четверг, десять утра, Гранта, принимаю сама. Дочку как зовут?"
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 114.7,
+      "said": "Настя. Анастасия."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 116.4,
+      "said": "Анастасия. Счёт на вас или на неё?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 120.6,
+      "said": "На меня пишите, я оплачу. Она только машину привезёт."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 126.5,
+      "said": "Хорошо. Тогда ей передайте: четверг, десять утра, Десятый Инженерный проезд, тридцать. ТО — масло и фильтры, девять восемьсот девяносто, часа полтора, может подождать у нас. А вам, Николай Иванович, я позвоню, если по жидкости что-то будет."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 145.8,
+      "said": "Спасибо, Светочка. Вот за это вас и люблю."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 151.4,
+      "said": "Спасибо, Николай Иванович. До четверга!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.76,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the first consonant of the surname lost",
+        "script_turn": 2,
+        "said": "Пчелинцев",
+        "stored": "Челинцев",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          11,
+          11,
+          11
+        ],
+        "said": [
+          "в пятницу в девять",
+          "шесть семьсот",
+          "две четыреста восемьдесят"
+        ],
+        "stored": [
+          "в пятницу в 9",
+          "6700",
+          "2480"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: words gone without a trace",
+        "script_turn": 4,
+        "said": "а она в этом не понимает ничего",
+        "stored": "а она в этом не понимает",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "a number split in two by the recogniser",
+        "script_turns": [
+          7,
+          11
+        ],
+        "said": [
+          "Сорок пять тысяч",
+          "девять восемьсот девяносто"
+        ],
+        "stored": [
+          "40 5000",
+          "9800 90"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          9
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          12
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          7,
+          11,
+          14,
+          18
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          2,
+          3,
+          7,
+          8,
+          19,
+          20
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 3,
+        "lost": 1,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 2
+      },
+      "names": {
+        "mentions": 4,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 10,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 14,
+        "as_digits": 12,
+        "wrong": 2
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 266,
+    "stored_words": 251,
+    "strict_word_difference": 0.124
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 272,
+    "duration_s": 155.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис на Инженерном, Светлана, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Светочка, здравствуйте. Это Челинцев. Хорошо, что вы сегодня, а то я в прошлый раз звонил, вас не было.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Николай Иванович, здравствуйте. Рада слышать. Как ваш Патриот, бегает после ступицы?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Бегает, тьфу-тьфу. Я не про него. У дочки Гранта, двадцатого года, ей ТО пора, а она в этом не понимает. Хочу к вам её отправить.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Правильно, отправляйте. А пробег у неё какой, Николай Иванович, и когда масло последний раз меняли?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "40 5000. Меняли год назад, на тридцати, у дилера ещё.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "По регламенту: масло с фильтром, воздушный и салонный. Я бы на её месте ещё тормозную жидкость проверила, машине шестой год. Но это на месте, по тестеру, бесплатно.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Проверьте, проверьте. А во что это встанет?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Масло с фильтром — 6700, воздушный — 1530, салонный — 1660, всего 9800 90, уже с маслом и фильтрами. Если жидкость под замену, плюс 2480, но это только если тестер покажет, и я вам сначала позвоню. По времени: могу в четверг в 10 или в пятницу в 9, обе смены мои, приму сама.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так. Давайте в четверг, она с утра свободна.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Записала: четверг, 10 утра, Гранта, принимаю сама. Дочку как зовут?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Настя. Анастасия.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Анастасия. Счёт на вас или на неё?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На меня пишите, я оплачу. Она только машину привезёт.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Тогда ей передайте: четверг, 10 утра, Десятый Инженерный проезд, 30. ТО, масло и фильтры, 9890, часа полтора, может подождать у нас. А вам, Николай Иванович, я позвоню, если по жидкости что-то будет.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, Светочка. За это вас и люблю.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, Николай Иванович. До четверга.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис на Инженерном, Светлана, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А пробег у неё какой, Николай Иванович, и когда масло последний раз меняли?",
+        "level": 2,
+        "segment": 5
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Масло с фильтром — 6700, воздушный — 1530, салонный — 1660, всего 9800 90, уже с маслом и фильтрами. Если жидкость под замену, плюс 2480, но это только если тестер покажет, и я вам сначала позвоню. По времени: могу в четверг в 10 или в пятницу в 9, обе смены мои, приму сама.",
+        "level": 2,
+        "segment": 9
+      },
+      {
+        "key": "offered_time",
+        "quote": "По времени: могу в четверг в 10 или в пятницу в 9, обе смены мои, приму сама.",
+        "level": 2,
+        "segment": 9
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записала: четверг, 10 утра, Гранта, принимаю сама.",
+        "level": 2,
+        "segment": 11
+      },
+      {
+        "key": "recap",
+        "quote": "Тогда ей передайте: четверг, 10 утра, Десятый Инженерный проезд, 30. ТО, масло и фильтры, 9890, часа полтора, может подождать у нас.",
+        "level": 2,
+        "segment": 15
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер обращается к нему по имени и отчеству и помнит прошлый ремонт."
+      },
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Как ваш Патриот, бегает после ступицы?",
+      "why": "Узнала по фамилии, назвала его машину и прошлую работу. Он пришёл именно за этим: чтобы дочку приняли «свои».",
+      "segment": 2
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "Тогда ей передайте: четверг, 10 утра, Десятый Инженерный проезд, 30. ТО, масло и фильтры, 9890, часа полтора, может подождать у нас.",
+      "say": "И давайте я сразу запишу Анастасии номер для связи: если она задержится или я освобожусь раньше, наберу её, а не вас."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 100.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "200",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 5
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 9
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 9
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 11
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 15
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 100.0,
+      "applicable": 6,
+      "asr_quality": "ok",
+      "strength_segment": 2,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис на Инженерном, Светлана, здравствуйте",
+        "need_discovery": "А пробег у неё какой, Николай Иванович, и когда масло последний раз меняли?",
+        "price_with_next_step": "Масло с фильтром — 6700, воздушный — 1530, салонный — 1660, всего 9800 90, уже с маслом и фильтрами. Если жидкость под замену, плюс 2480, но это только если тестер покажет, и я вам сначала позвоню. По времени: могу в четверг в 10 или в пятницу в 9, обе смены мои, приму сама",
+        "offered_time": "По времени: могу в четверг в 10 или в пятницу в 9, обе смены мои, приму сама",
+        "asked_for_booking": "Записала: четверг, 10 утра, Гранта, принимаю сама",
+        "recap": "Тогда ей передайте: четверг, 10 утра, Десятый Инженерный проезд, 30. ТО, масло и фильтры, 9890, часа полтора, может подождать у нас"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер обращается к нему по имени и отчеству и помнит прошлый ремонт.",
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Как ваш Патриот, бегает после ступицы?",
+        "why": "Узнала по фамилии, назвала его машину и прошлую работу. Он пришёл именно за этим: чтобы дочку приняли «свои»."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "Тогда ей передайте: четверг, 10 утра, Десятый Инженерный проезд, 30. ТО, масло и фильтры, 9890, часа полтора, может подождать у нас.",
+        "say": "И давайте я сразу запишу Анастасии номер для связи: если она задержится или я освобожусь раньше, наберу её, а не вас."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 100.0
+  },
+  "why": {
+    "greeting": "2: компания, площадка и имя в первой фразе.",
+    "name_and_number": "Не применяется: постоянный клиент.",
+    "need_discovery": "2: машина, работа и обстоятельства, о которых спросила: пробег и когда меняли масло.",
+    "price_with_next_step": "2: цены по строкам и итог, что может добавиться и при каком условии, и в той же реплике два времени.",
+    "offered_time": "2: два конкретных варианта, оба на её смены.",
+    "asked_for_booking": "2: день, час, машина и кто принимает.",
+    "recap": "2: время, адрес, работа, сумма и длительность; адрес сказан для дочери, которая приедет впервые.",
+    "objection": "Не применяется.",
+    "s5": "Первая реплика клиента и есть история S5: «в прошлый раз звонил, вас не было». Сюда он позвонил снова и записался; на звонке 28 такая же клиентка в её выходной не записалась.",
+    "score": "(1·2 + 2·2 + 2·2 + 3·2 + 3·2 + 1·2) / 2 = 12 из 12 весовых баллов = 100.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Постоянный клиент восточного сервиса Николай Иванович Пчелинцев (УАЗ Патриот; последняя работа по нему: ступица), телефон +7 907 552-45-96.",
+    "Наряд на Lada Granta 2020 его дочери Анастасии в четверг после звонка, 10:00: замена масла и фильтров, 9 890; плательщик Пчелинцев."
+  ]
+}

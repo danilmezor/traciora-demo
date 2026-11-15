@@ -1,0 +1,171 @@
+{
+ "path": "services/engine/cooling-system-repairs.md",
+ "title": "Cooling system repairs",
+ "first_revision_text": "en/_history/services/engine/cooling-system-repairs.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Overheating and leaks: pressure test, water pump, thermostat, radiator.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_en": 262,
+ "links_to": [
+  "customers/towing.md",
+  "services/engine/timing-belt.md",
+  "services/maintenance/coolant-service.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs cooling_pressure_test (0.5 h), thermostat (1.3 h, 1 gal), water_pump (2.6 h, 1 gal), radiator (2.2 h, 2 gal), standard totals.",
+  "Red gauge: stop driving; tow offered.",
+  "On belt-driven pumps the job is the timing belt job.",
+  "Coolant is included in each price.",
+  "Head gaskets are not on the price list (planted: no price in the base)."
+ ],
+ "tables": [
+  {
+   "section": "Then",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Standard",
+    "Coolant included"
+   ],
+   "rows": [
+    {
+     "On the order": "Replace thermostat & gasket",
+     "Hours": "1.3",
+     "Standard": "$236.32",
+     "Coolant included": "1 gallon"
+    },
+    {
+     "On the order": "Replace water pump",
+     "Hours": "2.6",
+     "Standard": "$507.27",
+     "Coolant included": "1 gallon"
+    },
+    {
+     "On the order": "Replace radiator",
+     "Hours": "2.2",
+     "Standard": "$609.55",
+     "Coolant included": "2 gallons"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Then",
+   "item": "Thermostat: heater blows cold, or the gauge climbs and falls. Cheap, and often the answer."
+  },
+  {
+   "section": "Then",
+   "item": "Water pump: a drip at the front of the engine, a growl, coolant smell. On an engine with a timing belt the pump is behind the belt, and then the job is the timing belt job, not this one."
+  },
+  {
+   "section": "Then",
+   "item": "Radiator: green or pink crust on the plastic tanks, wet at the seams."
+  },
+  {
+   "section": "Then",
+   "item": "Each price includes the coolant it needs. Do not add a coolant service on top."
+  },
+  {
+   "section": "Then",
+   "item": "If it overheated badly, say before the repair that there may be more: a head gasket shows up only after the leak is fixed and the system holds pressure. Head gaskets are not a job we price from a list."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "cooling_pressure_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 67.5
+  },
+  {
+   "catalogue_key": "thermostat",
+   "what": "hours",
+   "class": "car",
+   "value": 1.3
+  },
+  {
+   "catalogue_key": "thermostat",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 236.32
+  },
+  {
+   "catalogue_key": "water_pump",
+   "what": "hours",
+   "class": "car",
+   "value": 2.6
+  },
+  {
+   "catalogue_key": "water_pump",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 507.27
+  },
+  {
+   "catalogue_key": "radiator",
+   "what": "hours",
+   "class": "car",
+   "value": 2.2
+  },
+  {
+   "catalogue_key": "radiator",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 609.55
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена помпы», «термостата», «радиатора»; «опрессовка системы охлаждения»."
+ ]
+}

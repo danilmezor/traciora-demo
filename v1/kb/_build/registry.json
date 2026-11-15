@@ -1,0 +1,3219 @@
+{
+ "README.md": {
+  "title": "Brennan Auto Care knowledge base",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Front page for staff: what each folder holds, who owns it, and the two house rules (prices, corrections).",
+  "serves": [
+   "S12",
+   "operate:overview"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/README.md",
+   "services/README.md",
+   "prices/price-list.md",
+   "policies/README.md",
+   "accounts/company-account-terms.md",
+   "how-to/README.md",
+   "parts/suppliers.md",
+   "shops/README.md",
+   "team/who-is-who.md",
+   "shop-floor/README.md",
+   "how-to/using-this-knowledge-base.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "customers/README.md": {
+  "title": "Customer answers",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Index of the public pages; the README the website assistant gets from kb_overview.",
+  "serves": [
+   "S7",
+   "S13",
+   "visibility:public"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md",
+   "customers/what-we-do.md",
+   "customers/prices-for-common-services.md",
+   "customers/estimates-and-approvals.md",
+   "customers/warranty.md",
+   "customers/dropping-off-and-picking-up.md",
+   "customers/payment.md",
+   "customers/towing.md",
+   "customers/bringing-your-own-parts.md",
+   "customers/if-something-is-not-right.md",
+   "customers/brake-noise.md",
+   "customers/check-engine-light.md",
+   "customers/air-conditioning.md",
+   "customers/battery.md",
+   "customers/tires.md",
+   "customers/maintenance-by-mileage.md",
+   "customers/pre-purchase-inspection.md",
+   "customers/hybrids-and-electric-cars.md",
+   "customers/company-vehicles.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "customers/hours-and-locations.md": {
+  "title": "Hours and locations",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "The public truth about addresses, phones, hours, holidays and the stocktake afternoon.",
+  "serves": [
+   "S13",
+   "S9",
+   "S7",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/dropping-off-and-picking-up.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "customers/what-we-do.md": {
+  "title": "What we work on, and what we don't",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Scope of work for the public: services offered, and the work we send out or decline.",
+  "serves": [
+   "S7",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hybrids-and-electric-cars.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/prices-for-common-services.md": {
+  "title": "Prices for common services",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Menu prices a customer may be told without seeing the car; public version of the price list.",
+  "serves": [
+   "S7",
+   "S8",
+   "S12",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/estimates-and-approvals.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "customers/brake-noise.md": {
+  "title": "Brake noise",
+  "visibility": "public",
+  "voice_of_slot": "6",
+  "purpose": "What a customer with a brake noise is told, what the inspection costs and what a typical repair costs. The page the assistant answers S7 from.",
+  "serves": [
+   "S7",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/prices-for-common-services.md",
+   "customers/warranty.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "customers/check-engine-light.md": {
+  "title": "Check engine light",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public advice on a check engine light and what the diagnosis costs.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/towing.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "customers/air-conditioning.md": {
+  "title": "Air conditioning not cold",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public page for the summer season: what the A/C check is, what a recharge costs for each refrigerant.",
+  "serves": [
+   "S11",
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/maintenance-by-mileage.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/battery.md": {
+  "title": "Battery and starting trouble",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Public page: free battery test, replacement price range, the cold-weeks rush.",
+  "serves": [
+   "S11",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "customers/tires.md": {
+  "title": "Tires, flats and alignment",
+  "visibility": "public",
+  "voice_of_slot": "15",
+  "purpose": "Public page for tire questions with menu prices.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:fact-only-in-attachment"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/maintenance-by-mileage.md": {
+  "title": "Maintenance by mileage",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public explanation of oil service, filters and the 30/60/90K service.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/pre-purchase-inspection.md": {
+  "title": "Buying a used car: pre-purchase inspection",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public description of the pre-purchase inspection.",
+  "serves": [
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "customers/hybrids-and-electric-cars.md": {
+  "title": "Hybrids and electric cars",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "The stated limit of what the shops do on hybrids and EVs.",
+  "serves": [
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/company-vehicles.md": {
+  "title": "Company vehicles",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Public pointer for businesses; the terms themselves are staff-only.",
+  "serves": [
+   "S1",
+   "visibility:public"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/estimates-and-approvals.md": {
+  "title": "Estimates and approvals",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Public promise on estimates: written, per job, nothing without approval.",
+  "serves": [
+   "S7",
+   "challenge:combine-policy-and-price",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/prices-for-common-services.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "customers/warranty.md": {
+  "title": "Our warranty",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Public summary of the 24/24 warranty; the staff page has the full terms.",
+  "serves": [
+   "S12",
+   "S1",
+   "challenge:combine-policy-and-price",
+   "challenge:kb-does-not-say",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/bringing-your-own-parts.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "customers/dropping-off-and-picking-up.md": {
+  "title": "Dropping off, waiting, shuttle and pick-up",
+  "visibility": "public",
+  "voice_of_slot": "6",
+  "purpose": "Public logistics: key drop, waiting room, shuttle, after-hours pick-up.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "customers/payment.md": {
+  "title": "Paying your bill",
+  "visibility": "public",
+  "voice_of_slot": "3",
+  "purpose": "Public payment terms: methods, when due, deposits, tax.",
+  "serves": [
+   "S2",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/company-vehicles.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "customers/towing.md": {
+  "title": "Towing",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "Public towing arrangement for the Chattanooga shops; Nashville is deliberately thin.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/bringing-your-own-parts.md": {
+  "title": "Bringing your own parts",
+  "visibility": "public",
+  "voice_of_slot": "1",
+  "purpose": "Public version of the customer-supplied parts policy, in the founder's words.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/warranty.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "customers/if-something-is-not-right.md": {
+  "title": "If something isn't right",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "Public complaints route.",
+  "serves": [
+   "S8",
+   "S1"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shop-floor/README.md": {
+  "title": "Shop floor",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "Index for technicians; what a worker-rank person can read.",
+  "serves": [
+   "visibility:worker",
+   "challenge:kb-does-not-say",
+   "S14"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shop-floor/clocking-in-and-out.md",
+   "shop-floor/shift-changes-and-time-off.md",
+   "shop-floor/courtesy-inspection.md",
+   "shop-floor/before-a-car-leaves.md",
+   "shop-floor/when-a-car-comes-back.md",
+   "shop-floor/safety.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shop-floor/clocking-in-and-out.md": {
+  "title": "Clocking in and out",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "How technicians punch, the location check, what to do after a forgotten clock-out.",
+  "serves": [
+   "S14",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "shop-floor/shift-changes-and-time-off.md": {
+  "title": "Shift changes and time off",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "How a technician asks for a shift change or a day off; what the planner needs.",
+  "serves": [
+   "S14",
+   "S5",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shop-floor/courtesy-inspection.md": {
+  "title": "The courtesy inspection",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "Step one of the inspection-to-approval procedure: what the technician checks and records.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S7",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/writing-an-estimate.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shop-floor/before-a-car-leaves.md": {
+  "title": "Before a car leaves your bay",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "The foreman's final checks.",
+  "serves": [
+   "S6",
+   "S14",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "shop-floor/when-a-car-comes-back.md": {
+  "title": "When a car comes back",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "What a technician does with a comeback.",
+  "serves": [
+   "S6",
+   "S1",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shop-floor/safety.md": {
+  "title": "Safety",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "Short safety rules, including who may touch hybrids and refrigerant.",
+  "serves": [
+   "visibility:worker",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "prices/price-list.md": {
+  "title": "Price list",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "The current price of every catalogue job; the single page a price is quoted from. Long: over the read limit, so it is read by section.",
+  "serves": [
+   "S8",
+   "S12",
+   "S7",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:long-page-by-section",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "long",
+  "links_to": [
+   "prices/labour-rates-and-fees.md",
+   "prices/counter-price-sheet.pdf"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 3
+ },
+ "prices/labour-rates-and-fees.md": {
+  "title": "Labour rates, fees and vehicle classes",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The posted and company-account hour, shop supplies, tax, tire fees, and how a price is scaled for bigger vehicles.",
+  "serves": [
+   "S12",
+   "S1",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "prices/how-prices-change.md": {
+  "title": "How prices change",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The rule written after S8: who changes a price, which page changes first, and what happens to service pages and open estimates.",
+  "serves": [
+   "S12",
+   "S8",
+   "operate:find-what-changed",
+   "operate:contradiction"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "prices/price-list.md",
+   "prices/labour-rates-and-fees.md",
+   "customers/prices-for-common-services.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "policies/README.md": {
+  "title": "Policies",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Index of the policy pages.",
+  "serves": [
+   "operate:overview",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/discounts.md",
+   "policies/warranty.md",
+   "policies/estimates-and-approvals.md",
+   "policies/diagnostic-fees.md",
+   "policies/customer-supplied-parts.md",
+   "policies/deposits.md",
+   "policies/cancellations-and-no-shows.md",
+   "policies/storage-of-uncollected-cars.md",
+   "policies/complaints.md",
+   "policies/voids-and-refunds.md",
+   "policies/customer-records.md",
+   "policies/service-standards.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "policies/discounts.md": {
+  "title": "Discount policy",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The discount rule created after story S2.",
+  "serves": [
+   "S2",
+   "S8",
+   "challenge:policy-vs-team-note",
+   "operate:find-what-changed",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "policies/warranty.md": {
+  "title": "Warranty",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The current warranty in full, for staff: terms, exclusions, who decides, how a claim is written up.",
+  "serves": [
+   "S12",
+   "S1",
+   "S6",
+   "challenge:near-duplicate",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/when-a-car-comes-back.md",
+   "how-to/a-comeback-at-the-counter.md",
+   "customers/warranty.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "customers/warranty-policy.md": {
+  "title": "Warranty policy",
+  "visibility": "public",
+  "voice_of_slot": "1",
+  "purpose": "The old warranty page nobody removed: 12/12. Stale on purpose (S12).",
+  "serves": [
+   "S12",
+   "challenge:near-duplicate",
+   "operate:contradiction"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S12: the old warranty page beside the current one",
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "policies/estimates-and-approvals.md": {
+  "title": "Estimates and approvals",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Staff rules for estimates: how fast, what is on them, how approval is recorded, what happens to declined work.",
+  "serves": [
+   "S1",
+   "S7",
+   "S8",
+   "challenge:three-page-procedure",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/estimates-and-approvals.md",
+   "accounts/company-account-terms.md",
+   "how-to/getting-approval.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "policies/diagnostic-fees.md": {
+  "title": "Diagnostic and inspection fees",
+  "visibility": "staff",
+  "voice_of_slot": "1",
+  "purpose": "Why diagnosis is charged and never credited; the founder's hobby-horse.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "policies/customer-supplied-parts.md": {
+  "title": "Customer-supplied parts",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Staff rules for fitting parts the customer brings.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "S15"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/bringing-your-own-parts.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "policies/deposits.md": {
+  "title": "Deposits",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "When a deposit is taken, how much, and what is refunded.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "S15"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/voids-and-refunds.md",
+   "parts/returns-and-cores.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "policies/cancellations-and-no-shows.md": {
+  "title": "Cancellations and no-shows",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What happens when a booked customer does not come.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "policies/storage-of-uncollected-cars.md": {
+  "title": "Cars not collected",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Storage of finished cars: free days, daily charge, the 30-day step. Contradicted on purpose by a team note.",
+  "serves": [
+   "challenge:policy-vs-team-note",
+   "operate:contradiction",
+   "S15"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/getting-approval.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "policies/complaints.md": {
+  "title": "Complaints",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Staff procedure for a complaint: who hears it, who decides, how fast.",
+  "serves": [
+   "S8",
+   "S1",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/discounts.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "policies/voids-and-refunds.md": {
+  "title": "Voids and refunds",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The rule on voiding orders and giving money back; written with the discount rule after S2.",
+  "serves": [
+   "S2",
+   "S15",
+   "operate:find-what-changed"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "policies/customer-records.md": {
+  "title": "Customer records",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "How a customer and a car are entered so that records do not multiply.",
+  "serves": [
+   "S15",
+   "S2",
+   "S7"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "policies/service-standards.md": {
+  "title": "Service standards",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "One table of how fast the company promises to answer, call back, estimate and decide; the yardstick for several stories.",
+  "serves": [
+   "S3",
+   "S1",
+   "S6",
+   "S9",
+   "S12",
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "accounts/company-account-terms.md": {
+  "title": "Company accounts",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The terms every company account is served on: payment days, price class, priority, who may approve work. Story S1's page.",
+  "serves": [
+   "S1",
+   "S4",
+   "S16",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "operate:contradiction",
+   "challenge:policy-vs-team-note"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "accounts/small-business-customers.md",
+   "accounts/a1.md",
+   "accounts/a2.md",
+   "accounts/a3.md",
+   "accounts/a4.md",
+   "accounts/a5.md",
+   "accounts/a6.md",
+   "policies/warranty.md",
+   "accounts/opening-a-company-account.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 4
+ },
+ "accounts/a1.md": {
+  "title": "Nickajack Delivery",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Standing instructions for the anchor account A1.",
+  "serves": [
+   "S1",
+   "S16",
+   "S4",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/maintenance/fleet-pm-service.md",
+   "accounts/company-account-terms.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "accounts/a2.md": {
+  "title": "Millsaps Heating & Plumbing",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Standing instructions for account A2, the happy path.",
+  "serves": [
+   "S1",
+   "S5",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "accounts/a3.md": {
+  "title": "Moccasin Bend Janitorial Services",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Standing instructions for account A3.",
+  "serves": [
+   "S1",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "accounts/a4.md": {
+  "title": "Missionary Ridge Driving School",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Standing instructions for account A4; says seven cars, which is out of date by one.",
+  "serves": [
+   "S1",
+   "challenge:combine-kb-and-data",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "accounts/a5.md": {
+  "title": "Cumberland Bend Electric",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "Account A5 as Charlotte Pike wrote it before the account left: thin, and silent on everything that went wrong.",
+  "serves": [
+   "S1",
+   "challenge:kb-does-not-say",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S1: silent about the account leaving",
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "accounts/a6.md": {
+  "title": "Sourwood Catering Co.",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Account A6 as it stood eight months ago: names a fleet contact and an advisor who have both gone.",
+  "serves": [
+   "S1",
+   "operate:contradiction",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S1: fleet contact and advisor both gone",
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "accounts/small-business-customers.md": {
+  "title": "Small business customers",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Businesses with a few vehicles and no account: how they differ from an account.",
+  "serves": [
+   "S1",
+   "challenge:near-duplicate",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/opening-a-company-account.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "accounts/opening-a-company-account.md": {
+  "title": "Opening a company account",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Who qualifies for an account and the steps to open one.",
+  "serves": [
+   "S1",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/company-account-terms.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "accounts/credit/credit-limits-and-collections.md": {
+  "title": "Credit limits and collections",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "Middle rank and up: each account's credit limit and the steps taken when a statement is overdue.",
+  "serves": [
+   "S1",
+   "S16",
+   "visibility:middle",
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 1
+ },
+ "parts/suppliers.md": {
+  "title": "Suppliers",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "Who we buy from, what each delivers, when to order, and the parts manager's own notes on each.",
+  "serves": [
+   "S6",
+   "challenge:fact-in-table",
+   "challenge:kb-does-not-say",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "parts/brake-pads-we-fit.md",
+   "parts/sublet-work.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "parts/ordering-parts.md": {
+  "title": "Ordering parts for a job",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "How a part gets from the order to the bay, and when an advisor may promise a time.",
+  "serves": [
+   "S8",
+   "S6",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/deposits.md",
+   "parts/suppliers.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "parts/returns-and-cores.md": {
+  "title": "Returns and cores",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "What can go back to a supplier, by when, and how cores work.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "parts/stock-we-keep.md": {
+  "title": "Stock we keep",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "What is on the shelf at the home shops, and how stock is counted.",
+  "serves": [
+   "S13",
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/stocktake-day.md",
+   "parts/fluids-and-capacities.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "parts/parts-tiers-and-brands.md": {
+  "title": "Parts tiers and brands",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "The three tiers and which brand we quote in each, by line.",
+  "serves": [
+   "S6",
+   "challenge:fact-in-table",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "parts/brake-pads-we-fit.md": {
+  "title": "Brake pads we fit",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "The pad lines by tier and the parts manager's warning about the Nashville supplier's house brand (S6).",
+  "serves": [
+   "S6",
+   "S1",
+   "challenge:combine-kb-and-data",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "parts/sublet-work.md": {
+  "title": "Sublet work",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "Work we send out or bring in: transmission rebuilds, glass, towing. How it is ordered and billed.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price",
+   "S6"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "prices/price-list.md",
+   "policies/deposits.md",
+   "services/transmission/transmission-fluid-service.md",
+   "customers/towing.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "parts/fluids-and-capacities.md": {
+  "title": "Fluids and capacities",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "Pointer page: what fluid types we use and where the per-vehicle quantities are (only in the attached sheet).",
+  "serves": [
+   "challenge:fact-only-in-attachment",
+   "challenge:unreadable-binary",
+   "operate:contradiction"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "parts/fleet-fluid-sheet.xlsx",
+   "parts/fleet-fluid-sheet.pdf"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/README.md": {
+  "title": "Our three shops",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The three shops side by side: bays, people, hours, time zone, who runs each.",
+  "serves": [
+   "S9",
+   "S13",
+   "S15",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate-shop-pages",
+   "operate:contradiction"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shops/main/README.md",
+   "shops/east/README.md",
+   "shops/west/README.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/main/README.md": {
+  "title": "East Main",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Front page of the flagship's own pages.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "operate:overview"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shops/main/hours-and-getting-here.md",
+   "shops/main/who-is-who.md",
+   "shops/main/opening-and-closing.md",
+   "shops/main/how-the-day-runs.md",
+   "shops/main/saturdays.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/main/hours-and-getting-here.md": {
+  "title": "East Main: hours and getting here",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "East Main's hours, parking, shuttle and key drop for staff to tell customers.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S13"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/main/who-is-who.md": {
+  "title": "East Main: who is who",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "People at the flagship with what each does and their extension.",
+  "serves": [
+   "challenge:fact-in-table",
+   "S3",
+   "S8",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 3
+ },
+ "shops/main/opening-and-closing.md": {
+  "title": "East Main: opening and closing",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Opening and closing checklist for the flagship: who, till float, where the deposit goes.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S3",
+   "S2"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/missed-calls-and-call-backs.md",
+   "how-to/closing-the-till.md",
+   "shops/main/saturdays.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "shops/main/how-the-day-runs.md": {
+  "title": "East Main: how the day runs",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "The flagship's local habits: the morning rush, lunch cover, diagnostics queue, Thursday.",
+  "serves": [
+   "S3",
+   "S5",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "shops/main/saturdays.md": {
+  "title": "East Main: Saturdays",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What the Saturday morning shift takes and does not take.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "challenge:combine-policy-and-price",
+   "S14"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/east/README.md": {
+  "title": "Bonny Oaks",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Front page of the second home shop's pages.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shops/east/hours-and-getting-here.md",
+   "shops/east/who-is-who.md",
+   "shops/east/opening-and-closing.md",
+   "shops/east/how-the-day-runs.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "shops/east/hours-and-getting-here.md": {
+  "title": "Bonny Oaks: hours and getting here",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Bonny Oaks's hours, parking and key drop; no Saturday.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S13"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/east/who-is-who.md": {
+  "title": "Bonny Oaks: who is who",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "People at Bonny Oaks.",
+  "serves": [
+   "S5",
+   "challenge:near-duplicate-shop-pages",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/east/opening-and-closing.md": {
+  "title": "Bonny Oaks: opening and closing",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Opening and closing at Bonny Oaks: different float and deposit route from East Main.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S2",
+   "S1"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/closing-the-till.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/east/how-the-day-runs.md": {
+  "title": "Bonny Oaks: how the day runs",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "The east shop's habits in its lead advisor's words: the photo before the price, Mondays, cover.",
+  "serves": [
+   "S5",
+   "S4",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/a2.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/west/README.md": {
+  "title": "Charlotte Pike",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "The bought shop's front page as its manager wrote it thirteen months ago: thin and out of date on Saturday hours and on who works the counter.",
+  "serves": [
+   "S13",
+   "S2",
+   "challenge:near-duplicate-shop-pages",
+   "operate:contradiction",
+   "challenge:combine-kb-and-data",
+   "challenge:broken-link",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shops/west/opening-and-closing.md",
+   "shops/west/parts.md",
+   "shops/west/answering-the-phone.md",
+   "shops/west/tow-trucks.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": "S13/S2: Saturday hours and counter staff out of date",
+  "broken_links_on_purpose": [
+   "shops/west/tow-trucks.md"
+  ],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "shops/west/opening-and-closing.md": {
+  "title": "Charlotte Pike: opening and closing",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "Charlotte Pike's short checklist, with the till rule the managing owner changed after S2.",
+  "serves": [
+   "S2",
+   "challenge:near-duplicate-shop-pages",
+   "operate:find-what-changed"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/closing-the-till.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "shops/west/parts.md": {
+  "title": "Charlotte Pike: parts",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "How Nashville orders parts, in its manager's words.",
+  "serves": [
+   "S6",
+   "challenge:near-duplicate-shop-pages",
+   "operate:contradiction",
+   "S15"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "shops/west/answering-the-phone.md": {
+  "title": "Charlotte Pike: answering the phone",
+  "visibility": "staff",
+  "voice_of_slot": "24",
+  "purpose": "The newest Nashville advisor's page on how the phone is answered there; the bright spot in a thin folder.",
+  "serves": [
+   "S3",
+   "S4",
+   "challenge:near-duplicate",
+   "S9"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "how-to/README.md": {
+  "title": "How we do things",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Index of the counter procedures, in the order a job passes through them.",
+  "serves": [
+   "operate:overview",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/taking-a-call.md",
+   "how-to/price-objections.md",
+   "how-to/booking-a-visit.md",
+   "how-to/checking-a-car-in.md",
+   "how-to/company-vehicle-at-the-counter.md",
+   "shop-floor/courtesy-inspection.md",
+   "how-to/writing-an-estimate.md",
+   "how-to/getting-approval.md",
+   "parts/ordering-parts.md",
+   "how-to/handing-a-car-back.md",
+   "how-to/closing-the-till.md",
+   "how-to/a-comeback-at-the-counter.md",
+   "policies/complaints.md",
+   "how-to/missed-calls-and-call-backs.md",
+   "how-to/chats-and-messages.md",
+   "how-to/stocktake-day.md",
+   "how-to/using-this-knowledge-base.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "how-to/taking-a-call.md": {
+  "title": "Taking a call",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "How an advisor handles a first call; teaches exactly what the call scorecard checks, in the best closer's voice.",
+  "serves": [
+   "S4",
+   "S3",
+   "S8",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "parts/ordering-parts.md",
+   "how-to/price-objections.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "how-to/price-objections.md": {
+  "title": "Price objections",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "What to say when a customer doubts the price; the weakest check on most scorecards.",
+  "serves": [
+   "S4",
+   "S2",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/diagnostic-fees.md",
+   "policies/discounts.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "how-to/booking-a-visit.md": {
+  "title": "Booking a visit",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "How a booking is entered so the day works; step 6 is the read-back that the declined team note repeated (S4).",
+  "serves": [
+   "S4",
+   "S7",
+   "S5",
+   "challenge:three-page-procedure",
+   "operate:contradiction"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/customer-records.md",
+   "policies/cancellations-and-no-shows.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "how-to/checking-a-car-in.md": {
+  "title": "Checking a car in",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "The counter's part of receiving a car: walk-round, mileage, the complaint, keys.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S15",
+   "S7"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "how-to/company-vehicle-at-the-counter.md": {
+  "title": "A company vehicle at the counter",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What changes when the car belongs to a company account: unit number, purchase order, who may approve.",
+  "serves": [
+   "S4",
+   "S1",
+   "challenge:combine-policy-and-price",
+   "challenge:policy-vs-team-note"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/company-account-terms.md",
+   "accounts/small-business-customers.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "how-to/writing-an-estimate.md": {
+  "title": "Writing an estimate",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Step two of the inspection-to-approval procedure: turning inspection findings into an estimate.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S8",
+   "S12",
+   "S7"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/courtesy-inspection.md",
+   "prices/price-list.md",
+   "prices/labour-rates-and-fees.md",
+   "how-to/getting-approval.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "how-to/getting-approval.md": {
+  "title": "Getting approval",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Step three of the inspection-to-approval procedure: sending the estimate, chasing it, recording the answer.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S1",
+   "S7",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/writing-an-estimate.md",
+   "how-to/company-vehicle-at-the-counter.md",
+   "parts/ordering-parts.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "how-to/handing-a-car-back.md": {
+  "title": "Handing a car back",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "The pick-up: walking the bill, old parts, deferred work, the next visit.",
+  "serves": [
+   "S7",
+   "S8",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/complaints.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "how-to/closing-the-till.md": {
+  "title": "Closing the till",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "The company procedure for counting the cash drawer at the end of the day.",
+  "serves": [
+   "S2",
+   "challenge:near-duplicate-shop-pages",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "shops/main/opening-and-closing.md",
+   "shops/east/opening-and-closing.md",
+   "shops/west/opening-and-closing.md",
+   "policies/voids-and-refunds.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "how-to/missed-calls-and-call-backs.md": {
+  "title": "Missed calls and call backs",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "How the missed-call list is worked; the standard after the early desk shift.",
+  "serves": [
+   "S3",
+   "S1",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shops/main/how-the-day-runs.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "how-to/chats-and-messages.md": {
+  "title": "Chats and messages",
+  "visibility": "staff",
+  "voice_of_slot": "6",
+  "purpose": "How web chat and messenger conversations are answered alongside the assistant.",
+  "serves": [
+   "S7",
+   "S12",
+   "challenge:combine-kb-and-data",
+   "visibility:public"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/README.md",
+   "prices/price-list.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "how-to/a-comeback-at-the-counter.md": {
+  "title": "A comeback at the counter",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What an advisor does and says when a customer returns with the same problem.",
+  "serves": [
+   "S6",
+   "S1",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/when-a-car-comes-back.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "how-to/stocktake-day.md": {
+  "title": "Stocktake day",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "What happens on the half-yearly stocktake afternoon (S13).",
+  "serves": [
+   "S13",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/hours-and-locations.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "how-to/using-this-knowledge-base.md": {
+  "title": "Using and fixing this knowledge base",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "How to search, how to read a page's date, how a correction is proposed and decided.",
+  "serves": [
+   "S12",
+   "S4",
+   "operate:propose",
+   "operate:find-waiting",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "customers/README.md",
+   "how-to/README.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "team/who-is-who.md": {
+  "title": "Who is who",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The company directory: everyone who works here now, by shop, with role and extension. The page that is right when a shop page is not.",
+  "serves": [
+   "S2",
+   "S14",
+   "challenge:fact-in-table",
+   "operate:contradiction",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 5
+ },
+ "team/meetings.md": {
+  "title": "Meetings",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The standing meetings: the Monday managers' meeting, the morning huddle.",
+  "serves": [
+   "S9",
+   "S16",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "team/new-advisor-first-two-weeks.md": {
+  "title": "New advisor: the first two weeks",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Onboarding checklist for a new service advisor, written when the newcomer started.",
+  "serves": [
+   "S8",
+   "S4",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "how-to/taking-a-call.md",
+   "how-to/booking-a-visit.md",
+   "how-to/checking-a-car-in.md",
+   "policies/discounts.md",
+   "policies/warranty.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "team/new-technician-first-week.md": {
+  "title": "New technician: the first week",
+  "visibility": "staff",
+  "voice_of_slot": "8",
+  "purpose": "What a new technician is shown in the first week.",
+  "serves": [
+   "S14",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "shop-floor/before-a-car-leaves.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "office/month-end-close.md": {
+  "title": "Month-end close",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "The bookkeeper's month-end checklist; the check that caught the missing money.",
+  "serves": [
+   "S2",
+   "S15",
+   "visibility:middle",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "office/statements-and-receivables.md",
+   "office/payroll-hours.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "office/statements-and-receivables.md": {
+  "title": "Statements and receivables",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "How company-account statements are issued and payments applied.",
+  "serves": [
+   "S1",
+   "S16",
+   "S15",
+   "visibility:middle"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/credit/credit-limits-and-collections.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "office/payroll-hours.md": {
+  "title": "Payroll hours",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "How attendance becomes payroll hours.",
+  "serves": [
+   "S14",
+   "visibility:middle",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "office/till-and-deposits.md": {
+  "title": "Till differences and deposits",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "The office side of the cash: the bag log, the bank, the differences book.",
+  "serves": [
+   "S2",
+   "visibility:middle",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "management/what-we-found-at-west.md": {
+  "title": "What we found at Charlotte Pike",
+  "visibility": "senior",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: the managing owner's memo on the discounts, voids and till shortages (S2) and what was changed.",
+  "serves": [
+   "S2",
+   "visibility:senior",
+   "challenge:combine-kb-and-data",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/discounts.md",
+   "policies/voids-and-refunds.md",
+   "shops/west/opening-and-closing.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "management/parts-pricing-matrix.md": {
+  "title": "Parts pricing matrix",
+  "visibility": "senior",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: the margins parts are priced at, by tier and kind.",
+  "serves": [
+   "visibility:senior",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "management/comeback-review.md": {
+  "title": "Comeback review",
+  "visibility": "senior",
+  "voice_of_slot": "4",
+  "purpose": "Senior rank: how comebacks are counted and reviewed each month, and where the review is not happening.",
+  "serves": [
+   "S6",
+   "S14",
+   "visibility:senior",
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "management/schedule-rules.md": {
+  "title": "Schedule rules",
+  "visibility": "senior",
+  "voice_of_slot": "4",
+  "purpose": "Senior rank: the cover each shop needs and the rules the planner follows.",
+  "serves": [
+   "S3",
+   "S5",
+   "S14",
+   "visibility:senior",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 3
+ },
+ "management/pay-and-till.md": {
+  "title": "Pay and till",
+  "visibility": "senior",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: how each job is paid, without amounts, and who sees the till counts. The page a junior is refused (stories S12.5).",
+  "serves": [
+   "visibility:senior",
+   "S12",
+   "S2",
+   "challenge:kb-does-not-say",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/closing-the-till.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "management/owners/west-plan.md": {
+  "title": "Charlotte Pike: the plan",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Administrator only: the managing owner's private plan for the bought shop.",
+  "serves": [
+   "S6",
+   "S9",
+   "visibility:administrator",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "playbooks/README.md": {
+  "title": "Playbooks",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Index of the rank playbooks; states plainly that only the administrator can open them.",
+  "serves": [
+   "visibility:administrator",
+   "operate:overview"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "playbooks/technician.md",
+   "playbooks/advisor.md",
+   "playbooks/lead-and-office.md",
+   "playbooks/manager.md",
+   "playbooks/owner.md",
+   "shop-floor/README.md",
+   "how-to/README.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "playbooks/technician.md": {
+  "title": "Playbook: technicians",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Worker rank: what a technician does in Traciora and what the assistant will and will not answer.",
+  "serves": [
+   "S14",
+   "visibility:administrator"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "playbooks/advisor.md": {
+  "title": "Playbook: service advisors",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Junior rank: what an advisor uses Traciora for, with the call scorecard as the centre.",
+  "serves": [
+   "S4",
+   "S3",
+   "S7",
+   "visibility:administrator"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/taking-a-call.md",
+   "how-to/missed-calls-and-call-backs.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 3
+ },
+ "playbooks/lead-and-office.md": {
+  "title": "Playbook: lead advisors and the office",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Middle rank: what the lead advisors and the office manager can do beyond an advisor.",
+  "serves": [
+   "S12",
+   "operate:propose",
+   "visibility:administrator"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "playbooks/manager.md": {
+  "title": "Playbook: managers",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: planning shifts, deciding notes and page changes, seeing colleagues' phone performance.",
+  "serves": [
+   "S4",
+   "S5",
+   "S12",
+   "S14",
+   "operate:find-waiting",
+   "visibility:administrator"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "playbooks/owner.md": {
+  "title": "Playbook: owner and administrator",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Administrator: the managing owner's own notes on running the product.",
+  "serves": [
+   "S10",
+   "S12",
+   "visibility:administrator",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "team/who-is-who.md",
+   "prices/how-prices-change.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/README.md": {
+  "title": "Services",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Index of the service pages and how to use them on the phone.",
+  "serves": [
+   "S12",
+   "operate:overview",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "prices/price-list.md",
+   "services/maintenance/oil-change.md",
+   "services/maintenance/filters-and-wipers.md",
+   "services/maintenance/spark-plugs.md",
+   "services/maintenance/coolant-service.md",
+   "services/maintenance/scheduled-maintenance.md",
+   "services/maintenance/fuel-system-service.md",
+   "services/maintenance/fleet-pm-service.md",
+   "services/brakes/brake-inspection.md",
+   "services/brakes/pads-and-rotors.md",
+   "services/brakes/calipers-and-drum-brakes.md",
+   "services/brakes/brake-fluid-flush.md",
+   "services/tires/rotation-balance-and-flat-repair.md",
+   "services/tires/alignment.md",
+   "services/tires/new-tires-and-tpms.md",
+   "services/diagnostics/check-engine-light.md",
+   "services/diagnostics/electrical-diagnosis.md",
+   "services/diagnostics/noises-and-vibrations.md",
+   "services/suspension/struts-and-shocks.md",
+   "services/suspension/front-end-parts.md",
+   "services/suspension/wheel-bearings-and-steering-racks.md",
+   "services/ac/ac-check-and-recharge.md",
+   "services/ac/ac-compressor-and-condenser.md",
+   "services/electrical/battery.md",
+   "services/electrical/alternator-and-starter.md",
+   "services/engine/timing-belt.md",
+   "services/engine/drive-belt.md",
+   "services/engine/cooling-system-repairs.md",
+   "services/engine/leaks-and-gaskets.md",
+   "services/engine/ignition-sensors-and-fuel-pump.md",
+   "services/engine/mounts-and-exhaust.md",
+   "services/transmission/transmission-fluid-service.md",
+   "services/transmission/clutch-and-cv-axles.md",
+   "services/transmission/transmission-rebuild.md",
+   "services/inspections/courtesy-inspection.md",
+   "services/inspections/pre-purchase-inspection.md",
+   "services/hybrids.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/maintenance/oil-change.md": {
+  "title": "Oil change",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The most common job: what it includes, the three oils, what to ask, the upsell that is not an upsell.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:customer-terms",
+   "smoke"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/maintenance/filters-and-wipers.md": {
+  "title": "Filters and wipers",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Engine air filter, cabin filter, wiper blades: small jobs sold from the inspection.",
+  "serves": [
+   "challenge:fact-in-table",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/maintenance/fuel-system-service.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/maintenance/spark-plugs.md": {
+  "title": "Spark plugs and the \"tune-up\"",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "What a customer means by a tune-up and what the plug job costs by engine.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:combine-policy-and-price",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/diagnostics/check-engine-light.md",
+   "prices/labour-rates-and-fees.md",
+   "services/engine/ignition-sensors-and-fuel-pump.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/maintenance/coolant-service.md": {
+  "title": "Coolant service",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Coolant drain, flush and fill.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/engine/cooling-system-repairs.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/maintenance/scheduled-maintenance.md": {
+  "title": "Scheduled maintenance: 30K, 60K, 90K",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The mileage service: what the labour covers and what is priced separately.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/maintenance/fuel-system-service.md": {
+  "title": "Fuel system service",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Induction cleaning and the fuel filter: when it helps and when it is snake oil.",
+  "serves": [
+   "challenge:customer-terms",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/diagnostics/check-engine-light.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/maintenance/fleet-pm-service.md": {
+  "title": "Fleet PM service A",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "The preventive-maintenance service for cargo vans; list price and what the company rate does to it.",
+  "serves": [
+   "S1",
+   "S16",
+   "challenge:combine-policy-and-price",
+   "challenge:fact-only-in-attachment"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/company-account-terms.md",
+   "parts/fluids-and-capacities.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/brakes/brake-inspection.md": {
+  "title": "Brake inspection",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The inspection every brake complaint starts with.",
+  "serves": [
+   "S7",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/diagnostic-fees.md",
+   "customers/towing.md",
+   "services/brakes/pads-and-rotors.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/brakes/pads-and-rotors.md": {
+  "title": "Pads and rotors",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The main brake job: pads alone or with rotors, the three parts tiers, what to say.",
+  "serves": [
+   "S7",
+   "S6",
+   "S12",
+   "challenge:fact-in-table",
+   "challenge:customer-terms",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/labour-rates-and-fees.md",
+   "parts/brake-pads-we-fit.md",
+   "how-to/a-comeback-at-the-counter.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/brakes/calipers-and-drum-brakes.md": {
+  "title": "Calipers and drum brakes",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The less common brake jobs: a seized caliper, rear shoes.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "parts/returns-and-cores.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/brakes/brake-fluid-flush.md": {
+  "title": "Brake fluid flush",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Brake fluid exchange: why, when, how it is sold.",
+  "serves": [
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/brakes/brake-questions.md": {
+  "title": "Brake questions",
+  "visibility": "public",
+  "voice_of_slot": "F3",
+  "purpose": "An old FAQ by an advisor who has left: still carries the labour rate and brake prices from before the rise. Stale on purpose (S12).",
+  "serves": [
+   "S12",
+   "S8",
+   "challenge:near-duplicate",
+   "operate:contradiction",
+   "operate:propose"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S12: old labour rate and brake prices",
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "services/tires/rotation-balance-and-flat-repair.md": {
+  "title": "Rotation, balance and flat repair",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The three small tire jobs.",
+  "serves": [
+   "smoke",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/brakes/brake-inspection.md",
+   "services/tires/new-tires-and-tpms.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/tires/alignment.md": {
+  "title": "Alignment",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Four-wheel alignment: when, price by vehicle class, which rack.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/tires/new-tires-and-tpms.md": {
+  "title": "New tires and tire-pressure sensors",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Selling and fitting tires; the fees; TPMS sensors.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/tires/alignment.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/diagnostics/check-engine-light.md": {
+  "title": "Check engine light",
+  "visibility": "public",
+  "voice_of_slot": "10",
+  "purpose": "How a check-engine job is booked and explained, in the diagnostician's exact voice.",
+  "serves": [
+   "S5",
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/diagnostic-fees.md",
+   "services/diagnostics/electrical-diagnosis.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/diagnostics/electrical-diagnosis.md": {
+  "title": "Electrical diagnosis",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Electrical faults without a warning light.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/diagnostics/noises-and-vibrations.md": {
+  "title": "Noises and vibrations",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "How a noise complaint is taken and inspected.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/brakes/brake-inspection.md",
+   "services/suspension/front-end-parts.md",
+   "services/tires/rotation-balance-and-flat-repair.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/suspension/struts-and-shocks.md": {
+  "title": "Struts and shocks",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Front struts and rear shocks: how they are found, sold in pairs, and often deferred.",
+  "serves": [
+   "S7",
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/tires/alignment.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/suspension/front-end-parts.md": {
+  "title": "Front-end parts",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Sway bar links and bushings, control arms, ball joints, tie rods.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/suspension/wheel-bearings-and-steering-racks.md": {
+  "title": "Wheel bearings and steering racks",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Two bigger jobs: the humming bearing and the leaking rack.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/ac/ac-check-and-recharge.md": {
+  "title": "A/C check and recharge",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "The summer job: performance check, the two refrigerants, what a recharge can and cannot fix.",
+  "serves": [
+   "S11",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/ac/ac-compressor-and-condenser.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/ac/ac-compressor-and-condenser.md": {
+  "title": "A/C compressor and condenser",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "The two big A/C repairs.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "S11"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/electrical/battery.md": {
+  "title": "Battery",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Battery test and replacement; the November rush; bulbs.",
+  "serves": [
+   "S11",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/electrical/alternator-and-starter.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/electrical/alternator-and-starter.md": {
+  "title": "Alternator and starter",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Charging and starting repairs.",
+  "serves": [
+   "challenge:customer-terms",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/engine/timing-belt.md": {
+  "title": "Timing belt",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The timing-belt job, as written before the price rise: old labour rate, old total, and a same-day promise. Stale on purpose (S12); a correction is proposed and waiting.",
+  "serves": [
+   "S12",
+   "S8",
+   "operate:propose",
+   "operate:find-waiting",
+   "operate:contradiction",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S12: old labour rate, old total, same-day promise",
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "services/engine/drive-belt.md": {
+  "title": "Drive belt",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The serpentine belt: not the timing belt.",
+  "serves": [
+   "challenge:near-duplicate",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/engine/timing-belt.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/engine/cooling-system-repairs.md": {
+  "title": "Cooling system repairs",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Overheating and leaks: pressure test, water pump, thermostat, radiator.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/towing.md",
+   "services/engine/timing-belt.md",
+   "services/maintenance/coolant-service.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/engine/leaks-and-gaskets.md": {
+  "title": "Leaks and gaskets",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Oil leaks, and the one gasket on the price list.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/engine/ignition-sensors-and-fuel-pump.md": {
+  "title": "Ignition, sensors and fuel pump",
+  "visibility": "public",
+  "voice_of_slot": "10",
+  "purpose": "The repairs that most often follow a check-engine diagnosis.",
+  "serves": [
+   "challenge:fact-in-table",
+   "smoke"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/engine/mounts-and-exhaust.md": {
+  "title": "Mounts and exhaust",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Engine mounts and the rear exhaust; what is not on the list.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/diagnostics/check-engine-light.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "services/transmission/transmission-fluid-service.md": {
+  "title": "Transmission fluid service",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Drain and fill against machine exchange, and gear oil; what customers call a flush.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/transmission/transmission-rebuild.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/transmission/clutch-and-cv-axles.md": {
+  "title": "Clutch and CV axles",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Two driveline repairs.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/transmission/transmission-rebuild.md": {
+  "title": "Transmission rebuild",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The sublet rebuild: what we do, what the specialist does, price, time, deposit, warranty.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/deposits.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/inspections/courtesy-inspection.md": {
+  "title": "Courtesy inspection",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The free inspection from the counter's side: how the result is presented.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S7",
+   "S5"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "shop-floor/courtesy-inspection.md",
+   "how-to/writing-an-estimate.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ },
+ "services/inspections/pre-purchase-inspection.md": {
+  "title": "Pre-purchase inspection",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Staff page for the used-car inspection.",
+  "serves": [
+   "smoke",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/pre-purchase-inspection.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 2
+ },
+ "services/hybrids.md": {
+  "title": "Hybrids",
+  "visibility": "public",
+  "voice_of_slot": "10",
+  "purpose": "What is and is not done on hybrids, for the counter.",
+  "serves": [
+   "S5",
+   "challenge:combine-policy-and-price",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hybrids-and-electric-cars.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "prices/counter-price-sheet.pdf": {
+  "title": "Counter price sheet",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Printed price sheet for the counters: menu services on page 1, prices by vehicle class on page 2.",
+  "serves": [
+   "S12",
+   "challenge:fact-only-in-attachment",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "binary: PDF, 2 pages, text",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "team/staff-handbook.docx": {
+  "title": "Staff handbook",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The employee handbook: attendance, pay periods, time off, holidays, allowances, conduct.",
+  "serves": [
+   "S14",
+   "challenge:fact-only-in-attachment",
+   "visibility:worker",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "binary: DOCX with heading styles, about 9 pages",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 2,
+  "n_rev": 2
+ },
+ "parts/fleet-fluid-sheet.xlsx": {
+  "title": "Fleet fluid sheet (spreadsheet)",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "The parts manager's working sheet of oil, coolant and transmission fluid by vehicle. Not readable by the assistant.",
+  "serves": [
+   "challenge:unreadable-binary",
+   "challenge:fact-only-in-attachment"
+  ],
+  "length_class": "binary: XLSX, one sheet",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 2
+ },
+ "parts/fleet-fluid-sheet.pdf": {
+  "title": "Fleet fluid sheet (printed copy)",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "A one-page print of the fluid sheet: the readable copy.",
+  "serves": [
+   "challenge:fact-only-in-attachment",
+   "challenge:fact-in-table",
+   "S1"
+  ],
+  "length_class": "binary: PDF, 1 page landscape, text",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 1,
+  "n_rev": 1
+ },
+ "team/the-call-in-eight-moves.pptx": {
+  "title": "The call, in eight moves",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "The lead advisor's ten-slide training deck on taking a call.",
+  "serves": [
+   "S4",
+   "challenge:fact-only-in-attachment",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "binary: PPTX, 10 titled slides",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "n_new": 0,
+  "n_rev": 1
+ }
+}

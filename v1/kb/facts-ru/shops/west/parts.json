@@ -1,0 +1,73 @@
+{
+ "path": "shops/west/parts.md",
+ "title": "Техническая: запчасти",
+ "title_en": "Charlotte Pike: parts",
+ "exists_in": "both",
+ "english_sheet": "facts/shops/west/parts.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "22",
+ "purpose": "How Nashville orders parts, in its manager's words.",
+ "serves": [
+  "S6",
+  "challenge:near-duplicate-shop-pages",
+  "operate:contradiction",
+  "S15"
+ ],
+ "length_class": "tiny",
+ "words_ru": 67,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Kazan orders from V2 «Казань-АвтоСнаб»: two deliveries, order by 10:00 and 15:00 (Moscow time); LADA, ГАЗ and УАЗ parts from V3 the next day; tyres from V5 on Tuesday and Friday.",
+  "Says nothing of part numbers, tiers or the house-brand pads."
+ ],
+ "new_facts": [
+  "Order-by times in Kazan: 10:00 and 15:00."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V2",
+   "name": "Казань-АвтоСнаб"
+  },
+  {
+   "vendor": "V3",
+   "name": "Симбирск-Комплект"
+  },
+  {
+   "vendor": "V5",
+   "name": "ШинТорг-Волга"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-12mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

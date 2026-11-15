@@ -1,0 +1,400 @@
+{
+ "_what": "the operations alerts since G",
+ "alerts": [
+  {
+   "id": "AL01",
+   "rule_id": "backup_missing",
+   "subject": "chatwoot",
+   "severity": "critical",
+   "category": "operations",
+   "params": {
+    "database": "chatwoot"
+   },
+   "summary": "No backup of the chatwoot database in the last 36 hours",
+   "opened": "G>+2d@03:40",
+   "status_at_t": "resolved",
+   "closed": "G>+3d@03:20"
+  },
+  {
+   "id": "AL02",
+   "rule_id": "job_failed",
+   "subject": "phonecalls_transcribe",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "job": "phonecalls_transcribe",
+    "error": "TimeoutError"
+   },
+   "summary": "Job phonecalls_transcribe failed (TimeoutError)",
+   "opened": "W-23.tue@02:20",
+   "status_at_t": "resolved",
+   "closed": "W-23.tue@03:20"
+  },
+  {
+   "id": "AL03",
+   "rule_id": "disk_low",
+   "subject": "runtime",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "percent": 9,
+    "free_gb": 21
+   },
+   "summary": "Disk space is low: 9% free (21 GB)",
+   "opened": "W-21.wed@14:10",
+   "status_at_t": "resolved",
+   "closed": "W-21.fri@09:30",
+   "acknowledged": {
+    "by": 2,
+    "at": "W-21.wed@15:00"
+   }
+  },
+  {
+   "id": "AL04",
+   "rule_id": "heartbeat_stale",
+   "subject": "worker-phonecalls",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "component": "worker-phonecalls",
+    "minutes": 12
+   },
+   "summary": "worker-phonecalls has not reported for 12 min",
+   "opened": "W-20.mon@06:12",
+   "status_at_t": "resolved",
+   "closed": "W-20.mon@06:31"
+  },
+  {
+   "id": "AL05",
+   "rule_id": "scheduler_away",
+   "subject": "scheduler",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "last_seen": "06:01"
+   },
+   "summary": "The scheduler is not running (last seen 06:01)",
+   "opened": "W-20.mon@06:13",
+   "status_at_t": "resolved",
+   "closed": "W-20.mon@06:30"
+  },
+  {
+   "id": "AL06",
+   "rule_id": "job_silent",
+   "subject": "metric_rollup",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "job": "metric_rollup",
+    "hours": 27
+   },
+   "summary": "Job metric_rollup has not finished a run for 27 h",
+   "opened": "W-20.tue@07:15",
+   "status_at_t": "resolved",
+   "closed": "W-20.tue@09:40",
+   "acknowledged": {
+    "by": 2,
+    "at": "W-20.tue@09:10"
+   }
+  },
+  {
+   "id": "AL07",
+   "rule_id": "provider_errors",
+   "subject": "provider",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "errors": 14,
+    "calls": 96
+   },
+   "summary": "The model provider refused 14 of 96 calls in 15 min",
+   "opened": "W-18.thu@10:42",
+   "status_at_t": "resolved",
+   "closed": "W-18.thu@11:20"
+  },
+  {
+   "id": "AL08",
+   "rule_id": "tool_slowdown",
+   "subject": "plan_shifts",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "tool": "plan_shifts",
+    "now": "9.4",
+    "usual": "3.8"
+   },
+   "summary": "plan_shifts is slow: p95 9.4 s today, usually 3.8 s",
+   "opened": "W-17.tue@09:00",
+   "status_at_t": "resolved",
+   "closed": "W-17.wed@09:00"
+  },
+  {
+   "id": "AL09",
+   "rule_id": "cards_waiting",
+   "subject": "create_task",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "hours": 5,
+    "tool": "create_task"
+   },
+   "summary": "A card has waited 5 h for an answer (create_task)",
+   "opened": "W-16.wed@15:30",
+   "status_at_t": "resolved",
+   "closed": "W-16.wed@17:05"
+  },
+  {
+   "id": "AL10",
+   "rule_id": "client_error_spike",
+   "subject": "app",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "errors": 9,
+    "rate": "6.4",
+    "usual": "1.2"
+   },
+   "summary": "The app is failing in browsers: 9 errors today, 6.4 per 100 sessions (usually 1.2)",
+   "opened": "W-15.mon@11:00",
+   "status_at_t": "resolved",
+   "closed": "W-15.tue@11:00"
+  },
+  {
+   "id": "AL11",
+   "rule_id": "knowledge_sync_failed",
+   "subject": "ranks",
+   "severity": "warning",
+   "category": "operations",
+   "params": {},
+   "summary": "The knowledge base did not get the ranks",
+   "opened": "W-14.mon@09:20",
+   "status_at_t": "resolved",
+   "closed": "W-14.mon@10:05"
+  },
+  {
+   "id": "AL12",
+   "rule_id": "job_failed",
+   "subject": "memory.dream",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "job": "memory.dream",
+    "error": "ValueError"
+   },
+   "summary": "Job memory.dream failed (ValueError)",
+   "opened": "W-14.thu@03:10",
+   "status_at_t": "resolved",
+   "closed": "W-14.fri@03:08"
+  },
+  {
+   "id": "AL13",
+   "rule_id": "rollup_failed",
+   "subject": "metric_rollup",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "error": "OperationalError"
+   },
+   "summary": "The nightly long-range rollup failed twice running (OperationalError)",
+   "opened": "W-13.wed@04:12",
+   "status_at_t": "resolved",
+   "closed": "W-13.thu@04:11",
+   "acknowledged": {
+    "by": 2,
+    "at": "W-13.wed@08:50"
+   }
+  },
+  {
+   "id": "AL14",
+   "rule_id": "cards_waiting",
+   "subject": "schedule_meeting",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "hours": 6,
+    "tool": "schedule_meeting"
+   },
+   "summary": "A card has waited 6 h for an answer (schedule_meeting)",
+   "opened": "W-11.fri@16:10",
+   "status_at_t": "resolved",
+   "closed": "W-10.mon@08:05"
+  },
+  {
+   "id": "AL15",
+   "rule_id": "provider_errors",
+   "subject": "provider",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "errors": 11,
+    "calls": 80
+   },
+   "summary": "The model provider refused 11 of 80 calls in 15 min",
+   "opened": "W-9.tue@13:05",
+   "status_at_t": "resolved",
+   "closed": "W-9.tue@13:40"
+  },
+  {
+   "id": "AL16",
+   "rule_id": "telemetry_dropping",
+   "subject": "logs",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "count": 340,
+    "exporter": "logs"
+   },
+   "summary": "Telemetry is being dropped: 340 logs items in the last 15 min",
+   "opened": "W-8.wed@22:15",
+   "status_at_t": "resolved",
+   "closed": "W-8.wed@22:45"
+  },
+  {
+   "id": "AL17",
+   "rule_id": "job_failed",
+   "subject": "attachments_sweep",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "job": "attachments_sweep",
+    "error": "OSError"
+   },
+   "summary": "Job attachments_sweep failed (OSError)",
+   "opened": "W-7.sun@04:00",
+   "status_at_t": "resolved",
+   "closed": "W-7.sun@05:00"
+  },
+  {
+   "id": "AL18",
+   "rule_id": "tool_slowdown",
+   "subject": "show_board",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "tool": "show_board",
+    "now": "4.1",
+    "usual": "1.6"
+   },
+   "summary": "show_board is slow: p95 4.1 s today, usually 1.6 s",
+   "opened": "W-6.thu@09:00",
+   "status_at_t": "resolved",
+   "closed": "W-6.fri@09:00"
+  },
+  {
+   "id": "AL19",
+   "rule_id": "disk_low",
+   "subject": "runtime",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "percent": 8,
+    "free_gb": 19
+   },
+   "summary": "Disk space is low: 8% free (19 GB)",
+   "opened": "W-5.tue@08:30",
+   "status_at_t": "resolved",
+   "closed": "W-5.wed@10:00"
+  },
+  {
+   "id": "AL20",
+   "rule_id": "heartbeat_stale",
+   "subject": "worker-scheduler",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "component": "worker-scheduler",
+    "minutes": 9
+   },
+   "summary": "worker-scheduler has not reported for 9 min",
+   "opened": "W-4.sat@02:05",
+   "status_at_t": "dismissed",
+   "closed": "W-4.sat@09:15"
+  },
+  {
+   "id": "AL21",
+   "rule_id": "cards_waiting",
+   "subject": "add_shift",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "hours": 4,
+    "tool": "add_shift"
+   },
+   "summary": "A card has waited 4 h for an answer (add_shift)",
+   "opened": "W-3.thu@19:30",
+   "status_at_t": "resolved",
+   "closed": "W-3.fri@07:40"
+  },
+  {
+   "id": "AL22",
+   "rule_id": "job_failed",
+   "subject": "context_sync",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "job": "context_sync",
+    "error": "OperationalError"
+   },
+   "summary": "Job context_sync failed (OperationalError)",
+   "opened": "W-1.mon@07:56",
+   "status_at_t": "resolved",
+   "closed": "W-1.mon@08:48",
+   "acknowledged": {
+    "by": 2,
+    "at": "W-1.mon@08:18"
+   }
+  },
+  {
+   "id": "AL23",
+   "rule_id": "client_error_spike",
+   "subject": "app",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "errors": 7,
+    "rate": "5.1",
+    "usual": "1.3"
+   },
+   "summary": "The app is failing in browsers: 7 errors today, 5.1 per 100 sessions (usually 1.3)",
+   "opened": "W-1.wed@12:00",
+   "status_at_t": "resolved",
+   "closed": "W-1.thu@12:00"
+  },
+  {
+   "id": "AL24",
+   "rule_id": "provider_errors",
+   "subject": "provider",
+   "severity": "error",
+   "category": "operations",
+   "params": {
+    "errors": 12,
+    "calls": 88
+   },
+   "summary": "The model provider refused 12 of 88 calls in 15 min",
+   "opened": "W0.tue@15:40",
+   "status_at_t": "resolved",
+   "closed": "W0.tue@16:15"
+  },
+  {
+   "id": "AL25",
+   "rule_id": "push_silent_subscriptions",
+   "subject": "phones",
+   "severity": "warning",
+   "category": "operations",
+   "params": {
+    "silent": 1,
+    "accepted": 3
+   },
+   "summary": "Phone notifications are not arriving: 1 of 3 phones never received one",
+   "opened": "W-1.thu@09:05",
+   "status_at_t": "open",
+   "closed": null
+  }
+ ],
+ "notes": {
+  "AL22": "card S10: the shop-system source could not be reached from 8 minutes before to 40 minutes after slot 2's Monday report. No shipped rule says 'a source cannot be reached'; the built-in job context_sync runs 5 minutes before that report (tenant setting TRACIORA_CONTEXT_SYNC_AT), fails, and the rule job_failed opens. Slot 2 acknowledges it; her Run now at 48 minutes past resolves it. An error alert also writes an ops.alert push row for her.",
+  "AL20": "dismissed as a false alarm by slot 2: a planned restart",
+  "AL25": "the one alert open at T, a warning: one of three phones with push on (slot 15's) never acknowledged a message",
+  "times": "wall clock of the home zone; opened is created_at, closed is resolved_at (or the dismissal), last_seen_at is the close"
+ }
+}

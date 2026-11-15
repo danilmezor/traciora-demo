@@ -1,0 +1,680 @@
+{
+  "format": "seed-call/1",
+  "id": "en-27-S5-regular-asks-for-her",
+  "configuration": "en",
+  "number": 27,
+  "story": "S5",
+  "title": "A regular asks whether Angie is there; she knows the voice, the grandchild and what was said last time",
+  "purpose": "Story S5. Why customers ask for her. A regular whose car was slow to start remembers that Angie said something about the battery. Angie has the note, asks what the car has done, gives the price with what could change it and two times, books and sums up. Every check that applies is at its top level.",
+  "cast": {
+    "advisor": {
+      "slot": 16,
+      "name": "Angie Holloway",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Carolyn Bivens",
+      "invented": true,
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Josh Tipton",
+        "slot": 17,
+        "role": "could run her home"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Monday of week T-3 (rule R6; card S05, call 27)",
+    "nominal_offset": "T-25d",
+    "nominal_date": "2026-10-19",
+    "local_start": "11:15",
+    "site": "east",
+    "direction": "inbound",
+    "line": "200",
+    "answered_by": "201",
+    "ring_s": 3,
+    "caller_phone": "423-555-0152",
+    "repeat_caller": false,
+    "talk_s": 144
+  },
+  "scenario": {
+    "who_calls": "A regular of the Bonny Oaks shop, Carolyn Bivens, who has dealt with Angie for years.",
+    "vehicle": "2015 Buick Enclave",
+    "job": "battery, installed, after a test of the charging system",
+    "wants": "to talk to Angie about a car that was slow to start",
+    "what_happens": "Angie knows her voice, asks after her grandson, finds the note from the last visit (the battery tested weak), asks what the car has done since, gives the installed price and what would change the job, offers two times, books tomorrow at 7:30 and sums up with the address.",
+    "facts": {
+      "offered": [
+        "call+1d 07:30",
+        "call+2d 14:00"
+      ],
+      "booked": "call+1d 07:30",
+      "note": "catalogue.json battery_replace, class suv, standard: 272.20 (a menu price; the battery scales with the class). The customer does not ask what it costs, so the price check does not apply.",
+      "prices": [
+        {
+          "what": "Replace battery, clean terminals",
+          "job": "battery_replace",
+          "vehicle_class": "suv",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 272.2,
+          "said": "two seventy-two",
+          "said_usd": 272,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Wednesday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care on Bonny Oaks, this is Angie."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.4,
+      "said": "Oh, good. I was — I was gonna ask if Angie was there."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.9,
+      "said": "You found her. Is this Miss Carolyn?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 14.0,
+      "said": "It is. How'd you know?"
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 17.7,
+      "said": "I'd know your voice anywhere. How are you? How's that grandbaby?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 22.8,
+      "said": "Oh, he's walkin' now. Into everything."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 26.6,
+      "said": "I bet he is. What's going on with the Enclave?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 31.3,
+      "said": "Well, it didn't want to start this mornin'. It — it did, but it thought about it. And I remembered you told me somethin' about the battery last time."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 43.4,
+      "said": "I did. Let me pull you up... Yes ma'am. When you were in for your oil change, the battery tested weak. It still passed, but I wrote you a note that it was on borrowed time."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 56.7,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 58.8,
+      "said": "Well, you were right."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 61.1,
+      "said": "I'd rather have been wrong. Has it done it more than the once? Any clicking, or the lights dimming?"
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 69.0,
+      "said": "Just slow. Twice last week, and then this mornin'."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 73.5,
+      "said": "Okay. Then I don't want you getting stranded at the grocery store. The battery for your Enclave is two seventy-two installed. We'll test the charging system first, because if the alternator isn't keeping it up, a new battery won't fix that, and I'd call you before we went any further. I can take you tomorrow morning at seven-thirty, or Wednesday at two."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 96.3,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 97.9,
+      "said": "Tomorrow. I don't trust it."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 101.8,
+      "said": "Tomorrow at seven-thirty. I've got you down, and I'll be right here at the counter. Are you going to wait, or do you want Josh to run you home?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 113.2,
+      "said": "I'll wait. I'll bring my book."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 117.3,
+      "said": "Good. It's about thirty minutes once it's in the bay. So that's tomorrow at seven-thirty, here at sixty-three-forty Bonny Oaks, and we're testing the charging system and putting a battery in the Enclave."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 129.6,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 131.0,
+      "said": "Thank you, honey. I knew you'd know."
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 135.3,
+      "said": "You're welcome, Miss Carolyn. Park right by the door, in case it's slow in the morning."
+    },
+    {
+      "n": 23,
+      "who": "customer",
+      "at_s": 142.6,
+      "said": "I will. Bye-bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.78,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          13,
+          22
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 14,
+        "said": "alternator",
+        "stored": "alternater"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          14,
+          17,
+          19
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words gone without a trace",
+        "script_turn": 6,
+        "said": "Into everything.",
+        "stored": ""
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          10,
+          20
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 12,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 6,
+        "as_digits": 6,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 3,
+        "lost": 2,
+        "joined": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 320,
+    "stored_words": 313,
+    "strict_word_difference": 0.078
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 333,
+    "duration_s": 144.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, good. I was going to ask if Angie was there.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You found her. Is this Ms. Carolyn?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It is. How'd you know?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'd know your voice anywhere. How are you? How's that grand baby?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, he's walking now.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I bet he is. What's going on with the Enclave?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It didn't want to start this morning. It did, but it thought about it. And I remembered you told me something about the battery last time.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I did. Let me pull you up. Yes, ma'am. When you were in for your oil change, the battery tested weak. It still passed, but I wrote you a note that it was on borrowed time.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Well, you were right.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'd rather have been wrong. Has it done it more than the once? Any clicking, or the lights dimming?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Just slow. Twice last week, and then this morning.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Then I don't want you getting stranded at the grocery store. The battery for your Enclave is $272 installed. We'll test the charging system first, because if the alternater isn't keeping it up, a new battery won't fix that, and I'd call you before we went any further. I can take you tomorrow morning at 7:30, or Wednesday at 2.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Tomorrow. I don't trust it.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Tomorrow at 7:30. I've got you down, and I'll be right here at the counter. Are you going to wait, or do you want Josh to run you home?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'll wait. I'll bring my book.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Good. It's about thirty minutes once it's in the bay. So that's tomorrow at 7:30, here at 6340 Bonny Oaks, and we're testing the charging system and putting a battery in the Enclave.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you, honey. I knew you'd know.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You're welcome, Ms. Carolyn. Park right by the door, in case it's slow in the morning.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I will. Bye-bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Has it done it more than the once? Any clicking, or the lights dimming?",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "I can take you tomorrow morning at 7:30, or Wednesday at 2.",
+        "level": 2,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Tomorrow at 7:30. I've got you down, and I'll be right here at the counter.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "recap",
+        "quote": "So that's tomorrow at 7:30, here at 6340 Bonny Oaks, and we're testing the charging system and putting a battery in the Enclave.",
+        "level": 2,
+        "segment": 16
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager knows her voice and calls her by name."
+      },
+      {
+        "key": "price_with_next_step",
+        "why": "The customer did not ask about price; the manager gave it unasked."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "When you were in for your oil change, the battery tested weak. It still passed, but I wrote you a note that it was on borrowed time.",
+      "why": "She had written down what the last visit found, so this call started from a fact instead of a guess.",
+      "segment": 8
+    },
+    "try_next": null,
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 100.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "200",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 16
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "price_with_next_step",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 100.0,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 8,
+      "try_next_check": null,
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care on Bonny Oaks, this is Angie",
+        "need_discovery": "Has it done it more than the once? Any clicking, or the lights dimming?",
+        "offered_time": "I can take you tomorrow morning at 7:30, or Wednesday at 2",
+        "asked_for_booking": "Tomorrow at 7:30. I've got you down, and I'll be right here at the counter",
+        "recap": "So that's tomorrow at 7:30, here at 6340 Bonny Oaks, and we're testing the charging system and putting a battery in the Enclave"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager knows her voice and calls her by name.",
+        "price_with_next_step": "The customer did not ask about price; the manager gave it unasked.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "When you were in for your oil change, the battery tested weak. It still passed, but I wrote you a note that it was on borrowed time",
+        "why": "She had written down what the last visit found, so this call started from a fact instead of a guess."
+      },
+      "try_next": null
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Five checks apply and all five are at level 2.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": "na",
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 100.0,
+    "score_exact": 100.0,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business, the shop and her own name.",
+    "name_and_number": "N/A: a known customer, called by name.",
+    "need_discovery": "2: the car, the job and what she asked for: slow three times in a week, no clicking, with the last visit's battery test behind it.",
+    "price_with_next_step": "N/A: the customer never asks what it costs. Angie gives the price anyway, with what would change the job and two times; had it been asked for, it would be level 2.",
+    "offered_time": "2: tomorrow at 7:30 or Wednesday at two.",
+    "asked_for_booking": "2: the day, the hour and who is at the counter.",
+    "recap": "2: the time, the address and the work.",
+    "objection": "N/A: 'I don't trust it' is about the car.",
+    "try_next": "None: nothing scored is under level 2.",
+    "score": "(1·2 + 2·2 + 3·2 + 3·2 + 1·2) / 2 = 10 of 10 weight points = 100.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "A regular of east, Carolyn Bivens, 423-555-0152, 2015 Buick Enclave, with a history at the shop: at her last oil service the battery test was recorded as weak (a note on that order).",
+    "An appointment at east on call+1d at 07:30 (the Tuesday of week T-3) for a charging-system test and a battery."
+  ]
+}

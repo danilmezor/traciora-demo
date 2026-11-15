@@ -1,0 +1,97 @@
+{
+ "path": "services/engine/leaks-and-gaskets.md",
+ "title": "Leaks and gaskets",
+ "first_revision_text": "en/_history/services/engine/leaks-and-gaskets.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Oil leaks, and the one gasket on the price list.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 222,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job valve_cover_gasket: 1.6 h for a four-cylinder; SUV (V6) labour multiplier 2.0.",
+  "Seep, leak, onto something: the three grades and what to do.",
+  "Leak finding is sold by the hour with approval.",
+  "Oil pan gaskets, rear main seals and timing covers have no list price (planted)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Leaks and gaskets",
+   "item": "Seep: damp, no drips. Watch it. Note it on the inspection with a photo so we can compare next time."
+  },
+  {
+   "section": "Leaks and gaskets",
+   "item": "Leak: drips on the ground, oil level drops between changes. Find it and price it."
+  },
+  {
+   "section": "Leaks and gaskets",
+   "item": "Onto something: exhaust (smell, smoke), belts (they slip and rot), rubber bushings (they swell). Do it."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "valve_cover_gasket",
+   "what": "hours",
+   "class": "car",
+   "value": 1.6
+  },
+  {
+   "catalogue_key": "valve_cover_gasket",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 266.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена прокладки клапанной крышки»."
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "path": "customers/towing.md",
+ "title": "Эвакуатор",
+ "title_en": "Towing",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/towing.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "Public towing arrangement for the Chattanooga shops; Nashville is deliberately thin.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "tiny",
+ "words_ru": 81,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Partner V8 «Автоспас 73» serves the two Ulyanovsk shops and is not named to customers; the price is by kilometre.",
+  "Kazan: no partner and no price anywhere in the base (planted gap kept)."
+ ],
+ "new_facts": [
+  "Tow price: 3 000 RUB with the first 10 km, 70 RUB for each further km. The ERP needs matching sublet lines for towed cars."
+ ],
+ "new_amounts": [
+  {
+   "value": 3000,
+   "why": "эвакуация: подача и первые 10 км"
+  },
+  {
+   "value": 70,
+   "why": "эвакуация: километр сверх десяти"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Ульяновск (Московское шоссе и Инженерный)",
+   "item": "Подача и первые 10 км до любого из наших ульяновских сервисов: 3 000 ₽"
+  },
+  {
+   "section": "Ульяновск (Московское шоссе и Инженерный)",
+   "item": "Каждый следующий километр: 70 ₽"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  70.0,
+  3000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

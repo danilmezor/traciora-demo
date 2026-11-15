@@ -1,0 +1,623 @@
+{
+  "format": "seed-call/1",
+  "id": "en-23-S1-a1-no-po",
+  "configuration": "en",
+  "number": 23,
+  "story": "S1",
+  "title": "The anchor account's van booked without its purchase-order number",
+  "purpose": "Story S1. The fleet manager of company account A1 rings about a van with a check engine light. Maya asks good questions and takes the booking; she answers 'when can y'all look at it' with the opening hours, does not sum up, and opens the order without the purchase-order number the account's bills need.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Lonnie Coffey",
+      "ref": "accounts.json en.A1 contacts[0]",
+      "company": "Nickajack Delivery",
+      "account": "A1",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "the Wednesday of week T-17 (rule R6; card S01, call 23)",
+    "nominal_offset": "T-121d",
+    "nominal_date": "2026-07-15",
+    "local_start": "10:05",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 6,
+    "caller_phone": "423-555-0103",
+    "repeat_caller": false,
+    "talk_s": 97
+  },
+  "scenario": {
+    "who_calls": "Lonnie Coffey, fleet manager of company account A1, who rings the shop most weeks.",
+    "vehicle": "unit ND-22, a 2020 Ram ProMaster 2500, BRC-4700 (accounts.json en.A1 fleet)",
+    "job": "check engine light on, stumbling when it pulls away loaded: diagnose",
+    "wants": "the van looked at as soon as possible",
+    "what_happens": "Maya finds the unit by its tag, asks how it runs and whether the light is flashing, answers 'when can y'all look at it' with 'anytime', books the time he then names and says who checks it in. She does not ask for the purchase-order number and ends without a summary.",
+    "facts": {
+      "booked": "call+1d 07:30",
+      "purchase_order": "not asked for",
+      "note": "Knowledge page 'Company accounts': A1's bills need its purchase-order number (card S01). No price is asked for on a fleet call like this one."
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Maya, how can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 4.9,
+      "said": "Maya, it's Lonnie Coffey over at Nickajack."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.9,
+      "said": "Hey, Lonnie! How's it going?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 12.3,
+      "said": "Oh, it's goin'. I got — I got another one for you. Twenty-two's got a check engine light on, and the driver says it's runnin' rough."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 22.2,
+      "said": "Okay. Twenty-two... that's the ProMaster, tag ending four-seven-oh-oh?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 27.0,
+      "said": "That's it."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 29.8,
+      "said": "Okay. And — and rough like shaking at a stop, or more when he's getting on it?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 36.9,
+      "said": "He says it stumbles pullin' away from a stop. Loaded, mostly."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 42.9,
+      "said": "Okay. Is the light flashing, or just on?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 46.5,
+      "said": "Just on, far as I know. Came on yesterday."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 51.5,
+      "said": "Okay, good. Flashing would be a different story."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 54.7,
+      "said": "Yeah.",
+      "overlap": true
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 56.6,
+      "said": "When can y'all look at it?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 59.7,
+      "said": "Oh, anytime! We're here seven-thirty to five-thirty, just have him bring it by."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 65.3,
+      "said": "Alright. I'll have him drop it first thing tomorrow, then, before his route."
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 71.0,
+      "said": "Perfect. I've — I've got twenty-two down for tomorrow morning at seven-thirty, and I'll check it in myself."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 79.2,
+      "said": "He's gonna need it back quick as you can. I'm short a van as it is."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 86.3,
+      "said": "Okay, I'll tell the guys. I'll call you as soon as we know something."
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 92.4,
+      "said": "'Preciate it, Maya."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 94.3,
+      "said": "Thanks, Lonnie! Talk to you then."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.71,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          4,
+          5,
+          7,
+          8,
+          15,
+          16,
+          17,
+          19
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "the surname heard as a common word",
+        "script_turn": 2,
+        "said": "Coffey",
+        "stored": "Coffee"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          4,
+          5,
+          14,
+          16
+        ]
+      },
+      {
+        "rule": "R8",
+        "what": "2 turns in a row carry the wrong speaker",
+        "script_turns": [
+          17,
+          18
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 2,
+        "as_digits": 2,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 1,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 2,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 199,
+    "stored_words": 197,
+    "strict_word_difference": 0.101
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 216,
+    "duration_s": 97.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Maya, how can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Maya, it's Lonnie Coffee over at Nickajack.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, Lonnie! How's it going?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, it's going. I got another one for you. 22's got a check engine light on, and the driver says it's running rough.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. 22, that's the ProMaster, tag ending 4700?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "That's it.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And rough like shaking at a stop, or more when he's getting on it?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "He says it stumbles pulling away from a stop. Loaded, mostly.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Is the light flashing, or just on?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Just on, far as I know. Came on yesterday.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, good. Flashing would be a different story.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. When can y'all look at it?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, anytime! We're here 7:30 to 5:30, just have him bring it by.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. I'll have him drop it first thing tomorrow, then, before his route.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Perfect. I've got 22 down for tomorrow morning at 7:30, and I'll check it in myself.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "He's going to need it back quick as you can. I'm short a van as it is.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, I'll tell the guys. I'll call you as soon as we know something.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Appreciate it, Maya.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks, Lonnie! Talk to you then.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Maya",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "And rough like shaking at a stop, or more when he's getting on it?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "offered_time",
+        "quote": "We're here 7:30 to 5:30, just have him bring it by.",
+        "level": 0,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I've got 22 down for tomorrow morning at 7:30, and I'll check it in myself.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "recap",
+        "quote": "Thanks, Lonnie! Talk to you then.",
+        "level": 0,
+        "segment": 18
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager greets him by name and finds the unit on the account."
+      },
+      {
+        "key": "price_with_next_step",
+        "why": "The customer did not ask about price."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [],
+    "strength": {
+      "quote": "Is the light flashing, or just on?",
+      "why": "The question that decides whether the van may be driven to the shop at all, asked before anything was booked.",
+      "segment": 8
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "We're here 7:30 to 5:30, just have him bring it by.",
+      "say": "I can take it today at 1 or tomorrow at 7:30, before his route. Which one keeps you less short?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 60.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 18
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "price_with_next_step",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed"
+      ],
+      "score": 60.0,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 8,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Maya",
+        "need_discovery": "And rough like shaking at a stop, or more when he's getting on it?",
+        "offered_time": "We're here 7:30 to 5:30, just have him bring it by",
+        "asked_for_booking": "I've got 22 down for tomorrow morning at 7:30, and I'll check it in myself",
+        "recap": "Thanks, Lonnie! Talk to you then"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager greets him by name and finds the unit on the account.",
+        "price_with_next_step": "The customer did not ask about price.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Is the light flashing, or just on?",
+        "why": "The question that decides whether the van may be driven to the shop at all, asked before anything was booked."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "We're here 7:30 to 5:30, just have him bring it by.",
+        "say": "I can take it today at 1 or tomorrow at 7:30, before his route. Which one keeps you less short?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Two turns near the end carry the wrong speaker in the stored lines; they hold no check's evidence.",
+    "what_the_scorecard_cannot_see": "The order is opened without the account's purchase-order number, which its bills need. She never asks for it.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": "na",
+      "offered_time": 0,
+      "asked_for_booking": 2,
+      "recap": 0,
+      "objection": "na"
+    },
+    "score": 60.0,
+    "score_exact": 60.0,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name.",
+    "name_and_number": "N/A: a known contact, greeted by name.",
+    "need_discovery": "2: the unit, the job and what she asked for: it stumbles pulling away loaded; the light is steady, since yesterday.",
+    "price_with_next_step": "N/A: he does not ask what it costs.",
+    "offered_time": "0: asked when the shop can look at it, she says 'anytime' and gives the opening hours. He then names the time himself, which does not make the check N/A: the chance to offer came first.",
+    "asked_for_booking": "2: tomorrow at 7:30, and she checks it in.",
+    "recap": "0: a booking was taken and the call ends on 'talk to you then'.",
+    "objection": "N/A: no doubt.",
+    "speaker_swap": "Script turns 16 and 17 are stored under the wrong speaker. Neither is quoted by a check.",
+    "score": "(1·2 + 2·2 + 3·0 + 3·2 + 1·0) / 2 = 6 of 10 weight points = 60.0.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "An appointment and an order at main for ND-22 on call+1d at 07:30 (the Thursday of week T-17), opened with no purchase-order number: check engine diagnosis at the company-account rate."
+  ]
+}

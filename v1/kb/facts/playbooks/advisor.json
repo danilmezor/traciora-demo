@@ -1,0 +1,171 @@
+{
+ "path": "playbooks/advisor.md",
+ "title": "Playbook: service advisors",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Junior rank: what an advisor uses Traciora for, with the call scorecard as the centre.",
+ "serves": [
+  "S4",
+  "S3",
+  "S7",
+  "visibility:administrator"
+ ],
+ "length_class": "medium",
+ "words_en": 388,
+ "links_to": [
+  "how-to/taking-a-call.md",
+  "how-to/missed-calls-and-call-backs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Junior rank adds board, conversations, calls, knowledge and data tools (design 1.4).",
+  "The scorecard: eight checks, strongest moment and one \"try next\" per call; offered time and asked-for-booking weigh most; three automatic fails; recognition damage can cost a point (calls design: truth beside verdict).",
+  "The To call back list: claim, one hour, three tries.",
+  "Web chat sends, Telegram drafts.",
+  "Limits: no bulk customer contact data (ERP access by rank), no colleagues' scores, pay or till counts; cannot change a page (propose rung is middle).",
+  "Notes: personal notes are about how the assistant works with the person; team notes are decided by slot 4; customer and price facts belong on pages (review resolution for S4).",
+  "Slots 8 and 9 hold junior rank."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "The phone",
+   "item": "Read the \"try next\" before your next shift, not at the end of the month."
+  },
+  {
+   "section": "The phone",
+   "item": "Offering a time and asking for the booking are worth the most. A friendly call that ends on the price scores badly, and should."
+  },
+  {
+   "section": "The phone",
+   "item": "Three things fail a call whatever else you did: a wrong promise, a dropped customer, a call back you did not make."
+  },
+  {
+   "section": "The phone",
+   "item": "A bad line or a garbled transcript can cost you a point you earned. If a score looks wrong, tell Greg; do not argue with the screen."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"What do we charge for front pads and rotors on a 2015 Camry?\" It reads the price list."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Tell me everything about this customer.\" It joins the chat, the call and the visit by the phone number."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"What did she decline last time?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Which of my tasks are due this week?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"What is our rule on discounts?\""
+  },
+  {
+   "section": "It will not",
+   "item": "Give you a customer's phone or address in a list. You see them one customer at a time."
+  },
+  {
+   "section": "It will not",
+   "item": "Show you colleagues' call scores, pay or till counts."
+  },
+  {
+   "section": "It will not",
+   "item": "Change a knowledge page. You can ask it to draft a correction; a lead advisor proposes it."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "6",
+   "written_as": "Maya",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Caleb",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Brenda",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "17",
+   "written_as": "Josh",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "23",
+   "written_as": "Chad",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "24",
+   "written_as": "Jasmine",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-4mo|date}}",
+   "what": "section \"The phone\" rewritten when the scorecard came in; message: \"Eight checks.\""
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@newcomers|date}}",
+   "what": "the list of advisors at the head gained the newcomer on his first day; message: \"Caleb is on the list.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same playbook for the same rank; examples from the Russian stories and channels. The product pins the playbooks folder at administrator in both configurations."
+ ]
+}

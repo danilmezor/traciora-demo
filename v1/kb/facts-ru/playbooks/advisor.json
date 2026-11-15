@@ -1,0 +1,178 @@
+{
+ "path": "playbooks/advisor.md",
+ "title": "Памятка: мастера-приёмщики",
+ "title_en": "Playbook: service advisors",
+ "exists_in": "both",
+ "english_sheet": "facts/playbooks/advisor.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Junior rank: what an advisor uses Traciora for, with the call scorecard as the centre.",
+ "serves": [
+  "S4",
+  "S3",
+  "S7",
+  "visibility:administrator"
+ ],
+ "length_class": "medium",
+ "words_ru": 356,
+ "links_to": [
+  "how-to/taking-a-call.md",
+  "how-to/missed-calls-and-call-backs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Channels: the assistant answers in the web chat only and drafts in Telegram, VK and Avito (ledger conv.assistant_mode).",
+  "The example car is a 2015 Solaris."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Телефон",
+   "item": "Читайте «попробуйте в следующий раз» перед следующей сменой, а не в конце месяца."
+  },
+  {
+   "section": "Телефон",
+   "item": "Предложить время и попросить запись — самое дорогое. Приветливый разговор, который закончился на цене, получает мало. И правильно."
+  },
+  {
+   "section": "Телефон",
+   "item": "Три вещи проваливают звонок, что бы вы ни сделали ещё: неверное обещание, брошенный клиент, перезвон, который вы пообещали и не сделали."
+  },
+  {
+   "section": "Телефон",
+   "item": "Плохая связь или криво распознанная запись может стоить вам балла, который вы заработали. Оценка кажется неправильной — скажите Сергею Анатольевичу. С экраном не спорьте."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Сколько у нас стоят передние диски с колодками на Solaris пятнадцатого года?» Он прочитает прайс-лист."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Расскажи всё про этого клиента». Он соберёт чат, звонок и визит по номеру телефона."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«От чего она отказалась в прошлый раз?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Какие мои задачи на этой неделе?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Какое у нас правило по скидкам?»"
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не выдаст телефоны и адреса клиентов списком. Вы видите их по одному клиенту."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не покажет чужие оценки звонков, зарплату и пересчёты кассы."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не изменит страницу базы знаний. Попросить его подготовить правку можно; предлагает её старший мастер-приёмщик."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "6",
+   "written_as": "Хасанова",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Ведяшкин",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Пахомова",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "17",
+   "written_as": "Николаев",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "23",
+   "written_as": "Крюков",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "24",
+   "written_as": "Шакирова",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "8",
+   "written_as": "Бурмистрова",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Мещеряковым",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-4mo|date}}",
+   "what": "section \"The phone\" rewritten when the scorecard came in; message: \"Eight checks.\"",
+   "message_ru": "Восемь пунктов."
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@newcomers|date}}",
+   "what": "the list of advisors at the head gained the newcomer on his first day; message: \"Caleb is on the list.\"",
+   "message_ru": "Добавила Ведяшкина."
+  }
+ ],
+ "has_history": true
+}

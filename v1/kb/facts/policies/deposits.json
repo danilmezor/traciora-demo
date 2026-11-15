@@ -1,0 +1,103 @@
+{
+ "path": "policies/deposits.md",
+ "title": "Deposits",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "When a deposit is taken, how much, and what is refunded.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "S15"
+ ],
+ "length_class": "short",
+ "words_en": 237,
+ "links_to": [
+  "policies/voids-and-refunds.md",
+  "parts/returns-and-cores.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Deposit of half the part price for special-order parts and ordered electrical parts over 300 USD.",
+  "Transmission rebuild: 1,700.00, half of the specialist's price (catalogue transmission_rebuild sublet price 3,400.00).",
+  "Four or more tyres in a non-stocked size: half the tyre price. Company accounts: none.",
+  "Entered as a payment marked deposit (ERP payment: deposit).",
+  "Refund in full before shipping; after shipping less the supplier's restocking charge of up to 20 %; non-returnable parts become the customer's.",
+  "Refunds return by the original method; cash refunds need the shop manager.",
+  "No deposit for appointments.",
+  "Voice: slot 3, formal, complete sentences."
+ ],
+ "tables": [
+  {
+   "section": "Deposits",
+   "columns": [
+    "When",
+    "Deposit"
+   ],
+   "rows": [
+    {
+     "When": "A special-order part, or any electrical part once ordered, that costs the customer more than $300",
+     "Deposit": "Half the price of the part"
+    },
+    {
+     "When": "A transmission going out for rebuild",
+     "Deposit": "$1,700.00, which is half of the specialist's price"
+    },
+    {
+     "When": "Four or more tires in a size we do not normally stock",
+     "Deposit": "Half the price of the tires"
+    },
+    {
+     "When": "A company account",
+     "Deposit": "None. It goes on the statement"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Refunds",
+   "item": "The customer cancels before the part has shipped: the whole deposit back."
+  },
+  {
+   "section": "Refunds",
+   "item": "After it has shipped: the deposit less whatever the supplier charges us to take it back, which can be up to 20 % of the part's price. If the supplier will not take it back, the part is the customer's and the deposit is kept."
+  },
+  {
+   "section": "Refunds",
+   "item": "A refund goes back the way the deposit came: card to card, cash to cash. A cash refund needs the shop manager: see Voids and refunds."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "new_facts": [
+  "Deposit amounts and the 20 % restocking ceiling. Reason: a deposit policy was asked for; the ERP's deposit payments must follow these rules (half, 1,700 for a rebuild)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: предоплата за запчасти под заказ, usually 50 to 100 %; refunds for goods made to order follow the consumer law. Amounts in RUB from the Russian catalogue (rebuild sublet price there)."
+ ]
+}

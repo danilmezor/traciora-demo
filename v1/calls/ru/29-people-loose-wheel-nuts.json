@@ -1,0 +1,746 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-29-loose-wheel-nuts",
+  "configuration": "ru",
+  "number": 29,
+  "story": "people",
+  "title": "A customer on the roadside the day after mechanic 11 changed his brakes: the wheel nuts turn by hand",
+  "purpose": "People, mechanic 11, the first of two complaint calls. The man had front pads and discs done yesterday; today a wheel knocks and the nuts are loose. He rings from the hard shoulder on a bad line, furious. Dmitry gets him to tighten the nuts, takes the blame, brings him back at once and promises the foreman will check both wheels. A complaint about an existing job: no score. The recording is the worst of the set.",
+  "cast": {
+    "advisor": {
+      "slot": 5,
+      "name": "Дмитрий Григорьев",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Денис Маркелов",
+      "invented": true,
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "slot": 11,
+        "name": "Максим Рябов"
+      },
+      {
+        "slot": 8,
+        "name": "Александр Михайлович Бурмистров",
+        "as": "мастер цеха"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Friday of week T-10 (rule R6; call 29; slot 5 works that day)",
+    "nominal_offset": "T-70d",
+    "nominal_date": "2026-09-04",
+    "local_start": "17:50",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "101",
+    "ring_s": 6,
+    "caller_phone": "+7 907 461-14-93",
+    "repeat_caller": false,
+    "talk_s": 148
+  },
+  "scenario": {
+    "who_calls": "Денис Маркелов, standing on the hard shoulder of the ring road.",
+    "vehicle": "Mitsubishi Lancer X, 2011",
+    "job": "front pads and discs, done the day before by mechanic 11; the left front wheel's nuts were not torqued",
+    "wants": "to know what the shop thinks it is doing",
+    "what_happens": "Dmitry asks where he is, tells him not to drive, has him tighten all five nuts and check the other wheel, admits the fault, finds the order, tells him to come back slowly and to stop and call for a tow at the shop's cost if anything knocks, says the foreman will take both wheels off and torque everything, promises a separate talk with the mechanic, and sums up.",
+    "facts": {
+      "yesterday": "call-1d: front pads and discs, mechanic slot 11",
+      "today": "a warranty order pointing at yesterday's: both front wheels off, studs and discs checked, nuts torqued; free",
+      "tow": "offered at the shop's cost (vendors.json V8); not needed",
+      "note": "No price is named. The Lancer has studs and nuts, not bolts."
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Дмитрий, слушаю вас."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.9,
+      "said": "Алло! Алло, слышно?! Это сервис на Московском?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.0,
+      "said": "Да, сервис, слышу вас. Говорите."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 11.4,
+      "said": "Маркелов моя фамилия, я у вас вчера был! Лансер, колодки с дисками меняли спереди. Ваш Максим делал. Так вот я сейчас на объездной стою, у меня колесо левое застучало, я вышел — а гайки руками крутятся! Вы что там творите, а?!"
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 31.6,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 33.2,
+      "said": "Так. Вы сейчас где стоите — на обочине?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 37.8,
+      "said": "На обочине, аварийку включил."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 40.7,
+      "said": "Хорошо, что встали. Никуда пока не едете. Баллонник в машине есть?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 47.8,
+      "said": "Есть."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 49.9,
+      "said": "Подтяните все пять гаек на этом колесе, крест-накрест, от души. И на правом проверьте тоже. Я на линии, жду."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 60.6,
+      "said": "Да я уже подтянул... Правое вроде держит. Ни хрена себе сервис, слушайте! Я утром ребёнка в сад вёз на этой машине!"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 72.5,
+      "said": "Вы правы, это наш косяк, и серьёзный. Оправдываться не буду. Денис... Денис Маркелов, вижу ваш наряд. Денис, колесо сейчас сидит плотно, не качается?"
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 85.4,
+      "said": "Вроде плотно. Я ещё не ехал."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 89.5,
+      "said": "Тогда так. Тихонько, не быстрее сорока, возвращаетесь к нам. Если хоть какой-то стук — сразу встаёте и звоните мне, я пришлю эвакуатор за наш счёт. Здесь мастер цеха сам снимет оба колеса, проверит шпильки и диски и протянет всё динамометрическим ключом. Бесплатно, само собой."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 111.2,
+      "said": "Ну.",
+      "overlap": true
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 112.9,
+      "said": "И Максим ваш пусть мне в глаза скажет, как он так крутил."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 119.8,
+      "said": "С Максимом будет отдельный разговор, это я вам обещаю. Вы через сколько сможете быть?"
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 128.4,
+      "said": "Минут через двадцать."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 130.7,
+      "said": "Жду вас. Значит, так: едете потихоньку к нам на Московское шоссе, я встречаю на приёмке, оба передних колеса смотрим сразу, без очереди."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 142.7,
+      "said": "Ладно. Еду."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 144.7,
+      "said": "Аккуратно, Денис. Жду."
+    }
+  ],
+  "recognition": {
+    "profile": "heavy",
+    "consensus_score": 0.16,
+    "restoration_tier": "low",
+    "noise": "the caller stands by a ring road: wind in the microphone, lorries passing, the line dropping; the advisor is at the counter at closing rush",
+    "applied": [
+      {
+        "rule": "R8",
+        "what": "two short turns carry the wrong speaker: the question about the wheel brace is stored as the customer's, the answer as the manager's",
+        "script_turns": [
+          8,
+          9
+        ],
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "'баллонник' heard approximately",
+        "script_turn": 8,
+        "said": "Баллонник",
+        "stored": "Болонник",
+        "error": true
+      },
+      {
+        "rule": "R6",
+        "what": "noise: [unintelligible] where the models disagree",
+        "script_turns": [
+          2,
+          4,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          11,
+          12,
+          12,
+          14,
+          16,
+          19
+        ],
+        "said": [
+          "Алло! Алло, слышно?! ",
+          "Маркелов моя фамилия, я у вас",
+          "Так вот я сейчас на объездной стою",
+          "Так. Вы сейчас где стоите — на обочине?",
+          "аварийку включил",
+          "Никуда пока не едете.",
+          "все пять гаек на этом колесе, крест-накрест, от души. И на правом проверьте тоже. Я на линии, жду.",
+          "подтянул... Правое вроде держит",
+          "в сад вёз на этой машине!",
+          "Оправдываться не буду. Денис... Денис Маркелов",
+          "сидит плотно, не качается?",
+          "сам снимет оба колеса, проверит шпильки и диски и протянет всё динамометрическим ключом. Бесплатно, само собой.",
+          "И Максим ваш пусть",
+          "оба передних колеса смотрим"
+        ],
+        "stored": [
+          "Алло. [unintelligible] ",
+          "[unintelligible] я у вас",
+          "[unintelligible] стою",
+          "Вы сейчас где [unintelligible] на обочине?",
+          "[unintelligible]",
+          "[unintelligible]",
+          "все 5 гаек [unintelligible] И на правом проверьте тоже.",
+          "[unintelligible] вроде держит",
+          "[unintelligible]",
+          "[unintelligible] Денис Маркелов",
+          "сидит плотно, [unintelligible]?",
+          "[unintelligible] оба колеса, проверит шпильки [unintelligible]",
+          "[unintelligible] пусть",
+          "[unintelligible] смотрим"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: uncertain spans marked",
+        "script_turn": 4,
+        "said": "колодки с дисками меняли спереди. Ваш Максим делал.",
+        "stored": "{?likely: колодки с дисками меняли. Ваш Максим делал.}",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: words gone without a trace",
+        "script_turn": 4,
+        "said": " Вы что там творите, а?!",
+        "stored": "",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: [unintelligible] and an uncertain span in one sentence",
+        "script_turn": 14,
+        "said": "Тихонько, не быстрее сорока, возвращаетесь к нам. Если хоть какой-то стук — сразу встаёте и звоните мне, я пришлю эвакуатор за наш счёт.",
+        "stored": "[unintelligible] не быстрее 40, возвращаетесь к нам. Если хоть какой-то стук, сразу {?likely: встаёте и звоните мне, я пришлю эвакуатор} за наш счёт.",
+        "error": false
+      },
+      {
+        "rule": "R10",
+        "what": "a bad mobile line: the sentence end clipped",
+        "script_turn": 13,
+        "said": "Я ещё не ехал.",
+        "stored": "Я ещё не…",
+        "error": false
+      },
+      {
+        "rule": "R11",
+        "what": "the caller's profanity softened to a near word",
+        "script_turn": 11,
+        "said": "Ни хрена себе сервис",
+        "stored": "Ничего себе сервис",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          3,
+          17,
+          19,
+          20,
+          21
+        ],
+        "said": [
+          " Говорите.",
+          ", это я вам обещаю",
+          "потихоньку",
+          "Ладно. ",
+          " Жду."
+        ],
+        "stored": [
+          "",
+          "",
+          "по тихоньку",
+          "",
+          ""
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          5,
+          15
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4
+        ],
+        "said": [
+          "Лансер"
+        ],
+        "stored": [
+          "Lancer"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          18
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          4,
+          11
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 0,
+        "joined": 2
+      },
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 8,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 4,
+        "wrong": 1
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 1,
+        "as_digits": 1,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 18,
+      "speaker_swap_turns": 2,
+      "hold": false,
+      "bad_line": true,
+      "profanity": 1,
+      "invented_lines": 0,
+      "lines_with_a_marker": 11
+    },
+    "script_words": 249,
+    "stored_words": 192,
+    "strict_word_difference": 0.365
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 211,
+    "duration_s": 148.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Дмитрий, слушаю вас.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алло. [unintelligible] Это сервис на Московском?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, сервис, слышу вас.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "[unintelligible] я у вас вчера был. Lancer, {?likely: колодки с дисками меняли. Ваш Максим делал.} [unintelligible] стою, у меня колесо левое застучало, я вышел, а гайки руками крутятся.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так. Вы сейчас где [unintelligible] на обочине?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На обочине, [unintelligible].",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, что встали. [unintelligible] Болонник в машине есть?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Есть.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Подтяните все 5 гаек [unintelligible] И на правом проверьте тоже.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да я уже [unintelligible] вроде держит. Ничего себе сервис, слушайте. Я утром ребёнка [unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вы правы, это наш косяк, и серьёзный. [unintelligible] Денис Маркелов, вижу ваш наряд. Денис, колесо сейчас сидит плотно, [unintelligible]?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вроде плотно. Я ещё не…",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Тогда так. [unintelligible] не быстрее 40, возвращаетесь к нам. Если хоть какой-то стук, сразу {?likely: встаёте и звоните мне, я пришлю эвакуатор} за наш счёт. Здесь мастер цеха [unintelligible] оба колеса, проверит шпильки [unintelligible]",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну. [unintelligible] пусть мне в глаза скажет, как он так крутил.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "С Максимом будет отдельный разговор. Вы через сколько сможете быть?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Минут через 20.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Жду вас. Значит, так: едете по тихоньку к нам на Московское шоссе, я встречаю на приёмке, [unintelligible] смотрим сразу, без очереди.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Еду.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Аккуратно, Денис.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Дмитрий, слушаю вас.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, так: едете по тихоньку к нам на Московское шоссе, я встречаю на приёмке, [unintelligible] смотрим сразу, без очереди.",
+        "level": 1,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint",
+      "customer_angry"
+    ],
+    "strength": {
+      "quote": "Вы правы, это наш косяк, и серьёзный.",
+      "why": "Признал вину первой же фразой и без оговорок. После неё клиент перестал кричать и начал отвечать на вопросы.",
+      "segment": 10
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "Значит, так: едете по тихоньку к нам на Московское шоссе, я встречаю на приёмке, [unintelligible] смотрим сразу, без очереди.",
+      "say": "Значит, Денис: через двадцать минут вы у нас, Московское шоссе, сорок. Я встречаю на приёмке, мастер цеха снимает оба передних колеса и проверяет шпильки и диски. Всё за наш счёт."
+    },
+    "asr_quality": "poor"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "complaint",
+        "customer_angry"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "poor",
+      "strength_segment": 10,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Дмитрий, слушаю вас",
+        "recap": "Значит, так: едете по тихоньку к нам на Московское шоссе, я встречаю на приёмке, [unintelligible] смотрим сразу, без очереди"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Вы правы, это наш косяк, и серьёзный",
+        "why": "Признал вину первой же фразой и без оговорок. После неё клиент перестал кричать и начал отвечать на вопросы."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "Значит, так: едете по тихоньку к нам на Московское шоссе, я встречаю на приёмке, [unintelligible] смотрим сразу, без очереди.",
+        "say": "Значит, Денис: через двадцать минут вы у нас, Московское шоссе, сорок. Я встречаю на приёмке, мастер цеха снимает оба передних колеса и проверяет шпильки и диски. Всё за наш счёт."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни. Но по чистой речи видно то, чего на записи почти нет: что он велел подтянуть гайки крест-накрест, предложил эвакуатор за счёт сервиса и пообещал проверку мастером цеха.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 1,
+      "objection": "not_applicable"
+    },
+    "score": null
+  },
+  "why": {
+    "call_type": "existing_job: жалоба на работу, выполненную накануне.",
+    "greeting": "2: компания и имя в первой фразе; она записана чисто.",
+    "recap": "1: куда ехать и кто встречает. Что будут делать, из строки выпало под шумом; номера дома и времени он не называл.",
+    "score": "Оценки нет: применимых проверок две.",
+    "tags": "complaint и customer_angry: клиент кричит, ругается и требует механика к ответу.",
+    "outcome": "visit_agreed: клиент возвращается в сервис сейчас же.",
+    "asr_quality": "poor: шестнадцать мест [unintelligible], две пометки о неуверенности, две реплики под чужим говорящим, оборванный конец фразы. Проверки устояли только потому, что приветствие и итог попали в чистые куски.",
+    "speaker_swap": "Реплики 7 и 8 записаны под чужими ролями. Ни одна проверка на них не опирается.",
+    "carried_by": []
+  },
+  "day_report": {
+    "would_say": "В отчёте дня у Дмитрия звонок без оценки: жалоба на вчерашнюю работу, клиент возвращается в сервис; запись плохого качества. Сама жалоба относится к механику, а не к приёмке."
+  },
+  "new_facts": [
+    "Клиент Денис Маркелов, Mitsubishi Lancer X 2011, телефон +7 907 461-14-93.",
+    "Накануне звонка (четверг) у него наряд на главной площадке: замена передних колодок и дисков, механик Максим Рябов (место 11).",
+    "В день звонка гарантийный наряд, указывающий на вчерашний: гайки левого переднего колеса не были затянуты; мастер цеха снял оба передних колеса, проверил шпильки и диски, протянул гайки. Эвакуатор не понадобился."
+  ]
+}

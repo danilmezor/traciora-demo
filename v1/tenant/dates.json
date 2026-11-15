@@ -1,0 +1,23 @@
+{
+ "_doc": "How the tenant step writes a knowledge page's date placeholder (kb/OUTLINE.md section 1, OUTLINE-ru.md section 1), per configuration. Month and weekday names are CLDR's (Intl, ICU 79.1, CLDR 49), Monday first; formats are the outlines' renderings. The Russian forms a sentence needs beside the nominative: the weekday in the accusative (за среду), with its preposition (в среду, во вторник), a day without its weekday (18 ноября), a deadline (к 18 ноября), a month after «с» (с мая 2026 г.), a weekday after «с», alone and with a time (со среды; со среды, с 9:40). Seasons by month: December to February winter, March to May spring, June to August summer, September to November fall.",
+ "en": {
+  "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  "seasons": {"winter": "winter", "spring": "spring", "summer": "summer", "fall": "fall"},
+  "formats": {"date": "{month} {day}, {year}", "day": "{weekday}, {month} {day}", "month": "{month} {year}", "season": "{season}"}
+ },
+ "ru": {
+  "months": ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"],
+  "months_genitive": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+  "weekdays": ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"],
+  "weekdays_accusative": ["понедельник", "вторник", "среду", "четверг", "пятницу", "субботу", "воскресенье"],
+  "on_weekday": ["в понедельник", "во вторник", "в среду", "в четверг", "в пятницу", "в субботу", "в воскресенье"],
+  "on_day": "{day} {month_genitive}",
+  "until_day": "к {day} {month_genitive}",
+  "since_weekday": ["с понедельника", "со вторника", "со среды", "с четверга", "с пятницы", "с субботы", "с воскресенья"],
+  "since_daytime": "{since_weekday}, с {time}",
+  "month_after_с": "{month_genitive} {year} г.",
+  "seasons": {"winter": "зима", "spring": "весна", "summer": "лето", "fall": "осень"},
+  "formats": {"date": "{day} {month_genitive} {year} г.", "day": "{weekday}, {day} {month_genitive}", "month": "{month} {year} г.", "season": "{season} {year} г."}
+ }
+}

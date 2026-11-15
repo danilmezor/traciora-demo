@@ -1,0 +1,230 @@
+{
+  "format": "seed-conversation/1",
+  "id": "05-s1-telegram-weekly-vans",
+  "configuration": "ru",
+  "number": 5,
+  "story": "S1",
+  "title": "Здоровый корпоративный клиент: заявка диспетчера на понедельник, каждую неделю, в одном чате в Telegram",
+  "demonstrates": "One messenger conversation for life: every week the dispatcher's message reopens it, the assistant drafts, the east shop's lead advisor edits and sends, and resolves. Four sessions are written: the first after go-live, found work that had hung for two days on the other advisor's shift, a van swapped, and this week's, which at T is confirmed and waits on the customer. It is the named open messenger chat: its last public line is the shop's and no draft sits in its box.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "ref": "accounts.json ru.A2 contacts[0]",
+      "name": "Лариса Геннадьевна Шишкина",
+      "company": "ООО «Тёплый контур»",
+      "role": "диспетчер (записывает машины на еженедельное окно)",
+      "phone": "+7 907 514-79-22",
+      "first_time": false
+    },
+    "named_in_a_line": [
+      {"name": "Виктор Семёнович Агафонов", "ref": "accounts.json ru.A2 contacts[1]", "role": "директор"},
+      {
+        "slot": 17,
+        "name": "Артём Николаев",
+        "role": "второй приёмщик east: обещал перезвонить и не перезвонил"
+      }
+    ],
+    "staff": [
+      {"slot": 16, "name": "Светлана Демидова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Диспетчер клиента с самым большим числом визитов. Заявку на понедельник она годами передавала по телефону; с запуска системы пишет сюда.",
+    "vehicles": "пять машин каждый понедельник к 9:00 из парка в 25 (accounts.json ru.A2): номера названы в каждой сессии",
+    "wants": "Подтверждение окна на понедельник; по найденным работам — решение в тот же день.",
+    "what_happens": "Сессия 1: первая заявка в мессенджере. Сессия 2: Largus Т-09 стоит с понедельника, второй приёмщик обещал перезвонить по помпе и не перезвонил; Светлана в свою смену извиняется, присылает фото и договорную цену, директор согласует, машина готова к вечеру. Сессия 3: одну машину меняют, пропущенную ставят на другой понедельник. Сессия 4, накануне T: пять машин на следующий понедельник подтверждены, и Светлана задаёт один вопрос, на который ещё не ответили.",
+    "facts": {
+      "weekly_slot": "понедельник, 09:00, пять машин (ledger acct.A2.weekly_slot)",
+      "price_class": "договорные цены (A1 и A2; ledger price.hour.company)",
+      "sessions_written": 4,
+      "sessions_in_the_seed": "по одной в неделю с даты G; остальные собираются из этих четырёх: номера из парка, те же два голоса",
+      "rota": "Светлана работает два через два (фаза A); в её выходные заявку принимает слот 17",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "12 279,80 ₽", "amount": 12279.8, "what": "замена водяного насоса (помпы), класс van, договорная цена", "from": {"catalogue": "water_pump", "class": "van", "tier": "standard", "price_class": "company", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "3 мм", "what": "толщина колодок, ниже которой она спрашивает решение; привычка сервиса, не строка каталога"},
+        {"said": "километров на семьсот", "what": "на сколько Т-08 переходил ТО в сессии 3; придумано"}
+      ]
+    }
+  },
+  "days": {
+    "T-162d": {"anchor": "slot 16's first working day on or after the Thursday of week T-23", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 23, "on_or_after_for_slot": 16}, "nominal": "Thu 2026-06-04", "what": "session 1: the first list sent here, for the Monday after"},
+    "T-158d": {"anchor": "the Monday of week T-22", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 22}, "nominal": "Mon 2026-06-08", "what": "«понедельник, 8 июня»"},
+    "T-116d": {"anchor": "the Monday of week T-16", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 16}, "nominal": "Mon 2026-07-20", "what": "the Monday the Largus Т-09 came in; slot 17's shift"},
+    "T-114d": {"anchor": "slot 16's first working day on or after the Monday of week T-16", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 16, "on_or_after_for_slot": 16}, "nominal": "Wed 2026-07-22", "what": "session 2: found work that waited two days for an answer"},
+    "T-42d": {"anchor": "slot 16's first working day on or after the Thursday of week T-6", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 6, "on_or_after_for_slot": 16}, "nominal": "Fri 2026-10-02", "what": "session 3: a van swapped"},
+    "T-39d": {"anchor": "the Monday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 5}, "nominal": "Mon 2026-10-05", "what": "the Monday of session 3"},
+    "T-32d": {"anchor": "the Monday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 4}, "nominal": "Mon 2026-10-12", "what": "«понедельник, 12 октября»"},
+    "T-1d": {"anchor": "slot 16's last working day before T", "rule": {"kind": "slot_working_day", "slot": 16, "n": -1}, "nominal": "Thu 2026-11-12", "what": "session 4: this week's list, for the Monday of week W+1"},
+    "T+3d": {"anchor": "the Monday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": -1}, "nominal": "Mon 2026-11-16", "what": "«понедельник, 16 ноября»"}
+  },
+  "floating_days": [
+    {"word": "на понедельник", "said_on": "T-162d", "day": "the Monday of week T-22", "form": "на + accusative"},
+    {"word": "8 июня", "said_on": "T-162d", "day": "the Monday of week T-22", "form": "date"},
+    {"word": "До понедельника", "said_on": "T-162d", "day": "the Monday of week T-22", "form": "до + genitive"},
+    {"word": "с понедельника", "said_on": "T-114d", "day": "the Monday of week T-16", "form": "с + genitive"},
+    {"word": "в понедельник", "said_on": "T-114d", "day": "the Monday of week T-16", "form": "в + accusative"},
+    {"word": "сегодня", "said_on": "T-114d", "day": "T-114d", "form": "adverb"},
+    {"word": "в понедельник вместе с остальными", "said_on": "T-114d", "day": "the Monday of week T-15", "form": "в + accusative"},
+    {"word": "на понедельник", "said_on": "T-42d", "day": "the Monday of week T-5", "form": "на + accusative"},
+    {"word": "В понедельник", "said_on": "T-42d", "day": "the Monday of week T-5", "form": "в + accusative"},
+    {"word": "всю неделю", "said_on": "T-42d", "day": "the week T-6", "form": "accusative"},
+    {"word": "12 октября", "said_on": "T-42d", "day": "the Monday of week T-4", "form": "date"},
+    {"word": "На понедельник, 16-е", "said_on": "T-1d", "day": "the Monday of week W+1 (T+3d)", "form": "на + accusative"},
+    {"word": "16 ноября", "said_on": "T-1d", "day": "the Monday of week W+1 (T+3d)", "form": "date"},
+    {"word": "в понедельник", "said_on": "T-1d", "day": "the Monday of week W+1 (T+3d)", "form": "в + accusative"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "4503599627371807",
+      "peer": {"id": "4503599627371807", "name": "Лариса Шишкина"},
+      "contact": {
+        "identifier": "telegram_4503599627371807",
+        "name": "Лариса Шишкина",
+        "phone": null,
+        "avatar": {
+          "has": true,
+          "kind": "view",
+          "shows": "герань на подоконнике, за окном двор в снегу",
+          "person_in_it": false
+        }
+      },
+      "opened": {
+        "day": "T-162d",
+        "at": "14:20:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "the conversation was created by the first session; every later session reopens it"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-162d", "at": "14:20:10", "kind": "message", "from": "customer", "text": "Светлана, добрый день. Это Лариса Геннадьевна, «Тёплый контур». Виктор Семёнович сказал, заявки на понедельник теперь можно сюда писать, а не звонить?"},
+        {"n": 2, "day": "T-162d", "at": "14:21:05", "kind": "message", "from": "customer", "text": "На понедельник, 8 июня: Т-02, Т-06, Т-11, Т-15, Т-22. Всем ТО. По Т-15 водитель жалуется, тянет вправо."},
+        {"n": 3, "day": "T-162d", "at": "14:21:50", "kind": "draft", "id": "d1", "text": "Лариса Геннадьевна, добрый день! Да, заявки на понедельник можно присылать сюда. На понедельник, 8 июня, к 9:00: Т-02, Т-06, Т-11, Т-15 и Т-22 на ТО; по Т-15 проверим, почему машину тянет вправо.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-162d", "at": "14:26:30", "became": 5}},
+        {"n": 4, "day": "T-162d", "at": "14:26:28", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 5, "day": "T-162d", "at": "14:26:30", "kind": "message", "from": "staff", "slot": 16, "text": "Лариса Геннадьевна, добрый день! Да, пишите сюда, так даже удобнее: всё перед глазами. Записала на понедельник, 8 июня, к 9:00 все пять: Т-02, Т-06, Т-11, Т-15 и Т-22, ТО. ГАЗель Т-15 сразу загоним на стенд, посмотрим развал. Как обычно, Лариса Геннадьевна: по готовности каждой машины напишу сюда, а всё, что сверх ТО, сначала согласую с вами."},
+        {"n": 6, "day": "T-162d", "at": "14:28:40", "kind": "message", "from": "customer", "text": "Отлично, спасибо"},
+        {"n": 7, "day": "T-162d", "at": "14:29:20", "kind": "draft", "id": "d2", "text": "Спасибо, Лариса Геннадьевна! До понедельника.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 16, "day": "T-162d", "at": "14:30:05", "became": 8}},
+        {"n": 8, "day": "T-162d", "at": "14:30:05", "kind": "message", "from": "staff", "slot": 16, "text": "Спасибо, Лариса Геннадьевна! До понедельника."},
+        {"n": 9, "day": "T-162d", "at": "14:30:20", "kind": "activity", "what": "label_added", "label": "юрлицо", "by": 16},
+        {"n": 10, "day": "T-162d", "at": "14:30:40", "kind": "activity", "what": "resolved", "by": 16},
+        {"n": 11, "day": "T-114d", "at": "10:05:20", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 12, "day": "T-114d", "at": "10:05:20", "kind": "message", "from": "customer", "text": "Светлана, добрый день. Ларгус Т-09 с понедельника у вас стоит. Артём в понедельник сказал, что помпа течёт, обещал перезвонить с ценой и пропал. Машина нам нужна."},
+        {"n": 13, "day": "T-114d", "at": "10:06:05", "kind": "draft", "id": "d3", "text": "Лариса Геннадьевна, добрый день! Приношу извинения, что вам не перезвонили. Данных по Т-09 у меня сейчас нет: уточню у мастера, что с помпой и сколько стоит замена, и сразу напишу.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-114d", "at": "10:11:40", "became": 14}},
+        {"n": 14, "day": "T-114d", "at": "10:11:40", "kind": "message", "from": "staff", "slot": 16, "text": "Лариса Геннадьевна, добрый день! Прошу прощения, это наша недоработка: вам должны были перезвонить ещё в понедельник. Т-09 посмотрела сама. Помпа течёт по сальнику, антифриз уходит, фото ниже. Я бы на такой машине людей на объекты не отправляла: встанет с перегревом. Замена помпы по вашему договору — 12 279,80 ₽ с запчастью. Запчасть есть: если подтвердите до 12:00, сегодня к 17:00 машина будет готова. Или делаем в понедельник вместе с остальными. Как решите, Лариса Геннадьевна?", "files": [{"kind": "image", "file": "T-09_pompa.jpg", "pool": "worn-part-water-pump", "shows": "помпа на двигателе Largus, розовые подтёки антифриза под шкивом, на них показывает отвёртка"}]},
+        {"n": 15, "day": "T-114d", "at": "10:15:10", "kind": "message", "from": "customer", "text": "Сейчас у Виктора Семёновича спрошу"},
+        {"n": 16, "day": "T-114d", "at": "10:15:50", "kind": "draft", "id": "d4", "text": "Хорошо, Лариса Геннадьевна, ждём вашего решения.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-114d", "at": "10:32:00", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 17, "day": "T-114d", "at": "10:31:20", "kind": "message", "from": "customer", "text": "Делайте сегодня. Заявка 96/07"},
+        {"n": 18, "day": "T-114d", "at": "10:32:00", "kind": "draft", "id": "d5", "text": "Спасибо, Лариса Геннадьевна. Меняем помпу на Т-09 сегодня, заявка 96/07, к 17:00 машина будет готова.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-114d", "at": "10:35:10", "became": 19}},
+        {"n": 19, "day": "T-114d", "at": "10:35:10", "kind": "message", "from": "staff", "slot": 16, "text": "Спасибо, Лариса Геннадьевна, и Виктору Семёновичу спасибо за быстрый ответ. Итак: меняем помпу на Ларгусе Т-09 сегодня, заявка 96/07, 12 279,80 ₽. К 17:00 будет готов, водителю напишу сама, когда можно забирать.", "late": "nothing to answer until the customer came back with the decision: the product counts the wait from «Сейчас спрошу»"},
+        {"n": 20, "day": "T-114d", "at": "10:35:30", "kind": "activity", "what": "label_added", "label": "согласование", "by": 16},
+        {"n": 21, "day": "T-114d", "at": "10:36:40", "kind": "message", "from": "customer", "text": "Спасибо"},
+        {"n": 22, "day": "T-114d", "at": "10:37:20", "kind": "draft", "id": "d6", "text": "Пожалуйста, Лариса Геннадьевна!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 16, "day": "T-114d", "at": "10:38:30", "because": "cleared from the reply box"}},
+        {"n": 23, "day": "T-114d", "at": "10:38:40", "kind": "activity", "what": "resolved", "by": 16},
+        {"n": 24, "day": "T-42d", "at": "15:40:10", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 25, "day": "T-42d", "at": "15:40:10", "kind": "message", "from": "customer", "text": "Светлана, на понедельник замена: вместо Т-08 пришлём Т-13. Восьмой Ларгус всю неделю на объекте в Димитровграде."},
+        {"n": 26, "day": "T-42d", "at": "15:40:45", "kind": "message", "from": "customer", "text": "Итого: Т-04, Т-05, Т-13, Т-18, Т-24"},
+        {"n": 27, "day": "T-42d", "at": "15:41:30", "kind": "draft", "id": "d7", "text": "Принято, Лариса Геннадьевна: вместо Т-08 будет Т-13. На понедельник к 9:00: Т-04, Т-05, Т-13, Т-18 и Т-24.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-42d", "at": "15:46:20", "became": 28}},
+        {"n": 28, "day": "T-42d", "at": "15:46:20", "kind": "message", "from": "staff", "slot": 16, "text": "Поняла, Лариса Геннадьевна: вместо Т-08 ставлю Т-13. В понедельник к 9:00 ждём Т-04, Т-05, Т-13, Т-18 и Т-24. Восьмой Ларгус уже километров на семьсот переходил ТО, я бы дольше не тянула. Поставить его на понедельник, 12 октября?"},
+        {"n": 29, "day": "T-42d", "at": "15:50:30", "kind": "message", "from": "customer", "text": "да, ставьте"},
+        {"n": 30, "day": "T-42d", "at": "15:51:10", "kind": "draft", "id": "d8", "text": "Готово, Лариса Геннадьевна. Т-08 записан на понедельник, 12 октября.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-42d", "at": "15:53:20", "became": 31}},
+        {"n": 31, "day": "T-42d", "at": "15:53:20", "kind": "message", "from": "staff", "slot": 16, "text": "Записала: Т-08 на понедельник, 12 октября. Накануне напомню."},
+        {"n": 32, "day": "T-42d", "at": "15:53:40", "kind": "activity", "what": "resolved", "by": 16},
+        {"n": 33, "day": "T-1d", "at": "13:20:15", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 34, "day": "T-1d", "at": "13:20:15", "kind": "message", "from": "customer", "text": "Светлана, добрый день. На понедельник, 16-е: Т-03, Т-07, Т-12, Т-16, Т-25."},
+        {"n": 35, "day": "T-1d", "at": "13:20:50", "kind": "message", "from": "customer", "text": "По Т-12 водитель говорит, печка еле дует. Не май месяц)"},
+        {"n": 36, "day": "T-1d", "at": "13:21:30", "kind": "draft", "id": "d9", "text": "Лариса Геннадьевна, добрый день! Принято на понедельник, 16 ноября, к 9:00: Т-03, Т-07, Т-12, Т-16 и Т-25. По Т-12 проверим отопитель.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-1d", "at": "13:26:40", "became": 37}},
+        {"n": 37, "day": "T-1d", "at": "13:26:40", "kind": "message", "from": "staff", "slot": 16, "text": "Лариса Геннадьевна, добрый день! Записала на понедельник, 16 ноября, к 9:00 все пять: Т-03, Т-07, Т-12, Т-16 и Т-25. Гранту Т-12 посмотрим первой: я бы на своей машине проверила уровень антифриза и термостат, пока морозы не ударили. И один вопрос к вам, Лариса Геннадьевна: на Дастере Т-25 на прошлом ТО задние колодки были уже на исходе. Если в понедельник намеряем меньше 3 мм, меняем сразу или сначала звоню Виктору Семёновичу?"}
+      ],
+      "assignee_history": [
+        {"day": "T-162d", "at": "14:26:28", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "open",
+        "owner": 16,
+        "labels": ["юрлицо", "согласование"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "waits_on": "the customer: the last public line is the shop's question; a reply cannot be sent on Telegram in a live demo and none is owed (ledger conv.live_demo, conv.open_at_t)",
+        "sessions": [
+          {"n": 1, "day": "T-162d", "ended": "resolved by 16"},
+          {"n": 2, "day": "T-114d", "ended": "resolved by 16"},
+          {"n": 3, "day": "T-42d", "ended": "resolved by 16"},
+          {"n": 4, "day": "T-1d", "ended": "open at T, waiting on the customer"}
+        ]
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 6.3},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 16, "working_minutes": 6.3, "wall_minutes": 6.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 6, "answered": 8, "by": 16, "working_minutes": 1.4, "wall_minutes": 1.4, "measured_from": "n 6", "reply": "later"},
+          {"asked": 12, "answered": 14, "by": 16, "working_minutes": 6.3, "wall_minutes": 6.3, "measured_from": "n 12", "reply": "first"},
+          {"asked": 15, "answered": 19, "by": 16, "working_minutes": 20.0, "wall_minutes": 20.0, "measured_from": "n 15", "reply": "later", "late": "nothing to answer until the customer came back with the decision: the product counts the wait from «Сейчас спрошу»"},
+          {"asked": 25, "answered": 28, "by": 16, "working_minutes": 6.2, "wall_minutes": 6.2, "measured_from": "n 25", "reply": "first"},
+          {"asked": 29, "answered": 31, "by": 16, "working_minutes": 2.8, "wall_minutes": 2.8, "measured_from": "n 29", "reply": "later"},
+          {"asked": 34, "answered": 37, "by": 16, "working_minutes": 6.4, "wall_minutes": 6.4, "measured_from": "n 34", "reply": "first"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 5,
+          "working_minutes": 6.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 12, "assistant": 0, "manager": 7, "note": 0},
+        "resolutions": [
+          {"day": "T-162d", "at": "14:30:40", "by": 16},
+          {"day": "T-114d", "at": "10:38:40", "by": 16},
+          {"day": "T-42d", "at": "15:53:40", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 16},
+          {"draft": "d3", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d4", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d5", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d6", "outcome": "discarded", "manager": 16},
+          {"draft": "d7", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d8", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d9", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "slot 16: the chat's first answer is hers (6.3 minutes, her ledger row is 6); in the four sessions seven replies, five drafts edited, one sent as it was, one cleared; three resolutions of one chat",
+        "new_dialogs": "Stats counts this chat once, in the week it was created: its later sessions are in no 'new dialogs' figure (design section 10, gap 3)"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "company account: weekly bookings, quotes, documents",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "open at T: next Monday's five vehicles confirmed, one question to the customer unanswered",
+    "facts": [
+      "A2 books five vehicles every Monday at 09:00 through this conversation",
+      "found work on Т-09 (a water pump, 12 279,80 at the contract price) waited two days because slot 17 did not call back; slot 16 had it approved in half an hour, request 96/07",
+      "Т-08 missed a Monday and was put on a later one",
+      "at T the list for the Monday of week W+1 is confirmed and the shop waits for an answer about Т-25's rear brake shoes",
+      "nothing is overdue on the shop's side"
+    ],
+    "questions": ["S1.1", "S5.1"]
+  },
+  "why": [
+    "Лариса Геннадьевна пишет как диспетчер: номера машин, никаких вступлений со второй недели, «Сейчас у Виктора Семёновича спрошу».",
+    "Светлана сохраняет факты черновика и добавляет своё: имя-отчество дважды, «я бы на такой машине», выбор из двух, итог.",
+    "Сессия 2 — история S5 в переписке: без неё машина два дня ждёт звонка, с ней вопрос решён за полчаса. Вину она берёт на сервис и Артёма не выгораживает.",
+    "Черновик, который клиент «обогнал», уходит как «заменён, никто не действовал» (d4); «спасибо», на которое отвечать нечего, она просто убирает (d6)."
+  ],
+  "new_facts": [
+    "Заявки на понедельник: неделя T-22: Т-02, Т-06, Т-11, Т-15, Т-22; неделя T-5: Т-04, Т-05, Т-13, Т-18, Т-24 (Т-08 заменён); неделя T-4: добавлен Т-08; неделя W+1: Т-03, Т-07, Т-12, Т-16, Т-25.",
+    "Largus Т-09 приехал в понедельник недели T-16 на ТО, у него нашли течь помпы; слот 17 обещал перезвонить с ценой и не перезвонил; помпу заменили в первый рабочий день слота 16 после этого, 12 279,80 по договору, заявка 96/07.",
+    "ГАЗель Т-15 тянуло вправо (неделя T-22); у Granta Т-12 слабо греет печка (неделя W0); у Duster Т-25 задние колодки были на исходе на прошлом ТО; Т-08 в начале октября работал на объекте в Димитровграде.",
+    "Фото T-09_pompa.jpg (пул 'worn-part-water-pump').",
+    "Картинка контакта: герань на подоконнике, за окном двор в снегу."
+  ]
+}

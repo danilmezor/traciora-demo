@@ -1,0 +1,140 @@
+{
+  "format": "seed-conversation/1",
+  "id": "22-people-p23-web-found-on-the-invoice",
+  "configuration": "en",
+  "number": 22,
+  "story": "people",
+  "title": "Work recommended on the invoice and never said aloud: the customer asks the website",
+  "demonstrates": "Slot 23 writes up what he is asked for and mentions the rest at pick-up, or not at all. A customer finds 'rear brake pads 3mm, recommend replace' on her invoice at home. The assistant says what 3 mm means in general and hands over. His reply comes at 17:02: 'yeah theyre low. bring it back whenever'. Asked the price, he gives it the next morning, with no time and no step.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Monica Reyes",
+      "invented": true,
+      "first_time": false,
+      "note": "a customer of the Charlotte Pike shop; 2016 Hyundai Tucson, picked up the day before",
+      "phone": "(615) 555-0289"
+    },
+    "staff": [
+      {"slot": 23, "name": "Chad Binkley"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer who read her invoice at home.",
+    "vehicle": "2016 Hyundai Tucson",
+    "what_happens": "Is it safe? The assistant: 3 mm is close to the end; here is a person. The person, at closing time: bring it back whenever. How much and how long? The next morning: the price and 'about an hour'.",
+    "facts": {
+      "recommended": "rear brake pads; written on the invoice, not said at pick-up",
+      "sold": "no",
+      "public_pages_used": ["brake questions: pad thickness"],
+      "prices": [
+        {"said": "$225.77", "amount": 225.77, "what": "rear brake pads, class car, standard parts", "from": {"catalogue": "rear_brake_pads", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "225.77", "amount": 225.77, "what": "the same, as he writes it", "from": {"catalogue": "rear_brake_pads", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "3mm", "what": "the measurement on her invoice"},
+        {"said": "3 mm", "what": "the same"}
+      ]
+    }
+  },
+  "days": {
+    "T-36d": {"anchor": "the Thursday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 5}, "nominal": "Thu 2026-10-08"},
+    "T-35d": {"anchor": "1 calendar day after the Thursday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 5, "plus_days": 1}, "nominal": "Fri 2026-10-09", "what": "the next day"},
+    "T-28d": {"anchor": "8 calendar days after the Thursday of week T-5", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": 5, "plus_days": 8}, "nominal": "Fri 2026-10-16", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "yesterday", "said_on": "T-36d", "day": "the Wednesday of week T-5"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "5eedc0de-0022-4e00-8000-00000000e016",
+      "peer": {"id": "seedv1-browser-en-0760", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0760",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-36d", "at": "12:10:20", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-36d", "at": "12:10:20", "kind": "message", "from": "customer", "text": "Picked up my Tucson at Charlotte Pike yesterday and the invoice says 'rear brake pads 3mm, recommend replace'. Nobody said anything when I paid. Is it safe to drive?"},
+        {"n": 2, "day": "T-36d", "at": "12:10:45", "kind": "message", "from": "assistant", "text": "Hello. I'm the assistant for Brennan Auto Care. I can't see your invoice or diagnose a car over chat, but brake pads at 3 mm are close to the end of their life, so it's worth replacing them soon rather than waiting for a noise. I'll pass your question to the Charlotte Pike shop so an advisor can go over it with you. What's your name and the best number to reach you?"},
+        {"n": 3, "day": "T-36d", "at": "12:11:30", "kind": "message", "from": "customer", "text": "Monica Reyes 615 555 0289"},
+        {"n": 4, "day": "T-36d", "at": "12:11:54", "kind": "message", "from": "assistant", "text": "Thank you, Monica. Your question is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 5, "day": "T-36d", "at": "12:11:55", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Monica Reyes", "phone": "(615) 555-0289", "site": "Charlotte Pike", "context": "Monica Reyes picked up her Hyundai Tucson at the Charlotte Pike shop yesterday. The invoice says 'rear brake pads 3mm, recommend replace'; nobody told her at pick-up, and she asks if it is safe to drive. I said pads at 3 mm are near the end and should be replaced soon; I can't see the invoice."}}, "note": {"from": "assistant", "private": true, "text": "Monica Reyes picked up her Hyundai Tucson at the Charlotte Pike shop yesterday. The invoice says 'rear brake pads 3mm, recommend replace'; nobody told her at pick-up, and she asks if it is safe to drive. I said pads at 3 mm are near the end and should be replaced soon; I can't see the invoice."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "west", "owner": null, "due": "T-36d 17:30, the day's close"}},
+        {"n": 6, "day": "T-36d", "at": "12:23", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 7, "day": "T-36d", "at": "12:47", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-36d", "at": "17:02:08", "kind": "activity", "what": "assigned", "derived": true, "to": 23, "by": 23, "how": "first reply"},
+        {"n": 9, "day": "T-36d", "at": "17:02:10", "kind": "message", "from": "staff", "slot": 23, "text": "yeah theyre low. bring it back whenever", "late": "his replies come at the end of the day (cast.json; ledger conv.slowest_tenth)"},
+        {"n": 10, "day": "T-36d", "at": "17:02:11", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 23, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-36d", "at": "17:02:12", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-36d", "at": "17:20:05", "kind": "message", "from": "customer", "text": "How much, and how long does it take?"},
+        {"n": 13, "day": "T-36d", "at": "17:20:45", "kind": "draft", "id": "d1", "text": "Replacing the rear brake pads on a car like yours is $225.77 before shop supplies and tax and takes about an hour. Would you like to book a time?", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 23, "day": "T-35d", "at": "08:20:30", "because": "he sent his own text (n 15)"}},
+        {"n": 14, "day": "T-35d", "at": "07:44", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 15, "day": "T-35d", "at": "08:20:30", "kind": "message", "from": "staff", "slot": 23, "text": "225.77 plus tax. about an hour"},
+        {"n": 16, "day": "T-35d", "at": "08:20:32", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 17, "day": "T-28d", "at": "08:20", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-36d", "at": "17:02:08", "to": 23, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 23,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 25},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 9, "by": 23, "working_minutes": 290.2, "wall_minutes": 290.2, "measured_from": "n 5", "reply": "first", "late": "his replies come at the end of the day (cast.json; ledger conv.slowest_tenth)"},
+          {"asked": 12, "answered": 15, "by": 23, "working_minutes": 60.4, "wall_minutes": 900.4, "measured_from": "n 12", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 23,
+          "n": 9,
+          "working_minutes": 290.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 2, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-28d", "at": "08:20", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 23}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 23: his first line 290.2 working minutes after the hand-off, two replies, one draft discarded, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "assistant first, handed over (escalation), slot 23",
+    "outcome": "the recommended rear pads are not sold; resolved by 7 silent days",
+    "facts": [
+      "the recommendation was on the invoice and was not said at pick-up",
+      "slot 23 answered at 17:02 with no price and no time",
+      "the price, 225.77, came the next morning; no time was offered"
+    ],
+    "questions": []
+  },
+  "why": [
+    "'bring it back whenever' is a recommendation mentioned when it is too late, in writing.",
+    "The draft ended with 'Would you like to book a time?'; his line ends with 'about an hour'.",
+    "This is how a shop sells four recommendations in ten."
+  ],
+  "new_facts": [
+    "Monica Reyes, (615) 555-0289 (tier B), 2016 Hyundai Tucson, at west on the Wednesday of week T-5: rear brake pads at 3 mm recommended on the invoice (225.77), not sold."
+  ]
+}

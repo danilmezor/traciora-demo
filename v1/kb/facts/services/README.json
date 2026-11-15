@@ -1,0 +1,151 @@
+{
+ "path": "services/README.md",
+ "title": "Services",
+ "first_revision_text": "en/_history/services/README.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Index of the service pages and how to use them on the phone.",
+ "serves": [
+  "S12",
+  "operate:overview",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "short",
+ "words_en": 258,
+ "links_to": [
+  "prices/price-list.md",
+  "services/maintenance/oil-change.md",
+  "services/maintenance/filters-and-wipers.md",
+  "services/maintenance/spark-plugs.md",
+  "services/maintenance/coolant-service.md",
+  "services/maintenance/scheduled-maintenance.md",
+  "services/maintenance/fuel-system-service.md",
+  "services/maintenance/fleet-pm-service.md",
+  "services/brakes/brake-inspection.md",
+  "services/brakes/pads-and-rotors.md",
+  "services/brakes/calipers-and-drum-brakes.md",
+  "services/brakes/brake-fluid-flush.md",
+  "services/tires/rotation-balance-and-flat-repair.md",
+  "services/tires/alignment.md",
+  "services/tires/new-tires-and-tpms.md",
+  "services/diagnostics/check-engine-light.md",
+  "services/diagnostics/electrical-diagnosis.md",
+  "services/diagnostics/noises-and-vibrations.md",
+  "services/suspension/struts-and-shocks.md",
+  "services/suspension/front-end-parts.md",
+  "services/suspension/wheel-bearings-and-steering-racks.md",
+  "services/ac/ac-check-and-recharge.md",
+  "services/ac/ac-compressor-and-condenser.md",
+  "services/electrical/battery.md",
+  "services/electrical/alternator-and-starter.md",
+  "services/engine/timing-belt.md",
+  "services/engine/drive-belt.md",
+  "services/engine/cooling-system-repairs.md",
+  "services/engine/leaks-and-gaskets.md",
+  "services/engine/ignition-sensors-and-fuel-pump.md",
+  "services/engine/mounts-and-exhaust.md",
+  "services/transmission/transmission-fluid-service.md",
+  "services/transmission/clutch-and-cv-axles.md",
+  "services/transmission/transmission-rebuild.md",
+  "services/inspections/courtesy-inspection.md",
+  "services/inspections/pre-purchase-inspection.md",
+  "services/hybrids.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "37 service pages in ten folders plus hybrids.md; each written for the counter.",
+  "Prices on service pages are examples (car, standard parts, before supplies and tax); quotes come from the price list.",
+  "The old page services/brakes/brake-questions.md is not in this index (orphan: its author left)."
+ ],
+ "tables": [
+  {
+   "section": "Services",
+   "columns": [
+    "Folder",
+    "Pages"
+   ],
+   "rows": [
+    {
+     "Folder": "maintenance",
+     "Pages": "Oil change · Filters and wipers · Spark plugs and the \"tune-up\" · Coolant service · Scheduled maintenance 30/60/90K · Fuel system service · Fleet PM service A"
+    },
+    {
+     "Folder": "brakes",
+     "Pages": "Brake inspection · Pads and rotors · Calipers and drum brakes · Brake fluid flush"
+    },
+    {
+     "Folder": "tires",
+     "Pages": "Rotation, balance and flat repair · Alignment · New tires and tire-pressure sensors"
+    },
+    {
+     "Folder": "diagnostics",
+     "Pages": "Check engine light · Electrical diagnosis · Noises and vibrations"
+    },
+    {
+     "Folder": "suspension",
+     "Pages": "Struts and shocks · Front-end parts · Wheel bearings and steering racks"
+    },
+    {
+     "Folder": "ac",
+     "Pages": "A/C check and recharge · A/C compressor and condenser"
+    },
+    {
+     "Folder": "electrical",
+     "Pages": "Battery · Alternator and starter"
+    },
+    {
+     "Folder": "engine",
+     "Pages": "Timing belt · Drive belt · Cooling system repairs · Leaks and gaskets · Ignition, sensors and fuel pump · Mounts and exhaust"
+    },
+    {
+     "Folder": "transmission",
+     "Pages": "Transmission fluid service · Clutch and CV axles · Transmission rebuild"
+    },
+    {
+     "Folder": "inspections",
+     "Pages": "Courtesy inspection · Pre-purchase inspection"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian folders the same; tyres folder gains seasonal changeover and storage pages."
+ ]
+}

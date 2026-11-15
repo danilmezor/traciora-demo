@@ -1,0 +1,77 @@
+{
+ "path": "customers/estimates-and-approvals.md",
+ "title": "Estimates and approvals",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Public promise on estimates: written, per job, nothing without approval.",
+ "serves": [
+  "S7",
+  "challenge:combine-policy-and-price",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_en": 185,
+ "links_to": [
+  "customers/prices-for-common-services.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Estimate after inspection or diagnosis; written; each job priced separately with parts, labour, tax and evidence.",
+  "Approval is per job (ERP order_job approved or declined), by text or e-mail reply, phone or in person; who and when is recorded.",
+  "The approved amount is never exceeded without a new approval.",
+  "Declined work is recorded as deferred and raises a reminder (ERP service_reminder).",
+  "Estimates are valid 30 days.",
+  "Inspection and diagnosis fees are charged regardless."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Estimates and approvals",
+   "item": "We look first. A price for a repair comes after an inspection or a diagnosis, not before."
+  },
+  {
+   "section": "Estimates and approvals",
+   "item": "You get it in writing. The estimate lists each job separately with its parts, labour and tax, and the photos or measurements behind it."
+  },
+  {
+   "section": "Estimates and approvals",
+   "item": "You approve job by job. Say yes to the brakes and no to the shocks if you like. You can approve by replying to the text or e-mail we send, on the phone, or at the counter. We write down who approved and when."
+  },
+  {
+   "section": "Estimates and approvals",
+   "item": "We do not go over. If a job turns out to need more than you approved, we stop and ask. No approval, no extra work."
+  },
+  {
+   "section": "Estimates and approvals",
+   "item": "Work you put off is not forgotten. We note it on your car's record and remind you. No pressure."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-26mo|date}}",
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "Estimate validity 30 days. Reason: needed by the deposit and price-change pages; common shop practice.",
+  "Policy \"in force from T-26mo\": before the ERP history starts, so no order in the data predates it."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian trade: the order (заказ-наряд) is signed by the customer; extra work is agreed by phone and added to the order. Estimate validity: write the Russian habit (often 7 to 14 days because parts prices move); propose 14 days as a new fact."
+ ]
+}

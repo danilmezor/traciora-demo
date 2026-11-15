@@ -1,0 +1,84 @@
+{
+ "path": "accounts/small-business-customers.md",
+ "title": "Небольшие организации и предприниматели",
+ "title_en": "Small business customers",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/small-business-customers.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Businesses with a few vehicles and no account: how they differ from an account.",
+ "serves": [
+  "S1",
+  "challenge:near-duplicate",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 151,
+ "links_to": [
+  "accounts/opening-a-company-account.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Russian small firms often pay by bank transfer on an invoice without a contract: the car is released when the money arrives or a bank-stamped payment order is shown; the closing document is given at once.",
+  "Recorded by ИНН. Warranty the same as everyone (no business-use tier)."
+ ],
+ "new_facts": [
+  "Release against a bank-stamped payment order."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Небольшие организации и предприниматели",
+   "item": "Платят при выдаче, как все. Цены по прайсу. Договора и отсрочки нет."
+  },
+  {
+   "section": "Небольшие организации и предприниматели",
+   "item": "Многие платят по безналу. Тогда выставляем счёт, а машину отдаём, когда деньги пришли или клиент показал платёжку с отметкой банка. Акт или УПД отдаём сразу."
+  },
+  {
+   "section": "Небольшие организации и предприниматели",
+   "item": "Машина записывается на фирму или ИП, по ИНН, а не на водителя: водитель сменится, история останется с машиной."
+  },
+  {
+   "section": "Небольшие организации и предприниматели",
+   "item": "Работы согласует тот, кто стоит на приёмке, если владелец не сказал иначе. Сказал — это записано в примечании к клиенту."
+  },
+  {
+   "section": "Небольшие организации и предприниматели",
+   "item": "Предоплата и хранение — как у частных клиентов. Гарантия тоже."
+  },
+  {
+   "section": "Небольшие организации и предприниматели",
+   "item": "Рабочая машина, которая у них единственная: стараемся отдать в тот же день. Не обещаем."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

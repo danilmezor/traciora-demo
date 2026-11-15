@@ -1,0 +1,723 @@
+{
+  "format": "seed-call/1",
+  "id": "en-04-S4-junior-one-time-booked",
+  "configuration": "en",
+  "number": 4,
+  "story": "S4",
+  "title": "The junior operator in her fourth month: one time offered, the booking taken, a summary without the address",
+  "purpose": "Story S4, period P4. The booking is now hers to take: one time, said plainly, and a summary after it. The price still comes bare, the number is not read back, and a doubt about paying for a diagnosis is soothed instead of answered.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Carla Jenkins",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P4 (rule R6)",
+    "nominal_offset": "T-64d",
+    "nominal_date": "2026-09-10",
+    "local_start": "15:10",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 8,
+    "caller_phone": "423-555-0157",
+    "repeat_caller": false,
+    "talk_s": 124
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Carla Jenkins, whose check engine light came on three days ago.",
+    "vehicle": "2015 Hyundai Sonata",
+    "job": "check engine light: scan, test and diagnose (one hour)",
+    "wants": "somebody to look at it, and what that costs",
+    "what_happens": "Maya asks whether the light is steady and how the car runs, takes the name and the number, gives the diagnostic price, soothes 'a hundred and thirty-five just to tell me what's wrong', offers tomorrow at ten, books it and repeats the time and the work.",
+    "facts": {
+      "booked": "call+1d 10:00",
+      "note": "catalogue.json check_engine_diag: one hour at the posted rate, 135.00.",
+      "prices": [
+        {
+          "what": "Check engine light - scan, test & diagnose (1 hr)",
+          "job": "check_engine_diag",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 135.0,
+          "said": "one thirty-five",
+          "said_usd": 135,
+          "said_as": "before tax"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday",
+      "day": "call-3d"
+    },
+    {
+      "word": "Friday",
+      "day": "call+1d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.9,
+      "said": "Hi. My check engine light came on and I need somebody to look at it. What's that gonna cost me?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 15.2,
+      "said": "Okay, we can do that. What are you driving?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 20.4,
+      "said": "A twenty-fifteen Sonata."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 22.7,
+      "said": "Okay. And is the light staying on steady, or is it blinking at you?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 29.0,
+      "said": "It's just on. It's not blinkin'."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 32.9,
+      "said": "Okay, good — steady's better. Is the car driving any different? Like, is it shaking, or hesitating when you take off?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 42.0,
+      "said": "Not really. Maybe a little rough when it's sittin' still. It came on Monday."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 48.9,
+      "said": "Okay. Let me get your name real quick."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 52.9,
+      "said": "Carla Jenkins."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 54.8,
+      "said": "Carla Jenkins. And what's a good number for you, Carla?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 59.4,
+      "said": "Four two three, five five five, oh one five seven."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 63.8,
+      "said": "Okay, got it. So, Carla, the — what we do is hook it up and test it, and that's one thirty-five for the diagnostic."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 72.4,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 74.1,
+      "said": "A hundred and thirty-five dollars just to tell me what's wrong with it?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 80.9,
+      "said": "I know. I totally understand, it's — nobody likes paying for that part. But we'll take good care of you, I promise."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 89.7,
+      "said": "Hm. ...Okay."
+    },
+    {
+      "n": 18,
+      "who": "advisor",
+      "at_s": 91.4,
+      "said": "So, um — I could get you in tomorrow at ten. Would that work?"
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 97.5,
+      "said": "I guess so. I gotta get it looked at."
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 102.2,
+      "said": "Okay! So I've got you down for tomorrow, Friday, at ten, and I'll check you in myself."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 108.6,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 22,
+      "who": "advisor",
+      "at_s": 110.2,
+      "said": "So that's tomorrow at ten for the check engine light on the Sonata."
+    },
+    {
+      "n": 23,
+      "who": "customer",
+      "at_s": 116.9,
+      "said": "Alright. Thanks."
+    },
+    {
+      "n": 24,
+      "who": "advisor",
+      "at_s": 119.6,
+      "said": "Thank you, Carla! See you tomorrow."
+    },
+    {
+      "n": 25,
+      "who": "customer",
+      "at_s": 123.2,
+      "said": "Bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.7,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          6,
+          7,
+          8,
+          13,
+          16,
+          17,
+          18,
+          19,
+          23
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          4,
+          12,
+          13,
+          18,
+          20,
+          22
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 2,
+        "dropped": 2
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 6,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 252,
+    "stored_words": 240,
+    "strict_word_difference": 0.115
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 264,
+    "duration_s": 124.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hi. My check engine light came on and I need somebody to look at it. What's that going to cost me?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, we can do that. What are you driving?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "A 2015 Sonata.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And is the light staying on steady, or is it blinking at you?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's just on. It's not blinking.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, good, steady's better. Is the car driving any different? Is it shaking, or hesitating when you take off?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Not really. Maybe a little rough when it's sitting still. It came on Monday.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Let me get your name real quick.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Carla Jenkins.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Carla Jenkins. And what's a good number for you, Carla?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0157.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, got it. So, Carla, what we do is hook it up and test it, and that's $135 for the diagnostic.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh-huh. A hundred and thirty-five dollars just to tell me what's wrong with it?",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I know. I totally understand, nobody likes paying for that part. But we'll take good care of you, I promise.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So, I could get you in tomorrow at 10. Would that work?",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I guess so. I got to get it looked at.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay! So I've got you down for tomorrow, Friday, at 10, and I'll check you in myself.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So that's tomorrow at 10 for the check engine light on the Sonata.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Thanks.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you, Carla! See you tomorrow.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Okay, got it.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Is the car driving any different?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "that's $135 for the diagnostic",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "offered_time",
+        "quote": "I could get you in tomorrow at 10.",
+        "level": 1,
+        "segment": 16
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "So I've got you down for tomorrow, Friday, at 10, and I'll check you in myself.",
+        "level": 2,
+        "segment": 18
+      },
+      {
+        "key": "recap",
+        "quote": "So that's tomorrow at 10 for the check engine light on the Sonata.",
+        "level": 1,
+        "segment": 20
+      },
+      {
+        "key": "objection",
+        "quote": "But we'll take good care of you, I promise.",
+        "level": 1,
+        "segment": 14
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "And is the light staying on steady, or is it blinking at you?",
+      "why": "The first thing she asked is the one that decides whether the car may be driven at all.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "But we'll take good care of you, I promise.",
+      "say": "Fair question. The parts store gives you a code; the 135 is an hour of a technician testing what set it, so you fix the right part once. Is it the price that worries you, or whether you need it at all?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 68.8,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 16
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 18
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 20
+        },
+        {
+          "key": "objection",
+          "level": 1,
+          "segment": 14
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 68.8,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "name_and_number": "Okay, got it",
+        "need_discovery": "Is the car driving any different?",
+        "price_with_next_step": "that's $135 for the diagnostic",
+        "offered_time": "I could get you in tomorrow at 10",
+        "asked_for_booking": "So I've got you down for tomorrow, Friday, at 10, and I'll check you in myself",
+        "recap": "So that's tomorrow at 10 for the check engine light on the Sonata",
+        "objection": "But we'll take good care of you, I promise"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "And is the light staying on steady, or is it blinking at you?",
+        "why": "The first thing she asked is the one that decides whether the car may be driven at all."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "But we'll take good care of you, I promise.",
+        "say": "Fair question. The parts store gives you a code; the 135 is an hour of a technician testing what set it, so you fix the right part once. Is it the price that worries you, or whether you need it at all?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": 1
+    },
+    "score": 68.8,
+    "score_exact": 68.75,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "price_objection"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name in the first line.",
+    "name_and_number": "1: she takes the name and the number and says 'got it' without saying the number back.",
+    "need_discovery": "2: the car, the job and what she asked for: steady, a little rough at idle, on since Monday.",
+    "price_with_next_step": "1: a price with nothing about what it covers or depends on; the time comes two of her lines later, after the doubt.",
+    "offered_time": "1: one specific option, tomorrow at ten.",
+    "asked_for_booking": "2: the day, the hour and who checks her in.",
+    "recap": "1: the time and the work; no address for a first-time customer.",
+    "objection": "1: the doubt is about paying to be told what is wrong, and it gets sympathy and a promise, not a reason. She books because she has to.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·1 + 3·1 + 3·2 + 1·1 + 2·1) / 2 = 11 of 16 weight points = 68.8. Exactly 68.75; the product rounds a score to one decimal.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Carla Jenkins, 423-555-0157, 2015 Hyundai Sonata: an appointment at main on call+1d at 10:00 for a check engine diagnosis."
+  ]
+}

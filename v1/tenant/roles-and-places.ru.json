@@ -1,0 +1,127 @@
+{
+  "_doc": "Demo tenant, seed v1, Russian configuration: job roles (core.position), shops (core.location with business_hours, checkin and staffed), their dated hours (core.location_hours_exception) and phone extensions (core.location_alias, namespace pbx_extension; config_key for the shop key). Every value is copied from ledger.json (geo.*, site.*), cast.json (roles, extensions) or phones.md (public lines); Russian display names are verbatim from cast.json roles and ledger geo.short_name. validate.py checks each against them. Dates that move with T are given as the ledger's anchors, plus the dates they give for the reference T of TIMELINE.md (Friday 2026-11-13).",
+  "configuration": "ru",
+  "roles": [
+    {"key": "founder", "name": "Основатель, владелец"},
+    {"key": "managing_owner", "name": "Директор, совладелец"},
+    {"key": "office_manager", "name": "Бухгалтер"},
+    {"key": "service_manager", "name": "Руководитель сервиса"},
+    {"key": "lead_advisor", "name": "Старший мастер-приёмщик"},
+    {"key": "service_advisor", "name": "Мастер-приёмщик"},
+    {"key": "shop_foreman", "name": "Мастер цеха"},
+    {"key": "parts_manager", "name": "Менеджер по запчастям"},
+    {"key": "technician", "name": "Автомеханик"},
+    {"key": "diagnostic_technician", "name": "Автомеханик-диагност"},
+    {"key": "electrical_technician", "name": "Автоэлектрик"},
+    {"key": "lead_technician", "name": "Старший автомеханик"},
+    {"key": "apprentice_technician", "name": "Ученик автомеханика"},
+    {"key": "lube_tyre_technician", "name": "Шиномонтажник"},
+    {"key": "shop_manager", "name": "Руководитель СТО"},
+    {"key": "seasonal_helper", "name": "Шиномонтажник (сезонный)"}
+  ],
+  "places": [
+    {
+      "key": "main",
+      "name": "Московское шоссе",
+      "address": "432045, Ульяновск, Московское шоссе, 40",
+      "latitude": 54.30296,
+      "longitude": 48.28615,
+      "tz": "Europe/Ulyanovsk",
+      "day_cutoff_hour": 0,
+      "staffed": true,
+      "checkin_radius_m": 150,
+      "business_hours": {
+        "mon": [["09:00", "20:00"]], "tue": [["09:00", "20:00"]], "wed": [["09:00", "20:00"]],
+        "thu": [["09:00", "20:00"]], "fri": [["09:00", "20:00"]], "sat": [["09:00", "20:00"]], "sun": [["09:00", "20:00"]]
+      },
+      "public_line": "+7 (8422) 10-40-40",
+      "extensions": [
+        {"ext": "100", "kind": "group line", "rings": ["101", "102", "103", "105"]},
+        {"ext": "101", "kind": "desk", "slot": "5"},
+        {"ext": "102", "kind": "desk", "slot": "6"},
+        {"ext": "103", "kind": "desk", "slot": "7", "note": "F3's desk until he left; slot 7's from the Monday of week T-14"},
+        {"ext": "104", "kind": "phone", "slot": "4"},
+        {"ext": "105", "kind": "desk", "slot": "29"},
+        {"ext": "111", "kind": "phone", "slot": "3"},
+        {"ext": "112", "kind": "phone", "slot": "9"}
+      ]
+    },
+    {
+      "key": "east",
+      "name": "Инженерный",
+      "address": "432059, Ульяновск, 10-й Инженерный проезд, 30",
+      "latitude": 54.36727,
+      "longitude": 48.58891,
+      "tz": "Europe/Ulyanovsk",
+      "day_cutoff_hour": 0,
+      "staffed": true,
+      "checkin_radius_m": 150,
+      "business_hours": {
+        "mon": [["09:00", "20:00"]], "tue": [["09:00", "20:00"]], "wed": [["09:00", "20:00"]],
+        "thu": [["09:00", "20:00"]], "fri": [["09:00", "20:00"]], "sat": [["09:00", "20:00"]], "sun": [["09:00", "20:00"]]
+      },
+      "public_line": "+7 (8422) 10-40-41",
+      "extensions": [
+        {"ext": "200", "kind": "group line", "rings": ["201", "202"]},
+        {"ext": "201", "kind": "desk", "slot": "16"},
+        {"ext": "202", "kind": "desk", "slot": "17"}
+      ]
+    },
+    {
+      "key": "west",
+      "name": "Техническая",
+      "address": "420054, Казань, улица Техническая, 30",
+      "latitude": 55.72801,
+      "longitude": 49.13453,
+      "tz": "Europe/Moscow",
+      "day_cutoff_hour": 0,
+      "staffed": true,
+      "checkin_radius_m": 150,
+      "business_hours": {
+        "mon": [["09:00", "20:00"]], "tue": [["09:00", "20:00"]], "wed": [["09:00", "20:00"]],
+        "thu": [["09:00", "20:00"]], "fri": [["09:00", "20:00"]], "sat": [["09:00", "20:00"]], "sun": [["09:00", "20:00"]]
+      },
+      "public_line": "+7 (843) 100-40-30",
+      "extensions": [
+        {"ext": "300", "kind": "group line", "rings": ["302", "303", "301"]},
+        {"ext": "301", "kind": "desk", "slot": "22"},
+        {"ext": "302", "kind": "desk", "slot": "23"},
+        {"ext": "303", "kind": "desk", "slot": "24"},
+        {"ext": "304", "kind": "desk", "slot": "F1", "retired": true, "note": "F1's desk while he worked; no leg after the day he left. The alias stays so his legs in history resolve to west"}
+      ]
+    }
+  ],
+  "head_office": {
+    "location": null,
+    "extensions": [
+      {"ext": "401", "kind": "phone", "slot": "1"},
+      {"ext": "402", "kind": "phone", "slot": "2"}
+    ],
+    "note": "No location row and no alias: the owners have no site (cast.json site none); their extensions forward to mobiles and read 'No site' on the console's Lines and phones (phones.md)."
+  },
+  "closed_dates": {
+    "ledger_key": "site.closed_dates",
+    "rule": ["1 January", "2 January"],
+    "observed": "not moved: a date that falls on a weekend stays where it is",
+    "sites": ["main", "east", "west"],
+    "row": {"kind": "closed", "open_local": null, "close_local": null, "reason": "новогодние праздники"},
+    "example_for_T_2026_11_13": {
+      "since_G": [],
+      "next_60_days": ["2027-01-01", "2027-01-02"]
+    }
+  },
+  "changed_hours": [
+    {
+      "ledger_key": "site.stocktake",
+      "what": "stocktake",
+      "anchor": "the Thursday of week W+1; if closed in the market, the Tuesday of that week",
+      "sites": ["main", "east", "west"],
+      "row": {"kind": "hours", "open_local": "09:00", "close_local": "12:00", "reason": "инвентаризация склада"},
+      "example_for_T_2026_11_13": "2026-11-19"
+    }
+  ],
+  "not_in_the_store": {
+    "ledger_key": "kb.west_old_hours",
+    "note": "The bought shop's own knowledge page still says it closes at 19:00, as under the previous owner. Deliberate gap: west's business_hours close at 20:00."
+  }
+}

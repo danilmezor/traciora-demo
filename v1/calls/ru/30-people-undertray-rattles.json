@@ -1,0 +1,652 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-30-undertray-rattles",
+  "configuration": "ru",
+  "number": 30,
+  "story": "people",
+  "title": "A customer two days after mechanic 11 changed her oil: something rattles underneath",
+  "purpose": "People, mechanic 11, the second complaint call. Calm, not angry: since the oil change the undertray has hung on two bolts. Alina apologises, finds the order, offers two times today, books one and sums up with the address. A complaint about an existing job: no score.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Ирина Белоглазова",
+      "invented": true,
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "slot": 11,
+        "name": "Максим Рябов"
+      }
+    ]
+  },
+  "call": {
+    "day": "slot 6's first working day on or after the Friday of week T-3 (rule R6; call 30)",
+    "nominal_offset": "T-20d",
+    "nominal_date": "2026-10-24",
+    "local_start": "11:50",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 5,
+    "caller_phone": "+7 907 705-78-26",
+    "repeat_caller": false,
+    "talk_s": 126
+  },
+  "scenario": {
+    "who_calls": "Ирина Белоглазова, whose husband looked under the car yesterday.",
+    "vehicle": "Nissan Qashqai, 2016",
+    "job": "engine oil and filter, done two days before by mechanic 11; the engine undertray was left on two bolts",
+    "wants": "the rattle gone",
+    "what_happens": "Alina asks when it rattles, says what it probably is and that it is the shop's fault, finds the order by the surname, promises to tell the manager, offers two or four o'clock today, books two, says how to drive until then and sums up with the address.",
+    "facts": {
+      "two_days_ago": "call-2d: oil and filter, mechanic slot 11",
+      "offered": [
+        "the day of the call 14:00",
+        "the day of the call 16:00"
+      ],
+      "booked": "the day of the call 14:00",
+      "today": "a warranty order pointing at that one: undertray refitted with all its bolts, drain plug checked; free",
+      "note": "No price is named."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "в четверг",
+      "day": "call-2d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "четверг",
+      "day": "call-2d",
+      "form": "nominative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, добрый день."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.1,
+      "said": "Добрый день. Я у вас в четверг масло меняла, Кашкай. И с тех пор у меня внизу что-то гремит. Раньше не гремело."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 15.3,
+      "said": "Ой. Простите, пожалуйста. А гремит как — постоянно или на кочках?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 21.1,
+      "said": "На кочках и когда трогаюсь. Такой металлический звук, дребезжит. Муж вчера заглянул под машину — говорит, защита на двух болтах висит, остальных нет."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 31.8,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 33.7,
+      "said": "Поняла. Это, скорее всего, защиту двигателя после замены масла не до конца прикрутили. Это наша недоработка, извините. Как ваша фамилия, я наряд найду?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 47.0,
+      "said": "Белоглазова."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 48.7,
+      "said": "Белоглазова Ирина... э-э... Да, вижу: четверг, замена масла, мастер Рябов."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 54.7,
+      "said": "Вот-вот. Он ещё торопился очень, всё на часы смотрел. Я тогда ещё подумала."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 62.3,
+      "said": "Ирина, я это передам руководителю, обязательно. А машину давайте сегодня же и поправим, без очереди и бесплатно. Можете подъехать в два или в четыре?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 76.4,
+      "said": "В два могу."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 78.6,
+      "said": "Записала: сегодня, четырнадцать ноль-ноль, я вас встречу сама. Это минут пятнадцать: поставим все болты и заодно проверим, не подтекает ли пробка."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 88.8,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 90.8,
+      "said": "А ездить-то так можно? Она не отвалится?"
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 95.2,
+      "said": "До нас доехать можно, только не быстро и по ямам аккуратно. Если звук усилится — остановитесь и наберите меня."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 105.4,
+      "said": "Хорошо."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 106.9,
+      "said": "Значит, сегодня в два, Московское шоссе, сорок: крепим защиту двигателя, проверяем пробку поддона. С нас извинения, Ирина."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 117.0,
+      "said": "Ладно, бывает. Спасибо, что без споров."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 121.2,
+      "said": "Спасибо, что позвонили! Ждём вас в два."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.72,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R2",
+        "what": "the surname's ending heard as -о",
+        "script_turn": 7,
+        "said": "Белоглазова",
+        "stored": "Белоглазово",
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          10,
+          11,
+          12,
+          17,
+          19
+        ],
+        "said": [
+          "в два или в четыре",
+          "В два",
+          "четырнадцать ноль-ноль",
+          "в два",
+          "в два"
+        ],
+        "stored": [
+          "в 2 или в 4",
+          "В 2",
+          "14:00",
+          "в 2",
+          "в 2"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          4,
+          9,
+          12,
+          14
+        ],
+        "said": [
+          "говорит, защита",
+          "Вот-вот. ",
+          "заодно",
+          "ездить-то"
+        ],
+        "stored": [
+          "защита",
+          "",
+          "за одно",
+          "ездить"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          13
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker: the neighbouring turns of one speaker are stored as one line",
+        "script_turns": [
+          5
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          2
+        ],
+        "said": [
+          "Кашкай"
+        ],
+        "stored": [
+          "Qashqai"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          12,
+          17
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          8,
+          19
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 1
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 5,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 1,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 8,
+        "as_digits": 7,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 211,
+    "stored_words": 208,
+    "strict_word_difference": 0.095
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 225,
+    "duration_s": 126.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, добрый день.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Добрый день. Я у вас в четверг масло меняла, Qashqai. И с тех пор у меня внизу что-то гремит. Раньше не гремело.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ой. Простите, пожалуйста. А гремит как, постоянно или на кочках?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На кочках и когда трогаюсь. Такой металлический звук, дребезжит. Муж вчера заглянул под машину, защита на двух болтах висит, остальных нет.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так. Поняла. Это, скорее всего, защиту двигателя после замены масла не до конца прикрутили. Это наша недоработка, извините. Как ваша фамилия, я наряд найду?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Белоглазово.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Белоглазова Ирина. Да, вижу: четверг, замена масла, мастер Рябов.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Он ещё торопился очень, всё на часы смотрел. Я тогда ещё подумала.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ирина, я это передам руководителю, обязательно. А машину давайте сегодня же и поправим, без очереди и бесплатно. Можете подъехать в 2 или в 4?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "В 2 могу.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Записала: сегодня, 14:00, я вас встречу сама. Это минут 15: поставим все болты и за одно проверим, не подтекает ли пробка.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А ездить так можно? Она не отвалится?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До нас доехать можно, только не быстро и по ямам аккуратно. Если звук усилится, остановитесь и наберите меня.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Значит, сегодня в 2, Московское шоссе, 40: крепим защиту двигателя, проверяем пробку поддона. С нас извинения, Ирина.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ладно, бывает. Спасибо, что без споров.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо, что позвонили. Ждём вас в 2.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, добрый день.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, сегодня в 2, Московское шоссе, 40: крепим защиту двигателя, проверяем пробку поддона.",
+        "level": 2,
+        "segment": 14
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint"
+    ],
+    "strength": {
+      "quote": "Это, скорее всего, защиту двигателя после замены масла не до конца прикрутили. Это наша недоработка, извините.",
+      "why": "Назвала вероятную причину и сразу сказала, что это недоработка сервиса. Клиентке не пришлось ничего доказывать.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "Значит, сегодня в 2, Московское шоссе, 40: крепим защиту двигателя, проверяем пробку поддона.",
+      "say": "И запишите, пожалуйста, мой номер на приёмке на случай, если по дороге звук усилится: спросите Алину, я выйду к вам сама."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 14
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "complaint"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, добрый день",
+        "recap": "Значит, сегодня в 2, Московское шоссе, 40: крепим защиту двигателя, проверяем пробку поддона"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Это, скорее всего, защиту двигателя после замены масла не до конца прикрутили. Это наша недоработка, извините",
+        "why": "Назвала вероятную причину и сразу сказала, что это недоработка сервиса. Клиентке не пришлось ничего доказывать."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "Значит, сегодня в 2, Московское шоссе, 40: крепим защиту двигателя, проверяем пробку поддона.",
+        "say": "И запишите, пожалуйста, мой номер на приёмке на случай, если по дороге звук усилится: спросите Алину, я выйду к вам сама."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 2,
+      "objection": "not_applicable"
+    },
+    "score": null
+  },
+  "why": {
+    "call_type": "existing_job: жалоба на работу, выполненную два дня назад.",
+    "greeting": "2: компания и имя в первой фразе.",
+    "recap": "2: время, адрес и что будут делать, перед прощанием.",
+    "score": "Оценки нет: применимых проверок две.",
+    "tags": "complaint. Клиентка недовольна, но спокойна: customer_angry не ставится.",
+    "outcome": "visit_agreed: сегодня в 14:00.",
+    "carried_by": []
+  },
+  "day_report": {
+    "would_say": "В отчёте дня у Алины звонок без оценки: жалоба на работу механика, клиентка записана на тот же день. Обе проверки, которые применимы, выполнены полностью."
+  },
+  "new_facts": [
+    "Клиентка Ирина Белоглазова, Nissan Qashqai 2016, телефон +7 907 705-78-26.",
+    "За два дня до звонка (четверг) у неё наряд на главной площадке: замена масла и фильтра, механик Максим Рябов (место 11).",
+    "В день звонка, 14:00, гарантийный наряд, указывающий на тот: защита двигателя закреплена на все болты, пробка поддона проверена."
+  ]
+}

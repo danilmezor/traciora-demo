@@ -1,0 +1,3 @@
+<!-- extends config/sources/traciora/core/location/annotations.md; appended under "## Demo tenant, notes v1" -->
+
+business_hours: {"mon": [["07:30", "17:30"]], ..., "sun": []}, local wall clock per weekday; an empty or absent day is closed every week; a close at or before its open crosses midnight. A date that differs is a core.location_hours_exception row, never an edit here. checkin_radius_m and latitude/longitude are the check-in place: a punch further away is a location exception. staffed true: people are rostered here. Join a shop's short key through core.location_alias (namespace config_key).

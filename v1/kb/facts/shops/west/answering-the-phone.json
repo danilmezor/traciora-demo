@@ -1,0 +1,101 @@
+{
+ "path": "shops/west/answering-the-phone.md",
+ "title": "Charlotte Pike: answering the phone",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "24",
+ "purpose": "The newest Nashville advisor's page on how the phone is answered there; the bright spot in a thin folder.",
+ "serves": [
+  "S3",
+  "S4",
+  "challenge:near-duplicate",
+  "S9"
+ ],
+ "length_class": "short",
+ "words_en": 235,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Greeting: company name, shop, own name.",
+  "Five steps: name and number read back; car and problem with one extra question; price from the price list with a time attached (example: brake inspection 49.95 and a time tomorrow at 7:30); two times offered; booking read back.",
+  "With a customer present: answer, take name and number, call back within the hour.",
+  "The steps are the scorecard's checks (greeting, name_and_number, need_discovery, price_with_next_step, offered_time, asked_for_booking, recap).",
+  "Central time reminder.",
+  "Juniors cannot publish: written by slot 24, published by slot 2 at T-2 months.",
+  "Near-duplicate of how-to/taking-a-call.md in subject; they agree."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Charlotte Pike: answering the phone",
+   "item": "Their name, and \"is this the best number for you?\" Read the number back."
+  },
+  {
+   "section": "Charlotte Pike: answering the phone",
+   "item": "The car: year, make, model. And what it is doing, in their words. One more question than feels necessary."
+  },
+  {
+   "section": "Charlotte Pike: answering the phone",
+   "item": "If they ask a price, give it from the price list with a time attached: \"A brake inspection is $49.95, and I could get you in tomorrow at 7:30.\""
+  },
+  {
+   "section": "Charlotte Pike: answering the phone",
+   "item": "Offer two times. Not \"when would you like to come in\"."
+  },
+  {
+   "section": "Charlotte Pike: answering the phone",
+   "item": "Say the booking back: day, time, Charlotte Pike, what we are doing."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "brake_inspection",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "24",
+   "written_as": "Jasmine Bolden",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "24",
+   "written_as": "Jasmine",
+   "role": "service_advisor",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-2mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Greeting «Ермак-Сервис на Технической, Камила, здравствуйте». Kazan is an hour behind Ulyanovsk."
+ ]
+}

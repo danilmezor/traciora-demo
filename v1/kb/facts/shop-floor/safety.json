@@ -1,0 +1,90 @@
+{
+ "path": "shop-floor/safety.md",
+ "title": "Safety",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "Short safety rules, including who may touch hybrids and refrigerant.",
+ "serves": [
+  "visibility:worker",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_en": 155,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Hybrids: slot 10 only, at East Main.",
+  "Refrigerant: recovered by machine; only certified technicians do A/C work; the page names nobody (planted gap: \"who is certified for A/C at Bonny Oaks?\" is not in the base).",
+  "Injuries are reported to the foreman the same day."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Safety",
+   "item": "Safety glasses on in the bays. Always."
+  },
+  {
+   "section": "Safety",
+   "item": "Lift: arms on the maker's lift points, rock the car at knee height before it goes up, locks down before you go under."
+  },
+  {
+   "section": "Safety",
+   "item": "Never under a car on a jack alone. Stands."
+  },
+  {
+   "section": "Safety",
+   "item": "Orange cables are high voltage. Hybrid work is Kevin's, at East Main, and nobody else's. If a hybrid is in your bay for brakes or tires, you do brakes or tires and touch nothing orange."
+  },
+  {
+   "section": "Safety",
+   "item": "Refrigerant is recovered with the machine, never vented. A/C work goes to the technicians who hold the certificate: ask your foreman who that is at your shop."
+  },
+  {
+   "section": "Safety",
+   "item": "Battery acid, brake cleaner near a flame, a spinning belt: you know. Act like you know."
+  },
+  {
+   "section": "Safety",
+   "item": "A spill gets cleaned up now, by whoever is nearest."
+  },
+  {
+   "section": "Safety",
+   "item": "If you are hurt, however small, tell your foreman the same day so it is written down."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same. Russian shops have a formal safety briefing log (журнал инструктажа): mention signing it."
+ ]
+}

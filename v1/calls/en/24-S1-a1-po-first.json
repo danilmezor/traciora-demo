@@ -1,0 +1,680 @@
+{
+  "format": "seed-call/1",
+  "id": "en-24-S1-a1-po-first",
+  "configuration": "en",
+  "number": 24,
+  "story": "S1",
+  "title": "The same account three months on: the purchase-order number asked for first",
+  "purpose": "Story S1. The same fleet manager, another van. Before she pulls the van up Maya asks for the purchase-order number and reads it back; she offers a time, books it on the number and sums up the time, the work and the number.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Lonnie Coffey",
+      "ref": "accounts.json en.A1 contacts[0]",
+      "company": "Nickajack Delivery",
+      "account": "A1",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Donna Ledford",
+        "slot": 3,
+        "role": "the bookkeeper who sends the account's statements"
+      }
+    ]
+  },
+  "call": {
+    "day": "the Wednesday of week T-4 (rule R6; card S01, call 24)",
+    "nominal_offset": "T-30d",
+    "nominal_date": "2026-10-14",
+    "local_start": "14:30",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 4,
+    "caller_phone": "423-555-0103",
+    "repeat_caller": false,
+    "talk_s": 128
+  },
+  "scenario": {
+    "who_calls": "Lonnie Coffey, fleet manager of company account A1.",
+    "vehicle": "unit ND-08, a 2021 Ford Transit-250, BRC-6125 (accounts.json en.A1 fleet)",
+    "job": "fleet PM service A, due; and a steering-wheel shake at 60 mph to check",
+    "wants": "the van booked",
+    "what_happens": "Maya asks for the purchase-order number first and reads it back, finds the unit by its tag, asks at what speed the shake starts and what changed before it, offers Friday at 7:30, books it on the number and repeats the time, the work and the number.",
+    "facts": {
+      "purchase_order": "ND-60418",
+      "offered": [
+        "call+2d 07:30"
+      ],
+      "booked": "call+2d 07:30",
+      "note": "No price is asked for. The account is on the company-account rate (catalogue.json company_account_terms)."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Friday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.7,
+      "said": "Maya, Lonnie at Nickajack."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.6,
+      "said": "Hey, Lonnie! What've you got for me?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 13.9,
+      "said": "Number eight. It's — it's due for its service, and the driver says the steerin' wheel shakes on the interstate."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 22.7,
+      "said": "Okay. Before I pull it up — have you got a P-O for this one? Donna'll have my head if I open another ticket without it."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 32.8,
+      "said": "I heard about that. Yeah, hang on... It's — it's N-D, six-oh-four-one-eight."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 37.6,
+      "said": "N-D, six-oh-four-one-eight. Got it, it's on there. Okay, number eight — that's the twenty-one Transit, tag ending six-one-two-five?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 45.6,
+      "said": "Yep."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 47.1,
+      "said": "Okay. And the shake — what speed does it start?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 52.2,
+      "said": "He says about sixty. Smooths out some past seventy."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 56.3,
+      "said": "Okay. Did it start after anything? Like new tires, or he hit something?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 62.3,
+      "said": "We put two fronts on it about a month ago. Not y'all — the tire place."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 68.8,
+      "said": "Okay, that helps. That's — that's probably a balance, then. We'll check it when it's in for the service."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 75.6,
+      "said": "That's what I figured.",
+      "overlap": true
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 78.0,
+      "said": "So I can take it Friday morning at seven-thirty. Would that work?"
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 84.4,
+      "said": "Friday. Yeah, I can make Friday work."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 89.0,
+      "said": "Okay. I've got number eight down for Friday at seven-thirty on P-O six-oh-four-one-eight, and I'll write it up myself."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 96.2,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 19,
+      "who": "customer",
+      "at_s": 97.4,
+      "said": "How long?"
+    },
+    {
+      "n": 20,
+      "who": "advisor",
+      "at_s": 99.9,
+      "said": "The service is about an hour and a half. If it — if it needs the fronts balanced, add maybe thirty minutes. I'll call you before we do anything past that."
+    },
+    {
+      "n": 21,
+      "who": "customer",
+      "at_s": 111.1,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 112.2,
+      "said": "Good deal."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 114.4,
+      "said": "So that's number eight, Friday at seven-thirty, the P-M service, and we're checking that shake at sixty. All on P-O six-oh-four-one-eight."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 122.8,
+      "said": "You got it."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 125.8,
+      "said": "Thanks, Lonnie! See you Friday."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.75,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          4,
+          5,
+          6,
+          7,
+          9,
+          12,
+          13,
+          20
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          4,
+          6,
+          7,
+          15,
+          17,
+          23
+        ]
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost; two turns of one speaker become one line",
+        "script_turns": [
+          14,
+          15
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 4,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 7,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 3,
+        "lost": 1,
+        "joined": 1
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 269,
+    "stored_words": 258,
+    "strict_word_difference": 0.097
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 279,
+    "duration_s": 128.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Maya, Lonnie at Nickajack.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, Lonnie! What've you got for me?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Number 8. It's due for its service, and the driver says the steering wheel shakes on the interstate.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Before I pull it up, have you got a P-O for this one? Donna'll have my head if I open another ticket without it.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I heard about that. Yeah, hang on, it's ND-60418.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "ND-60418. Got it, it's on there. Okay, number 8, that's the '21 Transit, tag ending 6125?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yep.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And the shake, what speed does it start?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "He says about sixty. Smooths out some past seventy.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Did it start after anything? Like new tires, or he hit something?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "We put two fronts on it about a month ago. Not y'all, the tire place.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, that helps. That's probably a balance, then. We'll check it when it's in for the service. So I can take it Friday morning at 7:30. Would that work?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Friday. Yeah, I can make Friday work.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. I've got number 8 down for Friday at 7:30 on P-O 60418, and I'll write it up myself.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. How long?",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The service is about an hour and a half. If it needs the fronts balanced, add maybe thirty minutes. I'll call you before we do anything past that.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Good deal.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So that's number 8, Friday at 7:30, the P-M service, and we're checking that shake at 60. All on P-O 60418.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You got it.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks, Lonnie! See you Friday.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Did it start after anything? Like new tires, or he hit something?",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "So I can take it Friday morning at 7:30.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I've got number 8 down for Friday at 7:30 on P-O 60418, and I'll write it up myself.",
+        "level": 2,
+        "segment": 14
+      },
+      {
+        "key": "recap",
+        "quote": "So that's number 8, Friday at 7:30, the P-M service, and we're checking that shake at 60.",
+        "level": 1,
+        "segment": 18
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager greets him by name and finds the unit on the account."
+      },
+      {
+        "key": "price_with_next_step",
+        "why": "The customer did not ask about price."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [],
+    "strength": {
+      "quote": "Before I pull it up, have you got a P-O for this one?",
+      "why": "She asked for the purchase-order number before anything else, so the order cannot be opened without it.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "So I can take it Friday morning at 7:30.",
+      "say": "I can take it tomorrow at 1 or Friday at 7:30. Which one works with his route?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 80.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 14
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 18
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "price_with_next_step",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed"
+      ],
+      "score": 80.0,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "need_discovery": "Did it start after anything? Like new tires, or he hit something?",
+        "offered_time": "So I can take it Friday morning at 7:30",
+        "asked_for_booking": "I've got number 8 down for Friday at 7:30 on P-O 60418, and I'll write it up myself",
+        "recap": "So that's number 8, Friday at 7:30, the P-M service, and we're checking that shake at 60"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager greets him by name and finds the unit on the account.",
+        "price_with_next_step": "The customer did not ask about price.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Before I pull it up, have you got a P-O for this one?",
+        "why": "She asked for the purchase-order number before anything else, so the order cannot be opened without it."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "So I can take it Friday morning at 7:30.",
+        "say": "I can take it tomorrow at 1 or Friday at 7:30. Which one works with his route?"
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Against call 23: the purchase-order number is asked for first and is on the booking and in the summary.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": "na",
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": "na"
+    },
+    "score": 80.0,
+    "score_exact": 80.0,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her own name.",
+    "name_and_number": "N/A: a known contact, greeted by name.",
+    "need_discovery": "2: the unit, the job and what she asked for: it starts at 60, and two front tires were fitted elsewhere a month ago.",
+    "price_with_next_step": "N/A: he does not ask what it costs.",
+    "offered_time": "1: one specific option, Friday at 7:30.",
+    "asked_for_booking": "2: the day, the hour, the purchase-order number and who writes it up.",
+    "recap": "1: the time, the work and the purchase-order number; no address, which this customer does not need.",
+    "objection": "N/A: no doubt.",
+    "score": "(1·2 + 2·2 + 3·1 + 3·2 + 1·1) / 2 = 8 of 10 weight points = 80.0.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "A purchase-order number of A1, ND-60418, on an appointment and an order at main for ND-08 on call+2d at 07:30 (the Friday of week T-4): fleet PM service A and a wheel-balance check, at the company-account rate.",
+    "The bookkeeper (slot 3) has told the desk not to open A1 orders without a purchase-order number; two front tires were fitted to ND-08 by another business about a month before."
+  ]
+}

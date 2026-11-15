@@ -1,0 +1,144 @@
+{
+ "path": "services/maintenance/fleet-pm-service.md",
+ "title": "Fleet PM service A",
+ "first_revision_text": "en/_history/services/maintenance/fleet-pm-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "The preventive-maintenance service for cargo vans; list price and what the company rate does to it.",
+ "serves": [
+  "S1",
+  "S16",
+  "challenge:combine-policy-and-price",
+  "challenge:fact-only-in-attachment"
+ ],
+ "length_class": "short",
+ "words_en": 230,
+ "links_to": [
+  "accounts/company-account-terms.md",
+  "parts/fluids-and-capacities.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job fleet_pm_van: vans only, 1.5 h; 6 qt of standard oil and a filter.",
+  "List price 270.59 (labour 202.50 + oil 54.00 + filter 14.09).",
+  "The company-rate price is deliberately not printed: 1.5 h x 121.50 = 182.25 labour + 0.9 x 68.09 = 61.28 parts = 243.53 before supplies and tax (shop supplies 5 % of 182.25 = 9.11).",
+  "Contents of the 50-point inspection and the fleet sheet.",
+  "Interval 5,000 miles; same-day return; findings go to the fleet contact as an estimate."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What is in it",
+   "item": "Oil and filter: 6 quarts of full synthetic, $9.00 a quart, and a $14.09 filter."
+  },
+  {
+   "section": "What is in it",
+   "item": "Chassis lube where there are fittings. Door hinges, sliding-door track, rear door checks."
+  },
+  {
+   "section": "What is in it",
+   "item": "The 50-point inspection: brakes measured at all four wheels, tires with tread depth and age, lights including the cargo light, belts, hoses, leaks, battery test, wipers, horn, steering play, load-floor and bulkhead fixings."
+  },
+  {
+   "section": "What is in it",
+   "item": "The fleet sheet filled in: unit number, mileage, what is due before the next PM."
+  },
+  {
+   "section": "How it runs",
+   "item": "Every 5,000 miles for the delivery fleets. The fleet manager sends the units due."
+  },
+  {
+   "section": "How it runs",
+   "item": "The van is back the same day. A PM is never the reason a van misses its route."
+  },
+  {
+   "section": "How it runs",
+   "item": "Anything found is an estimate to the fleet contact, not a conversation with the driver beyond his limit."
+  },
+  {
+   "section": "How it runs",
+   "item": "Quarts by van: Fluids and capacities."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "hours",
+   "class": "van",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "part list price each: Engine oil 0W-20 / 5W-30",
+   "tier": "standard",
+   "qty": 6,
+   "unit": "qt",
+   "brand": "Valvoline Advanced Full Synthetic (bulk)",
+   "value": 9.0
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "part list price each: Oil filter",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "ea",
+   "brand": "WIX",
+   "value": 14.09
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "labour",
+   "class": "van",
+   "when": "after_rise",
+   "value": 202.5
+  },
+  {
+   "catalogue_key": "fleet_pm_van",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "van",
+   "when": "after_rise",
+   "value": 270.59
+  }
+ ],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "Expected answer for \"what does Nickajack pay for a PM service A\": 243.53 USD before shop supplies and tax (252.64 with supplies 9.11; 276.01 with tax at 9.25 %, the rate of East Main, the account's home shop)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«ТО коммерческого автомобиля», 9 710 RUB list; contract hour 1 700; compute the contract price the same way."
+ ]
+}

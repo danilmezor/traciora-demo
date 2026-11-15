@@ -1,0 +1,865 @@
+{
+  "format": "bank-en/unclear/1",
+  "about": "Twenty unclear openings (design rule R13): six vague, five naming the wrong thing, four with two requests in one, five the wrong way round. Laid over a new-enquiry or existing-job skeleton in 12 % of customer calls; in one of six of them (2 % of customer calls) the request stays unclear and the call ends on unresolved_end. The advisor's second question is written at levels 0, 1 and 2 of need_discovery: level 2 pins the request down and is that check's evidence; level 1 asks again without narrowing; level 0 guesses or moves on. The caller's third answer follows the level.",
+  "openings": [
+    {
+      "id": "U01",
+      "kind": "vague",
+      "applies_to": [
+        "new_enquiry",
+        "existing_job"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "existing_fits": [
+        "ready",
+        "not_ready",
+        "part_late",
+        "pick_up",
+        "booking_moved",
+        "complaint"
+      ],
+      "opening": [
+        "my car's acting up",
+        "I got a problem with my car, it's doing something"
+      ],
+      "second_answer": [
+        "it's just — it's not right. It's doing a thing",
+        "I don't know, it's just acting funny",
+        "I can't really say. It just ain't right",
+        "it's acting weird, is all I know"
+      ],
+      "advisor_second": {
+        "0": "Okay. Well, we can look at it.",
+        "1": "What's it doing?",
+        "2": "When you say acting up — is it a noise, a light on the dash, or how it drives?"
+      },
+      "third_answer": {
+        "0": [
+          "well, it's — {need}",
+          "I mean, mostly {need}"
+        ],
+        "1": [
+          "it's — I guess {need}",
+          "well, {need}, kinda"
+        ],
+        "2": [
+          "a noise, mostly — {need}",
+          "how it drives, I guess. {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I don't know how to explain it. Let me have my husband call y'all",
+        "I'll just call back when it does it again"
+      ]
+    },
+    {
+      "id": "U02",
+      "kind": "vague",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "opening": [
+        "I need somebody to look at my car",
+        "I just need my car looked at"
+      ],
+      "second_answer": [
+        "just look at it, it's been a while",
+        "I want it gone over, you know",
+        "just go over it, I guess. Make sure it's okay",
+        "I don't know, check it out, I guess"
+      ],
+      "advisor_second": {
+        "0": "Sure, we can do that.",
+        "1": "Okay, what for?",
+        "2": "Is something going on with it, or is it more that it's due for service?"
+      },
+      "third_answer": {
+        "0": [
+          "okay. Well — {need}",
+          "alright. It's — {need}"
+        ],
+        "1": [
+          "well, {need}",
+          "I guess {need}"
+        ],
+        "2": [
+          "something's going on — {need}",
+          "no, it's doing something. {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll just bring it by and y'all can tell me",
+        "never mind, I'll call back when I know more"
+      ]
+    },
+    {
+      "id": "U03",
+      "kind": "vague",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "opening": [
+        "how much do y'all charge?",
+        "what do y'all get, usually?"
+      ],
+      "second_answer": [
+        "for — you know, to fix it",
+        "just in general, like to work on it",
+        "to look at it, I mean. Whatever it needs",
+        "for, like, a repair. On mine"
+      ],
+      "advisor_second": {
+        "0": "Depends what it is.",
+        "1": "For what, now?",
+        "2": "For what kind of work — is it something it's doing, or maintenance, like an oil change?"
+      },
+      "third_answer": {
+        "0": [
+          "well, it's — {need}",
+          "okay. So {need}"
+        ],
+        "1": [
+          "for — {need}",
+          "oh. {need}"
+        ],
+        "2": [
+          "something it's doing. {need}",
+          "it's doing something — {need}"
+        ]
+      },
+      "unresolved_end": [
+        "okay, never mind, I'll just call back",
+        "I'll figure out what it is and call y'all"
+      ]
+    },
+    {
+      "id": "U04",
+      "kind": "vague",
+      "applies_to": [
+        "new_enquiry",
+        "existing_job"
+      ],
+      "resolves_to": "need",
+      "job_filter": [
+        "front_brakes",
+        "rear_brakes",
+        "front_end_noise",
+        "wheel_bearing",
+        "cv_axle",
+        "front_struts",
+        "control_arm"
+      ],
+      "existing_fits": [
+        "EJ25"
+      ],
+      "opening": [
+        "it's making that noise again",
+        "that noise is back"
+      ],
+      "second_answer": [
+        "the same one as before",
+        "you know, the noise",
+        "the one it did a while back",
+        "that same noise, you know the one"
+      ],
+      "advisor_second": {
+        "0": "Yeah? Okay.",
+        "1": "What noise is that?",
+        "2": "Was that something we looked at here before? Tell me what it sounds like and where it's coming from."
+      },
+      "third_answer": {
+        "0": [
+          "yeah. It's — {need}",
+          "well, {need}"
+        ],
+        "1": [
+          "the — {need}",
+          "it's {need}"
+        ],
+        "2": [
+          "no, y'all haven't seen it. {need}",
+          "it's from the front, I think — {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I can't really describe it. I'll just bring it",
+        "I'll call back when it does it so you can hear it"
+      ]
+    },
+    {
+      "id": "U05",
+      "kind": "vague",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "opening": [
+        "I need to bring my car in for the — the thing",
+        "I need to get that done that they told me about"
+      ],
+      "second_answer": [
+        "the thing they said at the oil change place",
+        "whatever it was they wrote on my receipt",
+        "the guy said I'd need it soon, I forget what",
+        "something they said needs doing"
+      ],
+      "advisor_second": {
+        "0": "Okay, sure, bring it in.",
+        "1": "Do you remember what it was?",
+        "2": "Do you have that receipt handy? It'll say what they found, or tell me what the car's doing."
+      },
+      "third_answer": {
+        "0": [
+          "okay. I think it was — {need}",
+          "alright. It's something like {need}"
+        ],
+        "1": [
+          "I think — {need}",
+          "something about — {need}"
+        ],
+        "2": [
+          "hang on... okay, it says — well, {need}",
+          "it's right here. {need}, basically"
+        ]
+      },
+      "unresolved_end": [
+        "I'll have to find that receipt and call y'all back",
+        "let me look for it and call back"
+      ]
+    },
+    {
+      "id": "U06",
+      "kind": "vague",
+      "applies_to": [
+        "new_enquiry",
+        "existing_job"
+      ],
+      "resolves_to": "need",
+      "job_filter": [
+        "check_engine",
+        "battery",
+        "alternator",
+        "brake_inspection",
+        "coolant_leak",
+        "flat_repair",
+        "oil_service"
+      ],
+      "existing_fits": [
+        "EJ26"
+      ],
+      "opening": [
+        "the light's on",
+        "I got a light on"
+      ],
+      "second_answer": [
+        "the one on the dash",
+        "the little light, on the dashboard",
+        "the little picture on the dash, it's lit up",
+        "the one that comes on, on the dashboard"
+      ],
+      "advisor_second": {
+        "0": "Okay, we can check it.",
+        "1": "Which light?",
+        "2": "Which one — is it orange or red, and what's the little picture look like?"
+      },
+      "third_answer": {
+        "0": [
+          "okay. It's — I mean, {need}",
+          "yeah. {need}"
+        ],
+        "1": [
+          "the — well, {need}",
+          "uh, {need}"
+        ],
+        "2": [
+          "orange, I think — {need}",
+          "it's — okay, {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll have to go out and look at it and call back",
+        "let me get a picture of it and call y'all"
+      ]
+    },
+    {
+      "id": "U07",
+      "kind": "wrong_thing",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "battery",
+      "job_filter": null,
+      "opening": [
+        "I need a new alternator put in",
+        "what's an alternator run, put in?"
+      ],
+      "second_answer": [
+        "it won't start in the mornings, so I figure that's it",
+        "it's been hard to start, so the alternator's going"
+      ],
+      "advisor_second": {
+        "0": "Okay, an alternator. Let me find a price on that.",
+        "1": "Okay. What's it doing, exactly?",
+        "2": "Before I price an alternator — does it die while you're driving, or just not start after it sits?"
+      },
+      "third_answer": {
+        "0": [
+          "well — I don't know that it's that, it just won't start after it sits overnight",
+          "I mean, it don't die driving. It just won't start"
+        ],
+        "1": [
+          "it just won't start. Slow in the mornings",
+          "it's slow to start, then it's fine"
+        ],
+        "2": [
+          "just won't start after it sits. Once it's going, it's fine",
+          "it never dies driving. Just slow first thing"
+        ]
+      },
+      "unresolved_end": [
+        "I'll have my brother look at it first and call y'all",
+        "let me figure out what it is and call back"
+      ]
+    },
+    {
+      "id": "U08",
+      "kind": "wrong_thing",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "alignment",
+      "job_filter": null,
+      "opening": [
+        "I need my tires balanced",
+        "what's it cost to balance the tires?"
+      ],
+      "second_answer": [
+        "it pulls to the left on me",
+        "it's going off to one side"
+      ],
+      "advisor_second": {
+        "0": "Okay, balancing all four, sure.",
+        "1": "Okay. Anything else it's doing?",
+        "2": "Does it shake, or does it pull? Balancing fixes a shake; a pull is usually the alignment."
+      },
+      "third_answer": {
+        "0": [
+          "well, it don't really shake. It just pulls",
+          "I mean, it pulls more than anything"
+        ],
+        "1": [
+          "no, it just pulls",
+          "the wheel's a little crooked too"
+        ],
+        "2": [
+          "it pulls. No shake at all",
+          "it pulls, and the wheel's off center"
+        ]
+      },
+      "unresolved_end": [
+        "I'll call back, let me ask my husband what he thinks",
+        "never mind, I'll figure it out"
+      ]
+    },
+    {
+      "id": "U09",
+      "kind": "wrong_thing",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "spark_plugs",
+      "job_filter": null,
+      "opening": [
+        "I need a tune-up",
+        "what do y'all charge for a tune-up?"
+      ],
+      "second_answer": [
+        "you know, a tune-up. It's been a while",
+        "the whole tune-up, whatever that is now"
+      ],
+      "advisor_second": {
+        "0": "Sure, we do tune-ups.",
+        "1": "What made you think it needs one?",
+        "2": "What's it doing — running rough, a light on, or is it just the mileage?"
+      },
+      "third_answer": {
+        "0": [
+          "okay. It's kinda missing when I pull off",
+          "alright. It's been running rough"
+        ],
+        "1": [
+          "it's running a little rough",
+          "it hesitates some"
+        ],
+        "2": [
+          "running rough, and it's got a hundred thousand on it",
+          "a little rough at idle, no light"
+        ]
+      },
+      "unresolved_end": [
+        "I'll just call back, I don't really know",
+        "let me ask the guy that told me and call y'all"
+      ]
+    },
+    {
+      "id": "U10",
+      "kind": "wrong_thing",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "air_conditioning",
+      "job_filter": null,
+      "opening": [
+        "I need some freon put in",
+        "can y'all just add freon to my car?"
+      ],
+      "second_answer": [
+        "it's blowing warm",
+        "the air's not cold"
+      ],
+      "advisor_second": {
+        "0": "Sure, we can top it off.",
+        "1": "Okay. Has it been doing that long?",
+        "2": "Is it warm all the time, or cold then warm? If it needs freon, it's leaking somewhere, so I'd want to check it first."
+      },
+      "third_answer": {
+        "0": [
+          "okay. It just quit getting cold",
+          "yeah. It's warm the whole time"
+        ],
+        "1": [
+          "a week or so. It just quit",
+          "since it got hot"
+        ],
+        "2": [
+          "warm the whole time",
+          "cold on the interstate, warm at red lights"
+        ]
+      },
+      "unresolved_end": [
+        "I'll try a can first and call y'all if it don't work",
+        "let me think about it and call back"
+      ]
+    },
+    {
+      "id": "U11",
+      "kind": "wrong_thing",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "front_brakes",
+      "job_filter": null,
+      "opening": [
+        "I need my rotors turned",
+        "do y'all still turn rotors?"
+      ],
+      "second_answer": [
+        "they're making a noise",
+        "my brakes are noisy, so the rotors"
+      ],
+      "advisor_second": {
+        "0": "We don't really turn them anymore, we replace them.",
+        "1": "What kind of noise?",
+        "2": "Is it a squeal or a grinding? And does the wheel shake when you brake?"
+      },
+      "third_answer": {
+        "0": [
+          "oh. Well, it's grinding, so whatever it needs",
+          "okay. It's grinding when I stop"
+        ],
+        "1": [
+          "grinding, kinda",
+          "it's a squeal, I guess"
+        ],
+        "2": [
+          "grinding. And yeah, it shakes some coming off the interstate",
+          "a squeal, no shake"
+        ]
+      },
+      "unresolved_end": [
+        "I'll call around and see who still turns them",
+        "never mind, I'll call back"
+      ]
+    },
+    {
+      "id": "U12",
+      "kind": "two_in_one",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "opening": [
+        "I need to get mine in, and also is my wife's car done?",
+        "yeah, two things — mine needs looking at, and did y'all finish my wife's car?"
+      ],
+      "second_answer": [
+        "hers is the one she dropped off. And mine's — well, mine's the other one",
+        "she brought hers in, I don't know what for. Mine's the problem"
+      ],
+      "advisor_second": {
+        "0": "Hers is done, I think. So what about yours?",
+        "1": "Okay. What's going on with yours?",
+        "2": "Let's do one at a time. What's her name on it so I can check hers — and then tell me what yours is doing."
+      },
+      "third_answer": {
+        "0": [
+          "mine's — {need}",
+          "well, mine — {need}"
+        ],
+        "1": [
+          "mine, it's {need}. I'll call about hers",
+          "{need}, on mine"
+        ],
+        "2": [
+          "{customer_last}, same as me. And mine — {need}",
+          "it's under {customer_last}. Mine's {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll have her call y'all about hers, and I'll call back about mine",
+        "let me just call back, I got two things going"
+      ]
+    },
+    {
+      "id": "U13",
+      "kind": "two_in_one",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "front_brakes",
+      "job_filter": null,
+      "opening": [
+        "I need a price on brakes and can y'all do it today and do y'all do tires?",
+        "brakes — how much, and y'all do tires too, right? And today?"
+      ],
+      "second_answer": [
+        "mainly the brakes, I guess, but the tires too, maybe",
+        "the brakes first. The tires, I don't know"
+      ],
+      "advisor_second": {
+        "0": "Yeah, we do tires. Brakes are — let me look.",
+        "1": "Okay, which one's the main thing?",
+        "2": "Let's start with the brakes — what are they doing? And the tires, is that new tires or a flat?"
+      },
+      "third_answer": {
+        "0": [
+          "okay. The brakes are grinding, that's the main thing",
+          "the brakes. They grind"
+        ],
+        "1": [
+          "the brakes. They're making noise",
+          "brakes, I guess"
+        ],
+        "2": [
+          "the brakes are grinding. The tires can wait, they're just getting low",
+          "grinding in the front. Tires another time"
+        ]
+      },
+      "unresolved_end": [
+        "let me call back when I know what I want done",
+        "I'll just come by and we'll figure it out"
+      ]
+    },
+    {
+      "id": "U14",
+      "kind": "two_in_one",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "fleet_pm",
+      "job_filter": [
+        "fleet_pm"
+      ],
+      "opening": [
+        "I need the van in — well, two vans — one's the service and the other's got a light on",
+        "I've got two of them I need to get to y'all, one's due and one's acting up"
+      ],
+      "second_answer": [
+        "the one with the light's more important, I guess. Or the service, it's due",
+        "both, really. Whichever"
+      ],
+      "advisor_second": {
+        "0": "Okay, bring them by.",
+        "1": "Which one do you want to start with?",
+        "2": "Let's get both down. Which unit is due for the service, and on the other one — is the light steady or flashing?"
+      },
+      "third_answer": {
+        "0": [
+          "alright. The service one's {unit}",
+          "okay. {unit}'s the one that's due"
+        ],
+        "1": [
+          "the service, I guess. {unit}",
+          "{unit}, the one that's due"
+        ],
+        "2": [
+          "{unit} is due for the PM. The other one's steady, it can wait a day",
+          "{unit} needs the service, and the light's just on, not flashing"
+        ]
+      },
+      "unresolved_end": [
+        "let me check with the drivers and call you back",
+        "I'll call back once I know which one's free"
+      ]
+    },
+    {
+      "id": "U15",
+      "kind": "two_in_one",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "rear_brakes",
+      "job_filter": null,
+      "opening": [
+        "is my car ready, and how much would it be to do the back brakes while it's there?",
+        "y'all have my car — is it done? And what about the brakes in the back?"
+      ],
+      "second_answer": [
+        "the back brakes. They were squeaking when I dropped it off",
+        "I mean the brakes, if y'all could do them too"
+      ],
+      "advisor_second": {
+        "0": "It's not done yet.",
+        "1": "Okay, what about the brakes?",
+        "2": "Let me check on the car first — and the back brakes, did the tech say something about them, or is it a noise you've heard?"
+      },
+      "third_answer": {
+        "0": [
+          "okay, well, and the back brakes? They squeak",
+          "and the brakes — can y'all do the back ones?"
+        ],
+        "1": [
+          "they squeak in the back",
+          "the back ones are noisy"
+        ],
+        "2": [
+          "a noise I've heard, a squeak in the back. Nobody said anything",
+          "I heard it. A squeak, mostly when I back up"
+        ]
+      },
+      "unresolved_end": [
+        "I'll just ask when I pick it up",
+        "never mind, I'll talk to whoever's there when I come"
+      ]
+    },
+    {
+      "id": "U16",
+      "kind": "wrong_way_round",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "opening": [
+        "can I come {time_1}?",
+        "y'all got anything {time_1}?"
+      ],
+      "second_answer": [
+        "yeah, for my car",
+        "to bring it in"
+      ],
+      "advisor_second": {
+        "0": "Sure, come on.",
+        "1": "What's it for?",
+        "2": "Sure — what are we doing on it, so I put the right time down?"
+      },
+      "third_answer": {
+        "0": [
+          "alright. It's — {need}",
+          "okay. Oh, it's for — {need}"
+        ],
+        "1": [
+          "oh, {need}",
+          "it's {need}"
+        ],
+        "2": [
+          "oh — {need}",
+          "right, sorry. {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll just bring it and show y'all",
+        "never mind, I'll call back"
+      ]
+    },
+    {
+      "id": "U17",
+      "kind": "wrong_way_round",
+      "applies_to": [
+        "existing_job"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "existing_fits": [
+        "EJ19",
+        "EJ21",
+        "ready"
+      ],
+      "opening": [
+        "is it gonna be more than what y'all said?",
+        "it's not gonna go over, is it?"
+      ],
+      "second_answer": [
+        "the price. What he told me",
+        "what y'all quoted me"
+      ],
+      "advisor_second": {
+        "0": "Uh, I don't think so.",
+        "1": "Who did you talk to?",
+        "2": "Let me find you — what's the name on it, and which car is it?"
+      },
+      "third_answer": {
+        "0": [
+          "okay, well — it's the {car_model}, the {job_said}",
+          "I mean on the {car_model}"
+        ],
+        "1": [
+          "somebody there. It's the {car_model}",
+          "I don't remember. The {car_model}, for the {job_said}"
+        ],
+        "2": [
+          "{customer_last}. The {car_model}, the {job_said}",
+          "it's {customer_first} {customer_last}, the {car_model}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll just ask when I come get it",
+        "never mind, I'll call back later"
+      ]
+    },
+    {
+      "id": "U18",
+      "kind": "wrong_way_round",
+      "applies_to": [
+        "existing_job"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "existing_fits": [
+        "extra_work"
+      ],
+      "opening": [
+        "I'm calling back about what he said",
+        "somebody called me, I'm calling back"
+      ],
+      "second_answer": [
+        "the guy that called me. About the car",
+        "he left a message, I didn't get all of it"
+      ],
+      "advisor_second": {
+        "0": "Okay, what'd he say?",
+        "1": "Who called you?",
+        "2": "Was that about your car being ready, or about something they found? What's the name on it?"
+      },
+      "third_answer": {
+        "0": [
+          "I don't know, that's why I'm calling. It's the {car_model}",
+          "something about my {car_model}"
+        ],
+        "1": [
+          "I didn't catch the name. It's my {car_model}",
+          "somebody at y'all's. The {car_model}"
+        ],
+        "2": [
+          "{customer_last}. I think he said they found something",
+          "the {car_model}, under {customer_last}. I don't know which"
+        ]
+      },
+      "unresolved_end": [
+        "I'll wait for him to call me back, then",
+        "alright, have him call me again"
+      ]
+    },
+    {
+      "id": "U19",
+      "kind": "wrong_way_round",
+      "applies_to": [
+        "existing_job"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "existing_fits": [
+        "ready",
+        "not_ready"
+      ],
+      "opening": [
+        "so it's ready then?",
+        "it's done, right?"
+      ],
+      "second_answer": [
+        "my car. I dropped it off",
+        "the car. Y'all have it"
+      ],
+      "advisor_second": {
+        "0": "Uh — yeah, should be.",
+        "1": "Which car?",
+        "2": "Let me look — what's the name on it, and when did you drop it off?"
+      },
+      "third_answer": {
+        "0": [
+          "oh, good. The {car_model}, right? I'll come get it",
+          "alright. It's the {car_model}"
+        ],
+        "1": [
+          "the {car_model}",
+          "my {car_model}, the {job_said}"
+        ],
+        "2": [
+          "{customer_first} {customer_last}, I dropped it {drop_day}. The {car_model}",
+          "{customer_last}. {drop_day}, the {car_model}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll just come by and see",
+        "okay, I'll call back in a bit"
+      ]
+    },
+    {
+      "id": "U20",
+      "kind": "wrong_way_round",
+      "applies_to": [
+        "new_enquiry"
+      ],
+      "resolves_to": "need",
+      "job_filter": null,
+      "opening": [
+        "what's the total gonna be with the tax?",
+        "out the door, what's it come to?"
+      ],
+      "second_answer": [
+        "for — what I need done",
+        "on mine, the whole thing"
+      ],
+      "advisor_second": {
+        "0": "Tax is on top of whatever it is.",
+        "1": "For what work?",
+        "2": "Total for what — tell me what it's doing and what you're driving, and I'll give you the out-the-door number."
+      },
+      "third_answer": {
+        "0": [
+          "okay, well — {need}",
+          "on — {need}"
+        ],
+        "1": [
+          "oh — {need}",
+          "for, uh, {need}"
+        ],
+        "2": [
+          "sorry. {need}",
+          "right — {need}"
+        ]
+      },
+      "unresolved_end": [
+        "I'll call back when I know what all it needs",
+        "never mind, I'll come by"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+ "path": "shop-floor/before-a-car-leaves.md",
+ "title": "Перед тем как отдать машину",
+ "title_en": "Before a car leaves your bay",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/before-a-car-leaves.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "The foreman's final checks.",
+ "serves": [
+  "S6",
+  "S14",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_ru": 166,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Same ten checks in the foreman's Russian voice («ты» to mechanics)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Колёса снимал? Затяни динамометрическим ключом, руками, по моменту. Не гайковёртом."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Тормоза делал? Прокачай педаль до того, как тронешь машину с места. Направляющие почисти и смажь. Уровень жидкости проверь."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Пробки на месте: масло, антифриз, тормозная, омыватель. Щуп вставлен."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Под капотом ничего не осталось. Инструмент пересчитай."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Заведи, загляни под машину: не капает?"
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Проедь хотя бы вокруг сервиса. Тормоза, рулевое, подвеска и всё, что стучало, — настоящая контрольная поездка."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Сбрось межсервисный интервал. Давление в шинах выставь по табличке в проёме двери."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Старые детали — в пакет и в багажник, если в наряде отмечено, что клиент их забирает."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Протри руль, рычаг и ручку двери. Чехол с сиденья и накидку с крыла сними."
+  },
+  {
+   "section": "Перед тем как отдать машину",
+   "item": "Останови время по наряду. Запиши в наряд, что сделал и что увидел."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,194 @@
+{
+  "format": "seed-conversation/1",
+  "id": "06-s6-web-west-nine-days",
+  "configuration": "en",
+  "number": 6,
+  "story": "S6",
+  "title": "Nashville: the car that has waited nine days; its owner writes for the fourth time",
+  "demonstrates": "A web chat: the assistant answers first, cannot read the shop system and hands the question over; from the advisor's first line the chat is his and the assistant only drafts. The weak desk in writing: replies at closing time, a handful of words, a new date each time and no reason. Every draft is discarded. A private note by the other advisor says what is really going on, and the manager's answer to it is one word. At T the fourth message is unanswered, the chat is Urgent by its wait, and a usable draft sits in the box.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json en.S6_waiting_nine_days",
+      "name": "Curtis Vaughn",
+      "first_time": false,
+      "phone": "(615) 555-0115"
+    },
+    "named_in_a_note": [
+      {"slot": 9, "name": "Marcus Gaines"},
+      {"vendor": "V2", "name": "Harpeth Valley Parts Supply"}
+    ],
+    "staff": [
+      {"slot": 23, "name": "Chad Binkley"},
+      {"slot": 24, "name": "Jasmine Bolden"},
+      {"slot": 22, "name": "Dale Hutchins"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer whose car has stood at the Charlotte Pike shop since T-9d, waiting for a part.",
+    "vehicle": "2012 Volvo XC60 T6 AWD, BRC-7896",
+    "waiting_for": "a remanufactured angle gear, ordered from the supplier the shop kept after the purchase, promised twice and moved twice",
+    "what_happens": "He writes 7, 5, 3 and 1 days before T and phones on T-4d and T-1d (calls design, story calls 15 and 16). Chad answers three times, late, with a date or with nothing. Jasmine asks the manager in a note to order through the home shops' parts manager or tell the customer the truth. The manager writes 'handled'. Nothing changes.",
+    "facts": {
+      "car_in": "T-9d",
+      "dates_given": [
+        "Friday, T-7d (when the part was ordered, T-8d; outside the chat)",
+        "Monday, T-4d (written, T-7d)",
+        "the part Tuesday and the car Wednesday, T-2d (on the phone and in the chat, T-4d; nothing behind it)"
+      ],
+      "each_message_waits_over_hours": 4,
+      "at_t": "day 9; the part has no confirmed arrival",
+      "public_pages_used": [],
+      "note": "The assistant cannot read the shop system, so each draft says it has no status and promises only to find out. It never names a date.",
+      "numbers": [
+        {"said": "day 6", "what": "calendar days since the car came in, on the day of message 3"},
+        {"said": "9 days", "what": "calendar days in waiting_parts at T (ledger s6.waiting_at_t)"}
+      ]
+    }
+  },
+  "days": {
+    "T-9d": {"anchor": "9 calendar days before T (the car enters waiting_parts; a full open day)", "rule": {"kind": "calendar", "days": -9}, "nominal": "Wed 2026-11-04", "what": "the car is dropped off"},
+    "T-8d": {"anchor": "8 calendar days before T (the day after the car came in)", "rule": {"kind": "calendar", "days": -8}, "nominal": "Thu 2026-11-05", "what": "the part is ordered and he is told Friday; 'last Thursday'"},
+    "T-7d": {"anchor": "7 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -7}, "nominal": "Fri 2026-11-06", "what": "message 1"},
+    "T-5d": {"anchor": "5 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -5}, "nominal": "Sun 2026-11-08", "what": "message 2 (a Sunday for the nominal T: the shop is closed)"},
+    "T-4d": {"anchor": "west's 4th full open day before T", "rule": {"kind": "open_day", "site": "west", "n": -4}, "nominal": "Mon 2026-11-09", "what": "call 15, and the reply to message 2"},
+    "T-3d": {"anchor": "3 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -3}, "nominal": "Tue 2026-11-10", "what": "message 3; the other advisor's note"},
+    "T-2d": {"anchor": "2 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -2}, "nominal": "Wed 2026-11-11", "what": "the manager's note; the reply to message 3; the day promised in call 15"},
+    "T-1d": {"anchor": "1 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -1}, "nominal": "Thu 2026-11-12", "what": "message 4; the missed call and call 16 (west's last full open day before T)"},
+    "T": {"anchor": "T's date", "rule": {"kind": "T"}, "nominal": "Fri 2026-11-13", "what": "'Tomorrow is 9 days'"}
+  },
+  "floating_days": [
+    {"word": "today", "said_on": "T-7d", "day": "T-7d"},
+    {"word": "monday", "said_on": "T-7d", "day": "T-4d"},
+    {"word": "Monday", "said_on": "T-5d", "day": "T-4d"},
+    {"word": "first thing Monday", "said_on": "T-5d", "day": "T-4d"},
+    {"word": "tomorrow", "said_on": "T-4d", "day": "T-3d"},
+    {"word": "wednesday", "said_on": "T-4d", "day": "T-2d"},
+    {"word": "today", "said_on": "T-3d", "day": "T-3d"},
+    {"word": "Friday, then Monday, then Wednesday", "said_on": "T-3d", "day": "T-7d, T-4d, T-2d"},
+    {"word": "early next week", "said_on": "T-3d", "day": "T+3d to T+4d"},
+    {"word": "Tomorrow", "said_on": "T-1d", "day": "T"},
+    {"word": "tomorrow morning", "said_on": "T-1d", "day": "T"},
+    {"word": "last Thursday", "said_on": "T-1d", "day": "T-8d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "5eedc0de-0006-4e00-8000-00000000e006",
+      "peer": {"id": "seedv1-browser-en-0733", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0733",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-7d", "at": "10:14:20", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-7d", "at": "10:14:20", "kind": "message", "from": "customer", "text": "Morning. Curtis Vaughn, you have my Volvo XC60. I was told the part would be in today. Any word?"},
+        {"n": 2, "day": "T-7d", "at": "10:14:44", "kind": "message", "from": "assistant", "text": "Good morning, Mr. Vaughn. I'm the assistant for Brennan Auto Care. I can't see the shop's repair orders from here, so I don't have the status of your part. I'll pass your question to the service desk at the Charlotte Pike shop so they can answer you. What's the best number to reach you?"},
+        {"n": 3, "day": "T-7d", "at": "10:15:30", "kind": "message", "from": "customer", "text": "615 555 0115"},
+        {"n": 4, "day": "T-7d", "at": "10:15:52", "kind": "message", "from": "assistant", "text": "Thank you. Your question is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 5, "day": "T-7d", "at": "10:15:53", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Curtis Vaughn", "phone": "(615) 555-0115", "site": "Charlotte Pike", "context": "2012 Volvo XC60, at the Charlotte Pike shop waiting for a part. He was told the part would be in today and asks whether it is. I can't see the repair order, so I gave no status and no date."}}, "note": {"from": "assistant", "private": true, "text": "2012 Volvo XC60, at the Charlotte Pike shop waiting for a part. He was told the part would be in today and asks whether it is. I can't see the repair order, so I gave no status and no date."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "west", "owner": null, "due": "T-7d 17:30, the day's close"}},
+        {"n": 6, "day": "T-7d", "at": "10:27", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 7, "day": "T-7d", "at": "10:51", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-7d", "at": "16:52:08", "kind": "activity", "what": "assigned", "derived": true, "to": 23, "by": 23, "how": "first reply"},
+        {"n": 9, "day": "T-7d", "at": "16:52:10", "kind": "message", "from": "staff", "slot": 23, "text": "its not here yet. supplier says monday", "late": "story: card S06, each message waits over four hours"},
+        {"n": 10, "day": "T-7d", "at": "16:52:11", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 23, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-7d", "at": "16:52:12", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-5d", "at": "13:20:15", "kind": "message", "from": "customer", "text": "Is Monday for sure? I'm paying for a rental by the day."},
+        {"n": 13, "day": "T-5d", "at": "13:21:00", "kind": "draft", "id": "d1", "text": "Mr. Vaughn, I'm sorry, I don't have a confirmed arrival for the part in front of me. I'll check with the supplier first thing Monday and message you before noon.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 23, "day": "T-4d", "at": "17:21:30", "because": "he sent his own text (n 17)"}},
+        {"n": 14, "day": "T-4d", "at": "07:54", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 15, "day": "T-4d", "at": "08:42", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 16, "day": "T-4d", "at": "15:40", "kind": "outside", "store": "calls", "what": "he phones; Chad says the part comes tomorrow and the car is ready Wednesday (calls design, story call 15: wrong_promise, score 25.0)"},
+        {"n": 17, "day": "T-4d", "at": "17:21:30", "kind": "message", "from": "staff", "slot": 23, "text": "like i said on the phone. part tomorrow, car wednesday", "late": "story: card S06, each message waits over four hours"},
+        {"n": 18, "day": "T-4d", "at": "17:21:32", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 19, "day": "T-3d", "at": "13:05:15", "kind": "message", "from": "customer", "text": "Chad said on the phone the part comes in today. Did it?"},
+        {"n": 20, "day": "T-3d", "at": "13:05:40", "kind": "message", "from": "customer", "text": "This is day 6 with no car."},
+        {"n": 21, "day": "T-3d", "at": "13:06:25", "kind": "draft", "id": "d2", "text": "Mr. Vaughn, I'm sorry. You were given dates that did not hold, and that is on us. I don't want to give you another one I can't stand behind. Let me find out exactly where the part is and call you today.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 23, "day": "T-2d", "at": "08:55:20", "because": "he sent his own text (n 26)"}},
+        {"n": 22, "day": "T-3d", "at": "13:29", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 23, "day": "T-3d", "at": "14:17", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 24, "day": "T-3d", "at": "16:05:30", "kind": "note", "from": "staff", "slot": 24, "mentions": [22], "text": "@Dale Hutchins Mr. Vaughn (XC60, angle gear) has written three times now and called. Harpeth Valley has moved the reman unit twice and today they told me \"early next week\", no tracking number. Chad gave him Friday, then Monday, then Wednesday. Can we order it through Marcus in Chattanooga instead, or at least tell him the truth? He said on the phone he's thinking about towing it out."},
+        {"n": 25, "day": "T-2d", "at": "08:40:10", "kind": "note", "from": "staff", "slot": 22, "text": "handled"},
+        {"n": 26, "day": "T-2d", "at": "08:55:20", "kind": "message", "from": "staff", "slot": 23, "text": "not in yet. will call u when it is", "late": "story: card S06, each message waits over four hours"},
+        {"n": 27, "day": "T-2d", "at": "08:55:22", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 28, "day": "T-1d", "at": "09:12", "kind": "outside", "store": "calls", "what": "he phones, nobody answers: a missed call, first desk 302, later got_through"},
+        {"n": 29, "day": "T-1d", "at": "14:20", "kind": "outside", "store": "calls", "what": "he gets through (story call 16: existing job, no score; repeat_caller, complaint; his question about 'the other thing' is not asked about and is left unanswered: auto-fail dropped_customer)"},
+        {"n": 30, "day": "T-1d", "at": "16:48:05", "kind": "message", "from": "customer", "text": "This is the fourth time I'm writing. Tomorrow is 9 days. Is the part on a truck or not? I need a straight answer."},
+        {"n": 31, "day": "T-1d", "at": "16:48:20", "kind": "message", "from": "customer", "text": "I've been paying for a rental since last Thursday."},
+        {"n": 32, "day": "T-1d", "at": "16:49:05", "kind": "draft", "id": "d3", "text": "Mr. Vaughn, you're right to be frustrated, and I'm sorry. Three dates we gave you did not hold. I don't have a confirmed arrival for the part, and I won't give you a fourth guess. Our shop manager will call you tomorrow morning with exactly where the part is.", "why_a_draft": "the chat is owned by a person", "outcome": null},
+        {"n": 33, "day": "T-1d", "at": "17:12", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 34, "day": "T", "at": "08:00", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"}
+      ],
+      "assignee_history": [
+        {"day": "T-7d", "at": "16:52:08", "to": 23, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "open",
+        "owner": 23,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "urgent"},
+        "waiting_since": {"day": "T-1d", "at": "16:48:05"},
+        "waited_working_minutes_at_t": 161.9,
+        "unread": 2,
+        "draft_in_box": "d3",
+        "live_demo": "a web chat, so the waiting draft can be edited and sent in a live demo (ledger conv.live_demo, conv.open_at_t)",
+        "shown_why": "the wait: 42 working minutes on the last open day and the two hours of T's morning at the shop"
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 22},
+          {"asked": 5, "answered": 9, "by": 23, "working_minutes": 396.3, "wall_minutes": 396.3, "measured_from": "n 5", "reply": "first", "late": "story: card S06, each message waits over four hours"},
+          {"asked": 12, "answered": 17, "by": 23, "working_minutes": 591.5, "wall_minutes": 1681.2, "measured_from": "n 12", "reply": "later", "late": "story: card S06, each message waits over four hours"},
+          {"asked": 19, "answered": 26, "by": 23, "working_minutes": 350.1, "wall_minutes": 1190.1, "measured_from": "n 19", "reply": "later", "late": "story: card S06, each message waits over four hours"},
+          {"asked": 30, "answered": null, "note": "open at T"}
+        ],
+        "first_person_line": {
+          "by": 23,
+          "n": 9,
+          "working_minutes": 396.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 7, "assistant": 2, "manager": 3, "note": 3},
+        "resolutions": [],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 23},
+          {"draft": "d2", "outcome": "discarded", "manager": 23}
+        ],
+        "operator_credit": "the chat's first answer is nobody's (the assistant wrote it); slot 23: his first line 396.3 working minutes after the hand-off, three replies, two drafts discarded, nothing resolved; slots 24 and 22 wrote notes only, which count nowhere"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "is my car ready, has the part come",
+    "handled": "assistant first, handed over (escalation), slot 23; notes by 24 and 22",
+    "outcome": "open at T, owned by slot 23, urgent by its wait, unread, one unsent draft",
+    "facts": [
+      "four messages, 7, 5, 3 and 1 days before T, each waiting over four hours for a person's reply; the fourth unanswered at T",
+      "slot 23 wrote 'supplier says monday', then 'part tomorrow, car wednesday', then 'will call u when it is'",
+      "the Wednesday promise repeats call 15's and had nothing behind it; the car is still waiting at T",
+      "slot 24 told the manager in a note that the supplier has moved the part twice and now says early next week, and proposed ordering through the home shops; slot 22 answered 'handled'",
+      "he has paid for a rental since the day after the car came in"
+    ],
+    "questions": ["S6.5", "S6.2"]
+  },
+  "why": [
+    "Chad's three replies are twenty-five words together and none of them says why.",
+    "The customer goes from 'Morning.' to counting days and money; he never swears in writing.",
+    "The note is the only place the supplier is named, and it sits two lines above 'handled'.",
+    "The drafts get better as the customer gets angrier, and the outcome rows say nobody used one."
+  ],
+  "new_facts": [
+    "The first date, Friday, was given to him when the part was ordered, on the day after the car came in, outside the chat and outside any hand-written call (call 15: 'Fella told me Friday').",
+    "ERP: the purchase order for the angle gear was promised for 7 days before T, then for west's 4th full open day before T; on the day of message 3 the supplier said 'early next week' with no tracking number.",
+    "Chad repeated call 15's promise in writing at 17:21 on the day of the call.",
+    "He has a rental car since 8 days before T.",
+    "The missed call is at 09:12 and call 16 at 14:20, as story call 16 has them; message 4 is written after call 16."
+  ]
+}

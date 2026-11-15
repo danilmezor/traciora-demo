@@ -1,0 +1,250 @@
+{
+ "path": "prices/labour-rates-and-fees.md",
+ "title": "Labour rates, fees and vehicle classes",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The posted and company-account hour, shop supplies, tax, tire fees, and how a price is scaled for bigger vehicles.",
+ "serves": [
+  "S12",
+  "S1",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_en": 445,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Posted hour 135.00 from {{@price_rise}}; 125.00 before. Company-account hour 121.50, held by accounts A1 and A2 only (catalogue company_account_terms).",
+  "Menu prices rose 8 % the same day; parts did not move.",
+  "Shop supplies 5 % of hourly labour, cap 35.00; sales tax on parts, labour, fees, supplies: 9.25 % in Chattanooga (East Main, Bonny Oaks), 9.75 % at Charlotte Pike in Nashville (ledger tax.rate.main, .east, .west).",
+  "Tyre disposal 3.50 and Tennessee pre-disposal fee 1.35 per tyre (catalogue fee on new_tyres_fitted: 19.40 for four).",
+  "Class multipliers: hours 1 / 1.15 / 1.25 / 1.3 on heavy jobs, parts 1 / 1.15 / 1.3 / 1.3 (catalogue.md and configurations.en.parts_class_multiplier). Fluid and filter jobs keep the car's labour and scale their parts (catalogue parts_scale_with_class), so a fluid job costs more on a truck (calls/en/28); diagnosis and inspections are flat.",
+  "Own multipliers: spark_plugs 2.4/1.6/1.8; timing_belt_kit 1.5/1.4/not offered for vans; valve_cover_gasket 2.0/1.4/1.5; wheel_alignment 1.0/1.15/1.25; new_tyres_fitted and seasonal_tyre_change 1.1/1.25/1.25.",
+  "The table titled \"Four jobs\" lists five rows: a deliberate small slip a careful reader notices.",
+  "Worked example: F-150 front pads and rotors, standard: 243.00 x 1.25 = 303.75 labour; 250.00 with each part x 1.3 to the cent = 325.01 parts; 628.76."
+ ],
+ "tables": [
+  {
+   "section": "Labour",
+   "columns": [
+    "Rate",
+    "Per hour",
+    "Who pays it"
+   ],
+   "rows": [
+    {
+     "Rate": "Posted rate",
+     "Per hour": "$135.00",
+     "Who pays it": "Everyone, unless the next line applies"
+    },
+    {
+     "Rate": "Company-account rate",
+     "Per hour": "$121.50",
+     "Who pays it": "Nickajack Delivery and Millsaps Heating & Plumbing only"
+    }
+   ]
+  },
+  {
+   "section": "Added to a bill",
+   "columns": [
+    "Charge",
+    "Amount",
+    "On what"
+   ],
+   "rows": [
+    {
+     "Charge": "Shop supplies",
+     "Amount": "5 % of labour, at most $35.00 a bill",
+     "On what": "Hourly-priced jobs only. Menu jobs carry none"
+    },
+    {
+     "Charge": "Tennessee sales tax",
+     "Amount": "9.25 % at East Main and Bonny Oaks; 9.75 % at Charlotte Pike",
+     "On what": "Parts, labour, fees and shop supplies"
+    },
+    {
+     "Charge": "Tire disposal",
+     "Amount": "$3.50 a tire",
+     "On what": "New tires"
+    },
+    {
+     "Charge": "State tire fee",
+     "Amount": "$1.35 a tire",
+     "On what": "New tires"
+    }
+   ]
+  },
+  {
+   "section": "Bigger vehicles",
+   "columns": [
+    "Class",
+    "Examples",
+    "Labour on heavy jobs",
+    "Parts"
+   ],
+   "rows": [
+    {
+     "Class": "Car",
+     "Examples": "Camry, Civic, Outback, RAV4, Equinox",
+     "Labour on heavy jobs": "× 1",
+     "Parts": "× 1"
+    },
+    {
+     "Class": "SUV",
+     "Examples": "Explorer, Highlander, Odyssey, Grand Cherokee",
+     "Labour on heavy jobs": "× 1.15",
+     "Parts": "× 1.15"
+    },
+    {
+     "Class": "Truck",
+     "Examples": "F-150, Silverado, Tacoma, Tahoe",
+     "Labour on heavy jobs": "× 1.25",
+     "Parts": "× 1.3"
+    },
+    {
+     "Class": "Van",
+     "Examples": "Transit, ProMaster, Express, Sprinter",
+     "Labour on heavy jobs": "× 1.3",
+     "Parts": "× 1.3"
+    }
+   ]
+  },
+  {
+   "section": "Bigger vehicles",
+   "columns": [
+    "Job",
+    "SUV",
+    "Truck",
+    "Van"
+   ],
+   "rows": [
+    {
+     "Job": "Spark plugs (V6 and V8 take longer)",
+     "SUV": "× 2.4",
+     "Truck": "× 1.6",
+     "Van": "× 1.8"
+    },
+    {
+     "Job": "Timing belt",
+     "SUV": "× 1.5",
+     "Truck": "× 1.4",
+     "Van": "not offered"
+    },
+    {
+     "Job": "Valve cover gasket",
+     "SUV": "× 2",
+     "Truck": "× 1.4",
+     "Van": "× 1.5"
+    },
+    {
+     "Job": "Four-wheel alignment",
+     "SUV": "× 1",
+     "Truck": "× 1.15",
+     "Van": "× 1.25"
+    },
+    {
+     "Job": "Mount and balance, seasonal changeover",
+     "SUV": "× 1.1",
+     "Truck": "× 1.25",
+     "Van": "× 1.25"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "configurations.en.labour_rate.standard.after_rise",
+   "what": "labour hour",
+   "value": 135.0
+  },
+  {
+   "catalogue_key": "configurations.en.labour_rate.company_account.after_rise",
+   "what": "labour hour",
+   "value": 121.5
+  },
+  {
+   "catalogue_key": "configurations.en.labour_rate.standard.before_rise",
+   "what": "labour hour",
+   "value": 125.0,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 243.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "labour",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 303.75
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "parts and fluids total",
+   "tier": "standard",
+   "value": 250.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 628.76
+  }
+ ],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Nickajack Delivery"
+  },
+  {
+   "account": "A2",
+   "name": "Millsaps Heating & Plumbing"
+  }
+ ],
+ "dates": [
+  "{{@price_rise|date}}"
+ ],
+ "new_facts": [
+  "The list of \"heavy jobs\" in words (derived from the jobs that carry hours_by_class in the catalogue)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "posted rate 125.00 to 135.00, company rate 112.50 to 121.50; message: \"New prices from today. Labour hour $135.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian rates 1 900 (posted) and 1 700 (contract) RUB from the rise; 1 760 and 1 580 before. Class multipliers differ: hours 1 / 1.15 / 1.3 / 1.3, parts 1 / 1.35 / 1.7 / 1.3. No sales tax; VAT 5 % inside every price. No tyre fees. Shop supplies 3 %, cap 500 RUB."
+ ]
+}

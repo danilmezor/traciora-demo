@@ -1,0 +1,118 @@
+{
+ "path": "management/comeback-review.md",
+ "title": "Разбор возвратов",
+ "title_en": "Comeback review",
+ "exists_in": "both",
+ "english_sheet": "facts/management/comeback-review.json",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "4",
+ "purpose": "Senior rank: how comebacks are counted and reviewed each month, and where the review is not happening.",
+ "serves": [
+  "S6",
+  "S14",
+  "visibility:senior",
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_ru": 273,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "A comeback is a warranty or goodwill order opened within 30 days of the order it repeats (ledger comeback.definition); the page adds a quarterly look at paid repeat orders on the same unit, because the warranty window is short.",
+  "Same ladder (3 % and 4 %) and the same company target (ledger comeback.company.ru 2.55 %).",
+  "Kazan has the highest rate (ledger comeback.west.ru 3.32 %; slot 27 at 5.31 %)."
+ ],
+ "new_facts": [
+  "A quarterly look at paid repeat orders on the same unit after day 30 (no data footprint)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Что с этим делаем",
+   "columns": [
+    "Цифра механика",
+    "Что происходит"
+   ],
+   "rows": [
+    {
+     "Цифра механика": "Меньше 3 %",
+     "Что происходит": "Ничего. Сказать ему об этом"
+    },
+    {
+     "Цифра механика": "От 3 до 4 %",
+     "Что происходит": "Михалыч показывает ему его возвраты, один за другим. Без бумаг"
+    },
+    {
+     "Цифра механика": "Больше 4 % два месяца подряд",
+     "Что происходит": "Месяц каждую его работу по тормозам, рулевому и подвеске перед выдачей проверяет мастер цеха"
+    },
+    {
+     "Цифра механика": "После этого всё ещё больше 4 %",
+     "Что происходит": "Разговор со мной, со списком, письменно"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Михалычем",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Михалыч",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паше",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

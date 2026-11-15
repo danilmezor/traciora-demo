@@ -1,0 +1,683 @@
+{
+  "format": "seed-call/1",
+  "id": "en-10-S8-complaint",
+  "configuration": "en",
+  "number": 10,
+  "story": "S8",
+  "title": "The customer rings about the bill; the lead advisor owns the mistake and promises the senior's call",
+  "purpose": "Story S8, the complaint. The car was a day late and the bill is not what was quoted. Travis does not argue the quote, explains the bill, says what he cannot decide himself and who will, and sums it up. It is a call about a job already done: two checks, no score.",
+  "cast": {
+    "advisor": {
+      "slot": 5,
+      "name": "Travis Burnette",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Frank Daugherty",
+      "ref": "named_customers.json en.S8",
+      "first_time": false
+    },
+    "mentioned": [
+      {
+        "name": "Caleb Sutton",
+        "slot": 7,
+        "role": "quoted the job"
+      },
+      {
+        "name": "Greg Whitaker",
+        "slot": 4,
+        "role": "will call back"
+      },
+      {
+        "name": "Ray Brennan",
+        "slot": 1,
+        "role": "the founder, named by the customer"
+      }
+    ]
+  },
+  "call": {
+    "day": "the day the car is ready: the next full open day after slot 7's 4th working day before T on which slot 5 works (rule R6; card S08, call 10)",
+    "nominal_offset": "T-3d",
+    "nominal_date": "2026-11-10",
+    "local_start": "14:35",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "101",
+    "ring_s": 6,
+    "caller_phone": "423-555-0172",
+    "repeat_caller": false,
+    "talk_s": 180
+  },
+  "scenario": {
+    "who_calls": "Frank Daugherty, who argued at the counter that morning, left without paying and has had three hours to get angrier.",
+    "vehicle": "2011 Subaru Outback 2.5i Premium, BRC-4178",
+    "job": "timing belt, tensioner, idlers and water pump, done; billed at list",
+    "wants": "to pay what he was quoted",
+    "what_happens": "Travis lets him finish, says the quote was the shop's mistake, breaks the bill down, says the same-day promise should not have been made, says he could match the quote himself but the lost day as well takes it past ten percent, which is the service manager's to decide, promises Greg's call before ten the next morning and sums up: who calls, when, where the car stays and what is being decided.",
+    "facts": {
+      "ledger": {
+        "s8.price_quoted": 688.0,
+        "s8.price_now": 720.0,
+        "s8.supplies": 21.6,
+        "s8.bill_before_tax": 741.6
+      },
+      "bill_with_tax_usd": 810.2,
+      "callback_promised_by": "call+1d 10:00",
+      "note": "720.00 + shop supplies 21.60 = 741.60 before tax, 810.20 with sales tax (catalogue.json story_pins.S8). Matching the quote is 741.60 - 688.00 = 53.60 off, 7.2 % of the bill before tax, inside an advisor's 10 % (ledger price.discount_rule_pct); Travis escalates because the customer also lost a day, and anything past 10 % needs the senior's approval."
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday",
+      "day": "call-1d"
+    },
+    {
+      "word": "Tuesday",
+      "day": "call"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Brennan Auto Care, this is Travis."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.4,
+      "said": "Travis, this is Frank Daugherty. I was just in there this mornin' about my Subaru."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.0,
+      "said": "Yes sir, Mr. Daugherty. The Outback. I saw you at the counter with Caleb."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 16.5,
+      "said": "Then you know. I was told six hundred and eighty-eight dollars and I was told Monday. I come in there this mornin' — Tuesday — and that boy hands me a bill for eight hundred and ten."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 29.5,
+      "said": "Yes sir.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 31.5,
+      "said": "Now I don't know what kind of outfit quotes a man one price and charges him another, but I'm not payin' it. I've been bringin' cars to Ray Brennan since before you worked there."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 45.5,
+      "said": "I hear you. And I'm not gonna tell you you heard wrong, 'cause you didn't. Can I walk you through what happened, and then tell you what I'm gonna do about it?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 58.1,
+      "said": "Go ahead."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 60.8,
+      "said": "The price for that job is seven-twenty. It's been seven-twenty since our labor rate went up a few months back. Caleb read you six eighty-eight off a page that never got updated. That's our mistake, not yours."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 74.5,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 76.0,
+      "said": "And the rest of it?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 79.5,
+      "said": "The rest is shop supplies, twenty-one sixty, and sales tax. That's how seven-twenty turns into eight-ten out the door. It's like the menu price and the check — same meal, but nobody told you about the tax."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 94.6,
+      "said": "Nobody told me a lot of things. He told me same day."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 100.0,
+      "said": "Yes sir. He shouldn't have. That's better than a three-hour job, and we didn't get it on the lift till after lunch Monday."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 109.7,
+      "said": "So what are you gonna do?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 113.2,
+      "said": "Here's where I am. Matching the quote I could do myself, but you lost a day too, and anything past ten percent is Greg's — Greg Whitaker, our service manager. He's at the other shop today; I'm writing it up for him now, with the six eighty-eight you were quoted on it."
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 132.2,
+      "said": "Uh-huh.",
+      "overlap": true
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 133.9,
+      "said": "I'm not comin' back down there to argue."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 138.1,
+      "said": "You won't have to. Greg'll call you tomorrow morning, before ten. Is this the best number?"
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 145.1,
+      "said": "It's the only one I got."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 148.2,
+      "said": "Okay. So: Greg Whitaker calls you tomorrow before ten at this number. The Outback's done, and it stays locked up here at twenty-one-oh-six East Main tonight, no charge for that. And what he's deciding is the difference between the six eighty-eight you were told and the seven forty-one sixty on the bill."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 167.4,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 23,
+      "who": "customer",
+      "at_s": 169.5,
+      "said": "Alright. Before ten."
+    },
+    {
+      "n": 24,
+      "who": "advisor",
+      "at_s": 171.8,
+      "said": "Before ten. And Mr. Daugherty — I'm sorry about this one."
+    },
+    {
+      "n": 25,
+      "who": "customer",
+      "at_s": 177.1,
+      "said": "Well. We'll see."
+    },
+    {
+      "n": 26,
+      "who": "advisor",
+      "at_s": 179.1,
+      "said": "Yes sir. Talk to you tomorrow."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.66,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          12,
+          14,
+          15,
+          16,
+          18,
+          23,
+          24,
+          26
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "a name heard as a neighbour in sound",
+        "script_turn": 3,
+        "said": "Daugherty",
+        "stored": "Dockery"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          4,
+          9,
+          12,
+          16,
+          19,
+          21,
+          24
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "the shop-supplies amount merges into one number",
+        "script_turn": 12,
+        "said": "twenty-one sixty",
+        "stored": "$2,160"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost; two turns of one speaker become one line",
+        "script_turns": [
+          5,
+          6,
+          17,
+          22
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 8,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 10,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 16,
+        "as_digits": 14,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 4,
+        "lost": 3,
+        "joined": 1
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 417,
+    "stored_words": 406,
+    "strict_word_difference": 0.106
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 427,
+    "duration_s": 180.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Brennan Auto Care, this is Travis.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Travis, this is Frank Daugherty. I was just in there this morning about my Subaru.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir, Mr. Dockery. The Outback. I saw you at the counter with Caleb.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Then you know. I was told $688 and I was told Monday. I come in there this morning, Tuesday, and that boy hands me a bill for eight hundred and ten. Now I don't know what kind of outfit quotes a man one price and charges him another, but I'm not paying it. I've been bringing cars to Ray Brennan since before you worked there.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I hear you. And I'm not going to tell you you heard wrong, because you didn't. Can I walk you through what happened, and then tell you what I'm going to do about it?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Go ahead.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The price for that job is $720. It's been $720 since our labor rate went up a few months back. Caleb read you $688 off a page that never got updated. That's our mistake, not yours.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh-huh. And the rest of it?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The rest is shop supplies, $2,160, and sales tax. That's how $720 turns into $810 out the door. It's like the menu price and the check, same meal, but nobody told you about the tax.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Nobody told me a lot of things. He told me same day.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. He shouldn't have. That's better than a three-hour job, and we didn't get it on the lift till after lunch Monday.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So what are you going to do?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Here's where I am. Matching the quote I could do myself, but you lost a day too, and anything past 10% is Greg's, Greg Whitaker, our service manager. He's at the other shop today. I'm writing it up for him now, with the $688 you were quoted on it.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'm not coming back down there to argue.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You won't have to. Greg'll call you tomorrow morning, before 10. Is this the best number?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's the only one I got.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So: Greg Whitaker calls you tomorrow before 10 at this number. The Outback's done, and it stays locked up here at 2106 East Main tonight, no charge for that. And what he's deciding is the difference between the $688 you were told and the $741.60 on the bill.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Before ten.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Before 10. And Mr. Daugherty, I'm sorry about this one.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Well. We'll see.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. Talk to you tomorrow.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "existing_job",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Brennan Auto Care, this is Travis.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "recap",
+        "quote": "So: Greg Whitaker calls you tomorrow before 10 at this number. The Outback's done, and it stays locked up here at 2106 East Main tonight, no charge for that.",
+        "level": 2,
+        "segment": 16
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "complaint",
+      "customer_angry"
+    ],
+    "strength": {
+      "quote": "And I'm not going to tell you you heard wrong, because you didn't.",
+      "why": "He gave the customer the one thing he rang to hear before explaining anything, and the call stopped being an argument.",
+      "segment": 4
+    },
+    "try_next": null,
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": null,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "existing_job",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 16
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [
+        "name_and_number",
+        "need_discovery",
+        "price_with_next_step",
+        "offered_time",
+        "asked_for_booking",
+        "objection"
+      ],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "complaint",
+        "customer_angry"
+      ],
+      "score": null,
+      "applicable": 2,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": null,
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Brennan Auto Care, this is Travis",
+        "recap": "So: Greg Whitaker calls you tomorrow before 10 at this number. The Outback's done, and it stays locked up here at 2106 East Main tonight, no charge for that"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "And I'm not going to tell you you heard wrong, because you didn't",
+        "why": "He gave the customer the one thing he rang to hear before explaining anything, and the call stopped being an argument."
+      },
+      "try_next": null
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. No score: a call about a job already done is checked on the greeting and the summary only (card S08, question S8.4).",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "not_applicable",
+      "need_discovery": "not_applicable",
+      "price_with_next_step": "not_applicable",
+      "offered_time": "not_applicable",
+      "asked_for_booking": "not_applicable",
+      "recap": 2,
+      "objection": "not_applicable"
+    },
+    "score": null,
+    "outcome": "callback_promised",
+    "tags": [
+      "callback_promised",
+      "complaint",
+      "customer_angry"
+    ]
+  },
+  "why": {
+    "call_type": "existing_job: the customer refers to work already done and asks for nothing new.",
+    "greeting": "2: the business and his own name in the first line.",
+    "recap": "2: when (tomorrow before ten), where (the car stays at 2106 East Main) and what (the difference between 688 and 741.60), before goodbye.",
+    "not_applicable": "The six checks that apply to new enquiries only are not asked of this call.",
+    "auto_fails": "None on this call. The wrong price and the same-day promise are call 9's.",
+    "try_next": "None: both scored checks are at level 2, so the product has no line to offer.",
+    "score": "No score: 2 scored checks (greeting, recap), under the three a score needs.",
+    "carried_by": []
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "kept: call 11, an outbound call from desk 104 to 423-555-0172 at 09:10 on call+1d, 18 h 35 min after this call (inside the 24 hours of the scorecard)",
+    "auto_fail": null
+  },
+  "day_report": {
+    "in_report": true,
+    "candidate": {
+      "kind": "callback",
+      "state": "kept"
+    },
+    "says": "In Travis's report of that day this call is the 'callback' highlight: the call back he promised at 14:35 was made, by the service manager at 09:10 the next morning. Its summary can be quoted under what went well. It adds no score to his day."
+  },
+  "new_facts": [
+    "The customer left on the day the car was ready without paying; the car stayed at main overnight (it is picked up and paid for after call 11).",
+    "The job went on the lift after lunch on the day it came in, which is why it ran into the next day.",
+    "Slot 4 was at east on the day of this call.",
+    "Slot 5's card for the discount (card S08) is raised during or right after this call."
+  ]
+}

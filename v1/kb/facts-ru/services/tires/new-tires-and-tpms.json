@@ -1,0 +1,211 @@
+{
+ "path": "services/tires/new-tires-and-tpms.md",
+ "title": "Новые шины и датчики давления",
+ "title_en": "New tires and tire-pressure sensors",
+ "exists_in": "both",
+ "english_sheet": "facts/services/tires/new-tires-and-tpms.json",
+ "first_revision_text": "ru/_history/services/tires/new-tires-and-tpms.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Selling and fitting tires; the fees; TPMS sensors.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_ru": 266,
+ "links_to": [
+  "services/tires/alignment.md",
+  "services/tires/seasonal-changeover-and-storage.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Reference size 185/65 R15: КАМА / Cordiant / Ikon Tyres; fitting 3 000 RUB; the set price includes the 400 RUB disposal fee (no state fee).",
+  "Tyres arrive the next morning in Ulyanovsk and on Tuesdays and Fridays in Kazan (contradicts the public tyres page for Kazan callers: the plant of O15).",
+  "A winter set on second rims without sensors keeps the pressure light on.",
+  "The seasonal part is a page of its own."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Новые шины",
+   "columns": [
+    "Категория",
+    "Шина",
+    "За штуку",
+    "Комплект с установкой"
+   ],
+   "rows": [
+    {
+     "Категория": "Эконом",
+     "Шина": "КАМА",
+     "За штуку": "4 480 ₽",
+     "Комплект с установкой": "21 320 ₽"
+    },
+    {
+     "Категория": "Стандарт",
+     "Шина": "Cordiant",
+     "За штуку": "5 860 ₽",
+     "Комплект с установкой": "26 840 ₽"
+    },
+    {
+     "Категория": "Премиум",
+     "Шина": "Ikon Tyres",
+     "За штуку": "7 930 ₽",
+     "Комплект с установкой": "35 120 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Новые шины",
+   "item": "Размер читаем с боковины шины, а не с таблички на двери: машины переобувают во что попало."
+  },
+  {
+   "section": "Новые шины",
+   "item": "Продаём парой на ось или комплектом. По одной — только если остальные три почти новые."
+  },
+  {
+   "section": "Новые шины",
+   "item": "Предложите сход-развал. Скажите зачем."
+  },
+  {
+   "section": "Новые шины",
+   "item": "В Ульяновск шины приезжают на следующее утро. В Казань — по вторникам и пятницам."
+  },
+  {
+   "section": "Новые шины",
+   "item": "Шины, которые клиент привёз сам, не ставим, если им больше шести лет по дате выпуска."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "part list price each: Шина 185/65 R15",
+   "tier": "economy",
+   "qty": 4,
+   "unit": "шт",
+   "brand": "КАМА",
+   "value": 4480
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 21320.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "part list price each: Шина 185/65 R15",
+   "tier": "standard",
+   "qty": 4,
+   "unit": "шт",
+   "brand": "Cordiant",
+   "value": 5860
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 26840.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "part list price each: Шина 185/65 R15",
+   "tier": "premium",
+   "qty": 4,
+   "unit": "шт",
+   "brand": "Ikon Tyres",
+   "value": 7930
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 35120.0
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "fee: Утилизация старых шин (4 шт.)",
+   "value": 400
+  },
+  {
+   "catalogue_key": "tpms_sensor",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4590.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Паше",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  400.0,
+  3000.0,
+  4480.0,
+  4590.0,
+  5860.0,
+  7930.0,
+  21320.0,
+  26840.0,
+  35120.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

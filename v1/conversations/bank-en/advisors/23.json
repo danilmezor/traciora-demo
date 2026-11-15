@@ -1,0 +1,237 @@
+{
+  "format": "bank-en/advisor/1",
+  "slot": 23,
+  "name": "Chad Binkley",
+  "shop": "Charlotte Pike",
+  "voice": "Flat, tired, lower case, 'u'. Writes up what was asked and nothing more, promises a date to end the exchange, knocks money off without asking. His replies come at closing time, in his own five words: the drafts mostly go unused.",
+  "sheet": {
+    "draft_outcomes": {
+      "sent_as_is": 15,
+      "sent_edited": 5,
+      "discarded": 80
+    },
+    "first_reply_min": 40,
+    "slowest_tenth": "next working day",
+    "reply_at": "near closing",
+    "ask_chance": 30,
+    "label_share": 5,
+    "resolves": 15
+  },
+  "signoff": null,
+  "pickup": [
+    "chad at charlotte pike",
+    "hey this is chad",
+    "chad here. got it",
+    "this is chad at the nashville shop"
+  ],
+  "replies": {
+    "price": {
+      "quote": [
+        "{job_price} plus tax",
+        "its {job_price}",
+        "around {job_price}",
+        "{job_price}. about {duration}"
+      ],
+      "after": [
+        "plus tax",
+        "thats with labor",
+        "should be about that",
+        "tax is extra"
+      ]
+    },
+    "booking": {
+      "offer": [
+        "come by {day_a}",
+        "anytime {day_a}",
+        "can do {day_a}",
+        "bring it in {day_a} morning"
+      ],
+      "confirm": [
+        "ok see u then",
+        "works",
+        "got it",
+        "ok {day_agreed}"
+      ]
+    },
+    "hours": {
+      "answer": [
+        "we dont do saturdays",
+        "yeah we do those",
+        "we close {close_time}",
+        "its {shop_address}"
+      ],
+      "after": [
+        "just come by anytime",
+        "use the drop box",
+        "no appt needed",
+        "east main has saturdays"
+      ]
+    },
+    "symptom": {
+      "advise": [
+        "bring it in and well look",
+        "probably needs looked at",
+        "should be fine to drive",
+        "inspection is {diag_price}"
+      ],
+      "confirm": [
+        "k",
+        "alright see u",
+        "we'll look at it",
+        "ok will check it"
+      ]
+    },
+    "status": {
+      "ready": [
+        "ready now",
+        "done. {job_total}",
+        "its done",
+        "u can come get it"
+      ],
+      "not_yet": [
+        "not here yet",
+        "part still not in",
+        "should be tomorrow",
+        "not in yet. should be {eta_day}"
+      ]
+    },
+    "found_work": {
+      "present": [
+        "also needs the {finding_item}. {finding_price}",
+        "{finding}. want it",
+        "found {finding}",
+        "u need the {finding_item}, {finding_price}"
+      ],
+      "confirm": [
+        "ok doing it",
+        "yep will do",
+        "will do it today",
+        "ok adding it"
+      ],
+      "declined": [
+        "ok leaving it",
+        "ok wont do it",
+        "fine",
+        "ok just the other then"
+      ]
+    },
+    "moving": {
+      "moved": [
+        "ok {day_a} then",
+        "fine. {day_a}",
+        "whenever works",
+        "ok moved it"
+      ],
+      "cancelled": [
+        "ok cancelled it",
+        "np",
+        "ok no problem",
+        "took u off"
+      ]
+    },
+    "complaint": {
+      "sorry": [
+        "bring it back in",
+        "sorry. bring it by",
+        "ill have {manager_first} look at it",
+        "we can look at it"
+      ],
+      "fix": [
+        "fixed it",
+        "should be good now",
+        "knocked some off the bill",
+        "its tax and supplies"
+      ],
+      "bill": [
+        "thats tax",
+        "its the supplies charge. on every one",
+        "i can knock some off",
+        "quote didnt have tax"
+      ]
+    },
+    "fleet": {
+      "list": [
+        "ok bring em",
+        "got the list",
+        "{unit} and {unit_b} ok",
+        "should be done {eta_day}"
+      ],
+      "paperwork": [
+        "ill send it",
+        "dont have it here. ill have to call u back",
+        "office has it",
+        "will email it tomorrow"
+      ]
+    }
+  },
+  "moves": {
+    "ask": [
+      "which car",
+      "whats the year on it",
+      "front or back one",
+      "what do u mean"
+    ],
+    "decline_discount": [
+      "i can knock a little off",
+      "ill see what i can do",
+      "cant do much",
+      "ill take some off this time"
+    ],
+    "close": [
+      "aight",
+      "see u",
+      "later",
+      "yep thx"
+    ],
+    "pass_on": [
+      "ill have to call u back",
+      "ask {manager_first}",
+      "{colleague_first} can help u",
+      "ill check and let u know"
+    ]
+  },
+  "edits": [
+    {
+      "draft_key": "status.dont_have",
+      "draft": "Hi {first_name}. I don't have the status of the {model} in front of me. I'll check with the shop and message you right back.",
+      "sent": "not here yet. supplier says {eta_day}",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "booking.ask_day",
+      "draft": "Hi {first_name}. Would a morning or an afternoon suit you better? I'll confirm the exact time.",
+      "sent": "anytime",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "price.quote_list",
+      "draft": "Hi {first_name}. {page_item} is {page_price} before shop supplies and tax on a car like yours. Which day works for you?",
+      "sent": "{job_price} plus tax. about {duration}",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "symptom.advise",
+      "draft": "Thanks for letting us know, {first_name}. I can't tell from here what it is, but we'd like to take a look. Which day works for you?",
+      "sent": "bring it in. we'll look",
+      "outcome": "discarded"
+    },
+    {
+      "draft_key": "generic.close",
+      "draft": "Thank you, {first_name}. Have a good day.",
+      "sent": "Thank you, {first_name}. Have a good day.",
+      "outcome": "sent_as_is"
+    },
+    {
+      "draft_key": "found_work.total",
+      "draft": "Good question, {first_name}. Let me get you the exact total with tax.",
+      "sent": "total is {job_total}",
+      "outcome": "sent_edited"
+    }
+  ],
+  "notes": [
+    "@{manager_first} customer wants a discount",
+    "@{colleague_first} can u call this guy back i cant today",
+    "part still not here",
+    "told him {eta_day}"
+  ]
+}

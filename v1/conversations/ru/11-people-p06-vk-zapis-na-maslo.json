@@ -1,0 +1,139 @@
+{
+  "format": "seed-conversation/1",
+  "id": "11-people-p06-vk-zapis-na-maslo",
+  "configuration": "ru",
+  "number": 11,
+  "story": "people",
+  "title": "Алина во «ВКонтакте»: запись на замену масла, сначала время, потом цена",
+  "demonstrates": "Slot 6 in writing: four minutes to a first reply, correct and complete, two times before the price, what is included, the address in the confirmation. She edits two drafts and sends the third as it was; labels and resolves.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Ксения Мартынова",
+      "invented": true,
+      "first_time": true,
+      "note": "LADA Vesta 2019; в сервисе впервые"
+    },
+    "staff": [
+      {"slot": 6, "name": "Алина Хасанова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Новая клиентка, из сообщества сервиса во «ВКонтакте».",
+    "vehicle": "LADA Vesta 2019",
+    "what_happens": "Просит записать на субботу. Алина предлагает два времени, называет цену и что в неё входит; на вопрос про масло отвечает и подтверждает запись с адресом.",
+    "facts": {
+      "booked": "суббота недели T-11, 10:00, main",
+      "oil": "Лукойл Genesis Armortech 5W-40 и фильтр MANN-FILTER: стандартный вариант каталога",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "6 700 ₽", "amount": 6700.0, "what": "замена масла в двигателе и масляного фильтра, класс car, стандартные масло и фильтр", "from": {"catalogue": "oil_service", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-80d": {"anchor": "slot 6's first working day on or after the Tuesday of week T-11", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 11, "on_or_after_for_slot": 6}, "nominal": "Tue 2026-08-25"},
+    "T-76d": {"anchor": "the Saturday of week T-11", "rule": {"kind": "weekday_of_week", "weekday": "Sat", "week": 11}, "nominal": "Sat 2026-08-29", "what": "«эта суббота»"}
+  },
+  "floating_days": [
+    {"word": "на эту субботу", "said_on": "T-80d", "day": "the Saturday of week T-11", "form": "на + accusative"},
+    {"word": "В субботу", "said_on": "T-80d", "day": "the Saturday of week T-11", "form": "в + accusative"},
+    {"word": "на субботу, 10:00", "said_on": "T-80d", "day": "the Saturday of week T-11", "form": "на + accusative"},
+    {"word": "До субботы", "said_on": "T-80d", "day": "the Saturday of week T-11", "form": "до + genitive"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "vk",
+      "bridge": "vk:default",
+      "inbox": "VK",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "1990002231",
+      "peer": {"id": "1990002231", "name": "Ксения Мартынова"},
+      "contact": {
+        "identifier": "vk_1990002231",
+        "name": "Ксения Мартынова",
+        "phone": null,
+        "avatar": {"has": true, "kind": "pet", "shows": "рыжий кот спит на подоконнике", "person_in_it": false}
+      },
+      "opened": {
+        "day": "T-80d",
+        "at": "12:40:15",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "her first message to the community: a new conversation"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-80d", "at": "12:40:15", "kind": "message", "from": "customer", "text": "Добрый день! Подскажите, можно к вам на замену масла записаться на эту субботу? веста 2019"},
+        {"n": 2, "day": "T-80d", "at": "12:41:00", "kind": "draft", "id": "d1", "text": "Добрый день! Да, в субботу работаем с 9:00 до 20:00. Замена масла и масляного фильтра на Vesta стоит 6 700 ₽ с маслом и фильтром. На какое время вам удобно?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 6, "day": "T-80d", "at": "12:44:30", "became": 4}},
+        {"n": 3, "day": "T-80d", "at": "12:44:28", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 4, "day": "T-80d", "at": "12:44:30", "kind": "message", "from": "staff", "slot": 6, "text": "Ксения, добрый день! Да, конечно. В субботу могу записать вас на 10:00 или на 15:30, по времени это минут сорок. Замена масла с фильтром на Весту выйдет 6 700 ₽, масло и фильтр наши. Какое время вам удобнее?"},
+        {"n": 5, "day": "T-80d", "at": "12:47:05", "kind": "message", "from": "customer", "text": "на 10. а масло какое льёте?"},
+        {"n": 6, "day": "T-80d", "at": "12:47:45", "kind": "draft", "id": "d2", "text": "В стоимость входит масло Лукойл Genesis Armortech 5W-40 и фильтр MANN-FILTER. Записать вас на субботу, 10:00?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 6, "day": "T-80d", "at": "12:49:10", "became": 7}},
+        {"n": 7, "day": "T-80d", "at": "12:49:10", "kind": "message", "from": "staff", "slot": 6, "text": "Лукойл Genesis Armortech 5W-40 и фильтр MANN, это входит в цену. Записала вас на субботу, 10:00, Московское шоссе, 40. Если планы поменяются, просто напишите сюда."},
+        {"n": 8, "day": "T-80d", "at": "12:50:30", "kind": "message", "from": "customer", "text": "спасибо!"},
+        {"n": 9, "day": "T-80d", "at": "12:51:10", "kind": "draft", "id": "d3", "text": "Пожалуйста, Ксения! До субботы.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-80d", "at": "12:51:50", "became": 10}},
+        {"n": 10, "day": "T-80d", "at": "12:51:50", "kind": "message", "from": "staff", "slot": 6, "text": "Пожалуйста, Ксения! До субботы."},
+        {"n": 11, "day": "T-80d", "at": "12:52:10", "kind": "activity", "what": "label_added", "label": "запись", "by": 6},
+        {"n": 12, "day": "T-80d", "at": "12:52:30", "kind": "activity", "what": "resolved", "by": 6}
+      ],
+      "assignee_history": [
+        {"day": "T-80d", "at": "12:44:28", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["запись"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 6, "working_minutes": 4.2},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 6, "working_minutes": 4.2, "wall_minutes": 4.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 6, "working_minutes": 2.1, "wall_minutes": 2.1, "measured_from": "n 5", "reply": "later"},
+          {"asked": 8, "answered": 10, "by": 6, "working_minutes": 1.3, "wall_minutes": 1.3, "measured_from": "n 8", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 4,
+          "working_minutes": 4.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-80d", "at": "12:52:30", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 6},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 6},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 6}
+        ],
+        "operator_credit": "slot 6: first answer 4.2 minutes (her ledger row is 4), three replies, two drafts edited and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "slot 6; the assistant drafts",
+    "outcome": "записана на субботу, 10:00, main; закрыт слотом 6",
+    "facts": [
+      "two times were offered before the price",
+      "the price is 6 700 with oil and filter",
+      "the confirmation carries the address"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Черновик начинает с цены, Алина — с времени: так её научили звонки (история S4).",
+    "В подтверждении есть адрес: его чаще всего и забывают.",
+    "Смайлика нет ни одного; восклицательный знак — один на сообщение."
+  ],
+  "new_facts": [
+    "Ксения Мартынова, LADA Vesta 2019: замена масла на main в субботу недели T-11, 10:00.",
+    "Картинка контакта: рыжий кот на подоконнике."
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "format": "seed-conversation/1",
+  "id": "10-people-p05-avito-sceplenie",
+  "configuration": "ru",
+  "number": 10,
+  "story": "people",
+  "title": "Авито: сколько стоит сцепление на Гранту, и можно ли со своим комплектом",
+  "demonstrates": "Avito is a listing, so the first question is a price. The assistant drafts it from the price list with one question back, and slot 5 takes the draft as it is. The second answer he types himself: lower case, a mechanic's tip, and «наберите меня». The last draft goes out untouched; he labels and resolves this one.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Руслан",
+      "invented": true,
+      "first_time": true,
+      "note": "пишет по объявлению сервиса; LADA Granta 2018, 8 клапанов; свой комплект сцепления"
+    },
+    "staff": [
+      {"slot": 5, "name": "Дмитрий Григорьев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек по объявлению, с телефона.",
+    "vehicle": "LADA Granta 2018, 8 кл.",
+    "what_happens": "Цена из прайса и встречный вопрос — черновик, отправленный как есть. Потом: можно ли со своим комплектом. Дмитрий отвечает сам, советует проверить выжимной и просит позвонить.",
+    "facts": {
+      "listing": "объявление сервиса в категории «Услуги»",
+      "note": "Номер клиента на Авито не виден; запись будет по звонку.",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "26 550 ₽", "amount": 26550.0, "what": "замена сцепления в сборе, класс car, стандартный комплект", "from": {"catalogue": "clutch_kit", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "10 450 ₽", "amount": 10450.0, "what": "только работа по замене сцепления: 5,5 нормо-часа", "from": {"labour_of": "clutch_kit", "class": "car"}},
+        {"said": "10450", "amount": 10450.0, "what": "то же, как он пишет", "from": {"labour_of": "clutch_kit", "class": "car"}}
+      ],
+      "numbers": [
+        {"said": "5,5 нормо-часа", "what": "нормо-часы замены сцепления по каталогу"}
+      ]
+    }
+  },
+  "days": {
+    "T-58d": {"anchor": "slot 5's first working day on or after the Monday of week T-8", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 8, "on_or_after_for_slot": 5}, "nominal": "Wed 2026-09-16"}
+  },
+  "floating_days": [
+    {"word": "после обеда", "said_on": "T-58d", "day": "T-58d", "form": "после + genitive"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "avito",
+      "bridge": "avito:default",
+      "inbox": "Avito",
+      "assistant_mode": "drafts",
+      "clock": "main",
+      "thread_key": "u2i-seedv1-0204-0001",
+      "peer": {"id": "900000000000204", "name": "Руслан"},
+      "contact": {
+        "identifier": "avito_900000000000204",
+        "name": "Руслан",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "listing_context": {
+        "item_id": "900000000000041",
+        "title": "Замена сцепления: Granta, Vesta, Largus, Logan. Московское шоссе",
+        "url": "https://avito.example/900000000000041"
+      },
+      "opened": {
+        "day": "T-58d",
+        "at": "11:14:20",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "a new Avito chat: one per listing and buyer"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-58d", "at": "11:14:20", "kind": "message", "from": "customer", "text": "Здравствуйте. Ещё актуально? Сколько сцепление поменять на гранте"},
+        {"n": 2, "day": "T-58d", "at": "11:15:05", "kind": "draft", "id": "d1", "text": "Здравствуйте! Да, актуально. Замена сцепления в сборе (корзина, диск, выжимной подшипник) на Granta стоит 26 550 ₽ с запчастями. Подскажите год выпуска и какой двигатель, 8 или 16 клапанов?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 5, "day": "T-58d", "at": "11:29:10", "became": 5}},
+        {"n": 3, "day": "T-58d", "at": "11:26", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-58d", "at": "11:29:08", "kind": "activity", "what": "assigned", "derived": true, "to": 5, "by": 5, "how": "first reply"},
+        {"n": 5, "day": "T-58d", "at": "11:29:10", "kind": "message", "from": "staff", "slot": 5, "text": "Здравствуйте! Да, актуально. Замена сцепления в сборе (корзина, диск, выжимной подшипник) на Granta стоит 26 550 ₽ с запчастями. Подскажите год выпуска и какой двигатель, 8 или 16 клапанов?"},
+        {"n": 6, "day": "T-58d", "at": "11:29:12", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-58d", "at": "11:33:40", "kind": "message", "from": "customer", "text": "2018, 8кл. а со своими запчастями можно? у меня комплект валео лежит"},
+        {"n": 8, "day": "T-58d", "at": "11:34:25", "kind": "draft", "id": "d2", "text": "Со своим комплектом можно: тогда оплачивается только работа, 10 450 ₽ (5,5 нормо-часа). Когда вам удобно подъехать?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 5, "day": "T-58d", "at": "11:47:30", "because": "he sent his own text (n 9)"}},
+        {"n": 9, "day": "T-58d", "at": "11:47:30", "kind": "message", "from": "staff", "slot": 5, "text": "можно со своим. работа 10450. только гляньте чтоб выжимной в комплекте был, а то бывает без него. наберите меня, запишу, так быстрее: 8422 10-40-40"},
+        {"n": 10, "day": "T-58d", "at": "11:52:10", "kind": "message", "from": "customer", "text": "ок, наберу после обеда"},
+        {"n": 11, "day": "T-58d", "at": "11:52:50", "kind": "draft", "id": "d3", "text": "Хорошо, будем ждать звонка.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 5, "day": "T-58d", "at": "11:58:00", "became": 12}},
+        {"n": 12, "day": "T-58d", "at": "11:58:00", "kind": "message", "from": "staff", "slot": 5, "text": "Хорошо, будем ждать звонка."},
+        {"n": 13, "day": "T-58d", "at": "11:58:20", "kind": "activity", "what": "label_added", "label": "цена", "by": 5},
+        {"n": 14, "day": "T-58d", "at": "11:58:40", "kind": "activity", "what": "resolved", "by": 5}
+      ],
+      "assignee_history": [
+        {"day": "T-58d", "at": "11:29:08", "to": 5, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 5,
+        "labels": ["цена"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 5, "working_minutes": 14.8},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 5, "working_minutes": 14.8, "wall_minutes": 14.8, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 5, "working_minutes": 13.8, "wall_minutes": 13.8, "measured_from": "n 7", "reply": "later"},
+          {"asked": 10, "answered": 12, "by": 5, "working_minutes": 5.8, "wall_minutes": 5.8, "measured_from": "n 10", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 5,
+          "n": 5,
+          "working_minutes": 14.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-58d", "at": "11:58:40", "by": 5}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 5},
+          {"draft": "d2", "outcome": "discarded", "manager": 5},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 5}
+        ],
+        "operator_credit": "slot 5: first answer 14.8 minutes (his ledger row is 14), three replies, two drafts sent as they were and one discarded, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "slot 5; the assistant drafts",
+    "outcome": "цена названа; запись — по звонку клиента; закрыт слотом 5",
+    "facts": [
+      "a clutch set fitted is 26 550 at list; labour alone 10 450 when the customer brings the parts",
+      "slot 5 asked him to phone; no time was fixed in the chat"
+    ],
+    "questions": []
+  },
+  "why": [
+    "На Авито первым идёт вопрос «сколько», и черновик на него отвечает лучше, чем успел бы человек у стойки.",
+    "Своё у Дмитрия — совет механика: «гляньте чтоб выжимной в комплекте был».",
+    "«наберите меня, так быстрее»: чат для него — способ договориться о звонке."
+  ],
+  "new_facts": [
+    "Объявление сервиса на Авито «Замена сцепления: Granta, Vesta, Largus, Logan. Московское шоссе» (идентификаторы под .example).",
+    "Руслан, LADA Granta 2018, 8 кл., свой комплект сцепления Valeo; запись — по его звонку (звонок в набор звонков не входит).",
+    "У контакта нет картинки."
+  ]
+}

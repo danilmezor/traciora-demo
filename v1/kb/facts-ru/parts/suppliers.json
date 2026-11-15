@@ -1,0 +1,176 @@
+{
+ "path": "parts/suppliers.md",
+ "title": "Поставщики",
+ "title_en": "Suppliers",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/suppliers.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "Who we buy from, what each delivers, when to order, and the parts manager's own notes on each.",
+ "serves": [
+  "S6",
+  "challenge:fact-in-table",
+  "challenge:kb-does-not-say",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_ru": 344,
+ "links_to": [
+  "parts/brake-pads-we-fit.md",
+  "parts/sublet-work.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Suppliers from vendors.json ru. The table has the four that serve the Ulyanovsk shops by order: V1 (general line), V3 (LADA, ГАЗ, УАЗ), V4 (oils and fluids, not batteries as in English), V5 (tyres).",
+  "V2 «Казань-АвтоСнаб» serves Kazan only: two deliveries a day, 14 days; unreliable in the parts manager's words (S6: 62 % on the promised day against 93 %; the page gives no percentages).",
+  "Tyres reach Kazan twice a week (vendors.json V5), written as Tuesday and Friday.",
+  "The shops are open at weekends: a line on Saturday and Sunday deliveries."
+ ],
+ "new_facts": [
+  "Order-by and run times: V1 by 9:00, 12:00, 15:00 for runs at 10:00, 13:00, 16:00; V3 by 11:00; V4 by 12:00 for the next day; V5 by 17:00 the day before. The ERP purchase orders should show these rhythms.",
+  "One V1 run on Saturday at 10:00, none on Sunday from anyone.",
+  "Batteries come from V1.",
+  "V1 has a branch in Kazan, which is why the move was proposed (cast: slot 9 proposed it three times).",
+  "V3 delivers to Kazan the next day."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Поставщики",
+   "columns": [
+    "Поставщик",
+    "Что берём",
+    "Куда возит",
+    "Заказ до",
+    "Приходит",
+    "Отсрочка",
+    "Телефон"
+   ],
+   "rows": [
+    {
+     "Поставщик": "АвтоДеталь-Венец",
+     "Что берём": "Основной: иномарки и отечественные, аккумуляторы",
+     "Куда возит": "Московское шоссе, Инженерный",
+     "Заказ до": "9:00 / 12:00 / 15:00",
+     "Приходит": "Рейсы в 10:00, 13:00 и 16:00, в пути около часа",
+     "Отсрочка": "30 дней",
+     "Телефон": "+7 (8422) 11-64-81"
+    },
+    {
+     "Поставщик": "Симбирск-Комплект",
+     "Что берём": "LADA, ГАЗ, УАЗ: оригинал и заменители",
+     "Куда возит": "Все три сервиса",
+     "Заказ до": "11:00",
+     "Приходит": "Ульяновск: в день заказа, после обеда. Казань: на следующий день",
+     "Отсрочка": "14 дней",
+     "Телефон": "+7 (8422) 14-60-89"
+    },
+    {
+     "Поставщик": "ОйлТрейд-Симбирск",
+     "Что берём": "Масла, антифризы, тормозная жидкость, фильтры",
+     "Куда возит": "Московское шоссе, Инженерный",
+     "Заказ до": "12:00",
+     "Приходит": "На следующий день",
+     "Отсрочка": "30 дней",
+     "Телефон": "+7 (8422) 12-29-68"
+    },
+    {
+     "Поставщик": "ШинТорг-Волга",
+     "Что берём": "Шины, диски, грузики, вентили",
+     "Куда возит": "Все три сервиса",
+     "Заказ до": "17:00 накануне",
+     "Приходит": "Ульяновск: каждое утро. Казань: только вторник и пятница",
+     "Отсрочка": "30 дней",
+     "Телефон": "+7 (8422) 11-87-30"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Заметки",
+   "item": "АвтоДеталь-Венец: первый звонок по любой позиции. Сказали «в рейсе» — в девяти случаях из десяти так и есть. Нет детали — говорят, что нет."
+  },
+  {
+   "section": "Заметки",
+   "item": "Симбирск-Комплект: всё на LADA, «Газель» и УАЗ. Оригинал берём у них. Заменители у них разные: смотрите, что написано на коробке, а не в накладной."
+  },
+  {
+   "section": "Заметки",
+   "item": "ОйлТрейд-Симбирск: одна доставка в день. Не успел до 12:00 — завтра."
+  },
+  {
+   "section": "Заметки",
+   "item": "ШинТорг-Волга: шины в Казань ездят два раза в неделю. В среду казанскому клиенту «завтра» не говорить."
+  },
+  {
+   "section": "Заметки",
+   "item": "В субботу у АвтоДеталь-Венец один рейс, в 10:00. В воскресенье рейсов нет ни у кого: что нужно на воскресенье, заказывается в субботу до 9:00."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Рината Фаридовича",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V1",
+   "name": "АвтоДеталь-Венец"
+  },
+  {
+   "vendor": "V3",
+   "name": "Симбирск-Комплект"
+  },
+  {
+   "vendor": "V4",
+   "name": "ОйлТрейд-Симбирск"
+  },
+  {
+   "vendor": "V5",
+   "name": "ШинТорг-Волга"
+  },
+  {
+   "vendor": "V2",
+   "name": "Казань-АвтоСнаб"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "Marcus's update: Nashville section rewritten, the sentence about moving Charlotte Pike to Sequoyah added (Marcus is junior rank; published by slot 4); message: \"Marcus's notes on Nashville.\"",
+   "message_ru": "Заметки Паши по Казани."
+  }
+ ],
+ "has_history": true
+}

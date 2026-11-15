@@ -1,0 +1,93 @@
+{
+ "path": "services/engine/drive-belt.md",
+ "title": "Drive belt",
+ "first_revision_text": "en/_history/services/engine/drive-belt.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The serpentine belt: not the timing belt.",
+ "serves": [
+  "challenge:near-duplicate",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 164,
+ "links_to": [
+  "services/engine/timing-belt.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job drive_belt: 0.6 h; standard Gates Micro-V.",
+  "\"Fan belt\" in customers' words; not the timing belt (near-identical names for two very different jobs: 124.18 against 720.00).",
+  "Signs and consequences of failure.",
+  "A squeal with a new belt is a tensioner or pulley (not in the catalogue)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Drive belt",
+   "item": "Found at the inspection: cracks across the ribs, glazing, a chirp on a cold start."
+  },
+  {
+   "section": "Drive belt",
+   "item": "If it breaks, the battery light comes on and the steering goes heavy. On engines where it drives the water pump, the engine overheats within minutes. Stop."
+  },
+  {
+   "section": "Drive belt",
+   "item": "A belt that squeals with a new belt on is a tensioner or a pulley. That is an estimate, not a comeback."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "drive_belt",
+   "what": "hours",
+   "class": "car",
+   "value": 0.6
+  },
+  {
+   "catalogue_key": "drive_belt",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 124.18
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Ремень навесного оборудования (приводной)» against «ремень ГРМ»."
+ ]
+}

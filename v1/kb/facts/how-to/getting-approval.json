@@ -1,0 +1,129 @@
+{
+ "path": "how-to/getting-approval.md",
+ "title": "Getting approval",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Step three of the inspection-to-approval procedure: sending the estimate, chasing it, recording the answer.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S1",
+  "S7",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 334,
+ "links_to": [
+  "how-to/writing-an-estimate.md",
+  "how-to/company-vehicle-at-the-counter.md",
+  "parts/ordering-parts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Step 3 of 3.",
+  "Estimate sent by text or e-mail with photos and an approval link per job.",
+  "A Bad item is followed by a call within 30 minutes of sending; routine estimates wait two hours.",
+  "Chase table: 2 hours (call, voicemail, text); 16:00 the same day; first hour next morning (third and last).",
+  "A car waiting on a lift is raised with the foreman after the 16:00 call.",
+  "Each job marked approved or declined with who, how, when (ERP order_job); phone approvals read back; deferred work ticked.",
+  "Approved jobs go to the foreman and the parts to slot 9; the next call time is promised, not the finish.",
+  "S7: the customer approved the brakes by message and declined the shock absorber (deferred, reminder)."
+ ],
+ "tables": [
+  {
+   "section": "Chase",
+   "columns": [
+    "When",
+    "What"
+   ],
+   "rows": [
+    {
+     "When": "2 hours, no answer",
+     "What": "Call. No answer: a short voicemail and a text saying you called"
+    },
+    {
+     "When": "4:00 the same day",
+     "What": "Call again. Tell them where the car is: in a bay, or outside and locked"
+    },
+    {
+     "When": "Next morning, first hour",
+     "What": "Third and last call. After this the car is waiting on them, and that is written on the order"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Send, then call",
+   "item": "Send the estimate by text or e-mail with the photos. The customer can approve each job from the link."
+  },
+  {
+   "section": "Send, then call",
+   "item": "If anything on it is Bad, call within 30 minutes of sending. Do not wait for them to open it. \"I have sent you the pictures. The short version is...\" Photo before price, then the price, then two times."
+  },
+  {
+   "section": "Send, then call",
+   "item": "If everything is routine and they said \"just text me\", let the text do its work for two hours."
+  },
+  {
+   "section": "Record",
+   "item": "Mark each job approved or declined. Not the order."
+  },
+  {
+   "section": "Record",
+   "item": "Who said yes, how (link, phone, counter), and the time. For a phone yes, read the job and amount back first."
+  },
+  {
+   "section": "Record",
+   "item": "Company vehicles: the driver limit, then the fleet contact. The rule."
+  },
+  {
+   "section": "Record",
+   "item": "Declined and still needed: tick deferred. It will come back as a reminder, and it is the first thing to raise next visit."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "The 30-minute call and the three-step chase (2 hours, 16:00, next morning)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian approval is mostly by phone (calls design: outbound approval calls 35 %); messengers carry the photos."
+ ]
+}

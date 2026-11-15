@@ -1,0 +1,842 @@
+{
+ "format": "bank-en/unclear/1",
+ "about": "Rule R13 for chats: 12 % of sessions carry a loop, 4 % two, 3 % end unclear. A loop is a reading the first question does not settle; 'what car' is not one. The assistant asks level_1, then level_2, never a guess; an advisor asks at the level their ask_chance draws, and level_0 is the guess a weak desk answers with. After the loop the session goes on with the reason's skeleton, or ends.",
+ "loops": [
+  {
+   "id": "u01",
+   "kind": "vague",
+   "reasons": [
+    "symptom"
+   ],
+   "open": [
+    "my car is doing the thing again",
+    "its doing that thing",
+    "somethings off with my car again"
+   ],
+   "second_unclear": [
+    "you know. the thing",
+    "like it did before",
+    "idk how to describe it"
+   ],
+   "second_clear": [
+    "a squeal from the front when i brake",
+    "the engine light came back on"
+   ],
+   "third": [
+    "a noise. when i brake its like a squeak",
+    "ok the light. the orange engine one"
+   ],
+   "ask": {
+    "level_0": [
+     "Sounds like the brakes again. Bring it by and we'll look.",
+     "Probably the same as last time. Bring it in."
+    ],
+    "level_1": [
+     "Sorry about that. What is it doing?",
+     "What's it doing this time?"
+    ],
+    "level_2": [
+     "So I get the right one: is it a noise, a warning light, or something you feel when you drive?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks, that's clear.",
+    "after_two": "Got it, thank you, that helps.",
+    "never": "If you can tell me what it's doing, I can point you to the right service."
+   }
+  },
+  {
+   "id": "u02",
+   "kind": "vague",
+   "reasons": [
+    "price"
+   ],
+   "open": [
+    "how much to fix my car",
+    "what would it cost to fix it",
+    "how much to get it running right"
+   ],
+   "second_unclear": [
+    "just to fix it",
+    "whatever it needs lol",
+    "its not running right"
+   ],
+   "second_clear": [
+    "the ac blows hot",
+    "the brakes grind"
+   ],
+   "third": [
+    "it shakes at idle and the light is on",
+    "its leaking something green"
+   ],
+   "ask": {
+    "level_0": [
+     "Could be a lot of things. Bring it in and we'll see.",
+     "Depends what it is. Bring it by."
+    ],
+    "level_1": [
+     "Happy to help. What's the car doing?",
+     "What needs fixing on it?"
+    ],
+    "level_2": [
+     "Is it something you hear, a light on the dash, or something it won't do, like start or cool?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thank you, that tells me where to start.",
+    "after_two": "Thanks, now I know which service to point you to.",
+    "never": "No problem. When you know what it's doing, message here, or leave a name and a number for an advisor."
+   }
+  },
+  {
+   "id": "u03",
+   "kind": "vague",
+   "reasons": [
+    "booking"
+   ],
+   "open": [
+    "can i bring it in",
+    "can yall look at it tomorrow",
+    "need to bring my car by"
+   ],
+   "second_unclear": [
+    "just to look at it",
+    "for the usual",
+    "the stuff it needs"
+   ],
+   "second_clear": [
+    "oil change and rotate the tires",
+    "the check engine light"
+   ],
+   "third": [
+    "oh just the oil change",
+    "its due for the service, the sticker says"
+   ],
+   "ask": {
+    "level_0": [
+     "Sure, bring it by in the morning.",
+     "Come by whenever."
+    ],
+    "level_1": [
+     "Of course. What would you like done?",
+     "What are we looking at on it?"
+    ],
+    "level_2": [
+     "Is it routine service, like an oil change, or is the car doing something you want checked?"
+    ]
+   },
+   "endings": {
+    "after_one": "Perfect, thanks.",
+    "after_two": "Got it, thank you.",
+    "never": "Whenever you're ready, tell me what it needs and I'll get it to the desk."
+   }
+  },
+  {
+   "id": "u04",
+   "kind": "vague",
+   "reasons": [
+    "status"
+   ],
+   "channels": [
+    "telegram"
+   ],
+   "open": [
+    "did yall fix it",
+    "is it fixed yet",
+    "so is it good now"
+   ],
+   "second_unclear": [
+    "the problem",
+    "what i brought it in for",
+    "you know, the thing"
+   ],
+   "second_clear": [
+    "the ac. the noise can wait",
+    "the rattle, i know the ac takes longer"
+   ],
+   "third": [
+    "the ac. thats what i need for the trip",
+    "the noise. the ac i can live with"
+   ],
+   "ask": {
+    "level_0": [
+     "Yes, it's all done.",
+     "Should be done this afternoon."
+    ],
+    "level_1": [
+     "Which part are you asking about?",
+     "Which one do you mean?"
+    ],
+    "level_2": [
+     "There were two things on the order, the A/C and the noise. Which one are you asking about?"
+    ]
+   },
+   "endings": {
+    "after_one": "Got it, thank you.",
+    "after_two": "Thanks, that's the one I'll check on.",
+    "never": "Whenever you get a second, tell me which one and I'll answer for that."
+   }
+  },
+  {
+   "id": "u05",
+   "kind": "vague",
+   "reasons": [
+    "found_work"
+   ],
+   "open": [
+    "go ahead with the stuff",
+    "do what yall said",
+    "ok do the things"
+   ],
+   "second_unclear": [
+    "the stuff on the text",
+    "what the guy said",
+    "all of it i guess"
+   ],
+   "second_clear": [
+    "just the {finding_item}",
+    "the first one only"
+   ],
+   "third": [
+    "the brakes. not the filter",
+    "only the one you said was urgent"
+   ],
+   "ask": {
+    "level_0": [
+     "Great, we'll do all of it.",
+     "Ok, we'll do everything on the list."
+    ],
+    "level_1": [
+     "Happy to. Which items should we go ahead with?"
+    ],
+    "level_2": [
+     "Just to be sure: is that everything on the estimate, or only the {finding_item}?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thank you, that's what I needed.",
+    "after_two": "Perfect, thank you for clearing that up.",
+    "never": "Nothing is done without your approval, so the shop will wait to hear which items you want."
+   },
+   "decision": "approve"
+  },
+  {
+   "id": "u06",
+   "kind": "wrong_thing",
+   "reasons": [
+    "price"
+   ],
+   "open": [
+    "how much for a new transmission",
+    "price on a transmission for a {car_said}"
+   ],
+   "second_unclear": [
+    "its slipping so i guess a new one",
+    "my cousin said it needs one"
+   ],
+   "second_clear": [
+    "its fine, just hasnt had the fluid changed ever",
+    "it shifts fine, the dealer said a flush"
+   ],
+   "third": [
+    "slips going into second sometimes. hasnt had a fluid change",
+    "it shifts hard when its cold, thats it"
+   ],
+   "ask": {
+    "level_0": [
+     "A rebuilt transmission is several thousand. We can quote it.",
+     "We can quote a rebuild for you."
+    ],
+    "level_1": [
+     "What's it doing that makes you think it needs one?"
+    ],
+    "level_2": [
+     "Is it slipping or not shifting, or is it more that it's due for its fluid?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks, that's a different job, and a much smaller one.",
+    "after_two": "Thank you. That might be a fluid service rather than a transmission, and the shop would check it first.",
+    "never": "Before anyone prices a transmission, the shop would want to see what it's doing."
+   },
+   "job": "trans_fluid"
+  },
+  {
+   "id": "u07",
+   "kind": "wrong_thing",
+   "reasons": [
+    "symptom",
+    "price"
+   ],
+   "open": [
+    "need a new alternator",
+    "my alternator is going out how much"
+   ],
+   "second_unclear": [
+    "it wont start",
+    "car is dead"
+   ],
+   "second_clear": [
+    "it wouldnt start this morning, had to jump it",
+    "it cranks slow when its cold"
+   ],
+   "third": [
+    "the battery light isnt on, it just clicks",
+    "jumped it and it ran fine all day"
+   ],
+   "ask": {
+    "level_0": [
+     "An alternator on most cars is a few hundred installed.",
+     "Alternators run a few hundred."
+    ],
+    "level_1": [
+     "What happened that makes you think it's the alternator?"
+    ],
+    "level_2": [
+     "Did it die while you were driving, or just not start after sitting?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks. That could just as well be the battery, and the test is free.",
+    "after_two": "Got it. That sounds more like a starting problem; the free test tells you which part it is.",
+    "never": "The free battery and charging test would show whether it's the alternator at all."
+   },
+   "job": "battery"
+  },
+  {
+   "id": "u08",
+   "kind": "wrong_thing",
+   "reasons": [
+    "price",
+    "booking"
+   ],
+   "open": [
+    "how much to turn my rotors",
+    "need my rotors resurfaced"
+   ],
+   "second_unclear": [
+    "they need turning",
+    "my dad always had em turned"
+   ],
+   "second_clear": [
+    "brakes are grinding and the steering wheel shakes when i stop",
+    "its squealing, i figured rotors"
+   ],
+   "third": [
+    "shake when i stop. no grinding",
+    "squeal. only when i stop"
+   ],
+   "ask": {
+    "level_0": [
+     "We replace rotors instead, it's a few hundred for the front.",
+     "Rotors are replaced, not turned, here."
+    ],
+    "level_1": [
+     "What are the brakes doing?"
+    ],
+    "level_2": [
+     "Is it a noise when you brake, or a shake in the pedal or steering wheel?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks. The shop measures the discs first and only replaces what doesn't measure good.",
+    "after_two": "Thank you, that helps. The brake inspection is where that starts.",
+    "never": "If you can tell me what the brakes are doing, I can point you to the right service."
+   },
+   "job": "front_brakes"
+  },
+  {
+   "id": "u09",
+   "kind": "wrong_thing",
+   "reasons": [
+    "booking",
+    "price"
+   ],
+   "open": [
+    "need a tune up",
+    "how much for a tune up on a {car_said}"
+   ],
+   "second_unclear": [
+    "just a tune up",
+    "the regular tune up"
+   ],
+   "second_clear": [
+    "its running rough at stoplights",
+    "its at {mileage_said} and never had plugs"
+   ],
+   "third": [
+    "oh the light is on too. runs rough",
+    "the plugs i think. its old"
+   ],
+   "ask": {
+    "level_0": [
+     "A tune-up is spark plugs, about {job_price}.",
+     "A tune-up is plugs. We can do that."
+    ],
+    "level_1": [
+     "What's going on with it, or is it just due?"
+    ],
+    "level_2": [
+     "Is the car running rough or showing a light, or is it due for spark plugs by the miles?"
+    ]
+   },
+   "endings": {
+    "after_one": "Got it, thanks. Modern cars have nothing to tune, so it's plugs, filters and a look over.",
+    "after_two": "Thank you. With a light on, the diagnosis comes first.",
+    "never": "When you know whether it's running rough or just due, I can tell you what to book."
+   },
+   "job": "spark_plugs"
+  },
+  {
+   "id": "u10",
+   "kind": "wrong_thing",
+   "reasons": [
+    "price",
+    "symptom"
+   ],
+   "open": [
+    "need an alignment, steering wheel shakes",
+    "how much is an alignment it shakes on the interstate"
+   ],
+   "second_unclear": [
+    "it shakes so the alignment",
+    "my tires shake"
+   ],
+   "second_clear": [
+    "only at highway speed, it drives straight",
+    "it pulls right too"
+   ],
+   "third": [
+    "no it goes straight. just shakes fast",
+    "pulls right and the wheel is crooked"
+   ],
+   "ask": {
+    "level_0": [
+     "Alignment is our menu price. Want a time?",
+     "Alignment it is."
+    ],
+    "level_1": [
+     "Does it pull to one side, or does it shake?"
+    ],
+    "level_2": [
+     "When it shakes, is the car going straight with the wheel centered, or does it drift to a side?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks. A shake at speed is usually balance; a pull is alignment.",
+    "after_two": "Got it. That points to the balance rather than the alignment.",
+    "never": "If you notice whether it pulls or only shakes, that tells us which service it needs."
+   },
+   "job": "balance"
+  },
+  {
+   "id": "u11",
+   "kind": "two_in_one",
+   "reasons": [
+    "booking",
+    "price"
+   ],
+   "open": [
+    "oil change and can yall look at a noise and how much",
+    "need an oil change and theres a rattle and whats it cost"
+   ],
+   "second_unclear": [
+    "both",
+    "all of it"
+   ],
+   "second_clear": [
+    "the oil change price, and look at the rattle while its there",
+    "price on the oil change, the rattle can wait"
+   ],
+   "third": [
+    "oil change price first, then the rattle",
+    "the oil change. the noise only if its quick"
+   ],
+   "ask": {
+    "level_0": [
+     "Oil change is our menu price. See you then.",
+     "Oil change price is on the list."
+    ],
+    "level_1": [
+     "Happy to do both. Is the price for the oil change, or for the noise too?"
+    ],
+    "level_2": [
+     "Two things then: the oil change, which has a set price, and the noise, which has to be looked at. Which one first?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks, I'll take them one at a time.",
+    "after_two": "Perfect, the oil change first, and the noise gets a look.",
+    "never": "Whenever you're ready, I can price the oil change and have the noise looked at."
+   },
+   "job": "oil_change"
+  },
+  {
+   "id": "u12",
+   "kind": "two_in_one",
+   "reasons": [
+    "booking"
+   ],
+   "open": [
+    "can i get in tomorrow and is it cheaper if i bring my own pads",
+    "tomorrow work? i already bought pads"
+   ],
+   "second_unclear": [
+    "yes",
+    "both"
+   ],
+   "second_clear": [
+    "the pads matter more, then tomorrow",
+    "tomorrow first, pads if yall allow it"
+   ],
+   "third": [
+    "i want to use mine if its cheaper. tomorrow if possible",
+    "ok just book me, ill use yours if mine dont work"
+   ],
+   "ask": {
+    "level_0": [
+     "Sure, tomorrow works.",
+     "Tomorrow is fine, bring the pads."
+    ],
+    "level_1": [
+     "Two questions there. Which matters more: tomorrow, or using your own pads?"
+    ],
+    "level_2": [
+     "Do you want to know the price with your pads first, or should we find you a time tomorrow and sort the pads after?"
+    ]
+   },
+   "endings": {
+    "after_one": "Got it, thank you.",
+    "after_two": "Thanks, that's clear.",
+    "never": "Parts you bring are fitted at the normal labor rate without a warranty; tell me when you'd like a time."
+   },
+   "job": "front_brakes"
+  },
+  {
+   "id": "u13",
+   "kind": "two_in_one",
+   "reasons": [
+    "status"
+   ],
+   "open": [
+    "is it ready and whats the total",
+    "ready? and how much do i owe"
+   ],
+   "second_unclear": [
+    "the car",
+    "mine"
+   ],
+   "second_clear": [
+    "the {car_said}. my wifes is the other one",
+    "just the {car_said}, the other one is next week"
+   ],
+   "third": [
+    "oh we have two in there. the {car_said}",
+    "the {car_said}. not the truck"
+   ],
+   "ask": {
+    "level_0": [
+     "It's ready, total is on the invoice.",
+     "Ready, come by."
+    ],
+    "level_1": [
+     "Which car is this about?"
+    ],
+    "level_2": [
+     "I see more than one car on your name. Is it the {car_said} or the other one?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thank you, the {car_said} then.",
+    "after_two": "Got it, the {car_said}. Thanks.",
+    "never": "Tell me which car when you can, and the desk will answer for that one."
+   }
+  },
+  {
+   "id": "u14",
+   "kind": "two_in_one",
+   "reasons": [
+    "price",
+    "complaint"
+   ],
+   "open": [
+    "need two tires and is my warranty still good",
+    "price on tires and is that covered"
+   ],
+   "second_unclear": [
+    "the warranty",
+    "yes the tires"
+   ],
+   "second_clear": [
+    "the tires yall sold me last year",
+    "the repair warranty on the alignment"
+   ],
+   "third": [
+    "the tires. one has a bubble",
+    "the alignment yall did, it pulls again"
+   ],
+   "ask": {
+    "level_0": [
+     "Tires are our listed price; warranty depends.",
+     "Warranty should cover it."
+    ],
+    "level_1": [
+     "Which warranty do you mean: the tires' or a repair we did?"
+    ],
+    "level_2": [
+     "Is it the maker's warranty on tires we sold you, or our warranty on a repair? They work differently."
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks. Tires carry the maker's warranty, and the shop handles the claim.",
+    "after_two": "Got it, thank you.",
+    "never": "If you tell me which warranty, I can tell you how it works."
+   },
+   "job": "new_tires"
+  },
+  {
+   "id": "u15",
+   "kind": "two_in_one",
+   "reasons": [
+    "moving"
+   ],
+   "open": [
+    "need to move my appt and add the brakes",
+    "can we move it and also do brakes"
+   ],
+   "second_unclear": [
+    "the appointment",
+    "both"
+   ],
+   "second_clear": [
+    "the oil change on {appt_day}, move it and add brakes",
+    "keep the day, just add brakes"
+   ],
+   "third": [
+    "move it to {day_said} and add the brakes",
+    "same day, add the front brakes"
+   ],
+   "ask": {
+    "level_0": [
+     "Moved and added, see you then.",
+     "Done, see you then."
+    ],
+    "level_1": [
+     "Sure. Do you want a new day, or to keep the day and add brakes?"
+    ],
+    "level_2": [
+     "Two changes: is it moving the {appt_day} visit, adding brakes to it, or both?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thank you, I'll pass that on.",
+    "after_two": "Got it, both changes.",
+    "never": "Let me know which change you'd like and the desk will set it."
+   }
+  },
+  {
+   "id": "u16",
+   "kind": "wrong_way_round",
+   "reasons": [
+    "symptom"
+   ],
+   "open": [
+    "squeals when i let off the brake",
+    "makes a noise when i take my foot off the pedal"
+   ],
+   "second_unclear": [
+    "when i let off",
+    "letting off. or pushing idk"
+   ],
+   "second_clear": [
+    "no wait. when i push it",
+    "when im stopping, foot on it"
+   ],
+   "third": [
+    "pushing. its when i press it",
+    "foot on the brake, slowing down"
+   ],
+   "ask": {
+    "level_0": [
+     "That's normal, it goes away.",
+     "Some squeal is normal."
+    ],
+    "level_1": [
+     "When exactly do you hear it?"
+    ],
+    "level_2": [
+     "Is it while your foot is on the brake slowing down, or right after you lift your foot off?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks, that makes sense.",
+    "after_two": "Got it, while braking. Thanks.",
+    "never": "If you notice exactly when it squeals, that tells the technician a lot."
+   },
+   "job": "brake_check"
+  },
+  {
+   "id": "u17",
+   "kind": "wrong_way_round",
+   "reasons": [
+    "symptom"
+   ],
+   "open": [
+    "steering wheel shakes when i speed up",
+    "it shakes when i give it gas"
+   ],
+   "second_unclear": [
+    "when im going",
+    "speeding up i think"
+   ],
+   "second_clear": [
+    "no actually when im slowing down from the interstate",
+    "its when i brake off the exit"
+   ],
+   "third": [
+    "braking. coming off the highway",
+    "when i stop, especially downhill"
+   ],
+   "ask": {
+    "level_0": [
+     "Sounds like the tires need balancing.",
+     "Probably a balance."
+    ],
+    "level_1": [
+     "When does it shake?"
+    ],
+    "level_2": [
+     "Is it when you're speeding up, holding a steady speed, or braking?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks, that's a brake shake then.",
+    "after_two": "Got it: when you brake. That points to the discs.",
+    "never": "If you can tell whether it's on the brake or at speed, we can point you to the right check."
+   },
+   "job": "front_brakes"
+  },
+  {
+   "id": "u18",
+   "kind": "wrong_way_round",
+   "reasons": [
+    "symptom"
+   ],
+   "open": [
+    "battery light comes on when i turn the car off",
+    "light comes on when i shut it off"
+   ],
+   "second_unclear": [
+    "when i turn it off",
+    "the battery one"
+   ],
+   "second_clear": [
+    "sorry when i start it, then it stays on",
+    "its on while im driving actually"
+   ],
+   "third": [
+    "while driving. it stays lit",
+    "on when it starts and doesnt go off"
+   ],
+   "ask": {
+    "level_0": [
+     "That's normal at shut-off.",
+     "Normal when you shut it off."
+    ],
+    "level_1": [
+     "When does the light come on?"
+    ],
+    "level_2": [
+     "Does it stay on while you're driving, or only flash when you start or stop the engine?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks. A battery light that stays on while driving should be tested soon.",
+    "after_two": "Got it. The free charging test will show what's going on.",
+    "never": "If the light stays on while you drive, please get it tested soon; the test is free."
+   },
+   "job": "alternator"
+  },
+  {
+   "id": "u19",
+   "kind": "wrong_way_round",
+   "reasons": [
+    "booking"
+   ],
+   "open": [
+    "can i pick it up in the morning and drop it off the night before",
+    "drop it in the morning and get it the night before?"
+   ],
+   "second_unclear": [
+    "yeah like that",
+    "whichever way works"
+   ],
+   "second_clear": [
+    "drop it tonight in the box, get it back tomorrow evening",
+    "bring it before work, pick up after"
+   ],
+   "third": [
+    "night before in the box. pick up next day after work",
+    "before work drop, after work pick up"
+   ],
+   "ask": {
+    "level_0": [
+     "Sure, that works.",
+     "That works."
+    ],
+    "level_1": [
+     "Just so I have it right: when are you dropping it off, and when do you need it back?"
+    ],
+    "level_2": [
+     "Do you mean leaving it in the key drop the night before and picking up the next evening?"
+    ]
+   },
+   "endings": {
+    "after_one": "Thanks, that works with the key drop.",
+    "after_two": "Got it, thank you.",
+    "never": "The key drop by the office door is open whenever; tell me the day and I'll pass it on."
+   }
+  },
+  {
+   "id": "u20",
+   "kind": "wrong_way_round",
+   "reasons": [
+    "found_work"
+   ],
+   "open": [
+    "yes dont do it",
+    "yeah leave it"
+   ],
+   "second_unclear": [
+    "yes",
+    "like i said"
+   ],
+   "second_clear": [
+    "dont do it. leave it for now",
+    "no, dont do the extra"
+   ],
+   "third": [
+    "leave it. not today",
+    "no extra work. just the oil"
+   ],
+   "ask": {
+    "level_0": [
+     "Great, we'll go ahead.",
+     "Ok, going ahead."
+    ],
+    "level_1": [
+     "Just to be sure: do you want it done, or left for now?"
+    ],
+    "level_2": [
+     "Is that a yes to the {finding_item}, or leave it for now?"
+    ]
+   },
+   "endings": {
+    "after_one": "Got it: leave it for now.",
+    "after_two": "Thanks, understood: not today.",
+    "never": "Nothing is done without your approval, so nothing extra happens until there's a clear yes."
+   },
+   "decision": "decline"
+  }
+ ]
+}

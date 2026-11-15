@@ -1,0 +1,119 @@
+{
+ "path": "parts/brake-pads-we-fit.md",
+ "title": "Brake pads we fit",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "The pad lines by tier and the parts manager's warning about the Nashville supplier's house brand (S6).",
+ "serves": [
+  "S6",
+  "S1",
+  "challenge:combine-kb-and-data",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 173,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Front pad set list prices by tier from catalogue front_brake_pads (reference fitment FMSI D1222): premium 100.00, standard 86.36, economy 60.00.",
+  "The cheap pad: Calder ValueStop, 39.00 a set (catalogue option marked story S6), the house line of vendor V2; fitted at west only.",
+  "Economy ACDelco costs 21.00 more a set than the cheap pad (60.00 - 39.00).",
+  "The parts manager's opinion: hard, squeal, wear out at half the miles (S6: they come back four times as often; the page gives no rate).",
+  "\"This needs deciding above me\": nothing has been decided (S6).",
+  "BRAND NAME CONFLICT: catalogue.json calls the pad Calder ValueStop; vendors.json calls the house brand RoadCrest. The page follows the catalogue."
+ ],
+ "tables": [
+  {
+   "section": "Brake pads we fit",
+   "columns": [
+    "Tier",
+    "Pad",
+    "Set"
+   ],
+   "rows": [
+    {
+     "Tier": "Premium",
+     "Pad": "Akebono ProACT",
+     "Set": "$100.00"
+    },
+    {
+     "Tier": "Standard",
+     "Pad": "Wagner ThermoQuiet",
+     "Set": "$86.36"
+    },
+    {
+     "Tier": "Economy",
+     "Pad": "ACDelco Silver",
+     "Set": "$60.00"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "part list price each: Front brake pad set (FMSI D1222)",
+   "tier": "premium",
+   "qty": 1,
+   "unit": "set",
+   "brand": "Akebono ProACT",
+   "value": 100.0
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "part list price each: Front brake pad set (FMSI D1222)",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "set",
+   "brand": "Wagner ThermoQuiet",
+   "value": 86.36
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "part list price each: Front brake pad set (FMSI D1222)",
+   "tier": "economy",
+   "qty": 1,
+   "unit": "set",
+   "brand": "ACDelco Silver",
+   "value": 60.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V2",
+   "name": "Harpeth Valley Parts Supply"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "new_facts": [
+  "The 21.00 difference is arithmetic on catalogue prices, not a new price."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "BREMHOF in catalogue ru at 1 250 RUB a set (Ronnex in vendors.json ru). Russian tier brands for pads from the catalogue."
+ ]
+}

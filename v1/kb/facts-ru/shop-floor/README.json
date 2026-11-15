@@ -1,0 +1,92 @@
+{
+ "path": "shop-floor/README.md",
+ "title": "Цех",
+ "title_en": "Shop floor",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/README.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "Index for technicians; what a worker-rank person can read.",
+ "serves": [
+  "visibility:worker",
+  "challenge:kb-does-not-say",
+  "S14"
+ ],
+ "length_class": "tiny",
+ "words_ru": 57,
+ "links_to": [
+  "shop-floor/clocking-in-and-out.md",
+  "shop-floor/shift-changes-and-time-off.md",
+  "shop-floor/courtesy-inspection.md",
+  "shop-floor/before-a-car-leaves.md",
+  "shop-floor/when-a-car-comes-back.md",
+  "shop-floor/safety.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The handbook is «Правила внутреннего трудового распорядка», a paper folder in the rest room."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Цех",
+   "item": "Отметки прихода и ухода"
+  },
+  {
+   "section": "Цех",
+   "item": "Замены смен и отгулы"
+  },
+  {
+   "section": "Цех",
+   "item": "Осмотр по чек-листу"
+  },
+  {
+   "section": "Цех",
+   "item": "Перед тем как отдать машину"
+  },
+  {
+   "section": "Цех",
+   "item": "Если машина вернулась"
+  },
+  {
+   "section": "Цех",
+   "item": "Техника безопасности"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирине Владимировне",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

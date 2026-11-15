@@ -1,0 +1,84 @@
+{
+ "path": "customers/check-engine-light.md",
+ "title": "Горит «чек»",
+ "title_en": "Check engine light",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/check-engine-light.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Public advice on a check engine light and what the diagnosis costs.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 165,
+ "links_to": [
+  "customers/towing.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Russian computer diagnostics is a fixed 0.5 н/ч job (reading and analysing codes); a longer search is the separate hourly job electrical_diag (1.5 н/ч), started only after the customer agrees.",
+  "English: one diagnostic hour, more time needs approval. Russian: two catalogue jobs."
+ ],
+ "new_facts": [
+  "\"In half of the cases the cause is clear at the first step\" is a figure of speech of the page, not a measured share."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Горит ровно или мигает",
+   "item": "Горит ровно, машина едет как обычно. Ездить можно. Запишитесь на диагностику в ближайшую неделю-две. Сначала проверьте крышку бензобака: неплотно закрытая крышка — самая дешёвая причина из всех."
+  },
+  {
+   "section": "Горит ровно или мигает",
+   "item": "Мигает или двигатель троит. Это пропуски зажигания. Ездите как можно меньше и приезжайте. От пропусков плавится катализатор, а это дорогая деталь."
+  },
+  {
+   "section": "Горит ровно или мигает",
+   "item": "Вместе с «чеком» растёт температура или горит лампа давления масла. Глушите двигатель. Звоните нам или вызывайте эвакуатор."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "electrical_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2850.0
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [
+  1200.0,
+  2850.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

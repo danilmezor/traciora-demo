@@ -1,0 +1,133 @@
+{
+ "path": "how-to/using-this-knowledge-base.md",
+ "title": "Using and fixing this knowledge base",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "How to search, how to read a page's date, how a correction is proposed and decided.",
+ "serves": [
+  "S12",
+  "S4",
+  "operate:propose",
+  "operate:find-waiting",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_en": 356,
+ "links_to": [
+  "prices/price-list.md",
+  "customers/README.md",
+  "how-to/README.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Search with the customer's word, then the invoice word.",
+  "The assistant reads only what the asking person may see and names the page it read.",
+  "Check the \"Last reviewed\" line; pages reviewed before {{@price_rise}} carry the old labour rate.",
+  "Rungs (product defaults): propose from middle rank (lead advisors, office manager); publish and decide from senior rank (slots 4, 22, 1) and the administrator (slot 2); others tell their lead.",
+  "A proposal shows the exact change, waits in the deciders' Inbox, is decided within five working days, and a decline carries a reason.",
+  "Every page keeps its history.",
+  "Placement rules: public answers in customers/; procedures in how-to/; account facts on account pages; no private customer data; team-wide habits become page lines (the reason slot 6's note was declined)."
+ ],
+ "tables": [
+  {
+   "section": "Fixing a page",
+   "columns": [
+    "You are",
+    "You can"
+   ],
+   "rows": [
+    {
+     "You are": "A lead advisor, the office manager, or above",
+     "You can": "Propose a change: on the page, or ask the assistant to draft it and confirm the card. Say why"
+    },
+    {
+     "You are": "Greg, Dale, Ray or me",
+     "You can": "Publish a change, and approve or decline a proposal"
+    },
+    {
+     "You are": "Anyone else",
+     "You can": "Tell your lead advisor what is wrong and where. Today"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "What goes where",
+   "item": "Something every customer may be told: Customer answers. Write it for a customer; the website assistant quotes it. It reads the service pages and the price list as well, so a wrong figure there can reach a customer."
+  },
+  {
+   "section": "What goes where",
+   "item": "How we do a job: How we do things."
+  },
+  {
+   "section": "What goes where",
+   "item": "A fact about one company account: that account's page."
+  },
+  {
+   "section": "What goes where",
+   "item": "No private customer's name, phone or car on any page. That lives in the shop system."
+  },
+  {
+   "section": "What goes where",
+   "item": "A habit of yours that works: a note to yourself. If the whole team should do it, it becomes a line on a page here."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}",
+  "{{@price_rise|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the section \"Before you trust a page\"; message: \"Read the date line.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same rungs."
+ ]
+}

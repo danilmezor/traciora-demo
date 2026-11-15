@@ -1,0 +1,333 @@
+{
+  "slot": 22,
+  "name": "Dale Hutchins",
+  "site": "west",
+  "role": "shop manager",
+  "tier": "curt",
+  "voice": "Gravelly, slow, Middle Tennessee. Warm with people he knows ('how's your mama doing?'), curt with strangers: 'Brennan's.' 'Yep.' 'Bring it by.' Asks a good question about the car, then offers no time and no price and seldom takes a name: 'whenever, I'm here'.",
+  "style_sheet": {
+    "greeting": [
+      30,
+      55,
+      15
+    ],
+    "name_and_number": [
+      50,
+      40,
+      10
+    ],
+    "need_discovery": [
+      5,
+      40,
+      55
+    ],
+    "price_with_next_step": [
+      15,
+      65,
+      20
+    ],
+    "offered_time": [
+      40,
+      45,
+      15
+    ],
+    "asked_for_booking": [
+      20,
+      50,
+      30
+    ],
+    "recap": [
+      75,
+      20,
+      5
+    ],
+    "objection": [
+      40,
+      40,
+      20
+    ]
+  },
+  "habits": [
+    "Answers 'Brennan's.' or 'Yeah, Brennan's.'",
+    "'Bring it by', 'whenever, I'm here', 'we'll get it up in the air'.",
+    "'Can't tell you till I see it'; a ballpark at most.",
+    "Knows the regulars by first name and asks after their families.",
+    "Names a technician ('I'll have Gary look at it') instead of a time."
+  ],
+  "fillers": [
+    "Yeah,",
+    "Well,",
+    "Mm,",
+    "Yep,"
+  ],
+  "tokens": {
+    "a_ok": [
+      "Yep",
+      "Alright"
+    ],
+    "a_yes": [
+      "Yep",
+      "Yeah"
+    ],
+    "a_sorry": [
+      "Yeah, well",
+      "Sorry"
+    ]
+  },
+  "greeting_tails": [
+    "",
+    " Go ahead.",
+    " What can I do for you."
+  ],
+  "greetings": [
+    "Brennan's, Dale.",
+    "Yeah, Brennan's, this is Dale.",
+    "Brennan's on Charlotte Pike, Dale speakin'.",
+    "Brennan Auto Care, this is Dale.",
+    "Brennan's. This is Dale.",
+    "Dale, Brennan's."
+  ],
+  "address": [],
+  "checks": {
+    "greeting": {
+      "0": [
+        "Yeah?",
+        "Yep, go ahead.",
+        "Hello, yeah.",
+        "Yeah, what can I do for you."
+      ],
+      "1": [
+        "Brennan's.",
+        "Yeah, Brennan's.",
+        "Brennan's, go ahead.",
+        "Brennan's, Charlotte Pike."
+      ],
+      "2": [
+        "Brennan's, this is Dale.",
+        "Brennan Auto Care, Dale.",
+        "Charlotte Pike, Brennan's, this is Dale.",
+        "Brennan's. Dale speakin'."
+      ]
+    },
+    "name_and_number": {
+      "0": [
+        "<skip>",
+        "Don't need all that. Just bring it.",
+        "I'll know it when I see it.",
+        "Just bring it by, I'll find you."
+      ],
+      "1": [
+        "Yep.",
+        "Got it.",
+        "Yeah, I'll put it down.",
+        "Alright, {customer_first}, wrote it down."
+      ],
+      "2": [
+        "{customer_phone_said}. Alright, I got it.",
+        "Say it again — {customer_phone_said}. Yep.",
+        "{customer_phone_said}. Got it on the pad.",
+        "Okay. {customer_phone_said}. That'll get you?"
+      ]
+    },
+    "need_discovery": {
+      "0": [
+        "Yep. Bring it by.",
+        "Yeah, we do that.",
+        "Uh-huh.",
+        "Yeah, we can look at it."
+      ],
+      "1": [
+        "What is it?",
+        "What're you drivin'?",
+        "What kinda truck — or is it a car?",
+        "What year is it?"
+      ],
+      "2": [
+        "Mm. {job_question}",
+        "Huh. {job_question}",
+        "How long's that {car_model} been doin' that?",
+        "Yeah. And {job_question}"
+      ]
+    },
+    "price_with_next_step": {
+      "0": [
+        "Can't tell you till I see it.",
+        "Not over the phone.",
+        "No tellin' on a {car_model} till I get it in the air.",
+        "I'd have to look at it."
+      ],
+      "1": [
+        "Runs about {price}.",
+        "{price}, somewhere in there.",
+        "'Bout {price}.",
+        "Ballpark, {price}."
+      ],
+      "2": [
+        "{price_statement}, give or take. {depends} Bring it in and we'll look.",
+        "Ballpark, {price_statement}. {depends} When you want to bring it?",
+        "{inspection_line} I'll have {tech_name} get on it.",
+        "Usually {price_statement}. {depends} Come on by and we'll see."
+      ]
+    },
+    "offered_time": {
+      "0": [
+        "Whenever. I'm here.",
+        "Just bring it by.",
+        "Bring the {car_model} this week, next week. Whenever.",
+        "Whenever you get here."
+      ],
+      "1": [
+        "When you want to bring it?",
+        "{time_1} any good?",
+        "You can bring it {time_1}.",
+        "What day you thinkin'?"
+      ],
+      "2": [
+        "I can get it in {time_1}, or {time_2}.",
+        "{time_1}'s open. Or {time_2}.",
+        "Bring it {time_1} or {time_2}, either one.",
+        "I got room {time_1}, or {time_2}."
+      ]
+    },
+    "asked_for_booking": {
+      "0": [
+        "Alright then. Call me.",
+        "Yep. Let me know.",
+        "Okay. You holler.",
+        "Alright, well. When you're ready with that {car_model}."
+      ],
+      "1": [
+        "Want me to put you down?",
+        "I'll call you when we get to it.",
+        "Just bring it by, we'll get it up in the air.",
+        "I'll holler at you when there's room for the {car_model}."
+      ],
+      "2": [
+        "Alright. {time_chosen}. Ask for Dale.",
+        "I'll put you down {time_chosen}. Tell 'em Dale's got you.",
+        "{time_chosen}, I got you down. I'll be here — it's Dale.",
+        "Alright, {time_chosen}. I'll have {tech_name} ready for it."
+      ]
+    },
+    "recap": {
+      "0": [
+        "Alright then. See ya.",
+        "Yep, see you then.",
+        "See you when you get here.",
+        "Alright, buddy, see ya."
+      ],
+      "1": [
+        "{time_chosen}, then.",
+        "Alright, {time_chosen}.",
+        "{time_chosen}. I'll look for the {car_model}.",
+        "So {time_chosen} for the {job_said}."
+      ],
+      "2": [
+        "{time_chosen}, {shop_address}, the {job_said}. Got it.",
+        "That's {time_chosen} at {shop_address}, for {job_said}.",
+        "{job_said}, {time_chosen}, out here at {shop_address}.",
+        "So — {time_chosen}. {shop_address}. {job_said}. That's it."
+      ]
+    },
+    "objection": {
+      "0": [
+        "Yeah. Well.",
+        "Well, it is what it is.",
+        "Mm-hm.",
+        "Alright. Well, bring the {car_model} by."
+      ],
+      "1": [
+        "We've been doin' this a long time.",
+        "It's good work. I stand behind it.",
+        "Ain't nobody gonna do it cheaper and do it right.",
+        "That's what {job_said} costs anymore."
+      ],
+      "2": [
+        "Well. {objection_answer}",
+        "I'll tell you straight. {objection_answer}",
+        "Look — {objection_answer}",
+        "Yeah, I know it. {objection_answer}"
+      ]
+    }
+  },
+  "moves": {
+    "ack": [
+      "Yep, we do that.",
+      "Yeah, we can do that.",
+      "Mm-hm. Go on.",
+      "Yeah, I can look at it."
+    ],
+    "ask_what": [
+      "What's it doin'?",
+      "Yeah? What's wrong with it?",
+      "Alright. What's it got?"
+    ],
+    "ask_name": [
+      "Who am I talkin' to?",
+      "And you are?",
+      "Who's callin'?",
+      "Name?"
+    ],
+    "ask_number": [
+      "Number?",
+      "What's your number?",
+      "Give me a number.",
+      "Number for you, {customer_first}?",
+      "What's a number for you?"
+    ],
+    "recognise": [
+      "Well, {customer_first}. How you doin', buddy? How's your mama?",
+      "{customer_first}! How's everybody gettin' along?",
+      "Hey, {customer_first}. That old {car_model} actin' up?"
+    ],
+    "lookup": [
+      "Hang on.",
+      "Lemme look.",
+      "Hold on, I gotta find it."
+    ],
+    "hold": [
+      "Hang on a minute.",
+      "Hold on, lemme go look."
+    ],
+    "back_from_hold": [
+      "Yeah, I'm here.",
+      "Alright. Still there?"
+    ],
+    "explain": [
+      "Well, {job_explain}.",
+      "Thing is, {job_explain}.",
+      "Way I see it, {job_explain}."
+    ],
+    "duration": [
+      "Depends. {job_duration}, maybe.",
+      "{job_duration}, if it don't fight us.",
+      "Not long, if it's what I think."
+    ],
+    "probe": [
+      "What'd they tell you? {objection_probe}",
+      "Well — {objection_probe}"
+    ],
+    "outbound_open": [
+      "{customer_first}? Dale, at Brennan's.",
+      "Yeah, this is Dale out at Brennan's on Charlotte Pike.",
+      "Hey, {customer_first}, it's Dale."
+    ],
+    "closing_booked": [
+      "Alright, {customer_first}.",
+      "See you, {customer_first}.",
+      "Tell your mama hey, {customer_first}.",
+      "Alright then.",
+      "See you {time_chosen}.",
+      "Alright, buddy. See ya."
+    ],
+    "closing_open": [
+      "Alright, buddy.",
+      "Yep. Bye.",
+      "Alright, {customer_first}, take care.",
+      "Alright, {customer_first}.",
+      "Yep. Call me, {customer_first}.",
+      "Alright. You holler.",
+      "Yep. Take care."
+    ]
+  }
+}

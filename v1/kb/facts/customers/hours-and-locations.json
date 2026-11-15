@@ -1,0 +1,107 @@
+{
+ "path": "customers/hours-and-locations.md",
+ "title": "Hours and locations",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "The public truth about addresses, phones, hours, holidays and the stocktake afternoon.",
+ "serves": [
+  "S13",
+  "S9",
+  "S7",
+  "challenge:fact-in-table",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_en": 253,
+ "links_to": [
+  "customers/dropping-off-and-picking-up.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "main: 2106 East Main St, Chattanooga, TN 37404; (423) 555-0142; Mon-Fri 7:30-17:30, Sat 8:00-13:00.",
+  "east: 6340 Bonny Oaks Drive, Chattanooga, TN 37416 (ledger geo.address.east); (423) 555-0167; Mon-Fri 7:30-17:30; no Saturday.",
+  "west: 6399 Charlotte Pike, Nashville, TN 37209; (615) 555-0119; Mon-Fri 7:30-17:30 Central; no Saturday.",
+  "Closed Sundays. Nashville is one hour behind Chattanooga.",
+  "Stocktake: on {{@stocktake}} (the Thursday of week W+1) every shop closes at 12:00 noon, opens 7:30 as usual; key drop stays open.",
+  "After-hours calls are returned the next open morning.",
+  "Closed dates (ledger site.closed_dates): New Year's Day, Memorial Day, Independence Day, Labor Day, Thanksgiving Day, Christmas Day; a weekend holiday is observed on the nearest weekday.",
+  "The stocktake is the Thursday of week W+1 (ledger site.stocktake); the notice was added on the Monday of week W-1."
+ ],
+ "tables": [
+  {
+   "section": "Our three shops",
+   "columns": [
+    "Shop",
+    "Phone",
+    "Hours"
+   ],
+   "rows": [
+    {
+     "Shop": "East Main (Chattanooga)",
+     "Phone": "(423) 555-0142",
+     "Hours": "Mon to Fri 7:30 a.m. to 5:30 p.m.; Sat 8:00 a.m. to 1:00 p.m."
+    },
+    {
+     "Shop": "Bonny Oaks (Chattanooga)",
+     "Phone": "(423) 555-0167",
+     "Hours": "Mon to Fri 7:30 a.m. to 5:30 p.m."
+    },
+    {
+     "Shop": "Charlotte Pike (Nashville)",
+     "Phone": "(615) 555-0119",
+     "Hours": "Mon to Fri 7:30 a.m. to 5:30 p.m. Central time"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Our three shops",
+   "item": "East Main: 2106 East Main St, Chattanooga, TN 37404"
+  },
+  {
+   "section": "Our three shops",
+   "item": "Bonny Oaks: 6340 Bonny Oaks Drive, Chattanooga, TN 37416"
+  },
+  {
+   "section": "Our three shops",
+   "item": "Charlotte Pike: 6399 Charlotte Pike, Nashville, TN 37209"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@stocktake_notice|date}}",
+  "{{@stocktake|day}}"
+ ],
+ "new_facts": [
+  "The stocktake is called \"twice-yearly parts count\" for customers.",
+  "Shop short names: East Main, Bonny Oaks, Charlotte Pike (ledger geo.short_name)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@stocktake_notice|date}}",
+   "what": "added the section \"Changed hours\" for the stocktake afternoon; message: \"Stocktake: all shops close at noon.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian shops are open every day 9:00-20:00 and stay open on public holidays (design 7.2 S13), so the Holidays section says so instead of a list; the stocktake afternoon is the same event.",
+  "Kazan is one hour behind Ulyanovsk."
+ ]
+}

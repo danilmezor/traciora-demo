@@ -1,0 +1,130 @@
+{
+ "path": "team/meetings.md",
+ "title": "Совещания",
+ "title_en": "Meetings",
+ "exists_in": "both",
+ "english_sheet": "facts/team/meetings.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The standing meetings: the Monday managers' meeting, the morning huddle.",
+ "serves": [
+  "S9",
+  "S16",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 168,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The Monday meeting is at 8:15 Ulyanovsk time (ledger s9.meeting.ru), before the doors open: it ends at 8:45, before the 8:50 stand-up, so nobody leaves a desk for it. In Kazan that is 7:15, an hour and three quarters before that shop opens. The page gives no time zone, as in English.",
+  "No holiday Mondays: the shops are open on public holidays; only 1 and 2 January cancel the meeting (TIMELINE: S9 holiday Mondays \"none\" in Russian).",
+  "The morning stand-up is at 8:50, ten minutes before opening."
+ ],
+ "new_facts": [
+  "Morning stand-up at 8:50; the Monday meeting lasts 30 minutes."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Планёрка руководителей по понедельникам",
+   "item": "Каждый понедельник в 8:15, до открытия, по видео, 30 минут. Веду я."
+  },
+  {
+   "section": "Планёрка руководителей по понедельникам",
+   "item": "Кто: Мельников, Григорьев, Демидова, Кудашкина, Галиев и я."
+  },
+  {
+   "section": "Планёрка руководителей по понедельникам",
+   "item": "О чём: прошлая неделя по сервисам (заезды, проданные рекомендации, пропущенные звонки, возвраты), кто работает на этой неделе, всё, что касается корпоративных клиентов."
+  },
+  {
+   "section": "Планёрка руководителей по понедельникам",
+   "item": "Праздники у нас рабочие, поэтому планёрка проходит и в праздничный понедельник. Её нет, только если понедельник выпал на 1 или 2 января."
+  },
+  {
+   "section": "Планёрка руководителей по понедельникам",
+   "item": "Приглашение нужно принять или отклонить. Отклонили — пришлите свои цифры до понедельника."
+  },
+  {
+   "section": "Разборы",
+   "item": "Возвраты: Мельников и Бурмистров, раз в месяц."
+  },
+  {
+   "section": "Разборы",
+   "item": "«Симбирский гонец»: раз в квартал, вместе с ними."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "3",
+   "written_as": "Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Галиев",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "8",
+   "written_as": "Бурмистров",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Симбирский гонец"
+  }
+ ],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+1w|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

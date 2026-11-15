@@ -1,0 +1,93 @@
+{
+ "path": "policies/customer-records.md",
+ "title": "Карточки клиентов",
+ "title_en": "Customer records",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/customer-records.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "How a customer and a car are entered so that records do not multiply.",
+ "serves": [
+  "S15",
+  "S2",
+  "S7"
+ ],
+ "length_class": "short",
+ "words_ru": 217,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Records: surname, first name and mobile; companies by ИНН with the plate and the garage number; the VIN from the registration certificate.",
+  "The walk-in record is «Розничный покупатель»; a customer who gives no name is «Имя не назвал» with the plate.",
+  "Examples follow the Russian named pairs (ё and е; the sole trader and the same man as a private person)."
+ ],
+ "new_facts": [
+  "«Имя не назвал» as the label for a customer who will not give a name."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Карточки клиентов",
+   "item": "Прежде чем заводить клиента, найдите его по номеру телефона. Не по фамилии: фамилию пишут тремя способами, с «ё» и без. Телефон уже есть в базе — значит, это ваш клиент, как бы ни выглядело имя."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "Нужны фамилия, имя и мобильный. «Саша, „Гранта“» — это не клиент."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "Карточкой «Розничный покупатель» не пользуемся. Каждый наряд открыт на человека или организацию. Клиент не хочет называться — карточка всё равно нужна: «Имя не назвал» и госномер."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "VIN — у каждой машины, из свидетельства о регистрации. Если на старой машине его не прочитать и в документах нет, так и напишите в примечании."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "Пробег при приёмке и при выдаче — в каждом наряде, с панели приборов, а не из прошлого визита."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "До того как открыть наряд, проверьте, что машина записана на того клиента. Машину жены привозит муж; предприниматель и он же как частное лицо — это две разные карточки."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "Автомобиль организации записывается на организацию, по ИНН, с госномером и гаражным номером, если он есть. На водителя — никогда."
+  },
+  {
+   "section": "Карточки клиентов",
+   "item": "Нашли дубль — сами не исправляйте. Пришлите мне обе карточки, я объединю их так, чтобы история не потерялась."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,104 @@
+{
+ "path": "shop-floor/shift-changes-and-time-off.md",
+ "title": "Замены смен и отгулы",
+ "title_en": "Shift changes and time off",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/shift-changes-and-time-off.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "How a technician asks for a shift change or a day off; what the planner needs.",
+ "serves": [
+  "S14",
+  "S5",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_ru": 176,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Patterns: mechanics five days on, two off, 9:00-18:00, days off staggered; advisors two on, two off, 9:00-20:00 (ledger roster.*).",
+  "Sick: call the desk before 8:30 and give the number of the sick-leave certificate to the bookkeeper.",
+  "The product has no swap (stories/S14: change of time, change of date, removal): the page asks for a move to another day and the name of who comes in."
+ ],
+ "new_facts": [
+  "Sick call before 8:30 (half an hour before opening).",
+  "No days off on the tyre bays in the two tyre seasons (ledger season.extra_shifts: slot 15 and the seasonal fitter work six days a week then)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Замены смен и отгулы",
+   "item": "Механики работают пять дней через два, с 9:00 до 18:00; выходные у всех в разные дни, чтобы в сервисе всю неделю хватало людей. Мастера-приёмщики — два через два, с 9:00 до 20:00."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "Просьбу оставляйте в приложении, на той смене, которую хотите поменять. Не сообщением и не через кого-то."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "Пишите причину. Просьбу без причины не рассматриваю."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "Просите не позже чем за 7 дней. Позже — постараюсь, но ответ обычно «нет», если вы не привели человека, который выйдет вместо вас."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "Обмена сменами в приложении нет. Просите перенести смену на другой день и напишите, кто выйдет вместо вас. «Он обещал» — не подтверждение: спрошу его сам."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "График на неделю публикую до полудня четверга предыдущей недели. Опубликованный график — это график."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "Заболели — позвоните на приёмку до 8:30. Сообщение товарищу — не предупреждение. Номер больничного листка сообщите Ирине Владимировне."
+  },
+  {
+   "section": "Замены смен и отгулы",
+   "item": "В сезон шиномонтажа, в апреле — мае и октябре — ноябре, отгулы на шиномонтаже не согласую."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирине Владимировне",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-5.5mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,104 @@
+{
+ "path": "team/new-technician-first-week.md",
+ "title": "New technician: the first week",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "8",
+ "purpose": "What a new technician is shown in the first week.",
+ "serves": [
+  "S14",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 162,
+ "links_to": [
+  "shop-floor/before-a-car-leaves.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Day one: bay, lift points, torque wrenches, the app (punches, schedule), the shop system (jobs, job clock, inspection), safety walk.",
+  "First week: paired with slot 12 (main), 18 (east) or 25 (west); three sellable inspections; one supervised brake job; the final-check page.",
+  "Voice: slot 8, terse."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "New technician: the first week",
+   "item": "Your bay, your lift, the lift points poster. Where the torque wrenches live. They go back there."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "The app: clock in at the shop, clock out when you leave. Your schedule is in it."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "The shop system: your jobs, the job clock, the inspection."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "Safety walk with me. Eye wash, extinguishers, spill kit."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "You work beside Luis at East Main, Andre at Bonny Oaks, Gary at Charlotte Pike."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "Three inspections with photos that an advisor says he can sell from."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "A brake job start to finish with me watching the last ten minutes."
+  },
+  {
+   "section": "New technician: the first week",
+   "item": "You read Before a car leaves your bay. Then you do it every time."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "8",
+   "written_as": "Randy",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Luis",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "25",
+   "written_as": "Gary",
+   "role": "technician",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same; the mentor slots are the same."
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "path": "services/maintenance/oil-change.md",
+ "title": "Oil change",
+ "first_revision_text": "en/_history/services/maintenance/oil-change.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The most common job: what it includes, the three oils, what to ask, the upsell that is not an upsell.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:customer-terms",
+  "smoke"
+ ],
+ "length_class": "medium",
+ "words_en": 320,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job oil_service: menu price, 0.5 h, 5 qt; carried by 31.9 % of orders (\"one car in three\").",
+  "Three tiers: blend with ECOGARD filter; full synthetic with WIX (default); Mobil 1 with original filter.",
+  "Extra quarts at the standard oil's list price per quart.",
+  "Allow 45 minutes with the inspection; waiters welcome.",
+  "Rotation offered every other oil change.",
+  "Interval advice 5,000 to 7,500 miles, \"not 3,000\".",
+  "The competitor price \"$40\" is a customer's words."
+ ],
+ "tables": [
+  {
+   "section": "The three prices",
+   "columns": [
+    "Oil",
+    "Filter",
+    "Price"
+   ],
+   "rows": [
+    {
+     "Oil": "Synthetic blend",
+     "Filter": "ECOGARD",
+     "Price": "$65.95"
+    },
+    {
+     "Oil": "Full synthetic (what we quote)",
+     "Filter": "WIX",
+     "Price": "$90.95"
+    },
+    {
+     "Oil": "Mobil 1 Extended Performance",
+     "Filter": "Original",
+     "Price": "$120.95"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Ask",
+   "item": "Year, make, model, engine. The engine decides the quarts and the filter."
+  },
+  {
+   "section": "Ask",
+   "item": "Mileage now, and at the last change if they know."
+  },
+  {
+   "section": "Ask",
+   "item": "\"Is anything else going on with it?\" This is the cheapest visit to find the expensive problem on."
+  },
+  {
+   "section": "Say",
+   "item": "\"About 45 minutes, and we will look the car over and send you pictures.\""
+  },
+  {
+   "section": "Say",
+   "item": "Tire rotation is $25.00 while it is on the lift. Every other oil change."
+  },
+  {
+   "section": "Say",
+   "item": "If they ask how often: the manual, and for most cars that is 5,000 to 7,500 miles. Not 3,000. We do not sell people oil changes they do not need."
+  },
+  {
+   "section": "They say",
+   "item": "\"The quick-lube place is $40.\" \"For blend oil and whatever filter is on the shelf, and nobody looks at your brakes. Ours with blend is $65.95, and a technician inspects the car.\""
+  },
+  {
+   "section": "They say",
+   "item": "\"Do I need synthetic?\" If the cap or the manual says 0W-20, yes: that only comes as synthetic. Otherwise it is their choice, and blend is fine on an older engine."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 65.95
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 90.95
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 120.95
+  },
+  {
+   "catalogue_key": "oil_service",
+   "what": "part list price each: Engine oil 0W-20 / 5W-30",
+   "tier": "standard",
+   "qty": 5,
+   "unit": "qt",
+   "brand": "Valvoline Advanced Full Synthetic (bulk)",
+   "value": 9.0
+  },
+  {
+   "catalogue_key": "tyre_rotation",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 25.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian oil service is priced by the hour (0.7 н/ч) with 4 l; brands Лукойл / Shell; interval 7 500 to 10 000 km; «в гараже дешевле» is the objection."
+ ]
+}

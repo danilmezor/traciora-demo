@@ -1,0 +1,72 @@
+{
+ "path": "shops/east/README.md",
+ "title": "Bonny Oaks",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Front page of the second home shop's pages.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "tiny",
+ "words_en": 68,
+ "links_to": [
+  "shops/east/hours-and-getting-here.md",
+  "shops/east/who-is-who.md",
+  "shops/east/opening-and-closing.md",
+  "shops/east/how-the-day-runs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Six bays, open eleven years.",
+  "Sent to East Main: hybrids, the hardest electrical faults, R-1234yf recharges, crew-cab alignments.",
+  "Voice: slot 16, signed \"Angie\"."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Bonny Oaks",
+   "item": "Hours and getting here"
+  },
+  {
+   "section": "Bonny Oaks",
+   "item": "Who is who"
+  },
+  {
+   "section": "Bonny Oaks",
+   "item": "Opening and closing"
+  },
+  {
+   "section": "Bonny Oaks",
+   "item": "How the day runs"
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "«Инженерный» shop."
+ ]
+}

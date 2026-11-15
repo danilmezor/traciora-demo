@@ -1,0 +1,118 @@
+{
+  "format": "seed-conversation/1",
+  "id": "19-people-p22-telegram-bring-it-by",
+  "configuration": "en",
+  "number": 19,
+  "story": "people",
+  "title": "The Nashville manager and a man he has known for years",
+  "demonstrates": "Slot 22 in writing, at his warmest: half an hour to a first reply, five words and a question about the customer's mother. No time, no price, no name taken; 'will do'. Both drafts written over. Nobody resolves it.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Buddy Carver",
+      "invented": true,
+      "first_time": false,
+      "note": "a regular of the Charlotte Pike shop since before the purchase; he brings his mother's Buick"
+    },
+    "staff": [
+      {"slot": 22, "name": "Dale Hutchins"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A regular who writes to Dale by name.",
+    "vehicle": "his mother's Buick (model not said)",
+    "what_happens": "A whine when the wheel is turned, again. 'bring it by. hows your mama doing'. He will be there after lunch. 'will do'.",
+    "facts": {
+      "public_pages_used": [],
+      "note": "nothing is written anywhere: no appointment, no time; the visit is a walk-in"
+    }
+  },
+  "days": {
+    "T-115d": {"anchor": "the Tuesday of week T-16", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 16}, "nominal": "Tue 2026-07-21"},
+    "T-108d": {"anchor": "7 calendar days after the Tuesday of week T-16", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 16, "plus_days": 7}, "nominal": "Tue 2026-07-28", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "4503599627373602",
+      "peer": {"id": "4503599627373602", "name": "Buddy Carver"},
+      "contact": {
+        "identifier": "telegram_4503599627373602",
+        "name": "Buddy Carver",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "opened": {"day": "T-115d", "at": "07:48:10", "status": "open", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-115d", "at": "07:48:10", "kind": "message", "from": "customer", "text": "Dale its Buddy Carver. mamas buick is making that whine again when she turns the wheel. can i run it by"},
+        {"n": 2, "day": "T-115d", "at": "07:48:55", "kind": "draft", "id": "d1", "text": "Good morning, Buddy. Yes, bring it by and we'll take a look. A whine when turning the wheel should be checked soon. Would this morning or this afternoon suit you?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 22, "day": "T-115d", "at": "08:20:30", "because": "he sent his own text (n 5)"}},
+        {"n": 3, "day": "T-115d", "at": "08:00", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-115d", "at": "08:20:28", "kind": "activity", "what": "assigned", "derived": true, "to": 22, "by": 22, "how": "first reply"},
+        {"n": 5, "day": "T-115d", "at": "08:20:30", "kind": "message", "from": "staff", "slot": 22, "text": "bring it by. hows your mama doing"},
+        {"n": 6, "day": "T-115d", "at": "08:20:32", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 7, "day": "T-115d", "at": "08:24:10", "kind": "message", "from": "customer", "text": "shes good, ornery as ever. be there after lunch"},
+        {"n": 8, "day": "T-115d", "at": "08:24:50", "kind": "draft", "id": "d2", "text": "Glad to hear it, Buddy. See you after lunch.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 22, "day": "T-115d", "at": "08:51:15", "because": "he sent his own text (n 10)"}},
+        {"n": 9, "day": "T-115d", "at": "08:48", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 10, "day": "T-115d", "at": "08:51:15", "kind": "message", "from": "staff", "slot": 22, "text": "will do"},
+        {"n": 11, "day": "T-115d", "at": "08:51:17", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-108d", "at": "08:51", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-115d", "at": "08:20:28", "to": 22, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 22,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 22, "working_minutes": 32.3},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 22, "working_minutes": 32.3, "wall_minutes": 32.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 10, "by": 22, "working_minutes": 27.1, "wall_minutes": 27.1, "measured_from": "n 7", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 22,
+          "n": 5,
+          "working_minutes": 32.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 2, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-108d", "at": "08:51", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 22},
+          {"draft": "d2", "outcome": "discarded", "manager": 22}
+        ],
+        "operator_credit": "slot 22: first answer 32.3 minutes (his ledger row is 35), two replies, two drafts discarded, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "a symptom",
+    "handled": "slot 22; the assistant drafts",
+    "outcome": "a walk-in after lunch, no time agreed; resolved by 7 silent days",
+    "facts": ["slot 22 offered no time and no price and took no note of the car", "both drafts were discarded"],
+    "questions": []
+  },
+  "why": [
+    "This is what the regulars like about him, and it is real.",
+    "Set it beside file 20: the same man, a stranger, the next day, eight words.",
+    "The draft asked 'this morning or this afternoon'; he did not."
+  ],
+  "new_facts": [
+    "Buddy Carver, a regular of west, brings his mother's Buick (a whine when turning, a repeat) as a walk-in on the Tuesday of week T-16.",
+    "The contact has no picture."
+  ]
+}

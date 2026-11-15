@@ -1,0 +1,84 @@
+{
+ "path": "shop-floor/clocking-in-and-out.md",
+ "title": "Clocking in and out",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "4",
+ "purpose": "How technicians punch, the location check, what to do after a forgotten clock-out.",
+ "serves": [
+  "S14",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_en": 165,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Punch at the shop; the product checks location; a far punch is flagged (S14: slot 26 punched twice from 600 m).",
+  "Late = more than five minutes after the scheduled start.",
+  "A forgotten clock-out is corrected by the worker on Home the next morning and approved by the planner (S14: slot 14).",
+  "Attendance (Traciora) and job time (ERP time_entry) are separate."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Clocking in and out",
+   "item": "Clock in on your phone when you are at the shop, not on the way. The app checks where you are. A punch from down the road is flagged and comes to me."
+  },
+  {
+   "section": "Clocking in and out",
+   "item": "Your shift start is the time on the schedule. Five minutes after it you are late, and the punch says so."
+  },
+  {
+   "section": "Clocking in and out",
+   "item": "Clock out when you leave. If you forgot, your Home screen asks you the next morning: put in the time you really left and send it. I approve it the same day."
+  },
+  {
+   "section": "Clocking in and out",
+   "item": "Do not ask someone else to punch for you, and do not punch for anyone."
+  },
+  {
+   "section": "Clocking in and out",
+   "item": "Clocked time is attendance. The time on a job is the job clock in the shop system, and that is separate: start and stop it per job as always."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [
+  "Lateness threshold of five minutes. Reason: the punches need a rule for \"late\"; must equal the roster's grace setting in core."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-5.5mo|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "added the sentence about a punch from down the road after the two flagged punches at Charlotte Pike; message: \"Clock in at the shop.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same rules. Distance in metres."
+ ]
+}

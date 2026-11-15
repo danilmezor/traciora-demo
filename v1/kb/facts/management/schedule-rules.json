@@ -1,0 +1,184 @@
+{
+ "path": "management/schedule-rules.md",
+ "title": "Schedule rules",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "4",
+ "purpose": "Senior rank: the cover each shop needs and the rules the planner follows.",
+ "serves": [
+  "S3",
+  "S5",
+  "S14",
+  "visibility:senior",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 304,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Cover table: East Main desk 2 advisors Mon-Fri 7:30-10:00 since {{@early_desk}} and at least 1 otherwise; bays 4 technicians; Saturday slot 29 plus 1 and 2; Bonny Oaks 1 and 3; Charlotte Pike 1 and 3.",
+  "The early desk shift starts at opening and is taken in turn by the three weekday advisors, with slot 29 as cover (S3: the new shift template; cover min_count 2 from the fix day).",
+  "Publish by Thursday noon; no two advisors of a shop off the same week; a lead advisor's week off needs a named cover before approval (S5: slot 16's week has none yet and her requests are open).",
+  "Slot 10 has no cover: bookings cut to what slot 13 can take, overflow to slot 18 (S5: the lesson of his leave).",
+  "Slot 21 is first call for holes; advisors move within Chattanooga only.",
+  "Requests: written reason, 7 days; no-shows flagged and offered out (S14: slot 20 at T-2 days, slot 21 took it); six days running at most."
+ ],
+ "tables": [
+  {
+   "section": "Cover",
+   "columns": [
+    "Shop",
+    "Desk",
+    "Bays"
+   ],
+   "rows": [
+    {
+     "Shop": "East Main, Mon to Fri, 7:30 to 10:00",
+     "Desk": "2 advisors",
+     "Bays": "4 technicians"
+    },
+    {
+     "Shop": "East Main, rest of the day",
+     "Desk": "1 advisor at least",
+     "Bays": "4 technicians"
+    },
+    {
+     "Shop": "East Main, Saturday",
+     "Desk": "Brenda and 1 advisor in turn",
+     "Bays": "2 technicians"
+    },
+    {
+     "Shop": "Bonny Oaks",
+     "Desk": "1 advisor at least",
+     "Bays": "3 technicians"
+    },
+    {
+     "Shop": "Charlotte Pike",
+     "Desk": "1 advisor at least",
+     "Bays": "3 technicians"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Rules",
+   "item": "The week is published by Thursday noon the week before."
+  },
+  {
+   "section": "Rules",
+   "item": "No two advisors from one shop off in the same week."
+  },
+  {
+   "section": "Rules",
+   "item": "A lead advisor's week off needs a named cover before it is approved, not after."
+  },
+  {
+   "section": "Rules",
+   "item": "Kevin has no cover. When he is off, diagnostic bookings at East Main are cut to what Terry can take, overflow goes to Andre, and customers are told the wait when they book. We learned this the expensive way."
+  },
+  {
+   "section": "Rules",
+   "item": "Jordan is the first call for any hole at either Chattanooga shop."
+  },
+  {
+   "section": "Rules",
+   "item": "An advisor may be moved between East Main and Bonny Oaks for a day. Not between Chattanooga and Nashville."
+  },
+  {
+   "section": "Rules",
+   "item": "Shift requests need a written reason and 7 days. Inside 7 days the answer is no unless the asker names who takes the shift."
+  },
+  {
+   "section": "Rules",
+   "item": "A no-show is flagged the same morning and the shift is offered out at once."
+  },
+  {
+   "section": "Rules",
+   "item": "Nobody works more than six days running."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "29",
+   "written_as": "Brenda",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Terry",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan",
+   "role": "technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "new_facts": [
+  "Technician cover minimums 4 / 3 / 3 and Saturday 2; \"no more than six days running\". The shift planner's cover requirements and templates must equal this table."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@diag_back|date}}",
+   "what": "added the rule about slot 10 having no cover, after his two weeks off; message: \"What to do when Kevin is off.\""
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "East Main morning desk cover raised from 1 to 2; early desk shift added; message: \"Early desk from today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian desks run 2/2 (R12), so the table is per day of the week with two advisors always on; early desk covers 9:00-11:30."
+ ]
+}

@@ -1,0 +1,161 @@
+{
+  "format": "seed-conversation/1",
+  "id": "02-s7-web-approval-and-thanks",
+  "configuration": "ru",
+  "number": 2,
+  "story": "S7",
+  "title": "День визита: в чате на сайте она соглашается на тормоза и откладывает амортизаторы; на следующий день благодарит",
+  "demonstrates": "A returning website visitor is the same contact, and the assistant remembers her name and number. It cannot see or change a repair order, so an approval is a hand-over, kind escalation. The junior operator confirms in four minutes with the price, the total and the pick-up time, and resolves. The thanks next morning reopens her chat on a day she is off (two on, two off): the newcomer on shift sends the waiting draft as it was, and she resolves the chat on her next working day.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json ru.S7",
+      "name": "Ольга Сергеевна Тимофеева",
+      "in_chat": "Ольга",
+      "first_time": false,
+      "phone": "+7 907 378-60-35"
+    },
+    "staff": [
+      {"slot": 6, "name": "Алина Хасанова"},
+      {"slot": 7, "name": "Никита Ведяшкин"}
+    ],
+    "named_in_a_line": [
+      {"slot": 12, "name": "Алексей Карпов", "role": "механик, который делал машину"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Та же клиентка, с работы, прочитав смету, которую сервис прислал ей на почту.",
+    "vehicle": "Hyundai Solaris 2016",
+    "wants": "Согласиться на передние тормоза и отложить задние амортизаторы.",
+    "what_happens": "Диагностика показала износ передних колодок и дисков и запотевший задний амортизатор. Решение она пишет в новом визите на сайт; ассистент передаёт его; Алина подтверждает работу, итог и время. Вечером она платит картой. Наутро благодарит: чат открывается снова, Алина выходная, готовый черновик отправляет Никита; Алина закрывает чат, когда выходит на смену.",
+    "facts": {
+      "found": "передние колодки стёрты до индикатора, диски с бортиком; правый задний амортизатор запотел",
+      "approved": "замена передних тормозных дисков и колодок",
+      "declined_and_deferred": "задние амортизаторы, пара: 11 720 по прайсу (ledger s7.bill.declined_rear_shocks); поставлено напоминание",
+      "paid": "13 322,60 картой, в том числе НДС 634,41 (ledger s7.bill)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "12 520 ₽", "amount": 12520.0, "what": "замена передних тормозных дисков и колодок, класс car, стандартные запчасти", "from": {"catalogue": "front_pads_rotors", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "13 322,60 ₽", "amount": 13322.6, "what": "счёт к оплате: диагностика 700 + диски и колодки 12 520 + расходные материалы 102,60; НДС 5 % в том числе (634,41), сверху ничего не добавляется", "from": {"ledger": "s7.bill.with_tax"}}
+      ]
+    }
+  },
+  "days": {
+    "T-19d": {"anchor": "slot 6's 9th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -9}, "nominal": "Sun 2026-10-25", "what": "the visit: slot 6's next working day after day A"},
+    "T-18d": {"anchor": "1 calendar day after slot 6's 9th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -9, "plus_days": 1}, "nominal": "Mon 2026-10-26", "what": "the day after the visit; slot 6 is off, slot 7 is on"},
+    "T-16d": {"anchor": "slot 6's 8th working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -8}, "nominal": "Wed 2026-10-28", "what": "slot 6's next working day: she resolves the chat"}
+  },
+  "floating_days": [
+    {"word": "утром", "said_on": "T-19d", "day": "T-19d", "form": "adverb"},
+    {"word": "сегодня", "said_on": "T-19d", "day": "T-19d", "form": "adverb"},
+    {"word": "вчера", "said_on": "T-18d", "day": "T-19d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0002-4e00-8000-00000000a002",
+      "peer": {"id": "seedv1-browser-ru-0001", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0001",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-19d", "at": "09:30", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-19d", "at": "09:30", "kind": "outside", "store": "erp", "what": "визит: заказ-наряд открыт слотом 6; осмотр делает слот 12"},
+        {"n": 2, "day": "T-19d", "at": "10:40", "kind": "outside", "store": "erp", "what": "смета уходит ей на электронную почту из учётной системы: диски и колодки спереди 12 520; задние амортизаторы, пара, 11 720"},
+        {"n": 3, "day": "T-19d", "at": "11:02:10", "kind": "message", "from": "customer", "text": "здравствуйте, это Ольга, солярис, я утром у вас машину оставила"},
+        {"n": 4, "day": "T-19d", "at": "11:02:40", "kind": "message", "from": "customer", "text": "смету на почте посмотрела. колодки с дисками делайте. амортизаторы пока нет, сразу столько не потяну"},
+        {"n": 5, "day": "T-19d", "at": "11:03:05", "kind": "message", "from": "assistant", "text": "Ольга, здравствуйте! Заказ-наряды я не вижу и изменить в них ничего не могу, поэтому сразу передам мастеру-приёмщику на Московском шоссе: передние колодки и диски делаем, задние амортизаторы пока нет. Номер для связи прежний, +7 907 378-60-35?"},
+        {"n": 6, "day": "T-19d", "at": "11:03:30", "kind": "message", "from": "customer", "text": "да"},
+        {"n": 7, "day": "T-19d", "at": "11:03:53", "kind": "message", "from": "assistant", "text": "Спасибо. Передал, с вами свяжутся в ближайшее время."},
+        {"n": 8, "day": "T-19d", "at": "11:03:54", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Ольга", "phone": "+7 907 378-60-35", "site": "Московское шоссе", "context": "Ольга, Hyundai Solaris 2016, машина сегодня на Московском шоссе. Смету прочитала: передние тормозные колодки и диски делать, задние амортизаторы пока не делать, говорит, что сразу столько не потянет. Заказ-наряд я не вижу, поэтому ничего не подтверждал."}}, "note": {"from": "assistant", "private": true, "text": "Ольга, Hyundai Solaris 2016, машина сегодня на Московском шоссе. Смету прочитала: передние тормозные колодки и диски делать, задние амортизаторы пока не делать, говорит, что сразу столько не потянет. Заказ-наряд я не вижу, поэтому ничего не подтверждал."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "main", "owner": null, "due": "T-19d 20:00, закрытие дня"}},
+        {"n": 9, "day": "T-19d", "at": "11:07:38", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 10, "day": "T-19d", "at": "11:07:40", "kind": "message", "from": "staff", "slot": 6, "text": "Ольга, это Алина. Всё поняла: передние колодки и диски меняем сегодня, это 12 520 ₽, задние амортизаторы отметила как отложенные. Правый пока только запотел, не течёт, месяц-полтора с ним ездить можно, я поставлю вам напоминание. Вместе с диагностикой и расходными материалами сегодня выйдет 13 322,60 ₽. Машину Алексей отдаст к 15:00, мы до 20:00."},
+        {"n": 11, "day": "T-19d", "at": "11:07:41", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 12, "day": "T-19d", "at": "11:12:30", "kind": "message", "from": "customer", "text": "хорошо, спасибо"},
+        {"n": 13, "day": "T-19d", "at": "11:13:10", "kind": "draft", "id": "d1", "text": "Пожалуйста, Ольга! Ждём вас после 15:00.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-19d", "at": "11:14:20", "became": 14}},
+        {"n": 14, "day": "T-19d", "at": "11:14:20", "kind": "message", "from": "staff", "slot": 6, "text": "Пожалуйста, Ольга! Ждём вас после 15:00."},
+        {"n": 15, "day": "T-19d", "at": "11:14:40", "kind": "activity", "what": "label_added", "label": "согласование", "by": 6},
+        {"n": 16, "day": "T-19d", "at": "11:15:00", "kind": "activity", "what": "resolved", "by": 6},
+        {"n": 17, "day": "T-19d", "at": "18:40", "kind": "outside", "store": "erp", "what": "заказ-наряд закрыт: диски и колодки спереди заменены; задние амортизаторы — отказ, отложено, напоминание создано; оплата картой, 13 322,60"},
+        {"n": 18, "day": "T-18d", "at": "10:15:20", "kind": "activity", "what": "reopened", "derived": true, "how": "a new customer message"},
+        {"n": 19, "day": "T-18d", "at": "10:15:20", "kind": "message", "from": "customer", "text": "забрала вчера, тормозит как новая) спасибо вам большое"},
+        {"n": 20, "day": "T-18d", "at": "10:16:00", "kind": "draft", "id": "d2", "text": "Ольга, спасибо за добрые слова! Рады, что всё в порядке. Обращайтесь.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-18d", "at": "10:33:10", "became": 22}},
+        {"n": 21, "day": "T-18d", "at": "10:27", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 22, "day": "T-18d", "at": "10:33:10", "kind": "message", "from": "staff", "slot": 7, "text": "Ольга, спасибо за добрые слова! Рады, что всё в порядке. Обращайтесь."},
+        {"n": 23, "day": "T-18d", "at": "10:33:12", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 24, "day": "T-16d", "at": "09:04:10", "kind": "activity", "what": "resolved", "by": 6}
+      ],
+      "assignee_history": [
+        {"day": "T-19d", "at": "11:07:38", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 6,
+        "labels": ["согласование"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null,
+        "contact_note": "One website visitor: the browser of the first chat, remembered for 30 days (ledger conv.web_visitor_memory_days). The contact holds no name and no phone; both are in the hand-off notes and on the cards."
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 3, "answered": 5, "by": "assistant", "wall_seconds": 25},
+          {"asked": 6, "answered": 7, "by": "assistant", "wall_seconds": 23},
+          {"asked": 8, "answered": 10, "by": 6, "working_minutes": 3.8, "wall_minutes": 3.8, "measured_from": "n 8", "reply": "first"},
+          {"asked": 12, "answered": 14, "by": 6, "working_minutes": 1.8, "wall_minutes": 1.8, "measured_from": "n 12", "reply": "later"},
+          {"asked": 19, "answered": 22, "by": 7, "working_minutes": 17.8, "wall_minutes": 17.8, "measured_from": "n 19", "reply": "first"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 10,
+          "working_minutes": 3.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 2, "manager": 3, "note": 1},
+        "resolutions": [
+          {"day": "T-19d", "at": "11:15:00", "by": 6},
+          {"day": "T-16d", "at": "09:04:10", "by": 6}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 6},
+          {"draft": "d2", "outcome": "sent_as_is", "manager": 7}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 6 has two replies and two resolutions of one chat (Stats counts distinct chats: one), one draft sent as it was; slot 7 has one reply in her chat, a draft sent as it was"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "found work: approve or decline",
+    "handled": "assistant first, handed over (escalation), slot 6; the thanks answered by slot 7",
+    "outcome": "диски и колодки спереди согласованы и оплачены, 13 322,60, НДС в том числе; задние амортизаторы отложены",
+    "facts": [
+      "approved: front brake discs and pads, 12 520",
+      "declined: rear shock absorbers (a pair), deferred with a reminder",
+      "paid by card: 13 322,60, VAT inside",
+      "a thank-you from her the next morning, answered by slot 7 because slot 6 was off; the chat is resolved by slot 6",
+      "the same website contact as the first chat"
+    ],
+    "questions": ["S7.1", "S7.2"]
+  },
+  "why": [
+    "Ассистент повторяет её решение простыми словами и не подтверждает того, чего не видит.",
+    "Алина отвечает на то, о чём спросили, и на то, о чём спросят следом: итог, время, и почему амортизатор может подождать.",
+    "«Спасибо» приходит в её выходной. Никита отправляет готовый черновик, не меняя ни слова, а чат она закрывает сама, когда возвращается: два через два в одной переписке."
+  ],
+  "new_facts": [
+    "Смета ушла ей на электронную почту из учётной системы около 10:40 в день визита (o.timofeeva@pochta.example).",
+    "Машина была готова к 15:00; наряд закрыт и оплачен около 18:40.",
+    "Запотел правый задний амортизатор.",
+    "На «спасибо» ответил слот 7 (его смена), чат закрыла слот 6 на следующий свой рабочий день."
+  ]
+}

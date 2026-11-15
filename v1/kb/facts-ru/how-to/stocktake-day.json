@@ -1,0 +1,144 @@
+{
+ "path": "how-to/stocktake-day.md",
+ "title": "День инвентаризации",
+ "title_en": "Stocktake day",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/stocktake-day.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "What happens on the half-yearly stocktake afternoon (S13).",
+ "serves": [
+  "S13",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 256,
+ "links_to": [
+  "customers/hours-and-locations.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Инвентаризация: every shop closes to customers at 12:00 (ledger site.stocktake), having opened at 9:00.",
+  "No booking after 10:00 that day and nothing longer than two нормо-часа (English: 10:30 with a 7:30 opening).",
+  "No key drop to keep open.",
+  "Recount threshold 2 000 RUB a line; Kazan sends its sheets by 18:00 Moscow time."
+ ],
+ "new_facts": [
+  "No appointments after 10:00 on the day; the 2 000 RUB recount rule. ERP appointments on the stocktake day stop at 10:00."
+ ],
+ "new_amounts": [
+  {
+   "value": 2000,
+   "why": "порог повторного пересчёта строки"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Заранее",
+   "item": "Дата появляется на странице Адреса и часы работы и на двери за две недели."
+  },
+  {
+   "section": "Заранее",
+   "item": "После 10:00 на этот день не записываем. Работы дольше двух нормо-часов не записываем совсем."
+  },
+  {
+   "section": "Заранее",
+   "item": "Машины, готовые в это утро, отдаём до 12:00 или на следующий день. Говорите это при записи и ещё раз, когда сообщаете о готовности."
+  },
+  {
+   "section": "Заранее",
+   "item": "В это утро заказываю только то, что нужно машине, которая уже стоит на посту."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "12:00: двери закрыты, на телефоне сообщение «мы закрыты»."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "На приёмке никого. Все стоят в графике на инвентаризации, и считают все, мастера-приёмщики тоже."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "Считаем парами: один считает, другой пишет. В одиночку не считаем. Свой пост не считаем."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "Листы пересчёта — по стеллажам. Считаем то, что лежит, а не то, что должно лежать по листу."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "Детали, уже выданные под машину на посту, — с биркой, на бирке номер наряда. Считаются выданными."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "Пока идёт пересчёт, с полки не уходит ничего. Машина, которой нужна деталь, ждёт."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "Строку с расхождением больше 2 000 ₽ пересчитывает другая пара."
+  },
+  {
+   "section": "В день пересчёта",
+   "item": "Заканчиваем около 16:00."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирине Владимировне",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерине Николаевне",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@stocktake|day}}"
+ ],
+ "amounts": [
+  2000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@stocktake_notice|date}}",
+   "what": "date of the next count filled in (Marcus's page, published by slot 4); message: \"Stocktake date.\"",
+   "message_ru": "Дата инвентаризации."
+  }
+ ],
+ "has_history": true
+}

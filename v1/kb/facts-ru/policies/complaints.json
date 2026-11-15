@@ -1,0 +1,151 @@
+{
+ "path": "policies/complaints.md",
+ "title": "Жалобы и претензии",
+ "title_en": "Complaints",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/complaints.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Staff procedure for a complaint: who hears it, who decides, how fast.",
+ "serves": [
+  "S8",
+  "S1",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 311,
+ "links_to": [
+  "policies/discounts.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "A section on the written claim (претензия): accepted at any shop, dated and signed on the customer's copy, passed to the manager the same day, answered in writing within ten days over the director's signature.",
+  "Account A5 is served in Kazan, so \"a company client: always slot 4\" was not followed: its call was taken by slot 22 and never returned (S1), as in English."
+ ],
+ "new_facts": [
+  "Written claims: answered within ten days, drafted by the service manager, signed by slot 2."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "The ten-day term (see customers/if-something-is-not-right.md).",
+   "outcome": "verified",
+   "note": "As on customers/if-something-is-not-right.md.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-31/",
+   "sentence": "ст. 31 п. 1: требования «подлежат удовлетворению в десятидневный срок» «со дня предъявления соответствующего требования»."
+  }
+ ],
+ "tables": [
+  {
+   "section": "Кто что решает",
+   "columns": [
+    "Что нужно клиенту",
+    "Кто"
+   ],
+   "rows": [
+    {
+     "Что нужно клиенту": "Извинение, объяснение суммы",
+     "Кто": "Мастер-приёмщик, который с ним говорит"
+    },
+    {
+     "Что нужно клиенту": "Скидка до 10 % от суммы наряда",
+     "Кто": "Мастер-приёмщик, с причиной в наряде"
+    },
+    {
+     "Что нужно клиенту": "Скидка больше 10 %, бесплатная переделка вне гарантии, возврат денег",
+     "Кто": "Сергей Анатольевич по Ульяновску, Ринат Фаридович по Казани: Скидки"
+    },
+    {
+     "Что нужно клиенту": "Жалоба на работу механика",
+     "Кто": "Машину смотрит мастер цеха. Механика с клиентом никто не обсуждает"
+    },
+    {
+     "Что нужно клиенту": "Жалоба на мастера-приёмщика",
+     "Кто": "Сергей Анатольевич или Ринат Фаридович, а не коллега по стойке"
+    },
+    {
+     "Что нужно клиенту": "Корпоративный клиент",
+     "Кто": "Всегда Сергей Анатольевич, в тот же день, какой бы ни была сумма"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "На приёмке или по телефону",
+   "item": "Дайте договорить. Не объясняйте, не защищайте механика, не говорите «без проблем»."
+  },
+  {
+   "section": "На приёмке или по телефону",
+   "item": "Одной фразой повторите, что услышали."
+  },
+  {
+   "section": "На приёмке или по телефону",
+   "item": "Скажите, что будет дальше и когда: «Сергей Анатольевич позвонит вам завтра до двенадцати». И сделайте так, чтобы это было правдой."
+  },
+  {
+   "section": "На приёмке или по телефону",
+   "item": "Запишите жалобу в наряд — словами клиента."
+  },
+  {
+   "section": "На приёмке или по телефону",
+   "item": "Поставьте на доске карточку руководителю сервиса, с высоким приоритетом и номером наряда. До того, как возьмёте следующий звонок."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерины Николаевны",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added step 5 (raise a card before the next call) after the timing-belt complaint; message: \"Card first, then the next call.\"",
+   "message_ru": "Сначала карточка, потом следующий звонок."
+  }
+ ],
+ "has_history": true
+}

@@ -1,0 +1,143 @@
+{
+ "path": "prices/counter-price-sheet.pdf",
+ "title": "Counter price sheet",
+ "kind": "binary",
+ "format": "PDF, 2 pages, text",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Printed price sheet for the counters: menu services on page 1, prices by vehicle class on page 2.",
+ "serves": [
+  "S12",
+  "challenge:fact-only-in-attachment",
+  "challenge:fact-in-table"
+ ],
+ "draft": "en/_binaries.md",
+ "facts": [
+  "Page 1: sixteen menu and common services at the current list (class car), labour hour 135.00, supplies and tire-fee notes (4.85 a tire = 3.50 + 1.35).",
+  "Page 2: thirteen jobs priced for car, SUV, truck and van, standard parts.",
+  {
+   "by_class_table": [
+    {
+     "catalogue_key": "front_pads_rotors",
+     "car": 493.0,
+     "suv": 566.94,
+     "truck": 628.76,
+     "van": 640.91
+    },
+    {
+     "catalogue_key": "rear_pads_rotors",
+     "car": 470.27,
+     "suv": 540.81,
+     "truck": 599.2,
+     "van": 611.35
+    },
+    {
+     "catalogue_key": "front_brake_pads",
+     "car": 234.86,
+     "suv": 270.76,
+     "truck": 298.57,
+     "van": 305.32
+    },
+    {
+     "catalogue_key": "front_struts_pair",
+     "car": 841.9,
+     "suv": 968.19,
+     "truck": 1076.93,
+     "van": 1094.48
+    },
+    {
+     "catalogue_key": "rear_shocks_pair",
+     "car": 339.28,
+     "suv": 390.18,
+     "truck": 432.96,
+     "van": 441.06
+    },
+    {
+     "catalogue_key": "wheel_bearing",
+     "car": 420.27,
+     "suv": 483.31,
+     "truck": 534.2,
+     "van": 546.35
+    },
+    {
+     "catalogue_key": "wheel_alignment",
+     "car": 119.95,
+     "suv": 119.95,
+     "truck": 137.94,
+     "van": 149.94
+    },
+    {
+     "catalogue_key": "new_tyres_fitted",
+     "car": 100.0,
+     "suv": 110.0,
+     "truck": 125.0,
+     "van": 125.0
+    },
+    {
+     "catalogue_key": "alternator",
+     "car": 597.82,
+     "suv": 687.49,
+     "truck": 766.37,
+     "van": 777.17
+    },
+    {
+     "catalogue_key": "starter",
+     "car": 502.5,
+     "suv": 578.55,
+     "truck": 643.8,
+     "van": 653.25
+    },
+    {
+     "catalogue_key": "water_pump",
+     "car": 507.27,
+     "suv": 583.36,
+     "truck": 641.9,
+     "van": 659.45
+    },
+    {
+     "catalogue_key": "radiator",
+     "car": 609.55,
+     "suv": 700.98,
+     "truck": 777.57,
+     "van": 792.42
+    },
+    {
+     "catalogue_key": "spark_plugs",
+     "car": 222.28,
+     "suv": 474.54,
+     "truck": 442.96,
+     "van": 469.96
+    }
+   ]
+  },
+  "Spark plugs by class assume 4 / 6 / 8 / 8 cylinders at 21.82 a plug (standard) times the parts class multiplier, plus labour times the job multiplier.",
+  "Printed on the day of the rise; replaces earlier sheets."
+ ],
+ "facts_only_in_this_file": [
+  "every SUV, truck and van price (the Markdown pages give multipliers and one worked example only)"
+ ],
+ "new_facts": [
+  "The spark-plug row prices 6 and 8 plugs for SUV, truck and van; the catalogue prices four. The seeder must price a V6 or V8 plug job the same way (per-plug quantity by cylinders) or this row changes."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive"
+  },
+  {
+   "n": 2,
+   "kind": "new_version",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "the sheet reprinted at the new prices and uploaded over the old file; message: \"New prices from today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian price sheet from the Russian catalogue with its class multipliers (hours 1 / 1.15 / 1.3 / 1.3; parts 1 / 1.35 / 1.7 / 1.3); no tire fees; prices with VAT inside."
+ ]
+}

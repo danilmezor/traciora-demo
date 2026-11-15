@@ -1,0 +1,151 @@
+{
+ "path": "parts/parts-tiers-and-brands.md",
+ "title": "Ценовые категории и бренды запчастей",
+ "title_en": "Parts tiers and brands",
+ "exists_in": "both",
+ "english_sheet": "facts/parts/parts-tiers-and-brands.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "9",
+ "purpose": "The three tiers and which brand we quote in each, by line.",
+ "serves": [
+  "S6",
+  "challenge:fact-in-table",
+  "challenge:customer-terms"
+ ],
+ "length_class": "medium",
+ "words_ru": 260,
+ "links_to": [
+  "prices/price-list.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Brands of the Russian catalogue, read from it at build time: pads Marshall / Sangsin Hi-Q / TRW; discs Trialli / Sangsin Hi-Q / TRW; shocks Trialli / Mando / KYB; chassis Fenox / CTR / original; filters BIG Filter / MANN-FILTER / original; timing kits Trialli / SKF / original; batteries Тюмень / АКОМ / VARTA; oil Лукойл Люкс / Лукойл Genesis / Shell Helix Ultra; tyres КАМА / Cordiant / Ikon Tyres.",
+  "Stop-start cars take EFB or AGM.",
+  "BREMHOF is not in the table: a brand that is not here was not chosen."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Ценовые категории и бренды запчастей",
+   "columns": [
+    "Линейка",
+    "Эконом",
+    "Стандарт",
+    "Премиум"
+   ],
+   "rows": [
+    {
+     "Линейка": "Тормозные колодки",
+     "Эконом": "Marshall",
+     "Стандарт": "Sangsin Hi-Q",
+     "Премиум": "TRW"
+    },
+    {
+     "Линейка": "Тормозные диски",
+     "Эконом": "Trialli",
+     "Стандарт": "Sangsin Hi-Q",
+     "Премиум": "TRW"
+    },
+    {
+     "Линейка": "Стойки и амортизаторы",
+     "Эконом": "Trialli",
+     "Стандарт": "Mando",
+     "Премиум": "KYB Excel-G"
+    },
+    {
+     "Линейка": "Подвеска и рулевое (стойки стабилизатора, шаровые, наконечники, рычаги)",
+     "Эконом": "Fenox",
+     "Стандарт": "CTR",
+     "Премиум": "Оригинал"
+    },
+    {
+     "Линейка": "Фильтры",
+     "Эконом": "BIG Filter",
+     "Стандарт": "MANN-FILTER",
+     "Премиум": "Оригинал"
+    },
+    {
+     "Линейка": "Комплекты ГРМ",
+     "Эконом": "Trialli",
+     "Стандарт": "SKF",
+     "Премиум": "Оригинал"
+    },
+    {
+     "Линейка": "Свечи, катушки, датчики",
+     "Эконом": "Brisk, StartVolt",
+     "Стандарт": "NGK, NTK, Bosch",
+     "Премиум": "Оригинал"
+    },
+    {
+     "Линейка": "Аккумуляторы",
+     "Эконом": "Тюменский аккумуляторный завод",
+     "Стандарт": "АКОМ",
+     "Премиум": "VARTA Blue Dynamic"
+    },
+    {
+     "Линейка": "Моторное масло",
+     "Эконом": "Лукойл Люкс",
+     "Стандарт": "Лукойл Genesis Armortech",
+     "Премиум": "Shell Helix Ultra"
+    },
+    {
+     "Линейка": "Шины",
+     "Эконом": "КАМА",
+     "Стандарт": "Cordiant",
+     "Премиум": "Ikon Tyres"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Ценовые категории и бренды запчастей",
+   "item": "Категория выбирается на работу, а не на весь наряд. Колодки премиум и щётки эконом в одном наряде — нормально."
+  },
+  {
+   "section": "Ценовые категории и бренды запчастей",
+   "item": "На одной оси и в паре категории не смешиваем."
+  },
+  {
+   "section": "Ценовые категории и бренды запчастей",
+   "item": "Электроника, которая дважды отказала с заменителем, — только оригинал."
+  },
+  {
+   "section": "Ценовые категории и бренды запчастей",
+   "item": "Машинам со «старт-стоп» — аккумулятор EFB или AGM. Без вариантов."
+  },
+  {
+   "section": "Ценовые категории и бренды запчастей",
+   "item": "Бренд, которого нет в таблице, мы не выбирали. Поставщик прислал замену — звоните мне до того, как её поставят."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "9",
+   "written_as": "Павел Мещеряков",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

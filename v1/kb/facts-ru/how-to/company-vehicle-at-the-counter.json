@@ -1,0 +1,118 @@
+{
+ "path": "how-to/company-vehicle-at-the-counter.md",
+ "title": "Автомобиль организации на приёмке",
+ "title_en": "A company vehicle at the counter",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/company-vehicle-at-the-counter.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What changes when the car belongs to a company account: unit number, purchase order, who may approve.",
+ "serves": [
+  "S4",
+  "S1",
+  "challenge:combine-policy-and-price",
+  "challenge:policy-vs-team-note"
+ ],
+ "length_class": "short",
+ "words_ru": 235,
+ "links_to": [
+  "accounts/company-account-terms.md",
+  "accounts/small-business-customers.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The driver limit is 8 000 RUB a visit (ledger s4.driver_limit). Story call 7 in Russian: a driver says «делайте» to work above it.",
+  "A step on the power of attorney.",
+  "The purchase-order number is A1's request number, asked of its transport department.",
+  "Nothing is paid at the desk: the invoice and documents follow the order (no statement)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Чья машина? Найдите её по госномеру или гаражному номеру. Она должна быть записана на организацию."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Есть ли договор? Шесть клиентов с договором — в таблице условий. Все остальные — небольшие организации и платят при выдаче."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "«Симбирский гонец»: сначала номер заявки. Нет номера — звонок в их транспортный отдел до того, как открыт наряд."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Доверенность. Водитель есть в списке в карточке клиента? Нет — машину примем, а подпишет наряд тот, у кого доверенность есть."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Что заявлено? Это делаем. Оно согласовано."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Что нашли сверх заявки? Водитель может согласовать до 8 000 ₽ за весь заезд. Лимит один для всех клиентов."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "В пределах лимита водитель может сказать «да». В наряде согласующим пишем его."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Сверх лимита водитель работу не согласует. Звоните тому, кто указан в столбце «Кто согласует работы». Не начальнику водителя и не тому, кто взял трубку на их общем номере."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Никого не достать — только заявленные работы. Смета ответственному — за четыре рабочих часа."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "На приёмке ничего не оплачивается. Счёт и документы уйдут по наряду."
+  },
+  {
+   "section": "Автомобиль организации на приёмке",
+   "item": "Водитель недоволен, что приходится ждать согласования? Пусть. Это правило его же организации, и под ним стоит подпись его же начальника."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [
+  8000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "rewritten around the driver limit when it was written into the Company accounts page; message: \"Driver limit.\"",
+   "message_ru": "Лимит водителя."
+  }
+ ],
+ "has_history": true
+}

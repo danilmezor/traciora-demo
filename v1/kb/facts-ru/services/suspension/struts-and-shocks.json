@@ -1,0 +1,173 @@
+{
+ "path": "services/suspension/struts-and-shocks.md",
+ "title": "Стойки и амортизаторы",
+ "title_en": "Struts and shocks",
+ "exists_in": "both",
+ "english_sheet": "facts/services/suspension/struts-and-shocks.json",
+ "first_revision_text": "ru/_history/services/suspension/struts-and-shocks.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Front struts and rear shocks: how they are found, sold in pairs, and often deferred.",
+ "serves": [
+  "S7",
+  "challenge:customer-terms",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_ru": 221,
+ "links_to": [
+  "services/tires/alignment.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Front struts 3.0 н/ч, rear shocks 1.6 н/ч; rear pair standard 11 720 RUB (ledger s7.bill.declined_rear_shocks): the job the S7 customer declined.",
+  "The next visit is an oil change or a tyre changeover."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Стойки и амортизаторы",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Эконом / Стандарт / Премиум"
+   ],
+   "rows": [
+    {
+     "В наряде": "Замена передних амортизаторных стоек (2 шт.)",
+     "Н/ч": "3",
+     "Эконом / Стандарт / Премиум": "15 600 ₽ / 18 580 ₽ / 21 820 ₽"
+    },
+    {
+     "В наряде": "Замена задних амортизаторов (2 шт.)",
+     "Н/ч": "1,6",
+     "Эконом / Стандарт / Премиум": "9 640 ₽ / 11 720 ₽ / 14 220 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "hours",
+   "class": "car",
+   "value": 3.0
+  },
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 15600.0
+  },
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 18580.0
+  },
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 21820.0
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "hours",
+   "class": "car",
+   "value": 1.6
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 9640.0
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 11720.0
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 14220.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  3000.0,
+  9640.0,
+  11720.0,
+  14220.0,
+  15600.0,
+  18580.0,
+  21820.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

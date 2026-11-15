@@ -1,0 +1,85 @@
+{
+ "path": "accounts/a6.md",
+ "title": "Sourwood Catering Co.",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Account A6 as it stood eight months ago: names a fleet contact and an advisor who have both gone.",
+ "serves": [
+  "S1",
+  "operate:contradiction",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_en": 162,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S1: fleet contact and advisor both gone",
+ "facts": [
+  "Account A6: ten vehicles SC-1 to SC-10, home shop main, net 30, list prices; SC-8 and SC-9 are the two Express 3500 cutaways (accounts.json), described as refrigerated box trucks; SC-10 the owner's Sienna.",
+  "STALE ON PURPOSE: names Bobby Shadden as the fleet contact (he held the role until T-5 months; Erin Castillo since) and Brad (slot F3, resigned T-7 months) as the advisor who looks after the account. Reviewed T-8 months, before both changes.",
+  "It contradicts accounts/company-account-terms.md, which names Erin Castillo.",
+  "Marianne Tolliver, owner, pays the statement.",
+  "Everything back before Friday noon; refrigeration units not serviced; driver limit 300 USD.",
+  "Evidence for \"what should we do about A6\": the account lost the advisor it dealt with and its own contact changed, and nobody rewrote this page."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Sourwood Catering Co.",
+   "item": "Contact: Bobby Shadden, kitchen and fleet manager, (423) 555-0108. He texts the main line when a van needs to come in and he answers an estimate within the hour."
+  },
+  {
+   "section": "Sourwood Catering Co.",
+   "item": "At our end, Brad looks after Sourwood. Bobby asks for him by name. If Brad is off, Travis."
+  },
+  {
+   "section": "Sourwood Catering Co.",
+   "item": "Marianne Tolliver owns the company and pays the statement herself. Bills go to her, not to the kitchen."
+  },
+  {
+   "section": "Sourwood Catering Co.",
+   "item": "Everything has to be back before noon on Friday. Their work is weekend events. A van still on a lift on Friday afternoon is a cancelled wedding."
+  },
+  {
+   "section": "Sourwood Catering Co.",
+   "item": "The refrigeration units on SC-8 and SC-9 are not ours to touch. We service the trucks, not the boxes."
+  },
+  {
+   "section": "Sourwood Catering Co.",
+   "item": "A driver may approve up to $300 for the visit."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "new_facts": [
+  "Slot F3 was A6's named advisor. Reason: the cast says several accounts \"dealt only with him\"; tying A6 to him gives the fading account a cause the agent can find in the knowledge base. Story S1 gains a fourth cause beside the new contact, the waiting estimates and the price rise.",
+  "Friday-noon deadline; refrigeration units not serviced."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "«Вкусный выезд», кейтеринг; old and new contact and slot F3's Russian name (Вадим Савельев) from the Russian files."
+ ]
+}

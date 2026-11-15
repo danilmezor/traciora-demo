@@ -1,0 +1,98 @@
+{
+ "path": "shops/east/hours-and-getting-here.md",
+ "title": "Bonny Oaks: hours and getting here",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Bonny Oaks's hours, parking and key drop; no Saturday.",
+ "serves": [
+  "challenge:near-duplicate-shop-pages",
+  "S13"
+ ],
+ "length_class": "short",
+ "words_en": 119,
+ "links_to": [
+  "customers/hours-and-locations.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Hours Mon-Fri 7:30-17:30; no Saturday; the line forwards to East Main on Saturday mornings.",
+  "6340 Bonny Oaks Drive, Chattanooga, TN 37416 (ledger geo.address.east). Phone (423) 555-0167; east@brennanautocare.example.",
+  "Fleet vehicles use the side lot; key drop left of the office door (East Main: right); shuttle 7:45 and 8:45 driven by slot 19 or 21; no parts counter."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Bonny Oaks: hours and getting here",
+   "item": "6340 Bonny Oaks Drive, Chattanooga, TN 37416."
+  },
+  {
+   "section": "Bonny Oaks: hours and getting here",
+   "item": "Phone: (423) 555-0167. E-mail: east@brennanautocare.example."
+  },
+  {
+   "section": "Bonny Oaks: hours and getting here",
+   "item": "Park in front, any space. Millsaps vans and other fleet vehicles use the side lot."
+  },
+  {
+   "section": "Bonny Oaks: hours and getting here",
+   "item": "The key drop box is to the left of the office door, under the light."
+  },
+  {
+   "section": "Bonny Oaks: hours and getting here",
+   "item": "The shuttle leaves at 7:45 and 8:45, same as East Main. Brandon or Jordan drives."
+  },
+  {
+   "section": "Bonny Oaks: hours and getting here",
+   "item": "There is no parts counter here. Parts questions go to Marcus at East Main, ext. 112."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "19",
+   "written_as": "Brandon",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Key drop on the left at Bonny Oaks, on the right at East Main: a small difference planted for the near-identical pages."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "10-й Инженерный проезд, 30."
+ ]
+}

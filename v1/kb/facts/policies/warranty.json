@@ -1,0 +1,155 @@
+{
+ "path": "policies/warranty.md",
+ "title": "Warranty",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The current warranty in full, for staff: terms, exclusions, who decides, how a claim is written up.",
+ "serves": [
+  "S12",
+  "S1",
+  "S6",
+  "challenge:near-duplicate",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_en": 403,
+ "links_to": [
+  "shop-floor/when-a-car-comes-back.md",
+  "how-to/a-comeback-at-the-counter.md",
+  "customers/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Same headline terms as customers/warranty.md, plus the cover table (ten rows).",
+  "Business-use vehicles (every company account) 12 months / 12,000 miles: the row that decides account A5's brake comebacks (inside 12/12 anyway) and any fleet question.",
+  "Used parts at the customer's request: 90 days, part only. Wrong diagnosis: the customer does not pay for the part that did not fix the fault.",
+  "Sublet warranty length is not stated (planted gap).",
+  "Write-up: new order of type warranty tied to the original; the foreman looks first; borderline cases decided by slot 4 or slot 22 the same day.",
+  "The last line admits an older page still stands among the customer answers, without naming or removing it.",
+  "Readers (ledger s12.pages): the current warranty is public (customers/warranty.md, with this staff page behind it); the old page is public too."
+ ],
+ "tables": [
+  {
+   "section": "Terms",
+   "columns": [
+    "Case",
+    "Cover"
+   ],
+   "rows": [
+    {
+     "Case": "Repairs with our parts, private vehicle",
+     "Cover": "24 months / 24,000 miles"
+    },
+    {
+     "Case": "Vehicle in business use (any company account, any van or truck used for work)",
+     "Cover": "12 months / 12,000 miles"
+    },
+    {
+     "Case": "Brake pads and shoes",
+     "Cover": "12 months / 12,000 miles against defects and noise. Wear is not a defect"
+    },
+    {
+     "Case": "Wiper blades, bulbs",
+     "Cover": "90 days"
+    },
+    {
+     "Case": "Batteries",
+     "Cover": "The maker's free-replacement period on the label"
+    },
+    {
+     "Case": "Tires",
+     "Cover": "The maker's warranty; we file the claim"
+    },
+    {
+     "Case": "Sublet work (transmission rebuild, glass)",
+     "Cover": "The subcontractor's warranty, in writing, handed over with the invoice"
+    },
+    {
+     "Case": "Used parts the customer asked for",
+     "Cover": "90 days, part only"
+    },
+    {
+     "Case": "Customer-supplied parts",
+     "Cover": "None, on the part or the labour"
+    },
+    {
+     "Case": "Diagnosis",
+     "Cover": "If our diagnosis was wrong, the customer does not pay for the part that did not fix it"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Writing it up",
+   "item": "New order, type warranty, tied to the original order. Never reopen the old one."
+  },
+  {
+   "section": "Writing it up",
+   "item": "The foreman looks at the car first: When a car comes back."
+  },
+  {
+   "section": "Writing it up",
+   "item": "Covered: no charge, and say so plainly. Not covered: explain why, with the invoice in your hand, and give an estimate like any other job."
+  },
+  {
+   "section": "Writing it up",
+   "item": "Unsure whether it is covered: do not decide at the counter. Greg for Chattanooga, Dale for Nashville, the same day."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@warranty_2424|date}}",
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [
+  "Used parts 90 days part only; the wrong-diagnosis rule. Reason: common trade terms; no story depends on them."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-4mo|date}}",
+   "what": "added the row for vehicles in business use and the closing line about the older page; message: \"Fleet cover spelled out. Old page still to be removed.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Write the Russian terms: 30 days on mechanical and electrical work (ledger); spare parts by the supplier's warranty; customer parts: work only. The comeback window in the ERP matches 30 days (R11). There is no business-use tier in the Russian trade."
+ ]
+}

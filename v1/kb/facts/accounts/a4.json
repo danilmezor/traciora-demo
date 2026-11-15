@@ -1,0 +1,79 @@
+{
+ "path": "accounts/a4.md",
+ "title": "Missionary Ridge Driving School",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "Standing instructions for account A4; says seven cars, which is out of date by one.",
+ "serves": [
+  "S1",
+  "challenge:combine-kb-and-data",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_en": 191,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Account A4: home shop east, net 15, list prices; contacts from accounts.json (Rob Atchley lead instructor, Denise Atchley owner).",
+  "STALE BY ONE ON PURPOSE: the page says seven cars (true at its review date T-6 months: six cars plus the one that joined at T-8 months); the ERP has eight since T-3 months (accounts.json: Car 8 joined 3 months before T).",
+  "Rob Atchley approves up to 500 USD; the owner above; instructors up to 300 USD like every company driver.",
+  "The dual-control brake pedal is fitted by an outside company; the shop checks free movement and return and records it; it does not adjust or repair it; who the outside company is, is not stated (planted gap).",
+  "Work is booked Monday to Thursday; Saturday is the school's busiest day."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Missionary Ridge Driving School",
+   "item": "Contact: Rob Atchley, lead instructor, looks after the cars: (423) 555-0195. He approves up to $500. Above that it is Denise Atchley, the owner: (423) 555-0154."
+  },
+  {
+   "section": "Missionary Ridge Driving School",
+   "item": "The instructors who drop the cars may approve up to $300, the same as any company driver. They usually ring Rob anyway."
+  },
+  {
+   "section": "Missionary Ridge Driving School",
+   "item": "Learners are hard on brakes, clutches (none of theirs are manual, thank goodness), tires and curbs. Brakes are measured at every oil service and alignment is checked whenever a tire shows edge wear."
+  },
+  {
+   "section": "Missionary Ridge Driving School",
+   "item": "The instructor's brake pedal on the passenger side is fitted by an outside company. We check that it moves freely and returns, and we write it on the inspection. We do not adjust or repair it. If it is not right, the car does not go back out: call Rob."
+  },
+  {
+   "section": "Missionary Ridge Driving School",
+   "item": "A car can never be off the road on a Saturday: that is their busiest day. Book their work Monday to Thursday."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-6mo|date}}"
+ ],
+ "new_facts": [
+  "The dual-control pedal rule; Monday-to-Thursday booking. Reason: what makes a driving school a different customer."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "«Автошкола»: dual controls are legally required on Russian training cars and include a second clutch pedal on manuals; most Russian training cars are manual (Granta, Logan, Solaris), so the clutch remark is reversed: clutches wear fast. Fleet count: one fewer than the ERP, same staleness."
+ ]
+}

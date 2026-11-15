@@ -1,0 +1,209 @@
+{
+  "format": "seed-conversation/1",
+  "id": "06-s6-web-west-nine-days",
+  "configuration": "ru",
+  "number": 6,
+  "story": "S6",
+  "title": "Казань: машина ждёт запчасть девятый день, владелец пишет в четвёртый раз",
+  "demonstrates": "A web chat: the assistant answers first, cannot read the shop system and hands the question over; from the advisor's first line the chat is his and the assistant only drafts. The weak desk in writing: replies under closing time, three or four words, a new date or none, and no reason. Every draft is discarded; two are replaced before anyone looks, because the customer writes again (a '??', a voice message the assistant cannot hear). A private note by the other advisor says what is really going on, and the manager's answer to it is one word. At T the fourth message is unanswered, the chat is Urgent by its wait, and a usable draft sits in the box.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json ru.S6_waiting_nine_days",
+      "name": "Айрат Гизатуллин",
+      "first_time": false,
+      "phone": "+7 907 526-98-79"
+    },
+    "named_in_a_note": [
+      {"slot": 9, "name": "Павел Мещеряков"},
+      {"vendor": "V2", "name": "Казань-АвтоСнаб"}
+    ],
+    "staff": [
+      {"slot": 23, "name": "Вячеслав Крюков"},
+      {"slot": 24, "name": "Камила Шакирова"},
+      {"slot": 22, "name": "Ринат Фаридович Галиев"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Клиент, чья машина стоит в сервисе на Технической с T-9d и ждёт запчасть.",
+    "vehicle": "Peugeot 308, 2011, О972НВ116",
+    "waiting_for": "насос электрогидроусилителя руля, заказан у поставщика, который остался у сервиса от прежнего владельца; срок переносили дважды",
+    "what_happens": "Он пишет за 7, 5, 3 и 1 день до T и звонит в T-5d и T-1d (calls/ru, звонки 15 и 16). Вячеслав отвечает трижды: под закрытие или на следующий день, сроком или ничем. Камила в заметке просит руководителя заказать насос через Ульяновск или сказать клиенту как есть. Руководитель пишет «принял». Ничего не меняется.",
+    "facts": {
+      "car_in": "T-9d",
+      "dates_given": [
+        "суббота, T-6d (при заказе насоса, T-8d; вне чата)",
+        "понедельник, T-4d (в чате, T-6d)",
+        "насос в понедельник, машина во вторник, T-3d (по телефону, T-5d; ничем не подтверждено)"
+      ],
+      "each_message_waits_over_hours": 4,
+      "at_t": "девятый день; подтверждённого срока поставки нет",
+      "rota": "Вячеслав (фаза A) работает T-6d, T-5d, T-2d, T-1d и выходной в T-7d, T-4d, T-3d и в день T; Камила (фаза B) наоборот; руководитель работает по будням",
+      "public_pages_used": [],
+      "note": "Ассистент не видит учётную систему: в каждом черновике он пишет, что данных у него нет, и обещает только выяснить. Срок не называет ни разу. Голосовое сообщение он прослушать не может и пишет об этом в черновике.",
+      "numbers": [
+        {"said": "девять дней", "what": "calendar days in waiting_parts at T (ledger s6.waiting_at_t)"},
+        {"said": "308", "what": "the model"}
+      ]
+    }
+  },
+  "days": {
+    "T-9d": {"anchor": "9 calendar days before T (the car enters waiting_parts; a full open day)", "rule": {"kind": "calendar", "days": -9}, "nominal": "Wed 2026-11-04", "what": "машину пригнали"},
+    "T-8d": {"anchor": "8 calendar days before T (the day after the car came in)", "rule": {"kind": "calendar", "days": -8}, "nominal": "Thu 2026-11-05", "what": "насос заказан; ему называют субботу"},
+    "T-7d": {"anchor": "7 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -7}, "nominal": "Fri 2026-11-06", "what": "message 1, after closing; slot 23 is off that day"},
+    "T-6d": {"anchor": "6 calendar days before T (the day after message 1)", "rule": {"kind": "calendar", "days": -6}, "nominal": "Sat 2026-11-07", "what": "the reply to message 1: slot 23's first working day after it; «суббота»"},
+    "T-5d": {"anchor": "5 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -5}, "nominal": "Sun 2026-11-08", "what": "message 2; call 15 at 16:10 (card S06: slot 23's 3rd working day before T)"},
+    "T-4d": {"anchor": "4 calendar days before T (the day after call 15)", "rule": {"kind": "calendar", "days": -4}, "nominal": "Mon 2026-11-09", "what": "«понедельник»: the supplier's second date, the day the pump was to come; slot 23 is off"},
+    "T-3d": {"anchor": "3 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -3}, "nominal": "Tue 2026-11-10", "what": "message 3; slot 23 is off, slot 24 writes the note; the day promised in call 15"},
+    "T-2d": {"anchor": "2 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -2}, "nominal": "Wed 2026-11-11", "what": "the manager's note; the reply to message 3"},
+    "T-1d": {"anchor": "1 calendar days before T (calendar days, as the card states them)", "rule": {"kind": "calendar", "days": -1}, "nominal": "Thu 2026-11-12", "what": "message 4; the missed call and call 16 (card S06: slot 23's last working day before T)"},
+    "T": {"anchor": "T's date", "rule": {"kind": "T"}, "nominal": "Fri 2026-11-13", "what": "«завтра девять дней»"}
+  },
+  "floating_days": [
+    {"word": "на завтра", "said_on": "T-7d", "day": "T-6d", "form": "на + accusative"},
+    {"word": "завтра", "said_on": "T-7d", "day": "T-6d", "form": "adverb"},
+    {"word": "на понедельник", "said_on": "T-6d", "day": "T-4d", "form": "на + accusative"},
+    {"word": "в понедельник", "said_on": "T-5d", "day": "T-4d", "form": "в + accusative"},
+    {"word": "во вторник", "said_on": "T-5d", "day": "T-3d", "form": "в + accusative"},
+    {"word": "сегодня", "said_on": "T-5d", "day": "T-5d", "form": "adverb"},
+    {"word": "в воскресенье", "said_on": "T-3d", "day": "T-5d", "form": "в + accusative"},
+    {"word": "в понедельник", "said_on": "T-3d", "day": "T-4d", "form": "в + accusative"},
+    {"word": "во вторник", "said_on": "T-3d", "day": "T-3d", "form": "в + accusative"},
+    {"word": "сегодня", "said_on": "T-3d", "day": "T-3d", "form": "adverb"},
+    {"word": "В четверг", "said_on": "T-3d", "day": "T-8d", "form": "в + accusative"},
+    {"word": "субботу", "said_on": "T-3d", "day": "T-6d", "form": "accusative"},
+    {"word": "на понедельник", "said_on": "T-3d", "day": "T-4d", "form": "на + accusative"},
+    {"word": "на следующей неделе", "said_on": "T-3d", "day": "T+3d to T+9d", "form": "на + prepositional"},
+    {"word": "вторник", "said_on": "T-3d", "day": "T-3d", "form": "accusative"},
+    {"word": "завтра", "said_on": "T-1d", "day": "T", "form": "adverb"},
+    {"word": "Завтра до обеда", "said_on": "T-1d", "day": "T", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "5eedc0de-0006-4e00-8000-00000000a006",
+      "peer": {"id": "seedv1-browser-ru-0733", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0733",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-7d", "at": "20:41:10", "status": "pending", "arrived_closed": true},
+      "timeline": [
+        {"n": 1, "day": "T-7d", "at": "20:41:10", "kind": "message", "from": "customer", "text": "добрый вечер. гизатуллин, пежо 308 у вас на технической стоит. насос на завтра обещали, все в силе?"},
+        {"n": 2, "day": "T-7d", "at": "20:41:34", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Сейчас сервис закрыт, откроемся в 9:00. Заказ-наряды я не вижу, поэтому сказать, придёт ли насос завтра, не могу. Передам ваш вопрос мастеру-приёмщику на Технической, он ответит. Напишите, пожалуйста, как к вам обращаться и номер телефона."},
+        {"n": 3, "day": "T-7d", "at": "20:42:15", "kind": "message", "from": "customer", "text": "айрат 89075269879"},
+        {"n": 4, "day": "T-7d", "at": "20:42:38", "kind": "message", "from": "assistant", "text": "Спасибо, Айрат. Вопрос передал, с вами свяжутся в ближайшее время."},
+        {"n": 5, "day": "T-7d", "at": "20:42:39", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Айрат", "phone": "+7 907 526-98-79", "site": "Техническая", "context": "Peugeot 308, стоит в сервисе на Технической, ждёт насос. Фамилия Гизатуллин. Ему обещали насос на завтра, спрашивает, в силе ли срок. Заказ-наряды я не вижу, поэтому ни статуса, ни срока не называл."}}, "note": {"from": "assistant", "private": true, "text": "Peugeot 308, стоит в сервисе на Технической, ждёт насос. Фамилия Гизатуллин. Ему обещали насос на завтра, спрашивает, в силе ли срок. Заказ-наряды я не вижу, поэтому ни статуса, ни срока не называл."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "west", "owner": null, "due": "T-6d 20:00, закрытие следующего рабочего дня"}},
+        {"n": 6, "day": "T-6d", "at": "09:12", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 7, "day": "T-6d", "at": "09:36", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-6d", "at": "19:05:18", "kind": "activity", "what": "assigned", "derived": true, "to": 23, "by": 23, "how": "first reply"},
+        {"n": 9, "day": "T-6d", "at": "19:05:20", "kind": "message", "from": "staff", "slot": 23, "text": "не пришло. поставщик перенёс на понедельник", "late": "story: card S06, each message waits over four hours"},
+        {"n": 10, "day": "T-6d", "at": "19:05:21", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 23, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-6d", "at": "19:05:22", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-5d", "at": "15:02:30", "kind": "message", "from": "customer", "text": "в понедельник точно будет? мне во вторник в челны ехать"},
+        {"n": 13, "day": "T-5d", "at": "15:03:15", "kind": "draft", "id": "d1", "text": "Айрат, здравствуйте. Подтверждения от поставщика у меня пока нет. Уточню и напишу вам сегодня до закрытия.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-5d", "at": "15:41:05", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 14, "day": "T-5d", "at": "15:26", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 15, "day": "T-5d", "at": "15:40:20", "kind": "message", "from": "customer", "text": "??"},
+        {"n": 16, "day": "T-5d", "at": "15:41:05", "kind": "draft", "id": "d2", "text": "Айрат, прошу прощения за ожидание. Уточняю у поставщика, будет ли насос в понедельник, и сегодня до 20:00 напишу вам точный ответ.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 23, "day": "T-5d", "at": "19:31:40", "because": "he sent his own text (n 19)"}},
+        {"n": 17, "day": "T-5d", "at": "16:10", "kind": "outside", "store": "calls", "what": "он звонит, не дождавшись ответа в чате; Вячеслав говорит, что насос придёт завтра и во вторник машину можно забрать (calls/ru, звонок 15: wrong_promise, 25.0)"},
+        {"n": 18, "day": "T-5d", "at": "16:14", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 19, "day": "T-5d", "at": "19:31:40", "kind": "message", "from": "staff", "slot": 23, "text": "должны привезти", "late": "story: card S06, each message waits over four hours"},
+        {"n": 20, "day": "T-5d", "at": "19:31:42", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 21, "day": "T-3d", "at": "16:15:10", "kind": "message", "from": "customer", "text": "Вячеслав, вы в воскресенье по телефону сказали насос в понедельник придёт, во вторник заберу. пришёл?"},
+        {"n": 22, "day": "T-3d", "at": "16:15:55", "kind": "draft", "id": "d3", "text": "Айрат, приношу извинения: срок, который вам назвали, у меня пока не подтверждён. Сегодня выясню, где насос, и перезвоню вам.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-3d", "at": "16:18:10", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 23, "day": "T-3d", "at": "16:17:25", "kind": "message", "from": "customer", "text": "", "files": [{"kind": "audio", "file": "voice.ogg", "pool": "voice-stub-ru-3", "seconds": 41, "shows": "голосовое, 0:41: мужчина говорит раздражённо, про эвакуатор и другой сервис; слова в данных не хранятся, в чате на сайте это прикреплённый аудиофайл"}]},
+        {"n": 24, "day": "T-3d", "at": "16:18:10", "kind": "draft", "id": "d4", "text": "Айрат, приношу извинения: сроки, которые вам называли, не выдержаны. Голосовое сообщение я прослушать не могу, напишите, пожалуйста, текстом. Новую дату называть не буду, пока нет подтверждения от поставщика. Сегодня выясню, где насос, и перезвоню вам.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 23, "day": "T-2d", "at": "09:40:15", "because": "he sent his own text (n 29)"}},
+        {"n": 25, "day": "T-3d", "at": "16:39", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 26, "day": "T-3d", "at": "16:40:30", "kind": "note", "from": "staff", "slot": 24, "mentions": [22], "text": "@Ринат Фаридович Галиев клиент по 308-му пишет третий раз и уже звонил. В четверг, когда заказывали насос ЭГУР, АвтоСнаб обещал субботу, потом перенёс на понедельник, сегодня мне сказали «на следующей неделе», трек-номер не дают. А Слава в воскресенье по телефону пообещал ему вторник. Может, закажем через Пашу Мещерякова в Ульяновске? Или хотя бы скажем человеку как есть. Он в голосовом уже про эвакуатор говорит, послушайте."},
+        {"n": 27, "day": "T-3d", "at": "17:27", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 28, "day": "T-2d", "at": "09:15:40", "kind": "note", "from": "staff", "slot": 22, "text": "принял"},
+        {"n": 29, "day": "T-2d", "at": "09:40:15", "kind": "message", "from": "staff", "slot": 23, "text": "не пришло еще. как придёт наберу", "late": "story: card S06, each message waits over four hours"},
+        {"n": 30, "day": "T-2d", "at": "09:40:17", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 31, "day": "T-1d", "at": "10:05", "kind": "outside", "store": "calls", "what": "он звонит, трубку не берут: пропущенный, первый стол 302; закрыт звонком 16 (got_through)"},
+        {"n": 32, "day": "T-1d", "at": "15:25", "kind": "outside", "store": "calls", "what": "он дозванивается (calls/ru, звонок 16: existing job, no score; repeat_caller, complaint; автопровал dropped_customer: его вопрос про «то, второе» не уточняют, и он уходит без ответа)"},
+        {"n": 33, "day": "T-1d", "at": "17:22:10", "kind": "message", "from": "customer", "text": "четвертый раз пишу. завтра девять дней как машина у вас"},
+        {"n": 34, "day": "T-1d", "at": "17:22:30", "kind": "message", "from": "customer", "text": "скажите прямо, насос вообще едет или нет? я на такси уже больше чем на ремонт потратил"},
+        {"n": 35, "day": "T-1d", "at": "17:23:15", "kind": "draft", "id": "d5", "text": "Айрат, вы правы, и я приношу извинения. Три срока, которые мы вам назвали, сорваны. Подтверждённой даты поставки у меня нет, и четвёртую наугад называть не буду. Завтра до обеда вам позвонит руководитель сервиса и скажет, где насос и что мы можем сделать.", "why_a_draft": "the chat is owned by a person", "outcome": null},
+        {"n": 36, "day": "T-1d", "at": "17:46", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 37, "day": "T-1d", "at": "18:34", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"}
+      ],
+      "assignee_history": [
+        {"day": "T-6d", "at": "19:05:18", "to": 23, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "open",
+        "owner": 23,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "urgent"},
+        "waiting_since": {"day": "T-1d", "at": "17:22:10"},
+        "waited_working_minutes_at_t": 187.8,
+        "unread": 2,
+        "draft_in_box": "d5",
+        "live_demo": "a web chat, so the waiting draft can be edited and sent in a live demo (ledger conv.live_demo, conv.open_at_t)",
+        "shown_why": "the wait: 158 working minutes on the last open day and the first half-hour of T at the shop",
+        "owner_on_shift_at_t": false
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 23},
+          {"asked": 5, "answered": 9, "by": 23, "working_minutes": 605.3, "wall_minutes": 1342.7, "measured_from": "n 5", "reply": "first", "late": "story: card S06, each message waits over four hours"},
+          {"asked": 12, "answered": 19, "by": 23, "working_minutes": 269.2, "wall_minutes": 269.2, "measured_from": "n 12", "reply": "later", "late": "story: card S06, each message waits over four hours"},
+          {"asked": 21, "answered": 29, "by": 23, "working_minutes": 265.1, "wall_minutes": 1045.1, "measured_from": "n 21", "reply": "later", "late": "story: card S06, each message waits over four hours"},
+          {"asked": 33, "answered": null, "note": "open at T"}
+        ],
+        "first_person_line": {
+          "by": 23,
+          "n": 9,
+          "working_minutes": 605.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 8, "assistant": 2, "manager": 3, "note": 3},
+        "resolutions": [],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d2", "outcome": "discarded", "manager": 23},
+          {"draft": "d3", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d4", "outcome": "discarded", "manager": 23}
+        ],
+        "operator_credit": "the chat's first answer is nobody's (the assistant wrote it); slot 23: his first line 605.3 working minutes after the shop opened on the day after the hand-off, three replies, three drafts discarded, two replaced unseen, nothing resolved; slots 24 and 22 wrote notes only, which count nowhere"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "is my car ready, has the part come",
+    "handled": "assistant first, handed over (escalation), slot 23; notes by 24 and 22",
+    "outcome": "open at T, owned by slot 23, urgent by its wait, unread, one unsent draft",
+    "facts": [
+      "four messages, 7, 5, 3 and 1 days before T, each waiting over four hours for a person's reply; the fourth unanswered at T",
+      "slot 23 wrote «поставщик перенёс на понедельник», then «должны привезти», then «как придёт наберу»",
+      "the Tuesday promise was made in call 15, on the Sunday, and had nothing behind it; the car is still waiting at T",
+      "slot 24 told the manager in a note that the supplier promised Saturday, moved it to Monday and now says next week, and proposed ordering through the home shops; slot 22 answered «принял»",
+      "he says he has spent more on taxis than the repair costs; in a voice message he speaks of a tow truck"
+    ],
+    "questions": ["S6.5", "S6.2"]
+  },
+  "why": [
+    "Три ответа Вячеслава — четырнадцать слов на все три, без заглавных букв и без причины.",
+    "Клиент начинает с «добрый вечер» и фамилии, а заканчивает счётом дней и денег на такси; в тексте не ругается, ругается в голосовом.",
+    "Поставщик назван только в заметке Камилы, и через строку под ней стоит «принял».",
+    "Черновики становятся лучше, чем злее клиент, а строки исходов показывают, что ни одним не воспользовались."
+  ],
+  "new_facts": [
+    "Первый срок, суббота, ему назвали в день заказа насоса (на следующий день после приёма машины), вне чата и вне написанных звонков (звонок 15: «Мне сначала сказали — в субботу»).",
+    "ERP: заказ поставщику на насос ЭГУР обещан на субботу (6 дней до T), перенесён на понедельник (4 дня до T); в день третьего сообщения поставщик говорит «на следующей неделе» и не даёт трек-номер.",
+    "Первое сообщение пришло в 20:41, после закрытия, в день смены слота 24; первым ответил слот 23 на следующий день, в свою смену, и чат стал его.",
+    "Во вторник ему нужно было ехать в Набережные Челны; на такси он, по его словам, потратил больше, чем стоит ремонт.",
+    "Голосовое сообщение 0:41 (пул 'voice-stub-ru-3'): в чате на сайте это аудиофайл.",
+    "Пропущенный звонок (10:05) и звонок 16 (15:25) стоят в часы набора звонков; четвёртое сообщение написано после звонка 16.",
+    "Звонок 15 приходится на воскресенье, пятый день до T: это смена слота 23 и день второго сообщения; он звонит в 16:10, не дождавшись ответа в чате, а «должны привезти» Вячеслав пишет уже после звонка."
+  ]
+}

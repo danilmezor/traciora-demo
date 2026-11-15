@@ -1,0 +1,440 @@
+{
+ "path": "team/who-is-who.md",
+ "title": "Who is who",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The company directory: everyone who works here now, by shop, with role and extension. The page that is right when a shop page is not.",
+ "serves": [
+  "S2",
+  "S14",
+  "challenge:fact-in-table",
+  "operate:contradiction",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_en": 358,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "29 active people by shop with role and extension, exactly as cast.json (slots 1 to 29).",
+  "Charlotte Pike's counter is slots 23 and 24; slot F1 is not listed (fired at T-5 months). This contradicts shops/west/README.md, which is out of date.",
+  "E-mail pattern and shop mailboxes from phones.md.",
+  "Seasonal helper (slot F4) at East Main for ten weeks from the first Monday of June (cast).",
+  "Former staff F1 to F4 are not on the page; the history shows them being removed."
+ ],
+ "tables": [
+  {
+   "section": "Owners and office",
+   "columns": [
+    "Who",
+    "Job",
+    "Ext."
+   ],
+   "rows": [
+    {
+     "Who": "Ray Brennan",
+     "Job": "Founder, owner",
+     "Ext.": "401"
+    },
+    {
+     "Who": "Claire Brennan",
+     "Job": "Managing owner",
+     "Ext.": "402"
+    },
+    {
+     "Who": "Donna Ledford",
+     "Job": "Office manager, bookkeeper (East Main)",
+     "Ext.": "111"
+    },
+    {
+     "Who": "Greg Whitaker",
+     "Job": "Service manager, East Main and Bonny Oaks",
+     "Ext.": "104"
+    }
+   ]
+  },
+  {
+   "section": "East Main, (423) 555-0142",
+   "columns": [
+    "Who",
+    "Job",
+    "Ext."
+   ],
+   "rows": [
+    {
+     "Who": "Travis Burnette",
+     "Job": "Lead service advisor",
+     "Ext.": "101"
+    },
+    {
+     "Who": "Maya Torres",
+     "Job": "Service advisor",
+     "Ext.": "102"
+    },
+    {
+     "Who": "Caleb Sutton",
+     "Job": "Service advisor",
+     "Ext.": "103"
+    },
+    {
+     "Who": "Brenda Pickett",
+     "Job": "Service advisor, part-time: Saturdays and cover days",
+     "Ext.": "105"
+    },
+    {
+     "Who": "Randy Elrod",
+     "Job": "Shop foreman",
+     "Ext.": ""
+    },
+    {
+     "Who": "Marcus Gaines",
+     "Job": "Parts manager, both Chattanooga shops",
+     "Ext.": "112"
+    },
+    {
+     "Who": "Kevin Lawson",
+     "Job": "Diagnostic technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Dustin Swafford",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Luis Herrera",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Terry Dotson",
+     "Job": "Electrical technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Hunter Varnell",
+     "Job": "Apprentice technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Cody Gann",
+     "Job": "Lube and tire technician",
+     "Ext.": ""
+    }
+   ]
+  },
+  {
+   "section": "Bonny Oaks, (423) 555-0167",
+   "columns": [
+    "Who",
+    "Job",
+    "Ext."
+   ],
+   "rows": [
+    {
+     "Who": "Angie Holloway",
+     "Job": "Lead service advisor",
+     "Ext.": "201"
+    },
+    {
+     "Who": "Josh Tipton",
+     "Job": "Service advisor",
+     "Ext.": "202"
+    },
+    {
+     "Who": "Andre Simmons",
+     "Job": "Lead technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Brandon Sisk",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Austin Crabtree",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Jordan Akins",
+     "Job": "Technician, also at East Main",
+     "Ext.": ""
+    }
+   ]
+  },
+  {
+   "section": "Charlotte Pike, (615) 555-0119",
+   "columns": [
+    "Who",
+    "Job",
+    "Ext."
+   ],
+   "rows": [
+    {
+     "Who": "Dale Hutchins",
+     "Job": "Shop manager",
+     "Ext.": "301"
+    },
+    {
+     "Who": "Chad Binkley",
+     "Job": "Service advisor",
+     "Ext.": "302"
+    },
+    {
+     "Who": "Jasmine Bolden",
+     "Job": "Service advisor",
+     "Ext.": "303"
+    },
+    {
+     "Who": "Gary Tidwell",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Shane Maddox",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Derek Hooper",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Tyler Jarrell",
+     "Job": "Technician, part-time",
+     "Ext.": ""
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray Brennan",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "6",
+   "written_as": "Maya Torres",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "7",
+   "written_as": "Caleb Sutton",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "29",
+   "written_as": "Brenda Pickett",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Randy Elrod",
+   "role": "shop_foreman",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus Gaines",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin Lawson",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "11",
+   "written_as": "Dustin Swafford",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "12",
+   "written_as": "Luis Herrera",
+   "role": "technician",
+   "site": "main"
+  },
+  {
+   "slot": "13",
+   "written_as": "Terry Dotson",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "14",
+   "written_as": "Hunter Varnell",
+   "role": "apprentice_technician",
+   "site": "main"
+  },
+  {
+   "slot": "15",
+   "written_as": "Cody Gann",
+   "role": "lube_tyre_technician",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Josh Tipton",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre Simmons",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "19",
+   "written_as": "Brandon Sisk",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "20",
+   "written_as": "Austin Crabtree",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan Akins",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale Hutchins",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "23",
+   "written_as": "Chad Binkley",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "24",
+   "written_as": "Jasmine Bolden",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "25",
+   "written_as": "Gary Tidwell",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "26",
+   "written_as": "Shane Maddox",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Derek Hooper",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "28",
+   "written_as": "Tyler Jarrell",
+   "role": "technician",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-1mo|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@f1_fired|date}}",
+   "what": "Brent Lassiter removed; message: \"Left the company.\""
+  },
+  {
+   "n": 3,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@f2_fired|date}}",
+   "what": "Wes Tate removed; message: \"Left the company.\""
+  },
+  {
+   "n": 4,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@newcomers|date}}",
+   "what": "Caleb Sutton and Hunter Varnell added at East Main; message: \"New people.\""
+  },
+  {
+   "n": 5,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-1mo|date}}",
+   "what": "extensions checked against the phone system; message: \"Extensions checked.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian names by slot from cast.json; the Russian flagship has a fourth advisor (slot 29) once it is named. Seasonal: a tyre fitter for six weeks each tyre season."
+ ]
+}

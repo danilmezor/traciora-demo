@@ -1,0 +1,190 @@
+{
+ "path": "services/ac/ac-check-and-recharge.md",
+ "title": "Диагностика и заправка кондиционера",
+ "title_en": "A/C check and recharge",
+ "exists_in": "both",
+ "english_sheet": "facts/services/ac/ac-check-and-recharge.json",
+ "first_revision_text": "ru/_history/services/ac/ac-check-and-recharge.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "The summer job: performance check, the two refrigerants, what a recharge can and cannot fix.",
+ "serves": [
+  "S11",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_ru": 295,
+ "links_to": [
+  "services/ac/ac-compressor-and-condenser.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "R134a dominates the Russian parc; R1234yf is rare and kept at the flagship only (the same plant with parts/stock-we-keep.md).",
+  "Season May to August (ledger season.ac_curve.ru peaks near 2.9 in June).",
+  "No refrigerant certificate: \"those trained on the station\"."
+ ],
+ "new_facts": [
+  "No warranty on a recharge not preceded by a repair (the same small planted inconsistency with the warranty page as in English)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Работы",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Цена"
+   ],
+   "rows": [
+    {
+     "В наряде": "Диагностика системы кондиционирования",
+     "Н/ч": "0,5",
+     "Цена": "900 ₽"
+    },
+    {
+     "В наряде": "Заправка кондиционера с вакуумированием (R134a)",
+     "Н/ч": "1",
+     "Цена": "3 800 ₽"
+    },
+    {
+     "В наряде": "Заправка кондиционера с вакуумированием (R1234yf)",
+     "Н/ч": "1",
+     "Цена": "10 800 ₽"
+    },
+    {
+     "В наряде": "Антибактериальная обработка испарителя кондиционера",
+     "Н/ч": "0,5",
+     "Цена": "2 290 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Как продавать честно",
+   "item": "Начинаем с диагностики, а не с заправки. Она покажет, хватает ли в системе хладагента. А если мало — значит, утечка."
+  },
+  {
+   "section": "Как продавать честно",
+   "item": "Заправка в систему с утечкой работает несколько недель. Если клиенту нужно именно это, например перед поездкой, — пожалуйста, но он слышит об этом заранее, и это записано в наряде. На заправку, перед которой не было ремонта, гарантии нет."
+  },
+  {
+   "section": "Как продавать честно",
+   "item": "С каждой заправкой в систему идёт краситель. Вернётся с тёплым воздухом — краситель покажет где."
+  },
+  {
+   "section": "Как продавать честно",
+   "item": "Система полная, а дует тёплым — это компрессор, заслонка или вентилятор: Компрессор и радиатор кондиционера."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "hours",
+   "class": "car",
+   "value": 0.5
+  },
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 900.0
+  },
+  {
+   "catalogue_key": "ac_recharge",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "ac_recharge",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3800.0
+  },
+  {
+   "catalogue_key": "ac_recharge_1234yf",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "ac_recharge_1234yf",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 10800.0
+  },
+  {
+   "catalogue_key": "ac_evaporator_cleaning",
+   "what": "hours",
+   "class": "car",
+   "value": 0.5
+  },
+  {
+   "catalogue_key": "ac_evaporator_cleaning",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2290.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  900.0,
+  2290.0,
+  3800.0,
+  10800.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

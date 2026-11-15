@@ -1,0 +1,67 @@
+{
+ "path": "customers/company-vehicles.md",
+ "title": "Автомобили организаций",
+ "title_en": "Company vehicles",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/company-vehicles.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Public pointer for businesses; the terms themselves are staff-only.",
+ "serves": [
+  "S1",
+  "visibility:public"
+ ],
+ "length_class": "short",
+ "words_ru": 96,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Companies are billed per order: an invoice with its closing document each time (ledger acct.ru_documents), not a monthly statement; \"account\" is «договор с отсрочкой».",
+  "Small firms and sole traders get closing documents per order too, but pay at pick-up."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Автомобили организаций",
+   "item": "Организация, у которой пять автомобилей и больше, может заключить с нами договор на обслуживание и платить по счёту с отсрочкой."
+  },
+  {
+   "section": "Автомобили организаций",
+   "item": "Небольшие организации и предприниматели платят при выдаче, как все. Историю каждой машины ведём на имя организации; закрывающие документы — счёт и акт или УПД — готовим по каждому заказ-наряду."
+  },
+  {
+   "section": "Автомобили организаций",
+   "item": "Рабочую машину, которая встала, смотрим вне очереди."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич Мельников",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

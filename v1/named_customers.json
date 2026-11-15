@@ -1,0 +1,1693 @@
+{
+ "_meta": {
+  "seed_version": "v1",
+  "file": "named_customers.json",
+  "status": "draft by a wave-1 agent, brought to the ledger and the story cards in the reconcile pass (2026-11-13)",
+  "sources": "stories/S06.md, S07.md, S08.md, S15.md; catalogue.json story_pins",
+  "notes": [
+   "VINs, plates and phones are formed as accounts.json and phones.md describe.",
+   "S15 kind 2 (cars without a VIN, the oldest): the cars here with vin null are among them.",
+   "Mileages and the customers' ages are this file's own. The S6 customer, his car and the part it waits for are the same in stories/S06.md, calls/samples and conversations/samples (ledger s6.waiting_at_t).",
+   "The S8 cars are of the catalogue's vehicle class car, for which the ledger's timing-belt amounts hold (s8.price_now, s8.price_quoted).",
+   "story_callers and story_chat_customers (fix pass A): the people the story calls and story conversations invented, as checks/new_facts.json accepted them; ledger rows nf.call.NN and nf.conv.NN"
+  ]
+ },
+ "en": {
+  "S7": {
+   "name": "Rachel Dunlap",
+   "age": 41,
+   "phone": "(423) 555-0131",
+   "email": "rdunlap@inbox.example",
+   "shop": "main",
+   "car": {
+    "make": "Honda",
+    "model": "CR-V EX AWD",
+    "year": 2014,
+    "vin": "2HKRM4H51EH835246",
+    "vehicle_class": "car",
+    "parc_model": "CR-V",
+    "plate": "BRC-3197",
+    "mileage_at_first_visit_miles": 121400
+   },
+   "why_the_story_is_sound": "A 2014 CR-V at 121,000 miles is due its second set of front pads and its first front rotors, and the grinding she hears is the wear indicator. The CR-V has separate rear shock absorbers; one seeping oil at this age is common, safe to defer for a few weeks and cheap enough to come back for."
+  },
+  "S8": {
+   "name": "Frank Daugherty",
+   "age": 63,
+   "phone": "(423) 555-0172",
+   "email": "fdaugherty@postmail.example",
+   "shop": "main",
+   "car": {
+    "make": "Subaru",
+    "model": "Outback 2.5i Premium",
+    "year": 2011,
+    "vin": "4S4BRBCC5B3156533",
+    "vehicle_class": "car",
+    "parc_model": "Outback",
+    "plate": "BRC-4178",
+    "engine": "2.5i (EJ253)",
+    "mileage_at_visit_miles": 209300
+   },
+   "why_the_story_is_sound": "The 2011 Outback 2.5i has the EJ253 engine with a timing belt due every 105,000 miles; this is its second. Belt, tensioner, idlers and water pump is 3.2 billed hours by the catalogue plus a kit, a job a shop can finish the same day when the car is in by eight, which is what the newcomer promised."
+  },
+  "S6_waiting_nine_days": {
+   "name": "Curtis Vaughn",
+   "age": 52,
+   "phone": "(615) 555-0115",
+   "email": "cvaughn@inbox.example",
+   "shop": "west",
+   "car": {
+    "make": "Volvo",
+    "model": "XC60 T6 AWD",
+    "year": 2012,
+    "vin": "YV4902DZ8C2291963",
+    "vehicle_class": "suv",
+    "parc_model": "XC60 / XC90",
+    "plate": "BRC-7896",
+    "mileage_at_visit_miles": 148200
+   },
+   "waiting_for": "a remanufactured angle gear (the all-wheel-drive transfer unit), ordered from the shop's old supplier and promised twice",
+   "why_the_story_is_sound": "Not a part any Nashville warehouse keeps on the shelf; a supplier that is late on four orders in ten can plausibly miss it twice, and the car cannot be driven without it."
+  },
+  "S15_duplicate_pairs": [
+   {
+    "pair": 1,
+    "record_a": {
+     "name": "Bill Hargis",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "William Hargis",
+     "created_at_shop": "east"
+    },
+    "difference": "nickname and formal name",
+    "shared_phone": "(423) 555-0101",
+    "car": {
+     "make": "Ford",
+     "model": "F-150",
+     "year": 2012,
+     "vin": "1FTEW1E55CFB40223",
+     "vehicle_class": "truck",
+     "parc_model": "F-150",
+     "plate": "BRC-5541"
+    }
+   },
+   {
+    "pair": 2,
+    "record_a": {
+     "name": "Teresa Brumlow",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Theresa Brumlow",
+     "created_at_shop": "main"
+    },
+    "difference": "one letter",
+    "shared_phone": "(423) 555-0189",
+    "car": {
+     "make": "Nissan",
+     "model": "Altima",
+     "year": 2016,
+     "vin": "1N4BL4CV4GN219738",
+     "vehicle_class": "car",
+     "parc_model": "Altima",
+     "plate": "BRC-3400"
+    }
+   },
+   {
+    "pair": 3,
+    "record_a": {
+     "name": "Linda McAllister",
+     "created_at_shop": "east"
+    },
+    "record_b": {
+     "name": "Linda Mc Allister",
+     "created_at_shop": "east"
+    },
+    "difference": "a space inside the surname",
+    "shared_phone": "(423) 555-0122",
+    "car": {
+     "make": "Toyota",
+     "model": "Camry",
+     "year": 2015,
+     "vin": "4T1B11HK8FU315787",
+     "vehicle_class": "car",
+     "parc_model": "Camry",
+     "plate": "BRC-2274"
+    }
+   },
+   {
+    "pair": 4,
+    "record_a": {
+     "name": "Ana Ramirez-Lopez",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Ana Ramirez",
+     "created_at_shop": "main"
+    },
+    "difference": "second surname dropped",
+    "shared_phone": "(423) 555-0179",
+    "car": {
+     "make": "Honda",
+     "model": "Odyssey",
+     "year": 2013,
+     "vin": "5FNRL5H60DB684012",
+     "vehicle_class": "suv",
+     "parc_model": "Odyssey",
+     "plate": "BRC-5882"
+    }
+   },
+   {
+    "pair": 5,
+    "record_a": {
+     "name": "James Tolbert Jr.",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "James Tolbert",
+     "created_at_shop": "west"
+    },
+    "difference": "suffix",
+    "shared_phone": "(615) 555-0158",
+    "car": {
+     "make": "Chevrolet",
+     "model": "Silverado 1500",
+     "year": 2001,
+     "vin": null,
+     "vehicle_class": "truck",
+     "parc_model": "Silverado 1500",
+     "plate": "BRC-7054"
+    }
+   },
+   {
+    "pair": 6,
+    "record_a": {
+     "name": "PARKER, DENISE",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Denise Parker",
+     "created_at_shop": "west"
+    },
+    "difference": "the bulk load's capitals and order against a record typed later",
+    "shared_phone": "(615) 555-0107",
+    "car": {
+     "make": "Nissan",
+     "model": "Rogue",
+     "year": 2017,
+     "vin": "5N1AT2MT4HC660401",
+     "vehicle_class": "car",
+     "parc_model": "Rogue",
+     "plate": "BRC-7829"
+    }
+   },
+   {
+    "pair": 7,
+    "record_a": {
+     "name": "Mark Stephens",
+     "created_at_shop": "east"
+    },
+    "record_b": {
+     "name": "Mark Stevens",
+     "created_at_shop": "main"
+    },
+    "difference": "ph and v",
+    "shared_phone": "(423) 555-0123",
+    "car": {
+     "make": "Chevrolet",
+     "model": "Equinox",
+     "year": 2014,
+     "vin": "2GNAXKEV8E6244789",
+     "vehicle_class": "car",
+     "parc_model": "Equinox",
+     "plate": "BRC-3529"
+    }
+   },
+   {
+    "pair": 8,
+    "record_a": {
+     "name": "Robert L. Goins",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Robert Goins",
+     "created_at_shop": "main"
+    },
+    "difference": "middle initial",
+    "shared_phone": "(423) 555-0144",
+    "car": {
+     "make": "Toyota",
+     "model": "Tundra",
+     "year": 2010,
+     "vin": "5TFDW5F13AX356285",
+     "vehicle_class": "truck",
+     "parc_model": "Tundra",
+     "plate": "BRC-6380"
+    }
+   },
+   {
+    "pair": 9,
+    "record_a": {
+     "name": "Hung Nguyen",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Nguyen Hung",
+     "created_at_shop": "west"
+    },
+    "difference": "name order",
+    "shared_phone": "(615) 555-0164",
+    "car": {
+     "make": "Toyota",
+     "model": "Camry",
+     "year": 2018,
+     "vin": "4T1B11HKXJU603576",
+     "vehicle_class": "car",
+     "parc_model": "Camry",
+     "plate": "BRC-6703"
+    }
+   },
+   {
+    "pair": 10,
+    "record_a": {
+     "name": "Katherine Yarbrough",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Catherine Yarborough",
+     "created_at_shop": "east"
+    },
+    "difference": "two differences at once",
+    "shared_phone": "(423) 555-0100",
+    "car": {
+     "make": "Subaru",
+     "model": "Outback",
+     "year": 2019,
+     "vin": "4S4BTAFC8K3551989",
+     "vehicle_class": "car",
+     "parc_model": "Outback",
+     "plate": "BRC-3213"
+    }
+   },
+   {
+    "pair": 11,
+    "record_a": {
+     "name": "Sean O'Dell",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Sean Odell",
+     "created_at_shop": "west"
+    },
+    "difference": "apostrophe",
+    "shared_phone": "(615) 555-0118",
+    "car": {
+     "make": "Ford",
+     "model": "Explorer",
+     "year": 2016,
+     "vin": "1FM5K8D8XGGB67736",
+     "vehicle_class": "suv",
+     "parc_model": "Explorer",
+     "plate": "BRC-7132"
+    }
+   },
+   {
+    "pair": 12,
+    "record_a": {
+     "name": "Jeffrey Whitlock",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Jeffery Whitlock",
+     "created_at_shop": "main"
+    },
+    "difference": "two letters swapped",
+    "shared_phone": "(423) 555-0129",
+    "car": {
+     "make": "Toyota",
+     "model": "Tacoma",
+     "year": 1999,
+     "vin": null,
+     "vehicle_class": "truck",
+     "parc_model": "Tacoma",
+     "plate": "BRC-5039"
+    }
+   }
+  ],
+  "S15_car_on_the_wrong_customer": [
+   {
+    "case": 1,
+    "shop": "main",
+    "car": {
+     "make": "Honda",
+     "model": "Accord",
+     "year": 2015,
+     "vin": "1HGCR2F31FA219912",
+     "vehicle_class": "car",
+     "parc_model": "Accord",
+     "plate": "BRC-3938"
+    },
+    "belongs_to": {
+     "name": "Carol Renfro",
+     "phone": "(423) 555-0164"
+    },
+    "order_recorded_under": {
+     "name": "Harold Renfro",
+     "phone": "(423) 555-0149"
+    },
+    "why": "her father dropped the car off and the order was opened on his record"
+   },
+   {
+    "case": 2,
+    "shop": "main",
+    "car": "the 2017 Ford F-250 of Greeson Lawn & Landscape (accounts.json, small business customers)",
+    "belongs_to": {
+     "name": "Greeson Lawn & Landscape"
+    },
+    "order_recorded_under": {
+     "name": "Paul Greeson",
+     "phone": "(423) 555-0138"
+    },
+    "why": "the owner's personal record was picked instead of his company's, so the order is missing from the company's history"
+   }
+  ],
+  "story_callers": [
+   {
+    "name": "Sharon Kessler",
+    "phone": "423-555-0174",
+    "shop": "main",
+    "car": "2016 Nissan Altima",
+    "first_time": true,
+    "source": "calls/en/01-S4-junior-early.json",
+    "facts": [
+     "An invented first-time caller, Sharon Kessler, 423-555-0174, 2016 Nissan Altima; a saved quote and no order."
+    ]
+   },
+   {
+    "name": "Tonya Hensley",
+    "phone": "423-555-0113",
+    "shop": "main",
+    "car": "2013 Ford Escape",
+    "first_time": true,
+    "source": "calls/en/02-S4-junior-when-suits.json",
+    "facts": [
+     "An invented first-time caller, Tonya Hensley, 423-555-0113, 2013 Ford Escape; no order follows."
+    ]
+   },
+   {
+    "name": "Dwight Sizemore",
+    "phone": "423-555-0146",
+    "shop": "main",
+    "car": "2012 Toyota Tacoma, 4.0 V6",
+    "first_time": true,
+    "source": "calls/en/03-S4-junior-caller-names-time.json",
+    "facts": [
+     "An invented first-time caller, Dwight Sizemore, 423-555-0146, 2012 Toyota Tacoma: an appointment at main for the call's day at 12:30, source phone, with no customer name on it; the customer record is made at check-in."
+    ]
+   },
+   {
+    "name": "Carla Jenkins",
+    "phone": "423-555-0157",
+    "shop": "main",
+    "car": "2015 Hyundai Sonata",
+    "first_time": true,
+    "source": "calls/en/04-S4-junior-one-time-booked.json",
+    "facts": [
+     "An invented first-time caller, Carla Jenkins, 423-555-0157, 2015 Hyundai Sonata: an appointment at main on call+1d at 10:00 for a check engine diagnosis."
+    ]
+   },
+   {
+    "name": "Stephanie Vandergriff",
+    "phone": "423-555-0191",
+    "shop": "main",
+    "car": "2017 Honda Odyssey",
+    "first_time": true,
+    "source": "calls/en/05-S4-junior-two-times-first.json",
+    "facts": [
+     "An invented first-time caller, Stephanie Vandergriff, 423-555-0191, 2017 Honda Odyssey: an appointment at main on call+4d at 13:30 for a four-wheel alignment."
+    ]
+   },
+   {
+    "name": "Wendell Boyd",
+    "phone": "423-555-0188",
+    "shop": "main",
+    "car": "2015 Chevrolet Equinox",
+    "first_time": true,
+    "source": "calls/en/06-S4-junior-now.json",
+    "facts": [
+     "An invented first-time caller, Wendell Boyd, 423-555-0188, 2015 Chevrolet Equinox: an appointment at main on call+2d at 08:00 for a road test and a right front wheel bearing."
+    ]
+   },
+   {
+    "name": "Ronnie Eaves",
+    "phone": "423-555-0116",
+    "shop": "main",
+    "car": "unit MB-6, a 2018 Kia Soul, BRC-7972 (accounts.json en.A3 fleet)",
+    "first_time": false,
+    "source": "calls/en/07-S4-driver-says-go-ahead.json",
+    "facts": [
+     "Ronnie Eaves, a driver of account A3 (not a contact), mobile 423-555-0116, drives unit MB-6.",
+     "An order at main on slot 6's 2nd working day before T for MB-6: oil service 90.95 and, added on the driver's word, a right front CV axle 379.64 (technician slot 12); completed by 16:00 the same day.",
+     "An outbound 'car ready' call from desk 102 to the driver at 15:52 that day (it keeps the promise of this call).",
+     "The fleet contact of A3 was not called about the added work."
+    ]
+   },
+   {
+    "name": "Vernon Lowery",
+    "phone": "423-555-0185",
+    "shop": "main",
+    "car": "2015 Toyota Camry",
+    "first_time": true,
+    "source": "calls/en/12-S12-brake-price-stale-page.json",
+    "facts": [
+     "An invented first-time caller, Vernon Lowery, 423-555-0185, 2015 Toyota Camry; no estimate and no order follow, so the wrong price is on this call only.",
+     "Order of the two wrong prices: this call (the Tuesday of week T-5) is his first; call 9 (slot 7's 5th working day before T) is his second, as the cards and TIMELINE.md now say."
+    ]
+   },
+   {
+    "name": "Earl Blevins",
+    "phone": "706-555-0136",
+    "shop": "main",
+    "car": "2016 Honda Civic (not his yet)",
+    "first_time": true,
+    "source": "calls/en/13-people-newcomer-first-weeks.json",
+    "facts": [
+     "An invented first-time caller, Earl Blevins, 706-555-0136; no order follows.",
+     "The call holds 34 seconds of hold music between two of the advisor's lines."
+    ]
+   },
+   {
+    "name": "Kayla Thornton",
+    "phone": "423-555-0109",
+    "shop": "main",
+    "car": "2017 Nissan Rogue",
+    "first_time": true,
+    "source": "calls/en/14-people-newcomer-improving.json",
+    "facts": [
+     "An invented first-time caller, Kayla Thornton, 423-555-0109, 2017 Nissan Rogue: an appointment at main on call+2d at 08:00 for rear pads and rotors (the day before T for the nominal T)."
+    ]
+   },
+   {
+    "name": "Gerald Massengill",
+    "phone": "423-555-0170",
+    "shop": "east",
+    "car": "2014 Toyota Highlander, 161,000 miles",
+    "first_time": true,
+    "source": "calls/en/26-S5-price-doubt-answered.json",
+    "facts": [
+     "An invented first-time caller, Gerald Massengill, 423-555-0170, 2014 Toyota Highlander: an appointment at east on call+1d at 07:30 for a steering and suspension inspection."
+    ]
+   },
+   {
+    "name": "Carolyn Bivens",
+    "phone": "423-555-0152",
+    "shop": "east",
+    "car": "2015 Buick Enclave",
+    "first_time": false,
+    "source": "calls/en/27-S5-regular-asks-for-her.json",
+    "facts": [
+     "A regular of east, Carolyn Bivens, 423-555-0152, 2015 Buick Enclave, with a history at the shop: at her last oil service the battery test was recorded as weak (a note on that order).",
+     "An appointment at east on call+1d at 07:30 (the Tuesday of week T-3) for a charging-system test and a battery."
+    ]
+   },
+   {
+    "name": "Roy Standifer",
+    "phone": "423-555-0128",
+    "shop": "east",
+    "car": "2013 GMC Sierra 1500",
+    "first_time": false,
+    "source": "calls/en/28-S5-is-she-in.json",
+    "facts": [
+     "A regular of east, Roy Standifer, 423-555-0128, 2013 GMC Sierra 1500, with a history at the shop; slot 16 had told him to ring about the transmission service.",
+     "The wording of the shop's hold message: 'Thank you for holding. Someone will be right with you.'",
+     "No booking is made on this call."
+    ]
+   },
+   {
+    "name": "Phil Cantrell",
+    "phone": "423-555-0161",
+    "shop": "main",
+    "car": "2014 Chevrolet Malibu",
+    "first_time": false,
+    "source": "calls/en/29-people-mechanic-11-alignment.json",
+    "facts": [
+     "A customer of main, Phil Cantrell, 423-555-0161, 2014 Chevrolet Malibu: an order on the Tuesday of week T-10 for a front lower control arm (technician slot 11, no alignment on it), and a comeback order on the Friday of week T-10 pointing at it (alignment, no charge, rechecked by slot 8).",
+     "At pick-up slot 11 told him 'it's fixed, I don't know what else to tell you'."
+    ]
+   },
+   {
+    "name": "Tasha Underwood",
+    "phone": "423-555-0199",
+    "shop": "main",
+    "car": "2013 Hyundai Santa Fe",
+    "first_time": false,
+    "source": "calls/en/30-people-mechanic-11-roadside.json",
+    "facts": [
+     "A customer of main, Tasha Underwood, 423-555-0199, 2013 Hyundai Santa Fe: a water-pump order completed and paid on the Friday of week T-3 (technician slot 11; 659.37 with tax) and a comeback order the same evening pointing at it (a loose hose clamp; no charge).",
+     "A tow by vendor V8 from the highway to main that evening, at the shop's cost.",
+     "Two outbound calls to her after this one: desk 102 at 16:46 and desk 104 at 17:05."
+    ]
+   },
+   {
+    "name": "Tamika Ellison",
+    "phone": "423-555-0137",
+    "shop": "main",
+    "car": "2017 Hyundai Elantra",
+    "first_time": true,
+    "source": "calls/en/31-S3-rang-three-times.json",
+    "facts": [
+     "Three missed calls at main from 423-555-0137 on the Monday of week T-6 at 07:34, 07:46 and 07:58, each resolved by this call (got_through); they are among the morning misses of the period before the fix.",
+     "An invented first-time caller, Tamika Ellison, 2017 Hyundai Elantra: an appointment at main that day at 09:00 for a check engine diagnosis (technician slot 10), and a ride back to her work."
+    ]
+   },
+   {
+    "name": "Jared Scruggs",
+    "phone": "423-555-0181",
+    "shop": "main",
+    "car": "2019 Toyota RAV4",
+    "first_time": true,
+    "source": "calls/en/32-S3-early-desk.json",
+    "facts": [
+     "An invented first-time caller, Jared Scruggs, 423-555-0181, 2019 Toyota RAV4: an appointment at main that day at 08:00 for a flat repair."
+    ]
+   },
+   {
+    "name": "Harlan Pewitt",
+    "phone": "615-555-0126",
+    "shop": "west",
+    "car": "2008 Chevrolet Silverado 1500",
+    "first_time": false,
+    "source": "calls/en/33-people-manager-bring-it-by.json",
+    "facts": [
+     "A long-standing customer of west, Harlan Pewitt, 615-555-0126, 2008 Chevrolet Silverado 1500, with a history at the shop (a lower ball joint was pointed out at an earlier visit). No booking is made on this call."
+    ]
+   },
+   {
+    "name": "Jeff Womack",
+    "phone": "615-555-0171",
+    "shop": "west",
+    "car": "2010 Toyota Camry (his mother's)",
+    "first_time": false,
+    "source": "calls/en/34-people-manager-no-price.json",
+    "facts": [
+     "A long-standing customer of west, Peggy Womack, 2010 Toyota Camry; her son Jeff Womack rings from 615-555-0171. No booking is made on this call."
+    ]
+   },
+   {
+    "name": "Brianna Gentry",
+    "phone": "615-555-0139",
+    "shop": "west",
+    "car": "2014 Ford Fusion",
+    "first_time": true,
+    "source": "calls/en/35-people-bright-spot-early.json",
+    "facts": [
+     "An invented first-time caller, Brianna Gentry, 615-555-0139, 2014 Ford Fusion; no order follows."
+    ]
+   },
+   {
+    "name": "Keisha Abernathy",
+    "phone": "629-555-0112",
+    "shop": "west",
+    "car": "2016 Jeep Grand Cherokee",
+    "first_time": false,
+    "source": "calls/en/36-people-bright-spot-firmer.json",
+    "facts": [
+     "A returning customer of west, Keisha Abernathy, 629-555-0112, 2016 Jeep Grand Cherokee, with a front brake order at west a few months before; an appointment at west on the Friday of week T-2 at 14:00 for a cooling system pressure test."
+    ]
+   }
+  ],
+  "story_chat_customers": [
+   {
+    "name": "Patsy Greer",
+    "phone": null,
+    "shop": null,
+    "car": "2013 Buick Enclave",
+    "first_time": false,
+    "source": "conversations/en/08-s13-telegram-stocktake-regular.json",
+    "facts": [
+     "Patsy Greer, a regular of the Bonny Oaks shop, 2013 Buick Enclave, rear brakes recommended at her last visit; an appointment on the Wednesday of week W+1 at 13:00.",
+     "Angie offers no time of her own inside the week she has asked off (S5): the Wednesday before it with her, or the Friday with Josh (slot 17).",
+     "The contact's picture: a white Buick Enclave under a carport."
+    ]
+   },
+   {
+    "name": "Darryl Poteet",
+    "phone": null,
+    "shop": "main",
+    "car": "2011 Chevrolet Silverado 1500",
+    "first_time": false,
+    "source": "conversations/en/09-people-p05-telegram-out-the-door.json",
+    "facts": [
+     "Darryl Poteet, 2011 Chevrolet Silverado 1500, alternator replaced on the Thursday of week T-18 at main: 766.37 at list, 852.01 with shop supplies and tax; he was given the pre-tax figure on the phone that morning.",
+     "The contact's picture: a red Chevrolet Silverado at a boat ramp."
+    ]
+   },
+   {
+    "name": "Kim Arnett",
+    "phone": "(423) 555-0274",
+    "shop": "main",
+    "car": "2012 Ford Escape",
+    "first_time": true,
+    "source": "conversations/en/10-people-p05-web-puddle-photo.json",
+    "facts": [
+     "Kim Arnett, (423) 555-0274 (tier B of phones.md), 2012 Ford Escape; a cooling system pressure test at main on the Monday of week T-8 at 14:00.",
+     "The photo IMG_2087.jpg (picture pool 'puddle-under-car')."
+    ]
+   },
+   {
+    "name": "Shonda Ellis",
+    "phone": null,
+    "shop": "main",
+    "car": "2015 Kia Sorento",
+    "first_time": false,
+    "source": "conversations/en/11-people-p06-telegram-found-work.json",
+    "facts": [
+     "Shonda Ellis (Telegram name 'Shonda E.'), 2015 Kia Sorento, at main on the Tuesday of week T-11: oil change; rear brake pads approved, 260.31; cabin air filter declined, 67.94.",
+     "The photos sorento_rear_pad.jpg and sorento_cabin_filter.jpg (picture pools 'worn-pad', 'dirty-cabin-filter').",
+     "The contact has no picture."
+    ]
+   },
+   {
+    "name": "Reggie Dorsey",
+    "phone": "(423) 555-0318",
+    "shop": "main",
+    "car": null,
+    "first_time": false,
+    "source": "conversations/en/12-people-p06-web-moved-booking.json",
+    "facts": [
+     "Reggie Dorsey, (423) 555-0318 (tier B), an alignment at main moved from the Monday to the Thursday of week T-4, 08:00."
+    ]
+   },
+   {
+    "name": "Brianna Cagle",
+    "phone": null,
+    "shop": "main",
+    "car": "2016 Nissan Altima",
+    "first_time": true,
+    "source": "conversations/en/13-people-p07-telegram-first-of-two.json",
+    "facts": [
+     "Brianna Cagle (Telegram name 'Brianna C.'), 2016 Nissan Altima, an oil change at main on the Friday of week T-12 at 08:30.",
+     "The contact has no picture."
+    ]
+   },
+   {
+    "name": "Jerome Purcell",
+    "phone": "(423) 555-0391",
+    "shop": "main",
+    "car": "2017 Toyota Camry",
+    "first_time": true,
+    "source": "conversations/en/14-people-p07-web-sends-what-he-is-given.json",
+    "facts": [
+     "Jerome Purcell, (423) 555-0391 (tier B), 2017 Toyota Camry, a brake fluid flush at main on the Wednesday of week T-3 at 10:00."
+    ]
+   },
+   {
+    "name": "Gloria Yancey",
+    "phone": null,
+    "shop": "east",
+    "car": "2014 Toyota Highlander",
+    "first_time": false,
+    "source": "conversations/en/15-people-p16-telegram-brake-squeal.json",
+    "facts": [
+     "Gloria Yancey, 2014 Toyota Highlander: front brakes at east in week T-16; a no-charge brake noise check on the Wednesday of week T-15 at 13:00 (an anti-rattle clip reseated): a warranty order pointing at the first one.",
+     "The contact's picture: sunrise over a lake."
+    ]
+   },
+   {
+    "name": "Tasha Reed",
+    "phone": "(423) 555-0407",
+    "shop": "east",
+    "car": "a 2015 Honda Pilot she does not own yet",
+    "first_time": true,
+    "source": "conversations/en/16-people-p16-web-pre-purchase.json",
+    "facts": [
+     "Tasha Reed, (423) 555-0407 (tier B): a pre-purchase inspection of a 2015 Honda Pilot at east on the Wednesday of week T-7 at 08:30."
+    ]
+   },
+   {
+    "name": "Dwight Hensley",
+    "phone": null,
+    "shop": "east",
+    "car": "2013 Ford F-150",
+    "first_time": false,
+    "source": "conversations/en/17-people-p17-telegram-not-today.json",
+    "facts": [
+     "Dwight Hensley, 2013 Ford F-150: front sway bar links (220.26) recommended at east at an oil change on the Thursday of week T-12 and declined the next day.",
+     "The contact's picture: a blue F-150 with a boat trailer."
+    ]
+   },
+   {
+    "name": "Hector Ortega",
+    "phone": "(423) 555-0452",
+    "shop": "east",
+    "car": null,
+    "first_time": true,
+    "source": "conversations/en/18-people-p17-web-own-tires.json",
+    "facts": [
+     "Hector Ortega, (423) 555-0452 (tier B): four customer-supplied tires mounted and balanced at east on the Friday of week T-20 at 14:00, 100.00 plus disposal at 3.50 a tire.",
+     "The shop mounts tires a customer brings (said by slot 17; the public pages do not say)."
+    ]
+   },
+   {
+    "name": "Buddy Carver",
+    "phone": null,
+    "shop": "west",
+    "car": "his mother's Buick (model not said)",
+    "first_time": false,
+    "source": "conversations/en/19-people-p22-telegram-bring-it-by.json",
+    "facts": [
+     "Buddy Carver, a regular of west, brings his mother's Buick (a whine when turning, a repeat) as a walk-in on the Tuesday of week T-16.",
+     "The contact has no picture."
+    ]
+   },
+   {
+    "name": "Sharon Whitfield",
+    "phone": "(615) 555-0236",
+    "shop": "west",
+    "car": null,
+    "first_time": false,
+    "source": "conversations/en/20-people-p22-web-shop-supplies.json",
+    "facts": [
+     "Sharon Whitfield, (615) 555-0236 (tier B): a water pump replaced at west, picked up on the Tuesday of week T-9; the bill carries shop supplies of 17.55."
+    ]
+   },
+   {
+    "name": "Terrence Boyd",
+    "phone": null,
+    "shop": "west",
+    "car": "2010 Honda Accord",
+    "first_time": false,
+    "source": "conversations/en/21-people-p23-telegram-anytime.json",
+    "facts": [
+     "Terrence Boyd (Telegram name 'T Boyd'), 2010 Honda Accord, asked west for a Saturday oil change on the Monday of week T-13; no appointment was made.",
+     "The contact's picture: a brown pit bull on a porch."
+    ]
+   },
+   {
+    "name": "Monica Reyes",
+    "phone": "(615) 555-0289",
+    "shop": "west",
+    "car": "2016 Hyundai Tucson",
+    "first_time": false,
+    "source": "conversations/en/22-people-p23-web-found-on-the-invoice.json",
+    "facts": [
+     "Monica Reyes, (615) 555-0289 (tier B), 2016 Hyundai Tucson, at west on the Wednesday of week T-5: rear brake pads at 3 mm recommended on the invoice (225.77), not sold."
+    ]
+   },
+   {
+    "name": "Latoya Greene",
+    "phone": null,
+    "shop": "west",
+    "car": "2014 Chevrolet Equinox",
+    "first_time": false,
+    "source": "conversations/en/23-people-p24-telegram-estimate-attached.json",
+    "facts": [
+     "Latoya Greene, 2014 Chevrolet Equinox, 96,000 miles, at west on the Friday of week T-10: check engine diagnosis 135.00, ignition coil 153.86, spark plugs 222.28; 579.50 with shop supplies (16.88) and Nashville's sales tax (tax.rate.west, 9.75 %).",
+     "The file Estimate_Equinox_Greene.pdf (picture pool 'estimate-pdf').",
+     "The contact's picture: a gray Chevrolet Equinox in a parking garage."
+    ]
+   },
+   {
+    "name": "Deion Marshall",
+    "phone": "(615) 555-0347",
+    "shop": "west",
+    "car": "2017 Kia Soul",
+    "first_time": true,
+    "source": "conversations/en/24-people-p24-web-same-day.json",
+    "facts": [
+     "Deion Marshall, (615) 555-0347 (tier B), 2017 Kia Soul: a battery and charging test at west on the Tuesday of week T-17 at 11:30."
+    ]
+   },
+   {
+    "name": "Kenny Dillard",
+    "phone": "(615) 555-0412",
+    "shop": "west",
+    "car": "2013 Dodge Charger",
+    "first_time": true,
+    "source": "conversations/en/25-r13-web-one-question.json",
+    "facts": [
+     "Kenny Dillard, (615) 555-0412 (tier B), 2013 Dodge Charger: a check engine diagnosis at west on the Thursday of week T-13 at 07:30."
+    ]
+   },
+   {
+    "name": "Dot Kirby",
+    "phone": null,
+    "shop": "east",
+    "car": "2012 Toyota Camry",
+    "first_time": false,
+    "source": "conversations/en/26-r13-telegram-two-questions.json",
+    "facts": [
+     "Dot Kirby, 2012 Toyota Camry, a regular of east: tires balanced in March for a highway shake, a battery light in June; a brake inspection on the Thursday of week T-6 at 09:00.",
+     "The contact has no picture."
+    ]
+   }
+  ]
+ },
+ "ru": {
+  "S7": {
+   "name": "Ольга Сергеевна Тимофеева",
+   "in_chat": "Ольга",
+   "age": 38,
+   "phone": "+7 907 378-60-35",
+   "email": "o.timofeeva@pochta.example",
+   "shop": "main",
+   "car": {
+    "make": "Hyundai",
+    "model": "Solaris",
+    "year": 2016,
+    "vin": "Z94CT41DAGR392443",
+    "vehicle_class": "car",
+    "parc_model": "Solaris",
+    "plate": "М742РЕ73",
+    "mileage_at_first_visit_km": 112000
+   },
+   "why_the_story_is_sound": "У Solaris 2016 года к 110 тысячам обычно подходит вторая замена передних колодок и первая — дисков; звук, на который она жалуется, даёт индикатор износа. Сзади у машины отдельные амортизаторы, и запотевший или потёкший задний амортизатор на таком пробеге — обычное дело: с ним можно ездить несколько недель, и ради него стоит приехать ещё раз."
+  },
+  "S8": {
+   "name": "Игорь Валентинович Фомичёв",
+   "age": 57,
+   "phone": "+7 907 641-87-55",
+   "email": "fomichev.iv@yapochta.example",
+   "shop": "main",
+   "car": {
+    "make": "Renault",
+    "model": "Logan",
+    "year": 2015,
+    "vin": "X7L4SRAV472326453",
+    "vehicle_class": "car",
+    "parc_model": "Logan",
+    "plate": "У838КА173",
+    "engine": "1.6 16 кл. (K4M)",
+    "mileage_at_visit_km": 118000
+   },
+   "why_the_story_is_sound": "На Logan с мотором K4M ремень ГРМ меняют каждые 60 тысяч километров, это вторая замена — вместе с роликами и помпой. По каталогу работа занимает 3,2 нормо-часа: если машину принять с утра, её действительно можно отдать в тот же день, что новичок и пообещал."
+  },
+  "S6_waiting_nine_days": {
+   "name": "Айрат Гизатуллин",
+   "age": 45,
+   "phone": "+7 907 526-98-79",
+   "email": "gizatullin.a@pochta.example",
+   "shop": "west",
+   "car": {
+    "make": "Peugeot",
+    "model": "308",
+    "year": 2011,
+    "vin": "VF34C5FS9BS409208",
+    "vehicle_class": "car",
+    "parc_model": null,
+    "plate": "О972НВ116",
+    "mileage_at_visit_km": 164000
+   },
+   "waiting_for": "насос электрогидроусилителя руля, заказан у прежнего поставщика сервиса, срок переносили дважды",
+   "why_the_story_is_sound": "Деталь не складская, в Казани её возят под заказ; поставщик, который срывает четыре поставки из десяти, вполне может сорвать её дважды, а ездить без усилителя нельзя."
+  },
+  "S15_duplicate_pairs": [
+   {
+    "pair": 1,
+    "record_a": {
+     "name": "Фёдоров Сергей Александрович",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Федоров Сергей Александрович",
+     "created_at_shop": "east"
+    },
+    "difference": "ё и е",
+    "shared_phone": "+7 907 356-70-97",
+    "car": {
+     "make": "LADA",
+     "model": "Granta, седан",
+     "year": 2017,
+     "vin": "XTA219010H0166960",
+     "vehicle_class": "car",
+     "parc_model": "Granta",
+     "plate": "М318МЕ73"
+    }
+   },
+   {
+    "pair": 2,
+    "record_a": {
+     "name": "Кузнецова Наталья",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Кузнецова Наталия",
+     "created_at_shop": "main"
+    },
+    "difference": "Наталья и Наталия",
+    "shared_phone": "+7 907 605-45-85",
+    "car": {
+     "make": "Kia",
+     "model": "Rio",
+     "year": 2016,
+     "vin": "Z94CB41BAGR660244",
+     "vehicle_class": "car",
+     "parc_model": "Rio",
+     "plate": "К961ЕР73"
+    }
+   },
+   {
+    "pair": 3,
+    "record_a": {
+     "name": "Мухаметзянов Ильдус",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Мухамметзянов Ильдус",
+     "created_at_shop": "west"
+    },
+    "difference": "удвоенная м",
+    "shared_phone": "+7 907 525-75-91",
+    "car": {
+     "make": "Daewoo",
+     "model": "Nexia",
+     "year": 2007,
+     "vin": null,
+     "vehicle_class": "car",
+     "parc_model": "Nexia",
+     "plate": "Т729УА716"
+    }
+   },
+   {
+    "pair": 4,
+    "record_a": {
+     "name": "Семёнова Е. В.",
+     "created_at_shop": "east"
+    },
+    "record_b": {
+     "name": "Семенова Елена Викторовна",
+     "created_at_shop": "east"
+    },
+    "difference": "инициалы против полного имени, ё и е",
+    "shared_phone": "+7 907 974-10-53",
+    "car": {
+     "make": "Hyundai",
+     "model": "Solaris",
+     "year": 2015,
+     "vin": "Z94CT41DAFR301213",
+     "vehicle_class": "car",
+     "parc_model": "Solaris",
+     "plate": "Н187КК173"
+    }
+   },
+   {
+    "pair": 5,
+    "record_a": {
+     "name": "ПЕТРОВА ЕЛЕНА НИКОЛАЕВНА",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Петрова Елена Николаевна",
+     "created_at_shop": "west"
+    },
+    "difference": "прописные буквы из массовой загрузки против записи, набранной позже",
+    "shared_phone": "+7 907 878-67-88",
+    "car": {
+     "make": "Volkswagen",
+     "model": "Polo, седан",
+     "year": 2014,
+     "vin": "XW8ZZZ61ZEG230361",
+     "vehicle_class": "car",
+     "parc_model": "Polo седан",
+     "plate": "О429СН16"
+    }
+   },
+   {
+    "pair": 6,
+    "record_a": {
+     "name": "Cмирнов Андрей",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Смирнов Андрей",
+     "created_at_shop": "main"
+    },
+    "difference": "первая буква в записи A — латинская C; на глаз записи одинаковы",
+    "shared_phone": "+7 907 806-42-14",
+    "car": {
+     "make": "LADA",
+     "model": "Vesta, седан",
+     "year": 2018,
+     "vin": "XTAGFL110JY610932",
+     "vehicle_class": "car",
+     "parc_model": "Vesta",
+     "plate": "К305ОЕ73"
+    }
+   },
+   {
+    "pair": 7,
+    "record_a": {
+     "name": "Зарипова Гульнара",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Зарипова Гюльнара",
+     "created_at_shop": "west"
+    },
+    "difference": "два написания татарского имени",
+    "shared_phone": "+7 907 341-70-50",
+    "car": {
+     "make": "Nissan",
+     "model": "X-Trail",
+     "year": 2015,
+     "vin": "Z8NTANT32FS983605",
+     "vehicle_class": "suv",
+     "parc_model": "X-Trail",
+     "plate": "Р471ОТ716"
+    }
+   },
+   {
+    "pair": 8,
+    "record_a": {
+     "name": "Саша Морозов",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Морозов Александр Иванович",
+     "created_at_shop": "main"
+    },
+    "difference": "уменьшительное имя и другой порядок",
+    "shared_phone": "+7 907 707-44-11",
+    "car": {
+     "make": "LADA",
+     "model": "2114",
+     "year": 2008,
+     "vin": null,
+     "vehicle_class": "car",
+     "parc_model": "2108 / 2109 / 21099 и 2113 / 2114 / 2115 (Samara)",
+     "plate": "К559КО73"
+    }
+   },
+   {
+    "pair": 9,
+    "record_a": {
+     "name": "Абдулин Геннадий",
+     "created_at_shop": "east"
+    },
+    "record_b": {
+     "name": "Абдуллин Геннадий",
+     "created_at_shop": "main"
+    },
+    "difference": "одна и две л",
+    "shared_phone": "+7 907 581-52-86",
+    "car": {
+     "make": "LADA",
+     "model": "Largus, универсал",
+     "year": 2015,
+     "vin": "XTAKS045LF2646407",
+     "vehicle_class": "car",
+     "parc_model": "Largus универсал",
+     "plate": "С409УР73"
+    }
+   },
+   {
+    "pair": 10,
+    "record_a": {
+     "name": "Шайхутдинов Рамиль",
+     "created_at_shop": "west"
+    },
+    "record_b": {
+     "name": "Шайхутдинов Рамил",
+     "created_at_shop": "west"
+    },
+    "difference": "мягкий знак",
+    "shared_phone": "+7 907 382-48-88",
+    "car": {
+     "make": "Škoda",
+     "model": "Rapid",
+     "year": 2016,
+     "vin": "XW8AG2NH5GK230536",
+     "vehicle_class": "car",
+     "parc_model": "Rapid",
+     "plate": "Е877СТ716"
+    }
+   },
+   {
+    "pair": 11,
+    "record_a": {
+     "name": "Ершов Данила",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Ершов Даниил",
+     "created_at_shop": "east"
+    },
+    "difference": "Данила и Даниил",
+    "shared_phone": "+7 907 401-29-29",
+    "car": {
+     "make": "Ford",
+     "model": "Focus",
+     "year": 2012,
+     "vin": "X9FMXXEEBMCL78847",
+     "vehicle_class": "car",
+     "parc_model": "Focus I / II / III",
+     "plate": "Е583ТМ73"
+    }
+   },
+   {
+    "pair": 12,
+    "record_a": {
+     "name": "Белова Софья",
+     "created_at_shop": "main"
+    },
+    "record_b": {
+     "name": "Белова София",
+     "created_at_shop": "main"
+    },
+    "difference": "Софья и София",
+    "shared_phone": "+7 907 503-96-76",
+    "car": {
+     "make": "Mitsubishi",
+     "model": "Outlander",
+     "year": 2014,
+     "vin": "Z8TXTGF3WEM916434",
+     "vehicle_class": "suv",
+     "parc_model": "Outlander",
+     "plate": "А320ТА73"
+    }
+   }
+  ],
+  "S15_car_on_the_wrong_customer": [
+   {
+    "case": 1,
+    "shop": "east",
+    "car": {
+     "make": "Kia",
+     "model": "Rio",
+     "year": 2017,
+     "vin": "Z94C241BBHR364143",
+     "vehicle_class": "car",
+     "parc_model": "Rio",
+     "plate": "М105НХ173"
+    },
+    "belongs_to": {
+     "name": "Агапова Марина Олеговна",
+     "phone": "+7 907 854-51-70"
+    },
+    "order_recorded_under": {
+     "name": "Агапов Дмитрий Сергеевич",
+     "phone": "+7 907 487-84-87"
+    },
+    "why": "машину привёз муж, и наряд открыли на его карточку"
+   },
+   {
+    "case": 2,
+    "shop": "main",
+    "car": "Largus-фургон ИП Кузьмичёва А. В. (accounts.json, small business customers)",
+    "belongs_to": {
+     "name": "ИП Кузьмичёв А. В."
+    },
+    "order_recorded_under": {
+     "name": "Кузьмичёв Алексей Владимирович",
+     "phone": "+7 907 608-10-70"
+    },
+    "why": "вместо карточки ИП выбрали личную карточку владельца, и наряд не попал в историю ИП"
+   }
+  ],
+  "story_callers": [
+   {
+    "name": "Олег Тарасов",
+    "phone": "+7 907 214-42-17",
+    "shop": "main",
+    "car": "Škoda Octavia A7, 2015, 1.4 TSI, about 118,000 km",
+    "first_time": true,
+    "source": "calls/ru/01-S4-junior-early.json",
+    "facts": []
+   },
+   {
+    "name": "Виктор Лаптев",
+    "phone": "+7 907 601-84-22",
+    "shop": "main",
+    "car": "Mazda 3, 2012, automatic, about 135,000 km",
+    "first_time": true,
+    "source": "calls/ru/02-S4-junior-month-2.json",
+    "facts": [
+     "Новый клиент Виктор Лаптев, Mazda 3 2012, телефон +7 907 601-84-22. В учётной программе сохранён расчёт на замену масла в АКПП (частичная 6 900, полная 16 300); записи нет."
+    ]
+   },
+   {
+    "name": "Ринат Хайруллин",
+    "phone": "+7 907 318-62-88",
+    "shop": "main",
+    "car": "Renault Duster, 2018, 2.0, about 96,000 km",
+    "first_time": true,
+    "source": "calls/ru/03-S4-junior-month-3.json",
+    "facts": [
+     "Новый клиент на Renault Duster 2018, телефон +7 907 318-62-88. Имя на звонке не спрошено; в наряде на следующий день он Ринат Хайруллин. Запись на следующий день, 10:00: замена масла и фильтра, 8 579,50 по прайсу."
+    ]
+   },
+   {
+    "name": "Наталья Ефимова",
+    "phone": "+7 907 830-66-80",
+    "shop": "main",
+    "car": "Volkswagen Polo sedan, 2016",
+    "first_time": true,
+    "source": "calls/ru/04-S4-junior-month-4.json",
+    "facts": [
+     "Новая клиентка Наталья Ефимова, Volkswagen Polo седан 2016, телефон +7 907 830-66-80. Запись на следующий день, 11:00: диагностика ходовой, 800."
+    ]
+   },
+   {
+    "name": "Андрей Куликов",
+    "phone": "+7 907 211-68-27",
+    "shop": "main",
+    "car": "Lada Granta, 2018",
+    "first_time": true,
+    "source": "calls/ru/05-S4-junior-month-5.json",
+    "facts": [
+     "Новый клиент Андрей Куликов, Lada Granta 2018, телефон +7 907 211-68-27. Запись на пятницу после звонка (через пять дней), 9:00: замена передних стоек стабилизатора, 3 700."
+    ]
+   },
+   {
+    "name": "Гульнара Сафина",
+    "phone": "+7 907 358-36-08",
+    "shop": "main",
+    "car": "Kia Rio, 2017",
+    "first_time": true,
+    "source": "calls/ru/06-S4-junior-now.json",
+    "facts": []
+   },
+   {
+    "name": "Фёдор",
+    "phone": "+7 907 351-38-85",
+    "shop": "main",
+    "car": "unit 12, ГАЗель Next van, 2022, А867СР73 (accounts.json ru.A1 fleet)",
+    "first_time": null,
+    "source": "calls/ru/07-S4-driver-says-go-ahead.json",
+    "facts": [
+     "Фёдор, водитель «Симбирского гонца» (A1), машина № 12 (ГАЗель Next 2022, А867СР73), телефон +7 907 351-38-85.",
+     "В день звонка у A1 открыт наряд на № 12: ТО коммерческого автомобиля по договорной цене (8 724) и добавленные по звонку работы на 9 500: замена левой шаровой опоры, сход-развал, замена тормозной жидкости. Работы согласовал водитель, а не Кравцов.",
+     "Исходящий звонок с 102 на номер водителя около 17:50 того же дня: машина готова (обещанный звонок выполнен)."
+    ]
+   },
+   {
+    "name": "Вероника Крылова",
+    "phone": "+7 907 549-79-22",
+    "shop": "main",
+    "car": "Lada Vesta, 2018",
+    "first_time": true,
+    "source": "calls/ru/12-S12-brakes-from-the-stale-page.json",
+    "facts": [
+     "Клиентка на Lada Vesta 2018, телефон +7 907 549-79-22. Имя на звонке не спрошено (в файле она Вероника Крылова); записи нет."
+    ]
+   },
+   {
+    "name": "Радик Валиев",
+    "phone": "+7 907 250-23-14",
+    "shop": "main",
+    "car": "Chevrolet Lacetti, 2010",
+    "first_time": true,
+    "source": "calls/ru/13-people-newcomer-first-weeks.json",
+    "facts": [
+     "Клиент Радик Валиев, Chevrolet Lacetti 2010, телефон +7 907 250-23-14.",
+     "Исходящий звонок с 103 на номер клиента около 11:25 того же дня: аккумулятор есть (обещанный звонок выполнен). Приехал ли клиент, история не говорит."
+    ]
+   },
+   {
+    "name": "Алексей Тихонов",
+    "phone": "+7 907 504-97-29",
+    "shop": "main",
+    "car": "Škoda Rapid, 2017",
+    "first_time": true,
+    "source": "calls/ru/14-people-newcomer-improving.json",
+    "facts": [
+     "Новый клиент Алексей Тихонов, Škoda Rapid 2017, телефон +7 907 504-97-29 (на звонке взято только имя). Запись на среду после звонка (через три дня), 14:00: замена ремня привода навесных агрегатов, 2 750."
+    ]
+   },
+   {
+    "name": "Сергей Ганин",
+    "phone": "+7 907 913-73-68",
+    "shop": "east",
+    "car": "Kia Ceed, 2014, about 140,000 km",
+    "first_time": true,
+    "source": "calls/ru/26-S5-doubt-answered-in-full.json",
+    "facts": [
+     "Новый клиент Сергей Ганин, Kia Ceed 2014, телефон +7 907 913-73-68. Запись на следующий день, 10:00: замена передних стоек (18 580) и сход-развал (3 000)."
+    ]
+   },
+   {
+    "name": "Николай Иванович Пчелинцев",
+    "phone": "+7 907 552-45-96",
+    "shop": "east",
+    "car": "his daughter's Lada Granta, 2020, 45,000 km, new to the shop",
+    "first_time": false,
+    "source": "calls/ru/27-S5-regular-asks-for-her.json",
+    "facts": [
+     "Постоянный клиент восточного сервиса Николай Иванович Пчелинцев (УАЗ Патриот; последняя работа по нему: ступица), телефон +7 907 552-45-96.",
+     "Наряд на Lada Granta 2020 его дочери Анастасии в четверг после звонка, 10:00: замена масла и фильтров, 9 890; плательщик Пчелинцев."
+    ]
+   },
+   {
+    "name": "Людмила Аркадьевна Жукова",
+    "phone": "+7 907 423-30-82",
+    "shop": "east",
+    "car": "Toyota Corolla, 2014",
+    "first_time": false,
+    "source": "calls/ru/28-S5-is-she-in.json",
+    "facts": [
+     "Постоянная клиентка восточного сервиса Людмила Аркадьевна Жукова (Toyota Corolla 2014), телефон +7 907 423-30-82. Перезвонила ли она в четверг, история не говорит."
+    ]
+   },
+   {
+    "name": "Денис Маркелов",
+    "phone": "+7 907 461-14-93",
+    "shop": "main",
+    "car": "Mitsubishi Lancer X, 2011",
+    "first_time": false,
+    "source": "calls/ru/29-people-loose-wheel-nuts.json",
+    "facts": [
+     "Клиент Денис Маркелов, Mitsubishi Lancer X 2011, телефон +7 907 461-14-93.",
+     "Накануне звонка (четверг) у него наряд на главной площадке: замена передних колодок и дисков, механик Максим Рябов (место 11).",
+     "В день звонка гарантийный наряд, указывающий на вчерашний: гайки левого переднего колеса не были затянуты; мастер цеха снял оба передних колеса, проверил шпильки и диски, протянул гайки. Эвакуатор не понадобился."
+    ]
+   },
+   {
+    "name": "Ирина Белоглазова",
+    "phone": "+7 907 705-78-26",
+    "shop": "main",
+    "car": "Nissan Qashqai, 2016",
+    "first_time": false,
+    "source": "calls/ru/30-people-undertray-rattles.json",
+    "facts": [
+     "Клиентка Ирина Белоглазова, Nissan Qashqai 2016, телефон +7 907 705-78-26.",
+     "За два дня до звонка (четверг) у неё наряд на главной площадке: замена масла и фильтра, механик Максим Рябов (место 11).",
+     "В день звонка, 14:00, гарантийный наряд, указывающий на тот: защита двигателя закреплена на все болты, пробка поддона проверена."
+    ]
+   },
+   {
+    "name": "Тимур Айдаров",
+    "phone": "+7 907 274-37-28",
+    "shop": "main",
+    "car": "Chevrolet Cruze, 2013",
+    "first_time": true,
+    "source": "calls/ru/31-S3-rang-three-times.json",
+    "facts": [
+     "Клиент Тимур Айдаров, Chevrolet Cruze 2013, телефон +7 907 274-37-28.",
+     "Два пропущенных с его номера в то же утро, 09:06 и 09:21, первый стол 101; оба сняты этим звонком (got_through).",
+     "Запись в тот же день на 13:00: компьютерная диагностика двигателя, 1 200."
+    ]
+   },
+   {
+    "name": "Вадим Рожков",
+    "phone": "+7 907 610-96-87",
+    "shop": "main",
+    "car": "Renault Sandero, 2016",
+    "first_time": true,
+    "source": "calls/ru/32-S3-early-desk-answers.json",
+    "facts": [
+     "Новый клиент Вадим Рожков, Renault Sandero 2016, телефон +7 907 610-96-87 (на звонке взято только имя). Запись на следующий день, 9:30: замена основного глушителя, 9 180."
+    ]
+   },
+   {
+    "name": "Ленар",
+    "phone": "+7 907 877-40-74",
+    "shop": "west",
+    "car": "Lada Priora, 2012",
+    "first_time": false,
+    "source": "calls/ru/33-people-shop-manager-just-bring-it-by.json",
+    "facts": [
+     "Клиент казанского сервиса Ленар, Lada Priora 2012, телефон +7 907 877-40-74; его отец Фарид давно обслуживается на Технической. Позвонил ли он снова, история не говорит."
+    ]
+   },
+   {
+    "name": "Рашид",
+    "phone": "+7 907 412-16-80",
+    "shop": "west",
+    "car": "Toyota Camry, 2012",
+    "first_time": false,
+    "source": "calls/ru/34-people-shop-manager-first-name-terms.json",
+    "facts": [
+     "Клиент казанского сервиса Рашид, Toyota Camry 2012, телефон +7 907 412-16-80. Позвонил ли он снова, история не говорит."
+    ]
+   },
+   {
+    "name": "Лилия Хабибуллина",
+    "phone": "+7 907 694-96-98",
+    "shop": "west",
+    "car": "Nissan Almera, 2014",
+    "first_time": true,
+    "source": "calls/ru/35-people-bright-spot-early.json",
+    "facts": [
+     "Клиентка Лилия Хабибуллина, Nissan Almera 2014, телефон +7 907 694-96-98 (на звонке названо только имя); записи нет."
+    ]
+   },
+   {
+    "name": "Эдуард Сабиров",
+    "phone": "+7 907 411-81-94",
+    "shop": "west",
+    "car": "Haval Jolion, 2022",
+    "first_time": true,
+    "source": "calls/ru/36-people-bright-spot-firmer.json",
+    "facts": [
+     "Новый клиент Эдуард Сабиров, Haval Jolion 2022, телефон +7 907 411-81-94 (на звонке названо только имя). Запись в день звонка, 16:00: сход-развал, 3 450."
+    ]
+   }
+  ],
+  "story_chat_customers": [
+   {
+    "name": "Марина Захарова",
+    "phone": null,
+    "shop": "east",
+    "car": "Volkswagen Polo 2017",
+    "first_time": false,
+    "source": "conversations/ru/08-s13-vk-stocktake-regular.json",
+    "facts": [
+     "Марина Захарова, постоянная клиентка east, Volkswagen Polo 2017 (в образце была Kia Rio 2017: такая же машина в named_customers.json записана на другую Марину того же сервиса), задние колодки рекомендованы на прошлом ТО; запись на понедельник недели W+1, 14:00, принимает слот 16.",
+     "«Принимаю я» сказано про понедельник, её последний рабочий день перед неделей отпуска (S5); на дни внутри этой недели она никого на себя не записывает и вторым временем называет субботу у Артёма (слот 17), его смену.",
+     "Картинка контакта: набережная Волги зимой."
+    ]
+   },
+   {
+    "name": "Ильнур Сабиров",
+    "phone": null,
+    "shop": "main",
+    "car": "Renault Duster 2014",
+    "first_time": false,
+    "source": "conversations/ru/09-people-p05-telegram-itog.json",
+    "facts": [
+     "Ильнур Сабиров (в Telegram «Ильнур»), Renault Duster 2014: замена переднего левого ступичного подшипника на main в первый рабочий день слота 5 начиная с четверга недели T-18: 7 902 по прайсу, 8 019,99 с расходными материалами (НДС в том числе); утром по телефону ему назвали сумму без расходных материалов.",
+     "Картинка контакта: белый Duster у реки."
+    ]
+   },
+   {
+    "name": "Руслан",
+    "phone": null,
+    "shop": null,
+    "car": "LADA Granta 2018, 8 кл.",
+    "first_time": true,
+    "source": "conversations/ru/10-people-p05-avito-sceplenie.json",
+    "facts": [
+     "Объявление сервиса на Авито «Замена сцепления: Granta, Vesta, Largus, Logan. Московское шоссе» (идентификаторы под .example).",
+     "Руслан, LADA Granta 2018, 8 кл., свой комплект сцепления Valeo; запись — по его звонку (звонок в набор звонков не входит).",
+     "У контакта нет картинки."
+    ]
+   },
+   {
+    "name": "Ксения Мартынова",
+    "phone": null,
+    "shop": "main",
+    "car": "LADA Vesta 2019",
+    "first_time": true,
+    "source": "conversations/ru/11-people-p06-vk-zapis-na-maslo.json",
+    "facts": [
+     "Ксения Мартынова, LADA Vesta 2019: замена масла на main в субботу недели T-11, 10:00.",
+     "Картинка контакта: рыжий кот на подоконнике."
+    ]
+   },
+   {
+    "name": "Эльвира Насибуллина",
+    "phone": null,
+    "shop": "main",
+    "car": "Kia Sportage 2017",
+    "first_time": false,
+    "source": "conversations/ru/12-people-p06-telegram-naydennye-raboty.json",
+    "facts": [
+     "Эльвира Насибуллина (в Telegram «Эльвира»), Kia Sportage 2017, main, первый рабочий день слота 6 начиная с пятницы недели T-5: ТО; стойки стабилизатора согласованы, 4 463; щётки стеклоочистителя — отказ, 3 403.",
+     "Фото sportage_stoyka.jpg и sportage_schetki.jpg (пулы 'worn-part-sway-link', 'worn-wiper').",
+     "У контакта нет картинки."
+    ]
+   },
+   {
+    "name": "Саня",
+    "phone": null,
+    "shop": "main",
+    "car": "Renault Logan 2014",
+    "first_time": true,
+    "source": "conversations/ru/13-people-p07-avito-pervyy-iz-dvuh.json",
+    "facts": [
+     "Объявление сервиса на Авито «Ремонт ходовой: ШРУСы, стойки, рычаги, ступичные подшипники. Московское шоссе».",
+     "«Саня», Renault Logan 2014: замена левого наружного ШРУСа на main на следующий день после чата, 09:00; запись без телефона.",
+     "Картинка контакта: серебристый Logan у гаражей."
+    ]
+   },
+   {
+    "name": "Денис",
+    "phone": "+7 907 215-63-08",
+    "shop": "main",
+    "car": "Kia Rio",
+    "first_time": true,
+    "source": "conversations/ru/14-people-p07-web-shinomontazh.json",
+    "facts": [
+     "Денис, +7 907 215-63-08, Kia Rio R15: сезонная замена шин на main в первый рабочий день слота 7 начиная со вторника недели T-3, 18:00; спросил про хранение летних колёс (3 000 за сезон)."
+    ]
+   },
+   {
+    "name": "Галина Петровна Сорокина",
+    "phone": null,
+    "shop": "east",
+    "car": "LADA Granta 2020",
+    "first_time": false,
+    "source": "conversations/ru/15-people-p16-telegram-kondicioner.json",
+    "facts": [
+     "Галина Петровна Сорокина, LADA Granta 2020, east: заправка кондиционера на неделе T-16; бесплатная проверка на утечку по гарантии на следующий день после чата, 09:30 (гарантийный заказ со ссылкой на первый).",
+     "Картинка контакта: куст сирени у забора."
+    ]
+   },
+   {
+    "name": "Антон",
+    "phone": "+7 907 441-09-27",
+    "shop": "east",
+    "car": "Skoda Octavia 2014, пока чужая",
+    "first_time": true,
+    "source": "conversations/ru/16-people-p16-web-pered-pokupkoy.json",
+    "facts": [
+     "Антон, +7 907 441-09-27: диагностика перед покупкой Skoda Octavia 2014 на east в среду недели T-7, 11:00; принимает слот 17."
+    ]
+   },
+   {
+    "name": "Вадим",
+    "phone": null,
+    "shop": "east",
+    "car": "Chevrolet Cruze 2012",
+    "first_time": true,
+    "source": "conversations/ru/17-people-p17-vk-ne-segodnya.json",
+    "facts": [
+     "Вадим Корнеев («ВКонтакте»), Chevrolet Cruze 2012: спрашивал сход-развал на east (3 000) после удара о яму; не приехал.",
+     "Картинка контакта: чёрный Cruze на парковке."
+    ]
+   },
+   {
+    "name": "Олег",
+    "phone": null,
+    "shop": "east",
+    "car": "кроссовер, R16 (модель не названа)",
+    "first_time": true,
+    "source": "conversations/ru/18-people-p17-avito-shiny-hranenie.json",
+    "facts": [
+     "Объявление сервиса на Авито «Шиномонтаж, балансировка, сезонное хранение шин. Новый город».",
+     "«Олег», кроссовер R16: шиномонтаж на east в среду недели T-4, 18:30; спрашивал про хранение.",
+     "У контакта нет картинки."
+    ]
+   },
+   {
+    "name": "Марат Нуриев",
+    "phone": null,
+    "shop": "west",
+    "car": "отцовская «Нива» (год не назван)",
+    "first_time": false,
+    "source": "conversations/ru/19-people-p22-telegram-prigonyay.json",
+    "facts": [
+     "Марат Нуриев, давний клиент west, отцовская «Нива» (перегрев, повторно), визит без записи во вторник недели T-16.",
+     "Картинка контакта: река, камыши и закат."
+    ]
+   },
+   {
+    "name": "Фарид",
+    "phone": "+7 907 551-34-26",
+    "shop": "west",
+    "car": null,
+    "first_time": false,
+    "source": "conversations/ru/20-people-p22-web-rashodnye-materialy.json",
+    "facts": [
+     "Фарид, +7 907 551-34-26: замена помпы на west, машину забрал во вторник недели T-9; в наряде расходные материалы 125,40 (3 % от работы 4 180)."
+    ]
+   },
+   {
+    "name": "Ильдар",
+    "phone": null,
+    "shop": "west",
+    "car": "Volkswagen Polo 2015",
+    "first_time": false,
+    "source": "conversations/ru/21-people-p23-telegram-v-lyuboe-vremya.json",
+    "facts": [
+     "«Ильдар», Volkswagen Polo 2015: спрашивал запись на замену масла на выходные на west; запись не сделана.",
+     "Картинка контакта: овчарка на заднем сиденье."
+    ]
+   },
+   {
+    "name": "Регина",
+    "phone": "+7 907 612-05-84",
+    "shop": "west",
+    "car": null,
+    "first_time": false,
+    "source": "conversations/ru/22-people-p23-web-rekomendaciya-v-naryade.json",
+    "facts": [
+     "Регина, +7 907 612-05-84: машину забрала на west накануне чата; в наряде рекомендация «замена передних тормозных колодок, остаток 2 мм» (4 560), не продана. Марка машины в чате не названа."
+    ]
+   },
+   {
+    "name": "Тимур Валеев",
+    "phone": null,
+    "shop": "west",
+    "car": "Hyundai Creta 2018",
+    "first_time": false,
+    "source": "conversations/ru/23-people-p24-telegram-smeta-faylom.json",
+    "facts": [
+     "Тимур Валеев, Hyundai Creta 2018, west, первый рабочий день слота 24 начиная с пятницы недели T-10: опрессовка 950, замена помпы 13 366, замена ремня 3 313,50; итог с расходными материалами в чате: 17 836,41, НДС в том числе.",
+     "Файл Smeta_Creta_Valeev.pdf (пул 'estimate-pdf').",
+     "Картинка контакта: белая Creta у подъезда."
+    ]
+   },
+   {
+    "name": "Айдар",
+    "phone": null,
+    "shop": "west",
+    "car": "Hyundai Solaris 2019",
+    "first_time": true,
+    "source": "conversations/ru/24-people-p24-avito-kondicioner.json",
+    "facts": [
+     "Объявление сервиса на Авито «Заправка и ремонт автокондиционеров. Казань, Техническая».",
+     "«Айдар», Hyundai Solaris 2019: заправка кондиционера на west в первый рабочий день слота 24 начиная со вторника недели T-17, 17:00.",
+     "У контакта нет картинки."
+    ]
+   },
+   {
+    "name": "Сергей",
+    "phone": "+7 907 302-71-45",
+    "shop": "east",
+    "car": "LADA Priora 2012",
+    "first_time": true,
+    "source": "conversations/ru/25-r13-web-one-question.json",
+    "facts": [
+     "Сергей, +7 907 302-71-45, LADA Priora 2012: компьютерная диагностика двигателя на east в четверг недели T-13, 18:00; принимает слот 17."
+    ]
+   },
+   {
+    "name": "Николай Иванович Кузьмин",
+    "phone": null,
+    "shop": "main",
+    "car": "Toyota Corolla 2010",
+    "first_time": false,
+    "source": "conversations/ru/26-r13-telegram-two-questions.json",
+    "facts": [
+     "Николай Иванович Кузьмин (в Telegram «Николай Иванович»), Toyota Corolla 2010, постоянный клиент main: в апреле сезонная замена шин, в мае сход-развал; запись на четверг недели T-6, 11:00: сезонная замена шин и сход-развал.",
+     "У контакта нет картинки."
+    ]
+   },
+   {
+    "name": "Эдуард",
+    "phone": null,
+    "shop": null,
+    "car": null,
+    "first_time": true,
+    "source": "conversations/ru/27-r13-avito-never-clear.json",
+    "facts": [
+     "Объявление сервиса на Авито «Ремонт ходовой, диагностика подвески. Новый город».",
+     "«Эдуард»: спрашивал замену «стоек», машину не назвал, не приехал.",
+     "У контакта нет картинки."
+    ]
+   }
+  ]
+ }
+}

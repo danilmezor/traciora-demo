@@ -1,0 +1,117 @@
+{
+ "path": "customers/what-we-do.md",
+ "title": "What we work on, and what we don't",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "Scope of work for the public: services offered, and the work we send out or decline.",
+ "serves": [
+  "S7",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_en": 191,
+ "links_to": [
+  "customers/hybrids-and-electric-cars.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Service list mirrors the ten catalogue categories.",
+  "Transmission rebuilds are sublet to a transmission specialist in Chattanooga (vendor V6, not named to customers); glass is done on site by a glass company (V7) at the Chattanooga shops only.",
+  "Emissions tests and state inspections are deliberately not mentioned anywhere in the base: a planted \"the knowledge base does not say\"."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What we do",
+   "item": "Maintenance by mileage: oil service, filters, fluids, spark plugs, belts"
+  },
+  {
+   "section": "What we do",
+   "item": "Brakes"
+  },
+  {
+   "section": "What we do",
+   "item": "Tires, balancing and four-wheel alignment"
+  },
+  {
+   "section": "What we do",
+   "item": "Check engine light and electrical diagnosis"
+  },
+  {
+   "section": "What we do",
+   "item": "Steering and suspension"
+  },
+  {
+   "section": "What we do",
+   "item": "Air conditioning"
+  },
+  {
+   "section": "What we do",
+   "item": "Batteries, starters and alternators"
+  },
+  {
+   "section": "What we do",
+   "item": "Cooling system, timing belts, leaks, engine mounts, exhaust"
+  },
+  {
+   "section": "What we do",
+   "item": "Transmission fluid service, clutches, CV axles"
+  },
+  {
+   "section": "What we do",
+   "item": "Inspections before you buy a used car"
+  },
+  {
+   "section": "What we do",
+   "item": "Service for company vehicles, on account for approved businesses"
+  },
+  {
+   "section": "What we send out",
+   "item": "Transmission rebuilds. We remove and refit the transmission; a transmission specialist in Chattanooga rebuilds it. One bill, ours."
+  },
+  {
+   "section": "What we send out",
+   "item": "Glass. A glass company replaces windshields and door glass at our Chattanooga shops by appointment."
+  },
+  {
+   "section": "What we don't do",
+   "item": "Body and paint work"
+  },
+  {
+   "section": "What we don't do",
+   "item": "Repairs to the high-voltage system of hybrid and electric cars (details)"
+  },
+  {
+   "section": "What we don't do",
+   "item": "Diesel engine overhaul"
+  },
+  {
+   "section": "What we don't do",
+   "item": "Motorcycles, RVs and anything over one ton"
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Not done: body and paint, hybrid/EV high-voltage repairs, diesel engine overhaul, motorcycles, RVs, vehicles over one ton. Reason: the design names the hybrid and EV limit; the rest is the usual line of a general repair shop."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Add seasonal tyre changeover and tyre storage to the list (a large part of the Russian year). Glass: the Russian vendors file decides whether it is sublet."
+ ]
+}

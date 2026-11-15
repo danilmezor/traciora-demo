@@ -1,0 +1,43 @@
+{
+ "path": "team/the-call-in-eight-moves.pptx",
+ "title": "Звонок в восемь шагов",
+ "title_en": "The call, in eight moves",
+ "exists_in": "both",
+ "english_sheet": "facts/team/the-call-in-eight-moves.pptx.json",
+ "kind": "binary",
+ "format": "PPTX, 10 titled slides",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "The lead advisor's ten-slide training deck on taking a call.",
+ "serves": [
+  "S4",
+  "challenge:fact-only-in-attachment",
+  "challenge:near-duplicate"
+ ],
+ "draft": "ru/_binaries.md",
+ "russian_form": "the lead advisor's ten-slide training deck",
+ "facts": [],
+ "facts_only_in_this_file": [
+  "the three sentences of slide 9"
+ ],
+ "differs_from_en": [
+  "Ten slides in slot 16's Russian voice. Slide 9, the three sentences: «Без проблем», «Должно быть готово», «У нас на всё гарантия».",
+  "Slide 6 uses the Russian brake-inspection price (700 RUB); slide 8 names the Russian warranty (30 days on the work, the maker's on the part).",
+  "Agrees with how-to/taking-a-call.md and how-to/price-objections.md."
+ ],
+ "new_facts": [],
+ "to_verify": [],
+ "settled": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "file uploaded for slot 16 (binary uploads are edits: published by slot 4)",
+   "message_ru": "Учебная презентация Светы."
+  }
+ ],
+ "has_history": false
+}

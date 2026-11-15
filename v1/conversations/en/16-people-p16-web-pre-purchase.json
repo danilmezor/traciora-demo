@@ -1,0 +1,136 @@
+{
+  "format": "seed-conversation/1",
+  "id": "16-people-p16-web-pre-purchase",
+  "configuration": "en",
+  "number": 16,
+  "story": "people",
+  "title": "After hours: a used car to be checked before it is bought",
+  "demonstrates": "The web chat at 19:42. The assistant gives the public price, takes the name, number and shop, hands over. Slot 16 answers six minutes after opening: the name twice, 'if it were my money', what the inspection is, two times; then the summary with the address and what to bring.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Tasha Reed",
+      "invented": true,
+      "first_time": true,
+      "note": "first visit; she is buying a 2015 Honda Pilot from a lot",
+      "phone": "(423) 555-0407"
+    },
+    "staff": [
+      {"slot": 16, "name": "Angie Holloway"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Somebody about to buy a used car, in the evening.",
+    "vehicle": "a 2015 Honda Pilot she does not own yet",
+    "what_happens": "Price from the list after hours, a hand-over, and the next morning two times on the day the seller allows.",
+    "facts": {
+      "booked": "the Wednesday of week T-7, 08:30, at east",
+      "inspection_hours": "1.5 (catalogue): 'about an hour and a half'",
+      "public_pages_used": ["price list: pre-purchase inspection", "hours and locations"],
+      "prices": [
+        {"said": "$149.95", "amount": 149.95, "what": "pre-purchase inspection with road test and written report, menu price", "from": {"catalogue": "pre_purchase_inspection", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-53d": {"anchor": "the Monday of week T-7", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 7}, "nominal": "Mon 2026-09-21"},
+    "T-52d": {"anchor": "1 calendar day after the Monday of week T-7", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 7, "plus_days": 1}, "nominal": "Tue 2026-09-22", "what": "the next morning"},
+    "T-51d": {"anchor": "the Wednesday of week T-7", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 7}, "nominal": "Wed 2026-09-23", "what": "the inspection"}
+  },
+  "floating_days": [
+    {"word": "tomorrow", "said_on": "T-53d", "day": "T-52d"},
+    {"word": "wednesday", "said_on": "T-53d", "day": "the Wednesday of week T-7"},
+    {"word": "Wednesday at 8:00", "said_on": "T-52d", "day": "the Wednesday of week T-7"},
+    {"word": "Wednesday at 8:30", "said_on": "T-52d", "day": "the Wednesday of week T-7"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "east",
+      "thread_key": "5eedc0de-0016-4e00-8000-00000000e010",
+      "peer": {"id": "seedv1-browser-en-0590", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0590",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-53d", "at": "19:42:10", "status": "pending", "arrived_closed": true},
+      "timeline": [
+        {"n": 1, "day": "T-53d", "at": "19:42:10", "kind": "message", "from": "customer", "text": "hey do you check out used cars before someone buys them"},
+        {"n": 2, "day": "T-53d", "at": "19:42:34", "kind": "message", "from": "assistant", "text": "Hi! I'm the assistant for Brennan Auto Care. Yes: a pre-purchase inspection with a road test and a written report is $149.95. The shops are closed now and open at 7:30 tomorrow. Would you like me to ask the shop to set one up?"},
+        {"n": 3, "day": "T-53d", "at": "19:43:20", "kind": "message", "from": "customer", "text": "yes its at a lot, 2015 honda pilot. guy says i can take it for a couple hours wednesday"},
+        {"n": 4, "day": "T-53d", "at": "19:43:45", "kind": "message", "from": "assistant", "text": "I can't book a time myself, but I'll pass it on. What's your name and the best number for you, and which shop is closer: East Main Street or Bonny Oaks Drive?"},
+        {"n": 5, "day": "T-53d", "at": "19:44:20", "kind": "message", "from": "customer", "text": "bonny oaks. Tasha Reed 423 555 0407"},
+        {"n": 6, "day": "T-53d", "at": "19:44:44", "kind": "message", "from": "assistant", "text": "Thank you, Tasha. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 7, "day": "T-53d", "at": "19:44:45", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Tasha Reed", "phone": "(423) 555-0407", "site": "bonny oaks", "context": "Tasha Reed is buying a 2015 Honda Pilot from a lot and wants a pre-purchase inspection; the seller lets her take the car for a couple of hours on Wednesday. I gave the price, $149.95. Bonny Oaks Drive."}}, "note": {"from": "assistant", "private": true, "text": "Tasha Reed is buying a 2015 Honda Pilot from a lot and wants a pre-purchase inspection; the seller lets her take the car for a couple of hours on Wednesday. I gave the price, $149.95. Bonny Oaks Drive."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "east", "owner": null, "due": "T-52d 17:30, the next open day's close"}},
+        {"n": 8, "day": "T-52d", "at": "07:35:48", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 9, "day": "T-52d", "at": "07:35:50", "kind": "message", "from": "staff", "slot": 16, "text": "Good morning, Tasha, this is Angie at Bonny Oaks. Good for you for having it checked before you sign anything, Tasha; if it were my money I'd do the same. The inspection is $149.95 and takes about an hour and a half: a road test, up on the lift, and a written report you can take back to the seller. I can take it as a drop-off Wednesday at 8:00 or Wednesday at 8:30. Which is easier with the lot?\nAngie"},
+        {"n": 10, "day": "T-52d", "at": "07:35:51", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 16, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-52d", "at": "07:52:10", "kind": "message", "from": "customer", "text": "8:30 is better"},
+        {"n": 12, "day": "T-52d", "at": "07:52:50", "kind": "draft", "id": "d1", "text": "Thank you, Tasha. Wednesday at 8:30 works. See you then at 6340 Bonny Oaks Drive.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-52d", "at": "07:56:00", "became": 13}},
+        {"n": 13, "day": "T-52d", "at": "07:56:00", "kind": "message", "from": "staff", "slot": 16, "text": "You're set, Tasha: Wednesday at 8:30, pre-purchase inspection on the 2015 Pilot, here at 6340 Bonny Oaks Drive. Ask the lot for the keys and any service records they have, and I'll go over the report with you before you leave.\nAngie"},
+        {"n": 14, "day": "T-52d", "at": "07:56:20", "kind": "activity", "what": "label_added", "label": "booking", "by": 16},
+        {"n": 15, "day": "T-52d", "at": "07:56:40", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-52d", "at": "07:35:48", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["booking"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 25},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 24},
+          {"asked": 7, "answered": 9, "by": 16, "working_minutes": 5.8, "wall_minutes": 711.1, "measured_from": "n 7", "reply": "first"},
+          {"asked": 11, "answered": 13, "by": 16, "working_minutes": 3.8, "wall_minutes": 3.8, "measured_from": "n 11", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 9,
+          "working_minutes": 5.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 4, "assistant": 3, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-52d", "at": "07:56:40", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 16: her first line 5.8 working minutes after opening, two replies, one draft edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "assistant first, handed over (scheduling), slot 16",
+    "outcome": "pre-purchase inspection booked, Wednesday 08:30, at east; resolved by slot 16",
+    "facts": [
+      "asked after closing; the assistant answered in 24 seconds with the public price, 149.95",
+      "slot 16 replied 5.8 working minutes after the shop opened"
+    ],
+    "questions": []
+  },
+  "why": [
+    "A question asked at 19:42 has its price at 19:42 and its time at 7:35.",
+    "Angie's message is longer than anyone else's and none of it is filler.",
+    "The summary carries the address; she is the advisor who never forgets it."
+  ],
+  "new_facts": [
+    "Tasha Reed, (423) 555-0407 (tier B): a pre-purchase inspection of a 2015 Honda Pilot at east on the Wednesday of week T-7 at 08:30."
+  ]
+}

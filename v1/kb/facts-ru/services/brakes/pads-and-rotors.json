@@ -1,0 +1,277 @@
+{
+ "path": "services/brakes/pads-and-rotors.md",
+ "title": "Колодки и диски",
+ "title_en": "Pads and rotors",
+ "exists_in": "both",
+ "english_sheet": "facts/services/brakes/pads-and-rotors.json",
+ "first_revision_text": "ru/_history/services/brakes/pads-and-rotors.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The main brake job: pads alone or with rotors, the three parts tiers, what to say.",
+ "serves": [
+  "S7",
+  "S6",
+  "S12",
+  "challenge:fact-in-table",
+  "challenge:customer-terms",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "medium",
+ "words_ru": 455,
+ "links_to": [
+  "prices/labour-rates-and-fees.md",
+  "parts/brake-pads-we-fit.md",
+  "policies/customer-supplied-parts.md",
+  "how-to/a-comeback-at-the-counter.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Four catalogue jobs under their Russian order names, hours and the three tier totals.",
+  "Disc machining (проточка) is common in Russia: the page says the shop does not do it.",
+  "Pads: Sangsin Hi-Q (standard), TRW (premium), Marshall (economy).",
+  "Warranty: 30 days on the work; pads and discs against factory defects.",
+  "A row on the customer's own pads. «Делаем?» is slot 16's closing word.",
+  "The competitor figure is a customer's words, written in words."
+ ],
+ "new_facts": [
+  "The shop does not machine discs (no catalogue job)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Что продаём",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Эконом / Стандарт / Премиум"
+   ],
+   "rows": [
+    {
+     "В наряде": "Замена передних тормозных дисков и колодок",
+     "Н/ч": "1,8",
+     "Эконом / Стандарт / Премиум": "9 640 ₽ / 12 520 ₽ / 16 030 ₽"
+    },
+    {
+     "В наряде": "Замена задних тормозных дисков и колодок",
+     "Н/ч": "1,8",
+     "Эконом / Стандарт / Премиум": "8 820 ₽ / 11 260 ₽ / 14 210 ₽"
+    },
+    {
+     "В наряде": "Замена передних тормозных колодок",
+     "Н/ч": "1",
+     "Эконом / Стандарт / Премиум": "3 620 ₽ / 4 560 ₽ / 5 670 ₽"
+    },
+    {
+     "В наряде": "Замена задних тормозных колодок (дисковые тормоза)",
+     "Н/ч": "1",
+     "Эконом / Стандарт / Премиум": "3 400 ₽ / 4 140 ₽ / 5 150 ₽"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "По телефону",
+   "item": "Ни одной цены без машины и без слова «если». «Если нужны передние диски с колодками, на ваш Solaris это 12 520 ₽. Если диски в допуске — 4 560 ₽. Что именно, покажет диагностика»."
+  },
+  {
+   "section": "По телефону",
+   "item": "Потом время. Машина, которую поставили к девяти, к вечеру готова, если запчасти на полке. На ходовые модели они на полке."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«В другом сервисе сказали пять тысяч за тормоза». «За одни колодки, на одну ось и с самыми дешёвыми колодками. Про диски скажут, когда снимут колёса. У нас с колодками эконом — 3 620 ₽. Посчитать вам оба варианта?»"
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«А можно только колодки?» «Если диски в допуске — да, и я вам так и скажу. Если нет, лучше не делать ничего, чем выбросить деньги на колодки»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«А свои колодки можно?» Можно: Запчасти клиента. Гарантия тогда только на установку."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«Скрипят, а меняли недавно». Где? У нас и месяца не прошло — это возврат, смотрим бесплатно. Не у нас — диагностика."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "hours",
+   "class": "car",
+   "value": 1.8
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 9640.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 12520.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 16030.0
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "hours",
+   "class": "car",
+   "value": 1.8
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 8820.0
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 11260.0
+  },
+  {
+   "catalogue_key": "rear_pads_rotors",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 14210.0
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3620.0
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4560.0
+  },
+  {
+   "catalogue_key": "front_brake_pads",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 5670.0
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3400.0
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 4140.0
+  },
+  {
+   "catalogue_key": "rear_brake_pads",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 5150.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  3400.0,
+  3620.0,
+  4140.0,
+  4560.0,
+  5150.0,
+  5670.0,
+  8820.0,
+  9640.0,
+  11260.0,
+  12520.0,
+  14210.0,
+  16030.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

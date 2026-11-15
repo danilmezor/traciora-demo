@@ -1,0 +1,7 @@
+schema.sql: 31 tables, 262 columns, 25 enumerated columns
+dictionary.md: 31 tables, 262 columns documented
+generator-spec.md: 14 table.column references and 292 distinct bare names checked; every table has a section
+context/: RULES.md and 31 table notes; 14 table.column references checked; every backticked name exists
+checks.sql: 270 checks, 269 distinct ledger keys, 3631 alias.column references checked
+sqlglot 30.23.0: schema.sql and checks.sql parse as Postgres (0 errors)
+VALIDATE PASS

@@ -1,0 +1,139 @@
+{
+ "path": "policies/discounts.md",
+ "title": "Скидки",
+ "title_en": "Discount policy",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/discounts.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The discount rule created after story S2.",
+ "serves": [
+  "S2",
+  "S8",
+  "challenge:policy-vs-team-note",
+  "operate:find-what-changed",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 291,
+ "links_to": [
+  "policies/voids-and-refunds.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Same rule and percentages (ledger price.discount_rule_pct, price.discount_base: the bill at list before the discount, as billed, VAT inside; the share is the same before VAT, so the page names no tax).",
+  "The forbidden list adds the Russian form of the leak: a price \"without paperwork\", work with no order, a part with no order line (design R11).",
+  "S8 in Russian: 1 800 RUB off a bill of 16 182,40 as billed (VAT inside) is 11.1 %, approved by slot 4 and recorded: inside the rule. Slot 23 gave 12 % twice in the last 30 days with no approver: outside it."
+ ],
+ "new_facts": [
+  "The advisor's own limit is up to 10 % with a written reason; lead advisors cannot approve above it; slot 2 is the fallback approver (as in English)."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Правило",
+   "item": "До 10 % от суммы заказ-наряда мастер-приёмщик может дать сам. Причину пишет в наряде."
+  },
+  {
+   "section": "Правило",
+   "item": "Больше 10 % согласует руководитель, до закрытия наряда, и в наряде видно, кто согласовал. На Московском шоссе и на Инженерном это Сергей Анатольевич, на Технической — Ринат Фаридович. Если его нет на месте, звоните мне. Старший мастер-приёмщик такую скидку согласовать не может."
+  },
+  {
+   "section": "Правило",
+   "item": "10 % считаются от всей суммы наряда до скидки: работы, запчасти, сборы и расходные материалы вместе."
+  },
+  {
+   "section": "Правило",
+   "item": "Скидка — это всё, от чего сумма становится меньше: минус в строке, срезанные нормо-часы «по-человечески», деталь в подарок, сбор, который «забыли» поставить."
+  },
+  {
+   "section": "Чего нельзя ни при каком проценте",
+   "item": "Скидки за наличные. Её нет. Если клиент говорит, что раньше ему здесь так делали, ответ один: цена одна при любой оплате."
+  },
+  {
+   "section": "Чего нельзя ни при каком проценте",
+   "item": "Цены «без оформления». Работы без заказ-наряда у нас не бывает, и детали без строки в наряде — тоже. Об этом отдельная страница: Работа мимо наряда, списания и возврат денег."
+  },
+  {
+   "section": "Чего нельзя ни при каком проценте",
+   "item": "Округлять сумму вниз, чтобы закончить разговор."
+  },
+  {
+   "section": "Чего нельзя ни при каком проценте",
+   "item": "Давать скидку без записанной причины."
+  },
+  {
+   "section": "Что скидкой не считается",
+   "item": "Договорной нормо-час, по которому платят «Симбирский гонец» и «Тёплый контур». Это другая цена, а не скидка."
+  },
+  {
+   "section": "Что скидкой не считается",
+   "item": "Гарантийный ремонт. Это гарантийный наряд без оплаты, привязанный к первому."
+  },
+  {
+   "section": "Что скидкой не считается",
+   "item": "Компенсация: когда ошиблись мы и исправляем за свой счёт. Компенсация больше 10 % идёт по тому же правилу, что и любая скидка: руководитель, отметка в наряде."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Симбирский гонец"
+  },
+  {
+   "account": "A2",
+   "name": "Тёплый контур"
+  }
+ ],
+ "dates": [
+  "{{@discount_rule|date}}",
+  "{{@belt_proposal|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the line that the 10 % is measured on the whole bill before the discount: work, parts, fees and shop supplies together (the Russian bill holds VAT, so the line names no tax), after the timing-belt discount",
+   "message_ru": "От всей суммы наряда до скидки. Всплыло на наряде по ремню ГРМ."
+  }
+ ],
+ "has_history": true
+}

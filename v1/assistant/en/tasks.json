@@ -1,0 +1,239 @@
+{
+ "format": "seed-scheduled-task/1",
+ "configuration": "en",
+ "prose_version": "assistant-en/1",
+ "zone": "home (Chattanooga, Eastern)",
+ "about": "The seven scheduled tasks of story S10 (auth.db cron_prompt_jobs) with the template every run answer is built from (cron_runs.answer_enc). A run picks its case from the data of its due time, then one wording of that case in turn, so two neighbouring runs never share a wording. The first line is what the owner's Inbox shows.",
+ "tasks": [
+  {
+   "id": "yesterday-three-numbers",
+   "owner": {"slot": "1", "name": "Ray Brennan"},
+   "name": "Yesterday in three numbers",
+   "schedule": {"days": null, "times": ["07:15"]},
+   "created": "@golive",
+   "set_up": "typed by Claire at his desk, under his sign-in",
+   "prompt": "Every morning tell me how yesterday went in three numbers: cars finished at each shop, what we billed, and the calls we missed. Plain words, three lines, no tables. If a shop was closed, say so.",
+   "cases": {
+    "open": [
+     "{{=orders.closed|site=all|prev_day|n:car/cars}} finished yesterday: East Main {{=orders.closed|site=main|prev_day|int}}, Bonny Oaks {{=orders.closed|site=east|prev_day|int}}, Charlotte Pike {{=orders.closed|site=west|prev_day|int}}.\nBilled {{=orders.revenue|site=all|prev_day|money0}} before tax.\nMissed {{=calls.missed|site=all|prev_day|int}} of {{=calls.inbound|site=all|prev_day|int}} calls; {{=calls.waiting|site=all|at|int}} still waiting for a call back.",
+     "Yesterday, {{@now-1d|weekday}}: East Main finished {{=orders.closed|site=main|prev_day|int}}, Bonny Oaks {{=orders.closed|site=east|prev_day|int}}, Charlotte Pike {{=orders.closed|site=west|prev_day|int}}.\nThe three shops billed {{=orders.revenue|site=all|prev_day|money0}} before tax.\n{{=calls.missed|site=all|prev_day|n:call/calls}} went unanswered out of {{=calls.inbound|site=all|prev_day|int}}, most of them at {{=calls.missed_top_site|site=all|prev_day|text}}.",
+     "Cars out the door yesterday: {{=orders.closed|site=all|prev_day|int}} ({{=orders.closed|site=main|prev_day|int}} East Main, {{=orders.closed|site=east|prev_day|int}} Bonny Oaks, {{=orders.closed|site=west|prev_day|int}} Charlotte Pike).\nMoney billed: {{=orders.revenue|site=all|prev_day|money0}} before tax.\nCalls missed: {{=calls.missed|site=all|prev_day|int}} in {{=calls.inbound|site=all|prev_day|int}}."
+    ],
+    "saturday": [
+     "Yesterday was Saturday: East Main finished {{=orders.closed|site=main|prev_day|n:car/cars}} in the morning; Bonny Oaks and Charlotte Pike were closed.\nBilled {{=orders.revenue|site=main|prev_day|money0}} before tax.\nMissed {{=calls.missed|site=main|prev_day|int}} of {{=calls.inbound|site=main|prev_day|int}} calls."
+    ],
+    "closed": [
+     "The shops were closed yesterday, {{@now-1d|weekday}}.\nNothing was billed.\n{{=calls.out_of_hours|site=all|prev_day|n:call/calls}} rang out of hours."
+    ]
+   }
+  },
+  {
+   "id": "accounts-this-week",
+   "owner": {"slot": "2", "name": "Claire Brennan"},
+   "name": "Company accounts this week",
+   "schedule": {"days": ["mon"], "times": ["08:00"]},
+   "created": "@golive",
+   "prompt": "Every Monday, for each company account billed on terms: visits last week against its usual week, estimates that have waited more than two days for our answer, and bills past their terms. Flag any account with no visit in 30 days. Number first, then one table, worst first.",
+   "blocks": {
+    "accounts": {"kind": "table", "rows": "account", "where": "terms=yes", "period": "prev_week",
+     "columns": [["Account", "name"], ["Visits last week", "=acct.visits||int"], ["Usual week", "=acct.usual_visits||int"], ["Estimates waiting", "=acct.estimates_waiting||int"], ["Past terms", "=acct.overdue_money||money0"], ["Days since last visit", "=acct.days_since_visit||int"]],
+     "order": "flagged first, then days since last visit desc"}
+   },
+   "cases": {
+    "flagged": [
+     "{{=acct.flagged|terms=yes|prev_week|n:account needs/accounts need}} a look.\n\n{{#accounts}}\n\nFlagged means no visit in 30 days, an estimate waiting more than two days, or a bill past its terms.\nSource: shop system: orders, estimates, statements and payments.",
+     "Last week the accounts on terms made {{=acct.visits|terms=yes|prev_week|n:visit/visits}}; {{=acct.flagged|terms=yes|prev_week|int}} flagged.\n\n{{#accounts}}\n\nSource: shop system: orders, estimates, statements and payments.",
+     "Accounts on terms, week of {{@now-7d|date}}: {{=acct.flagged|terms=yes|prev_week|int}} flagged, {{=acct.overdue_money|terms=yes|at|money0}} past terms in all.\n\n{{#accounts}}\n\nSource: shop system: orders, estimates, statements and payments."
+    ],
+    "nothing": [
+     "No account needs a look this week.\n\n{{#accounts}}\n\nSource: shop system: orders, estimates, statements and payments."
+    ]
+   },
+   "planted_runs": [
+    {"story": "S10", "due": "W-1.mon 08:00", "kind": "scheduled", "status": "failed", "started": "due", "finished": "due+40s",
+     "error_text": "The shop system could not be reached, so the report had nothing to read. Run it again when the connection is back.",
+     "inbox": {"type": "scheduled_task.failed", "settled": "due+65min"}},
+    {"story": "S10", "due": null, "kind": "again", "status": "ok", "started": "W-1.mon 09:05", "requested_by": "owner, from the Inbox line's Run again", "case": "flagged", "wording": 1,
+     "inbox": {"type": "scheduled_task.ran"}}
+   ]
+  },
+  {
+   "id": "discounts-over-10",
+   "owner": {"slot": "2", "name": "Claire Brennan"},
+   "name": "Discounts over 10 %",
+   "schedule": {"days": ["fri"], "times": ["16:00"]},
+   "created": "@discount_rule",
+   "created_in": {"thread": "s2-rule", "turn": 2},
+   "prompt": "Every Friday list the orders closed this week with a discount above 10 % of the bill before tax: shop, advisor, date, percent and who approved it. Say plainly if one has no approval.",
+   "blocks": {
+    "orders": {"kind": "table", "rows": "order", "where": "site=all&min_over=10", "period": "week",
+     "columns": [["Shop", "site"], ["Advisor", "advisor"], ["Date", "date"], ["Bill before tax", "=orders.revenue||money"], ["Discount", "=orders.discount_pct||pct1"], ["Approved by", "approver"]],
+     "order": "unapproved first, then date"}
+   },
+   "cases": {
+    "unapproved": [
+     "{{=orders.discounted|site=all&min_over=10&approved=no|week|n:order has/orders have}} no approval this week, out of {{=orders.discounted|site=all&min_over=10|week|int}} over 10 %.\n\n{{#orders}}\n\nSource: shop system, orders closed this week, discount on the bill before tax.",
+     "Over 10 % this week: {{=orders.discounted|site=all&min_over=10|week|int}}. Without an approver on the order: {{=orders.discounted|site=all&min_over=10&approved=no|week|int}}.\n\n{{#orders}}\n\nSource: shop system, orders closed this week, discount on the bill before tax."
+    ],
+    "approved": [
+     "{{=orders.discounted|site=all&min_over=10|week|n:order/orders}} over 10 % this week, every one approved.\n\n{{#orders}}\n\nSource: shop system, orders closed this week, discount on the bill before tax.",
+     "All approved: {{=orders.discounted|site=all&min_over=10|week|n:discount/discounts}} over 10 % this week, each with its approver on the order.\n\n{{#orders}}\n\nSource: shop system, orders closed this week, discount on the bill before tax."
+    ],
+    "nothing": [
+     "No order this week has a discount over 10 %.\n\nSource: shop system, orders closed this week at the three shops.",
+     "Nothing over 10 % this week at any shop.\n\nSource: shop system, orders closed this week, discount on the bill before tax."
+    ]
+   },
+   "planted_runs": [
+    {"story": "S2", "due": "W-3.fri 16:00", "kind": "scheduled", "status": "ok", "started": "due", "case": "unapproved"}
+   ],
+   "expect": ["the runs of the Fridays of weeks T-3 and T-1 take the case 'unapproved' and list slot 23's order (ledger s2.west.discounts_after)", "no other run since the rule takes it"]
+  },
+  {
+   "id": "charlotte-pike-against-plan",
+   "owner": {"slot": "2", "name": "Claire Brennan"},
+   "name": "Charlotte Pike against plan",
+   "schedule": {"days": ["mon"], "times": ["09:00"]},
+   "created": "@golive",
+   "prompt": "Every Monday compare last week at Charlotte Pike with the plan: {{$s10.west_plan.orders|int}} orders and {{$s10.west_plan.revenue|money0}} billed before tax in a week. Give both as a share of plan, the four weeks before for comparison, and one line on what moved.",
+   "blocks": {
+    "weeks": {"kind": "table", "rows": "week", "where": "site=west", "period": "@now-35d..@now",
+     "columns": [["Week of", "week"], ["Orders", "=orders.closed||int"], ["Of plan", "=plan.orders_share||pct"], ["Billed before tax", "=orders.revenue||money0"], ["Of plan", "=plan.revenue_share||pct"]],
+     "order": "week desc", "limit": 5}
+   },
+   "cases": {
+    "open": [
+     "Charlotte Pike made {{=plan.orders_share|site=west|prev_week|pct}} of plan on orders and {{=plan.revenue_share|site=west|prev_week|pct}} on money last week.\n\n{{#weeks}}\n\n{{=orders.closed|site=west|prev_week|int}} orders against {{$s10.west_plan.orders|int}} planned. {{=orders.waiting_parts|site=west|at|n:car is/cars are}} waiting for parts this morning, the longest for {{=orders.waiting_days_max|site=west|at|n:day/days}}.\nSource: shop system, closed orders at Charlotte Pike, before tax.",
+     "{{=plan.revenue_share|site=west|prev_week|pct}} of plan on money, {{=plan.orders_share|site=west|prev_week|pct}} on orders: Charlotte Pike, week of {{@now-7d|date}}.\n\n{{#weeks}}\n\nBilled {{=orders.revenue|site=west|prev_week|money0}} against {{$s10.west_plan.revenue|money0}} planned; the average order was {{=orders.average|site=west|prev_week|money0}}.\nSource: shop system, closed orders at Charlotte Pike, before tax.",
+     "Last week at Charlotte Pike: {{=orders.closed|site=west|prev_week|int}} orders ({{=plan.orders_share|site=west|prev_week|pct}} of plan), {{=orders.revenue|site=west|prev_week|money0}} billed ({{=plan.revenue_share|site=west|prev_week|pct}}).\n\n{{#weeks}}\n\nRecommended work sold: {{=rec.sold_share|site=west|prev_week|pct}}, against {{=rec.sold_share|site=home|prev_week|pct}} at the Chattanooga shops.\nSource: shop system, closed orders and inspections, before tax."
+    ]
+   }
+  },
+  {
+   "id": "missed-calls-today",
+   "owner": {"slot": "2", "name": "Claire Brennan"},
+   "name": "Missed calls today",
+   "schedule": {"days": null, "times": ["18:00"]},
+   "created": "@golive",
+   "prompt": "At the end of each day: calls missed today by shop, the morning against the rest of the day, how many we called back, and who has waited longest. One table, then one line if anything is unusual.",
+   "blocks": {
+    "by_shop": {"kind": "table", "rows": "site", "where": "site=all", "period": "day",
+     "columns": [["Shop", "name"], ["Calls", "=calls.inbound||int"], ["Missed", "=calls.missed||int"], ["Missed, first 2.5 h", "=calls.missed|block=morning|int"], ["Called back", "=calls.called_back||int"], ["Waiting", "=calls.waiting||int"]],
+     "order": "missed desc"}
+   },
+   "cases": {
+    "open": [
+     "{{=calls.missed|site=all|day|int}} of {{=calls.inbound|site=all|day|int}} calls missed today ({{=calls.missed_share|site=all|day|pct}}); {{=calls.waiting|site=all|at|int}} still waiting.\n\n{{#by_shop}}\n\nLongest wait: {{=calls.oldest_waiting|site=all|at|text}}.\nSource: call log, inbound calls in opening hours.",
+     "{{=calls.missed_share|site=all|day|pct}} missed today: {{=calls.missed|site=all|day|int}} calls of {{=calls.inbound|site=all|day|int}}. Called back so far: {{=calls.called_back|site=all|day|int}}.\n\n{{#by_shop}}\n\nSource: call log, inbound calls in opening hours.",
+     "Missed today: {{=calls.missed|site=all|day|int}}. Waiting for a call back now: {{=calls.waiting|site=all|at|int}}, {{=calls.waiting|site=west|at|int}} of them at Charlotte Pike.\n\n{{#by_shop}}\n\nLongest wait: {{=calls.oldest_waiting|site=all|at|text}}.\nSource: call log, inbound calls in opening hours."
+    ],
+    "closed": [
+     "All three shops were closed today. {{=calls.out_of_hours|site=all|day|n:call/calls}} rang out of hours; none counts as missed.\n\nSource: call log."
+    ]
+   }
+  },
+  {
+   "id": "tomorrows-gaps",
+   "owner": {"slot": "4", "name": "Greg Whitaker"},
+   "name": "Tomorrow's gaps in cover",
+   "schedule": {"days": null, "times": ["16:30"]},
+   "created": "@golive",
+   "prompt": "Every afternoon check tomorrow at East Main and Bonny Oaks: desk or bay hours under the required cover, shifts with nobody on them, and anyone on leave who is still on the rota. For each gap name who is free.",
+   "blocks": {
+    "gaps": {"kind": "table", "rows": "gap", "where": "site=home", "period": "next_day",
+     "columns": [["Shop", "site"], ["Where", "position"], ["Hours", "hours"], ["Short by", "=roster.gaps||int"], ["Free that day", "=roster.free_people||names"]],
+     "order": "site, hours"}
+   },
+   "cases": {
+    "gaps": [
+     "{{=roster.gaps|site=home|next_day|n:gap/gaps}} tomorrow, {{@now+1d|day}}.\n\n{{#gaps}}\n\nSource: published roster and cover requirements, East Main and Bonny Oaks.",
+     "Tomorrow, {{@now+1d|day}}, is short in {{=roster.gaps|site=home|next_day|n:place/places}}.\n\n{{#gaps}}\n\nSource: published roster and cover requirements, East Main and Bonny Oaks."
+    ],
+    "nothing": [
+     "No gaps tomorrow, {{@now+1d|day}}: East Main has {{=roster.on_shift|site=main|next_day|int}} on, Bonny Oaks {{=roster.on_shift|site=east|next_day|int}}.\n\nSource: published roster and cover requirements.",
+     "Tomorrow, {{@now+1d|day}}, is covered at both shops; {{=roster.requests_open|site=home|at|n:shift request waits/shift requests wait}} on you.\n\nSource: published roster and cover requirements."
+    ],
+    "closed": [
+     "Both shops are closed tomorrow, {{@now+1d|day}}.\n\nSource: opening hours and the roster."
+    ]
+   }
+  },
+  {
+   "id": "my-call-backs",
+   "owner": {"slot": "6", "name": "Maya Torres"},
+   "name": "My call backs",
+   "schedule": {"days": null, "times": ["07:30"]},
+   "created": "@golive",
+   "prompt": "Every morning at opening: who is waiting for a call back at East Main, oldest first, with what they called about last time if we know. Then the call backs I promised and have not made.",
+   "blocks": {
+    "waiting": {"kind": "table", "rows": "missed_call", "where": "site=main&state=waiting", "period": "d7",
+     "columns": [["Missed", "daytime"], ["Caller", "caller"], ["Last time", "last_topic"], ["Tries since", "=calls.attempts||int"]],
+     "order": "missed asc"}
+   },
+   "cases": {
+    "waiting": [
+     "{{=calls.waiting|site=main|at|n:caller is/callers are}} waiting at East Main, the oldest since {{=calls.oldest_waiting|site=main|at|daytime}}.\n\n{{#waiting}}\n\nPromised by you and not made: {{=calls.promised_open|person=6|at|int}}.\nSource: call log and the To call back list, East Main only.",
+     "{{=calls.waiting|site=main|at|int}} to call back at East Main this morning; you owe {{=calls.promised_open|person=6|at|int}} of your own.\n\n{{#waiting}}\n\nSource: call log and the To call back list, East Main only."
+    ],
+    "nothing": [
+     "Nobody is waiting for a call back at East Main, and you owe none.\n\nSource: call log and the To call back list, East Main only.",
+     "0 waiting at East Main; 0 promised by you.\n\nSource: call log and the To call back list, East Main only."
+    ]
+   },
+   "expect": ["the run of T's date takes the case 'waiting' with the misses older than today of ledger calls.queue_at_t.main (2)"]
+  }
+ ],
+ "briefs": {
+  "format": "seed-brief/1",
+  "about": "The brief is a hidden job per manager (slug brief-<manager id>, name 'Brief', the product's brief.md as its instruction, no schedule). A brief is at most three lines, each starting '- ', each one sentence of at most 20 words. 'at_t' is the brief each of the four reads on the morning of T: the first run of T's brief day. 'bank' builds every other brief: a point is used when its condition holds at the run's instant, most important first, at most three.",
+  "jobs_for": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "16", "17", "22", "23", "24", "29"],
+  "at_t": [
+   {"owner": {"slot": "1", "name": "Ray Brennan"}, "run": "first run of T's brief day (06:40, no shift)",
+    "points": [
+     "- Two team notes wait for a decision: Maya's on company drivers and one about where prices come from.",
+     "- {{=calls.waiting|site=all|at|n:caller waits/callers wait}} for a call back, {{=calls.waiting|site=west|at|int}} of them at Charlotte Pike.",
+     "- Dale's task to move Charlotte Pike to the home parts supplier is {{=board.days_overdue|card=s6.supplier_change|at|n:day/days}} overdue."
+    ]},
+   {"owner": {"slot": "2", "name": "Claire Brennan"}, "run": "first run of T's brief day (06:40, no shift)",
+    "points": [
+     "- Curtis Vaughn's Volvo has waited {{=orders.waiting_days_max|site=west|at|n:day/days}} for a part at Charlotte Pike; he rang twice on {{@now-1wd:west|weekday}}, once unanswered.",
+     "- The supplier change you gave Dale is {{=board.days_overdue|card=s6.supplier_change|at|n:day/days}} overdue; {{=orders.waiting_parts|site=west|at|n:car waits/cars wait}} for parts there.",
+     "- {{=calls.missed_share|site=all|prev_day|pct}} of calls were missed on {{@now-1d|weekday}}, {{=calls.missed_share|site=west|prev_day|pct}} at Charlotte Pike."
+    ]},
+   {"owner": {"slot": "4", "name": "Greg Whitaker"}, "run": "first run of T's brief day (five minutes before his shift)",
+    "points": [
+     "- Two team notes wait on you: Maya's on company drivers and one on price sources held by three advisors.",
+     "- Travis proposed a correction to the Timing belt page on {{@belt_proposal|weekday}}; it waits for your decision.",
+     "- Angie's desk at Bonny Oaks is uncovered on {{=roster.uncovered_days|site=east&position=desk|next_two_weeks|n:day/days}} from {{W+1.thu|day}}; her two requests are open."
+    ]},
+   {"owner": {"slot": "6", "name": "Maya Torres"}, "run": "first run of T's brief day (five minutes before her shift)",
+    "points": [
+     "- Rachel Dunlap wrote on {{slot6:-1|weekday}} about the rear shocks; she has not answered the two times you offered.",
+     "- {{=calls.waiting|site=main|at|n:caller waits/callers wait}} for a call back at East Main, the oldest since {{=calls.oldest_waiting|site=main|at|weekday}}.",
+     "- The Nickajack review is due {{slot6:+2|day}} at noon; Donna's part is still open."
+    ]}
+  ],
+  "bank": [
+   {"id": "run-failed", "for": ["owner", "planner", "advisor", "office"], "when": "a scheduled task of theirs failed since the previous brief and is not settled", "point": "- \"{{=runs.failed_name|owner=me|since_prev|text}}\" did not finish at {{=runs.failed_at|owner=me|since_prev|clock}}; run it again from your Inbox."},
+   {"id": "unapproved-discount", "for": ["owner"], "when": "an order closed since the previous brief has a discount over 10 % and no approver", "point": "- {{=orders.discounted|site=all&min_over=10&approved=no|since_prev|n:order/orders}} over 10 % off without approval since yesterday, at {{=orders.discounted_site|site=all&min_over=10&approved=no|since_prev|text}}."},
+   {"id": "missed-yesterday", "for": ["owner"], "when": "first brief of an open day", "point": "- {{=calls.missed_share|site=all|prev_day|pct}} of calls were missed on {{@now-1d|weekday}}; {{=calls.waiting|site=all|at|int}} callers still wait."},
+   {"id": "west-parts", "for": ["owner"], "when": "a car at Charlotte Pike has waited five days or more for parts", "point": "- {{=orders.waiting_parts|site=west|at|n:car waits/cars wait}} for parts at Charlotte Pike, the longest for {{=orders.waiting_days_max|site=west|at|n:day/days}}."},
+   {"id": "account-quiet", "for": ["owner"], "when": "an account on terms passes 30 days without a visit", "point": "- {{=acct.quiet_name|terms=yes|at|text}} has not been in for {{=acct.days_since_visit|terms=yes&quietest=yes|at|n:day/days}}."},
+   {"id": "notes-waiting", "for": ["owner", "planner"], "when": "a team note waits for a decision or a check", "point": "- {{=memory.proposals_waiting|all|at|n:team note waits/team notes wait}} for a decision and {{=memory.notes_to_check|all|at|int}} for a check."},
+   {"id": "gaps-tomorrow", "for": ["planner"], "when": "tomorrow is short of cover at a shop they plan", "point": "- Tomorrow is short in {{=roster.gaps|site=planned|next_day|n:place/places}}; the first is {{=roster.first_gap|site=planned|next_day|text}}."},
+   {"id": "requests-open", "for": ["planner"], "when": "shift requests wait on them", "point": "- {{=roster.requests_open|site=planned|at|n:shift request waits/shift requests wait}} on you, the oldest from {{=roster.oldest_request|site=planned|at|weekday}}."},
+   {"id": "no-show", "for": ["planner"], "when": "a shift was flagged as a no-show since the previous brief", "point": "- {{=roster.no_show_name|site=planned|since_prev|text}} did not come in on {{=roster.no_show_day|site=planned|since_prev|weekday}}; the shift was flagged."},
+   {"id": "late-yesterday", "for": ["planner"], "when": "first brief of the day and somebody was late the day before", "point": "- {{=roster.late_shifts|site=planned|prev_day|n:person was/people were}} late on {{@now-1d|weekday}}, past the five minutes of grace."},
+   {"id": "team-overdue", "for": ["planner"], "when": "cards of people they give work to are overdue", "point": "- {{=board.overdue|team=mine|at|n:card of your team is/cards of your team are}} overdue, the oldest by {{=board.days_overdue|team=mine&oldest=yes|at|n:day/days}}."},
+   {"id": "callbacks", "for": ["advisor"], "when": "callers wait at their shop", "point": "- {{=calls.waiting|site=mine|at|n:caller waits/callers wait}} for a call back, the oldest since {{=calls.oldest_waiting|site=mine|at|weekday}}."},
+   {"id": "cards-today", "for": ["advisor", "office"], "when": "a card of theirs is due today or overdue", "point": "- {{=board.due_today|owner=me|at|n:card is/cards are}} due today and {{=board.overdue|owner=me|at|int}} overdue."},
+   {"id": "chats-waiting", "for": ["advisor"], "when": "a customer waits for a reply in a chat they own", "point": "- {{=chats.waiting|owner=me|at|n:customer waits/customers wait}} for your reply in Chats, the longest since {{=chats.oldest_waiting|owner=me|at|clock}}."},
+   {"id": "booked-today", "for": ["advisor"], "when": "first brief of a working day", "point": "- {{=bookings.count|site=mine|day|n:car is/cars are}} booked today, the first at {{=bookings.first_time|site=mine|day|clock}}."},
+   {"id": "try-next", "for": ["advisor"], "when": "they had scored calls on their previous shift", "point": "- Last shift's calls scored {{=calls.score_mean|person=me|prev_shift|score}}; to try next: {{=calls.worst_check|person=me|prev_shift|text}}."},
+   {"id": "past-terms", "for": ["office"], "when": "bills are past their terms", "point": "- {{=acct.overdue_bills|terms=yes|at|n:bill is/bills are}} past terms, {{=acct.overdue_money|terms=yes|at|money0}} in all."},
+   {"id": "punches-corrected", "for": ["office", "planner"], "when": "a clock-out was corrected since the previous brief", "point": "- {{=roster.corrections|site=mine|since_prev|n:clock-out was/clock-outs were}} corrected since yesterday."},
+   {"id": "late-orders", "for": ["office"], "when": "purchase orders are past their promised date (parts manager)", "point": "- {{=parts.late_orders|site=home|at|n:parts order is/parts orders are}} past the promised date, the oldest from {{=parts.oldest_late|site=home|at|text}}."},
+   {"id": "look-again", "for": ["office"], "when": "a 'look at this car again' card is open (foreman)", "point": "- {{=board.open|owner=me&kind=look_again|at|n:car waits/cars wait}} for a second look."}
+  ]
+ }
+}

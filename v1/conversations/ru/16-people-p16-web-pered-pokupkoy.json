@@ -1,0 +1,138 @@
+{
+  "format": "seed-conversation/1",
+  "id": "16-people-p16-web-pered-pokupkoy",
+  "configuration": "ru",
+  "number": 16,
+  "story": "people",
+  "title": "Машина с рук: проверить до покупки. Запись на день, когда Светлана выходная",
+  "demonstrates": "The web chat hands over a pre-purchase inspection. Slot 16 answers in six minutes with what the check is and two times, and says plainly that on that day she is off and the other advisor will receive the car: two on, two off. The summary carries the date, the address and what to bring.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Антон",
+      "invented": true,
+      "first_time": true,
+      "note": "покупает Skoda Octavia 2014 с рук; в сервисе впервые",
+      "phone": "+7 907 441-09-27"
+    },
+    "named_in_a_line": [
+      {"slot": 17, "name": "Артём Николаев", "role": "примет машину в среду"}
+    ],
+    "staff": [
+      {"slot": 16, "name": "Светлана Демидова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек, который собирается купить подержанную машину.",
+    "vehicle": "Skoda Octavia 2014, пока чужая",
+    "what_happens": "Цена из прайса, передача заявки; через шесть минут Светлана объясняет, что входит в проверку, и предлагает два времени в среду.",
+    "facts": {
+      "booked": "среда недели T-7, 11:00, east; принимает слот 17",
+      "hours": "1,5 нормо-часа по каталогу: «часа полтора»",
+      "public_pages_used": ["прайс: диагностика перед покупкой"],
+      "prices": [
+        {"said": "3 000 ₽", "amount": 3000.0, "what": "комплексная диагностика автомобиля перед покупкой, фиксированная цена", "from": {"catalogue": "pre_purchase_inspection", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-53d": {"anchor": "slot 16's first working day on or after the Monday of week T-7", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 7, "on_or_after_for_slot": 16}, "nominal": "Mon 2026-09-21"},
+    "T-51d": {"anchor": "the Wednesday of week T-7", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 7}, "nominal": "Wed 2026-09-23", "what": "«в среду, 23 сентября»: slot 17's shift"}
+  },
+  "floating_days": [
+    {"word": "в среду", "said_on": "T-53d", "day": "the Wednesday of week T-7", "form": "в + accusative"},
+    {"word": "В среду", "said_on": "T-53d", "day": "the Wednesday of week T-7", "form": "в + accusative"},
+    {"word": "среда, 23 сентября, 11:00", "said_on": "T-53d", "day": "the Wednesday of week T-7", "form": "nominative, date"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "east",
+      "thread_key": "5eedc0de-0016-4e00-8000-00000000a010",
+      "peer": {"id": "seedv1-browser-ru-0590", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0590",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-53d", "at": "17:42:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-53d", "at": "17:42:10", "kind": "message", "from": "customer", "text": "здравствуйте. а вы машины перед покупкой проверяете?"},
+        {"n": 2, "day": "T-53d", "at": "17:42:34", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Да: комплексная диагностика автомобиля перед покупкой стоит 3 000 ₽. Передать заявку мастеру, чтобы вас записали?"},
+        {"n": 3, "day": "T-53d", "at": "17:43:20", "kind": "message", "from": "customer", "text": "да. смотрю октавию 2014 с рук, продавец готов подъехать в среду"},
+        {"n": 4, "day": "T-53d", "at": "17:43:45", "kind": "message", "from": "assistant", "text": "Сам записать я не могу, но заявку передам. Напишите, пожалуйста, как к вам обращаться и номер телефона. И в какой сервис удобнее: на Московском шоссе или в Новом городе?"},
+        {"n": 5, "day": "T-53d", "at": "17:44:15", "kind": "message", "from": "customer", "text": "Антон, 89074410927. новый город"},
+        {"n": 6, "day": "T-53d", "at": "17:44:39", "kind": "message", "from": "assistant", "text": "Спасибо, Антон. Заявку передал, с вами свяжутся в ближайшее время."},
+        {"n": 7, "day": "T-53d", "at": "17:44:40", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Антон", "phone": "+7 907 441-09-27", "site": "новый город", "context": "Антон покупает Skoda Octavia 2014 с рук и хочет диагностику перед покупкой; продавец готов подъехать в среду. Я назвал цену, 3 000 ₽. Сервис в Новом городе."}}, "note": {"from": "assistant", "private": true, "text": "Антон покупает Skoda Octavia 2014 с рук и хочет диагностику перед покупкой; продавец готов подъехать в среду. Я назвал цену, 3 000 ₽. Сервис в Новом городе."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "east", "owner": null, "due": "T-53d 20:00, закрытие дня"}},
+        {"n": 8, "day": "T-53d", "at": "17:50:28", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 9, "day": "T-53d", "at": "17:50:30", "kind": "message", "from": "staff", "slot": 16, "text": "Антон, добрый вечер! Это Светлана, сервис в Новом городе. Правильно делаете, что проверяете до денег, Антон: я бы на своей покупке сделала так же. Диагностика перед покупкой у нас 3 000 ₽, занимает часа полтора: подъёмник, кузов, компьютер, по итогу лист с замечаниями, с ним можно торговаться. В среду я не работаю, вас примет Артём. Могу записать на 11:00 или на 16:00, как вам удобнее?"},
+        {"n": 10, "day": "T-53d", "at": "17:50:31", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 16, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-53d", "at": "17:55:10", "kind": "message", "from": "customer", "text": "на 11"},
+        {"n": 12, "day": "T-53d", "at": "17:55:50", "kind": "draft", "id": "d1", "text": "Хорошо, Антон. Среда, 11:00. Ждём вас: 10-й Инженерный проезд, 30.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-53d", "at": "17:58:20", "became": 13}},
+        {"n": 13, "day": "T-53d", "at": "17:58:20", "kind": "message", "from": "staff", "slot": 16, "text": "Записала, Антон: среда, 23 сентября, 11:00, диагностика перед покупкой, Skoda Octavia 2014. Адрес: 10-й Инженерный проезд, 30. Попросите продавца взять ПТС и сервисную книжку, если есть. Примет вас Артём, я ему всё передам."},
+        {"n": 14, "day": "T-53d", "at": "17:58:40", "kind": "activity", "what": "label_added", "label": "запись", "by": 16},
+        {"n": 15, "day": "T-53d", "at": "17:59:00", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-53d", "at": "17:50:28", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["запись"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 24},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 24},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 25},
+          {"asked": 5, "answered": 6, "by": "assistant", "wall_seconds": 24},
+          {"asked": 7, "answered": 9, "by": 16, "working_minutes": 5.8, "wall_minutes": 5.8, "measured_from": "n 7", "reply": "first"},
+          {"asked": 11, "answered": 13, "by": 16, "working_minutes": 3.2, "wall_minutes": 3.2, "measured_from": "n 11", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 9,
+          "working_minutes": 5.8,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 4, "assistant": 3, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-53d", "at": "17:59:00", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 16: her first line 5.8 minutes after the hand-off, two replies, one draft edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "assistant first, handed over (scheduling), slot 16",
+    "outcome": "диагностика перед покупкой в среду, 11:00, east, принимает слот 17; закрыт слотом 16",
+    "facts": [
+      "the assistant gave the public price, 3 000",
+      "slot 16 replied 5.8 minutes after the hand-off",
+      "she told the customer she is off that day and who will receive the car"
+    ],
+    "questions": ["S5.1"]
+  },
+  "why": [
+    "«В среду я не работаю, вас примет Артём»: два через два, сказанное клиенту прямо.",
+    "Реплика длиннее, чем у любого другого приёмщика, и в ней нет ни одного лишнего слова.",
+    "В итоге есть дата, адрес и что взять с собой."
+  ],
+  "new_facts": [
+    "Антон, +7 907 441-09-27: диагностика перед покупкой Skoda Octavia 2014 на east в среду недели T-7, 11:00; принимает слот 17."
+  ]
+}

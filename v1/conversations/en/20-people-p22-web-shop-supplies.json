@@ -1,0 +1,137 @@
+{
+  "format": "seed-conversation/1",
+  "id": "20-people-p22-web-shop-supplies",
+  "configuration": "en",
+  "number": 20,
+  "story": "people",
+  "title": "A line on the bill nobody explained: the manager answers the next day, and the other advisor finishes the answer",
+  "demonstrates": "A question about a bill on the web chat: the assistant explains the charge in general, cannot see the bill, hands over. The chat turns Urgent and stays so overnight. Slot 22 answers the next morning in eight words. The customer's reply gets a draft he does not touch; slot 24 edits it and sends it nine minutes later, with the figure, and resolves.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "name": "Sharon Whitfield",
+      "invented": true,
+      "first_time": false,
+      "note": "a customer of the Charlotte Pike shop; a water pump replaced the day before",
+      "phone": "(615) 555-0236"
+    },
+    "staff": [
+      {"slot": 22, "name": "Dale Hutchins"},
+      {"slot": 24, "name": "Jasmine Bolden"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "A customer reading yesterday's bill.",
+    "what_happens": "'Shop supplies $17.55. Nobody mentioned it. What is that?' The answer comes the next morning: 'its on every ticket. 5 percent of labor'. She says she would have liked to be told. Jasmine tells her, properly.",
+    "facts": {
+      "rule": "5 % of hourly-priced labour on the order, at most 35.00 (catalogue.json shop_supplies)",
+      "public_pages_used": ["price list: shop supplies"],
+      "prices": [
+        {"said": "$17.55", "amount": 17.55, "what": "shop supplies on a water pump job: 5 % of its hourly labour, 351.00", "from": {"shop_supplies_of": "water_pump", "class": "car"}}
+      ],
+      "numbers": [
+        {"said": "5 percent", "what": "the shop-supplies rate (ledger price.supplies.rate)"},
+        {"said": "5%", "what": "the same"},
+        {"said": "$35.00", "what": "the cap per order (ledger price.supplies.cap)"}
+      ]
+    }
+  },
+  "days": {
+    "T-65d": {"anchor": "the Wednesday of week T-9", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 9}, "nominal": "Wed 2026-09-09"},
+    "T-64d": {"anchor": "1 calendar day after the Wednesday of week T-9", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 9, "plus_days": 1}, "nominal": "Thu 2026-09-10", "what": "the next day"}
+  },
+  "floating_days": [
+    {"word": "yesterday", "said_on": "T-65d", "day": "the Tuesday of week T-9"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Central; one hour behind the business zone)",
+      "thread_key": "5eedc0de-0020-4e00-8000-00000000e014",
+      "peer": {"id": "seedv1-browser-en-0702", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0702",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-65d", "at": "11:20:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-65d", "at": "11:20:10", "kind": "message", "from": "customer", "text": "I picked up my car from your Nashville shop yesterday and there's a 'shop supplies' charge of $17.55 on the bill. Nobody mentioned it. What is that?"},
+        {"n": 2, "day": "T-65d", "at": "11:20:35", "kind": "message", "from": "assistant", "text": "Hello. I'm the assistant for Brennan Auto Care. I can't see your bill from here. In general, shop supplies is a small charge on repairs billed by the hour; it covers things like cleaners, rags and hardware. For your own bill I'll pass the question to the Charlotte Pike shop. What's your name and the best number to reach you?"},
+        {"n": 3, "day": "T-65d", "at": "11:21:20", "kind": "message", "from": "customer", "text": "Sharon Whitfield, 615-555-0236"},
+        {"n": 4, "day": "T-65d", "at": "11:21:44", "kind": "message", "from": "assistant", "text": "Thank you, Ms. Whitfield. Your question is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 5, "day": "T-65d", "at": "11:21:45", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Sharon Whitfield", "phone": "(615) 555-0236", "site": "Nashville", "context": "Sharon Whitfield picked up her car at the Charlotte Pike shop yesterday. Her bill has a 'shop supplies' charge of $17.55 that nobody mentioned, and she asks what it is. I can't see the bill; I explained the charge in general terms only."}}, "note": {"from": "assistant", "private": true, "text": "Sharon Whitfield picked up her car at the Charlotte Pike shop yesterday. Her bill has a 'shop supplies' charge of $17.55 that nobody mentioned, and she asks what it is. I can't see the bill; I explained the charge in general terms only."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "west", "owner": null, "due": "T-65d 17:30, the day's close"}},
+        {"n": 6, "day": "T-65d", "at": "11:33", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 7, "day": "T-65d", "at": "11:57", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-64d", "at": "08:10:18", "kind": "activity", "what": "assigned", "derived": true, "to": 22, "by": 22, "how": "first reply"},
+        {"n": 9, "day": "T-64d", "at": "08:10:20", "kind": "message", "from": "staff", "slot": 22, "text": "its on every ticket. 5 percent of labor", "late": "he answers the next day (ledger conv.slowest_tenth)"},
+        {"n": 10, "day": "T-64d", "at": "08:10:21", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 22, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-64d", "at": "08:10:22", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-64d", "at": "08:31:00", "kind": "message", "from": "customer", "text": "It would have been nice to be told. Thank you."},
+        {"n": 13, "day": "T-64d", "at": "08:31:40", "kind": "draft", "id": "d1", "text": "You're right, Ms. Whitfield, and I'm sorry it wasn't explained at pick-up. Shop supplies is 5% of the hourly labor on a repair, never more than $35.00, and it is listed on every estimate.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-64d", "at": "08:40:10", "became": 14}},
+        {"n": 14, "day": "T-64d", "at": "08:40:10", "kind": "message", "from": "staff", "slot": 24, "text": "Ms. Whitfield, this is Jasmine at Charlotte Pike. You're right, and I'm sorry it wasn't explained at pick-up. Shop supplies is 5% of the hourly labor on a repair, never more than $35.00. On yours it was $17.55, on the water pump labor. It should be shown to you on the estimate before any work starts. If anything else on the bill isn't clear, message me here."},
+        {"n": 15, "day": "T-64d", "at": "08:40:30", "kind": "activity", "what": "label_added", "label": "complaint", "by": 24},
+        {"n": 16, "day": "T-64d", "at": "08:40:50", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-64d", "at": "08:10:18", "to": 22, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 22,
+        "labels": ["complaint"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 25},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 9, "by": 22, "working_minutes": 408.6, "wall_minutes": 1248.6, "measured_from": "n 5", "reply": "first", "late": "he answers the next day (ledger conv.slowest_tenth)"},
+          {"asked": 12, "answered": 14, "by": 24, "working_minutes": 9.2, "wall_minutes": 9.2, "measured_from": "n 12", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 22,
+          "n": 9,
+          "working_minutes": 408.6,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 2, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-64d", "at": "08:40:50", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 24}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 22: his first line 408.6 working minutes after the hand-off, the next morning; slot 24: one reply in his chat, one draft edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "complaint, comeback, the bill",
+    "handled": "assistant first, handed over (escalation), slot 22, then slot 24",
+    "outcome": "explained the next day; resolved by slot 24",
+    "facts": [
+      "shop supplies is 5 % of hourly labour, at most 35.00 an order; on her bill 17.55",
+      "the hand-over waited from 11:21 to the next morning",
+      "slot 22 owns the chat; slot 24 wrote the reply that explained it"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Eight words, no name, no apology, and factually right.",
+    "The draft was ready 40 seconds after her line; the owner of the chat left it; the other advisor used it.",
+    "The owner of a chat and the person who helped the customer are not always the same row in Stats."
+  ],
+  "new_facts": [
+    "Sharon Whitfield, (615) 555-0236 (tier B): a water pump replaced at west, picked up on the Tuesday of week T-9; the bill carries shop supplies of 17.55."
+  ]
+}

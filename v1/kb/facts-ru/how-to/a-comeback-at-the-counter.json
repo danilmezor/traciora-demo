@@ -1,0 +1,137 @@
+{
+ "path": "how-to/a-comeback-at-the-counter.md",
+ "title": "Возврат на приёмке",
+ "title_en": "A comeback at the counter",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/a-comeback-at-the-counter.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "What an advisor does and says when a customer returns with the same problem.",
+ "serves": [
+  "S6",
+  "S1",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 277,
+ "links_to": [
+  "shop-floor/when-a-car-comes-back.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The window is 30 days (ledger comeback.definition). Two rows are Russian: the part failing after day 30 inside the maker's term (part free, labour paid), and our work after day 30 (paid unless the manager decides otherwise).",
+  "No shuttle is offered."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "После того как посмотрел мастер цеха",
+   "columns": [
+    "Что он нашёл",
+    "Что дальше"
+   ],
+   "rows": [
+    {
+     "Что он нашёл": "Наша работа или наша запчасть, 30 дней не прошло",
+     "Что дальше": "Делаем бесплатно. Скажите это раньше, чем клиент спросит"
+    },
+    {
+     "Что он нашёл": "Наша запчасть отказала позже 30 дней, но в срок производителя",
+     "Что дальше": "Деталь меняем по гарантии поставщика, работа платная. Объясните по наряду"
+    },
+    {
+     "Что он нашёл": "Наша работа, 30 дней прошло",
+     "Что дальше": "Решает Сергей Анатольевич или Ринат Фаридович. Без их решения наряд платный"
+    },
+    {
+     "Что он нашёл": "Другая неисправность с тем же симптомом",
+     "Что дальше": "Объясняем на старой детали или по фото. Смета, как на любую работу. За осмотр не берём"
+    },
+    {
+     "Что он нашёл": "Запчасть клиента",
+     "Что дальше": "Работа оплачивается снова. Об этом говорили при приёмке; повторите спокойно"
+    },
+    {
+     "Что он нашёл": "Непонятно",
+     "Что дальше": "Решает Сергей Анатольевич, а не вы. В тот же день"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Возврат на приёмке",
+   "item": "«Спасибо, что сразу приехали к нам». Всерьёз. Мы теряем тех, кто не возвращается."
+  },
+  {
+   "section": "Возврат на приёмке",
+   "item": "Найдите первый наряд. Посмотрите дату, что делали и кто делал — до того, как скажете хоть слово о причине."
+  },
+  {
+   "section": "Возврат на приёмке",
+   "item": "Откройте новый наряд, гарантийный, с привязкой к первому. Старый не переоткрываем. И не оформляем обычным платным нарядом «до выяснения»."
+  },
+  {
+   "section": "Возврат на приёмке",
+   "item": "Машина идёт вне очереди. Первым смотрит мастер цеха: Если машина вернулась."
+  },
+  {
+   "section": "Возврат на приёмке",
+   "item": "Скажите клиенту, когда он нас услышит: сегодня, с точным временем."
+  },
+  {
+   "section": "Возврат на приёмке",
+   "item": "На приёмке причину не угадываем и не виним ни деталь, ни механика, ни клиента. «Разберёмся, до двух я вас наберу»."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринату Фаридовичу",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

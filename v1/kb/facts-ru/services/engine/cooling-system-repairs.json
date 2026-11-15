@@ -1,0 +1,178 @@
+{
+ "path": "services/engine/cooling-system-repairs.md",
+ "title": "Ремонт системы охлаждения",
+ "title_en": "Cooling system repairs",
+ "exists_in": "both",
+ "english_sheet": "facts/services/engine/cooling-system-repairs.json",
+ "first_revision_text": "ru/_history/services/engine/cooling-system-repairs.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Overheating and leaks: pressure test, water pump, thermostat, radiator.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_ru": 229,
+ "links_to": [
+  "customers/towing.md",
+  "services/engine/timing-belt.md",
+  "services/maintenance/coolant-service.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Jobs: «Опрессовка системы охлаждения», «Замена термостата», «Замена водяного насоса (помпы)», «Замена радиатора охлаждения двигателя»; antifreeze in litres from the catalogue.",
+  "The head gasket has no list price (planted, as in English)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Потом",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Стандарт",
+    "Антифриза в цене"
+   ],
+   "rows": [
+    {
+     "В наряде": "Замена термостата",
+     "Н/ч": "1,2",
+     "Стандарт": "5 140 ₽",
+     "Антифриза в цене": "2 л"
+    },
+    {
+     "В наряде": "Замена водяного насоса (помпы)",
+     "Н/ч": "2,2",
+     "Стандарт": "10 520 ₽",
+     "Антифриза в цене": "6 л"
+    },
+    {
+     "В наряде": "Замена радиатора охлаждения двигателя",
+     "Н/ч": "2",
+     "Стандарт": "16 160 ₽",
+     "Антифриза в цене": "6 л"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Потом",
+   "item": "Термостат: печка дует холодным или стрелка то поднимается, то падает. Стоит недорого, и часто дело именно в нём."
+  },
+  {
+   "section": "Потом",
+   "item": "Помпа: капает спереди двигателя, гудит, пахнет антифризом. На моторе с ремнём ГРМ помпа стоит за ремнём, и тогда это работа «ремень ГРМ», а не эта."
+  },
+  {
+   "section": "Потом",
+   "item": "Радиатор: белёсые или зелёные потёки на пластиковых бачках, мокрые стыки."
+  },
+  {
+   "section": "Потом",
+   "item": "В каждую цену антифриз уже входит. Замену антифриза сверху не добавляем."
+  },
+  {
+   "section": "Потом",
+   "item": "Если двигатель перегрели всерьёз, до ремонта скажите клиенту, что это может быть не всё: пробитая прокладка головки блока проявляется только тогда, когда течь устранена и система держит давление. Прокладка ГБЦ — не та работа, которую считают по прайсу."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "cooling_pressure_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 950.0
+  },
+  {
+   "catalogue_key": "thermostat",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "thermostat",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 5140.0
+  },
+  {
+   "catalogue_key": "water_pump",
+   "what": "hours",
+   "class": "car",
+   "value": 2.2
+  },
+  {
+   "catalogue_key": "water_pump",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 10520.0
+  },
+  {
+   "catalogue_key": "radiator",
+   "what": "hours",
+   "class": "car",
+   "value": 2.0
+  },
+  {
+   "catalogue_key": "radiator",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 16160.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  950.0,
+  5140.0,
+  10520.0,
+  16160.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

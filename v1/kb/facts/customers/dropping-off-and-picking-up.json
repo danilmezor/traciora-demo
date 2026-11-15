@@ -1,0 +1,58 @@
+{
+ "path": "customers/dropping-off-and-picking-up.md",
+ "title": "Dropping off, waiting, shuttle and pick-up",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "6",
+ "purpose": "Public logistics: key drop, waiting room, shuttle, after-hours pick-up.",
+ "serves": [
+  "challenge:kb-does-not-say",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_en": 234,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Key drop box by the office door at every shop; envelope with name, phone, complaint.",
+  "Waiting is offered for jobs of about an hour or less: oil service, rotation, flat repair, inspection.",
+  "Shuttle: East Main and Bonny Oaks only; free; within 5 miles; leaves 7:45 and 8:45; returns customers 15:30 to 17:00. Charlotte Pike has none.",
+  "After-hours pick-up: pay by phone before closing, key in the lock box, code by text.",
+  "Loaner or rental cars are not mentioned on any page: planted gap (\"Do we have loaner cars?\" has no answer in the base)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Dropping off",
+   "item": "By appointment: come at your time. An advisor walks round the car with you and writes down what you want looked at in your words."
+  },
+  {
+   "section": "Dropping off",
+   "item": "Before we open or after we close: every shop has a key drop box by the office door. Fill in the envelope (name, phone, what is wrong), put the key in it and drop it in the slot. We call you when we have looked at the car."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "Shuttle radius 5 miles and the four times. Reason: a shuttle policy was asked for; morning runs fit the 7:30-9:00 arrival peak in mix.json.",
+  "Lock box with a texted code for after-hours pick-up."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian shops rarely run a shuttle; replace with what the Russian shop offers (a waiting area, the bus stop, a taxi called by the advisor). Record whatever is chosen as a new fact."
+ ]
+}

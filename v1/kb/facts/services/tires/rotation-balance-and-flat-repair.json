@@ -1,0 +1,134 @@
+{
+ "path": "services/tires/rotation-balance-and-flat-repair.md",
+ "title": "Rotation, balance and flat repair",
+ "first_revision_text": "en/_history/services/tires/rotation-balance-and-flat-repair.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The three small tire jobs.",
+ "serves": [
+  "smoke",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 182,
+ "links_to": [
+  "services/brakes/brake-inspection.md",
+  "services/tires/new-tires-and-tpms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Menu jobs tyre_rotation (0.3 h), wheel_balance (0.6 h), tyre_repair (0.3 h).",
+  "Rotation rides on 23.4 % of orders (\"nearly one in four\").",
+  "Balance for a shake at 55 to 70 mph; a shake under braking is rotors.",
+  "Repair rules: tread only, small hole, patch-plug from inside."
+ ],
+ "tables": [
+  {
+   "section": "Rotation, balance and flat repair",
+   "columns": [
+    "Job",
+    "Time",
+    "Price"
+   ],
+   "rows": [
+    {
+     "Job": "Tire rotation",
+     "Time": "20 minutes",
+     "Price": "$25.00"
+    },
+    {
+     "Job": "Balance 4 wheels",
+     "Time": "35 minutes",
+     "Price": "$60.00"
+    },
+    {
+     "Job": "Flat repair: patch-plug, rebalance",
+     "Time": "20 minutes",
+     "Price": "$31.00"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Rotation, balance and flat repair",
+   "item": "Rotation with every other oil change. Nearly one order in four has one on it. Lugs are torqued by hand and the customer is told so."
+  },
+  {
+   "section": "Rotation, balance and flat repair",
+   "item": "Balance when the wheel shakes at 55 to 70 mph. A shake only under braking is rotors, not balance: Brake inspection."
+  },
+  {
+   "section": "Rotation, balance and flat repair",
+   "item": "Flat repair only in the tread, only a hole smaller than a pencil, only from the inside with a patch-plug. Never a plug from outside, never the sidewall or shoulder. If it cannot be repaired the customer is shown why, and the next page is New tires."
+  },
+  {
+   "section": "Rotation, balance and flat repair",
+   "item": "A tire driven on flat for any distance is usually ruined inside. Look before you promise a repair."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "tyre_rotation",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 25.0
+  },
+  {
+   "catalogue_key": "wheel_balance",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 60.0
+  },
+  {
+   "catalogue_key": "tyre_repair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 31.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian: балансировка and ремонт прокола are per wheel; rotation is rare (0.5 % of orders)."
+ ]
+}

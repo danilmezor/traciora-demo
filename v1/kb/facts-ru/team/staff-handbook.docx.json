@@ -1,0 +1,70 @@
+{
+ "path": "team/staff-handbook.docx",
+ "title": "Правила внутреннего трудового распорядка",
+ "title_en": "Staff handbook",
+ "exists_in": "both",
+ "english_sheet": "facts/team/staff-handbook.docx.json",
+ "kind": "binary",
+ "format": "DOCX with heading styles, about 9 pages",
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The employee handbook: attendance, pay periods, time off, holidays, allowances, conduct.",
+ "serves": [
+  "S14",
+  "challenge:fact-only-in-attachment",
+  "visibility:worker",
+  "challenge:kb-does-not-say"
+ ],
+ "draft": "ru/_binaries.md",
+ "russian_form": "the Russian counterpart of the staff handbook: internal labour regulations, twelve numbered sections",
+ "facts": [],
+ "facts_only_in_this_file": [
+  "the leave rule and the extra days",
+  "holiday work",
+  "the lateness ladder",
+  "allowances",
+  "staff parts price",
+  "notice"
+ ],
+ "differs_from_en": [
+  "The document is «Правила внутреннего трудового распорядка», which a Russian employer keeps by law, not a handbook: leave is 28 calendar days for everyone with extra days for length of service (English: 0 / 5 / 10 / 15 / 20 days); pay twice a month on the 25th and the 10th (English: every second Friday); sick leave by an electronic certificate (English: three paid sick days); discipline in the Labour Code's steps (замечание, выговор, увольнение; прогул is an absence of more than four hours in a row). The order замечание then выговор is stated as the company's own ladder (ТК ст. 192 sets no order); the leave schedule is approved no later than two weeks before the new year (ТК ст. 123) (ledger kb.handbook).",
+  "Section numbers are kept so that the eval questions map: section 2 attendance and the lateness ladder (three in 30 days a talk, five a written explanation and a замечание, a second penalty in six months a выговор); section 4 leave; section 5 public holidays (the shops work; a holiday shift is paid double, or at the employee's wish single with another day off); section 10 customers' cars and money.",
+  "Section 10 has the sentence added after S2 and one more for the Russian leak: nobody takes a part from the stockroom that is not on an order.",
+  "Allowances in roubles: 3 000 a year for footwear, 12 000 a year for tools after the first year; staff parts at purchase price plus 10 %.",
+  "The founder's two things to his first worker: «делай как себе и говори клиенту правду».",
+  "Seen from junior: technicians and the website assistant cannot read it; the paper folder is their copy."
+ ],
+ "new_facts": [
+  "Every number is a new fact: the ladder (3, 5, a second penalty in six months), extra leave of 3 days from five years and 5 from ten, notice of 14 days for leave, one from a desk and two from a floor off at a time, 3 000 RUB for footwear, 12 000 RUB for tools, purchase price plus 10 %. The ladder is set so that slot F2 (late four shifts in ten, two written warnings, five absences) is clearly over it and slot 15 (late three in ten, never warned) is over it too.",
+  "Leave of slot 10 (two weeks) and slot 16 (a week) fits 28 calendar days."
+ ],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Labour Code facts stated as the document would state them and not in the research: 28 calendar days of annual leave; one part of the leave not shorter than 14 days; the leave schedule drawn up in December; pay at least twice a month; a holiday shift paid double or compensated by a day off; прогул as an absence of more than four hours in a row and dismissal for it; two weeks' written notice; the order замечание then выговор. To be read by someone who keeps personnel records before the document is used.",
+   "outcome": "verified",
+   "note": "Six of the eight stand as written: 28 calendar days of leave (ст. 115), one part of at least 14 days (ст. 125), pay every half month (ст. 136), прогул as more than four hours in a row and dismissal for it (ст. 81 ч. 1 п. 6 «а»), two weeks' written notice (ст. 80), a holiday shift at double pay or, at the employee's wish, at single pay with another day off (ст. 153; the document now says the single pay). Two wordings were corrected: the leave schedule is approved no later than two weeks before the new year (ст. 123; the draft said \"drawn up in December\"), and the order замечание then выговор is now stated as the company's own ladder (ст. 192 sets no order). Ledger kb.handbook. Read in the verify pass (section 4; the Labour Code on legalacts.ru, ред. от 25.05.2026). Someone who keeps personnel records still reads the document before it is used.",
+   "sentence": "Ст. 123: график отпусков утверждается «не позднее чем за две недели до наступления календарного года». Ст. 192 называет «замечание; выговор; увольнение по соответствующим основаниям» и требует учитывать «тяжесть совершенного проступка»; очерёдности не задаёт. Ст. 153: «Работа в выходной или нерабочий праздничный день оплачивается не менее чем в двойном размере»; по желанию работника — «в одинарном размере», «а день отдыха оплате не подлежит»."
+  }
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the file as it stood on the shared drive",
+   "message_ru": "Импортировано из файлов компании"
+  },
+  {
+   "n": 2,
+   "kind": "new_version",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "the edition the text is dated by, uploaded over the old file two weeks after go-live: the schedule and leave requests are in Traciora; section 10 gained the two sentences on money and parts not on an order",
+   "message_ru": "Новая редакция: график и заявления теперь в Traciora, в раздел 10 добавлены две строки."
+  }
+ ],
+ "has_history": true
+}

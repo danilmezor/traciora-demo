@@ -1,0 +1,174 @@
+{
+ "path": "services/engine/timing-belt.md",
+ "title": "Ремень ГРМ",
+ "title_en": "Timing belt",
+ "exists_in": "both",
+ "english_sheet": "facts/services/engine/timing-belt.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "The timing-belt job, as written before the price rise: old labour rate, old total, and a same-day promise. Stale on purpose (S12); a correction is proposed and waiting.",
+ "serves": [
+  "S12",
+  "S8",
+  "operate:propose",
+  "operate:find-waiting",
+  "operate:contradiction",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 391,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": "S12: old labour rate, old total, same-day promise",
+ "differs_from_en": [
+  "STALE ON PURPOSE (S12): labour 3.2 н/ч at 1 760 = 5 632; kit 8 700; coolant 1 220; total 15 552 (ledger s8.price_quoted); with the original kit 19 332. Current list: 3.2 at 1 900 = 6 080; total 16 000 (ledger s8.price_now); original kit 19 780. The story bill: 16 000 + 182,40 shop supplies = 16 182,40 as billed, VAT inside (ledger s8.bill_list).",
+  "The stale hour is the last but one of the Russian history (1 500, 1 620, 1 760, 1 900): the page was reviewed nine months before T, after the second rise and before the third.",
+  "Reference car Renault Logan 1.6 16V (K4M): 60 000 km or four years. The same-day line is kept: «вечером она уезжает домой».",
+  "Warranty line: 30 days on the work, the maker's on the kit.",
+  "\"The belt itself is about fifteen hundred\" is a figure of speech in words."
+ ],
+ "new_facts": [
+  "Interval wording: usually 60 000 km or four years, up to 120 000 km on some engines."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Спросить",
+   "item": "Пробег. И меняли ли ремень хоть раз? На машине за сто двадцать тысяч без записей считайте, что не меняли."
+  },
+  {
+   "section": "Спросить",
+   "item": "Не уходит ли антифриз? Помпа, которая подтекает, переводит работу из «скоро» в «сейчас»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«Да она нормально ездит». «И будет ездить ровно до той минуты, когда перестанет. Это единственная деталь в машине, которая не предупреждает»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«Дороговато за ремень». «Сам ремень стоит тысячи полторы. Всё остальное — до него добраться: разбирается весь перед двигателя. Поэтому заодно и помпа с роликами»."
+  },
+  {
+   "section": "Клиент говорит",
+   "item": "«А подождать можно?» Если до срока далеко — да, и скажите до какого пробега. Если срок вышел, говорите прямо: это игра на двигатель. В наряде пишем, что от замены отказался."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "hours",
+   "class": "car",
+   "value": 3.2
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "part list price each: Комплект ГРМ с помпой",
+   "tier": "standard",
+   "qty": 1,
+   "unit": "к-т",
+   "brand": "SKF",
+   "value": 8700
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 15552.0
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "before_rise",
+   "stale_on_purpose": "S12",
+   "value": 19332.0
+  },
+  {
+   "catalogue_key": "timing_belt_kit",
+   "what": "labour",
+   "class": "car",
+   "when": "before_rise",
+   "value": 5632.0,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "configurations.ru.labour_rate.standard.before_rise",
+   "what": "labour hour",
+   "value": 1760,
+   "stale_on_purpose": "S12"
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-9mo|date}}"
+ ],
+ "amounts": [
+  1220.0,
+  1760.0,
+  5632.0,
+  8700.0,
+  15552.0,
+  19332.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "pending_proposal": {
+  "serves": "S12: the correction that waits for a decision",
+  "state": "pending (never decided before T)",
+  "proposer_slot": "5",
+  "proposed_at_text_date": "{{@belt_proposal|date}}",
+  "proposed_at": "slot 5's first working day after slot 4's discount: he works two on, two off (stories/TIMELINE.md; ledger s12.proposal)",
+  "made_how": "by slot 5 himself on the page (middle rank: may propose, may not publish)",
+  "reason_ru": "Старый нормо-час. Никита назвал с этой страницы 15 552 ₽ и пообещал отдать машину в тот же день; в наряде вышло 16 182,40 ₽, и Сергей Анатольевич вернул 1 800 ₽. В прайсе — 16 000 ₽. Заодно убираю строку про «в тот же день»: это правда, только когда комплект на полке.",
+  "base": "the page's head revision (the import); nothing may edit this page after the proposal or it goes stale",
+  "changes": [
+   {
+    "before": "Дмитрий Олегович Григорьев · Проверено: {{T-9mo|date}}",
+    "after": "Дмитрий Олегович Григорьев · Проверено: {{@belt_proposal|date}}"
+   },
+   {
+    "before": "Работа — 3,2 нормо-часа по 1 760 ₽, 5 632 ₽. Комплект SKF с помпой — 8 700 ₽, пять литров антифриза — 1 220 ₽. **15 552 ₽** без расходных материалов. С оригинальным комплектом — 19 332 ₽.",
+    "after": "Работа — 3,2 нормо-часа по 1 900 ₽, 6 080 ₽. Комплект SKF с помпой — 8 700 ₽, пять литров антифриза — 1 220 ₽. **16 000 ₽** без расходных материалов. С оригинальным комплектом — 19 780 ₽. Это примеры: цену называем по прайс-листу."
+   },
+   {
+    "before": "**В тот же день.** Если машина у нас к 9:00, вечером она уезжает домой. Говорите это клиенту: у дилера она простоит два дня.",
+    "after": "**Записывайте на полный день.** В тот же день — только если комплект уже на полке, а машина на посту к 9:00. По телефону «сегодня же заберёте» не обещаем."
+   }
+  ],
+  "deciders": [
+   "4",
+   "22",
+   "1",
+   "2"
+  ],
+  "inbox": "one knowledge.proposed line in each decider's Inbox; slot 4's «Ждёт вас» is where the design puts it",
+  "against_standard": "policies/service-standards.md: decided within five working days; at T it is a day or two old (two days for T = Fri 2026-11-13)",
+  "not_covered": "services/brakes/brake-questions.md is equally stale and has no proposal"
+ }
+}

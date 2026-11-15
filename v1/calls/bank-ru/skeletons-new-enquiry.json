@@ -1,0 +1,3426 @@
+{
+ "format": "bank-ru/skeletons/1",
+ "kind": "new_enquiry",
+ "about": "Четырнадцать скелетов первичного обращения: кто ведёт разговор, где возникает сомнение, чем кончается. Реплики мастера по ролям берутся из advisors/<slot>.json, реплики клиента — из voices.json и job-blocks.json; здесь написаны только строки, которых нет в банках.",
+ "skeletons": [
+  {
+   "id": "NE01",
+   "title": "Спросили цену — мастер ведёт по порядку: машина, обстоятельства, цена, время, запись",
+   "leads": "advisor",
+   "doubt": null,
+   "fits": {
+    "price_asked": true,
+    "doubt": false,
+    "known": false,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "18-26",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "ack",
+     "p": 0.4
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "explain",
+     "p": 0.4
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.5,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE02",
+   "title": "Мастер предлагает время раньше цены; о цене клиент спрашивает сам",
+   "leads": "advisor",
+   "doubt": null,
+   "fits": {
+    "price_asked": null,
+    "doubt": false,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "18-26",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "А сколько это будет стоить?",
+      "А по деньгам что?",
+      "Подождите, а цена какая?",
+      "А во что это встанет?",
+      "А {job_inf} — это сколько у вас?",
+      "А на {car_model.acc} это сколько выйдет?",
+      "И сколько мне готовить?",
+      "А цену сразу скажете?",
+      "А по цене сориентируете?",
+      "Сколько это стоит-то?",
+      "А {job_said} у вас почём?",
+      "И цена вопроса?"
+     ],
+     "when": "price_asked"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.5,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE03",
+   "title": "Клиент описывает симптом; мастер объясняет, что цену ремонта даст только осмотр",
+   "leads": "customer",
+   "doubt": null,
+   "fits": {
+    "price_asked": null,
+    "doubt": false,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": [
+    "check_engine",
+    "suspension_noise",
+    "electrical",
+    "front_brakes",
+    "rear_brakes",
+    "battery",
+    "front_struts",
+    "rear_shocks",
+    "sway_bar_links",
+    "wheel_bearing",
+    "ball_joint_arm",
+    "cv_joint",
+    "air_conditioning",
+    "alternator"
+   ],
+   "voice_filter": null,
+   "turns": "18-28",
+   "price_mode": "inspection",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "explain"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "А это серьёзно?",
+      "И что теперь, менять всё?",
+      "А ездить-то так можно?",
+      "Это дорого чинить, как думаете?",
+      "А доехать-то до вас можно?"
+     ],
+     "group": "worry",
+     "p": 0.6
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Пока мастер не посмотрит, гадать не буду. Но и тянуть не советую.",
+       "По телефону не скажу, врать не хочу. На подъёмнике будет видно за несколько минут.",
+       "Честно — не знаю, пока не увидим. Обещать лишнего не стану."
+      ],
+      "warm": [
+       "Не переживайте заранее. Мастер посмотрит и скажет точно, а там решите.",
+       "Заранее пугать не буду. Посмотрим — и станет понятно, насколько это срочно.",
+       "Давайте не гадать. Приедете, мастер покажет, и всё станет ясно."
+      ],
+      "curt": [
+       "Смотреть надо.",
+       "Не знаю. Привозите."
+      ]
+     },
+     "group": "worry"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.5,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE04",
+   "title": "Цена названа — и сразу «дорого»",
+   "leads": "customer",
+   "doubt": "price",
+   "fits": {
+    "price_asked": true,
+    "doubt": true,
+    "known": false,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "20-30",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "after_objection",
+     "when": "L.objection == 2"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE05",
+   "title": "Всё посчитали, время предложили — «я подумаю»",
+   "leads": "advisor",
+   "doubt": "think",
+   "fits": {
+    "price_asked": true,
+    "doubt": true,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "20-30",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "after_objection",
+     "when": "L.objection == 2 and not booked"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Так записываю вас?",
+       "Так что, записываемся?"
+      ],
+      "warm": [
+       "Ну что, записываю?",
+       "Так что, запишу вас?"
+      ],
+      "curt": [
+       "Так записывать?",
+       "Ну что, пишу?"
+      ]
+     },
+     "when": "booked and doubt and L.objection < 2"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE06",
+   "title": "Постоянный клиент называет себя сам и звонит с новым делом",
+   "leads": "customer",
+   "doubt": null,
+   "fits": {
+    "price_asked": null,
+    "doubt": null,
+    "known": true,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": [
+    "terse",
+    "chatty",
+    "anxious",
+    "price_shopper",
+    "elderly",
+    "angry"
+   ],
+   "turns": "14-24",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Это {customer_last}. Я у вас уже {c:был|была}, машина — {car_model}.",
+      "{advisor_first}, это {customer_last} беспокоит, помните меня?",
+      "{customer_last} моя фамилия, я у вас обслуживаюсь."
+     ],
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "recognise"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Я вот чего звоню: {need}.",
+      "Опять к вам: {need}.",
+      "Да вот, {need}. Выручайте.",
+      "Дело такое: {need}."
+     ]
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "А сколько это будет стоить?",
+      "А по деньгам что?",
+      "Подождите, а цена какая?",
+      "А во что это встанет?",
+      "А {job_inf} — это сколько у вас?",
+      "А на {car_model.acc} это сколько выйдет?",
+      "И сколько мне готовить?",
+      "А цену сразу скажете?",
+      "А по цене сориентируете?",
+      "Сколько это стоит-то?",
+      "А {job_said} у вас почём?",
+      "И цена вопроса?"
+     ],
+     "when": "price_asked"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "doubt",
+     "when": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "after_objection",
+     "when": "doubt and L.objection == 2 and not booked"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Так записываю вас?",
+       "Так что, записываемся?"
+      ],
+      "warm": [
+       "Ну что, записываю?",
+       "Так что, запишу вас?"
+      ],
+      "curt": [
+       "Так записывать?",
+       "Ну что, пишу?"
+      ]
+     },
+     "when": "booked and doubt and L.objection < 2"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE07",
+   "title": "Клиент сам называет время, когда приедет",
+   "leads": "customer",
+   "doubt": null,
+   "fits": {
+    "price_asked": null,
+    "doubt": false,
+    "known": null,
+    "ot_na": true,
+    "booking": [
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "14-22",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "{need}.",
+      "Слушайте, {need}.",
+      "Тут такое дело: {need}."
+     ]
+    },
+    {
+     "who": "C",
+     "role": "name_time_first"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{time_chosen.v} — да, можно, время свободно.",
+       "Так, {time_chosen.v}... Да, есть место."
+      ],
+      "warm": [
+       "{time_chosen.v}... да, можно, как раз свободно!",
+       "Да-да, {time_chosen.v} получается, время есть."
+      ],
+      "curt": [
+       "{time_chosen.v}? Можно.",
+       "Ну, приезжайте {time_chosen.v}."
+      ]
+     }
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "А сколько это будет стоить?",
+      "А по деньгам что?",
+      "Подождите, а цена какая?",
+      "А во что это встанет?",
+      "А {job_inf} — это сколько у вас?",
+      "А на {car_model.acc} это сколько выйдет?",
+      "И сколько мне готовить?",
+      "А цену сразу скажете?",
+      "А по цене сориентируете?",
+      "Сколько это стоит-то?",
+      "А {job_said} у вас почём?",
+      "И цена вопроса?"
+     ],
+     "when": "price_asked"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.6,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE08",
+   "title": "Справочный звонок: делаете ли, до скольки, где находитесь",
+   "leads": "customer",
+   "doubt": "think",
+   "fits": {
+    "price_asked": null,
+    "doubt": null,
+    "known": null,
+    "ot_na": true,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "8-16",
+   "no_visit_reason": "info_only",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Скажите, а {job_inf} у вас можно?",
+      "Вы такое делаете — {job_inf}?",
+      "А у вас можно {job_inf}?",
+      "Подскажите, {job_inf} — это к вам?",
+      "Мне надо {job_inf}. Вы за такое берётесь?",
+      "Я насчёт машины: хочу {job_inf}. Это у вас делают?"
+     ]
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Да, делаем, по записи.",
+       "Да, это наша работа."
+      ],
+      "warm": [
+       "Да, конечно, делаем!",
+       "Делаем, да, без проблем."
+      ],
+      "curt": [
+       "Делаем.",
+       "Ну да."
+      ]
+     }
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "А сколько это будет стоить?",
+      "А по деньгам что?",
+      "Подождите, а цена какая?",
+      "А во что это встанет?",
+      "А {job_inf} — это сколько у вас?",
+      "А на {car_model.acc} это сколько выйдет?",
+      "И сколько мне готовить?",
+      "А цену сразу скажете?",
+      "А по цене сориентируете?",
+      "Сколько это стоит-то?",
+      "А {job_said} у вас почём?",
+      "И цена вопроса?"
+     ],
+     "when": "price_asked"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "А вы до скольки работаете?",
+      "А находитесь вы где?",
+      "А в выходные вы работаете?",
+      "А со своими запчастями к вам можно?",
+      "А у вас по записи или живая очередь?",
+      "А картой у вас оплатить можно?"
+     ]
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{closing_time}, каждый день.",
+       "Адрес — {shop_address}.",
+       "Работаем, {shop_hours}, без выходных.",
+       "Можно. Со своими запчастями гарантия будет только на работу.",
+       "Только по записи, живой очереди нет.",
+       "Да: карта, наличные, перевод по коду."
+      ],
+      "warm": [
+       "Мы {closing_time}, без выходных!",
+       "Мы {shop_short.na}, адрес — {shop_address}.",
+       "Да, работаем каждый день, {shop_hours}.",
+       "Можно, конечно! Только гарантия тогда будет на работу, а не на запчасть.",
+       "По записи, чтобы вам не ждать!",
+       "Да, конечно, как вам удобно: карта, наличные, перевод."
+      ],
+      "curt": [
+       "{closing_time}.",
+       "{shop_address}.",
+       "Работаем.",
+       "Привозите.",
+       "По записи.",
+       "Можно."
+      ]
+     },
+     "pair": "prev"
+    },
+    {
+     "who": "C",
+     "role": "doubt",
+     "when": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Понятно, спасибо.",
+      "Ясно. Ну, я тогда подъеду как-нибудь.",
+      "Хорошо, буду знать."
+     ],
+     "when": "not booked and not doubt"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Так записываю вас?",
+       "Так что, записываемся?"
+      ],
+      "warm": [
+       "Ну что, записываю?",
+       "Так что, запишу вас?"
+      ],
+      "curt": [
+       "Так записывать?",
+       "Ну что, пишу?"
+      ]
+     },
+     "when": "booked and doubt and L.objection < 2"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer",
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE09",
+   "title": "«А со своими запчастями можно?» — сомнение раньше цены",
+   "leads": "customer",
+   "doubt": "trust",
+   "fits": {
+    "price_asked": true,
+    "doubt": true,
+    "known": false,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "20-30",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "C",
+     "role": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Понятно.",
+      "Ага, ясно.",
+      "Хорошо, {c:понял|поняла}."
+     ],
+     "when": "L.objection == 2"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE10",
+   "title": "«Мне без машины никак» — сомнение о сроке",
+   "leads": "advisor",
+   "doubt": "time",
+   "fits": {
+    "price_asked": null,
+    "doubt": true,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "20-30",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration"
+    },
+    {
+     "who": "A",
+     "role": "duration"
+    },
+    {
+     "who": "C",
+     "role": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "after_objection",
+     "when": "L.objection == 2"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE11",
+   "title": "Компания записывает служебную машину: водитель или диспетчер",
+   "leads": "customer",
+   "doubt": null,
+   "fits": {
+    "price_asked": null,
+    "doubt": false,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": [
+    "fleet_pm",
+    "oil_service",
+    "seasonal_tyres",
+    "tyre_repair",
+    "alignment",
+    "check_engine",
+    "suspension_noise",
+    "electrical",
+    "front_brakes",
+    "rear_brakes",
+    "battery",
+    "front_struts",
+    "rear_shocks",
+    "wheel_bearing",
+    "ball_joint_arm",
+    "cv_joint",
+    "clutch",
+    "air_conditioning",
+    "alternator"
+   ],
+   "voice_filter": [
+    "driver",
+    "dispatcher"
+   ],
+   "turns": "16-26",
+   "vehicle_class": "van",
+   "weight": 0.6,
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "recognise"
+    },
+    {
+     "who": "A",
+     "role": "ack",
+     "when": "not known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "А какая машина? У вас их несколько на договоре.",
+       "Какая именно — номер подскажете?"
+      ],
+      "warm": [
+       "А какая машина? Их у вас несколько.",
+       "Подскажите номер машины или кто водитель?"
+      ],
+      "curt": [
+       "Какая машина?",
+       "Номер какой?"
+      ]
+     },
+     "when": "known",
+     "group": "unit"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "{unit}, {car_model}.",
+      "{car_model}, {plate_tail_said}.",
+      "Машина {unit}. {car_model}, {car_year_short.gen} года."
+     ],
+     "group": "unit"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{car_model}, {plate_tail_said}, вижу.",
+       "Так, {unit}, {car_model}. {a:Нашёл|Нашла}."
+      ],
+      "warm": [
+       "{car_model}, {unit}... вижу, да.",
+       "Ага, {car_model}, {plate_tail_said}, {a:нашёл|нашла}."
+      ],
+      "curt": [
+       "Ага. {car_model}.",
+       "Вижу."
+      ]
+     },
+     "group": "unit"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Счёт на организацию, как обычно.",
+      "Акт и счёт — на почту, в бухгалтерию.",
+      "Заявку я вам сегодня пришлю."
+     ],
+     "when": "booked",
+     "group": "docs"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Да, счёт и акт на организацию, как всегда.",
+       "Хорошо, документы отправлю на почту из договора."
+      ],
+      "warm": [
+       "Конечно, всё на организацию, как обычно.",
+       "Да, акт и счёт отправлю вам на почту."
+      ],
+      "curt": [
+       "Да.",
+       "Ладно."
+      ]
+     },
+     "group": "docs"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE12",
+   "title": "Сравнивает с другим местом: «а там дешевле» уже после предложенного времени",
+   "leads": "customer",
+   "doubt": "compare",
+   "fits": {
+    "price_asked": true,
+    "doubt": true,
+    "known": false,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": [
+    "oil_service",
+    "front_brakes",
+    "rear_brakes",
+    "battery",
+    "front_struts",
+    "rear_shocks",
+    "sway_bar_links",
+    "wheel_bearing",
+    "ball_joint_arm",
+    "cv_joint",
+    "timing_belt",
+    "clutch",
+    "alternator",
+    "atf_service"
+   ],
+   "voice_filter": [
+    "terse",
+    "price_shopper",
+    "angry",
+    "chatty"
+   ],
+   "turns": "22-32",
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "doubt"
+    },
+    {
+     "who": "A",
+     "role": "probe"
+    },
+    {
+     "who": "C",
+     "role": "probe_reply"
+    },
+    {
+     "who": "A",
+     "role": "objection",
+     "check": "objection"
+    },
+    {
+     "who": "C",
+     "role": "after_objection",
+     "when": "L.objection == 2 and not booked"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Так записываю вас?",
+       "Так что, записываемся?"
+      ],
+      "warm": [
+       "Ну что, записываю?",
+       "Так что, запишу вас?"
+      ],
+      "curt": [
+       "Так записывать?",
+       "Ну что, пишу?"
+      ]
+     },
+     "when": "booked and doubt and L.objection < 2"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.2,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE13",
+   "title": "Два дела в одном звонке: «и ещё заодно…»",
+   "leads": "customer",
+   "doubt": null,
+   "fits": {
+    "price_asked": true,
+    "doubt": false,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": null,
+   "voice_filter": null,
+   "turns": "20-30",
+   "second_job": true,
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "И ещё, заодно: {second_need}. Это сколько?",
+      "А, и вот ещё что: {second_need}. Можно сразу и это?",
+      "Да, и второе: {second_need}. Тоже посчитайте."
+     ]
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{second_job_said} — {second_price}. Сделаем за один заезд.",
+       "Можно. {second_job_said} — это ещё {second_price}."
+      ],
+      "warm": [
+       "Да, конечно, заодно и сделаем! {second_job_said} — {second_price}.",
+       "Можно сразу, да. {second_job_said} — ещё {second_price}."
+      ],
+      "curt": [
+       "{second_job_said} — {second_price}.",
+       "Ещё {second_price}."
+      ]
+     }
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.5
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "C",
+     "role": "backchannel",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "C",
+     "role": "ask_duration",
+     "group": "dur",
+     "p": 0.3,
+     "when": "booked"
+    },
+    {
+     "who": "A",
+     "role": "duration",
+     "group": "dur"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  },
+  {
+   "id": "NE14",
+   "title": "Короткая запись в сезон: «переобуться»",
+   "leads": "customer",
+   "doubt": null,
+   "fits": {
+    "price_asked": null,
+    "doubt": false,
+    "known": null,
+    "ot_na": false,
+    "booking": [
+     0,
+     1,
+     2
+    ]
+   },
+   "job_filter": [
+    "seasonal_tyres"
+   ],
+   "voice_filter": null,
+   "turns": "10-16",
+   "weight": 0.25,
+   "beats": [
+    {
+     "who": "A",
+     "role": "greeting",
+     "check": "greeting"
+    },
+    {
+     "who": "C",
+     "role": "open"
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "Вы у нас раньше обслуживались?",
+       "Вы у нас уже были — в базе есть?",
+       "Подскажите, вы наш клиент, раньше приезжали?",
+       "А вы к нам впервые или уже обращались?",
+       "Скажите, вы у нас уже обслуживались?",
+       "Вы наш клиент? Посмотрю вас в базе.",
+       "Вы у нас впервые или уже есть в базе?",
+       "Напомните, вы у нас раньше были?"
+      ],
+      "warm": [
+       "Вы у нас уже были?",
+       "А вы у нас раньше обслуживались?",
+       "А вы к нам первый раз или уже приезжали?",
+       "Ой, а вы у нас раньше не были случайно?",
+       "А вы у нас уже бывали, подскажите?",
+       "Вы к нам раньше приезжали?",
+       "А мы с вами раньше не встречались — вы у нас были?",
+       "Подскажите, вы у нас в первый раз?",
+       "А в базе вы у нас есть, не помните?",
+       "Вы у нас уже обслуживались или первый раз звоните?"
+      ],
+      "curt": [
+       "Были у нас?",
+       "У нас были?",
+       "Раньше приезжали?",
+       "В базе есть?"
+      ]
+     },
+     "group": "known",
+     "when": "known"
+    },
+    {
+     "who": "C",
+     "role": "say",
+     "say": [
+      "Да, {c:был|была}. {customer_last} фамилия.",
+      "{c:Был|Была}, и не раз. {customer_last}.",
+      "Да, я у вас постоянно. {customer_last} {customer_first}.",
+      "Обращал{c:ся|ась}, в прошлом году. На фамилию {customer_last} посмотрите."
+     ],
+     "group": "known",
+     "names": true
+    },
+    {
+     "who": "A",
+     "role": "say",
+     "say": {
+      "exact": [
+       "{customer_title}, {a:нашёл|нашла} вас. Продолжаем.",
+       "Вижу, {customer_title}. Машина ваша у нас в базе."
+      ],
+      "warm": [
+       "Ой, {customer_title}, вижу вас! Тогда быстрее получится.",
+       "{customer_title}, {a:нашёл|нашла}! Рады, что снова к нам."
+      ],
+      "curt": [
+       "Ага, {customer_title}. Вижу.",
+       "Вижу. {customer_title}."
+      ]
+     },
+     "group": "known"
+    },
+    {
+     "who": "A",
+     "role": "ask_car",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "give_car"
+    },
+    {
+     "who": "A",
+     "role": "ask_more",
+     "check": "need_discovery"
+    },
+    {
+     "who": "C",
+     "role": "answer"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name_early",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name_early"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name_early"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "not booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "not booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "price",
+     "check": "price_with_next_step"
+    },
+    {
+     "who": "C",
+     "role": "react_price"
+    },
+    {
+     "who": "A",
+     "role": "offer_time",
+     "check": "offered_time"
+    },
+    {
+     "who": "C",
+     "role": "respond_offer"
+    },
+    {
+     "who": "A",
+     "role": "booking",
+     "check": "asked_for_booking"
+    },
+    {
+     "who": "C",
+     "role": "after_booking"
+    },
+    {
+     "who": "A",
+     "role": "ask_name",
+     "group": "name",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "give_name",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "ask_number",
+     "group": "name"
+    },
+    {
+     "who": "C",
+     "role": "give_number",
+     "group": "name"
+    },
+    {
+     "who": "A",
+     "role": "confirm_number",
+     "check": "name_and_number",
+     "when": "booked"
+    },
+    {
+     "who": "C",
+     "role": "yes",
+     "when": "booked and not known and L.name_and_number == 2"
+    },
+    {
+     "who": "A",
+     "role": "recap",
+     "check": "recap"
+    },
+    {
+     "who": "C",
+     "role": "thanks_bye"
+    },
+    {
+     "who": "A",
+     "role": "closing"
+    }
+   ]
+  }
+ ]
+}

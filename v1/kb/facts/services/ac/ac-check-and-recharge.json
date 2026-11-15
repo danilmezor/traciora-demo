@@ -1,0 +1,183 @@
+{
+ "path": "services/ac/ac-check-and-recharge.md",
+ "title": "A/C check and recharge",
+ "first_revision_text": "en/_history/services/ac/ac-check-and-recharge.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "The summer job: performance check, the two refrigerants, what a recharge can and cannot fix.",
+ "serves": [
+  "S11",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "medium",
+ "words_en": 315,
+ "links_to": [
+  "services/ac/ac-compressor-and-condenser.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Season May to August at 2.5 times the yearly mean at the peak (design S11).",
+  "Four catalogue jobs with hours and prices: ac_performance_check (menu 49.95), ac_recharge (1.2 h), ac_recharge_1234yf (1.2 h), ac_evaporator_cleaning (menu).",
+  "R-134a up to about 2016, R-1234yf from about 2017; the label decides.",
+  "R-1234yf is stocked at East Main only (parts/stock-we-keep.md); whether Charlotte Pike can recharge it is not stated.",
+  "Check first; a low system has a leak; a recharge without a repair carries no warranty and that is written on the order.",
+  "Only certified technicians open a system (names not given anywhere)."
+ ],
+ "tables": [
+  {
+   "section": "The jobs",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Price"
+   ],
+   "rows": [
+    {
+     "On the order": "A/C performance check",
+     "Hours": "0.5",
+     "Price": "$49.95"
+    },
+    {
+     "On the order": "A/C evacuate & recharge (R-134a)",
+     "Hours": "1.2",
+     "Price": "$207.40"
+    },
+    {
+     "On the order": "A/C evacuate & recharge (R-1234yf)",
+     "Hours": "1.2",
+     "Price": "$278.80"
+    },
+    {
+     "On the order": "A/C evaporator cleaning & deodorizer service",
+     "Hours": "0.5",
+     "Price": "$84.95"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "How to sell it straight",
+   "item": "Start with the check, not the recharge. It tells us whether the system is low, and a system that is low has a leak."
+  },
+  {
+   "section": "How to sell it straight",
+   "item": "A recharge on a leaking system works for a few weeks. If the customer wants that for a trip, fine: they hear it first, and it is written on the order. No warranty on a recharge that was not preceded by a repair."
+  },
+  {
+   "section": "How to sell it straight",
+   "item": "The dye goes in with every recharge. If it comes back warm, the dye shows where."
+  },
+  {
+   "section": "How to sell it straight",
+   "item": "A system that is full and still warm is a compressor, a blend door or a fan: A/C compressor and condenser."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "hours",
+   "class": "car",
+   "value": 0.5
+  },
+  {
+   "catalogue_key": "ac_performance_check",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  },
+  {
+   "catalogue_key": "ac_recharge",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "ac_recharge",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 207.4
+  },
+  {
+   "catalogue_key": "ac_recharge_1234yf",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "ac_recharge_1234yf",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 278.8
+  },
+  {
+   "catalogue_key": "ac_evaporator_cleaning",
+   "what": "hours",
+   "class": "car",
+   "value": 0.5
+  },
+  {
+   "catalogue_key": "ac_evaporator_cleaning",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 84.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Terry Dotson",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [
+  "No warranty on a recharge not preceded by a repair (an exception the warranty page does not list: a small planted inconsistency between a service page and the policy)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Заправка кондиционера»; R-134a dominates the Russian parc; R-1234yf is rare."
+ ]
+}

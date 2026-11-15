@@ -1,0 +1,110 @@
+{
+ "path": "services/diagnostics/noises-and-vibrations.md",
+ "title": "Noises and vibrations",
+ "first_revision_text": "en/_history/services/diagnostics/noises-and-vibrations.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "How a noise complaint is taken and inspected.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 208,
+ "links_to": [
+  "services/brakes/brake-inspection.md",
+  "services/suspension/front-end-parts.md",
+  "services/tires/rotation-balance-and-flat-repair.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job suspension_diag: menu 49.95, 0.5 h.",
+  "Six questions with what each answer points to.",
+  "A ride with the technician is offered at drop-off.",
+  "Usual causes in order: sway bar links, struts or shocks, wheel bearing, control arm bushings."
+ ],
+ "tables": [
+  {
+   "section": "Noises and vibrations",
+   "columns": [
+    "Ask",
+    "Because"
+   ],
+   "rows": [
+    {
+     "Ask": "Over bumps, or on smooth road?",
+     "Because": "Bumps: links, bushings, struts. Smooth: bearings, tires"
+    },
+    {
+     "Ask": "Turning, or straight?",
+     "Because": "Turning: CV axle, wheel bearing, strut mount"
+    },
+    {
+     "Ask": "Braking?",
+     "Because": "Then it is a brake inspection"
+    },
+    {
+     "Ask": "Faster with speed?",
+     "Because": "A hum that rises with speed is a bearing or a tire"
+    },
+    {
+     "Ask": "Front or back, left or right?",
+     "Because": "They usually know"
+    },
+    {
+     "Ask": "Cold only?",
+     "Because": "Bushings and belts complain in the cold"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "suspension_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 49.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Диагностика ходовой части», 800 RUB; carried by 12.9 % of Russian orders (roads)."
+ ]
+}

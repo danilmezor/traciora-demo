@@ -1,0 +1,139 @@
+{
+  "format": "seed-conversation/1",
+  "id": "20-people-p22-web-rashodnye-materialy",
+  "configuration": "ru",
+  "number": 20,
+  "story": "people",
+  "title": "Строка в наряде, о которой не сказали: руководитель отвечает на следующий день, а объясняет Камила",
+  "demonstrates": "A question about a bill on the web chat: the assistant explains the charge in general, cannot see the order, hands over. It arrives on the weak desk's shift; the chat turns Urgent and stays so overnight. Slot 22 answers the next morning in seven words. The customer's reply gets a draft he does not touch; slot 24, back on shift, edits it and sends it eight minutes later, with the figure, and resolves.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Фарид",
+      "invented": true,
+      "first_time": false,
+      "note": "клиент сервиса на Технической; накануне ему меняли помпу",
+      "phone": "+7 907 551-34-26"
+    },
+    "staff": [
+      {"slot": 22, "name": "Ринат Фаридович Галиев"},
+      {"slot": 24, "name": "Камила Шакирова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Клиент, который дома прочитал заказ-наряд.",
+    "what_happens": "«Расходные материалы 125,40. Мне про неё никто не говорил.» Ответ приходит наутро: «это во всех нарядах. 3 процента от работ». Он пишет, что могли бы и предупредить. Объясняет ему Камила.",
+    "facts": {
+      "rule": "3 % от работ по нормо-часам на заказе, не больше 500 (catalogue.json shop_supplies)",
+      "rota": "в день вопроса на приёмке слот 23 и руководитель; слот 24 выходит на следующий день",
+      "public_pages_used": ["прайс: расходные материалы"],
+      "prices": [
+        {"said": "125,40", "amount": 125.4, "what": "расходные материалы на замене помпы: 3 % от работы по нормо-часам, 4 180", "from": {"shop_supplies_of": "water_pump", "class": "car"}},
+        {"said": "4 180 ₽", "amount": 4180.0, "what": "работа по замене помпы: 2,2 нормо-часа", "from": {"labour_of": "water_pump", "class": "car"}}
+      ],
+      "numbers": [
+        {"said": "3 процента", "what": "ставка расходных материалов (ledger price.supplies.rate)"},
+        {"said": "3 %", "what": "то же"},
+        {"said": "500 ₽", "what": "предел на заказ (ledger price.supplies.cap)"}
+      ]
+    }
+  },
+  "days": {
+    "T-65d": {"anchor": "the Wednesday of week T-9", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 9}, "nominal": "Wed 2026-09-09"},
+    "T-64d": {"anchor": "1 calendar day after the Wednesday of week T-9", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 9, "plus_days": 1}, "nominal": "Thu 2026-09-10", "what": "the next day: slot 24 is on shift"}
+  },
+  "floating_days": [
+    {"word": "Вчера", "said_on": "T-65d", "day": "the Tuesday of week T-9", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "5eedc0de-0020-4e00-8000-00000000a014",
+      "peer": {"id": "seedv1-browser-ru-0702", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0702",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-65d", "at": "11:40:10", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-65d", "at": "11:40:10", "kind": "message", "from": "customer", "text": "Здравствуйте. Вчера забирал машину на Технической, в заказ-наряде строка «расходные материалы» 125,40. Мне про неё никто не говорил. Это что?"},
+        {"n": 2, "day": "T-65d", "at": "11:40:35", "kind": "message", "from": "assistant", "text": "Здравствуйте! Я виртуальный помощник «Ермак-Сервиса». Ваш заказ-наряд я не вижу. В целом расходные материалы — это небольшая доплата к работам, которые считаются по нормо-часам: очистители, смазки, крепёж. По вашему наряду вопрос передам на Техническую. Напишите, пожалуйста, как к вам обращаться и номер телефона."},
+        {"n": 3, "day": "T-65d", "at": "11:41:20", "kind": "message", "from": "customer", "text": "Фарид, +79075513426"},
+        {"n": 4, "day": "T-65d", "at": "11:41:44", "kind": "message", "from": "assistant", "text": "Спасибо, Фарид. Вопрос передал, с вами свяжутся в ближайшее время."},
+        {"n": 5, "day": "T-65d", "at": "11:41:45", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Фарид", "phone": "+7 907 551-34-26", "site": "Техническая", "context": "Фарид вчера забрал машину на Технической. В заказ-наряде строка «расходные материалы», 125,40, о которой ему не сказали; спрашивает, что это. Наряд я не вижу, объяснил только в общих словах."}}, "note": {"from": "assistant", "private": true, "text": "Фарид вчера забрал машину на Технической. В заказ-наряде строка «расходные материалы», 125,40, о которой ему не сказали; спрашивает, что это. Наряд я не вижу, объяснил только в общих словах."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "west", "owner": null, "due": "T-65d 20:00, закрытие дня"}},
+        {"n": 6, "day": "T-65d", "at": "11:53", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 7, "day": "T-65d", "at": "12:17", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-64d", "at": "09:25:08", "kind": "activity", "what": "assigned", "derived": true, "to": 22, "by": 22, "how": "first reply"},
+        {"n": 9, "day": "T-64d", "at": "09:25:10", "kind": "message", "from": "staff", "slot": 22, "text": "это во всех нарядах. 3 процента от работ", "late": "he answers the next day (ledger conv.slowest_tenth)"},
+        {"n": 10, "day": "T-64d", "at": "09:25:11", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 22, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-64d", "at": "09:25:12", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T-64d", "at": "09:48:30", "kind": "message", "from": "customer", "text": "Могли бы и предупредить. Ладно."},
+        {"n": 13, "day": "T-64d", "at": "09:49:10", "kind": "draft", "id": "d1", "text": "Вы правы, Фарид, приносим извинения, что об этом не сказали при выдаче. Расходные материалы — это 3 % от стоимости работ по нормо-часам, не больше 500 ₽ на заказ; строка есть в каждой смете.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-64d", "at": "09:56:40", "became": 14}},
+        {"n": 14, "day": "T-64d", "at": "09:56:40", "kind": "message", "from": "staff", "slot": 24, "text": "Фарид, здравствуйте, это Камила, мастер-приёмщик на Технической. Вы правы, и извините, что при выдаче об этом не сказали. Расходные материалы — это 3 % от работ по нормо-часам, не больше 500 ₽ на заказ. У вас 125,40 — это 3 % от работы по замене помпы, 4 180 ₽. Эта строка должна быть в смете ещё до начала ремонта. Если в наряде что-то ещё непонятно, пишите сюда, разберёмся."},
+        {"n": 15, "day": "T-64d", "at": "09:57:00", "kind": "activity", "what": "label_added", "label": "жалоба", "by": 24},
+        {"n": 16, "day": "T-64d", "at": "09:57:20", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-64d", "at": "09:25:08", "to": 22, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 22,
+        "labels": ["жалоба"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 2, "by": "assistant", "wall_seconds": 25},
+          {"asked": 3, "answered": 4, "by": "assistant", "wall_seconds": 24},
+          {"asked": 5, "answered": 9, "by": 22, "working_minutes": 523.4, "wall_minutes": 1303.4, "measured_from": "n 5", "reply": "first", "late": "he answers the next day (ledger conv.slowest_tenth)"},
+          {"asked": 12, "answered": 14, "by": 24, "working_minutes": 8.2, "wall_minutes": 8.2, "measured_from": "n 12", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 22,
+          "n": 9,
+          "working_minutes": 523.4,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 2, "manager": 2, "note": 1},
+        "resolutions": [
+          {"day": "T-64d", "at": "09:57:20", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 24}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 22: his first line 523.4 working minutes after the hand-off, the next morning; slot 24: one reply in his chat, one draft edited, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "complaint, comeback, the bill",
+    "handled": "assistant first, handed over (escalation), slot 22, then slot 24",
+    "outcome": "объяснено на следующий день; закрыт слотом 24",
+    "facts": [
+      "shop supplies are 3 % of hourly work, at most 500 an order; on his order 125,40",
+      "the hand-over waited from 11:41 to the next morning",
+      "slot 22 owns the chat; slot 24 wrote the reply that explained it"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Семь слов, без имени, без извинения, и по сути верно.",
+    "Черновик был готов через сорок секунд после его реплики; владелец чата его не тронул; им воспользовалась Камила, выйдя на смену.",
+    "Владелец чата и тот, кто помог клиенту, — не всегда одна строка в статистике."
+  ],
+  "new_facts": [
+    "Фарид, +7 907 551-34-26: замена помпы на west, машину забрал во вторник недели T-9; в наряде расходные материалы 125,40 (3 % от работы 4 180)."
+  ]
+}

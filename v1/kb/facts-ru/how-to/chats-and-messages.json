@@ -1,0 +1,134 @@
+{
+ "path": "how-to/chats-and-messages.md",
+ "title": "Чаты и сообщения",
+ "title_en": "Chats and messages",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/chats-and-messages.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "6",
+ "purpose": "How web chat and messenger conversations are answered alongside the assistant.",
+ "serves": [
+  "S7",
+  "S12",
+  "challenge:combine-kb-and-data",
+  "visibility:public"
+ ],
+ "length_class": "medium",
+ "words_ru": 348,
+ "links_to": [
+  "customers/README.md",
+  "prices/price-list.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Four channels (ledger conv.channels): web chat, Telegram, VK, Avito. The assistant sends in the web chat only and drafts in Telegram, VK and Avito; in an owned chat it drafts (ledger conv.assistant_mode).",
+  "Telegram passes no phone number (S7: two contacts for one person).",
+  "Lines on Avito, voice messages and WhatsApp."
+ ],
+ "new_facts": [
+  "WhatsApp is not used; customers are offered Telegram or VK.",
+  "Voice messages are answered in text."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что делает помощник",
+   "item": "Чат на сайте: помощник отвечает сам — по страницам, которые можно показывать клиентам: Ответы клиентам, страницы услуг и прайс-лист. Больше ни по чему. Он может объяснить услугу, назвать фиксированную цену, сказать часы работы. Машину и историю клиента он не видит и записать не может. Когда клиент хочет время или спрашивает то, чего нет на этих страницах, помощник передаёт разговор нам, и на доске появляется карточка."
+  },
+  {
+   "section": "Что делает помощник",
+   "item": "Telegram, ВКонтакте и Авито: помощник только готовит черновик. Ничего не уходит, пока кто-то из нас не прочитал, не поправил и не отправил."
+  },
+  {
+   "section": "Что делает помощник",
+   "item": "Как только чат взял кто-то из нас, помощник и в нём переходит на черновики."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Первый ответ — за 10 минут в рабочее время. Переданный чат — это клиент, который уже подождал."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Откройте переписку, прочитайте её всю и только потом отвечайте. Не заставляйте человека повторять то, что он уже написал помощнику."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Найдите клиента по номеру телефона. Чат, звонок и визит — это один человек, и карточка у него одна. Telegram номер не передаёт: спросите."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Черновик — это заготовка. Каждую цену в нём сверьте с прайс-листом, каждое время — с записью, и только потом отправляйте. Отправляете его вы."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Цену ремонта на машину, которую мы не видели, в чате не называем. Фиксированные цены и «от… до» с открытых страниц — можно."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Клиенты задают вопросы отдельными сообщениями, по одному. Отвечайте на все, а не только на первый."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "На Авито чаще всего пишут одно: «сколько стоит?» Отвечаем как по телефону: цена и сразу время."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "На голосовое отвечаем текстом."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "WhatsApp мы не ведём. Просят «скиньте в ватсап» — предлагаем Telegram или ВКонтакте."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Записали — проговорите запись в чате: день, время, сервис, работа."
+  },
+  {
+   "section": "Что делаем мы",
+   "item": "Закончили — закройте переписку. Тогда список открытых — это список тех, кто ждёт."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "6",
+   "written_as": "Алина",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-3mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

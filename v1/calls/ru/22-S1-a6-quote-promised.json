@@ -1,0 +1,717 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-22-a6-quote-promised",
+  "configuration": "ru",
+  "number": 22,
+  "story": "S1",
+  "title": "The caterer asks for a quote; the newcomer promises to ring back with it today",
+  "purpose": "Story S1, call 22. The contact of account A6 wants a written quote for two vehicles and would bring one of them this week. Nikita puts her on hold to find a price, gives a round figure, offers no time, does not ask who she is or where to send the quote, and promises to ring back with it \"today before six\". The quote goes out two days later; the call log marks the callback as not kept.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Никита Ведяшкин",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Дарья Олеговна Вершинина",
+      "company": "Вкусный выезд",
+      "account": "A6",
+      "ref": "accounts.json ru.A6 contacts[1]",
+      "first_time": false,
+      "note": "she gives the company and not her name; he does not ask"
+    }
+  },
+  "call": {
+    "day": "slot 7's first working day on or after the Tuesday of week T-9 (rule R6; card S01, call 22; for the nominal T that Tuesday is his working day)",
+    "nominal_offset": "T-66d",
+    "nominal_date": "2026-09-08",
+    "local_start": "11:20",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 15,
+    "caller_phone": "+7 907 747-46-46",
+    "repeat_caller": false,
+    "talk_s": 140
+  },
+  "scenario": {
+    "who_calls": "Дарья Вершинина of account A6, comparing offers before she books anything.",
+    "vehicle": "unit 2, ГАЗель Next refrigerated van, 2020, Х800ЕТ173, and unit 5, LADA Largus van, 2019, Р792УС73 (accounts.json ru.A6 fleet); on the call nobody asks which Газель and which Largus she means",
+    "job": "front pads and discs on the van; scheduled maintenance on the Largus",
+    "wants": "a quote with labour and parts apart, for her director; the van could come this week",
+    "what_happens": "Nikita repeats the two jobs, agrees to the breakdown, is asked for a rough price, puts her on hold, reads the list price of the brake job, promises to count it and ring back today before six and to e-mail it, does not know which address, and repeats the promise.",
+    "facts": {
+      "front_pads_rotors_van_rub": 16276,
+      "quote_promised": "the day of the call, before 18:00",
+      "quote_sent": "call+2d",
+      "note": "catalogue.json front_pads_rotors, class van, list: 2.34 h x 1 900 + (pads 2 660 + 2 discs x 3 220) x 1.3 = 16 276. The account pays list. The hold lasts about 40 s; the stored line is the PBX message.",
+      "prices": [
+        {
+          "job": "front_pads_rotors",
+          "name": "Замена передних тормозных дисков и колодок",
+          "vehicle_class": "van",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 16276.0,
+          "labour_hour_rub": 1900,
+          "said": "шестнадцать двести семьдесят шесть",
+          "said_rub": 16276
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Никита, здравствуйте!"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.8,
+      "said": "Здравствуйте. Это «Вкусный выезд», мы у вас по договору обслуживаемся. Мне нужна смета на две машины."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 12.0,
+      "said": "Да-да, конечно. На какие?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 15.1,
+      "said": "Газель, передние тормоза — колодки с дисками. И Ларгус, ТО."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 20.5,
+      "said": "Газель — тормоза, Ларгус — ТО. Понял."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 24.0,
+      "said": "Смету мне надо с разбивкой: работы отдельно, запчасти отдельно. Мне её директору на подпись нести. И Газель мы хотим на этой неделе пригнать, если по цене сойдёмся."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 37.3,
+      "said": "Да-да.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 39.5,
+      "said": "Да-да, без проблем, сделаем с разбивкой."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 43.7,
+      "said": "А хотя бы примерно сейчас можете сказать, сколько тормоза на Газель?"
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 50.0,
+      "said": "Сейчас, секундочку, посмотрю... Повисите, пожалуйста."
+    },
+    {
+      "n": 11,
+      "who": "hold",
+      "at_s": 54.0,
+      "said": "[удержание, около 40 секунд; автоинформатор: «Ваш звонок очень важен для нас. Пожалуйста, оставайтесь на линии»]",
+      "hold_s": 40
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 94.8,
+      "said": "Алло, вы тут? Тормоза на Газель по прайсу — шестнадцать двести семьдесят шесть, это с колодками и дисками."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 104.7,
+      "said": "Шестнадцать двести семьдесят шесть. Хорошо. А смету когда пришлёте?"
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 110.0,
+      "said": "Я посчитаю и сегодня до шести вам перезвоню, скажу точно. И на почту отправлю."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 116.5,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 118.3,
+      "said": "На почту — это на какую? У вас есть наша почта?"
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 124.2,
+      "said": "Э-э... Должна быть в договоре, вроде бы. Я найду."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 129.6,
+      "said": "Хорошо, жду."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 131.6,
+      "said": "Да-да. Значит, сегодня до шести перезвоню по смете. До свидания!"
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 138.0,
+      "said": "До свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.64,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          14,
+          19
+        ],
+        "said": [
+          "до шести",
+          "до шести"
+        ],
+        "stored": [
+          "до 6",
+          "до 6"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          7
+        ],
+        "error": false
+      },
+      {
+        "rule": "R9",
+        "what": "the hold: the PBX message is stored as one line under the manager's label",
+        "script_turns": [
+          11
+        ],
+        "error": false,
+        "stored": "Ваш звонок очень важен для нас. Пожалуйста, оставайтесь на линии."
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4
+        ],
+        "said": [
+          "Ларгус"
+        ],
+        "stored": [
+          "Largus"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "'Газель' as a common noun, in lower case",
+        "script_turns": [
+          4,
+          5,
+          6,
+          9,
+          12
+        ],
+        "said": "Газель",
+        "stored": "газель",
+        "error": true
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          12,
+          13
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          1,
+          10,
+          17,
+          19
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 7,
+        "wrong": 5
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 4,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": true,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 161,
+    "stored_words": 166,
+    "strict_word_difference": 0.155
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 186,
+    "duration_s": 140.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Никита, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здравствуйте. Это «Вкусный выезд», мы у вас по договору обслуживаемся. Мне нужна смета на две машины.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, конечно. На какие?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Газель, передние тормоза, колодки с дисками. И Largus, ТО.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Газель, тормоза, Ларгус, ТО. Понял.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Смету мне надо с разбивкой: работы отдельно, запчасти отдельно. Мне её директору на подпись нести. И газель мы хотим на этой неделе пригнать, если по цене сойдёмся.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, без проблем, сделаем с разбивкой.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А хотя бы примерно сейчас можете сказать, сколько тормоза на газель?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сейчас, секундочку, посмотрю. Повисите, пожалуйста.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ваш звонок очень важен для нас. Пожалуйста, оставайтесь на линии.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Алло, вы тут? Тормоза на газель по прайсу — 16 276, это с колодками и дисками.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "16 276. Хорошо. А смету когда пришлёте?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я посчитаю и сегодня до 6 вам перезвоню, скажу точно. И на почту отправлю.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Угу.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "На почту, это на какую? У вас есть наша почта?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Должна быть в договоре, вроде бы. Я найду.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, жду.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да. Значит, сегодня до 6 перезвоню по смете. До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Никита, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Должна быть в договоре, вроде бы. Я найду.",
+        "level": 0,
+        "segment": 15
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Газель, тормоза, Ларгус, ТО.",
+        "level": 1,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Тормоза на газель по прайсу — 16 276, это с колодками и дисками.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "offered_time",
+        "quote": "Да-да, без проблем, сделаем с разбивкой.",
+        "level": 0,
+        "segment": 6
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Я посчитаю и сегодня до 6 вам перезвоню, скажу точно.",
+        "level": 2,
+        "segment": 12
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, сегодня до 6 перезвоню по смете.",
+        "level": 1,
+        "segment": 17
+      }
+    ],
+    "na": [
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Тормоза на газель по прайсу — 16 276, это с колодками и дисками.",
+      "why": "Назвал цену по прайсу с точностью до рубля и сказал, что в неё входит.",
+      "segment": 10
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "Должна быть в договоре, вроде бы. Я найду.",
+      "say": "Подскажите, как вас зовут и на какой адрес отправить смету? И номер для связи этот, с которого вы звоните?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 46.4,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 15
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 6
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 12
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 17
+        }
+      ],
+      "na": [
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "quoted"
+      ],
+      "score": 46.4,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 10,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Никита, здравствуйте",
+        "name_and_number": "Должна быть в договоре, вроде бы. Я найду",
+        "need_discovery": "Газель, тормоза, Ларгус, ТО",
+        "price_with_next_step": "Тормоза на газель по прайсу — 16 276, это с колодками и дисками",
+        "offered_time": "Да-да, без проблем, сделаем с разбивкой",
+        "asked_for_booking": "Я посчитаю и сегодня до 6 вам перезвоню, скажу точно",
+        "recap": "Значит, сегодня до 6 перезвоню по смете"
+      },
+      "na": {
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Тормоза на газель по прайсу — 16 276, это с колодками и дисками",
+        "why": "Назвал цену по прайсу с точностью до рубля и сказал, что в неё входит."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "Должна быть в договоре, вроде бы. Я найду.",
+        "say": "Подскажите, как вас зовут и на какой адрес отправить смету? И номер для связи этот, с которого вы звоните?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 0,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": "na"
+    },
+    "score": 46.4
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "0: не спросил ни имени, ни номера, ни адреса почты, на которую обещал прислать смету. По имени и по прошлым обращениям он к ней не обращался, поэтому проверка применяется.",
+    "need_discovery": "1: машины и работы известны со слов клиентки. Какая именно Газель из трёх и какой Ларгус, какой пробег, что с тормозами, он не спросил.",
+    "price_with_next_step": "1: цена и что в неё входит; от чего она зависит и когда приезжать, не сказано.",
+    "offered_time": "0: на «хотим на этой неделе пригнать» времени не предложил.",
+    "asked_for_booking": "2: шаг с датой, часом и исполнителем: «я посчитаю и сегодня до шести вам перезвоню».",
+    "recap": "1: повторил срок звонка, без работ и без адреса.",
+    "objection": "Не применяется: «если по цене сойдёмся» — условие, а не сомнение.",
+    "outcome": "callback_promised. Звонка в течение 24 часов не было, смета ушла через два дня: журнал звонков ставит автопровал callback_not_kept.",
+    "score": "(1·2 + 2·0 + 2·1 + 2·1 + 3·0 + 3·2 + 1·1) / 2 = 6.5 из 14 весовых баллов = 46.4.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "not_kept",
+    "auto_fail": "callback_not_kept",
+    "note": "no outbound call to this number within 24 hours; the quote is sent two days later"
+  },
+  "new_facts": [
+    "Смета для «Вкусного выезда» на две машины (№ 2: передние колодки и диски, 16 276; № 5: ТО) отправлена через два дня после звонка. Звонка клиенту в течение 24 часов не было."
+  ]
+}

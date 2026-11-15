@@ -1,0 +1,88 @@
+{
+ "path": "customers/bringing-your-own-parts.md",
+ "title": "Ремонт со своими запчастями",
+ "title_en": "Bringing your own parts",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/bringing-your-own-parts.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "1",
+ "purpose": "Public version of the customer-supplied parts policy, in the founder's words.",
+ "serves": [
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 176,
+ "links_to": [
+  "customers/warranty.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Warranty on the work only, 30 days, never on the part (research: the Russian habit; ledger note).",
+  "Customer parts are written into the order with name, maker and the price the customer states (ПП № 780, п. 9 and 12, read in the research).",
+  "No surcharge on the hour for customer parts: a surcharge would need a catalogue row."
+ ],
+ "new_facts": [
+  "Refused: brake hoses, calipers and master cylinders, airbags and seat belts, tyres older than six years, any used brake or steering part."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "ПП № 780 п. 14-15 (the contractor warns about unfit customer parts and stops work) is read in the research; the page words it as \"the mechanic will say so and will not fit it\".",
+   "outcome": "verified",
+   "note": "The page's wording stands.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 14: «Исполнитель обязан немедленно предупредить потребителя и до получения от него указаний приостановить оказание услуг» в случае «обнаружения непригодности или недоброкачественности запасных частей и материалов, полученных от потребителя»; п. 15: если потребитель «в разумный срок не заменит непригодные или недоброкачественные запасные части и материалы», исполнитель вправе расторгнуть договор."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Ремонт со своими запчастями",
+   "item": "Ваши запчасти ставим по обычному нормо-часу, без наценки."
+  },
+  {
+   "section": "Ремонт со своими запчастями",
+   "item": "Всё, что вы привезли, записываем в заказ-наряд: что за деталь, чьего производства, сколько стоит с ваших слов. Так положено, и потом не будет спора, чья была деталь."
+  },
+  {
+   "section": "Ремонт со своими запчастями",
+   "item": "Гарантия — только на нашу работу: 30 дней на то, что поставлено правильно. На саму деталь гарантии нет. Не подошла, оказалась с браком, отказала через месяц — снять её и поставить другую стоит как новая работа."
+  },
+  {
+   "section": "Ремонт со своими запчастями",
+   "item": "Не ставим привезённые тормозные шланги, суппорты и главные тормозные цилиндры, подушки и ремни безопасности, шины старше шести лет и любые детали тормозов и рулевого с разборки. Это либо наше, либо никак."
+  },
+  {
+   "section": "Ремонт со своими запчастями",
+   "item": "Если в коробке явно не та деталь или явная подделка, механик скажет об этом сразу и ставить не будет."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович Ермолаев",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

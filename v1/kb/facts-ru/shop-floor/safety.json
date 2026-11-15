@@ -1,0 +1,107 @@
+{
+ "path": "shop-floor/safety.md",
+ "title": "Техника безопасности",
+ "title_en": "Safety",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/safety.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "Short safety rules, including who may touch hybrids and refrigerant.",
+ "serves": [
+  "visibility:worker",
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "short",
+ "words_ru": 183,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "There is no refrigerant certificate in the Russian trade: A/C work goes to \"those trained on the station\"; the page still names nobody (planted gap kept).",
+  "The safety-briefing journal is signed; the repeated briefing is every six months, and every three months in the first year for a first-time worker on hazardous work (ledger kb.handbook safety_briefing; ПП № 2464 п. 14)."
+ ],
+ "new_facts": [
+  "A mechanic who has not signed the safety-briefing journal is not admitted to work."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "How often the repeated safety briefing is due is not in the research; the page gives no interval.",
+   "outcome": "verified",
+   "note": "The page now gives the interval: every six months, and every three months in the first year for a first-time worker on hazardous work (ledger kb.handbook, safety_briefing). The rules run to 1 September 2032 after the extension in force from 2026-08-31. Read in the verify pass (section 4).",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-24122021-n-2464-o-porjadke/",
+   "sentence": "ПП № 2464 (ред. от 30.06.2026), Правила п. 14: «Повторный инструктаж по охране труда проводится не реже одного раза в 6 месяцев.» «Для работников, впервые начавших трудовую деятельность, допущенных к выполнению работ повышенной опасности,» «повторный инструктаж … не реже одного раза в 3 месяца в течение первого года работы.»"
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Техника безопасности",
+   "item": "Очки в цехе. Всегда."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Подъёмник: лапы под штатные точки, на высоте колена качни машину, только потом поднимай. Под машину — когда подъёмник встал на стопоры."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Под машину на одном домкрате не лезть. Страховочные стойки."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Оранжевые провода — высокое напряжение. Гибриды делает Шубин, на Московском шоссе, и больше никто. Стоит у тебя гибрид на тормоза или шиномонтаж — делаешь тормоза или шиномонтаж, оранжевое не трогаешь."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Фреон откачиваем станцией, в воздух не стравливаем. Кондиционеры делают те, кто обучен работать со станцией. Кто это в твоём сервисе, спроси у мастера цеха."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Кислота из аккумулятора, очиститель тормозов возле огня, ремень на заведённом моторе: сам знаешь. Вот и веди себя так, будто знаешь."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Пролил — убери сразу. Кто ближе, тот и убирает."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Травма, любая, — в тот же день скажи мастеру цеха. Запишем."
+  },
+  {
+   "section": "Техника безопасности",
+   "item": "Инструктаж по охране труда — под подпись в журнале. Не расписался — к работе не допущен. Повторный — раз в полгода. У кого это первая работа и кто стоит на опасных работах — первый год раз в три месяца."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

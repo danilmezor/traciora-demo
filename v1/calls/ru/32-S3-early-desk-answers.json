@@ -1,0 +1,777 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-32-early-desk-answers",
+  "configuration": "ru",
+  "number": 32,
+  "story": "S3",
+  "title": "Since the fix: ten minutes after opening the desk answers at once",
+  "purpose": "Story S3, call 32. A caller who expected to wait is answered on the second ring: both of the day's advisors are now at the desk from opening. Alina asks where the noise is, offers two times before the price, prices the muffler with what could change it, books and sums up with the address. His parting doubt, that he may find the part cheaper and cancel, gets a cheerful \"good\".",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Вадим Рожков",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 6's 8th working day before T, 09:10 (rule R6; ledger s3.dates.call_32)",
+    "nominal_offset": "T-16d",
+    "nominal_date": "2026-10-28",
+    "local_start": "09:10",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 3,
+    "caller_phone": "+7 907 610-96-87",
+    "repeat_caller": false,
+    "talk_s": 128
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Вадим, who has tried the shop in the morning before.",
+    "vehicle": "Renault Sandero, 2016",
+    "job": "the rear muffler, rusted through",
+    "wants": "a price and a time",
+    "what_happens": "He remarks that the phone was answered at once. Alina says two people are on the phones from nine now, asks where the roar comes from and the year, takes his first name and confirms the number is the one he calls from, offers today at eleven or tomorrow at half past nine, prices the job and says what could change it. He books tomorrow, then says he may look for a muffler at a breaker's and cancel. She says \"good\" and sums up.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "exhaust_muffler_rub": 9180,
+      "labour_rub": 1900,
+      "muffler_rub": 7280,
+      "offered": [
+        "the day of the call 11:00",
+        "call+1d 09:30"
+      ],
+      "booked": "call+1d 09:30",
+      "ring_s": 3,
+      "note": "catalogue.json exhaust_muffler, class car, standard: 1.0 h x 1 900 + 7 280 = 9 180. Since the fix both of the day's pair work from 09:00 (card S03).",
+      "prices": [
+        {
+          "job": "exhaust_muffler",
+          "name": "Замена основного глушителя",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 9180.0,
+          "labour_hour_rub": 1900,
+          "said": "девять сто восемьдесят",
+          "said_rub": 9180
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, доброе утро."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.7,
+      "said": "О, сразу взяли. Доброе утро. А я приготовился ждать: у вас с утра обычно не дозвониться было."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 12.6,
+      "said": "Теперь с девяти двое на телефоне, так что звоните смело. Чем могу помочь?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 20.0,
+      "said": "У меня глушитель, похоже, прогорел. Сандеро. Ревёт как трактор, соседи уже косятся."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 27.7,
+      "said": "Ой, понимаю. А ревёт откуда — сзади или ближе к середине, под днищем?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 35.0,
+      "said": "Э-э... сзади, по-моему. Сама банка рыжая вся, и снизу дырка, я рукой нащупал."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 41.0,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 43.0,
+      "said": "Понятно, значит, основной глушитель. А год какой у машины?"
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 49.0,
+      "said": "Шестнадцатый."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 51.0,
+      "said": "Хорошо. Как вас зовут?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 54.2,
+      "said": "Вадим."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 55.9,
+      "said": "Вадим, а номер для связи этот, с которого звоните?"
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 61.9,
+      "said": "Да, этот."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 63.5,
+      "said": "Вадим, могу принять вас сегодня в одиннадцать или завтра в девять тридцать."
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 70.5,
+      "said": "А сколько это будет стоить?"
+    },
+    {
+      "n": 16,
+      "who": "advisor",
+      "at_s": 74.0,
+      "said": "Основной глушитель с заменой — девять сто восемьдесят: тысяча девятьсот работа и сам глушитель семь двести восемьдесят. Это если сгнила только задняя банка. Если мастер увидит, что и резонатор под замену, скажет сразу, до работы. Так сегодня или завтра?"
+    },
+    {
+      "n": 17,
+      "who": "customer",
+      "at_s": 93.1,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 95.4,
+      "said": "Девять тысяч... Мда. Ну давайте завтра в девять тридцать."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 101.3,
+      "said": "Записала: завтра, девять тридцать, принимаю я, Алина."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 106.1,
+      "said": "Угу. Я, может, ещё на разборке гляну глушитель. Если найду дешевле — перезвоню, отменю."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 114.0,
+      "said": "Хорошо! Значит, завтра в девять тридцать, Московское шоссе, сорок, Сандеро: меняем основной глушитель. Ждём вас, Вадим!"
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 123.7,
+      "said": "Ага, спасибо."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 125.6,
+      "said": "До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.74,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          3,
+          14,
+          16,
+          18,
+          19,
+          21
+        ],
+        "said": [
+          "с девяти",
+          "в девять тридцать",
+          "семь двести восемьдесят",
+          "в девять тридцать",
+          "девять тридцать",
+          "в девять тридцать"
+        ],
+        "stored": [
+          "с 9",
+          "в 9:30",
+          "7280",
+          "в 9:30",
+          "9:30",
+          "в 9:30"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: uncertain spans marked",
+        "script_turn": 2,
+        "said": "А я приготовился ждать",
+        "stored": "А я {?likely: приготовился ждать}",
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turns": [
+          18,
+          20
+        ],
+        "said": [
+          "Мда. ",
+          "Угу. "
+        ],
+        "stored": [
+          "",
+          ""
+        ],
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "a number split in two by the recogniser",
+        "script_turns": [
+          16
+        ],
+        "said": [
+          "девять сто восемьдесят"
+        ],
+        "stored": [
+          "9100 80"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          17
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          14,
+          16,
+          18,
+          21
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          6,
+          18,
+          21,
+          23
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 2,
+        "dropped": 2
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 9,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 0
+      },
+      "money_time": {
+        "mentions": 11,
+        "as_digits": 11,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 1
+    },
+    "script_words": 203,
+    "stored_words": 192,
+    "strict_word_difference": 0.143
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 215,
+    "duration_s": 128.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, доброе утро.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "О, сразу взяли. Доброе утро. А я {?likely: приготовился ждать}: у вас с утра обычно не дозвониться было.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Теперь с 9 двое на телефоне, так что звоните смело. Чем могу помочь?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "У меня глушитель, похоже, прогорел. Сандеро. Ревёт как трактор, соседи уже косятся.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ой, понимаю. А ревёт откуда, сзади или ближе к середине, под днищем?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Сзади, по-моему. Сама банка рыжая вся, и снизу дырка, я рукой нащупал.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Угу.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно, значит, основной глушитель. А год какой у машины?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Шестнадцатый.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Как вас зовут?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вадим.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вадим, а номер для связи этот, с которого звоните?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да, этот.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вадим, могу принять вас сегодня в 11 или завтра в 9:30.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А сколько это будет стоить?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Основной глушитель с заменой — 9100 80: 1900 работа и сам глушитель 7280. Это если сгнила только задняя банка. Если мастер увидит, что и резонатор под замену, скажет сразу, до работы. Так сегодня или завтра?",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "9000. Ну давайте завтра в 9:30.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Записала: завтра, 9:30, принимаю я, Алина.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я, может, ещё на разборке гляну глушитель. Если найду дешевле, перезвоню, отменю.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Значит, завтра в 9:30, Московское шоссе, 40, Сандеро: меняем основной глушитель. Ждём вас, Вадим.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ага, спасибо.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, доброе утро.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Вадим, а номер для связи этот, с которого звоните?",
+        "level": 1,
+        "segment": 11
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А ревёт откуда, сзади или ближе к середине, под днищем?",
+        "level": 2,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Основной глушитель с заменой — 9100 80: 1900 работа и сам глушитель 7280. Это если сгнила только задняя банка. Если мастер увидит, что и резонатор под замену, скажет сразу, до работы. Так сегодня или завтра?",
+        "level": 2,
+        "segment": 15
+      },
+      {
+        "key": "offered_time",
+        "quote": "Вадим, могу принять вас сегодня в 11 или завтра в 9:30.",
+        "level": 2,
+        "segment": 13
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записала: завтра, 9:30, принимаю я, Алина.",
+        "level": 2,
+        "segment": 17
+      },
+      {
+        "key": "recap",
+        "quote": "Значит, завтра в 9:30, Московское шоссе, 40, Сандеро: меняем основной глушитель.",
+        "level": 2,
+        "segment": 19
+      },
+      {
+        "key": "objection",
+        "quote": "Я, может, ещё на разборке гляну глушитель. Если найду дешевле, перезвоню, отменю.",
+        "level": 0,
+        "segment": 18
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "Вадим, могу принять вас сегодня в 11 или завтра в 9:30.",
+      "why": "Два времени предложены раньше, чем клиент спросил цену: полгода назад на этом месте она называла цену и замолкала.",
+      "segment": 13
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "Хорошо.",
+      "say": "Вадим, если найдёте глушитель сами, привозите: поставим ваш, тогда только работа, тысяча девятьсот. Запись на завтра я за вами оставляю в любом случае."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 81.2,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 11
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 15
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 13
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 17
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 19
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 18
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 81.2,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 13,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, доброе утро",
+        "name_and_number": "Вадим, а номер для связи этот, с которого звоните?",
+        "need_discovery": "А ревёт откуда, сзади или ближе к середине, под днищем?",
+        "price_with_next_step": "Основной глушитель с заменой — 9100 80: 1900 работа и сам глушитель 7280. Это если сгнила только задняя банка. Если мастер увидит, что и резонатор под замену, скажет сразу, до работы. Так сегодня или завтра?",
+        "offered_time": "Вадим, могу принять вас сегодня в 11 или завтра в 9:30",
+        "asked_for_booking": "Записала: завтра, 9:30, принимаю я, Алина",
+        "recap": "Значит, завтра в 9:30, Московское шоссе, 40, Сандеро: меняем основной глушитель",
+        "objection": "Я, может, ещё на разборке гляну глушитель. Если найду дешевле, перезвоню, отменю"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Вадим, могу принять вас сегодня в 11 или завтра в 9:30",
+        "why": "Два времени предложены раньше, чем клиент спросил цену: полгода назад на этом месте она называла цену и замолкала."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "Хорошо.",
+        "say": "Вадим, если найдёте глушитель сами, привозите: поставим ваш, тогда только работа, тысяча девятьсот. Запись на завтра я за вами оставляю в любом случае."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": 0
+    },
+    "score": 81.2
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "1: имя спросила, номер подтвердила вопросом «этот, с которого звоните?», вслух не повторила.",
+    "need_discovery": "2: машина, работа и обстоятельства, о которых спросила: откуда ревёт и какой год.",
+    "price_with_next_step": "2: сумма по частям, что может её изменить, и вопрос «сегодня или завтра».",
+    "offered_time": "2: два конкретных варианта.",
+    "asked_for_booking": "2: день, час и кто принимает.",
+    "recap": "2: время, адрес и работа перед прощанием.",
+    "objection": "0: на «найду дешевле, перезвоню, отменю» сказала «хорошо» и перешла к итогу. Это по-прежнему её слабая проверка (вопрос S4.3).",
+    "s3": "Звонок истории S3: гудков три секунды, клиент сам говорит, что раньше утром не дозванивался. После исправления оба мастера дня работают с девяти.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·2 + 3·2 + 1·2 + 2·0) / 2 = 13 из 16 весовых баллов = 81.2 (точно 81.25; продукт хранит одну цифру после запятой).",
+    "carried_by": [
+      "objection",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "Новый клиент Вадим Рожков, Renault Sandero 2016, телефон +7 907 610-96-87 (на звонке взято только имя). Запись на следующий день, 9:30: замена основного глушителя, 9 180."
+  ]
+}

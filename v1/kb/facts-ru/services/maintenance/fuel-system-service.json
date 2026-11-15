@@ -1,0 +1,99 @@
+{
+ "path": "services/maintenance/fuel-system-service.md",
+ "title": "Промывка инжектора и топливный фильтр",
+ "title_en": "Fuel system service",
+ "exists_in": "both",
+ "english_sheet": "facts/services/maintenance/fuel-system-service.json",
+ "first_revision_text": "ru/_history/services/maintenance/fuel-system-service.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Induction cleaning and the fuel filter: when it helps and when it is snake oil.",
+ "serves": [
+  "challenge:customer-terms",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_ru": 142,
+ "links_to": [
+  "services/diagnostics/check-engine-light.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Промывка инжектора без снятия форсунок» (1.0 н/ч) and «Замена топливного фильтра» (0.4 н/ч, reference Lada Granta). A separate fuel filter is still common on the Russian parc."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "fuel_system_cleaning",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "fuel_system_cleaning",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3160.0
+  },
+  {
+   "catalogue_key": "fuel_filter",
+   "what": "hours",
+   "class": "car",
+   "value": 0.4
+  },
+  {
+   "catalogue_key": "fuel_filter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1390.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  1390.0,
+  3160.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

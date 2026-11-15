@@ -1,0 +1,87 @@
+{
+ "path": "how-to/handing-a-car-back.md",
+ "title": "Handing a car back",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "The pick-up: walking the bill, old parts, deferred work, the next visit.",
+ "serves": [
+  "S7",
+  "S8",
+  "challenge:three-page-procedure"
+ ],
+ "length_class": "short",
+ "words_en": 255,
+ "links_to": [
+  "policies/complaints.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Eight steps: car ready and checked; invoice walked line by line, total equals the approved amount; old parts shown; declined and Watch items read out; warranty in one sentence; next visit offered; payment (accounts sign); a named person to call.",
+  "S8: the argument at the desk at T-9 days happened at this step, with a bill above the quote.",
+  "S7: the declined rear shocks were read out and deferred."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Handing a car back",
+   "item": "Have the car out front and the invoice ready before they arrive. Check the car yourself: clean wheel, no warning lights, seat cover out."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "Walk the invoice line by line, in plain words. What they came for, what we found, what we did. Parts and labour for each. Then supplies, tax, total. The total should be the number they approved. If it is not, you should have called them before now."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "Old parts. If they asked, show them. If they did not ask and the part tells the story (a pad worn to the metal), show it anyway."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "What was not done. Read the declined and Watch items out, with the measurement. \"Rear shocks are leaking. Not dangerous this month. I would do them before winter.\" It is on the invoice; say it as well."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "The warranty in one sentence: 24 months or 24,000 miles on what we did today (pads and work vehicles 12 months)."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "Next visit. When the next oil service is due, and anything deferred. Offer to book it now."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "Payment, receipt, keys. Company accounts sign and go; it is on the statement."
+  },
+  {
+   "section": "Handing a car back",
+   "item": "\"If anything does not feel right, call me, not the internet.\" And give them your name again."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian: the customer signs the акт выполненных работ; old parts are returned by default if asked at check-in."
+ ]
+}

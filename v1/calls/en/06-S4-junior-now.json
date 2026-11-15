@@ -1,0 +1,781 @@
+{
+  "format": "seed-call/1",
+  "id": "en-06-S4-junior-now",
+  "configuration": "en",
+  "number": 6,
+  "story": "S4",
+  "title": "The junior operator now: the same kind of call, booked, with a doubt stepped over",
+  "purpose": "Story S4, month six. The same kind of caller as en-1. Maya now offers a time with the price, takes the booking and sums it up. What she still does worst shows once: the caller says the price is more than he hoped and she goes straight back to the time.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Wendell Boyd",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P6 (rule R6)",
+    "nominal_offset": "T-9d",
+    "nominal_date": "2026-11-04",
+    "local_start": "14:15",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 6,
+    "caller_phone": "423-555-0188",
+    "repeat_caller": false,
+    "talk_s": 196
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Wendell Boyd, sent by a neighbour; he drives to Dalton every day.",
+    "vehicle": "2015 Chevrolet Equinox",
+    "job": "right front wheel bearing (hub assembly), after a road test confirms it",
+    "wants": "a price",
+    "what_happens": "Maya asks about the noise until it points at the right front, takes his name and number, gives the price with what it depends on and a time in the same breath, steps over 'I was hoping to stay under four', books Friday at eight and sums it up with the address.",
+    "facts": {
+      "labour_rate_usd": 135,
+      "price_out_the_door_usd": 472.42,
+      "note": "After the rise. catalogue.json wheel_bearing, class car, standard parts: 420.27, with shop supplies 12.15 and sales tax 472.42 out the door (she says 'four seventy-two'). The caller was renamed in the reconcile pass: the S6 customer is the seed's Curtis.",
+      "prices": [
+        {
+          "what": "Replace front wheel bearing / hub assembly (one side)",
+          "job": "wheel_bearing",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 420.27,
+          "shop_supplies_usd": 12.15,
+          "out_the_door_usd": 472.42,
+          "said": "four seventy-two",
+          "said_usd": 472,
+          "said_as": "out the door"
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Friday",
+      "day": "call+2d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.7,
+      "said": "Yeah, hey Maya. I got a — I've got a noise on my car, I was wantin' to get a price on a wheel bearing."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 17.7,
+      "said": "Okay, sure. What are we working on?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 21.4,
+      "said": "Twenty-fifteen Equinox. Chevy."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 23.3,
+      "said": "Fifteen Equinox, okay. And tell me about the noise — is it like a hum, or more of a grinding?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 32.1,
+      "said": "It's a hum. Like a — like a airplane, kinda. Gets louder the faster I go."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 39.3,
+      "said": "Mm-hm. Does it change when you turn? Like on a curve, one way or the other?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 46.8,
+      "said": "Yeah, actually. When I'm going left it gets louder. Goes away a little bit going right."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 54.4,
+      "said": "Okay, louder going left — that usually points at the right front. How long's it been doing it?"
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 62.4,
+      "said": "Couple weeks. It's gettin' worse though."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 65.6,
+      "said": "Yeah, they don't get better. Have you been here before, or is this your first time with us?"
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 74.0,
+      "said": "First time. My neighbor brings his truck to y'all."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 78.5,
+      "said": "Oh, nice. Well, let me get you in the system real quick. What's your name?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 85.6,
+      "said": "Wendell Boyd."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 87.1,
+      "said": "Wendell Boyd. And what's the best number for you, Wendell?"
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 92.0,
+      "said": "Four two three, five five five, oh one eight eight."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 97.0,
+      "said": "Got it. Okay, so Wendell, here's what I'd do. I'd like a tech to drive it first and make sure it's the bearing and not a tire — tires can make that same noise. If it is the right front, on the Equinox that's a hub assembly, and you're at four seventy-two out the door, parts, labor and tax. And I could get you in Friday morning at eight."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 127.2,
+      "said": "Four seventy-two. Hm. I was — I was kinda hopin' to stay under four."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 133.4,
+      "said": "Yeah... um. So — Friday at eight, would that work for you? Or — yeah."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 139.7,
+      "said": "Yeah, I guess. I gotta get it done, I drive to Dalton every day."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 146.3,
+      "said": "Okay. Yeah, you don't want to be on seventy-five with that. So I've got you down for Friday at eight, and I'll be the one checking you in, just ask for Maya."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 160.9,
+      "said": "Alright. How long y'all gonna need it?"
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 164.5,
+      "said": "About two hours, once we've driven it. You can wait, or we can run you to work — oh, well, not to Dalton. But you can wait."
+    },
+    {
+      "n": 24,
+      "who": "customer",
+      "at_s": 176.4,
+      "said": "I'll wait."
+    },
+    {
+      "n": 25,
+      "who": "advisor",
+      "at_s": 177.9,
+      "said": "Okay. So that's Friday at eight, here at twenty-one-oh-six East Main Street, and we're checking that right front wheel bearing on the Equinox."
+    },
+    {
+      "n": 26,
+      "who": "customer",
+      "at_s": 188.5,
+      "said": "Sounds good."
+    },
+    {
+      "n": 27,
+      "who": "advisor",
+      "at_s": 189.9,
+      "said": "Alright, Wendell, we'll see you Friday. Thanks for calling!"
+    },
+    {
+      "n": 28,
+      "who": "customer",
+      "at_s": 194.5,
+      "said": "Thank you. Bye."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.74,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; the restoration also mends grammar ('a airplane' becomes 'an airplane')",
+        "script_turns": [
+          2,
+          6,
+          7,
+          18,
+          19
+        ]
+      },
+      {
+        "rule": "R2",
+        "what": "the advisor's name misspelled in the caller's line only",
+        "script_turn": 2,
+        "said": "Maya",
+        "stored": "Mya"
+      },
+      {
+        "rule": "R5",
+        "what": "'under four' (hundred) comes out as a bare digit and loses its meaning; the price itself is right",
+        "script_turn": 18,
+        "said": "under four",
+        "stored": "under 4"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits: the year, the phone number, the price, the hour, the interstate, the street number",
+        "script_turns": [
+          4,
+          16,
+          17,
+          21,
+          25
+        ]
+      }
+    ],
+    "script_words": 413,
+    "stored_words": 396,
+    "strict_word_difference": 0.128,
+    "counts": {
+      "hesitations": {
+        "said": 3,
+        "dropped": 3
+      },
+      "fillers": {
+        "said": 3,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 8,
+        "wrong": 1
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 14,
+        "wrong": 0
+      },
+      "money_time": {
+        "mentions": 10,
+        "as_digits": 10,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 0,
+        "lost": 0,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    }
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 424,
+    "duration_s": 196.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, hey, Mya. I've got a noise on my car. I was wanting to get a price on a wheel bearing.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, sure. What are we working on?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "2015 Equinox. Chevy.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "'15 Equinox, okay. And tell me about the noise. Is it like a hum or more of a grinding?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's a hum, like an airplane, kind of. Gets louder the faster I go.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Does it change when you turn, like on a curve, one way or the other?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, actually. When I'm going left it gets louder. Goes away a little bit going right.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, louder going left. That usually points at the right front. How long's it been doing it?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Couple weeks. It's getting worse, though.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, they don't get better. Have you been here before, or is this your first time with us?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "First time. My neighbor brings his truck to y'all.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Oh, nice. Well, let me get you in the system real quick. What's your name?",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Wendell Boyd.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Wendell Boyd. And what's the best number for you, Wendell?",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "423-555-0188.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Got it. Okay, so, Wendell, here's what I'd do. I'd like a tech to drive it first and make sure it's the bearing and not a tire. Tires can make that same noise. If it is the right front, on the Equinox that's a hub assembly, and you're at $472 out the door, parts, labor, and tax. And I could get you in Friday morning at 8.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "472. I was kind of hoping to stay under 4.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah. So, Friday at 8, would that work for you?",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, I guess. I got to get it done. I drive to Dalton every day.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Yeah, you don't want to be on 75 with that. So I've got you down for Friday at 8, and I'll be the one checking you in. Just ask for Maya.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. How long are y'all going to need it?",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "About two hours once we've driven it. You can wait, or we can run you to work. Well, not to Dalton. But you can wait.",
+        "confidence": null
+      },
+      {
+        "sequence": 23,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "I'll wait.",
+        "confidence": null
+      },
+      {
+        "sequence": 24,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So that's Friday at 8, here at 2106 East Main Street, and we're checking that right front wheel bearing on the Equinox.",
+        "confidence": null
+      },
+      {
+        "sequence": 25,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Sounds good.",
+        "confidence": null
+      },
+      {
+        "sequence": 26,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right, Wendell, we'll see you Friday. Thanks for calling.",
+        "confidence": null
+      },
+      {
+        "sequence": 27,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thank you. Bye.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "And what's the best number for you, Wendell?",
+        "level": 1,
+        "segment": 14
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Does it change when you turn, like on a curve, one way or the other?",
+        "level": 2,
+        "segment": 6
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "you're at $472 out the door, parts, labor, and tax. And I could get you in Friday morning at 8.",
+        "level": 2,
+        "segment": 16
+      },
+      {
+        "key": "offered_time",
+        "quote": "And I could get you in Friday morning at 8.",
+        "level": 1,
+        "segment": 16
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "So I've got you down for Friday at 8, and I'll be the one checking you in.",
+        "level": 2,
+        "segment": 20
+      },
+      {
+        "key": "recap",
+        "quote": "So that's Friday at 8, here at 2106 East Main Street, and we're checking that right front wheel bearing on the Equinox.",
+        "level": 2,
+        "segment": 24
+      },
+      {
+        "key": "objection",
+        "quote": "I was kind of hoping to stay under 4.",
+        "level": 0,
+        "segment": 17
+      }
+    ],
+    "na": [],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "price_objection"
+    ],
+    "strength": {
+      "quote": "Okay, louder going left. That usually points at the right front.",
+      "why": "She turned what the caller described into where the fault is, so the price she gave was for the right job.",
+      "segment": 8
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "Yeah. So, Friday at 8, would that work for you?",
+      "say": "I hear you. Did somebody quote it lower, or is it the total? The hub is 177 of that, the rest is labor, shop supplies and tax, and if the road test says it's a tire you only pay for the road test."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 71.9,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 14
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 6
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 16
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 16
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 20
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 24
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 17
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "price_objection"
+      ],
+      "score": 71.9,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 8,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "name_and_number": "And what's the best number for you, Wendell?",
+        "need_discovery": "Does it change when you turn, like on a curve, one way or the other?",
+        "price_with_next_step": "you're at $472 out the door, parts, labor, and tax. And I could get you in Friday morning at 8",
+        "offered_time": "And I could get you in Friday morning at 8",
+        "asked_for_booking": "So I've got you down for Friday at 8, and I'll be the one checking you in",
+        "recap": "So that's Friday at 8, here at 2106 East Main Street, and we're checking that right front wheel bearing on the Equinox",
+        "objection": "I was kind of hoping to stay under 4"
+      },
+      "na": {},
+      "auto_fails": {},
+      "strength": {
+        "quote": "Okay, louder going left. That usually points at the right front",
+        "why": "She turned what the caller described into where the fault is, so the price she gave was for the right job."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "Yeah. So, Friday at 8, would that work for you?",
+        "say": "I hear you. Did somebody quote it lower, or is it the total? The hub is 177 of that, the rest is labor, shop supplies and tax, and if the road test says it's a tire you only pay for the road test."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 1,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": 0
+    },
+    "score": 71.9,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "price_objection"
+    ]
+  },
+  "why": {
+    "greeting": "2: the business and her name in the first line.",
+    "name_and_number": "1: she takes the name and the number and answers 'Got it' without saying the number back.",
+    "need_discovery": "2: the car, the job, and two circumstances she asked for: louder turning left, two weeks and getting worse.",
+    "price_with_next_step": "2: the price, what it depends on (bearing or tire, after a road test) and a time in the same line.",
+    "offered_time": "1: one specific option, Friday at eight, said twice. Two options would be level 2.",
+    "asked_for_booking": "2: the booking is taken with a day, an hour and who checks him in.",
+    "recap": "2: the time, the address and the work before goodbye.",
+    "objection": "0: 'I was hoping to stay under four' is the only doubt on the call and she answers it with the time again. He books because he needs the car, not because she answered.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·1 + 3·2 + 1·2 + 2·0) / 2 = 11.5 of 16 weight points = 71.9.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "new_facts": [
+    "An invented first-time caller, Wendell Boyd, 423-555-0188, 2015 Chevrolet Equinox: an appointment at main on call+2d at 08:00 for a road test and a right front wheel bearing."
+  ],
+  "brought_into_line": [
+    "judge_answer.try_next.say: 'the hub is 210 of that' did not match catalogue.json (the hub assembly is 177.27 at list); it now reads 177, and the verdict was derived again from the judge answer"
+  ],
+  "sample_of": "calls/samples/en-2-junior-now.json"
+}

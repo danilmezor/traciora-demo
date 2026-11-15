@@ -1,0 +1,4730 @@
+{
+ "README.md": {
+  "title": "База знаний «Ермак-Сервиса»",
+  "title_en": "Brennan Auto Care knowledge base",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Front page for staff: what each folder holds, who owns it, and the two house rules (prices, corrections).",
+  "serves": [
+   "S12",
+   "operate:overview"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/README.md",
+   "services/README.md",
+   "prices/price-list.md",
+   "policies/README.md",
+   "accounts/company-account-terms.md",
+   "how-to/README.md",
+   "parts/suppliers.md",
+   "shops/README.md",
+   "team/who-is-who.md",
+   "shop-floor/README.md",
+   "how-to/using-this-knowledge-base.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "customers/README.md": {
+  "title": "Ответы клиентам",
+  "title_en": "Customer answers",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Index of the public pages; the README the website assistant gets from kb_overview.",
+  "serves": [
+   "S7",
+   "S13",
+   "visibility:public"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md",
+   "customers/what-we-do.md",
+   "customers/prices-for-common-services.md",
+   "customers/estimates-and-approvals.md",
+   "customers/warranty.md",
+   "customers/dropping-off-and-picking-up.md",
+   "customers/payment.md",
+   "customers/towing.md",
+   "customers/bringing-your-own-parts.md",
+   "customers/if-something-is-not-right.md",
+   "customers/brake-noise.md",
+   "customers/check-engine-light.md",
+   "customers/air-conditioning.md",
+   "customers/battery.md",
+   "customers/seasonal-tyre-change.md",
+   "customers/tires.md",
+   "customers/maintenance-by-mileage.md",
+   "customers/pre-purchase-inspection.md",
+   "customers/hybrids-and-electric-cars.md",
+   "customers/company-vehicles.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/hours-and-locations.md": {
+  "title": "Адреса и часы работы",
+  "title_en": "Hours and locations",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "The public truth about addresses, phones, hours, holidays and the stocktake afternoon.",
+  "serves": [
+   "S13",
+   "S9",
+   "S7",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/dropping-off-and-picking-up.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "customers/what-we-do.md": {
+  "title": "Что мы делаем и чего не делаем",
+  "title_en": "What we work on, and what we don't",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Scope of work for the public: services offered, and the work we send out or decline.",
+  "serves": [
+   "S7",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hybrids-and-electric-cars.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/prices-for-common-services.md": {
+  "title": "Цены на частые услуги",
+  "title_en": "Prices for common services",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Menu prices a customer may be told without seeing the car; public version of the price list.",
+  "serves": [
+   "S7",
+   "S8",
+   "S12",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/estimates-and-approvals.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   39.9,
+   300.0,
+   400.0,
+   500.0,
+   700.0,
+   800.0,
+   900.0,
+   1200.0,
+   3000.0,
+   4760.0,
+   6700.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/customers/prices-for-common-services.md"
+ },
+ "customers/brake-noise.md": {
+  "title": "Скрип и скрежет при торможении",
+  "title_en": "Brake noise",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "6",
+  "purpose": "What a customer with a brake noise is told, what the inspection costs and what a typical repair costs. The page the assistant answers S7 from.",
+  "serves": [
+   "S7",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/prices-for-common-services.md",
+   "customers/warranty.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   700.0,
+   9640.0,
+   16030.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "customers/check-engine-light.md": {
+  "title": "Горит «чек»",
+  "title_en": "Check engine light",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public advice on a check engine light and what the diagnosis costs.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/towing.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1200.0,
+   2850.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/air-conditioning.md": {
+  "title": "Кондиционер не холодит",
+  "title_en": "Air conditioning not cold",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public page for the summer season: what the A/C check is, what a recharge costs for each refrigerant.",
+  "serves": [
+   "S11",
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/maintenance-by-mileage.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   900.0,
+   2290.0,
+   3800.0,
+   10800.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/battery.md": {
+  "title": "Аккумулятор и трудный пуск",
+  "title_en": "Battery and starting trouble",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Public page: free battery test, replacement price range, the cold-weeks rush.",
+  "serves": [
+   "S11",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   300.0,
+   7000.0,
+   13380.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/seasonal-tyre-change.md": {
+  "title": "Сезонная замена шин и хранение",
+  "title_en": null,
+  "exists_in": "ru only",
+  "visibility": "public",
+  "voice_of_slot": "15",
+  "purpose": "Public page for the two tyre seasons: when, what it costs by vehicle class, storage, how to book. Exists only in Russian.",
+  "serves": [
+   "S11",
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1200.0,
+   1380.0,
+   1560.0,
+   3000.0,
+   3750.0,
+   3900.0,
+   4350.0
+  ],
+  "n_new": 5,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/customers/seasonal-tyre-change.md"
+ },
+ "customers/tires.md": {
+  "title": "Шины, проколы и сход-развал",
+  "title_en": "Tires, flats and alignment",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "15",
+  "purpose": "Public page for tire questions with menu prices.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:fact-only-in-attachment"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/seasonal-tyre-change.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   760.0,
+   800.0,
+   1200.0,
+   3000.0,
+   4590.0,
+   21320.0,
+   35120.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/maintenance-by-mileage.md": {
+  "title": "ТО по пробегу",
+  "title_en": "Maintenance by mileage",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public explanation of oil service, filters and the 30/60/90K service.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   6700.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/pre-purchase-inspection.md": {
+  "title": "Проверка автомобиля перед покупкой",
+  "title_en": "Buying a used car: pre-purchase inspection",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Public description of the pre-purchase inspection.",
+  "serves": [
+   "smoke"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/hybrids-and-electric-cars.md": {
+  "title": "Гибриды и электромобили",
+  "title_en": "Hybrids and electric cars",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "The stated limit of what the shops do on hybrids and EVs.",
+  "serves": [
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/company-vehicles.md": {
+  "title": "Автомобили организаций",
+  "title_en": "Company vehicles",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Public pointer for businesses; the terms themselves are staff-only.",
+  "serves": [
+   "S1",
+   "visibility:public"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/estimates-and-approvals.md": {
+  "title": "Смета и согласование работ",
+  "title_en": "Estimates and approvals",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Public promise on estimates: written, per job, nothing without approval.",
+  "serves": [
+   "S7",
+   "challenge:combine-policy-and-price",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/prices-for-common-services.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/warranty.md": {
+  "title": "Наша гарантия",
+  "title_en": "Our warranty",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "Public summary of the 24/24 warranty; the staff page has the full terms.",
+  "serves": [
+   "S12",
+   "S1",
+   "challenge:combine-policy-and-price",
+   "challenge:kb-does-not-say",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/bringing-your-own-parts.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 4,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/dropping-off-and-picking-up.md": {
+  "title": "Как сдать и забрать автомобиль",
+  "title_en": "Dropping off, waiting, shuttle and pick-up",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "6",
+  "purpose": "Public logistics: key drop, waiting room, shuttle, after-hours pick-up.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 5,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/payment.md": {
+  "title": "Оплата",
+  "title_en": "Paying your bill",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "3",
+  "purpose": "Public payment terms: methods, when due, deposits, tax.",
+  "serves": [
+   "S2",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/company-vehicles.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   10000.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/towing.md": {
+  "title": "Эвакуатор",
+  "title_en": "Towing",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "Public towing arrangement for the Chattanooga shops; Nashville is deliberately thin.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   70.0,
+   3000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/bringing-your-own-parts.md": {
+  "title": "Ремонт со своими запчастями",
+  "title_en": "Bringing your own parts",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "1",
+  "purpose": "Public version of the customer-supplied parts policy, in the founder's words.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/warranty.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "customers/if-something-is-not-right.md": {
+  "title": "Если что-то не так",
+  "title_en": "If something isn't right",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "Public complaints route.",
+  "serves": [
+   "S8",
+   "S1"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shop-floor/README.md": {
+  "title": "Цех",
+  "title_en": "Shop floor",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "Index for technicians; what a worker-rank person can read.",
+  "serves": [
+   "visibility:worker",
+   "challenge:kb-does-not-say",
+   "S14"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shop-floor/clocking-in-and-out.md",
+   "shop-floor/shift-changes-and-time-off.md",
+   "shop-floor/courtesy-inspection.md",
+   "shop-floor/before-a-car-leaves.md",
+   "shop-floor/when-a-car-comes-back.md",
+   "shop-floor/safety.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shop-floor/clocking-in-and-out.md": {
+  "title": "Отметки прихода и ухода",
+  "title_en": "Clocking in and out",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "How technicians punch, the location check, what to do after a forgotten clock-out.",
+  "serves": [
+   "S14",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "shop-floor/shift-changes-and-time-off.md": {
+  "title": "Замены смен и отгулы",
+  "title_en": "Shift changes and time off",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "How a technician asks for a shift change or a day off; what the planner needs.",
+  "serves": [
+   "S14",
+   "S5",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shop-floor/courtesy-inspection.md": {
+  "title": "Осмотр по чек-листу",
+  "title_en": "The courtesy inspection",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "Step one of the inspection-to-approval procedure: what the technician checks and records.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S7",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/writing-an-estimate.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shop-floor/before-a-car-leaves.md": {
+  "title": "Перед тем как отдать машину",
+  "title_en": "Before a car leaves your bay",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "The foreman's final checks.",
+  "serves": [
+   "S6",
+   "S14",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shop-floor/when-a-car-comes-back.md": {
+  "title": "Если машина вернулась",
+  "title_en": "When a car comes back",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "What a technician does with a comeback.",
+  "serves": [
+   "S6",
+   "S1",
+   "visibility:worker"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shop-floor/safety.md": {
+  "title": "Техника безопасности",
+  "title_en": "Safety",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "8",
+  "purpose": "Short safety rules, including who may touch hybrids and refrigerant.",
+  "serves": [
+   "visibility:worker",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "prices/price-list.md": {
+  "title": "Прайс-лист",
+  "title_en": "Price list",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "2",
+  "purpose": "The current price of every catalogue job; the single page a price is quoted from. Long: over the read limit, so it is read by section.",
+  "serves": [
+   "S8",
+   "S12",
+   "S7",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:long-page-by-section",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "long",
+  "links_to": [
+   "prices/labour-rates-and-fees.md",
+   "prices/counter-price-sheet.pdf"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   0.0,
+   190.0,
+   300.0,
+   380.0,
+   400.0,
+   500.0,
+   570.0,
+   600.0,
+   660.0,
+   700.0,
+   760.0,
+   800.0,
+   900.0,
+   930.0,
+   950.0,
+   1030.0,
+   1090.0,
+   1140.0,
+   1200.0,
+   1330.0,
+   1390.0,
+   1440.0,
+   1520.0,
+   1530.0,
+   1550.0,
+   1650.0,
+   1660.0,
+   1740.0,
+   1860.0,
+   1900.0,
+   1960.0,
+   2000.0,
+   2070.0,
+   2280.0,
+   2290.0,
+   2370.0,
+   2380.0,
+   2420.0,
+   2480.0,
+   2500.0,
+   2520.0,
+   2570.0,
+   2630.0,
+   2660.0,
+   2680.0,
+   2700.0,
+   2750.0,
+   2780.0,
+   2800.0,
+   2850.0,
+   2880.0,
+   3000.0,
+   3040.0,
+   3160.0,
+   3220.0,
+   3230.0,
+   3320.0,
+   3340.0,
+   3370.0,
+   3400.0,
+   3420.0,
+   3570.0,
+   3610.0,
+   3620.0,
+   3700.0,
+   3780.0,
+   3800.0,
+   3850.0,
+   3930.0,
+   3990.0,
+   4060.0,
+   4080.0,
+   4110.0,
+   4140.0,
+   4180.0,
+   4530.0,
+   4560.0,
+   4590.0,
+   4620.0,
+   4740.0,
+   4750.0,
+   4760.0,
+   4820.0,
+   4860.0,
+   5140.0,
+   5150.0,
+   5170.0,
+   5370.0,
+   5670.0,
+   5700.0,
+   5860.0,
+   5890.0,
+   6000.0,
+   6060.0,
+   6080.0,
+   6180.0,
+   6360.0,
+   6410.0,
+   6560.0,
+   6700.0,
+   6780.0,
+   6900.0,
+   7000.0,
+   7060.0,
+   7260.0,
+   7470.0,
+   7640.0,
+   7710.0,
+   8130.0,
+   8160.0,
+   8530.0,
+   8720.0,
+   8760.0,
+   8820.0,
+   9040.0,
+   9180.0,
+   9200.0,
+   9260.0,
+   9520.0,
+   9640.0,
+   9710.0,
+   9870.0,
+   10120.0,
+   10450.0,
+   10520.0,
+   10800.0,
+   11260.0,
+   11400.0,
+   11720.0,
+   11900.0,
+   12050.0,
+   12500.0,
+   12520.0,
+   13350.0,
+   13380.0,
+   13450.0,
+   13460.0,
+   13700.0,
+   14210.0,
+   14220.0,
+   14350.0,
+   15020.0,
+   15400.0,
+   15600.0,
+   15920.0,
+   16000.0,
+   16030.0,
+   16160.0,
+   16300.0,
+   17290.0,
+   18200.0,
+   18310.0,
+   18580.0,
+   18800.0,
+   19460.0,
+   19780.0,
+   21320.0,
+   21700.0,
+   21820.0,
+   22200.0,
+   24740.0,
+   25030.0,
+   25400.0,
+   26550.0,
+   26840.0,
+   28650.0,
+   29960.0,
+   30750.0,
+   35120.0,
+   36840.0,
+   41100.0,
+   56900.0,
+   85000.0,
+   96400.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 3,
+  "first_revision_text": null
+ },
+ "prices/labour-rates-and-fees.md": {
+  "title": "Нормо-час, сборы и классы автомобилей",
+  "title_en": "Labour rates, fees and vehicle classes",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The posted and company-account hour, shop supplies, tax, tire fees, and how a price is scaled for bigger vehicles.",
+  "serves": [
+   "S12",
+   "S1",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   400.0,
+   500.0,
+   1350.0,
+   1460.0,
+   1500.0,
+   1580.0,
+   1620.0,
+   1700.0,
+   1760.0,
+   1900.0,
+   3420.0,
+   4446.0,
+   9100.0,
+   15470.0,
+   19916.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "prices/how-prices-change.md": {
+  "title": "Как меняются цены",
+  "title_en": "How prices change",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The rule written after S8: who changes a price, which page changes first, and what happens to service pages and open estimates.",
+  "serves": [
+   "S12",
+   "S8",
+   "operate:find-what-changed",
+   "operate:contradiction"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "prices/labour-rates-and-fees.md",
+   "customers/prices-for-common-services.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1350.0,
+   1460.0,
+   1500.0,
+   1580.0,
+   1620.0,
+   1700.0,
+   1760.0,
+   1900.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/README.md": {
+  "title": "Правила",
+  "title_en": "Policies",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Index of the policy pages.",
+  "serves": [
+   "operate:overview",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/discounts.md",
+   "policies/warranty.md",
+   "policies/estimates-and-approvals.md",
+   "policies/diagnostic-fees.md",
+   "policies/customer-supplied-parts.md",
+   "policies/deposits.md",
+   "policies/cancellations-and-no-shows.md",
+   "policies/storage-of-uncollected-cars.md",
+   "policies/complaints.md",
+   "policies/voids-and-refunds.md",
+   "policies/customer-records.md",
+   "policies/service-standards.md",
+   "policies/documents-and-vat.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/discounts.md": {
+  "title": "Скидки",
+  "title_en": "Discount policy",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The discount rule created after story S2.",
+  "serves": [
+   "S2",
+   "S8",
+   "challenge:policy-vs-team-note",
+   "operate:find-what-changed",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/voids-and-refunds.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "policies/warranty.md": {
+  "title": "Гарантия",
+  "title_en": "Warranty",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The current warranty in full, for staff: terms, exclusions, who decides, how a claim is written up.",
+  "serves": [
+   "S12",
+   "S1",
+   "S6",
+   "challenge:near-duplicate",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/when-a-car-comes-back.md",
+   "how-to/a-comeback-at-the-counter.md",
+   "customers/warranty.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 3,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "customers/warranty-policy.md": {
+  "title": "Гарантийные обязательства",
+  "title_en": "Warranty policy",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "1",
+  "purpose": "The old warranty page nobody removed: 12/12. Stale on purpose (S12).",
+  "serves": [
+   "S12",
+   "challenge:near-duplicate",
+   "operate:contradiction"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S12: the old warranty page beside the current one",
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/estimates-and-approvals.md": {
+  "title": "Смета и согласование работ",
+  "title_en": "Estimates and approvals",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Staff rules for estimates: how fast, what is on them, how approval is recorded, what happens to declined work.",
+  "serves": [
+   "S1",
+   "S7",
+   "S8",
+   "challenge:three-page-procedure",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/estimates-and-approvals.md",
+   "accounts/company-account-terms.md",
+   "how-to/getting-approval.md",
+   "policies/voids-and-refunds.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/diagnostic-fees.md": {
+  "title": "Платная диагностика и осмотры",
+  "title_en": "Diagnostic and inspection fees",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "1",
+  "purpose": "Why diagnosis is charged and never credited; the founder's hobby-horse.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   300.0,
+   700.0,
+   800.0,
+   900.0,
+   950.0,
+   1200.0,
+   2850.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/policies/diagnostic-fees.md"
+ },
+ "policies/customer-supplied-parts.md": {
+  "title": "Запчасти клиента",
+  "title_en": "Customer-supplied parts",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Staff rules for fitting parts the customer brings.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "S15"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/bringing-your-own-parts.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/deposits.md": {
+  "title": "Предоплата",
+  "title_en": "Deposits",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "When a deposit is taken, how much, and what is refunded.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "S15"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/voids-and-refunds.md",
+   "parts/returns-and-cores.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   10000.0,
+   42500.0
+  ],
+  "n_new": 1,
+  "n_verify": 1,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/cancellations-and-no-shows.md": {
+  "title": "Отмена записи и неявка",
+  "title_en": "Cancellations and no-shows",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What happens when a booked customer does not come.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/storage-of-uncollected-cars.md": {
+  "title": "Невостребованные автомобили",
+  "title_en": "Cars not collected",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Storage of finished cars: free days, daily charge, the 30-day step. Contradicted on purpose by a team note.",
+  "serves": [
+   "challenge:policy-vs-team-note",
+   "operate:contradiction",
+   "S15"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/getting-approval.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   300.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/complaints.md": {
+  "title": "Жалобы и претензии",
+  "title_en": "Complaints",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Staff procedure for a complaint: who hears it, who decides, how fast.",
+  "serves": [
+   "S8",
+   "S1",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/discounts.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "policies/voids-and-refunds.md": {
+  "title": "Работа мимо наряда, списания и возврат денег",
+  "title_en": "Voids and refunds",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The rule on voiding orders and giving money back; written with the discount rule after S2.",
+  "serves": [
+   "S2",
+   "S15",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/customer-records.md": {
+  "title": "Карточки клиентов",
+  "title_en": "Customer records",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "How a customer and a car are entered so that records do not multiply.",
+  "serves": [
+   "S15",
+   "S2",
+   "S7"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "policies/service-standards.md": {
+  "title": "Стандарты обслуживания",
+  "title_en": "Service standards",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "One table of how fast the company promises to answer, call back, estimate and decide; the yardstick for several stories.",
+  "serves": [
+   "S3",
+   "S1",
+   "S6",
+   "S9",
+   "S12",
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "policies/documents-and-vat.md": {
+  "title": "Документы клиенту и НДС",
+  "title_en": null,
+  "exists_in": "ru only",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "What a private customer and a company get on paper at check-in, at pick-up and at payment, and how VAT at 5 % is shown and said. Exists only in Russian: the counterpart of the English base's scattered lines on sales tax and of its monthly statement.",
+  "serves": [
+   "S7",
+   "S1",
+   "S2",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "accounts/company-account-terms.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   102.6,
+   634.41,
+   700.0,
+   12520.0,
+   12688.19,
+   13322.6
+  ],
+  "n_new": 5,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "accounts/company-account-terms.md": {
+  "title": "Корпоративные клиенты",
+  "title_en": "Company accounts",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The terms every company account is served on: payment days, price class, priority, who may approve work. Story S1's page.",
+  "serves": [
+   "S1",
+   "S4",
+   "S16",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "operate:contradiction",
+   "challenge:policy-vs-team-note"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "accounts/small-business-customers.md",
+   "accounts/a1.md",
+   "accounts/a2.md",
+   "accounts/a3.md",
+   "accounts/a4.md",
+   "accounts/a5.md",
+   "accounts/a6.md",
+   "policies/warranty.md",
+   "accounts/opening-a-company-account.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1700.0,
+   1900.0,
+   8000.0,
+   12000.0,
+   25000.0
+  ],
+  "n_new": 3,
+  "n_verify": 0,
+  "n_rev": 4,
+  "first_revision_text": null
+ },
+ "accounts/a1.md": {
+  "title": "Симбирский гонец",
+  "title_en": "Nickajack Delivery",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Standing instructions for the anchor account A1.",
+  "serves": [
+   "S1",
+   "S16",
+   "S4",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/maintenance/fleet-pm-service.md",
+   "accounts/company-account-terms.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "accounts/a2.md": {
+  "title": "Тёплый контур",
+  "title_en": "Millsaps Heating & Plumbing",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Standing instructions for account A2, the happy path.",
+  "serves": [
+   "S1",
+   "S5",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0,
+   25000.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "accounts/a3.md": {
+  "title": "Чистый Венец",
+  "title_en": "Moccasin Bend Janitorial Services",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Standing instructions for account A3.",
+  "serves": [
+   "S1",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "accounts/a4.md": {
+  "title": "Автошкола «Первая передача»",
+  "title_en": "Missionary Ridge Driving School",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Standing instructions for account A4; says seven cars, which is out of date by one.",
+  "serves": [
+   "S1",
+   "challenge:combine-kb-and-data",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0,
+   12000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "accounts/a5.md": {
+  "title": "Идель-Электромонтаж",
+  "title_en": "Cumberland Bend Electric",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "Account A5 as Charlotte Pike wrote it before the account left: thin, and silent on everything that went wrong.",
+  "serves": [
+   "S1",
+   "challenge:kb-does-not-say",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S1: silent about the account leaving",
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "accounts/a6.md": {
+  "title": "Вкусный выезд",
+  "title_en": "Sourwood Catering Co.",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Account A6 as it stood eight months ago: names a fleet contact and an advisor who have both gone.",
+  "serves": [
+   "S1",
+   "operate:contradiction",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S1: fleet contact and advisor both gone",
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "accounts/small-business-customers.md": {
+  "title": "Небольшие организации и предприниматели",
+  "title_en": "Small business customers",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Businesses with a few vehicles and no account: how they differ from an account.",
+  "serves": [
+   "S1",
+   "challenge:near-duplicate",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/opening-a-company-account.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "accounts/opening-a-company-account.md": {
+  "title": "Как заключить договор с организацией",
+  "title_en": "Opening a company account",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Who qualifies for an account and the steps to open one.",
+  "serves": [
+   "S1",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/company-account-terms.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "accounts/credit/credit-limits-and-collections.md": {
+  "title": "Лимиты задолженности и просрочка",
+  "title_en": "Credit limits and collections",
+  "exists_in": "both",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "Middle rank and up: each account's credit limit and the steps taken when a statement is overdue.",
+  "serves": [
+   "S1",
+   "S16",
+   "visibility:middle",
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   120000.0,
+   180000.0,
+   450000.0,
+   700000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/suppliers.md": {
+  "title": "Поставщики",
+  "title_en": "Suppliers",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "Who we buy from, what each delivers, when to order, and the parts manager's own notes on each.",
+  "serves": [
+   "S6",
+   "challenge:fact-in-table",
+   "challenge:kb-does-not-say",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "parts/brake-pads-we-fit.md",
+   "parts/sublet-work.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 5,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "parts/ordering-parts.md": {
+  "title": "Как заказать запчасть под работу",
+  "title_en": "Ordering parts for a job",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "How a part gets from the order to the bay, and when an advisor may promise a time.",
+  "serves": [
+   "S8",
+   "S6",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/deposits.md",
+   "parts/suppliers.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   10000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/returns-and-cores.md": {
+  "title": "Возвраты поставщикам",
+  "title_en": "Returns and cores",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "What can go back to a supplier, by when, and how cores work.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/stock-we-keep.md": {
+  "title": "Что держим на складе",
+  "title_en": "Stock we keep",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "What is on the shelf at the home shops, and how stock is counted.",
+  "serves": [
+   "S13",
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/stocktake-day.md",
+   "parts/fluids-and-capacities.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/parts-tiers-and-brands.md": {
+  "title": "Ценовые категории и бренды запчастей",
+  "title_en": "Parts tiers and brands",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "The three tiers and which brand we quote in each, by line.",
+  "serves": [
+   "S6",
+   "challenge:fact-in-table",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/brake-pads-we-fit.md": {
+  "title": "Какие колодки мы ставим",
+  "title_en": "Brake pads we fit",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "The pad lines by tier and the parts manager's warning about the Nashville supplier's house brand (S6).",
+  "serves": [
+   "S6",
+   "S1",
+   "challenge:combine-kb-and-data",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   470.0,
+   1250.0,
+   1720.0,
+   2660.0,
+   3770.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/sublet-work.md": {
+  "title": "Работы подрядчиков",
+  "title_en": "Sublet work",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "Work we send out or bring in: transmission rebuilds, glass, towing. How it is ordered and billed.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price",
+   "S6"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "policies/deposits.md",
+   "services/transmission/transmission-fluid-service.md",
+   "customers/towing.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "parts/fluids-and-capacities.md": {
+  "title": "Жидкости и заправочные объёмы",
+  "title_en": "Fluids and capacities",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "Pointer page: what fluid types we use and where the per-vehicle quantities are (only in the attached sheet).",
+  "serves": [
+   "challenge:fact-only-in-attachment",
+   "challenge:unreadable-binary",
+   "operate:contradiction"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "parts/fleet-fluid-sheet.xlsx",
+   "parts/fleet-fluid-sheet.pdf"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/README.md": {
+  "title": "Три наших сервиса",
+  "title_en": "Our three shops",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The three shops side by side: bays, people, hours, time zone, who runs each.",
+  "serves": [
+   "S9",
+   "S13",
+   "S15",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate-shop-pages",
+   "operate:contradiction"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shops/main/README.md",
+   "shops/east/README.md",
+   "shops/west/README.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/main/README.md": {
+  "title": "Московское шоссе",
+  "title_en": "East Main",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Front page of the flagship's own pages.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "operate:overview"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shops/main/hours-and-getting-here.md",
+   "shops/main/who-is-who.md",
+   "shops/main/opening-and-closing.md",
+   "shops/main/how-the-day-runs.md",
+   "shops/main/saturdays.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/main/hours-and-getting-here.md": {
+  "title": "Московское шоссе: часы и как проехать",
+  "title_en": "East Main: hours and getting here",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "East Main's hours, parking, shuttle and key drop for staff to tell customers.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S13"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/main/who-is-who.md": {
+  "title": "Московское шоссе: кто есть кто",
+  "title_en": "East Main: who is who",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "People at the flagship with what each does and their extension.",
+  "serves": [
+   "challenge:fact-in-table",
+   "S3",
+   "S8",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 3,
+  "first_revision_text": null
+ },
+ "shops/main/opening-and-closing.md": {
+  "title": "Московское шоссе: открытие и закрытие",
+  "title_en": "East Main: opening and closing",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Opening and closing checklist for the flagship: who, till float, where the deposit goes.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S3",
+   "S2"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/missed-calls-and-call-backs.md",
+   "how-to/closing-the-till.md",
+   "shops/main/saturdays.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   5000.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "shops/main/how-the-day-runs.md": {
+  "title": "Московское шоссе: как проходит день",
+  "title_en": "East Main: how the day runs",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "The flagship's local habits: the morning rush, lunch cover, diagnostics queue, Thursday.",
+  "serves": [
+   "S3",
+   "S5",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "shops/main/saturdays.md": {
+  "title": "Московское шоссе: выходные и праздничные дни",
+  "title_en": "East Main: Saturdays",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Weekends and public holidays at the flagship: who is absent, what is taken and what is not. The Russian counterpart of the Saturday page: the shops are open every day.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "challenge:combine-policy-and-price",
+   "S14"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 4,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/east/README.md": {
+  "title": "Инженерный",
+  "title_en": "Bonny Oaks",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Front page of the second home shop's pages.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shops/east/hours-and-getting-here.md",
+   "shops/east/who-is-who.md",
+   "shops/east/opening-and-closing.md",
+   "shops/east/how-the-day-runs.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/east/hours-and-getting-here.md": {
+  "title": "Инженерный: часы и как проехать",
+  "title_en": "Bonny Oaks: hours and getting here",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Bonny Oaks's hours, parking and key drop; no Saturday.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S13"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/east/who-is-who.md": {
+  "title": "Инженерный: кто есть кто",
+  "title_en": "Bonny Oaks: who is who",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "People at Bonny Oaks.",
+  "serves": [
+   "S5",
+   "challenge:near-duplicate-shop-pages",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/east/opening-and-closing.md": {
+  "title": "Инженерный: открытие и закрытие",
+  "title_en": "Bonny Oaks: opening and closing",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Opening and closing at Bonny Oaks: different float and deposit route from East Main.",
+  "serves": [
+   "challenge:near-duplicate-shop-pages",
+   "S2",
+   "S1"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/closing-the-till.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/east/how-the-day-runs.md": {
+  "title": "Инженерный: как проходит день",
+  "title_en": "Bonny Oaks: how the day runs",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "The east shop's habits in its lead advisor's words: the photo before the price, Mondays, cover.",
+  "serves": [
+   "S5",
+   "S4",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/a2.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/west/README.md": {
+  "title": "Техническая",
+  "title_en": "Charlotte Pike",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "The bought shop's front page as its manager wrote it thirteen months ago: thin and out of date on Saturday hours and on who works the counter.",
+  "serves": [
+   "S13",
+   "S2",
+   "challenge:near-duplicate-shop-pages",
+   "operate:contradiction",
+   "challenge:combine-kb-and-data",
+   "challenge:broken-link",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "tiny",
+  "links_to": [
+   "shops/west/opening-and-closing.md",
+   "shops/west/parts.md",
+   "shops/west/answering-the-phone.md",
+   "shops/west/tow-trucks.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": "S13/S2: Saturday hours and counter staff out of date",
+  "broken_links_on_purpose": [
+   "shops/west/tow-trucks.md"
+  ],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "shops/west/opening-and-closing.md": {
+  "title": "Техническая: открытие и закрытие",
+  "title_en": "Charlotte Pike: opening and closing",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "Charlotte Pike's short checklist, with the till rule the managing owner changed after S2.",
+  "serves": [
+   "S2",
+   "challenge:near-duplicate-shop-pages",
+   "operate:find-what-changed"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/closing-the-till.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   100.0,
+   3000.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "shops/west/parts.md": {
+  "title": "Техническая: запчасти",
+  "title_en": "Charlotte Pike: parts",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "22",
+  "purpose": "How Nashville orders parts, in its manager's words.",
+  "serves": [
+   "S6",
+   "challenge:near-duplicate-shop-pages",
+   "operate:contradiction",
+   "S15"
+  ],
+  "length_class": "tiny",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "shops/west/answering-the-phone.md": {
+  "title": "Техническая: как мы отвечаем на звонки",
+  "title_en": "Charlotte Pike: answering the phone",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "24",
+  "purpose": "The newest Nashville advisor's page on how the phone is answered there; the bright spot in a thin folder.",
+  "serves": [
+   "S3",
+   "S4",
+   "challenge:near-duplicate",
+   "S9"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   700.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/README.md": {
+  "title": "Как мы работаем",
+  "title_en": "How we do things",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "Index of the counter procedures, in the order a job passes through them.",
+  "serves": [
+   "operate:overview",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "how-to/taking-a-call.md",
+   "how-to/price-objections.md",
+   "how-to/booking-a-visit.md",
+   "how-to/checking-a-car-in.md",
+   "how-to/company-vehicle-at-the-counter.md",
+   "shop-floor/courtesy-inspection.md",
+   "how-to/writing-an-estimate.md",
+   "how-to/getting-approval.md",
+   "parts/ordering-parts.md",
+   "how-to/handing-a-car-back.md",
+   "how-to/closing-the-till.md",
+   "how-to/a-comeback-at-the-counter.md",
+   "policies/complaints.md",
+   "how-to/missed-calls-and-call-backs.md",
+   "how-to/chats-and-messages.md",
+   "how-to/tyre-season.md",
+   "how-to/stocktake-day.md",
+   "how-to/using-this-knowledge-base.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/taking-a-call.md": {
+  "title": "Как принять звонок",
+  "title_en": "Taking a call",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "How an advisor handles a first call; teaches exactly what the call scorecard checks, in the best closer's voice.",
+  "serves": [
+   "S4",
+   "S3",
+   "S8",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "parts/ordering-parts.md",
+   "how-to/price-objections.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   700.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/price-objections.md": {
+  "title": "Возражения по цене",
+  "title_en": "Price objections",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "What to say when a customer doubts the price; the weakest check on most scorecards.",
+  "serves": [
+   "S4",
+   "S2",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/customer-supplied-parts.md",
+   "policies/diagnostic-fees.md",
+   "policies/discounts.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/booking-a-visit.md": {
+  "title": "Запись на ремонт",
+  "title_en": "Booking a visit",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "How a booking is entered so the day works; step 6 is the read-back that the declined team note repeated (S4).",
+  "serves": [
+   "S4",
+   "S7",
+   "S5",
+   "challenge:three-page-procedure",
+   "operate:contradiction"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/customer-records.md",
+   "how-to/tyre-season.md",
+   "policies/cancellations-and-no-shows.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/checking-a-car-in.md": {
+  "title": "Приёмка автомобиля",
+  "title_en": "Checking a car in",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "The counter's part of receiving a car: walk-round, mileage, the complaint, keys.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S15",
+   "S7"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/company-vehicle-at-the-counter.md": {
+  "title": "Автомобиль организации на приёмке",
+  "title_en": "A company vehicle at the counter",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What changes when the car belongs to a company account: unit number, purchase order, who may approve.",
+  "serves": [
+   "S4",
+   "S1",
+   "challenge:combine-policy-and-price",
+   "challenge:policy-vs-team-note"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/company-account-terms.md",
+   "accounts/small-business-customers.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   8000.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/writing-an-estimate.md": {
+  "title": "Как составить смету",
+  "title_en": "Writing an estimate",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Step two of the inspection-to-approval procedure: turning inspection findings into an estimate.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S8",
+   "S12",
+   "S7"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/courtesy-inspection.md",
+   "prices/price-list.md",
+   "prices/labour-rates-and-fees.md",
+   "how-to/getting-approval.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   30000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/getting-approval.md": {
+  "title": "Как согласовать работы",
+  "title_en": "Getting approval",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "Step three of the inspection-to-approval procedure: sending the estimate, chasing it, recording the answer.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S1",
+   "S7",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/writing-an-estimate.md",
+   "how-to/company-vehicle-at-the-counter.md",
+   "parts/ordering-parts.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/handing-a-car-back.md": {
+  "title": "Выдача автомобиля",
+  "title_en": "Handing a car back",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "The pick-up: walking the bill, old parts, deferred work, the next visit.",
+  "serves": [
+   "S7",
+   "S8",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/complaints.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/closing-the-till.md": {
+  "title": "Закрытие смены и кассы",
+  "title_en": "Closing the till",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "3",
+  "purpose": "The company procedure for counting the cash drawer at the end of the day.",
+  "serves": [
+   "S2",
+   "challenge:near-duplicate-shop-pages",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "shops/main/opening-and-closing.md",
+   "shops/east/opening-and-closing.md",
+   "shops/west/opening-and-closing.md",
+   "policies/voids-and-refunds.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   100.0,
+   3000.0,
+   5000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/missed-calls-and-call-backs.md": {
+  "title": "Пропущенные звонки и перезвоны",
+  "title_en": "Missed calls and call backs",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "How the missed-call list is worked; the standard after the early desk shift.",
+  "serves": [
+   "S3",
+   "S1",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shops/main/how-the-day-runs.md",
+   "how-to/tyre-season.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/chats-and-messages.md": {
+  "title": "Чаты и сообщения",
+  "title_en": "Chats and messages",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "6",
+  "purpose": "How web chat and messenger conversations are answered alongside the assistant.",
+  "serves": [
+   "S7",
+   "S12",
+   "challenge:combine-kb-and-data",
+   "visibility:public"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "customers/README.md",
+   "prices/price-list.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/a-comeback-at-the-counter.md": {
+  "title": "Возврат на приёмке",
+  "title_en": "A comeback at the counter",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "What an advisor does and says when a customer returns with the same problem.",
+  "serves": [
+   "S6",
+   "S1",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/when-a-car-comes-back.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "how-to/stocktake-day.md": {
+  "title": "День инвентаризации",
+  "title_en": "Stocktake day",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "What happens on the half-yearly stocktake afternoon (S13).",
+  "serves": [
+   "S13",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hours-and-locations.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   2000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/using-this-knowledge-base.md": {
+  "title": "Как пользоваться базой знаний и исправлять её",
+  "title_en": "Using and fixing this knowledge base",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "How to search, how to read a page's date, how a correction is proposed and decided.",
+  "serves": [
+   "S12",
+   "S4",
+   "operate:propose",
+   "operate:find-waiting",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "customers/README.md",
+   "how-to/README.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "how-to/tyre-season.md": {
+  "title": "Сезон шиномонтажа",
+  "title_en": null,
+  "exists_in": "ru only",
+  "visibility": "staff",
+  "voice_of_slot": "4",
+  "purpose": "How the desk runs in the two tyre seasons: the windows, the people, the booking grid, storage, what else is sold. Exists only in Russian.",
+  "serves": [
+   "S11",
+   "S3",
+   "challenge:combine-kb-and-data",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "shop-floor/shift-changes-and-time-off.md",
+   "prices/price-list.md",
+   "how-to/missed-calls-and-call-backs.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3000.0
+  ],
+  "n_new": 6,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "team/who-is-who.md": {
+  "title": "Кто есть кто",
+  "title_en": "Who is who",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The company directory: everyone who works here now, by shop, with role and extension. The page that is right when a shop page is not.",
+  "serves": [
+   "S2",
+   "S14",
+   "challenge:fact-in-table",
+   "operate:contradiction",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 5,
+  "first_revision_text": null
+ },
+ "team/meetings.md": {
+  "title": "Совещания",
+  "title_en": "Meetings",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The standing meetings: the Monday managers' meeting, the morning huddle.",
+  "serves": [
+   "S9",
+   "S16",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "team/new-advisor-first-two-weeks.md": {
+  "title": "Новый мастер-приёмщик: первые две недели",
+  "title_en": "New advisor: the first two weeks",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "5",
+  "purpose": "Onboarding checklist for a new service advisor, written when the newcomer started.",
+  "serves": [
+   "S8",
+   "S4",
+   "challenge:three-page-procedure"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/price-list.md",
+   "how-to/taking-a-call.md",
+   "how-to/booking-a-visit.md",
+   "how-to/checking-a-car-in.md",
+   "policies/discounts.md",
+   "policies/warranty.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "team/new-technician-first-week.md": {
+  "title": "Новый механик: первая неделя",
+  "title_en": "New technician: the first week",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "8",
+  "purpose": "What a new technician is shown in the first week.",
+  "serves": [
+   "S14",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "shop-floor/before-a-car-leaves.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "office/month-end-close.md": {
+  "title": "Закрытие месяца",
+  "title_en": "Month-end close",
+  "exists_in": "both",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "The bookkeeper's month-end checklist; the check that caught the missing money.",
+  "serves": [
+   "S2",
+   "S15",
+   "visibility:middle",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "office/statements-and-receivables.md",
+   "office/payroll-hours.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "office/statements-and-receivables.md": {
+  "title": "Счета, акты и дебиторка",
+  "title_en": "Statements and receivables",
+  "exists_in": "both",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "How company-account statements are issued and payments applied.",
+  "serves": [
+   "S1",
+   "S16",
+   "S15",
+   "visibility:middle"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/credit/credit-limits-and-collections.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "office/payroll-hours.md": {
+  "title": "Табель и зарплата",
+  "title_en": "Payroll hours",
+  "exists_in": "both",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "How attendance becomes payroll hours.",
+  "serves": [
+   "S14",
+   "visibility:middle",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "office/till-and-deposits.md": {
+  "title": "Расхождения по кассе и сдача выручки",
+  "title_en": "Till differences and deposits",
+  "exists_in": "both",
+  "visibility": "middle",
+  "voice_of_slot": "3",
+  "purpose": "The office side of the cash: the bag log, the bank, the differences book.",
+  "serves": [
+   "S2",
+   "visibility:middle",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "management/what-we-found-at-west.md": {
+  "title": "Что мы нашли в Казани",
+  "title_en": "What we found at Charlotte Pike",
+  "exists_in": "both",
+  "visibility": "senior",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: the managing owner's memo on the discounts, voids and till shortages (S2) and what was changed.",
+  "serves": [
+   "S2",
+   "visibility:senior",
+   "challenge:combine-kb-and-data",
+   "operate:find-what-changed"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/discounts.md",
+   "policies/voids-and-refunds.md",
+   "shops/west/opening-and-closing.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   96000.0,
+   107360.0,
+   118000.0,
+   321360.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "management/parts-pricing-matrix.md": {
+  "title": "Матрица наценок на запчасти",
+  "title_en": "Parts pricing matrix",
+  "exists_in": "both",
+  "visibility": "senior",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: the margins parts are priced at, by tier and kind.",
+  "serves": [
+   "visibility:senior",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1150.0,
+   1720.0,
+   1900.0,
+   2660.0,
+   2900.0,
+   3770.0,
+   68000.0,
+   85000.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "management/comeback-review.md": {
+  "title": "Разбор возвратов",
+  "title_en": "Comeback review",
+  "exists_in": "both",
+  "visibility": "senior",
+  "voice_of_slot": "4",
+  "purpose": "Senior rank: how comebacks are counted and reviewed each month, and where the review is not happening.",
+  "serves": [
+   "S6",
+   "S14",
+   "visibility:senior",
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "management/schedule-rules.md": {
+  "title": "Правила графика",
+  "title_en": "Schedule rules",
+  "exists_in": "both",
+  "visibility": "senior",
+  "voice_of_slot": "4",
+  "purpose": "Senior rank: the cover each shop needs and the rules the planner follows.",
+  "serves": [
+   "S3",
+   "S5",
+   "S14",
+   "visibility:senior",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 3,
+  "first_revision_text": null
+ },
+ "management/pay-and-till.md": {
+  "title": "Оплата труда и касса",
+  "title_en": "Pay and till",
+  "exists_in": "both",
+  "visibility": "senior",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: how each job is paid, without amounts, and who sees the till counts. The page a junior is refused (stories S12.5).",
+  "serves": [
+   "visibility:senior",
+   "S12",
+   "S2",
+   "challenge:kb-does-not-say",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/closing-the-till.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   100.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "management/owners/west-plan.md": {
+  "title": "Казань: план",
+  "title_en": "Charlotte Pike: the plan",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Administrator only: the managing owner's private plan for the bought shop.",
+  "serves": [
+   "S6",
+   "S9",
+   "visibility:administrator",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "playbooks/README.md": {
+  "title": "Памятки по должностям",
+  "title_en": "Playbooks",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Index of the rank playbooks; states plainly that only the administrator can open them.",
+  "serves": [
+   "visibility:administrator",
+   "operate:overview"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "playbooks/technician.md",
+   "playbooks/advisor.md",
+   "playbooks/lead-and-office.md",
+   "playbooks/manager.md",
+   "playbooks/owner.md",
+   "shop-floor/README.md",
+   "how-to/README.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "playbooks/technician.md": {
+  "title": "Памятка: механики",
+  "title_en": "Playbook: technicians",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Worker rank: what a technician does in Traciora and what the assistant will and will not answer.",
+  "serves": [
+   "S14",
+   "visibility:administrator"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "playbooks/advisor.md": {
+  "title": "Памятка: мастера-приёмщики",
+  "title_en": "Playbook: service advisors",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Junior rank: what an advisor uses Traciora for, with the call scorecard as the centre.",
+  "serves": [
+   "S4",
+   "S3",
+   "S7",
+   "visibility:administrator"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/taking-a-call.md",
+   "how-to/missed-calls-and-call-backs.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 3,
+  "first_revision_text": null
+ },
+ "playbooks/lead-and-office.md": {
+  "title": "Памятка: старшие мастера-приёмщики и бухгалтерия",
+  "title_en": "Playbook: lead advisors and the office",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Middle rank: what the lead advisors and the office manager can do beyond an advisor.",
+  "serves": [
+   "S12",
+   "operate:propose",
+   "visibility:administrator"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "playbooks/manager.md": {
+  "title": "Памятка: руководители",
+  "title_en": "Playbook: managers",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Senior rank: planning shifts, deciding notes and page changes, seeing colleagues' phone performance.",
+  "serves": [
+   "S4",
+   "S5",
+   "S12",
+   "S14",
+   "operate:find-waiting",
+   "visibility:administrator"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "playbooks/owner.md": {
+  "title": "Памятка: владелец и администратор",
+  "title_en": "Playbook: owner and administrator",
+  "exists_in": "both",
+  "visibility": "administrator",
+  "voice_of_slot": "2",
+  "purpose": "Administrator: the managing owner's own notes on running the product.",
+  "serves": [
+   "S10",
+   "S12",
+   "visibility:administrator",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "team/who-is-who.md",
+   "prices/how-prices-change.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "services/README.md": {
+  "title": "Услуги",
+  "title_en": "Services",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Index of the service pages and how to use them on the phone.",
+  "serves": [
+   "S12",
+   "operate:overview",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "prices/price-list.md",
+   "services/maintenance/oil-change.md",
+   "services/maintenance/filters-and-wipers.md",
+   "services/maintenance/spark-plugs.md",
+   "services/maintenance/coolant-service.md",
+   "services/maintenance/scheduled-maintenance.md",
+   "services/maintenance/fuel-system-service.md",
+   "services/maintenance/fleet-pm-service.md",
+   "services/brakes/brake-inspection.md",
+   "services/brakes/pads-and-rotors.md",
+   "services/brakes/calipers-and-drum-brakes.md",
+   "services/brakes/brake-fluid-flush.md",
+   "services/tires/seasonal-changeover-and-storage.md",
+   "services/tires/rotation-balance-and-flat-repair.md",
+   "services/tires/alignment.md",
+   "services/tires/new-tires-and-tpms.md",
+   "services/diagnostics/check-engine-light.md",
+   "services/diagnostics/electrical-diagnosis.md",
+   "services/diagnostics/noises-and-vibrations.md",
+   "services/suspension/struts-and-shocks.md",
+   "services/suspension/front-end-parts.md",
+   "services/suspension/wheel-bearings-and-steering-racks.md",
+   "services/ac/ac-check-and-recharge.md",
+   "services/ac/ac-compressor-and-condenser.md",
+   "services/electrical/battery.md",
+   "services/electrical/alternator-and-starter.md",
+   "services/engine/timing-belt.md",
+   "services/engine/drive-belt.md",
+   "services/engine/cooling-system-repairs.md",
+   "services/engine/leaks-and-gaskets.md",
+   "services/engine/ignition-sensors-and-fuel-pump.md",
+   "services/engine/mounts-and-exhaust.md",
+   "services/transmission/transmission-fluid-service.md",
+   "services/transmission/clutch-and-cv-axles.md",
+   "services/transmission/transmission-rebuild.md",
+   "services/inspections/courtesy-inspection.md",
+   "services/inspections/pre-purchase-inspection.md",
+   "services/hybrids.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/README.md"
+ },
+ "services/maintenance/oil-change.md": {
+  "title": "Замена масла",
+  "title_en": "Oil change",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The most common job: what it includes, the three oils, what to ask, the upsell that is not an upsell.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:customer-terms",
+   "smoke"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1160.0,
+   1330.0,
+   4760.0,
+   6700.0,
+   9200.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/oil-change.md"
+ },
+ "services/maintenance/filters-and-wipers.md": {
+  "title": "Фильтры и щётки",
+  "title_en": "Filters and wipers",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Engine air filter, cabin filter, wiper blades: small jobs sold from the inspection.",
+  "serves": [
+   "challenge:fact-in-table",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/maintenance/fuel-system-service.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   950.0,
+   1090.0,
+   1530.0,
+   1550.0,
+   1660.0,
+   1740.0,
+   2570.0,
+   3570.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/filters-and-wipers.md"
+ },
+ "services/maintenance/spark-plugs.md": {
+  "title": "Свечи зажигания",
+  "title_en": "Spark plugs and the \"tune-up\"",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "What a customer means by a tune-up and what the plug job costs by engine.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:combine-policy-and-price",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/diagnostics/check-engine-light.md",
+   "prices/labour-rates-and-fees.md",
+   "services/engine/ignition-sensors-and-fuel-pump.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1140.0,
+   2280.0,
+   4060.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/spark-plugs.md"
+ },
+ "services/maintenance/coolant-service.md": {
+  "title": "Замена антифриза",
+  "title_en": "Coolant service",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Coolant drain, flush and fill.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/engine/cooling-system-repairs.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   950.0,
+   4560.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/coolant-service.md"
+ },
+ "services/maintenance/scheduled-maintenance.md": {
+  "title": "ТО по регламенту",
+  "title_en": "Scheduled maintenance: 30K, 60K, 90K",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The mileage service: what the labour covers and what is priced separately.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   2850.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/scheduled-maintenance.md"
+ },
+ "services/maintenance/fuel-system-service.md": {
+  "title": "Промывка инжектора и топливный фильтр",
+  "title_en": "Fuel system service",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Induction cleaning and the fuel filter: when it helps and when it is snake oil.",
+  "serves": [
+   "challenge:customer-terms",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/diagnostics/check-engine-light.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1390.0,
+   3160.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/fuel-system-service.md"
+ },
+ "services/maintenance/fleet-pm-service.md": {
+  "title": "ТО коммерческого автомобиля",
+  "title_en": "Fleet PM service A",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "4",
+  "purpose": "The preventive-maintenance service for cargo vans; list price and what the company rate does to it.",
+  "serves": [
+   "S1",
+   "S16",
+   "challenge:combine-policy-and-price",
+   "challenge:fact-only-in-attachment"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "accounts/company-account-terms.md",
+   "parts/fluids-and-capacities.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   670.0,
+   1090.0,
+   1750.0,
+   2850.0,
+   9710.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/maintenance/fleet-pm-service.md"
+ },
+ "services/brakes/brake-inspection.md": {
+  "title": "Диагностика тормозов",
+  "title_en": "Brake inspection",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The inspection every brake complaint starts with.",
+  "serves": [
+   "S7",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/diagnostic-fees.md",
+   "customers/towing.md",
+   "services/brakes/pads-and-rotors.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   700.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/brakes/brake-inspection.md"
+ },
+ "services/brakes/pads-and-rotors.md": {
+  "title": "Колодки и диски",
+  "title_en": "Pads and rotors",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The main brake job: pads alone or with rotors, the three parts tiers, what to say.",
+  "serves": [
+   "S7",
+   "S6",
+   "S12",
+   "challenge:fact-in-table",
+   "challenge:customer-terms",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "prices/labour-rates-and-fees.md",
+   "parts/brake-pads-we-fit.md",
+   "policies/customer-supplied-parts.md",
+   "how-to/a-comeback-at-the-counter.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3400.0,
+   3620.0,
+   4140.0,
+   4560.0,
+   5150.0,
+   5670.0,
+   8820.0,
+   9640.0,
+   11260.0,
+   12520.0,
+   14210.0,
+   16030.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/brakes/pads-and-rotors.md"
+ },
+ "services/brakes/calipers-and-drum-brakes.md": {
+  "title": "Суппорты и барабанные тормоза",
+  "title_en": "Calipers and drum brakes",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The less common brake jobs: a seized caliper, rear shoes.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   5170.0,
+   10120.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/brakes/calipers-and-drum-brakes.md"
+ },
+ "services/brakes/brake-fluid-flush.md": {
+  "title": "Замена тормозной жидкости",
+  "title_en": "Brake fluid flush",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Brake fluid exchange: why, when, how it is sold.",
+  "serves": [
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   2480.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/brakes/brake-fluid-flush.md"
+ },
+ "services/brakes/brake-questions.md": {
+  "title": "Вопросы по тормозам",
+  "title_en": "Brake questions",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "F3",
+  "purpose": "An old FAQ by an advisor who has left: still carries the labour rate and brake prices from before the rise. Stale on purpose (S12).",
+  "serves": [
+   "S12",
+   "S8",
+   "challenge:near-duplicate",
+   "operate:contradiction",
+   "operate:propose"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S12: old labour rate and brake prices",
+  "broken_links_on_purpose": [],
+  "amounts": [
+   650.0,
+   1760.0,
+   2340.0,
+   4000.0,
+   4420.0,
+   11008.0,
+   12268.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "services/tires/seasonal-changeover-and-storage.md": {
+  "title": "Сезонный шиномонтаж и хранение шин",
+  "title_en": null,
+  "exists_in": "ru only",
+  "visibility": "public",
+  "voice_of_slot": "15",
+  "purpose": "The seasonal tyre job for the counter: the three order lines, prices by vehicle class, what to ask, what is checked with the wheels off, when a tyre is refused, storage. Exists only in Russian.",
+  "serves": [
+   "S11",
+   "challenge:fact-in-table",
+   "challenge:customer-terms",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "how-to/tyre-season.md",
+   "customers/seasonal-tyre-change.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1200.0,
+   1380.0,
+   1560.0,
+   3000.0,
+   3750.0,
+   3900.0,
+   4350.0
+  ],
+  "n_new": 3,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/tires/seasonal-changeover-and-storage.md"
+ },
+ "services/tires/rotation-balance-and-flat-repair.md": {
+  "title": "Балансировка, перестановка и ремонт прокола",
+  "title_en": "Rotation, balance and flat repair",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The three small tire jobs.",
+  "serves": [
+   "smoke",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/brakes/brake-inspection.md",
+   "services/tires/new-tires-and-tpms.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   760.0,
+   800.0,
+   1200.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/tires/rotation-balance-and-flat-repair.md"
+ },
+ "services/tires/alignment.md": {
+  "title": "Сход-развал",
+  "title_en": "Alignment",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Four-wheel alignment: when, price by vehicle class, which rack.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3000.0,
+   3450.0,
+   3900.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/tires/alignment.md"
+ },
+ "services/tires/new-tires-and-tpms.md": {
+  "title": "Новые шины и датчики давления",
+  "title_en": "New tires and tire-pressure sensors",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Selling and fitting tires; the fees; TPMS sensors.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-kb-and-data",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/tires/alignment.md",
+   "services/tires/seasonal-changeover-and-storage.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   400.0,
+   3000.0,
+   4480.0,
+   4590.0,
+   5860.0,
+   7930.0,
+   21320.0,
+   26840.0,
+   35120.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/tires/new-tires-and-tpms.md"
+ },
+ "services/diagnostics/check-engine-light.md": {
+  "title": "Горит «чек»",
+  "title_en": "Check engine light",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "10",
+  "purpose": "How a check-engine job is booked and explained, in the diagnostician's exact voice.",
+  "serves": [
+   "S5",
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "policies/diagnostic-fees.md",
+   "services/diagnostics/electrical-diagnosis.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1200.0,
+   2850.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/diagnostics/check-engine-light.md"
+ },
+ "services/diagnostics/electrical-diagnosis.md": {
+  "title": "Поиск неисправностей электрики",
+  "title_en": "Electrical diagnosis",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Electrical faults without a warning light.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   300.0,
+   2850.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/diagnostics/electrical-diagnosis.md"
+ },
+ "services/diagnostics/noises-and-vibrations.md": {
+  "title": "Стуки и вибрации",
+  "title_en": "Noises and vibrations",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "How a noise complaint is taken and inspected.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/brakes/brake-inspection.md",
+   "services/suspension/front-end-parts.md",
+   "services/tires/rotation-balance-and-flat-repair.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   800.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/diagnostics/noises-and-vibrations.md"
+ },
+ "services/suspension/struts-and-shocks.md": {
+  "title": "Стойки и амортизаторы",
+  "title_en": "Struts and shocks",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Front struts and rear shocks: how they are found, sold in pairs, and often deferred.",
+  "serves": [
+   "S7",
+   "challenge:customer-terms",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/tires/alignment.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3000.0,
+   9640.0,
+   11720.0,
+   14220.0,
+   15600.0,
+   18580.0,
+   21820.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/suspension/struts-and-shocks.md"
+ },
+ "services/suspension/front-end-parts.md": {
+  "title": "Детали передней подвески",
+  "title_en": "Front-end parts",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Sway bar links and bushings, control arms, ball joints, tie rods.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   2370.0,
+   2420.0,
+   3000.0,
+   3230.0,
+   3700.0,
+   8720.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/suspension/front-end-parts.md"
+ },
+ "services/suspension/wheel-bearings-and-steering-racks.md": {
+  "title": "Ступичные подшипники и рулевые рейки",
+  "title_en": "Wheel bearings and steering racks",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "Two bigger jobs: the humming bearing and the leaking rack.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   6360.0,
+   18200.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/suspension/wheel-bearings-and-steering-racks.md"
+ },
+ "services/ac/ac-check-and-recharge.md": {
+  "title": "Диагностика и заправка кондиционера",
+  "title_en": "A/C check and recharge",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "The summer job: performance check, the two refrigerants, what a recharge can and cannot fix.",
+  "serves": [
+   "S11",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:customer-terms",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "medium",
+  "links_to": [
+   "services/ac/ac-compressor-and-condenser.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   900.0,
+   2290.0,
+   3800.0,
+   10800.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/ac/ac-check-and-recharge.md"
+ },
+ "services/ac/ac-compressor-and-condenser.md": {
+  "title": "Компрессор и радиатор кондиционера",
+  "title_en": "A/C compressor and condenser",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "The two big A/C repairs.",
+  "serves": [
+   "challenge:combine-policy-and-price",
+   "S11"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/deposits.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   18310.0,
+   41100.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/ac/ac-compressor-and-condenser.md"
+ },
+ "services/electrical/battery.md": {
+  "title": "Аккумулятор",
+  "title_en": "Battery",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Battery test and replacement; the November rush; bulbs.",
+  "serves": [
+   "S11",
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/electrical/alternator-and-starter.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   300.0,
+   380.0,
+   800.0,
+   7000.0,
+   8760.0,
+   13380.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/electrical/battery.md"
+ },
+ "services/electrical/alternator-and-starter.md": {
+  "title": "Генератор и стартер",
+  "title_en": "Alternator and starter",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "13",
+  "purpose": "Charging and starting repairs.",
+  "serves": [
+   "challenge:customer-terms",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   300.0,
+   13460.0,
+   17290.0,
+   19460.0,
+   24740.0,
+   29960.0,
+   36840.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/electrical/alternator-and-starter.md"
+ },
+ "services/engine/timing-belt.md": {
+  "title": "Ремень ГРМ",
+  "title_en": "Timing belt",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The timing-belt job, as written before the price rise: old labour rate, old total, and a same-day promise. Stale on purpose (S12); a correction is proposed and waiting.",
+  "serves": [
+   "S12",
+   "S8",
+   "operate:propose",
+   "operate:find-waiting",
+   "operate:contradiction",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "medium",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": "S12: old labour rate, old total, same-day promise",
+  "broken_links_on_purpose": [],
+  "amounts": [
+   1220.0,
+   1760.0,
+   5632.0,
+   8700.0,
+   15552.0,
+   19332.0
+  ],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "services/engine/drive-belt.md": {
+  "title": "Ремень навесных агрегатов",
+  "title_en": "Drive belt",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The serpentine belt: not the timing belt.",
+  "serves": [
+   "challenge:near-duplicate",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/engine/timing-belt.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   2750.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/engine/drive-belt.md"
+ },
+ "services/engine/cooling-system-repairs.md": {
+  "title": "Ремонт системы охлаждения",
+  "title_en": "Cooling system repairs",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Overheating and leaks: pressure test, water pump, thermostat, radiator.",
+  "serves": [
+   "challenge:fact-in-table",
+   "challenge:combine-policy-and-price",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/towing.md",
+   "services/engine/timing-belt.md",
+   "services/maintenance/coolant-service.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   950.0,
+   5140.0,
+   10520.0,
+   16160.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/engine/cooling-system-repairs.md"
+ },
+ "services/engine/leaks-and-gaskets.md": {
+  "title": "Течи и прокладки",
+  "title_en": "Leaks and gaskets",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Oil leaks, and the one gasket on the price list.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3370.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/engine/leaks-and-gaskets.md"
+ },
+ "services/engine/ignition-sensors-and-fuel-pump.md": {
+  "title": "Зажигание, датчики и бензонасос",
+  "title_en": "Ignition, sensors and fuel pump",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "10",
+  "purpose": "The repairs that most often follow a check-engine diagnosis.",
+  "serves": [
+   "challenge:fact-in-table",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3930.0,
+   6180.0,
+   9520.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/engine/ignition-sensors-and-fuel-pump.md"
+ },
+ "services/engine/mounts-and-exhaust.md": {
+  "title": "Опоры двигателя и глушитель",
+  "title_en": "Mounts and exhaust",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Engine mounts and the rear exhaust; what is not on the list.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "smoke"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/diagnostics/check-engine-light.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   6060.0,
+   9180.0
+  ],
+  "n_new": 2,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/engine/mounts-and-exhaust.md"
+ },
+ "services/transmission/transmission-fluid-service.md": {
+  "title": "Замена масла в коробке",
+  "title_en": "Transmission fluid service",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Drain and fill against machine exchange, and gear oil; what customers call a flush.",
+  "serves": [
+   "challenge:customer-terms",
+   "challenge:fact-in-table",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "services/transmission/transmission-rebuild.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3320.0,
+   6900.0,
+   16300.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/transmission/transmission-fluid-service.md"
+ },
+ "services/transmission/clutch-and-cv-axles.md": {
+  "title": "Сцепление и ШРУСы",
+  "title_en": "Clutch and CV axles",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Two driveline repairs.",
+  "serves": [
+   "smoke",
+   "challenge:customer-terms"
+  ],
+  "length_class": "short",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   7470.0,
+   26550.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/transmission/clutch-and-cv-axles.md"
+ },
+ "services/transmission/transmission-rebuild.md": {
+  "title": "Капитальный ремонт АКПП",
+  "title_en": "Transmission rebuild",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "The sublet rebuild: what we do, what the specialist does, price, time, deposit, warranty.",
+  "serves": [
+   "challenge:kb-does-not-say",
+   "challenge:combine-policy-and-price",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "policies/deposits.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   11400.0,
+   42500.0,
+   85000.0,
+   96400.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/transmission/transmission-rebuild.md"
+ },
+ "services/inspections/courtesy-inspection.md": {
+  "title": "Осмотр по чек-листу",
+  "title_en": "Courtesy inspection",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "16",
+  "purpose": "The free inspection from the counter's side: how the result is presented.",
+  "serves": [
+   "challenge:three-page-procedure",
+   "S7",
+   "S5"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "shop-floor/courtesy-inspection.md",
+   "how-to/writing-an-estimate.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "services/inspections/pre-purchase-inspection.md": {
+  "title": "Диагностика перед покупкой",
+  "title_en": "Pre-purchase inspection",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "5",
+  "purpose": "Staff page for the used-car inspection.",
+  "serves": [
+   "smoke",
+   "challenge:combine-policy-and-price"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/pre-purchase-inspection.md"
+  ],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [
+   3000.0
+  ],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": "ru/_history/services/inspections/pre-purchase-inspection.md"
+ },
+ "services/hybrids.md": {
+  "title": "Гибриды",
+  "title_en": "Hybrids",
+  "exists_in": "both",
+  "visibility": "public",
+  "voice_of_slot": "10",
+  "purpose": "What is and is not done on hybrids, for the counter.",
+  "serves": [
+   "S5",
+   "challenge:combine-policy-and-price",
+   "challenge:near-duplicate-shop-pages"
+  ],
+  "length_class": "short",
+  "links_to": [
+   "customers/hybrids-and-electric-cars.md"
+  ],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "prices/counter-price-sheet.pdf": {
+  "title": "Прайс для стойки",
+  "title_en": "Counter price sheet",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "Printed price sheet for the counters: menu services on page 1, prices by vehicle class on page 2.",
+  "serves": [
+   "S12",
+   "challenge:fact-only-in-attachment",
+   "challenge:fact-in-table"
+  ],
+  "length_class": "binary: PDF, 2 pages, text",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 0,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "team/staff-handbook.docx": {
+  "title": "Правила внутреннего трудового распорядка",
+  "title_en": "Staff handbook",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "2",
+  "purpose": "The employee handbook: attendance, pay periods, time off, holidays, allowances, conduct.",
+  "serves": [
+   "S14",
+   "challenge:fact-only-in-attachment",
+   "visibility:worker",
+   "challenge:kb-does-not-say"
+  ],
+  "length_class": "binary: DOCX with heading styles, about 9 pages",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 2,
+  "n_verify": 1,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "parts/fleet-fluid-sheet.xlsx": {
+  "title": "Заправочные объёмы (таблица)",
+  "title_en": "Fleet fluid sheet (spreadsheet)",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "The parts manager's working sheet of oil, coolant and transmission fluid by vehicle. Not readable by the assistant.",
+  "serves": [
+   "challenge:unreadable-binary",
+   "challenge:fact-only-in-attachment"
+  ],
+  "length_class": "binary: XLSX, one sheet",
+  "links_to": [],
+  "has_history": true,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 1,
+  "n_rev": 2,
+  "first_revision_text": null
+ },
+ "parts/fleet-fluid-sheet.pdf": {
+  "title": "Заправочные объёмы (распечатка)",
+  "title_en": "Fleet fluid sheet (printed copy)",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "9",
+  "purpose": "A one-page print of the fluid sheet: the readable copy.",
+  "serves": [
+   "challenge:fact-only-in-attachment",
+   "challenge:fact-in-table",
+   "S1"
+  ],
+  "length_class": "binary: PDF, 1 page landscape, text",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 1,
+  "n_verify": 1,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "team/the-call-in-eight-moves.pptx": {
+  "title": "Звонок в восемь шагов",
+  "title_en": "The call, in eight moves",
+  "exists_in": "both",
+  "visibility": "staff",
+  "voice_of_slot": "16",
+  "purpose": "The lead advisor's ten-slide training deck on taking a call.",
+  "serves": [
+   "S4",
+   "challenge:fact-only-in-attachment",
+   "challenge:near-duplicate"
+  ],
+  "length_class": "binary: PPTX, 10 titled slides",
+  "links_to": [],
+  "has_history": false,
+  "stale_on_purpose": null,
+  "broken_links_on_purpose": [],
+  "amounts": [],
+  "n_new": 0,
+  "n_verify": 0,
+  "n_rev": 1,
+  "first_revision_text": null
+ },
+ "_binaries.md": {
+  "amounts": [
+   300.0,
+   400.0,
+   500.0,
+   700.0,
+   800.0,
+   900.0,
+   1200.0,
+   1380.0,
+   1560.0,
+   1900.0,
+   2480.0,
+   2850.0,
+   3000.0,
+   3450.0,
+   3750.0,
+   3800.0,
+   3900.0,
+   4060.0,
+   4350.0,
+   4560.0,
+   5164.0,
+   5310.0,
+   5776.0,
+   5928.0,
+   6360.0,
+   6700.0,
+   6992.0,
+   7244.0,
+   7902.0,
+   8268.0,
+   8760.0,
+   9444.0,
+   10520.0,
+   10800.0,
+   11260.0,
+   11720.0,
+   12000.0,
+   12520.0,
+   13366.0,
+   13676.0,
+   14517.0,
+   14638.0,
+   15214.0,
+   15236.0,
+   16000.0,
+   16160.0,
+   16212.0,
+   16218.0,
+   16276.0,
+   17774.0,
+   18580.0,
+   18708.0,
+   19460.0,
+   19916.0,
+   20192.0,
+   20688.0,
+   21008.0,
+   21056.0,
+   23943.0,
+   24154.0,
+   24740.0,
+   25298.0,
+   25739.0,
+   25952.0,
+   25984.0,
+   26550.0,
+   29306.0,
+   32018.0,
+   32162.0,
+   32791.0,
+   33762.0,
+   34515.0,
+   40842.0,
+   40955.0
+  ],
+  "new_amounts": [
+   {
+    "value": 3000,
+    "why": "компенсация на рабочую обувь, в год"
+   },
+   {
+    "value": 12000,
+    "why": "компенсация на инструмент, в год"
+   }
+  ],
+  "not_a_page": true
+ }
+}

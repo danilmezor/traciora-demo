@@ -1,0 +1,148 @@
+{
+ "path": "services/diagnostics/check-engine-light.md",
+ "title": "Горит «чек»",
+ "title_en": "Check engine light",
+ "exists_in": "both",
+ "english_sheet": "facts/services/diagnostics/check-engine-light.json",
+ "first_revision_text": "ru/_history/services/diagnostics/check-engine-light.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "10",
+ "purpose": "How a check-engine job is booked and explained, in the diagnostician's exact voice.",
+ "serves": [
+  "S5",
+  "challenge:combine-policy-and-price",
+  "challenge:customer-terms"
+ ],
+ "length_class": "medium",
+ "words_ru": 304,
+ "links_to": [
+  "policies/diagnostic-fees.md",
+  "services/diagnostics/electrical-diagnosis.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Компьютерная диагностика двигателя»: a fixed 0.5 н/ч job; a longer search is the separate 1.5 н/ч job, started after approval. English sells one diagnostic hour.",
+  "Slot 10 takes about four a day on weekdays; slot 18 two.",
+  "The round figures at the end are illustrative causes in words, not prices."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что входит в эти полчаса",
+   "item": "Считываю сохранённые коды и стоп-кадр: что делал двигатель в тот момент, когда появилась ошибка."
+  },
+  {
+   "section": "Что входит в эти полчаса",
+   "item": "Смотрю параметры на работающем моторе: топливные коррекции, показания датчиков, пропуски по цилиндрам."
+  },
+  {
+   "section": "Что входит в эти полчаса",
+   "item": "Объясняю, на что указывает код. Код называет систему, а не деталь. P0171 говорит, что смесь бедная. Почему она бедная, он не говорит."
+  },
+  {
+   "section": "Что входит в эти полчаса",
+   "item": "Записываю, что проверено, что это показало и что это исключает."
+  },
+  {
+   "section": "Запись",
+   "item": "В колонку диагностики. На Московском шоссе — ко мне, по будням, около четырёх машин в день. На Инженерном — к Егорову, две машины в день."
+  },
+  {
+   "section": "Запись",
+   "item": "Спросите: лампа горит ровно или мигает; изменилось ли что-то в езде; когда началось; что делали с машиной перед этим. Ответы запишите в наряд. Они экономят мне двадцать минут."
+  },
+  {
+   "section": "Запись",
+   "item": "Лампа мигает и двигатель трясёт — это пропуски зажигания. Посоветуйте ездить как можно меньше."
+  },
+  {
+   "section": "Запись",
+   "item": "Ошибку сейчас считывают где угодно, и клиент приезжает с кодом и уже купленным датчиком. Объясните вежливо: мы всё равно диагностируем. По коду детали не меняем."
+  },
+  {
+   "section": "Деньги",
+   "item": "Диагностика оплачивается независимо от того, будет ли ремонт у нас, и в ремонт не засчитывается: Платная диагностика и осмотры."
+  },
+  {
+   "section": "Деньги",
+   "item": "Дополнительное время — только после согласия клиента. Скажите ему, что уже исключено."
+  },
+  {
+   "section": "Деньги",
+   "item": "Цену ремонта до диагностики не называем. У одного и того же кода бывает причина за триста рублей и причина за сто тысяч."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 1200.0
+  },
+  {
+   "catalogue_key": "electrical_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2850.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Андрей Викторович Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Егорову",
+   "role": "lead_technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  1200.0,
+  2850.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

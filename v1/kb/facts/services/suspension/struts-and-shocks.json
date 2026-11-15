@@ -1,0 +1,164 @@
+{
+ "path": "services/suspension/struts-and-shocks.md",
+ "title": "Struts and shocks",
+ "first_revision_text": "en/_history/services/suspension/struts-and-shocks.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Front struts and rear shocks: how they are found, sold in pairs, and often deferred.",
+ "serves": [
+  "S7",
+  "challenge:customer-terms",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 238,
+ "links_to": [
+  "services/tires/alignment.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs front_struts_pair (2.6 h) and rear_shocks_pair (1.2 h), three tier totals each.",
+  "Sold in pairs; front struts need an alignment (119.95) on the estimate; rear shocks do not.",
+  "Found at the inspection (oil on the body, cupped tyres); photo required.",
+  "Often declined and deferred; raised again at the next drop-off.",
+  "S7: the customer declined rear shocks at 339.28 (standard) and asked to book them at T-3 days; the answer to her uses this page for the job and the price list for the price.",
+  "\"About half say yes the second time\" is the advisor's impression, not a ledger row."
+ ],
+ "tables": [
+  {
+   "section": "Struts and shocks",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Economy / Standard / Premium"
+   ],
+   "rows": [
+    {
+     "On the order": "Replace front strut assemblies (pair)",
+     "Hours": "2.6",
+     "Economy / Standard / Premium": "$661.00 / $841.90 / $874.08"
+    },
+    {
+     "On the order": "Replace rear shock absorbers (pair)",
+     "Hours": "1.2",
+     "Economy / Standard / Premium": "$297.00 / $339.28 / $362.00"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "hours",
+   "class": "car",
+   "value": 2.6
+  },
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 661.0
+  },
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 841.9
+  },
+  {
+   "catalogue_key": "front_struts_pair",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 874.08
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 297.0
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 339.28
+  },
+  {
+   "catalogue_key": "rear_shocks_pair",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 362.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 119.95
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена амортизаторов»; rear pair 11 720 RUB (catalogue.md)."
+ ]
+}

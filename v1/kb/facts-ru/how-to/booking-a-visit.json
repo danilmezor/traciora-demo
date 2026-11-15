@@ -1,0 +1,142 @@
+{
+ "path": "how-to/booking-a-visit.md",
+ "title": "Запись на ремонт",
+ "title_en": "Booking a visit",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/booking-a-visit.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "How a booking is entered so the day works; step 6 is the read-back that the declined team note repeated (S4).",
+ "serves": [
+  "S4",
+  "S7",
+  "S5",
+  "challenge:three-page-procedure",
+  "operate:contradiction"
+ ],
+ "length_class": "medium",
+ "words_ru": 288,
+ "links_to": [
+  "policies/customer-records.md",
+  "how-to/tyre-season.md",
+  "policies/cancellations-and-no-shows.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Slots through the day: timed bookings 9:00 to 18:00; waiters 10:00 to 18:00; nothing over three hours after 15:00; Monday before 10:30 at the second shop is A2's; a separate grid in the tyre season.",
+  "Sources add VK and Avito.",
+  "Step 6, the read-back, is the point of slot 6's declined team note, as in English.",
+  "Confirmation the day before by 17:00."
+ ],
+ "new_facts": [
+  "Slot rules of the Russian day. ERP appointment times should follow them."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Запись на ремонт",
+   "item": "Найдите клиента по номеру телефона. Не заводите нового, если телефон уже есть в базе: Карточки клиентов."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Какой сервис. Вслух. Люди записываются на Московское шоссе, а приезжают на Инженерный."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Машина и жалоба — словами клиента. «Скрежет спереди при торможении, со вторника». А не «тормоза»."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Выберите работу из справочника, чтобы у записи были нормо-часы. Шум или лампа на панели — это диагностика, а не ремонт."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Выберите время."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "На время записываем с 9:00 до 18:00. Тех, кто ждёт у нас, — с 10:00 до 18:00, на работы не дольше часа."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "«Чек» и электрика идут в колонку диагноста: Шубин на Московском шоссе, по будням, Егоров на Инженерном. Колонка заполнена — предлагайте следующий день."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Работу дольше трёх нормо-часов после 15:00 не записываем."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "На Инженерном понедельник до 10:30 занят «Тёплым контуром»."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "В сезон шиномонтажа своя сетка: Сезон шиномонтажа."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Проговорите запись: день, время, какой сервис, что делаем. Каждую запись, каждый раз, даже постоянному клиенту. «Значит, пятница, девять утра, Московское шоссе, диагностика тормозов»."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Откуда запись: звонок, чат на сайте, Telegram, ВКонтакте, Авито или клиент пришёл сам. Заполняйте. Так мы знаем, чего стоит каждый канал."
+  },
+  {
+   "section": "Запись на ремонт",
+   "item": "Машина организации? Гаражный номер, а для «Симбирского гонца» ещё и номер заявки."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Егоров",
+   "role": "lead_technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "Travis's addition of the paragraph \"From the website assistant\" (proposed by slot 5, approved by slot 4); message: \"How chat bookings reach us.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Как к нам попадают записи из чата."
+  }
+ ],
+ "has_history": true
+}

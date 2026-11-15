@@ -1,0 +1,101 @@
+{
+ "path": "how-to/checking-a-car-in.md",
+ "title": "Приёмка автомобиля",
+ "title_en": "Checking a car in",
+ "exists_in": "both",
+ "english_sheet": "facts/how-to/checking-a-car-in.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "The counter's part of receiving a car: walk-round, mileage, the complaint, keys.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S15",
+  "S7"
+ ],
+ "length_class": "short",
+ "words_ru": 229,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The walk-round is written into the check-in act with the fuel level; the customer signs the order and the act and keeps a copy.",
+  "Valuables are taken out of the cabin.",
+  "The order carries a day of readiness; the hour is not promised, a call time is."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [
+  {
+   "item": "Whether the written contract must state the term of the work (ПП № 780) is not in the research; the page says the order carries a day.",
+   "outcome": "verified",
+   "note": "The contract must state when it is to be performed; the page's \"the order carries a day\" stands.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 9: «Договор заключается в письменной форме и должен содержать следующие сведения»: «дата заключения договора, сроки его исполнения»."
+  }
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Обойдите машину вместе с клиентом. Вмятины, царапины, сколы на стекле, лампы на панели — называйте вслух и записывайте в акт приёма-передачи. Туда же уровень топлива. Четыре фотографии, по одной с каждого угла."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Пробег — с панели приборов, цифрами, а не на глаз. Он меньше, чем в прошлый раз? Посмотрите ещё раз: скорее всего, потеряли цифру."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Жалоба словами клиента и когда она проявляется: на холодную, на горячую, при торможении, в повороте, на скорости. Если клиент может, пусть проедет с механиком и покажет звук."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "То, о чём он не просит. «А что-нибудь ещё беспокоит?» Вы удивитесь."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Как с ним связаться сегодня и до которого часа. Звонок или мессенджер. Кто ещё может согласовать работы."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Осмотр по чек-листу: скажите, что он бесплатный и что пришлём фотографии. Почти никто не отказывается."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Ключи: бирка с номером наряда, на доску. «Секретка» от колёс? Спросите сейчас, а не когда колёса уже снимают. Ценные вещи из салона попросите забрать."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Время первого звонка от нас. «До двенадцати наберу вас и скажу, что нашли». И наберите."
+  },
+  {
+   "section": "Приёмка автомобиля",
+   "item": "Откройте наряд из записи. Проверьте, что машина та и клиент тот. Клиент подписывает заказ-наряд и акт приёма-передачи, второй экземпляр отдаём ему."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

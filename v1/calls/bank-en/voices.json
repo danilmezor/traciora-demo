@@ -1,0 +1,1712 @@
+{
+  "format": "bank-en/voices/1",
+  "about": "Eight customer voices. A voice is drawn per call (the driver and dispatcher voices only for company vehicles) and fills every generic customer line; written lines take its opener, filler or tail. Lines are East and Middle Tennessee phone speech, as in the story calls. A role is a list of wordings, or {\"parts\": [[...], [...]]}: one piece from each part, joined by a space (an empty piece is allowed).",
+  "voices": {
+    "terse": {
+      "about": "Says the least that will do. No greeting, no story, answers in two or three words, never fills a silence.",
+      "filler_rate": 0.25,
+      "tail_rate": 0.05,
+      "opener": [
+        "Yeah.",
+        "Yeah, hey.",
+        "Hey."
+      ],
+      "filler": [
+        "Yeah,",
+        "Uh,",
+        "Well,"
+      ],
+      "tail": [
+        ", so.",
+        "."
+      ],
+      "open_price": [
+        "Yeah, {need}. What's that run?",
+        "{need}. How much?",
+        "Yeah. {need} — what do y'all get for that?",
+        "What's it cost? {need}."
+      ],
+      "open_booking": [
+        "{need}. When can y'all get to it?",
+        "Yeah, {need}. Y'all got anything open?",
+        "Need to get it in. {need}."
+      ],
+      "give_car": [
+        "{car_year_short} {car_model}.",
+        "{car_make}. {car_model}. A {car_year_short}.",
+        "It's a {car_model}."
+      ],
+      "react_price": [
+        "{price}. Okay.",
+        "Huh. {price}.",
+        "Alright."
+      ],
+      "react_no_price": [
+        "Not even a ballpark?",
+        "Huh. Okay."
+      ],
+      "yes": [
+        "Yeah.",
+        "Yep.",
+        "That works.",
+        "Fine."
+      ],
+      "no": [
+        "Nah.",
+        "No.",
+        "Nope, that's it."
+      ],
+      "maybe": [
+        "Maybe.",
+        "Might.",
+        "Could be."
+      ],
+      "pick_of_two": [
+        "{time_chosen}.",
+        "{time_chosen}'s fine.",
+        "Do {time_chosen}."
+      ],
+      "accept_one": [
+        "Yeah, {time_chosen}'s fine.",
+        "That works.",
+        "{time_chosen}. Okay."
+      ],
+      "name_own_time": [
+        "Can I bring it {time_chosen}?",
+        "I'll be there {time_chosen}.",
+        "How about {time_chosen}?"
+      ],
+      "pause": {
+        "parts": [
+          [
+            "Don't know yet.",
+            "Hm.",
+            "Let me see.",
+            "Not sure."
+          ],
+          [
+            "",
+            "Gotta check.",
+            "Depends on work."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "Nah,",
+            "Not right now,",
+            "No,"
+          ],
+          [
+            "I'll call you.",
+            "I'll let you know.",
+            "I'll call back."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Alright.",
+            "Okay.",
+            "Yeah."
+          ],
+          [
+            "I'll call back.",
+            "I'll let you know.",
+            "I'll call y'all.",
+            "Let me think on it."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "That's high.",
+        "Place up the road's cheaper."
+      ],
+      "doubt_time": [
+        "Can't do that.",
+        "Need it quicker than that."
+      ],
+      "doubt_trust": [
+        "Y'all sure that's what it is?",
+        "Heard that before."
+      ],
+      "doubt_think": [
+        "I'll think about it.",
+        "Let me check."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Alright.",
+            "Okay.",
+            "Huh."
+          ],
+          [
+            "Fine.",
+            "Makes sense.",
+            "",
+            "Fair enough."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "Hm.",
+            "Yeah.",
+            "Okay."
+          ],
+          [
+            "We'll see.",
+            "I don't know.",
+            "Maybe."
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first} {customer_last}.",
+        "{customer_first}.",
+        "{customer_last}. {customer_first} {customer_last}."
+      ],
+      "give_number": [
+        "{customer_phone_said}.",
+        "This number. {customer_phone_said}."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "How long?",
+            "Gonna take long?",
+            "Can I wait on it?",
+            "Same day?"
+          ],
+          [
+            ""
+          ]
+        ]
+      },
+      "backchannel": [
+        "Yeah.",
+        "Mm.",
+        "Okay.",
+        "Uh-huh."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Alright.",
+            "Yep.",
+            "Okay.",
+            "Thanks.",
+            "Good deal."
+          ],
+          [
+            "Bye.",
+            "",
+            "See ya.",
+            "Later.",
+            "Appreciate it."
+          ]
+        ]
+      }
+    },
+    "chatty": {
+      "about": "Tells the story around the need, offers who sent them, wanders off and comes back, laughs at themselves.",
+      "filler_rate": 0.55,
+      "tail_rate": 0.35,
+      "opener": [
+        "Hey there! How y'all doing?",
+        "Hi! Okay, so —",
+        "Well, hey."
+      ],
+      "filler": [
+        "Well,",
+        "So,",
+        "I mean,",
+        "Okay, so,"
+      ],
+      "tail": [
+        ", you know?",
+        ", if that makes sense.",
+        ", I don't know."
+      ],
+      "open_price": [
+        "Hi, okay, so my neighbor told me to call y'all — {need}, and I wanted to see what something like that runs.",
+        "Well, hey. So — {need}, and my husband says it's nothing but I don't believe him. What do y'all charge?",
+        "Okay, so I was on my way to work, and — {need}. What's that gonna cost me, roughly?",
+        "Hi! I've never called y'all before, my sister goes to you — {need}. How much is that, do you think?"
+      ],
+      "open_booking": [
+        "Hey! So — {need}, and I wanted to see if y'all could get me in sometime, I'm not picky.",
+        "Well, hi. {need}, and I keep putting it off, so I'm calling before I chicken out.",
+        "Okay, so — {need}. Do y'all have anything open? I know it's short notice."
+      ],
+      "give_car": [
+        "It's a {car_year_said} {car_model}. The {car_make}. It's got a lot of miles but it's been good to me.",
+        "Oh, it's a {car_model}. {car_year_short}, I think — yeah, {car_year_short}. My dad helped me pick it out.",
+        "A {car_make} {car_model}, a {car_year_short}. It's silver. Well — kinda silver."
+      ],
+      "react_price": [
+        "Okay, {price}. That's not as bad as I was scared it'd be, honestly.",
+        "{price}. Oh, okay. Hm. Okay.",
+        "Okay, so {price} — and that's with everything?"
+      ],
+      "react_no_price": [
+        "Oh — you can't even give me a guess? I'm not gonna hold you to it.",
+        "Oh, okay. Well, I figured, kinda."
+      ],
+      "yes": [
+        "Yes! Okay, that's perfect.",
+        "Oh, yeah, that works great.",
+        "Yeah, let's do that.",
+        "Okay, yeah, sure!"
+      ],
+      "no": [
+        "No, I think that's it. For now, anyway.",
+        "No, no, that's all.",
+        "Oh, no, I'm good."
+      ],
+      "maybe": [
+        "Maybe? Let me — hang on, let me look at my calendar.",
+        "I mean, maybe. I'd have to see.",
+        "Possibly! Depends on my sister."
+      ],
+      "pick_of_two": [
+        "Oh, {time_chosen}, definitely, the other one I've got the kids.",
+        "Let's do {time_chosen}. That way I can drop it on the way.",
+        "{time_chosen} works. Write me down before I change my mind."
+      ],
+      "accept_one": [
+        "Yeah, {time_chosen}'s good, I'm off then actually.",
+        "Oh, {time_chosen}? Okay, yeah, I can make that work.",
+        "{time_chosen}, okay. I'll set an alarm."
+      ],
+      "name_own_time": [
+        "Could I bring it {time_chosen}? That's my day off.",
+        "What about {time_chosen}? Is that crazy?",
+        "I could come {time_chosen}, if that's not too early."
+      ],
+      "pause": {
+        "parts": [
+          [
+            "Ooh. Um.",
+            "Let me think.",
+            "Hmm.",
+            "Oh, gosh."
+          ],
+          [
+            "I don't know, my week's kinda crazy.",
+            "My schedule's all over the place right now.",
+            "That's the thing, I never know.",
+            "I'd have to look at my calendar."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "Let me look at my week",
+            "I'm gonna check with my husband",
+            "Let me figure out my schedule",
+            "Not yet —"
+          ],
+          [
+            "and I'll call you back, okay?",
+            "and call y'all.",
+            "and I'll call back, I promise.",
+            "and get back to you."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Okay, well,",
+            "Alright,",
+            "Okay, so,"
+          ],
+          [
+            "let me talk to my husband and I'll call y'all back.",
+            "I'm gonna think on it and give you a call.",
+            "I'll call back, I just gotta figure out my week.",
+            "let me check on a couple things and call you."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "Ooh, that's more than I was hoping, honestly.",
+        "Okay, see, my cousin said it'd be less than that."
+      ],
+      "doubt_time": [
+        "Oh, I can't do that one, I've got work and then I've got the kids.",
+        "See, that's my problem, I'm at work all day."
+      ],
+      "doubt_trust": [
+        "Okay, I'm just nervous, because the last place really took me for a ride.",
+        "How do I know y'all won't find a bunch of other stuff? No offense."
+      ],
+      "doubt_think": [
+        "Let me talk to my husband first, he handles the car stuff.",
+        "I kinda want to sleep on it, if that's okay."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Okay.",
+            "Oh!",
+            "Okay, yeah.",
+            "Huh."
+          ],
+          [
+            "That makes me feel better, actually.",
+            "Nobody ever explained that to me.",
+            "That makes sense.",
+            "I didn't know that."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "Hmm. Okay.",
+            "Okay.",
+            "I hear you."
+          ],
+          [
+            "I still need to think, I'm sorry.",
+            "I just — let me think about it.",
+            "I just don't know yet."
+          ]
+        ]
+      },
+      "give_name": [
+        "It's {customer_first}. {customer_first} {customer_last}.",
+        "{customer_first} {customer_last} — like it sounds.",
+        "{customer_first}. Last name's {customer_last}."
+      ],
+      "give_number": [
+        "It's {customer_phone_said}. That's my cell.",
+        "{customer_phone_said}. Text is fine too."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "And how long does that take?",
+            "Do I need to leave it, or can I sit there?",
+            "Is that like an all-day thing?",
+            "How long would y'all have it?"
+          ],
+          [
+            "",
+            "Should I bring a book?",
+            "I've got a dentist thing later."
+          ]
+        ]
+      },
+      "backchannel": [
+        "Uh-huh.",
+        "Right.",
+        "Okay.",
+        "Oh, okay."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Thank you so much!",
+            "Okay, thank you!",
+            "Alright, thanks, hon.",
+            "Thank you!",
+            "Oh, you've been a big help.",
+            "Okay, you're a lifesaver.",
+            "Well, thank you, hon."
+          ],
+          [
+            "Y'all have a good one.",
+            "Bye-bye.",
+            "Bye now.",
+            "Talk to you soon!",
+            "I'll see y'all.",
+            "",
+            "Have a blessed day."
+          ]
+        ]
+      }
+    },
+    "anxious": {
+      "about": "Worried it is unsafe or expensive; asks whether it can be driven; needs to hear what happens next.",
+      "filler_rate": 0.45,
+      "tail_rate": 0.25,
+      "opener": [
+        "Hi, um —",
+        "Hi. I'm sorry, I —",
+        "Hello? Hi."
+      ],
+      "filler": [
+        "Um,",
+        "Okay, um,",
+        "I'm sorry —",
+        "I just —"
+      ],
+      "tail": [
+        ", is that bad?",
+        ", I don't know if that's normal.",
+        ", I'm kinda freaking out."
+      ],
+      "open_price": [
+        "Hi, um — {need}, and I'm kinda scared to drive it. How much would that be?",
+        "I'm sorry, I don't know much about cars — {need}. What would something like that cost?",
+        "Hi. {need}, and I need to know what I'm looking at before I — what does that usually run?",
+        "Um, {need}. Is that expensive? What do y'all charge?"
+      ],
+      "open_booking": [
+        "Hi, um — {need}, and I need somebody to look at it soon. Like, as soon as possible.",
+        "I'm sorry, I — {need}. Can y'all see it today? Or soon?",
+        "Hi. {need}, and I don't want to drive it far. When could y'all get to it?"
+      ],
+      "give_car": [
+        "It's a — a {car_year_said} {car_model}.",
+        "A {car_model}. {car_year_short}. Is that — does that matter?",
+        "Um, it's a {car_make}, a {car_model}. {car_year_short}, I think."
+      ],
+      "react_price": [
+        "{price}? Okay. Okay. Is that — that's for all of it?",
+        "Oh. Okay. {price}. I can — I think I can do that.",
+        "{price}. And that fixes it?"
+      ],
+      "react_no_price": [
+        "Oh — so it could be a lot?",
+        "Okay. Um. So I won't know till you look?"
+      ],
+      "yes": [
+        "Yes. Okay. Yes.",
+        "Yeah, okay, please.",
+        "Okay — yes, that's fine.",
+        "Yes, please, I just want it fixed."
+      ],
+      "no": [
+        "No — I don't think so.",
+        "No, that's — no.",
+        "No, that's all, I think."
+      ],
+      "maybe": [
+        "Maybe? I don't know.",
+        "I guess maybe.",
+        "I — maybe, yeah."
+      ],
+      "pick_of_two": [
+        "{time_chosen}. The sooner the better, honestly.",
+        "Can I do {time_chosen}? I don't want to wait.",
+        "{time_chosen}, please."
+      ],
+      "accept_one": [
+        "Yes, {time_chosen}. I'll be there.",
+        "Okay, {time_chosen}. Is it okay to drive it till then?",
+        "{time_chosen}. Okay, good."
+      ],
+      "name_own_time": [
+        "Could I bring it {time_chosen}? I don't want to wait any longer than that.",
+        "Is {time_chosen} too soon?",
+        "Could I come {time_chosen}? I'm sorry, I know that's soon."
+      ],
+      "pause": {
+        "parts": [
+          [
+            "Um...",
+            "I — ",
+            "Oh. Um."
+          ],
+          [
+            "I don't know, I have to see if I can get off.",
+            "let me figure out how I'd get there.",
+            "I'm not sure.",
+            "I have to find a ride."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "I need to see if somebody can drive me.",
+            "Let me figure out a ride.",
+            "I have to check with my dad.",
+            "I'm sorry, I just have to check."
+          ],
+          [
+            "Can I call back?",
+            "I'll call you back.",
+            "I'll call back, I promise."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Okay.",
+            "Okay, um.",
+            "Alright."
+          ],
+          [
+            "Let me see what I can do and I'll call back.",
+            "I'll — I'll call you back, I'm sorry.",
+            "I'll call y'all once I talk to my dad.",
+            "I'll call back as soon as I can."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "That's — that's a lot for me right now.",
+        "I wasn't expecting that much. Is there anything cheaper?"
+      ],
+      "doubt_time": [
+        "I don't have anybody to take me, though.",
+        "I can't be without my car, I have to get to work."
+      ],
+      "doubt_trust": [
+        "How do I know that's really what it is?",
+        "I'm just worried y'all will find more stuff."
+      ],
+      "doubt_think": [
+        "I need to talk to my dad first.",
+        "Can I think about it? I'm sorry."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Okay.",
+            "Oh, good.",
+            "Okay, okay."
+          ],
+          [
+            "That helps.",
+            "That makes me feel a lot better.",
+            "Thank you for explaining.",
+            ""
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "Okay.",
+            "I don't know.",
+            "Okay, but —"
+          ],
+          [
+            "I'm still kinda nervous.",
+            "Let me think.",
+            "I just don't know."
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first} {customer_last}.",
+        "It's {customer_first}. {customer_last}.",
+        "{customer_first} — {customer_first} {customer_last}."
+      ],
+      "give_number": [
+        "{customer_phone_said}.",
+        "It's {customer_phone_said}. Please call me if it's bad."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "How long will it take?",
+            "Will it be done the same day?",
+            "How long do y'all need it?",
+            "Do I need to wait there?"
+          ],
+          [
+            "",
+            "I have to get to work.",
+            "I don't have a ride."
+          ]
+        ]
+      },
+      "backchannel": [
+        "Okay.",
+        "Uh-huh.",
+        "Oh.",
+        "Okay, okay."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Thank you so much.",
+            "Okay. Thank you.",
+            "Thank you, really.",
+            "Okay, thanks.",
+            "Thank you for helping me."
+          ],
+          [
+            "I feel better.",
+            "Bye.",
+            "Bye-bye.",
+            "",
+            "I'll see you then.",
+            "Okay, bye."
+          ]
+        ]
+      }
+    },
+    "price_shopper": {
+      "about": "Calling round for numbers; wants the out-the-door figure and the best price; mentions other shops.",
+      "filler_rate": 0.3,
+      "tail_rate": 0.2,
+      "opener": [
+        "Yeah, hi.",
+        "Hey, quick question.",
+        "Hi, I'm calling around."
+      ],
+      "filler": [
+        "Okay, but",
+        "Right,",
+        "So,",
+        "Alright, and"
+      ],
+      "tail": [
+        ", out the door?",
+        ", ballpark.",
+        ", is that your best price?"
+      ],
+      "open_price": [
+        "Hey, I'm calling around for prices — {need}. What y'all get for that?",
+        "Quick question. {need}. What's your price on that, out the door?",
+        "Yeah, I'm getting a few quotes. {need}. Ballpark?",
+        "Hi. {need}, and I'm trying to find the best price. What do y'all charge?"
+      ],
+      "open_booking": [
+        "{need}, and I want to know what it costs before I set anything up.",
+        "Hey, {need}. If the price is right I'll bring it this week.",
+        "Yeah, {need}. What's open, and what's it run?"
+      ],
+      "give_car": [
+        "{car_year_short} {car_model}. The base one.",
+        "It's a {car_year_said} {car_make} {car_model}.",
+        "A {car_model}, {car_year_short}. Nothing fancy."
+      ],
+      "react_price": [
+        "{price}. Is that out the door?",
+        "{price}, huh. That with tax?",
+        "Okay, {price}. Can you do any better on that?"
+      ],
+      "react_no_price": [
+        "Everybody else gave me a number.",
+        "Can't even give me a range?"
+      ],
+      "yes": [
+        "Alright, yeah.",
+        "Okay, that works.",
+        "Yeah, put me down.",
+        "Fine, let's do it."
+      ],
+      "no": [
+        "No, that's all I needed.",
+        "Nope.",
+        "No, just the price."
+      ],
+      "maybe": [
+        "Maybe, depends on the price.",
+        "Might. Let me see what the others say.",
+        "Possibly."
+      ],
+      "pick_of_two": [
+        "{time_chosen}'s fine.",
+        "Put me down {time_chosen}.",
+        "{time_chosen}, then."
+      ],
+      "accept_one": [
+        "{time_chosen} works.",
+        "Alright, {time_chosen}.",
+        "Sure, {time_chosen}."
+      ],
+      "name_own_time": [
+        "If I come {time_chosen}, y'all can do it at that price?",
+        "Can I bring it {time_chosen}?",
+        "I could do {time_chosen}."
+      ],
+      "pause": {
+        "parts": [
+          [
+            "Let me finish calling around first.",
+            "Not yet —",
+            "Hold on, I'm comparing."
+          ],
+          [
+            "I've got two more places to call.",
+            "",
+            "I'll know in a bit."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "Nah,",
+            "Not yet.",
+            "No,"
+          ],
+          [
+            "let me check with the other place first.",
+            "I'll call back if y'all are the cheapest.",
+            "I'll let you know."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Alright,",
+            "Okay,",
+            "Yeah,"
+          ],
+          [
+            "I'll call back if I go with y'all.",
+            "I'll let you know.",
+            "let me call a couple more places and get back to you.",
+            "I'll get back to you."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "{competitor_place} told me {competitor_price}.",
+        "I got a quote for less than that already."
+      ],
+      "doubt_time": [
+        "The other place can do it today.",
+        "I need it quicker than that, the other shop said same day."
+      ],
+      "doubt_trust": [
+        "Why's yours more, what's different?",
+        "What brand parts are y'all using for that?"
+      ],
+      "doubt_think": [
+        "Let me compare and call you back.",
+        "I'll see what the others say."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Alright.",
+            "Okay.",
+            "Huh."
+          ],
+          [
+            "That's fair.",
+            "I didn't know that.",
+            "That makes sense, actually."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "Hm.",
+            "I hear you.",
+            "Okay."
+          ],
+          [
+            "I'll think about it.",
+            "I'll see.",
+            ""
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first} {customer_last}.",
+        "It's {customer_first}.",
+        "{customer_first}. {customer_last}."
+      ],
+      "give_number": [
+        "{customer_phone_said}.",
+        "This one's fine, {customer_phone_said}."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "How long's it take?",
+            "Same day?",
+            "Can I wait on it?",
+            "Is it a drop-off?"
+          ],
+          [
+            ""
+          ]
+        ]
+      },
+      "backchannel": [
+        "Right.",
+        "Okay.",
+        "Uh-huh.",
+        "Yep."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Alright, thanks.",
+            "Appreciate it.",
+            "Okay, thanks.",
+            "Alright.",
+            "Thanks for your time."
+          ],
+          [
+            "Bye.",
+            "Thanks for the price.",
+            "",
+            "I'll be in touch.",
+            "I'll let you know."
+          ]
+        ]
+      }
+    },
+    "elderly": {
+      "about": "Polite and slow, gives more than is asked, calls the advisor honey or young man, asks for a thing to be said again, a little hard of hearing.",
+      "filler_rate": 0.5,
+      "tail_rate": 0.3,
+      "opener": [
+        "Yes, hello.",
+        "Hello? Yes, good morning.",
+        "Well, hello there."
+      ],
+      "filler": [
+        "Well, now,",
+        "Now,",
+        "Let me see,",
+        "Honey,"
+      ],
+      "tail": [
+        ", is all.",
+        ", I believe.",
+        ", if you know what I mean."
+      ],
+      "open_price": [
+        "Yes, hello. I wanted to ask — {need}. What would that cost, roughly?",
+        "Well, hello. My late husband always took care of the cars, and — {need}. Can you tell me what that runs?",
+        "Good morning. {need}, and I'd like to know what that'd be before I bring it.",
+        "Yes, honey, I'm calling because — {need}. What do y'all charge for that?"
+      ],
+      "open_booking": [
+        "Yes, hello. {need}, and I'd like to bring it in, if you have time for me.",
+        "Well, good morning. {need}. When could you look at it for me?",
+        "Hello. {need}. My son said to call y'all and get it on the books."
+      ],
+      "give_car": [
+        "It's a {car_make}. A {car_model}. The — the {car_year_said}, I think.",
+        "Let me see — it's a {car_year_said} {car_model}. It's on the paper here.",
+        "It's my {car_model}, a {car_year_short}. It's the only car I've got."
+      ],
+      "react_price": [
+        "{price}? Say that again for me, honey.",
+        "Now, that's {price}? Well. All right.",
+        "{price}. My goodness. Well, it has to be done."
+      ],
+      "react_no_price": [
+        "Well, you can't give me some idea?",
+        "Oh. Well, I suppose you have to see it."
+      ],
+      "yes": [
+        "Yes, that'll be fine.",
+        "Yes, honey, that's fine.",
+        "All right, yes.",
+        "That would be just fine."
+      ],
+      "no": [
+        "No, I believe that's all.",
+        "No, honey.",
+        "No, that's everything."
+      ],
+      "maybe": [
+        "Well, maybe. I'd have to ask my son.",
+        "I suppose so.",
+        "Perhaps. Let me think."
+      ],
+      "pick_of_two": [
+        "{time_chosen} would be better for me. I have the doctor the other day.",
+        "Let's say {time_chosen}. Mornings are better for me.",
+        "{time_chosen}, I think. Let me write that down."
+      ],
+      "accept_one": [
+        "{time_chosen}. All right. Let me write that on my calendar.",
+        "Yes, {time_chosen} is fine.",
+        "{time_chosen}. My son can bring me."
+      ],
+      "name_own_time": [
+        "Could I come {time_chosen}? My son's off that day.",
+        "Would {time_chosen} be all right?",
+        "I could bring it {time_chosen}, if that suits you."
+      ],
+      "pause": {
+        "parts": [
+          [
+            "Well,",
+            "Oh,",
+            "Let me see,"
+          ],
+          [
+            "I'd have to see when my son can drive me.",
+            "I don't have my calendar in front of me.",
+            "I don't know, honey.",
+            "I'd have to think."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "Let me call my son",
+            "I'll have to ask my daughter",
+            "Not just yet,",
+            "I'll talk it over with my son"
+          ],
+          [
+            "and I'll call you back.",
+            "and call you, honey.",
+            "I'll call.",
+            "and get back with you."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "All right.",
+            "Well.",
+            "Well, all right."
+          ],
+          [
+            "I'll talk to my son and call you back.",
+            "I'll call back, then.",
+            "I'll call you, honey. Thank you.",
+            "Let me think on it and call."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "Well, that's an awful lot of money.",
+        "My, that's more than it used to be."
+      ],
+      "doubt_time": [
+        "I don't drive much after dark, now.",
+        "I'd have to get somebody to bring me."
+      ],
+      "doubt_trust": [
+        "Now, I don't want y'all doing a bunch of things I didn't ask for.",
+        "Is that really what it needs? I don't know about these things."
+      ],
+      "doubt_think": [
+        "I'll have to talk to my son about it.",
+        "Let me think about it, honey."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Well,",
+            "All right.",
+            "Oh."
+          ],
+          [
+            "thank you for explaining that.",
+            "That makes sense to me.",
+            "I appreciate you telling me.",
+            "I didn't know that."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "Well,",
+            "Oh,",
+            "Now,"
+          ],
+          [
+            "I'll have to think about it.",
+            "I'm still not sure, honey.",
+            "let me ask my son."
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first} {customer_last}. {customer_title}.",
+        "It's {customer_last}. {customer_first} {customer_last}.",
+        "{customer_first} {customer_last}, like it sounds."
+      ],
+      "give_number": [
+        "It's {customer_phone_said}. That's the house.",
+        "Let me see... {customer_phone_said}."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "And how long will it take, honey?",
+            "Will I need to wait there?",
+            "Do I leave it with you all day?",
+            "How long will you need it?"
+          ],
+          [
+            "",
+            "I don't like to drive after dark."
+          ]
+        ]
+      },
+      "backchannel": [
+        "Yes.",
+        "Mm-hm.",
+        "All right.",
+        "I see."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Thank you, honey.",
+            "All right, thank you.",
+            "Well, thank you so much.",
+            "Bless you.",
+            "You've been real sweet.",
+            "Thank you, sweetheart.",
+            "I do appreciate it."
+          ],
+          [
+            "Bye-bye.",
+            "Bye now.",
+            "You have a good day.",
+            "",
+            "The Lord bless.",
+            "Y'all take care."
+          ]
+        ]
+      }
+    },
+    "driver": {
+      "about": "Drives a company vehicle and was told to call; knows the van and the noise, not the price or the purchase order; defers to the boss on anything that costs money.",
+      "filler_rate": 0.35,
+      "tail_rate": 0.2,
+      "opener": [
+        "Hey, this is {customer_first} with {company_name}.",
+        "Yeah, hey — {customer_first}, I drive for {company_name}.",
+        "Hey, it's {customer_first} over at {company_name}."
+      ],
+      "filler": [
+        "Yeah,",
+        "I mean,",
+        "Uh,",
+        "Well,"
+      ],
+      "tail": [
+        ", the boss said call y'all.",
+        ", is what I know.",
+        ", I just drive it."
+      ],
+      "open_price": [
+        "Hey, I drive {unit} for {company_name}. {need}. What's that gonna run? The boss'll want to know.",
+        "Yeah, this is {customer_first} with {company_name}. {need}. Can you tell me about what that costs?",
+        "Hey, {boss_first} told me to call y'all — {need}. What's something like that run?",
+        "Yeah, it's the van I drive, {unit}. {need}. Ballpark, what are we talking?"
+      ],
+      "open_booking": [
+        "Hey, I drive for {company_name}. {need}, and {boss_first} said get it in to y'all.",
+        "Yeah, {unit}'s the one I drive — {need}. When can y'all take it?",
+        "Hey, this is {customer_first} with {company_name}. {need}. Y'all got room for it?"
+      ],
+      "give_car": [
+        "It's {unit}, the {car_model}.",
+        "The {car_model}, {unit}. White one.",
+        "It's {unit}. It's a {car_make}, the {car_model}."
+      ],
+      "react_price": [
+        "{price}. I'll tell {boss_first}.",
+        "Okay, {price}. {boss_first}'s gonna ask me that.",
+        "{price}. Alright. That's on the account, right?"
+      ],
+      "react_no_price": [
+        "Alright. I'll just tell {boss_first} y'all gotta look at it.",
+        "Okay. {boss_first}'s gonna ask me, though."
+      ],
+      "yes": [
+        "Yeah, that works.",
+        "Yep, I can do that.",
+        "Alright, yeah.",
+        "Sounds good."
+      ],
+      "no": [
+        "Nah, that's it.",
+        "No, just that.",
+        "No."
+      ],
+      "maybe": [
+        "Maybe. I gotta ask {boss_first}.",
+        "I'd have to check.",
+        "Might be."
+      ],
+      "pick_of_two": [
+        "{time_chosen}. I can drop it before my route.",
+        "{time_chosen}'s better, I'm out the other day.",
+        "Let's do {time_chosen}."
+      ],
+      "accept_one": [
+        "{time_chosen}. Yeah, I can get it there.",
+        "Alright, {time_chosen}.",
+        "Yeah, {time_chosen} works for me."
+      ],
+      "name_own_time": [
+        "Could I drop it {time_chosen}, before my route?",
+        "{time_chosen} work? That's when I'm off the road.",
+        "I could bring it {time_chosen}."
+      ],
+      "pause": {
+        "parts": [
+          [
+            "I gotta check with {boss_first} on the schedule.",
+            "I don't know my route yet.",
+            "Let me ask the boss."
+          ],
+          [
+            "",
+            "{boss_first} handles all that.",
+            "I just drive it."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "Let me run it by {boss_first}",
+            "I'll tell the office",
+            "Nah, I gotta ask first,"
+          ],
+          [
+            "and somebody'll call y'all.",
+            "and they'll call you.",
+            "and they'll call you back."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Alright.",
+            "Okay.",
+            "Yeah."
+          ],
+          [
+            "I'll tell {boss_first} and somebody'll call you.",
+            "Somebody'll call y'all back.",
+            "I'll let the office know.",
+            "{boss_first}'ll get with you."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "{boss_first}'s gonna say that's a lot.",
+        "That's more than I figured he'd want to spend."
+      ],
+      "doubt_time": [
+        "I need it back for my route, though.",
+        "I can't be without it long, I got stops."
+      ],
+      "doubt_trust": [
+        "Y'all sure it's that? I just drive it.",
+        "Last time it was something else, they said."
+      ],
+      "doubt_think": [
+        "I gotta ask {boss_first} first.",
+        "I can't okay that, I'd have to call the office."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Alright,",
+            "Okay,",
+            "Yeah,"
+          ],
+          [
+            "I'll tell {boss_first} that.",
+            "that makes sense.",
+            "okay."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "I'll tell {boss_first},",
+            "Alright.",
+            "Okay."
+          ],
+          [
+            "but I don't know.",
+            "{boss_first}'ll have to decide.",
+            "I'll pass it on."
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first}. With {company_name}.",
+        "{customer_first} {customer_last}.",
+        "It's {customer_first}."
+      ],
+      "give_number": [
+        "My cell's {customer_phone_said}.",
+        "{customer_phone_said}. That's me, not the office."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "How long y'all need it?",
+            "Can I wait on it?",
+            "Gonna be done by afternoon?",
+            "Y'all gonna keep it overnight?"
+          ],
+          [
+            "",
+            "I got stops."
+          ]
+        ]
+      },
+      "backchannel": [
+        "Yeah.",
+        "Okay.",
+        "Right.",
+        "Yep."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Alright, 'preciate it.",
+            "Thanks a bunch.",
+            "Alright, thanks.",
+            "'Preciate you.",
+            "Good deal.",
+            "Alright, cool."
+          ],
+          [
+            "Bye.",
+            "",
+            "Talk to you later.",
+            "I'll let {boss_first} know."
+          ]
+        ]
+      }
+    },
+    "dispatcher": {
+      "about": "Books vans for other people from a sheet; has unit numbers and the purchase order; wants the first opening and the van back by a time; second-hand on symptoms.",
+      "filler_rate": 0.25,
+      "tail_rate": 0.15,
+      "opener": [
+        "Hi, this is {customer_first} at {company_name}.",
+        "Morning, {customer_first} with {company_name}.",
+        "Hey, it's {customer_first} at {company_name}."
+      ],
+      "filler": [
+        "Okay,",
+        "Alright,",
+        "So,",
+        "Let me see,"
+      ],
+      "tail": [
+        ", per the driver.",
+        ", that's what I've got on the sheet.",
+        ", if that helps."
+      ],
+      "open_price": [
+        "Hi, this is {customer_first} at {company_name}. I've got {unit} — {need}. Can you give me a number on that?",
+        "Morning. I need to get {unit} in. {need}, per the driver. What am I looking at?",
+        "Hey, it's {customer_first} with {company_name}. {need}, on {unit}. What's that run at our rate?",
+        "Hi. {need} — that's {unit}. I need a price before I can okay it."
+      ],
+      "open_booking": [
+        "Hi, it's {customer_first} at {company_name}. I need to get {unit} in. {need}. What's your first opening?",
+        "Morning. {need}, on {unit}. When can you take it?",
+        "Hey, {customer_first} at {company_name}. {need}. I need it back the same day if you can."
+      ],
+      "give_car": [
+        "It's {unit}, the {car_model}, tag ending {plate_tail_said}.",
+        "{unit}. The {car_year_short} {car_model}.",
+        "Let me see — {unit}, it's a {car_model}."
+      ],
+      "react_price": [
+        "{price}. Okay, I'll note it.",
+        "{price} at our rate? Okay.",
+        "Okay, {price}. I'll put that on the PO."
+      ],
+      "react_no_price": [
+        "I'll need a number before I can approve anything.",
+        "Okay. Can you call me with it once you've looked?"
+      ],
+      "yes": [
+        "Yes, that's fine.",
+        "Okay, do that.",
+        "That works.",
+        "Yes, go ahead."
+      ],
+      "no": [
+        "No, that's all.",
+        "Not today.",
+        "No, just that one."
+      ],
+      "maybe": [
+        "Possibly. Let me check the board.",
+        "Maybe. I'd have to move a driver.",
+        "Let me see."
+      ],
+      "pick_of_two": [
+        "{time_chosen}. He can drop it on his way in.",
+        "Let's do {time_chosen}, the other one he's on a job.",
+        "{time_chosen}, please."
+      ],
+      "accept_one": [
+        "{time_chosen}'s fine. I'll tell the driver.",
+        "Okay, {time_chosen}.",
+        "{time_chosen} works, put it down."
+      ],
+      "name_own_time": [
+        "Can you take it {time_chosen}?",
+        "I can have it there {time_chosen}.",
+        "Does {time_chosen} work on your end?"
+      ],
+      "pause": {
+        "parts": [
+          [
+            "Let me look at the board first.",
+            "I'd have to see who can run it over.",
+            "Hold on, I've got to check the schedule."
+          ],
+          [
+            "",
+            "I'll know this afternoon."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "Let me get back to you",
+            "I'll call you back",
+            "Not yet —"
+          ],
+          [
+            "once I see the board.",
+            "with a day.",
+            "I'll call."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Okay,",
+            "Alright,",
+            "Okay, so"
+          ],
+          [
+            "I'll call you back once I've got a driver.",
+            "I'll get back to you.",
+            "let me check and call you.",
+            "I'll be in touch."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "That's over what I can okay without the owner.",
+        "That's more than our last one."
+      ],
+      "doubt_time": [
+        "I can't have it down more than a morning.",
+        "I need it back by lunch, it's got a route."
+      ],
+      "doubt_trust": [
+        "Last time there was a whole list added on.",
+        "Is that a must-do, or a keep-an-eye-on-it?"
+      ],
+      "doubt_think": [
+        "I'll need to run that by the owner.",
+        "Let me check the budget and call you."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Okay.",
+            "Alright,",
+            "Okay,"
+          ],
+          [
+            "That works.",
+            "noted.",
+            "that's helpful."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "Okay.",
+            "Noted.",
+            "Understood."
+          ],
+          [
+            "I'll have to check.",
+            "Let me run it up the chain.",
+            "I'll get back to you."
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first} {customer_last}, at {company_name}.",
+        "{customer_first}. I'm the dispatcher.",
+        "It's {customer_first} {customer_last}."
+      ],
+      "give_number": [
+        "The office line is {customer_phone_said}.",
+        "{customer_phone_said}, that's my desk."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "How long will you have it?",
+            "Back by end of day?",
+            "Can he wait, or is it a drop?",
+            "When would it be ready?"
+          ],
+          [
+            ""
+          ]
+        ]
+      },
+      "backchannel": [
+        "Okay.",
+        "Mm-hm.",
+        "Got it.",
+        "Right."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Thank you.",
+            "Great, thanks.",
+            "Okay, thanks so much.",
+            "Perfect.",
+            "Thanks for fitting us in.",
+            "Appreciate it."
+          ],
+          [
+            "Bye.",
+            "",
+            "Talk soon.",
+            "I'll let the driver know."
+          ]
+        ]
+      }
+    },
+    "angry": {
+      "about": "Frustrated before the call starts (a breakdown, another shop, a long week); short temper, mild swearing, softens when answered straight.",
+      "filler_rate": 0.4,
+      "tail_rate": 0.3,
+      "opener": [
+        "Yeah.",
+        "Yeah, I need some help here.",
+        "Look —"
+      ],
+      "filler": [
+        "Look,",
+        "Man,",
+        "Listen,",
+        "I mean,"
+      ],
+      "tail": [
+        ", and I'm about fed up.",
+        ", it's ridiculous.",
+        ", I'm telling you."
+      ],
+      "open_price": [
+        "Yeah, I need somebody that can actually fix a car. {need}. What's it gonna cost?",
+        "Look, {need}, and the last place didn't do a dang thing. What do y'all charge?",
+        "Man, {need}, and I don't have time for this. How much?",
+        "Yeah. {need}. I've had about enough of this car. What's it run?"
+      ],
+      "open_booking": [
+        "Look, {need}, and I need it fixed, not looked at. When can y'all take it?",
+        "Yeah, {need}. I need it in somewhere today, I'm done with the other place.",
+        "{need}, and it's the second time this month. Y'all got anything open?"
+      ],
+      "give_car": [
+        "It's a {car_year_short} {car_model}. Piece of junk right now.",
+        "{car_make} {car_model}. {car_year_said}.",
+        "A {car_model}. A {car_year_short}. Why, does it matter?"
+      ],
+      "react_price": [
+        "{price}? Good Lord.",
+        "{price}. Course it is.",
+        "{price}. Unbelievable."
+      ],
+      "react_no_price": [
+        "You can't tell me nothing?",
+        "That's what the last place said."
+      ],
+      "yes": [
+        "Yeah. Fine.",
+        "Yeah, do that.",
+        "Alright. Yes.",
+        "Fine, put me down."
+      ],
+      "no": [
+        "No.",
+        "No, that's it.",
+        "Nope."
+      ],
+      "maybe": [
+        "Maybe. I don't know.",
+        "We'll see.",
+        "If it gets fixed, maybe."
+      ],
+      "pick_of_two": [
+        "{time_chosen}. The sooner the better.",
+        "{time_chosen}. And it better be done.",
+        "Fine, {time_chosen}."
+      ],
+      "accept_one": [
+        "{time_chosen}. Fine.",
+        "Alright, {time_chosen}. I'll be there.",
+        "{time_chosen}'s fine, I guess."
+      ],
+      "name_own_time": [
+        "I'm bringing it {time_chosen}. Can y'all take it or not?",
+        "Can I bring it {time_chosen}?",
+        "{time_chosen}. That's the soonest I can get off."
+      ],
+      "pause": {
+        "parts": [
+          [
+            "I don't know.",
+            "Hold on.",
+            "Man, I don't know."
+          ],
+          [
+            "I gotta figure out how I'm getting to work.",
+            "",
+            "I don't know yet."
+          ]
+        ]
+      },
+      "decline": {
+        "parts": [
+          [
+            "No.",
+            "Not right now.",
+            "Nah."
+          ],
+          [
+            "I'll call back.",
+            "I'll figure it out.",
+            "I'll call y'all."
+          ]
+        ]
+      },
+      "will_call": {
+        "parts": [
+          [
+            "Yeah.",
+            "Alright.",
+            "Fine."
+          ],
+          [
+            "I'll call back.",
+            "I'll figure it out and call you.",
+            "I'll call.",
+            "Let me think about it."
+          ]
+        ]
+      },
+      "doubt_price": [
+        "That's a damn lot of money for that.",
+        "Y'all are proud of that, ain't you."
+      ],
+      "doubt_time": [
+        "I can't wait that long, I need my car.",
+        "That don't help me, I need it now."
+      ],
+      "doubt_trust": [
+        "How do I know y'all won't screw it up like the last place?",
+        "Every shop says that and then charges me twice."
+      ],
+      "doubt_think": [
+        "I gotta think about it, I'm not throwing more money at this thing.",
+        "Let me cool off and I'll call you."
+      ],
+      "after_answer_ok": {
+        "parts": [
+          [
+            "Alright.",
+            "Okay. Okay.",
+            "Fine."
+          ],
+          [
+            "That's fair, I guess.",
+            "I appreciate you saying it straight.",
+            "That makes sense."
+          ]
+        ]
+      },
+      "after_answer_unsure": {
+        "parts": [
+          [
+            "I don't know.",
+            "We'll see.",
+            "Yeah."
+          ],
+          [
+            "",
+            "We'll see about that.",
+            "I've heard it before."
+          ]
+        ]
+      },
+      "give_name": [
+        "{customer_first} {customer_last}.",
+        "{customer_first}.",
+        "It's {customer_first}."
+      ],
+      "give_number": [
+        "{customer_phone_said}.",
+        "{customer_phone_said}. Call me when it's done."
+      ],
+      "ask_duration": {
+        "parts": [
+          [
+            "How long's this gonna take?",
+            "Am I getting it back today or not?",
+            "How long y'all gonna have it?"
+          ],
+          [
+            "",
+            "I need it."
+          ]
+        ]
+      },
+      "backchannel": [
+        "Yeah.",
+        "Uh-huh.",
+        "Right.",
+        "Mm."
+      ],
+      "thanks_bye": {
+        "parts": [
+          [
+            "Alright.",
+            "Yeah.",
+            "Fine.",
+            "Alright, thanks.",
+            "Okay.",
+            "Thanks, I guess."
+          ],
+          [
+            "Bye.",
+            "",
+            "We'll see.",
+            "Call me."
+          ]
+        ]
+      }
+    }
+  }
+}

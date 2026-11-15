@@ -1,0 +1,240 @@
+{
+ "accounts/company-account-terms.md": [
+  {
+   "starts": "УПД or act",
+   "outcome": "verified",
+   "note": "Stands. A company on the simplified system that pays VAT issues invoices, on the work and on an advance, within five calendar days. The page now says the five days and that the счёт and the УПД show the amount before VAT, the VAT at 5 % and the total as separate figures (ledger kb.documents). Read in the verify pass (demo-seed-research/verify-pass.md, section 1). Not read on a primary page: the УПД form itself, a combined form the tax service recommends (search summaries only).",
+   "url": "https://www.nalog.gov.ru/rn05/taxation/taxes/nds_usn/ ; https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-168/",
+   "sentence": "ФНС, «НДС при УСН» (обновлено 05.08.2026): «при получении авансов выставляются соответствующие счета-фактуры не позднее 5 календарных дней»; «возникает обязанность вести книгу продаж и представить налоговую декларацию по НДС». НК ст. 168 п. 3: счета-фактуры выставляются «не позднее пяти календарных дней»."
+  }
+ ],
+ "accounts/a4.md": [
+  {
+   "starts": "Whether dual controls",
+   "outcome": "verified",
+   "note": "A training car must have extra clutch and brake pedals, an instructor's mirror and the sign. The page keeps only the shop's own rule (check free travel and return, never adjust). Read in the verify pass (section 5).",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_2709/6d8c7fbd95f0b2f282a790182c6d28e791f15e51/",
+   "sentence": "Основные положения по допуску, п. 5: «Механическое транспортное средство, используемое для обучения вождению, должно быть оборудовано дополнительными педалями» «привода сцепления (кроме транспортных средств с автоматической трансмиссией) и тормоза,» «зеркалом заднего вида для обучающего и опознавательным знаком \"Учебное транспортное средство\"»."
+  }
+ ],
+ "customers/bringing-your-own-parts.md": [
+  {
+   "starts": "ПП № 780 п. 14-15",
+   "outcome": "verified",
+   "note": "The page's wording stands.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 14: «Исполнитель обязан немедленно предупредить потребителя и до получения от него указаний приостановить оказание услуг» в случае «обнаружения непригодности или недоброкачественности запасных частей и материалов, полученных от потребителя»; п. 15: если потребитель «в разумный срок не заменит непригодные или недоброкачественные запасные части и материалы», исполнитель вправе расторгнуть договор."
+  }
+ ],
+ "customers/estimates-and-approvals.md": [
+  {
+   "starts": "\"You are not obliged",
+   "outcome": "verified",
+   "note": "Both statements stand: extra paid work only with consent, in writing; a confirmed estimate is part of the contract.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-i/statja-16/",
+   "sentence": "ст. 16 п. 3.1: продажа дополнительных работ и услуг за отдельную плату «осуществляется продавцом (исполнителем, владельцем агрегатора) исключительно с согласия потребителя»; согласие «оформляется продавцом (исполнителем, владельцем агрегатора) в письменной форме, если иное не предусмотрено законом»; «Потребитель вправе потребовать от продавца (исполнителя, владельца агрегатора) возврата уплаченной денежной суммы». ПП № 780 п. 18: «смета становится частью договора с момента подтверждения ее потребителем»."
+  }
+ ],
+ "customers/if-something-is-not-right.md": [
+  {
+   "starts": "The ten-day term",
+   "outcome": "verified",
+   "note": "The law's ten days are for satisfying the demand (price reduction, cost of putting the defect right, money back, losses); the page promises a written answer inside the same ten days.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-31/",
+   "sentence": "ст. 31 п. 1: требования потребителя, предусмотренные пунктом 1 статьи 28 «и пунктами 1 и 4 статьи 29 настоящего Закона, подлежат удовлетворению в десятидневный срок» «со дня предъявления соответствующего требования»."
+  }
+ ],
+ "customers/prices-for-common-services.md": [
+  {
+   "starts": "Prices are shown to private",
+   "outcome": "corrected",
+   "note": "The pages said «без НДС» with 5 % added on the order. The Tax Code says the opposite for sales to the public, and the owner's decision D2 (as amended on 2026-11-14) follows it for every customer: the table price is what is paid, VAT inside, nothing on top; a private customer's order, act and receipt show the total and «в том числе НДС 5 %», an account's счёт and УПД the amount before VAT, the VAT and the total. The price pages, the documents page and the ledger (tax.ru_price_basis, kb.vat_in_list_prices, s7.bill) were changed. Read in the verify pass (section 1).",
+   "url": "https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-168/",
+   "sentence": "НК ст. 168 п. 6: «соответствующая сумма налога включается в указанные цены (тарифы)»; «на ярлыках товаров и ценниках, выставляемых продавцами, сумма налога не выделяется»."
+  }
+ ],
+ "customers/warranty.md": [
+  {
+   "starts": "\"Body work\" here",
+   "outcome": "corrected",
+   "note": "The six-month term is gone from the ledger row s12.warranty and from the pages: the company does no body work and the catalogue has no body job. Source: catalogue.json."
+  },
+  {
+   "starts": "The sentence that the shop",
+   "outcome": "verified",
+   "note": "The sentence stands. The law's own periods are still not stated on the page; they are longer than the shop's 30 days, which is why the sentence is there.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-29/",
+   "sentence": "ст. 29 п. 3: потребитель вправе предъявлять требования, «если они обнаружены в течение гарантийного срока», «а при его отсутствии в разумный срок, в пределах двух лет со дня принятия выполненной работы (оказанной услуги)»; п. 5: когда гарантийный срок «составляет менее двух лет» и «недостатки работы (услуги) обнаружены потребителем по истечении гарантийного срока, но в пределах двух лет», требования предъявляются, если потребитель докажет, что недостатки возникли до принятия работы."
+  }
+ ],
+ "how-to/checking-a-car-in.md": [
+  {
+   "starts": "Whether the written contract",
+   "outcome": "verified",
+   "note": "The contract must state when it is to be performed; the page's \"the order carries a day\" stands.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 9: «Договор заключается в письменной форме и должен содержать следующие сведения»: «дата заключения договора, сроки его исполнения»."
+  }
+ ],
+ "office/month-end-close.md": [
+  {
+   "starts": "The quarterly VAT return",
+   "outcome": "verified",
+   "note": "Stands: the tax period is the quarter, and a company on the simplified system that pays VAT keeps a sales book and files a return. The page now gives the date: by the 25th of the month after the quarter (ledger kb.month_end). Read in the verify pass (section 1).",
+   "url": "https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-174/ ; https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-163/",
+   "sentence": "НК ст. 163: налоговый период «устанавливается как квартал». Ст. 174 п. 5: декларация представляется «в срок не позднее 25-го числа месяца, следующего за истекшим налоговым периодом»."
+  },
+  {
+   "starts": "cast.json (slot 3",
+   "outcome": "corrected",
+   "note": "Settled in the seed files: the Russian biographies of slots F1 and 3 in cast.json now tell the Russian leak (parts written off with no sale, work past the order, unapproved discounts), as stories/S02.md does. The page already followed the ledger."
+  }
+ ],
+ "office/payroll-hours.md": [
+  {
+   "starts": "Pay at least twice",
+   "outcome": "verified",
+   "note": "Stands. The page states the company's two pay days only. Read in the verify pass (section 4; the Labour Code on legalacts.ru, ред. от 25.05.2026).",
+   "sentence": "ТК ст. 136: «Заработная плата выплачивается не реже чем каждые полмесяца.»; «не позднее 15 календарных дней со дня окончания периода, за который она начислена»."
+  }
+ ],
+ "parts/fleet-fluid-sheet.pdf": [
+  {
+   "starts": "Every quantity",
+   "outcome": "specialist",
+   "note": "Not verified on purpose: every fill quantity and specification needs a specialist's read against the makers' data, in both languages (en/_binaries.md and ru/_binaries.md)."
+  }
+ ],
+ "parts/fleet-fluid-sheet.xlsx": [
+  {
+   "starts": "Every oil quantity",
+   "outcome": "specialist",
+   "note": "Not verified on purpose: needs a specialist's read against the makers' data, in both languages."
+  }
+ ],
+ "parts/sublet-work.md": [
+  {
+   "starts": "CONTRADICTION IN THE SEED FILES",
+   "outcome": "corrected",
+   "note": "vendors.json (ru) now has the rack subcontractor V9, «РулТех-Симбирск»; the sublet and steering pages name it. Source: catalogue.json ru steering_rack (sublet cost 9 000, price 12 500)."
+  }
+ ],
+ "policies/complaints.md": [
+  {
+   "starts": "The ten-day term",
+   "outcome": "verified",
+   "note": "As on customers/if-something-is-not-right.md.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-31/",
+   "sentence": "ст. 31 п. 1: требования «подлежат удовлетворению в десятидневный срок» «со дня предъявления соответствующего требования»."
+  }
+ ],
+ "policies/deposits.md": [
+  {
+   "starts": "A consumer's right to cancel",
+   "outcome": "verified",
+   "note": "The page's \"what we actually lose\" is the law's \"actual expenses\".",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-iii/statja-32/",
+   "sentence": "ст. 32: «Потребитель вправе отказаться от исполнения договора о выполнении работ (оказании услуг) в любое время» при условии оплаты исполнителю фактически понесённых им расходов."
+  },
+  {
+   "starts": "A separate cash receipt",
+   "outcome": "open",
+   "note": "Kept as shop practice. That the receipt carries the VAT rate is read (the tax service's news of 2024-11-19); the \"payment method\" attribute of an advance receipt comes from the tax service's formats and a letter of 2021, seen only as search summaries; the article of the law on cash registers was not opened (the page returned an error). Tried in the verify pass (section 1)."
+  }
+ ],
+ "policies/documents-and-vat.md": [
+  {
+   "starts": "ПП № 780: a written contract",
+   "outcome": "verified",
+   "note": "Re-read on the text of the rules. The rules name the заказ-наряд only among the samples a shop shows (п. 4); what they require is a written contract.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 9: «Договор заключается в письменной форме»; п. 12: «исполнитель обязан одновременно с договором составить приемо-сдаточный акт», «Исполнитель вправе не составлять приемо-сдаточный акт в случае, если договор содержит информацию» о состоянии автомобиля; п. 23: «Автомототранспортное средство выдается потребителю или его представителю после полной оплаты оказанных услуг»."
+  },
+  {
+   "starts": "A company on the simplified",
+   "outcome": "verified",
+   "note": "As accounts/company-account-terms.md. The page also says that on an advance VAT is counted at 5/105 (НК ст. 164 п. 4 and the same page of the tax service, read).",
+   "url": "https://www.nalog.gov.ru/rn05/taxation/taxes/nds_usn/",
+   "sentence": "«применив расчетную ставку в размере 5/105% или 7/107% (при применении специальной ставки НДС)»."
+  },
+  {
+   "starts": "The power of attorney",
+   "outcome": "verified",
+   "note": "For collecting the car the rules ask a representative for a power of attorney; signing the order by it is the same practice.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 23: автомототранспортное средство выдаётся «потребителю или его представителю» при предъявлении документа, удостоверяющего личность, а представителю — также доверенности."
+  },
+  {
+   "starts": "Showing list prices",
+   "outcome": "corrected",
+   "note": "As customers/prices-for-common-services.md: the page now says every price is «с НДС», and its worked example shows 634,41 ₽ of VAT inside 13 322,60 ₽.",
+   "url": "https://legalacts.ru/kodeks/NK-RF-chast-2/razdel-viii/glava-21/statja-168/"
+  }
+ ],
+ "policies/estimates-and-approvals.md": [
+  {
+   "starts": "Written consent",
+   "outcome": "verified",
+   "note": "Stands.",
+   "url": "https://legalacts.ru/doc/ZZPP/glava-i/statja-16/",
+   "sentence": "ст. 16 п. 3.1: согласие потребителя на дополнительные платные работы «оформляется продавцом (исполнителем, владельцем агрегатора) в письменной форме, если иное не предусмотрено законом». ст. 33: при существенном превышении приблизительной сметы исполнитель обязан «своевременно предупредить об этом потребителя»."
+  }
+ ],
+ "policies/storage-of-uncollected-cars.md": [
+  {
+   "starts": "What a contractor may do",
+   "outcome": "verified",
+   "note": "The Civil Code gives a contractor the right to sell after a written warning and two months. The page still names no such right and no term beyond the letter, on purpose: advisors never speak of sale.",
+   "url": "https://legalacts.ru/kodeks/GK-RF-chast-2/razdel-iv/glava-37/ss-2/statja-738/",
+   "sentence": "ст. 738 ГК РФ: при неявке заказчика за результатом работы «подрядчик вправе, письменно предупредив заказчика», по истечении двух месяцев со дня предупреждения продать результат работы за разумную цену."
+  }
+ ],
+ "policies/warranty.md": [
+  {
+   "starts": "Body work: see",
+   "outcome": "corrected",
+   "note": "As customers/warranty.md: the six-month term and the welding of sills and arches are gone; exhaust welding stays, as mechanical work with no list price."
+  },
+  {
+   "starts": "ПП № 780: in force",
+   "outcome": "verified",
+   "note": "Re-read on the text.",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-29052025-n-780-ob-utverzhdenii/",
+   "sentence": "п. 4 постановления: «Настоящее постановление вступает в силу с 1 сентября 2025 г.»; п. 2 признаёт утратившим силу «постановление Правительства Российской Федерации от 11 апреля 2001 г. N 290»; п. 9 правил: «гарантийные сроки на результаты оказания услуг, если они установлены»."
+  }
+ ],
+ "services/tires/seasonal-changeover-and-storage.md": [
+  {
+   "starts": "Minimum tread depths",
+   "outcome": "corrected",
+   "note": "The values are the law's, the boundary and the citation were not. The law bars a tyre at \"4 mm and less\" (winter tyres on snow or ice) and at \"1.6 mm and less\", and the 1.6 mm applies to any tyre, not to summer tyres only; the points are 5.5 and 5.4 of the list of faults in the edition of 2026-08-28 (the first pass read the 2015 edition, point 5.1). The page now says «4 мм и меньше на зимней шине или 1,6 мм и меньше на любой» and adds that winter tyres are required from December to February (point 5.2). Read in the verify pass (section 5).",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_2709/ec034e2d80085428905b10189ee7d0d08173e8c7/",
+   "sentence": "Перечень неисправностей (ПДД, ред. от 28.08.2026), п. 5.4: «для транспортных средств категорий M1, N1, O1, O2 - 1,6 мм;»; п. 5.5: «Остаточная глубина рисунка протектора зимних шин … составляет 4 мм и менее.»; п. 5.2: «На транспортном средстве категорий M1 и N1 не установлены зимние шины в зимний период (декабрь, январь, февраль).»"
+  }
+ ],
+ "shop-floor/safety.md": [
+  {
+   "starts": "How often the repeated",
+   "outcome": "verified",
+   "note": "The page now gives the interval: every six months, and every three months in the first year for a first-time worker on hazardous work (ledger kb.handbook, safety_briefing). The rules run to 1 September 2032 after the extension in force from 2026-08-31. Read in the verify pass (section 4).",
+   "url": "https://legalacts.ru/doc/postanovlenie-pravitelstva-rf-ot-24122021-n-2464-o-porjadke/",
+   "sentence": "ПП № 2464 (ред. от 30.06.2026), Правила п. 14: «Повторный инструктаж по охране труда проводится не реже одного раза в 6 месяцев.» «Для работников, впервые начавших трудовую деятельность, допущенных к выполнению работ повышенной опасности,» «повторный инструктаж … не реже одного раза в 3 месяца в течение первого года работы.»"
+  }
+ ],
+ "shops/README.md": [
+  {
+   "starts": "Road distance",
+   "outcome": "corrected",
+   "note": "Measured, and the page and the ledger changed: about 225 km by the Р-241, three and a half hours (ledger geo.distance, kb.shops.apart). OSRM routing on OpenStreetMap, 2026-11-14: city centre to centre 225.7 km, 3 h 31 min (Р-241 for 179 km, then the М-7); shop to shop 223.1 km. The earlier 240 km was too long; the 243 and 250.9 km of the first pass were a travel site and a coach route between bus stations. Verify pass, section 7.",
+   "url": "https://router.project-osrm.org/route/v1/driving/"
+  }
+ ],
+ "team/staff-handbook.docx": [
+  {
+   "starts": "Labour Code facts",
+   "outcome": "verified",
+   "note": "Six of the eight stand as written: 28 calendar days of leave (ст. 115), one part of at least 14 days (ст. 125), pay every half month (ст. 136), прогул as more than four hours in a row and dismissal for it (ст. 81 ч. 1 п. 6 «а»), two weeks' written notice (ст. 80), a holiday shift at double pay or, at the employee's wish, at single pay with another day off (ст. 153; the document now says the single pay). Two wordings were corrected: the leave schedule is approved no later than two weeks before the new year (ст. 123; the draft said \"drawn up in December\"), and the order замечание then выговор is now stated as the company's own ladder (ст. 192 sets no order). Ledger kb.handbook. Read in the verify pass (section 4; the Labour Code on legalacts.ru, ред. от 25.05.2026). Someone who keeps personnel records still reads the document before it is used.",
+   "sentence": "Ст. 123: график отпусков утверждается «не позднее чем за две недели до наступления календарного года». Ст. 192 называет «замечание; выговор; увольнение по соответствующим основаниям» и требует учитывать «тяжесть совершенного проступка»; очерёдности не задаёт. Ст. 153: «Работа в выходной или нерабочий праздничный день оплачивается не менее чем в двойном размере»; по желанию работника — «в одинарном размере», «а день отдыха оплате не подлежит»."
+  }
+ ]
+}

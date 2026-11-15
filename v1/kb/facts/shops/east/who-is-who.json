@@ -1,0 +1,158 @@
+{
+ "path": "shops/east/who-is-who.md",
+ "title": "Bonny Oaks: who is who",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "16",
+ "purpose": "People at Bonny Oaks.",
+ "serves": [
+  "S5",
+  "challenge:near-duplicate-shop-pages",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "short",
+ "words_en": 151,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Six people at east with extensions 201 and 202 (cast.json).",
+  "Slot 4 is on site Tuesdays and Thursdays.",
+  "Slot 18 checks every brake and suspension job before it leaves (cast: why east has the fewest comebacks).",
+  "When slot 16 is off, slot 17 has the counter; slot 6 comes over on some days (S5)."
+ ],
+ "tables": [
+  {
+   "section": "Bonny Oaks: who is who",
+   "columns": [
+    "Who",
+    "Job",
+    "Ext."
+   ],
+   "rows": [
+    {
+     "Who": "Angie Holloway",
+     "Job": "Lead advisor",
+     "Ext.": "201"
+    },
+    {
+     "Who": "Josh Tipton",
+     "Job": "Service advisor",
+     "Ext.": "202"
+    },
+    {
+     "Who": "Andre Simmons",
+     "Job": "Lead technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Brandon Sisk",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Austin Crabtree",
+     "Job": "Technician",
+     "Ext.": ""
+    },
+    {
+     "Who": "Jordan Akins",
+     "Job": "Technician, here and at East Main",
+     "Ext.": ""
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Josh Tipton",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre Simmons",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "19",
+   "written_as": "Brandon Sisk",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "20",
+   "written_as": "Austin Crabtree",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "21",
+   "written_as": "Jordan Akins",
+   "role": "technician",
+   "site": "east"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg Whitaker",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "17",
+   "written_as": "Josh",
+   "role": "service_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "6",
+   "written_as": "Maya",
+   "role": "service_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [
+  "Slot 4 is at Bonny Oaks on Tuesdays and Thursdays. His shifts in the roster should place him so."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian names by slot; lead advisors work 2/2 in the Russian configuration."
+ ]
+}

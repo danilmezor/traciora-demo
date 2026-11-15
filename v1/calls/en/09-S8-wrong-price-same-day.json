@@ -1,0 +1,660 @@
+{
+  "format": "seed-call/1",
+  "id": "en-09-S8-wrong-price-same-day",
+  "configuration": "en",
+  "number": 9,
+  "story": "S8",
+  "title": "The newcomer quotes a timing belt at the old price and promises the car the same day",
+  "purpose": "Story S8, the quote call. Caleb grabs a ringing phone in the middle of a check-in, reads the price off a service page that still carries the hour from before the rise, and promises a same-day finish without looking at Monday. The customer books. Everything that goes wrong in S8 is said here.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Caleb Sutton",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Frank Daugherty",
+      "ref": "named_customers.json en.S8",
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 7's 5th working day before T (rule R6; card S08, call 9)",
+    "nominal_offset": "T-7d",
+    "nominal_date": "2026-11-06",
+    "local_start": "10:25",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 31,
+    "caller_phone": "423-555-0172",
+    "repeat_caller": false,
+    "talk_s": 89,
+    "note": "The line rang desk 103 first for 20 s, then every desk; he picked up on the second stage."
+  },
+  "scenario": {
+    "who_calls": "Frank Daugherty, 63, calling shops for a price on a job the dealer has already quoted him.",
+    "vehicle": "2011 Subaru Outback 2.5i Premium, BRC-4178, 209,300 miles",
+    "job": "timing belt, tensioner, idlers and water pump",
+    "wants": "a price, then a day",
+    "what_happens": "Caleb answers without the shop's name or his own, reads 688 off the service page 'Timing belt', confirms what is in it, answers 'when could you do it' with the opening hours, takes Monday at eight when the customer proposes it and promises the car back the same day. Asked whether he is sure, he says he has not looked at Monday's schedule. The customer says he may call the dealer back, and books.",
+    "facts": {
+      "price_quoted_usd": 688.0,
+      "price_now_usd": 720.0,
+      "booked": "call+3d 08:00",
+      "promised_ready": "call+3d, the same day",
+      "actually_ready": "call+4d",
+      "ledger": {
+        "s8.price_quoted": 688.0,
+        "s8.price_now": 720.0,
+        "s8.quote_call_score": 31.2
+      },
+      "note": "catalogue.json timing_belt_kit, class car, standard parts: 720.00 at today's hour, 688.00 at the hour before the rise, which is what the stale page carries (cards S08 and S12). The job is 3.2 billed hours.",
+      "prices": [
+        {
+          "what": "the list price on the call's day; he said 688",
+          "job": "timing_belt_kit",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 720.0
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "Monday",
+      "day": "call+3d"
+    },
+    {
+      "word": "Tuesday",
+      "day": "call+4d"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Yeah, hello? — Sorry. Yes sir, go ahead."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 3.8,
+      "said": "Yeah, I need a price on a timing belt. It's a twenty-eleven Subaru Outback, the two-point-five."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 11.4,
+      "said": "Timing belt on an Outback. Yes sir. Uh, hang on one second, let me look... Okay. That's six eighty-eight."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 19.3,
+      "said": "Six eighty-eight. That with the water pump?"
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 23.8,
+      "said": "Yes sir. That's the belt, the tensioner, the idlers and the water pump. Should be everything."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 29.9,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 31.3,
+      "said": "And is that out the door?"
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 34.7,
+      "said": "Uh — plus tax. Yes sir."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 37.2,
+      "said": "Alright. That's better than I figured. When could you do it?"
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 42.0,
+      "said": "Uh, anytime. We're open seven-thirty to five-thirty."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 45.8,
+      "said": "Well, could I bring it Monday mornin'?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 49.6,
+      "said": "Monday, yes sir, no problem. Have it here by eight and you'll have it back the same day. I'll put you down, Monday at eight, just ask for Caleb."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 60.4,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 61.8,
+      "said": "Same day? You sure? The dealer told me two days."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 67.1,
+      "said": "Yes sir. I mean, I haven't looked at Monday's schedule yet, but it's about a three-hour job. Should be no problem."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 75.6,
+      "said": "Alright. Well... I might call the dealer back and see what they say. But go ahead and put me down."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 83.9,
+      "said": "Yes sir. See you then."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 87.6,
+      "said": "Alright."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.68,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          1,
+          3,
+          5,
+          8,
+          9,
+          10,
+          11,
+          12,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word replaced by a common word that sounds like it",
+        "script_turn": 5,
+        "said": "idlers",
+        "stored": "idols"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits",
+        "script_turns": [
+          2,
+          3,
+          10,
+          12
+        ]
+      },
+      {
+        "rule": "R5",
+        "what": "the price loses its hundreds in the caller's echo",
+        "script_turn": 4,
+        "said": "Six eighty-eight",
+        "stored": "6.88"
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          13
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 3,
+        "dropped": 2
+      },
+      "fillers": {
+        "said": 2,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 10,
+        "wrong": 1
+      },
+      "money_time": {
+        "mentions": 7,
+        "as_digits": 7,
+        "wrong": 1
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 189,
+    "stored_words": 187,
+    "strict_word_difference": 0.111
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 203,
+    "duration_s": 89.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, hello? Sorry. Yes, sir, go ahead.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah, I need a price on a timing belt. It's a 2011 Subaru Outback, the 2.5.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Timing belt on an Outback. Yes, sir. Hang on one second, let me look. Okay. That's $688.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "6.88. That with the water pump?",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. That's the belt, the tensioner, the idols and the water pump. Should be everything.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. And is that out the door?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh, plus tax. Yes, sir.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. That's better than I figured. When could you do it?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Anytime. We're open 7:30 to 5:30.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Well, could I bring it Monday morning?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Monday, yes, sir, no problem. Have it here by 8 and you'll have it back the same day. I'll put you down, Monday at 8, just ask for Caleb.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Same day? You sure? The dealer told me two days.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. I mean, I haven't looked at Monday's schedule yet, but it's about a three-hour job. Should be no problem.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right. Well. I might call the dealer back and see what they say. But go ahead and put me down.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yes, sir. See you then.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "All right.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Yeah, hello? Sorry. Yes, sir, go ahead.",
+        "level": 0,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "I'll put you down, Monday at 8, just ask for Caleb.",
+        "level": 0,
+        "segment": 10
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Timing belt on an Outback.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Okay. That's $688.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "offered_time",
+        "quote": "We're open 7:30 to 5:30.",
+        "level": 0,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I'll put you down, Monday at 8, just ask for Caleb.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "recap",
+        "quote": "Yes, sir. See you then.",
+        "level": 0,
+        "segment": 14
+      },
+      {
+        "key": "objection",
+        "quote": "I might call the dealer back and see what they say.",
+        "level": 0,
+        "segment": 13
+      }
+    ],
+    "na": [],
+    "auto_fails": [
+      {
+        "key": "wrong_promise",
+        "quote": "Have it here by 8 and you'll have it back the same day.",
+        "segment": 10
+      }
+    ],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "wrong_promise"
+    ],
+    "strength": {
+      "quote": "That's the belt, the tensioner, the idols and the water pump.",
+      "why": "Asked what was in the price, he listed the whole job without hedging on any part of it.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "We're open 7:30 to 5:30.",
+      "say": "Let me look at the schedule before I give you a day. I have Monday at 8 or Tuesday at 8, and I'll tell you when it will be ready once I see what's ahead of it."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 31.2,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 0,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 10
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "recap",
+          "level": 0,
+          "segment": 14
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 13
+        }
+      ],
+      "na": [],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [
+        {
+          "key": "wrong_promise",
+          "segment": 10
+        }
+      ],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted",
+        "wrong_promise"
+      ],
+      "score": 31.2,
+      "applicable": 8,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Yeah, hello? Sorry. Yes, sir, go ahead",
+        "name_and_number": "I'll put you down, Monday at 8, just ask for Caleb",
+        "need_discovery": "Timing belt on an Outback",
+        "price_with_next_step": "Okay. That's $688",
+        "offered_time": "We're open 7:30 to 5:30",
+        "asked_for_booking": "I'll put you down, Monday at 8, just ask for Caleb",
+        "recap": "Yes, sir. See you then",
+        "objection": "I might call the dealer back and see what they say"
+      },
+      "na": {},
+      "auto_fails": {
+        "wrong_promise": "it here by 8 and you'll have it back the same day"
+      },
+      "strength": {
+        "quote": "That's the belt, the tensioner, the idols and the water pump",
+        "why": "Asked what was in the price, he listed the whole job without hedging on any part of it."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "We're open 7:30 to 5:30.",
+        "say": "Let me look at the schedule before I give you a day. I have Monday at 8 or Tuesday at 8, and I'll tell you when it will be ready once I see what's ahead of it."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. Two things were promised that the shop did not keep: the price (688 against 720 on the price list since the rise) and the same day (the car was ready a working day late). The verdict's auto-fail quotes the lead time, which the next lines show has nothing behind it; the price is wrong too, but nothing on the call shows it.",
+    "what_follows": "The car comes in on his 4th working day before T and is ready the next day; the bill is 741.60 before tax; call 10 is the complaint, call 11 the senior's call back (card S08).",
+    "levels": {
+      "greeting": 0,
+      "name_and_number": 0,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 2,
+      "recap": 0,
+      "objection": 0
+    },
+    "score": 31.2,
+    "score_exact": 31.25,
+    "outcome": "visit_agreed",
+    "tags": [
+      "visit_agreed",
+      "quoted",
+      "wrong_promise"
+    ]
+  },
+  "why": {
+    "greeting": "0: neither the business nor his name; he picks up in the middle of a check-in.",
+    "name_and_number": "0: a first-time caller is booked for a 700-dollar job and he asks for neither.",
+    "need_discovery": "1: the car and the job, as the caller gave them; he asks nothing (mileage, when it was last done, why now).",
+    "price_with_next_step": "1: a price and, when asked, what is in it; nothing about what it depends on, and the caller has to ask when.",
+    "offered_time": "0: asked 'when could you do it', he gives the opening hours. The caller then names Monday himself, which does not make the check N/A: the chance to offer came first.",
+    "asked_for_booking": "2: Monday at eight, ask for Caleb.",
+    "recap": "0: 'see you then'.",
+    "objection": "0: the last thing the customer says before goodbye is that he may call the dealer back, and it gets 'yes sir'.",
+    "auto_fails": "wrong_promise: 'you'll have it back the same day', and two lines later he has not looked at Monday's schedule. It is his second planted wrong promise; the first is call 12, a month earlier.",
+    "score": "(1·0 + 2·0 + 2·1 + 2·1 + 3·0 + 3·2 + 1·0 + 2·0) / 2 = 5 of 16 weight points = 31.2. Exactly 31.25; the product rounds a score to one decimal.",
+    "carried_by": [
+      "asked_for_booking",
+      "offered_time"
+    ]
+  },
+  "new_facts": [
+    "An appointment at main for Frank Daugherty on slot 7's 4th working day before T at 08:00, source phone, taken by slot 7, with the estimate at 688.00 (card S08's 'estimate at the quoted price')."
+  ]
+}

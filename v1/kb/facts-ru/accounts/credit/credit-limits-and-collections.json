@@ -1,0 +1,211 @@
+{
+ "path": "accounts/credit/credit-limits-and-collections.md",
+ "title": "Лимиты задолженности и просрочка",
+ "title_en": "Credit limits and collections",
+ "exists_in": "both",
+ "english_sheet": "facts/accounts/credit/credit-limits-and-collections.json",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "Middle rank and up: each account's credit limit and the steps taken when a statement is overdue.",
+ "serves": [
+  "S1",
+  "S16",
+  "visibility:middle",
+  "challenge:fact-in-table",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "short",
+ "words_ru": 239,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Limits in roubles, about two months of each account's usual billing (ledger acct.*.average_order and visits); a limit is a balance owed as billed, VAT inside (ledger kb.acct.credit_limits).",
+  "Collections: the invoice again, a call to the customer's accountant, a reconciliation act with a letter, then a formal claim; the days are the same.",
+  "A1 now pays in about 50 days on 30-day terms (ledger acct.A1.days_to_pay.ru): by this page the bookkeeper should be at the day-20 step."
+ ],
+ "new_facts": [
+  "The six limits: 700 000, 450 000, 120 000, 120 000, 180 000, 180 000 RUB. The ERP customer rows carry them."
+ ],
+ "new_amounts": [
+  {
+   "value": 700000,
+   "why": "лимит задолженности A1"
+  },
+  {
+   "value": 450000,
+   "why": "лимит задолженности A2"
+  },
+  {
+   "value": 120000,
+   "why": "лимит задолженности A3"
+  },
+  {
+   "value": 120000,
+   "why": "лимит задолженности A4"
+  },
+  {
+   "value": 180000,
+   "why": "лимит задолженности A5"
+  },
+  {
+   "value": 180000,
+   "why": "лимит задолженности A6"
+  }
+ ],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Лимиты задолженности",
+   "columns": [
+    "Клиент",
+    "Лимит"
+   ],
+   "rows": [
+    {
+     "Клиент": "«Симбирский гонец»",
+     "Лимит": "700 000 ₽"
+    },
+    {
+     "Клиент": "«Тёплый контур»",
+     "Лимит": "450 000 ₽"
+    },
+    {
+     "Клиент": "«Чистый Венец»",
+     "Лимит": "120 000 ₽"
+    },
+    {
+     "Клиент": "Автошкола «Первая передача»",
+     "Лимит": "120 000 ₽"
+    },
+    {
+     "Клиент": "«Идель-Электромонтаж»",
+     "Лимит": "180 000 ₽"
+    },
+    {
+     "Клиент": "«Вкусный выезд»",
+     "Лимит": "180 000 ₽"
+    }
+   ]
+  },
+  {
+   "section": "Если счёт просрочен",
+   "columns": [
+    "Дней после срока оплаты",
+    "Что я делаю"
+   ],
+   "rows": [
+    {
+     "Дней после срока оплаты": "1",
+     "Что я делаю": "Отправляю счёт ещё раз, с вежливой строкой"
+    },
+    {
+     "Дней после срока оплаты": "10",
+     "Что я делаю": "Звоню бухгалтеру клиента"
+    },
+    {
+     "Дней после срока оплаты": "20",
+     "Что я делаю": "Звоню ещё раз и отправляю акт сверки с письмом. Сообщаю Екатерине Николаевне"
+    },
+    {
+     "Дней после срока оплаты": "45",
+     "Что я делаю": "Новые работы по клиенту — только с согласия Екатерины Николаевны. Готовлю претензию"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерине Николаевне",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерины Николаевны",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергею Анатольевичу",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николая Петровича",
+   "role": "founder",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Симбирский гонец"
+  },
+  {
+   "account": "A2",
+   "name": "Тёплый контур"
+  },
+  {
+   "account": "A3",
+   "name": "Чистый Венец"
+  },
+  {
+   "account": "A4",
+   "name": "Автошкола «Первая передача»"
+  },
+  {
+   "account": "A5",
+   "name": "Идель-Электромонтаж"
+  },
+  {
+   "account": "A6",
+   "name": "Вкусный выезд"
+  },
+  {
+   "account": "A1",
+   "name": "Симбирский гонец",
+   "written_as": "«Симбирского гонца»"
+  }
+ ],
+ "dates": [
+  "{{T-3mo|date}}"
+ ],
+ "amounts": [
+  120000.0,
+  180000.0,
+  450000.0,
+  700000.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

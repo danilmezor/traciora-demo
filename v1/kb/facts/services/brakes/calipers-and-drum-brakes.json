@@ -1,0 +1,100 @@
+{
+ "path": "services/brakes/calipers-and-drum-brakes.md",
+ "title": "Calipers and drum brakes",
+ "first_revision_text": "en/_history/services/brakes/calipers-and-drum-brakes.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "The less common brake jobs: a seized caliper, rear shoes.",
+ "serves": [
+  "smoke",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_en": 209,
+ "links_to": [
+  "parts/returns-and-cores.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue job brake_caliper: 1.3 h, per side, reman caliper standard; signs of a seized caliper.",
+  "Catalogue job rear_brake_shoes: 2.0 h; shoes last about 100,000 miles.",
+  "Only the failed caliper is replaced; the other side is mentioned.",
+  "Caliper cores are not billed to the customer."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "brake_caliper",
+   "what": "hours",
+   "class": "car",
+   "value": 1.3
+  },
+  {
+   "catalogue_key": "brake_caliper",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 316.41
+  },
+  {
+   "catalogue_key": "rear_brake_shoes",
+   "what": "hours",
+   "class": "car",
+   "value": 2.0
+  },
+  {
+   "catalogue_key": "rear_brake_shoes",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 351.81
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Angie Holloway",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена суппорта», «замена задних колодок (барабанные тормоза)»; drums are common on the Russian parc (Granta, Logan, Solaris)."
+ ]
+}

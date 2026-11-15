@@ -1,0 +1,622 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-13-newcomer-first-weeks",
+  "configuration": "ru",
+  "number": 13,
+  "story": "people",
+  "title": "The newcomer in his first weeks: a battery priced from memory, the caller let go",
+  "purpose": "People, slot 7, his first month. Nikita knows batteries from two years behind a parts counter and prices one from memory, part number and all. He does not ask the year or what the car does, offers no time, promises to check the stock and ring back, and says nothing when the caller mentions buying it cheaper at the market.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Никита Ведяшкин",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Радик Валиев",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "slot 7's first working day on or after the Wednesday of week T-10 (rule R6; call 13; for the nominal T that Wednesday is his day off)",
+    "nominal_offset": "T-70d",
+    "nominal_date": "2026-09-04",
+    "local_start": "10:40",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 16,
+    "caller_phone": "+7 907 250-23-14",
+    "repeat_caller": false,
+    "talk_s": 72
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, a young man who says \"ты\" to everyone.",
+    "vehicle": "Chevrolet Lacetti, 2010",
+    "job": "battery replacement",
+    "wants": "to know whether the shop changes batteries, the price, and whether one is in stock",
+    "what_happens": "Nikita names the size, the brand and the price from memory, says a battery \"should be\" in stock and offers to check and call back, takes the name the caller gives him, and lets \"if it takes long I will buy one at the market, it is cheaper there\" pass.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "battery_rub": 8380,
+      "labour_rub": 380,
+      "total_rub": 8760,
+      "note": "catalogue.json battery_replace, standard: АКОМ 6СТ-60 Евро +EFB 8 380 + 0.2 h x 1 900 = 8 760.",
+      "prices": [
+        {
+          "job": "battery_replace",
+          "name": "Замена аккумуляторной батареи",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 8760.0,
+          "labour_hour_rub": 1900,
+          "said": "восемь семьсот шестьдесят",
+          "said_rub": 8760
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Никита, здравствуйте!"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.1,
+      "said": "Здорово. Слушай, аккумулятор у вас поменять можно? Сдох, похоже."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 8.1,
+      "said": "Да-да, конечно, можно. А на какую машину?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 13.1,
+      "said": "Лачетти."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 14.8,
+      "said": "Лачетти — это шестидесятка, обратная полярность. Есть АКОМ, шесть-эс-тэ-шестьдесят, ток, м-м, шестьсот ампер. Восемь триста восемьдесят сам аккумулятор и триста восемьдесят замена. Восемь семьсот шестьдесят всего."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 27.1,
+      "said": "Ага.",
+      "overlap": true
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 29.0,
+      "said": "Восемь семьсот шестьдесят. Понял. А старый заберёте?"
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 33.8,
+      "said": "Да-да, старый оставляете у нас, без проблем."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 38.2,
+      "said": "А в наличии есть? Чтоб я не зря ехал."
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 44.0,
+      "said": "Должен быть, вроде бы... Я могу на складе уточнить и вам перезвонить."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 50.8,
+      "said": "Ну уточни. Меня Радик зовут."
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 54.4,
+      "said": "Радик, ага, записал. Я уточню и наберу вас."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 59.4,
+      "said": "Только я сегодня-завтра решить хочу. Если долго — я на рынке возьму, там дешевле."
+    },
+    {
+      "n": 14,
+      "who": "advisor",
+      "at_s": 67.0,
+      "said": "Да-да, конечно. До свидания!"
+    },
+    {
+      "n": 15,
+      "who": "customer",
+      "at_s": 69.8,
+      "said": "Давай."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.68,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R3",
+        "what": "the part designation 6СТ-60 regrouped",
+        "script_turn": 5,
+        "said": "шесть-эс-тэ-шестьдесят",
+        "stored": "6 СТ 60",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "a brand heard as a common word, in lower case",
+        "script_turn": 5,
+        "said": "АКОМ",
+        "stored": "аком",
+        "error": true
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          6
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          4,
+          5
+        ],
+        "said": [
+          "Лачетти",
+          "Лачетти"
+        ],
+        "stored": [
+          "Lacetti",
+          "Lacetti"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          5,
+          7
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          1,
+          5,
+          10,
+          14
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 1,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 1,
+        "wrong": 1
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 3,
+        "wrong": 1
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 2
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 112,
+    "stored_words": 106,
+    "strict_word_difference": 0.188
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 120,
+    "duration_s": 72.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Никита, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здорово. Слушай, аккумулятор у вас поменять можно? Сдох, похоже.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, конечно, можно. А на какую машину?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Lacetti.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Lacetti, это шестидесятка, обратная полярность. Есть аком, 6 СТ 60, ток, 600 ампер. 8380 сам аккумулятор и 380 замена. 8760 всего.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "8760. Понял. А старый заберёте?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, старый оставляете у нас, без проблем.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А в наличии есть? Чтоб я не зря ехал.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Должен быть, вроде бы. Я могу на складе уточнить и вам перезвонить.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну уточни. Меня Радик зовут.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Радик, ага, записал. Я уточню и наберу вас.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Только я сегодня-завтра решить хочу. Если долго, я на рынке возьму, там дешевле.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, конечно. До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давай.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Никита, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Радик, ага, записал.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "need_discovery",
+        "quote": "А на какую машину?",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "8380 сам аккумулятор и 380 замена. 8760 всего.",
+        "level": 1,
+        "segment": 4
+      },
+      {
+        "key": "offered_time",
+        "quote": "Должен быть, вроде бы. Я могу на складе уточнить и вам перезвонить.",
+        "level": 0,
+        "segment": 8
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Я уточню и наберу вас.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "objection",
+        "quote": "Только я сегодня-завтра решить хочу. Если долго, я на рынке возьму, там дешевле.",
+        "level": 0,
+        "segment": 11
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Договорённости нет: менеджер обещал уточнить наличие, ни дня, ни часа не названо."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Lacetti, это шестидесятка, обратная полярность.",
+      "why": "По одной марке машины назвал типоразмер и полярность аккумулятора. Клиент понял, что говорит с человеком, который в этом разбирается.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "offered_time",
+      "instead_of": "Должен быть, вроде бы. Я могу на складе уточнить и вам перезвонить.",
+      "say": "Сейчас посмотрю по складу, повисите полминуты... Есть, один стоит. Приезжайте сегодня до семи или завтра с девяти, замена минут пятнадцать. На какое время вас записать?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 36.7,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 4
+        },
+        {
+          "key": "offered_time",
+          "level": 0,
+          "segment": 8
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 11
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "quoted"
+      ],
+      "score": 36.7,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "offered_time",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Никита, здравствуйте",
+        "name_and_number": "Радик, ага, записал",
+        "need_discovery": "А на какую машину?",
+        "price_with_next_step": "8380 сам аккумулятор и 380 замена. 8760 всего",
+        "offered_time": "Должен быть, вроде бы. Я могу на складе уточнить и вам перезвонить",
+        "asked_for_booking": "Я уточню и наберу вас",
+        "objection": "Только я сегодня-завтра решить хочу. Если долго, я на рынке возьму, там дешевле"
+      },
+      "na": {
+        "recap": "Договорённости нет: менеджер обещал уточнить наличие, ни дня, ни часа не названо."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Lacetti, это шестидесятка, обратная полярность",
+        "why": "По одной марке машины назвал типоразмер и полярность аккумулятора. Клиент понял, что говорит с человеком, который в этом разбирается."
+      },
+      "try_next": {
+        "check": "offered_time",
+        "instead_of": "Должен быть, вроде бы. Я могу на складе уточнить и вам перезвонить.",
+        "say": "Сейчас посмотрю по складу, повисите полминуты... Есть, один стоит. Приезжайте сегодня до семи или завтра с девяти, замена минут пятнадцать. На какое время вас записать?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 0,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 36.7
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "1: имя взял, когда клиент назвал его сам; номер не спросил, хотя обещал перезвонить.",
+    "need_discovery": "1: машина и работа. Какого она года, крутит ли стартер, сколько лет старому аккумулятору, он не спросил.",
+    "price_with_next_step": "1: сумма по частям, без времени и без шага.",
+    "offered_time": "0: вместо времени «должен быть, вроде бы».",
+    "asked_for_booking": "1: шаг без даты: «уточню и наберу вас».",
+    "recap": "Не применяется: договорённости нет.",
+    "objection": "0: на «если долго, на рынке возьму, там дешевле» попрощался.",
+    "no_auto_fail": "«Должен быть, вроде бы» здесь не обещание: он тут же сказал, что уточнит на складе.",
+    "score": "(1·2 + 2·1 + 2·1 + 2·1 + 3·0 + 3·1 + 2·0) / 2 = 5.5 из 15 весовых баллов = 36.7.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "kept",
+    "kept_by": "an outbound call from desk 103 to this number at about 11:25 the same day: the battery is in stock"
+  },
+  "new_facts": [
+    "Клиент Радик Валиев, Chevrolet Lacetti 2010, телефон +7 907 250-23-14.",
+    "Исходящий звонок с 103 на номер клиента около 11:25 того же дня: аккумулятор есть (обещанный звонок выполнен). Приехал ли клиент, история не говорит."
+  ]
+}

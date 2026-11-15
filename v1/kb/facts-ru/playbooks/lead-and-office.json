@@ -1,0 +1,162 @@
+{
+ "path": "playbooks/lead-and-office.md",
+ "title": "Памятка: старшие мастера-приёмщики и бухгалтерия",
+ "title_en": "Playbook: lead advisors and the office",
+ "exists_in": "both",
+ "english_sheet": "facts/playbooks/lead-and-office.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Middle rank: what the lead advisors and the office manager can do beyond an advisor.",
+ "serves": [
+  "S12",
+  "operate:propose",
+  "visibility:administrator"
+ ],
+ "length_class": "short",
+ "words_ru": 248,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The middle rank is the two lead advisors and the bookkeeper (cast role «Бухгалтер»).",
+  "The example is the pending correction to the timing-belt page (S12)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что у вас есть сверх мастера-приёмщика",
+   "item": "История за год, а не за полгода."
+  },
+  {
+   "section": "Что у вас есть сверх мастера-приёмщика",
+   "item": "Контакты клиентов списком — когда они нужны для счетов или обзвона."
+  },
+  {
+   "section": "Что у вас есть сверх мастера-приёмщика",
+   "item": "Цифры по диалогам за период и по людям."
+  },
+  {
+   "section": "Что у вас есть сверх мастера-приёмщика",
+   "item": "Вы можете предложить правку страницы базы знаний. Решают Мельников, Галиев, Николай Петрович или Екатерина Николаевна."
+  },
+  {
+   "section": "Что у вас есть сверх мастера-приёмщика",
+   "item": "Ирина Владимировна видит ещё оплату труда и пересчёты кассы: без них не свести бухгалтерию."
+  },
+  {
+   "section": "Чего мы ждём от старшего",
+   "item": "Вы проверяете цены. Смета новичка не уходит клиенту непрочитанной."
+  },
+  {
+   "section": "Чего мы ждём от старшего",
+   "item": "Вы проверяете страницы. Когда меняется цена или правило, страницы услуг, которые вы ведёте, исправлены за пять рабочих дней. Нашли неверную страницу — в тот же день предложите правку и напишите в ней зачем."
+  },
+  {
+   "section": "Чего мы ждём от старшего",
+   "item": "Вы берёте трудный разговор на себя и передаёте его наверх карточкой, когда вопрос решается деньгами."
+  },
+  {
+   "section": "Чего мы ждём от старшего",
+   "item": "Скидки больше 10 % вы не согласуете. Вы спрашиваете."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«На каких страницах услуг до сих пор старый нормо-час?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Подготовь правку страницы про ремень ГРМ». Он покажет на карточке, что именно меняется. Вы подтверждаете — правка уходит тем, кто решает."
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Какие сметы ждут ответа больше суток?»"
+  },
+  {
+   "section": "О чём его спрашивать",
+   "item": "«Чьи звонки дать послушать новому мастеру-приёмщику?» Он ответит, что сравнивать оценки коллег — это уровень руководителя. И будет прав."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не опубликует правку за вас и не утвердит ваше же предложение."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не покажет оценки звонков ваших коллег."
+  },
+  {
+   "section": "Чего он не сделает",
+   "item": "Не решит судьбу заметки команды."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Григорьева",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Демидовой",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "3",
+   "written_as": "Кудашкиной",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Мельников",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Галиев",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "1",
+   "written_as": "Николай Петрович",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

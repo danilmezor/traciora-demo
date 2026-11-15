@@ -1,0 +1,1269 @@
+{
+ "_doc": "Demo tenant, seed v1: the rank ladder, both configurations (they share it). access_levels and access_limits are the product's shipped files, pinned unchanged; tools.json is empty (no tool moved). ranks: the tools and screens each rank holds as shipped, with the demo's feature grants (settings.*.json). slots: every cast slot with its one rank, its postings (identity.person_location; first is home) and the site binding that follows. Why: LADDER.md.",
+ "access_levels": {
+  "levels": [
+   {
+    "key": "customer",
+    "rank": 0,
+    "scope": "customer",
+    "name": "Customer"
+   },
+   {
+    "key": "worker",
+    "rank": 1,
+    "scope": "worker",
+    "name": "Worker"
+   },
+   {
+    "key": "junior",
+    "rank": 2,
+    "scope": "junior",
+    "name": "Junior manager"
+   },
+   {
+    "key": "middle",
+    "rank": 3,
+    "scope": "middle",
+    "name": "Middle manager"
+   },
+   {
+    "key": "senior",
+    "rank": 4,
+    "scope": "senior",
+    "name": "Senior manager"
+   },
+   {
+    "key": "admin",
+    "rank": 5,
+    "scope": "admin",
+    "name": "Administrator"
+   }
+  ]
+ },
+ "access_limits": {
+  "limits": {
+   "worker": {
+    "history_days": 180
+   },
+   "junior": {
+    "history_days": 180
+   },
+   "middle": {
+    "history_days": 365
+   },
+   "senior": {
+    "history_days": null
+   }
+  }
+ },
+ "tools_json": {
+  "families": {},
+  "tools": {}
+ },
+ "scope_of_step": {
+  "worker": "worker",
+  "junior": "junior",
+  "middle": "middle",
+  "senior": "senior",
+  "admin": "admin"
+ },
+ "ranks": {
+  "worker": {
+   "tools": {
+    "calendar": [
+     "block_time",
+     "cancel_meeting",
+     "check_availability",
+     "edit_meeting",
+     "find_free_slot",
+     "invitable",
+     "my_day",
+     "respond_meeting",
+     "schedule_meeting",
+     "show_calendar",
+     "show_meeting"
+    ],
+    "utilities": [
+     "calculator",
+     "get_current_time",
+     "get_current_weather",
+     "get_todays_date",
+     "product_help",
+     "send_feedback"
+    ],
+    "knowledge": [
+     "kb_history",
+     "kb_links",
+     "kb_overview",
+     "kb_read",
+     "kb_search"
+    ],
+    "inbox": [
+     "my_inbox",
+     "open_line"
+    ],
+    "roster": [
+     "my_schedule",
+     "request_shift_change",
+     "show_requests",
+     "who_is_working",
+     "withdraw_request"
+    ]
+   },
+   "lacks": {
+    "roster": [
+     "add_shift",
+     "cancel_shift",
+     "copy_week",
+     "move_shift",
+     "open_publish",
+     "plan_shifts",
+     "set_rotation",
+     "show_publishes",
+     "show_site_setup",
+     "show_week"
+    ],
+    "board": [
+     "archive",
+     "assign_batch",
+     "comment_task",
+     "create_task",
+     "edit_task",
+     "move_task",
+     "my_team",
+     "plan_work",
+     "show_board",
+     "show_task"
+    ],
+    "memory": [
+     "decide_team_note",
+     "propose_team_note",
+     "recall_memory",
+     "remember_note",
+     "review_team_note"
+    ],
+    "scheduled_tasks": [
+     "delete_scheduled_task",
+     "list_scheduled_tasks",
+     "read_scheduled_task_runs",
+     "schedule_task",
+     "update_scheduled_task"
+    ],
+    "analytics": [
+     "display_chart",
+     "execute_sql",
+     "grep_context",
+     "list_context",
+     "read_context",
+     "read_query_result",
+     "search_context"
+    ],
+    "utilities": [
+     "export_analysis_artifact",
+     "get_ai_usage_overview",
+     "web_browse",
+     "web_fetch",
+     "web_search"
+    ],
+    "knowledge": [
+     "kb_suggest"
+    ]
+   },
+   "screens": [
+    "home",
+    "schedule",
+    "calendar",
+    "inbox",
+    "ask"
+   ]
+  },
+  "junior": {
+   "tools": {
+    "roster": [
+     "add_shift",
+     "cancel_shift",
+     "my_schedule",
+     "request_shift_change",
+     "show_requests",
+     "who_is_working",
+     "withdraw_request"
+    ],
+    "board": [
+     "archive",
+     "assign_batch",
+     "comment_task",
+     "create_task",
+     "edit_task",
+     "move_task",
+     "my_team",
+     "plan_work",
+     "show_board",
+     "show_task"
+    ],
+    "calendar": [
+     "block_time",
+     "cancel_meeting",
+     "check_availability",
+     "edit_meeting",
+     "find_free_slot",
+     "invitable",
+     "my_day",
+     "respond_meeting",
+     "schedule_meeting",
+     "show_calendar",
+     "show_meeting"
+    ],
+    "utilities": [
+     "calculator",
+     "export_analysis_artifact",
+     "get_current_time",
+     "get_current_weather",
+     "get_todays_date",
+     "product_help",
+     "send_feedback",
+     "web_browse",
+     "web_fetch",
+     "web_search"
+    ],
+    "scheduled_tasks": [
+     "delete_scheduled_task",
+     "list_scheduled_tasks",
+     "read_scheduled_task_runs",
+     "schedule_task",
+     "update_scheduled_task"
+    ],
+    "analytics": [
+     "display_chart",
+     "execute_sql",
+     "grep_context",
+     "list_context",
+     "read_context",
+     "read_query_result",
+     "search_context"
+    ],
+    "knowledge": [
+     "kb_history",
+     "kb_links",
+     "kb_overview",
+     "kb_read",
+     "kb_search",
+     "kb_suggest"
+    ],
+    "inbox": [
+     "my_inbox",
+     "open_line"
+    ],
+    "memory": [
+     "propose_team_note",
+     "recall_memory",
+     "remember_note"
+    ]
+   },
+   "lacks": {
+    "roster": [
+     "copy_week",
+     "move_shift",
+     "open_publish",
+     "plan_shifts",
+     "set_rotation",
+     "show_publishes",
+     "show_site_setup",
+     "show_week"
+    ],
+    "memory": [
+     "decide_team_note",
+     "review_team_note"
+    ],
+    "utilities": [
+     "get_ai_usage_overview"
+    ]
+   },
+   "screens": [
+    "home",
+    "schedule",
+    "calendar",
+    "inbox",
+    "ask",
+    "board",
+    "memory",
+    "knowledge",
+    "conversations",
+    "reports",
+    "scheduled_tasks"
+   ]
+  },
+  "middle": {
+   "tools": {
+    "roster": [
+     "add_shift",
+     "cancel_shift",
+     "my_schedule",
+     "request_shift_change",
+     "show_requests",
+     "who_is_working",
+     "withdraw_request"
+    ],
+    "board": [
+     "archive",
+     "assign_batch",
+     "comment_task",
+     "create_task",
+     "edit_task",
+     "move_task",
+     "my_team",
+     "plan_work",
+     "show_board",
+     "show_task"
+    ],
+    "calendar": [
+     "block_time",
+     "cancel_meeting",
+     "check_availability",
+     "edit_meeting",
+     "find_free_slot",
+     "invitable",
+     "my_day",
+     "respond_meeting",
+     "schedule_meeting",
+     "show_calendar",
+     "show_meeting"
+    ],
+    "utilities": [
+     "calculator",
+     "export_analysis_artifact",
+     "get_current_time",
+     "get_current_weather",
+     "get_todays_date",
+     "product_help",
+     "send_feedback",
+     "web_browse",
+     "web_fetch",
+     "web_search"
+    ],
+    "scheduled_tasks": [
+     "delete_scheduled_task",
+     "list_scheduled_tasks",
+     "read_scheduled_task_runs",
+     "schedule_task",
+     "update_scheduled_task"
+    ],
+    "analytics": [
+     "display_chart",
+     "execute_sql",
+     "grep_context",
+     "list_context",
+     "read_context",
+     "read_query_result",
+     "search_context"
+    ],
+    "knowledge": [
+     "kb_history",
+     "kb_links",
+     "kb_overview",
+     "kb_read",
+     "kb_search",
+     "kb_suggest"
+    ],
+    "inbox": [
+     "my_inbox",
+     "open_line"
+    ],
+    "memory": [
+     "propose_team_note",
+     "recall_memory",
+     "remember_note"
+    ]
+   },
+   "lacks": {
+    "roster": [
+     "copy_week",
+     "move_shift",
+     "open_publish",
+     "plan_shifts",
+     "set_rotation",
+     "show_publishes",
+     "show_site_setup",
+     "show_week"
+    ],
+    "memory": [
+     "decide_team_note",
+     "review_team_note"
+    ],
+    "utilities": [
+     "get_ai_usage_overview"
+    ]
+   },
+   "screens": [
+    "home",
+    "schedule",
+    "calendar",
+    "inbox",
+    "ask",
+    "board",
+    "memory",
+    "knowledge",
+    "conversations",
+    "reports",
+    "scheduled_tasks"
+   ]
+  },
+  "senior": {
+   "tools": {
+    "roster": [
+     "add_shift",
+     "cancel_shift",
+     "copy_week",
+     "move_shift",
+     "my_schedule",
+     "open_publish",
+     "plan_shifts",
+     "request_shift_change",
+     "set_rotation",
+     "show_publishes",
+     "show_requests",
+     "show_site_setup",
+     "show_week",
+     "who_is_working",
+     "withdraw_request"
+    ],
+    "board": [
+     "archive",
+     "assign_batch",
+     "comment_task",
+     "create_task",
+     "edit_task",
+     "move_task",
+     "my_team",
+     "plan_work",
+     "show_board",
+     "show_task"
+    ],
+    "calendar": [
+     "block_time",
+     "cancel_meeting",
+     "check_availability",
+     "edit_meeting",
+     "find_free_slot",
+     "invitable",
+     "my_day",
+     "respond_meeting",
+     "schedule_meeting",
+     "show_calendar",
+     "show_meeting"
+    ],
+    "utilities": [
+     "calculator",
+     "export_analysis_artifact",
+     "get_ai_usage_overview",
+     "get_current_time",
+     "get_current_weather",
+     "get_todays_date",
+     "product_help",
+     "send_feedback",
+     "web_browse",
+     "web_fetch",
+     "web_search"
+    ],
+    "memory": [
+     "decide_team_note",
+     "propose_team_note",
+     "recall_memory",
+     "remember_note",
+     "review_team_note"
+    ],
+    "scheduled_tasks": [
+     "delete_scheduled_task",
+     "list_scheduled_tasks",
+     "read_scheduled_task_runs",
+     "schedule_task",
+     "update_scheduled_task"
+    ],
+    "analytics": [
+     "display_chart",
+     "execute_sql",
+     "grep_context",
+     "list_context",
+     "read_context",
+     "read_query_result",
+     "search_context"
+    ],
+    "knowledge": [
+     "kb_history",
+     "kb_links",
+     "kb_overview",
+     "kb_read",
+     "kb_search",
+     "kb_suggest"
+    ],
+    "inbox": [
+     "my_inbox",
+     "open_line"
+    ]
+   },
+   "lacks": {},
+   "screens": [
+    "home",
+    "planner",
+    "calendar",
+    "inbox",
+    "ask",
+    "board",
+    "memory",
+    "knowledge",
+    "conversations",
+    "reports",
+    "scheduled_tasks"
+   ]
+  },
+  "admin": {
+   "tools": {
+    "roster": [
+     "add_shift",
+     "cancel_shift",
+     "copy_week",
+     "move_shift",
+     "my_schedule",
+     "open_publish",
+     "plan_shifts",
+     "request_shift_change",
+     "set_rotation",
+     "show_publishes",
+     "show_requests",
+     "show_site_setup",
+     "show_week",
+     "who_is_working",
+     "withdraw_request"
+    ],
+    "board": [
+     "archive",
+     "assign_batch",
+     "comment_task",
+     "create_task",
+     "edit_task",
+     "move_task",
+     "my_team",
+     "plan_work",
+     "show_board",
+     "show_task"
+    ],
+    "calendar": [
+     "block_time",
+     "cancel_meeting",
+     "check_availability",
+     "edit_meeting",
+     "find_free_slot",
+     "invitable",
+     "my_day",
+     "respond_meeting",
+     "schedule_meeting",
+     "show_calendar",
+     "show_meeting"
+    ],
+    "utilities": [
+     "calculator",
+     "export_analysis_artifact",
+     "get_ai_usage_overview",
+     "get_current_time",
+     "get_current_weather",
+     "get_todays_date",
+     "product_help",
+     "send_feedback",
+     "web_browse",
+     "web_fetch",
+     "web_search"
+    ],
+    "memory": [
+     "decide_team_note",
+     "propose_team_note",
+     "recall_memory",
+     "remember_note",
+     "review_team_note"
+    ],
+    "scheduled_tasks": [
+     "delete_scheduled_task",
+     "list_scheduled_tasks",
+     "read_scheduled_task_runs",
+     "schedule_task",
+     "update_scheduled_task"
+    ],
+    "analytics": [
+     "display_chart",
+     "execute_sql",
+     "grep_context",
+     "list_context",
+     "read_context",
+     "read_query_result",
+     "search_context"
+    ],
+    "knowledge": [
+     "kb_history",
+     "kb_links",
+     "kb_overview",
+     "kb_read",
+     "kb_search",
+     "kb_suggest"
+    ],
+    "inbox": [
+     "my_inbox",
+     "open_line"
+    ]
+   },
+   "lacks": {},
+   "screens": [
+    "home",
+    "planner",
+    "calendar",
+    "inbox",
+    "ask",
+    "board",
+    "memory",
+    "knowledge",
+    "conversations",
+    "reports",
+    "scheduled_tasks",
+    "console"
+   ]
+  }
+ },
+ "not_registered": {
+  "run_bash": "code_sandbox entitlement off for the demo tenant"
+ },
+ "slots": [
+  {
+   "slot": "1",
+   "name_en": "Ray Brennan",
+   "name_ru": "Николай Петрович Ермолаев",
+   "username_en": "rbrennan",
+   "username_ru": "nermolaev",
+   "role_key": "founder",
+   "rank": "senior",
+   "status": "active",
+   "postings": [],
+   "home": null,
+   "extension": "401",
+   "bound_to": "every site",
+   "history_days": null,
+   "note": "Founder at senior with no posting: bound to no site, so he reads every site and receives every shift request and every team-note proposal of all three shops in his Inbox. Intended (design 7.2, Cast: the founder's Inbox is a planner's and is designed as such)."
+  },
+  {
+   "slot": "2",
+   "name_en": "Claire Brennan",
+   "name_ru": "Екатерина Николаевна Ермолаева",
+   "username_en": "cbrennan",
+   "username_ru": "eermolaeva",
+   "role_key": "managing_owner",
+   "rank": "admin",
+   "status": "active",
+   "postings": [],
+   "home": null,
+   "extension": "402",
+   "bound_to": "every site",
+   "history_days": null,
+   "note": "Administrator: the console, every site; the knowledge base's administrator rung. Adds herself as watcher on S16's card (the assignment rule refuses the senior adding her)."
+  },
+  {
+   "slot": "3",
+   "name_en": "Donna Ledford",
+   "name_ru": "Ирина Владимировна Кудашкина",
+   "username_en": "dledford",
+   "username_ru": "ikudashkina",
+   "role_key": "office_manager",
+   "rank": "middle",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": "111",
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 365,
+   "note": "Middle, bound to main in the product's tools; reads ERP pay and till counts (opened from middle, design 7.2) and the punches for payroll hours (core grant from middle)."
+  },
+  {
+   "slot": "4",
+   "name_en": "Greg Whitaker",
+   "name_ru": "Сергей Анатольевич Мельников",
+   "username_en": "gwhitaker",
+   "username_ru": "smelnikov",
+   "role_key": "service_manager",
+   "rank": "senior",
+   "status": "active",
+   "postings": [
+    "main",
+    "east"
+   ],
+   "home": "main",
+   "extension": "104",
+   "bound_to": "every site",
+   "history_days": null,
+   "note": "The senior operator. Postings at main (home) and east so the planner offers him for both home shops; as a senior he is bound to no site and also receives west's requests and proposals."
+  },
+  {
+   "slot": "5",
+   "name_en": "Travis Burnette",
+   "name_ru": "Дмитрий Олегович Григорьев",
+   "username_en": "tburnette",
+   "username_ru": "dgrigoriev",
+   "role_key": "lead_advisor",
+   "rank": "middle",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": "101",
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 365
+  },
+  {
+   "slot": "6",
+   "name_en": "Maya Torres",
+   "name_ru": "Алина Рамилевна Хасанова",
+   "username_en": "mtorres",
+   "username_ru": "akhasanova",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "main",
+    "east"
+   ],
+   "home": "main",
+   "extension": "102",
+   "bound_to": [
+    "main",
+    "east"
+   ],
+   "history_days": 180,
+   "note": "The junior operator. Postings at main (home) and east: she is rostered at east some days and is a cover candidate for slot 16's week (S5.2). The east posting (ledger cast.also_sites, cast.json also_sites) binds her to east as well, so her call-back list holds main's four and east's one: S3.4's five (ledger calls.queue_at_t)."
+  },
+  {
+   "slot": "7",
+   "name_en": "Caleb Sutton",
+   "name_ru": "Никита Ведяшкин",
+   "username_en": "csutton",
+   "username_ru": "nvedyashkin",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": "103",
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "8",
+   "name_en": "Randy Elrod",
+   "name_ru": "Александр Михайлович Бурмистров",
+   "username_en": "relrod",
+   "username_ru": "aburmistrov",
+   "role_key": "shop_foreman",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "9",
+   "name_en": "Marcus Gaines",
+   "name_ru": "Павел Мещеряков",
+   "username_en": "mgaines",
+   "username_ru": "pmeshcheryakov",
+   "role_key": "parts_manager",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "main",
+    "east"
+   ],
+   "home": "main",
+   "extension": "112",
+   "bound_to": [
+    "main",
+    "east"
+   ],
+   "history_days": 180,
+   "note": "Parts manager serving both home shops: postings at main and east."
+  },
+  {
+   "slot": "10",
+   "name_en": "Kevin Lawson",
+   "name_ru": "Андрей Викторович Шубин",
+   "username_en": "klawson",
+   "username_ru": "ashubin",
+   "role_key": "diagnostic_technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "11",
+   "name_en": "Dustin Swafford",
+   "name_ru": "Максим Рябов",
+   "username_en": "dswafford",
+   "username_ru": "mryabov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "12",
+   "name_en": "Luis Herrera",
+   "name_ru": "Алексей Карпов",
+   "username_en": "lherrera",
+   "username_ru": "akarpov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "13",
+   "name_en": "Terry Dotson",
+   "name_ru": "Ильдар Фаритович Нуруллин",
+   "username_en": "tdotson",
+   "username_ru": "inurullin",
+   "role_key": "electrical_technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "14",
+   "name_en": "Hunter Varnell",
+   "name_ru": "Иван Сурков",
+   "username_en": "hvarnell",
+   "username_ru": "isurkov",
+   "role_key": "apprentice_technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "15",
+   "name_en": "Cody Gann",
+   "name_ru": "Евгений Чугунов",
+   "username_en": "cgann",
+   "username_ru": "echugunov",
+   "role_key": "lube_tyre_technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "16",
+   "name_en": "Angie Holloway",
+   "name_ru": "Светлана Юрьевна Демидова",
+   "username_en": "aholloway",
+   "username_ru": "sdemidova",
+   "role_key": "lead_advisor",
+   "rank": "middle",
+   "status": "active",
+   "postings": [
+    "east"
+   ],
+   "home": "east",
+   "extension": "201",
+   "bound_to": [
+    "east"
+   ],
+   "history_days": 365,
+   "note": "Middle bound to east (S1.7 is asked by her about east)."
+  },
+  {
+   "slot": "17",
+   "name_en": "Josh Tipton",
+   "name_ru": "Артём Николаев",
+   "username_en": "jtipton",
+   "username_ru": "anikolaev",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "east"
+   ],
+   "home": "east",
+   "extension": "202",
+   "bound_to": [
+    "east"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "18",
+   "name_en": "Andre Simmons",
+   "name_ru": "Валерий Геннадьевич Егоров",
+   "username_en": "asimmons",
+   "username_ru": "vegorov",
+   "role_key": "lead_technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "east"
+   ],
+   "home": "east",
+   "extension": null,
+   "bound_to": [
+    "east"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "19",
+   "name_en": "Brandon Sisk",
+   "name_ru": "Роман Кудряшов",
+   "username_en": "bsisk",
+   "username_ru": "rkudryashov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "east"
+   ],
+   "home": "east",
+   "extension": null,
+   "bound_to": [
+    "east"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "20",
+   "name_en": "Austin Crabtree",
+   "name_ru": "Антон Блинов",
+   "username_en": "acrabtree",
+   "username_ru": "ablinov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "east"
+   ],
+   "home": "east",
+   "extension": null,
+   "bound_to": [
+    "east"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "21",
+   "name_en": "Jordan Akins",
+   "name_ru": "Марат Аюпов",
+   "username_en": "jakins",
+   "username_ru": "mayupov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "east",
+    "main"
+   ],
+   "home": "east",
+   "extension": null,
+   "bound_to": [
+    "east",
+    "main"
+   ],
+   "history_days": 180,
+   "note": "Floats between east (home) and main: postings at both, so he can be rostered at either."
+  },
+  {
+   "slot": "22",
+   "name_en": "Dale Hutchins",
+   "name_ru": "Ринат Фаридович Галиев",
+   "username_en": "dhutchins",
+   "username_ru": "rgaliev",
+   "role_key": "shop_manager",
+   "rank": "senior",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": "301",
+   "bound_to": "every site",
+   "history_days": null,
+   "note": "Senior at west: plans his own roster; as a senior he is bound to no site, so he also receives the home shops' requests and proposals (intended, as for slot 1)."
+  },
+  {
+   "slot": "23",
+   "name_en": "Chad Binkley",
+   "name_ru": "Вячеслав Крюков",
+   "username_en": "cbinkley",
+   "username_ru": "vkryukov",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": "302",
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "24",
+   "name_en": "Jasmine Bolden",
+   "name_ru": "Камила Шакирова",
+   "username_en": "jbolden",
+   "username_ru": "kshakirova",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": "303",
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "25",
+   "name_en": "Gary Tidwell",
+   "name_ru": "Фарит Мансурович Зиннатуллин",
+   "username_en": "gtidwell",
+   "username_ru": "fzinnatullin",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": null,
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "26",
+   "name_en": "Shane Maddox",
+   "name_ru": "Станислав Орехов",
+   "username_en": "smaddox",
+   "username_ru": "sorekhov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": null,
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "27",
+   "name_en": "Derek Hooper",
+   "name_ru": "Виталий Сомов",
+   "username_en": "dhooper",
+   "username_ru": "vsomov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": null,
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "28",
+   "name_en": "Tyler Jarrell",
+   "name_ru": "Булат Гарипов",
+   "username_en": "tjarrell",
+   "username_ru": "bgaripov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "active",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": null,
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180
+  },
+  {
+   "slot": "29",
+   "name_en": "Brenda Pickett",
+   "name_ru": "Татьяна Геннадьевна Пахомова",
+   "username_en": "bpickett",
+   "username_ru": "tpakhomova",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "active",
+   "postings": [
+    "main",
+    "east"
+   ],
+   "home": "main",
+   "extension": "105",
+   "bound_to": [
+    "main",
+    "east"
+   ],
+   "history_days": 180,
+   "note": "Postings at main (home) and east (ledger cast.also_sites, cast.json also_sites): S5.2 names her as a cover candidate for east in both markets, and the planner only offers people posted at the site."
+  },
+  {
+   "slot": "F1",
+   "name_en": "Brent Lassiter",
+   "name_ru": "Артур Назаров",
+   "username_en": "blassiter",
+   "username_ru": "anazarov",
+   "role_key": "service_advisor",
+   "rank": "junior",
+   "status": "former",
+   "postings": [
+    "west"
+   ],
+   "home": "west",
+   "extension": "304",
+   "bound_to": [
+    "west"
+   ],
+   "history_days": 180,
+   "note": "Junior while he worked at west; his login and Chatwoot user ended the day he was fired (person kept, active false)."
+  },
+  {
+   "slot": "F2",
+   "name_en": "Wes Tate",
+   "name_ru": "Константин Жарков",
+   "username_en": "wtate",
+   "username_ru": "kzharkov",
+   "role_key": "technician",
+   "rank": "worker",
+   "status": "former",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180,
+   "note": "Worker while he worked at main; login ended the day he was fired (person kept, active false)."
+  },
+  {
+   "slot": "F3",
+   "name_en": "Brad Keller",
+   "name_ru": "Вадим Савельев",
+   "username_en": "bkeller",
+   "username_ru": "vsavelyev",
+   "role_key": "service_advisor",
+   "rank": "none",
+   "status": "former",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": "103",
+   "bound_to": "nothing: no login",
+   "history_days": "n/a",
+   "note": "Left before go-live: no person row in core, no login (ERP only)."
+  },
+  {
+   "slot": "F4",
+   "name_en": "Mason Pruitt",
+   "name_ru": "Рустам Юсупов",
+   "username_en": "mpruitt",
+   "username_ru": "ryusupov",
+   "role_key": "seasonal_helper",
+   "rank": "worker",
+   "status": "former",
+   "postings": [
+    "main"
+   ],
+   "home": "main",
+   "extension": null,
+   "bound_to": [
+    "main"
+   ],
+   "history_days": 180,
+   "note": "Worker per build (ledger cast.f4_rank, cast.json rank worker): when one of his seasons lies inside G..T or runs at T (English: ten weeks from the first Monday of June; Russian: six weeks from the first Mondays of April and October), he has a person, postings at main and a worker login that ends with the season (design 7.2, S11). Otherwise ERP only, no login."
+  }
+ ]
+}

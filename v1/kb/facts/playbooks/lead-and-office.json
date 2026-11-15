@@ -1,0 +1,155 @@
+{
+ "path": "playbooks/lead-and-office.md",
+ "title": "Playbook: lead advisors and the office",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Middle rank: what the lead advisors and the office manager can do beyond an advisor.",
+ "serves": [
+  "S12",
+  "operate:propose",
+  "visibility:administrator"
+ ],
+ "length_class": "medium",
+ "words_en": 274,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Middle rank: history window 365 days against 180 for junior; customer contact details in lists; conversation statistics by period and operator; can propose knowledge changes (product defaults).",
+  "Slot 3 reads pay and till counts (design 7.2: the ERP rule opens them from middle).",
+  "Lead duties: price check, page check within five working days, hard calls handed up with a card, no approval of discounts over 10 %.",
+  "Example: \"Draft a correction to the timing belt page\" is what slot 5 did at T-8 days (S12).",
+  "Colleagues' call scores are a senior view."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "What you have beyond an advisor",
+   "item": "A year of history instead of six months."
+  },
+  {
+   "section": "What you have beyond an advisor",
+   "item": "Customers' contact details in lists, when you need them for statements or call backs."
+  },
+  {
+   "section": "What you have beyond an advisor",
+   "item": "Conversation numbers for the period and by person."
+  },
+  {
+   "section": "What you have beyond an advisor",
+   "item": "You can propose a change to a knowledge page. Greg, Dale, Ray or Claire decides it."
+  },
+  {
+   "section": "What you have beyond an advisor",
+   "item": "Donna also reads pay and the till counts, because the books need them."
+  },
+  {
+   "section": "What we expect of a lead",
+   "item": "You are the price check. A newcomer's estimate does not go out unread."
+  },
+  {
+   "section": "What we expect of a lead",
+   "item": "You are the page check. When a price or a rule changes, the service pages you keep are right within five working days. If you find a wrong page, propose the fix that day and say why in the proposal."
+  },
+  {
+   "section": "What we expect of a lead",
+   "item": "You take the hard call and hand it up with a card when it needs money to fix."
+  },
+  {
+   "section": "What we expect of a lead",
+   "item": "You do not approve discounts over 10 %. You ask."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Which service pages still show the old labour rate?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Draft a correction to the timing belt page.\" It shows you the exact change on a card. You confirm; it goes to the deciders."
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Which estimates have been waiting more than a day?\""
+  },
+  {
+   "section": "Ask it",
+   "item": "\"Whose calls should a new advisor listen to?\" It will say that scores across colleagues are a manager's view, and it is right."
+  },
+  {
+   "section": "It will not",
+   "item": "Publish a page change for you, or approve your own proposal."
+  },
+  {
+   "section": "It will not",
+   "item": "Show you colleagues' call scores."
+  },
+  {
+   "section": "It will not",
+   "item": "Decide a team note."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "16",
+   "written_as": "Angie",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "3",
+   "written_as": "Donna",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same playbook for the same rank; examples from the Russian stories and channels. The product pins the playbooks folder at administrator in both configurations."
+ ]
+}

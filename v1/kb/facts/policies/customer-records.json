@@ -1,0 +1,91 @@
+{
+ "path": "policies/customer-records.md",
+ "title": "Customer records",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "3",
+ "purpose": "How a customer and a car are entered so that records do not multiply.",
+ "serves": [
+  "S15",
+  "S2",
+  "S7"
+ ],
+ "length_class": "short",
+ "words_en": 232,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Search by phone before creating (design 7.2 S15: the pair test is \"same phone\").",
+  "First name, last name, mobile; no \"Walk-in\" customer (S2; ERP mess kind 5); nameless customers are entered as \"Declined name\" with the plate.",
+  "VIN on every car (mess kind 2: 3 % of cars, the oldest, have none); mileage in and out read from the dash (mess kind 3); car on the right customer (mess kind 8).",
+  "Company vehicles under the company with the unit number.",
+  "Duplicates are merged by slot 3 only (12 named pairs remain unmerged in the ERP)."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Customer records",
+   "item": "Search by phone number before you create anybody. Not by name: names are spelled three ways. If the phone is already there, that is your customer, however the name looks."
+  },
+  {
+   "section": "Customer records",
+   "item": "Take a first name, a last name and a mobile number. \"Mike, truck\" is not a customer."
+  },
+  {
+   "section": "Customer records",
+   "item": "Do not use the \"Walk-in\" customer. Every order belongs to a real person or company. A customer who will not give a name still gets a record: \"Declined name\", with the plate."
+  },
+  {
+   "section": "Customer records",
+   "item": "The VIN goes on every car. Scan it from the door jamb. On cars too old to scan, read it off the dash and type it. If it truly cannot be read, say so in the notes."
+  },
+  {
+   "section": "Customer records",
+   "item": "Mileage in and mileage out on every order, read from the dash, not from the last visit."
+  },
+  {
+   "section": "Customer records",
+   "item": "Check that the car is on the right customer before you open the order. Families share cars; companies sell them to employees."
+  },
+  {
+   "section": "Customer records",
+   "item": "A company's vehicle goes under the company, with its unit number, never under the driver."
+  },
+  {
+   "section": "Customer records",
+   "item": "If you find a duplicate, do not fix it yourself. Send both names to me and I merge them, so the history comes along."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Donna Ledford",
+   "role": "office_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-5mo|date}}"
+ ],
+ "new_facts": [
+  "\"Declined name\" as the label for a customer who will not give one."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian records: ФИО and mobile; companies by ИНН; plates instead of unit numbers. VIN may be absent on old cars as well."
+ ]
+}

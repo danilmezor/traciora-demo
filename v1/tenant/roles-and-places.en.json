@@ -1,0 +1,127 @@
+{
+  "_doc": "Demo tenant, seed v1, English configuration: job roles (core.position), shops (core.location with business_hours, checkin and staffed), their dated hours (core.location_hours_exception) and phone extensions (core.location_alias, namespace pbx_extension; config_key for the shop key). Every value is copied from ledger.json (geo.*, site.*), cast.json (roles, extensions) or phones.md (public lines); validate.py checks each against them. Dates that move with T are given as the ledger's anchors, plus the dates they give for the reference T of TIMELINE.md (Friday 2026-11-13).",
+  "configuration": "en",
+  "roles": [
+    {"key": "founder", "name": "Founder, Owner"},
+    {"key": "managing_owner", "name": "Managing Owner"},
+    {"key": "office_manager", "name": "Office Manager / Bookkeeper"},
+    {"key": "service_manager", "name": "Service Manager"},
+    {"key": "lead_advisor", "name": "Lead Service Advisor"},
+    {"key": "service_advisor", "name": "Service Advisor"},
+    {"key": "shop_foreman", "name": "Shop Foreman"},
+    {"key": "parts_manager", "name": "Parts Manager"},
+    {"key": "technician", "name": "Automotive Technician"},
+    {"key": "diagnostic_technician", "name": "Diagnostic Technician"},
+    {"key": "electrical_technician", "name": "Electrical Technician"},
+    {"key": "lead_technician", "name": "Lead Technician"},
+    {"key": "apprentice_technician", "name": "Apprentice Technician"},
+    {"key": "lube_tyre_technician", "name": "Lube and Tire Technician"},
+    {"key": "shop_manager", "name": "Shop Manager"},
+    {"key": "seasonal_helper", "name": "Seasonal Shop Helper"}
+  ],
+  "places": [
+    {
+      "key": "main",
+      "name": "East Main",
+      "address": "2106 East Main St, Chattanooga, TN 37404",
+      "latitude": 35.02473,
+      "longitude": -85.27695,
+      "tz": "America/New_York",
+      "day_cutoff_hour": 0,
+      "staffed": true,
+      "checkin_radius_m": 150,
+      "business_hours": {
+        "mon": [["07:30", "17:30"]], "tue": [["07:30", "17:30"]], "wed": [["07:30", "17:30"]],
+        "thu": [["07:30", "17:30"]], "fri": [["07:30", "17:30"]], "sat": [["08:00", "13:00"]], "sun": []
+      },
+      "public_line": "(423) 555-0142",
+      "extensions": [
+        {"ext": "100", "kind": "group line", "rings": ["101", "102", "103", "105"]},
+        {"ext": "101", "kind": "desk", "slot": "5"},
+        {"ext": "102", "kind": "desk", "slot": "6"},
+        {"ext": "103", "kind": "desk", "slot": "7", "note": "F3's desk until he left; slot 7's from the Monday of week T-14"},
+        {"ext": "104", "kind": "phone", "slot": "4"},
+        {"ext": "105", "kind": "desk", "slot": "29"},
+        {"ext": "111", "kind": "phone", "slot": "3"},
+        {"ext": "112", "kind": "phone", "slot": "9"}
+      ]
+    },
+    {
+      "key": "east",
+      "name": "Bonny Oaks",
+      "address": "6340 Bonny Oaks Drive, Chattanooga, TN 37416",
+      "latitude": 35.0743712,
+      "longitude": -85.1718599,
+      "tz": "America/New_York",
+      "day_cutoff_hour": 0,
+      "staffed": true,
+      "checkin_radius_m": 150,
+      "business_hours": {
+        "mon": [["07:30", "17:30"]], "tue": [["07:30", "17:30"]], "wed": [["07:30", "17:30"]],
+        "thu": [["07:30", "17:30"]], "fri": [["07:30", "17:30"]], "sat": [], "sun": []
+      },
+      "public_line": "(423) 555-0167",
+      "extensions": [
+        {"ext": "200", "kind": "group line", "rings": ["201", "202"]},
+        {"ext": "201", "kind": "desk", "slot": "16"},
+        {"ext": "202", "kind": "desk", "slot": "17"}
+      ]
+    },
+    {
+      "key": "west",
+      "name": "Charlotte Pike",
+      "address": "6399 Charlotte Pike, Nashville, TN 37209",
+      "latitude": 36.14414,
+      "longitude": -86.87292,
+      "tz": "America/Chicago",
+      "day_cutoff_hour": 0,
+      "staffed": true,
+      "checkin_radius_m": 150,
+      "business_hours": {
+        "mon": [["07:30", "17:30"]], "tue": [["07:30", "17:30"]], "wed": [["07:30", "17:30"]],
+        "thu": [["07:30", "17:30"]], "fri": [["07:30", "17:30"]], "sat": [], "sun": []
+      },
+      "public_line": "(615) 555-0119",
+      "extensions": [
+        {"ext": "300", "kind": "group line", "rings": ["302", "303", "301"]},
+        {"ext": "301", "kind": "desk", "slot": "22"},
+        {"ext": "302", "kind": "desk", "slot": "23"},
+        {"ext": "303", "kind": "desk", "slot": "24"},
+        {"ext": "304", "kind": "desk", "slot": "F1", "retired": true, "note": "F1's desk while he worked; no leg after the day he left. The alias stays so his legs in history resolve to west"}
+      ]
+    }
+  ],
+  "head_office": {
+    "location": null,
+    "extensions": [
+      {"ext": "401", "kind": "phone", "slot": "1"},
+      {"ext": "402", "kind": "phone", "slot": "2"}
+    ],
+    "note": "No location row and no alias: the owners have no site (cast.json site none); their extensions forward to mobiles and read 'No site' on the console's Lines and phones (phones.md)."
+  },
+  "closed_dates": {
+    "ledger_key": "site.closed_dates",
+    "rule": ["New Year's Day", "Memorial Day", "Independence Day", "Labor Day", "Thanksgiving Day", "Christmas Day"],
+    "observed": "a holiday on a Saturday is observed on the Friday before, on a Sunday on the Monday after",
+    "sites": ["main", "east", "west"],
+    "row": {"kind": "closed", "open_local": null, "close_local": null, "reason": "the holiday's name"},
+    "example_for_T_2026_11_13": {
+      "since_G": ["2026-05-25", "2026-07-03", "2026-09-07"],
+      "next_60_days": ["2026-11-26", "2026-12-25", "2027-01-01"]
+    }
+  },
+  "changed_hours": [
+    {
+      "ledger_key": "site.stocktake",
+      "what": "stocktake",
+      "anchor": "the Thursday of week W+1; if closed in the market, the Tuesday of that week",
+      "sites": ["main", "east", "west"],
+      "row": {"kind": "hours", "open_local": "07:30", "close_local": "12:00", "reason": "stocktake"},
+      "example_for_T_2026_11_13": "2026-11-19"
+    }
+  ],
+  "not_in_the_store": {
+    "ledger_key": "kb.west_old_hours",
+    "note": "The bought shop's own knowledge page still says 'open Saturday 8:00 to 12:00, as under the previous owner'. Deliberate gap: west's business_hours carry no Saturday."
+  }
+}

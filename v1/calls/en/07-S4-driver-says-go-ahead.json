@@ -1,0 +1,669 @@
+{
+  "format": "seed-call/1",
+  "id": "en-07-S4-driver-says-go-ahead",
+  "configuration": "en",
+  "number": 7,
+  "story": "S4",
+  "title": "A company driver says 'go ahead' to 380 dollars of found work; the call scores high and breaks a rule the scorecard cannot see",
+  "purpose": "Story S4, the wrinkle behind her waiting team note. A driver of company account A3 phones about a car that is in for an oil change, asks for a noise to be looked at, and approves an axle at 379.64. The company's page says a driver cannot approve work over 300 dollars and the fleet contact is to be called. Nothing on the call is wrong by the scorecard: no auto-fail, 94.4.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Maya Torres",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Ronnie Eaves",
+      "invented": true,
+      "first_time": false,
+      "company": "Moccasin Bend Janitorial Services",
+      "account": "A3",
+      "role": "a driver of the account, not one of its contacts"
+    },
+    "mentioned": [
+      {
+        "name": "Luis Herrera",
+        "slot": 12,
+        "role": "the technician who found the axle"
+      },
+      {
+        "name": "Yolanda Fitch",
+        "ref": "accounts.json en.A3 contacts[0]",
+        "role": "the account's fleet contact, who was not called",
+        "said_on_call": false
+      }
+    ]
+  },
+  "call": {
+    "day": "slot 6's 2nd working day before T (rule R6; card S04, call 7)",
+    "nominal_offset": "T-2d",
+    "nominal_date": "2026-11-11",
+    "local_start": "13:50",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 5,
+    "caller_phone": "423-555-0116",
+    "repeat_caller": false,
+    "talk_s": 122
+  },
+  "scenario": {
+    "who_calls": "Ronnie Eaves, who drives unit MB-6 for company account A3 and dropped it off that morning.",
+    "vehicle": "unit MB-6, a 2018 Kia Soul, BRC-7972 (accounts.json en.A3 fleet)",
+    "job": "in for an oil service; found: the right front CV axle (the boot is split and the joint clicks)",
+    "wants": "to know whether the car is ready; then for the clicking to be looked at while it is there",
+    "what_happens": "Maya tells him the oil service is done and asks about a clicking on turns before he has raised it. He asks for it to be looked at. She gives the axle's price, what it covers and when it would be done; he says 'go ahead'; she adds it to the order and promises to call when it is ready.",
+    "facts": {
+      "found_work_usd": 379.64,
+      "driver_limit_usd": 300,
+      "ready_by": "the call's day, 16:00",
+      "rule": "Knowledge page 'Company accounts' (staff): a company driver cannot approve work over 300 USD; the fleet contact is called (ledger s4.driver_limit).",
+      "note": "A3 is a medium account and pays list (catalogue.json company_account_terms). catalogue.json cv_axle, class car, standard: 379.64, the design's 380 USD; the oil service is 90.95.",
+      "prices": [
+        {
+          "what": "Replace CV axle shaft (one side)",
+          "job": "cv_axle",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 379.64,
+          "said": "three seventy-nine sixty-four",
+          "said_usd": 379.64,
+          "said_as": "before tax"
+        },
+        {
+          "what": "Full synthetic oil & filter change",
+          "job": "oil_service",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "labour_hour_usd": 135.0,
+          "usd": 90.95
+        }
+      ]
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 6.6,
+      "said": "Hey, Maya, it's Ronnie with Moccasin Bend Janitorial. I dropped the little Kia off this mornin' for the oil change — is it about ready?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 16.1,
+      "said": "Hey, Ronnie! Yeah, let me look... okay, that's M-B-six, the Soul. The oil change is done. Luis was actually about to have me call y'all."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 25.9,
+      "said": "Uh-oh."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 28.2,
+      "said": "It's not terrible. But let me ask you — have you noticed a clicking when you turn? Like pulling out of a parking spot?"
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 38.6,
+      "said": "Yeah! I was — I was fixin' to ask about that. It pops when I turn left. Can y'all look at that while it's there?"
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 48.1,
+      "said": "So that's what he found. How long's it been doing it?"
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 52.9,
+      "said": "Few weeks. It's gettin' louder, I know that."
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 57.6,
+      "said": "Okay. So — the boot on the right front axle is split, and it's — and it's slung all the grease out, and that clicking is the joint. It needs an axle on that side."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 69.8,
+      "said": "Yeah.",
+      "overlap": true
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 71.9,
+      "said": "What's that gonna run?"
+    },
+    {
+      "n": 12,
+      "who": "advisor",
+      "at_s": 74.1,
+      "said": "The axle's three seventy-nine sixty-four, plus tax, and that's a new axle, not just the boot. The left side looks fine, so it's just the one. And if we do it now, Luis can have it done by four today."
+    },
+    {
+      "n": 13,
+      "who": "customer",
+      "at_s": 88.9,
+      "said": "Okay.",
+      "overlap": true
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 90.7,
+      "said": "Yeah, go ahead. I gotta have that car tomorrow, I got three buildings."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 97.3,
+      "said": "Okay, perfect. I'll — I'll add it to the ticket, and I'll call you myself when it's ready — it'll be by four."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 106.0,
+      "said": "This number's good."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 108.4,
+      "said": "Okay! So that's the right front axle on the Soul, ready by four today, and I'll call you."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 115.8,
+      "said": "'Preciate it."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 118.0,
+      "said": "You bet, Ronnie. Talk to you in a bit."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.7,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R1",
+        "what": "hesitations and restarts dropped; dropped g's and contractions written out",
+        "script_turns": [
+          2,
+          3,
+          5,
+          6,
+          9,
+          11,
+          14,
+          15,
+          18
+        ]
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 9,
+        "said": "axle",
+        "stored": "axel"
+      },
+      {
+        "rule": "R4",
+        "what": "a trade word or a model replaced by a common word that sounds like it",
+        "script_turn": 17,
+        "said": "Soul",
+        "stored": "soul"
+      },
+      {
+        "rule": "R5",
+        "what": "numbers come out as digits; no value is wrong",
+        "script_turns": [
+          3,
+          12,
+          15,
+          17
+        ]
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a burst of words replaced by a plausible wrong phrase",
+        "script_turn": 8,
+        "said": "It's gettin' louder, I know that.",
+        "stored": "It's getting louder and all that."
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          10
+        ]
+      }
+    ],
+    "counts": {
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 7,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 12,
+        "wrong": 2
+      },
+      "money_time": {
+        "mentions": 4,
+        "as_digits": 4,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "invented_lines": 0,
+      "profanity": 0
+    },
+    "script_words": 275,
+    "stored_words": 268,
+    "strict_word_difference": 0.091
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "parakeet+faster_whisper|parakeet=541d1f99c6b0c3cd0b11a95167540bb8edefd82b|faster_whisper=edaa852ec7e145841d8ffdb056a99866b5f0a478|restore=<restoration fingerprint, computed at seed time>",
+    "language": "en",
+    "pii_state": "raw",
+    "word_count": 285,
+    "duration_s": 122.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Thanks for calling Brennan Auto Care, this is Maya. How can I help you?",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, Maya, it's Ronnie with Moccasin Bend Janitorial. I dropped the little Kia off this morning for the oil change, is it about ready?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Hey, Ronnie! Yeah, let me look, okay, that's MB-6, the Soul. The oil change is done. Luis was about to have me call y'all.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Uh-oh.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "It's not terrible. But let me ask you, have you noticed a clicking when you turn? Like pulling out of a parking spot?",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Yeah! I was fixing to ask about that. It pops when I turn left. Can y'all look at that while it's there?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "So that's what he found. How long's it been doing it?",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Few weeks. It's getting louder and all that.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. So, the boot on the right front axel is split, and it's slung all the grease out, and that clicking is the joint. It needs an axle on that side.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "What's that going to run?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "The axle's $379.64, plus tax, and that's a new axle, not just the boot. The left side looks fine, so it's just the one. And if we do it now, Luis can have it done by 4 today.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay. Yeah, go ahead. I got to have that car tomorrow, I got three buildings.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay, perfect. I'll add it to the ticket, and I'll call you myself when it's ready, it'll be by 4.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "This number's good.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Okay! So that's the right front axle on the soul, ready by 4 today, and I'll call you.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Appreciate it.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "You bet, Ronnie. Talk to you in a bit.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Thanks for calling Brennan Auto Care, this is Maya.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "have you noticed a clicking when you turn?",
+        "level": 2,
+        "segment": 4
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "The left side looks fine, so it's just the one. And if we do it now, Luis can have it done by 4 today.",
+        "level": 2,
+        "segment": 10
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "I'll add it to the ticket, and I'll call you myself when it's ready, it'll be by 4.",
+        "level": 2,
+        "segment": 12
+      },
+      {
+        "key": "recap",
+        "quote": "So that's the right front axle on the soul, ready by 4 today, and I'll call you.",
+        "level": 1,
+        "segment": 14
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "The customer is already known: the manager greets him by name and finds the unit on the account."
+      },
+      {
+        "key": "offered_time",
+        "why": "No visit is needed: the car is already at the shop."
+      },
+      {
+        "key": "objection",
+        "why": "The customer voiced no doubt."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "callback_promised",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "But let me ask you, have you noticed a clicking when you turn? Like pulling out of a parking spot?",
+      "why": "She asked about the symptom before she named the repair, so the driver heard the finding as an answer to his own question.",
+      "segment": 4
+    },
+    "try_next": {
+      "check": "recap",
+      "instead_of": "So that's the right front axle on the soul, ready by 4 today, and I'll call you.",
+      "say": "So that's the right front axle on MB-6, 379.64 plus tax on top of the oil change, ready by 4 today here at East Main, and I'll call this number when it's done."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 94.4,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 4
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 10
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 12
+        },
+        {
+          "key": "recap",
+          "level": 1,
+          "segment": 14
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "offered_time",
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "callback_promised",
+      "no_visit_reason": null,
+      "tags": [
+        "callback_promised",
+        "quoted"
+      ],
+      "score": 94.4,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 4,
+      "try_next_check": "recap",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Thanks for calling Brennan Auto Care, this is Maya",
+        "need_discovery": "have you noticed a clicking when you turn?",
+        "price_with_next_step": "The left side looks fine, so it's just the one. And if we do it now, Luis can have it done by 4 today",
+        "asked_for_booking": "I'll add it to the ticket, and I'll call you myself when it's ready, it'll be by 4",
+        "recap": "So that's the right front axle on the soul, ready by 4 today, and I'll call you"
+      },
+      "na": {
+        "name_and_number": "The customer is already known: the manager greets him by name and finds the unit on the account.",
+        "offered_time": "No visit is needed: the car is already at the shop.",
+        "objection": "The customer voiced no doubt."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "But let me ask you, have you noticed a clicking when you turn? Like pulling out of a parking spot?",
+        "why": "She asked about the symptom before she named the repair, so the driver heard the finding as an answer to his own question."
+      },
+      "try_next": {
+        "check": "recap",
+        "instead_of": "So that's the right front axle on the soul, ready by 4 today, and I'll call you.",
+        "say": "So that's the right front axle on MB-6, 379.64 plus tax on top of the oil change, ready by 4 today here at East Main, and I'll call this number when it's done."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels. What the scorecard cannot see: the customer is a company driver and the work is over the account's limit.",
+    "rule_broken": "Knowledge page 'Company accounts': a company driver cannot approve work over 300 USD; the fleet contact is called. The driver approved 379.64 and the fleet contact, Yolanda Fitch, was not called. The order carries the added job, approved by the driver.",
+    "what_follows": "On her next working day (her last before T) Maya proposes the team note 'A company driver cannot approve work over 300 USD; call the fleet contact'; it is waiting at T (card S04, proposal 3).",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": "na",
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": "na",
+      "asked_for_booking": 2,
+      "recap": 1,
+      "objection": "na"
+    },
+    "score": 94.4,
+    "score_exact": 94.4444,
+    "outcome": "callback_promised",
+    "tags": [
+      "callback_promised",
+      "quoted"
+    ]
+  },
+  "why": {
+    "call_type": "new_enquiry by the judge's rule 0: a customer with a job already agreed (the oil service) asks about new work (the clicking).",
+    "greeting": "2: the business and her own name in the first line.",
+    "name_and_number": "N/A: a known company driver, greeted by name.",
+    "need_discovery": "2: the unit, the job and what she asked for: a clicking on turns, for a few weeks, getting louder.",
+    "price_with_next_step": "2: the price, what it covers and why it is one side only, and when it would be done, in one line.",
+    "offered_time": "N/A: the car is at the shop.",
+    "asked_for_booking": "2: the work is added to the order, with a time and who calls.",
+    "recap": "1: the work and the time; neither the amount nor where.",
+    "objection": "N/A: 'go ahead'.",
+    "auto_fails": "None: nothing she says is wrong or unkept. The rule she breaks is on a knowledge page, not in the scorecard, which is the point of the call.",
+    "score": "(1·2 + 2·2 + 2·2 + 3·2 + 1·1) / 2 = 8.5 of 9 weight points = 94.4. Exactly 94.44; the product rounds a score to one decimal.",
+    "carried_by": [
+      "asked_for_booking",
+      "price_with_next_step"
+    ]
+  },
+  "call_log": {
+    "callback_promised": true,
+    "callback": "kept: an outbound call from desk 102 to 423-555-0116 at 15:52 the same day, answered, 40 seconds ('MB-6 is ready')",
+    "auto_fail": null
+  },
+  "new_facts": [
+    "Ronnie Eaves, a driver of account A3 (not a contact), mobile 423-555-0116, drives unit MB-6.",
+    "An order at main on slot 6's 2nd working day before T for MB-6: oil service 90.95 and, added on the driver's word, a right front CV axle 379.64 (technician slot 12); completed by 16:00 the same day.",
+    "An outbound 'car ready' call from desk 102 to the driver at 15:52 that day (it keeps the promise of this call).",
+    "The fleet contact of A3 was not called about the added work."
+  ]
+}

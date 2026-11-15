@@ -1,0 +1,100 @@
+{
+ "path": "shop-floor/when-a-car-comes-back.md",
+ "title": "Если машина вернулась",
+ "title_en": "When a car comes back",
+ "exists_in": "both",
+ "english_sheet": "facts/shop-floor/when-a-car-comes-back.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "8",
+ "purpose": "What a technician does with a comeback.",
+ "serves": [
+  "S6",
+  "S1",
+  "visibility:worker"
+ ],
+ "length_class": "short",
+ "words_ru": 155,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The comeback window is the 30-day warranty (ledger comeback.definition); a repeat after day 30 is an ordinary paid order.",
+  "The trade word is «возврат»."
+ ],
+ "new_facts": [
+  "After day 30 with the same complaint: a paid order, the foreman still looks first, the service manager decides."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Если машина вернулась",
+   "item": "Возврат идёт вне очереди. Человек уже один раз заплатил."
+  },
+  {
+   "section": "Если машина вернулась",
+   "item": "Приёмка открывает новый заказ-наряд, гарантийный, с привязкой к первому. По старому наряду не работаем."
+  },
+  {
+   "section": "Если машина вернулась",
+   "item": "Первым смотрит мастер цеха — вместе с тем, кто делал, если он в смене. На Инженерном это Валерий Геннадьевич, на Технической — Ринат Фаридович."
+  },
+  {
+   "section": "Если машина вернулась",
+   "item": "Пиши, что нашёл, прямо. «Направляющие сухие, колодку закусило» — полезно. «Со слов клиента шум» — нет."
+  },
+  {
+   "section": "Если машина вернулась",
+   "item": "С клиентом никто не спорит, кто виноват. Ни у машины, ни на приёмке."
+  },
+  {
+   "section": "Если машина вернулась",
+   "item": "Приехал позже 30 дней с той же жалобой — наряд обычный, платный. Смотрю всё равно я, а что с этим делать, решает Сергей Анатольевич."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "18",
+   "written_as": "Валерий Геннадьевич",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "4",
+   "written_as": "Сергей Анатольевич",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "8",
+   "written_as": "Александр Михайлович",
+   "role": "shop_foreman",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,183 @@
+{
+  "format": "seed-conversation/1",
+  "id": "04-s1-web-fleet-quote-waited",
+  "configuration": "ru",
+  "number": 4,
+  "story": "S1",
+  "title": "Новый логист уходящего корпоративного клиента просит смету в чате на сайте; первый ответ человека через два дня",
+  "demonstrates": "A hand-over that nobody takes. The request arrives on Tuesday after closing; the assistant will not price contract work, takes a number and hands over. On Wednesday the lead advisor reads it and passes it on in a private note; the newcomer answers 'да-да, сделаю' in another note. A note answers nobody: the customer's follow-up on Thursday gets a draft that sits until 19:25, when the newcomer sends it as it was, writes 'сегодня должен отправить', answers one of her two questions and sends the estimate at 19:56. On Friday both are off (two on, two off); the assistant's draft answers the question he skipped, and the junior operator on shift sends it.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "ref": "accounts.json ru.A6 contacts[1]",
+      "name": "Дарья Олеговна Вершинина",
+      "in_chat": "Дарья",
+      "company": "ООО «Вкусный выезд»",
+      "role": "менеджер по логистике, отвечает за машины с даты P",
+      "phone": "+7 907 747-46-46",
+      "first_time": false
+    },
+    "named_in_a_line": [
+      {
+        "name": "Марина Александровна Белоусова",
+        "ref": "accounts.json ru.A6 contacts[2]",
+        "role": "директор; согласует оплату (в чате — «директор»)"
+      }
+    ],
+    "staff": [
+      {"slot": 5, "name": "Дмитрий Григорьев"},
+      {"slot": 7, "name": "Никита Ведяшкин", "weeks_in_the_job": 10},
+      {"slot": 6, "name": "Алина Хасанова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек, которому машины достались от завхоза: тот просто звонил старшему приёмщику. Пишет из офиса, полными фразами, и сравнивает предложения.",
+    "vehicles": ["№ 7, Ford Transit, фургон, 2019, К599МК73", "№ 8, Citroën Jumper, фургон, 2017, С152ХЕ173"],
+    "wants": "Смету с разбивкой на две машины до записи, к пятнице: в пятницу утром директор согласует расходы.",
+    "what_happens": "Во вторник в 20:41 она пишет. В среду в 12:10 Дмитрий оставляет заметку Никите. В четверг в 11:05 она напоминает. В 19:25 Никита отправляет ждавший черновик; смета уходит в 19:56, цены по прайсу. В пятницу она передаёт её директору. Записи нет; через неделю чат закрывает Chatwoot.",
+    "facts": {
+      "price_class": "по прайсу: у средних корпоративных клиентов договорных цен нет (catalogue.json company_account_terms)",
+      "terms": "отсрочка 30 дней (accounts.json)",
+      "first_person_reply_after": "почти двое суток: вторник 20:43 — четверг 19:25; 1 285 рабочих минут",
+      "hours": "сервис работает без выходных, 9:00–20:00 (ledger site.open_days)",
+      "public_pages_used": ["часы работы и адреса"],
+      "rota": "вторник — смена слотов 6 и 29, но запрос пришёл после закрытия; среда и четверг — смена 5 и 7; пятница — снова 6 и 29",
+      "note": "This is the chat of card S01's wrinkle, 'a chat that waited two days'. Call 22 (the quote promised and sent two days late) is another event, on the Tuesday of week T-9, about vans № 2 and № 5; this chat does not mention it. The two estimates are two of A6's five slow ones (ledger s1.a6). 16 276 and 11 274 are list prices: what A6 pays, VAT inside, nothing on top.",
+      "prices": [
+        {"said": "16 276 ₽", "amount": 16276.0, "what": "замена передних тормозных дисков и колодок, класс van, стандартные запчасти, по прайсу (в смете)", "from": {"catalogue": "front_pads_rotors", "class": "van", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "11 274 ₽", "amount": 11274.0, "what": "замена аккумуляторной батареи, класс van, по прайсу (в смете)", "from": {"catalogue": "battery_replace", "class": "van", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ],
+      "numbers": [
+        {"said": "30 дней", "what": "отсрочка платежа по договору (accounts.json, ledger acct.A6.terms_days)"}
+      ]
+    }
+  },
+  "days": {
+    "T-31d": {"anchor": "1 calendar day before slot 7's first working day on or after the Wednesday of week T-4 (card S01: the evening before the first day of a working pair of slot 7 on or after that Wednesday; for the nominal T the Wednesday is the pair's first day, so this is the Tuesday of week T-4)", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 4, "on_or_after_for_slot": 7, "plus_days": -1}, "nominal": "Tue 2026-10-13", "what": "the quote request at 20:41, after closing (ledger s1.dates.a6_chat_waited_two_days)"},
+    "T-30d": {"anchor": "slot 7's first working day on or after the Wednesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 4, "on_or_after_for_slot": 7}, "nominal": "Wed 2026-10-14", "what": "the first day of slot 7's working pair; slots 5 and 7 on shift: two notes, no reply"},
+    "T-29d": {"anchor": "1 calendar day after slot 7's first working day on or after the Wednesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 4, "on_or_after_for_slot": 7, "plus_days": 1}, "nominal": "Thu 2026-10-15", "what": "the second day of the pair: her follow-up; slot 7's first reply at 19:25; the estimate"},
+    "T-28d": {"anchor": "2 calendar days after slot 7's first working day on or after the Wednesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 4, "on_or_after_for_slot": 7, "plus_days": 2}, "nominal": "Fri 2026-10-16", "what": "she passes it to the director; slots 5 and 7 are off, slot 6 sends the draft"},
+    "T-21d": {"anchor": "9 calendar days after slot 7's first working day on or after the Wednesday of week T-4", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 4, "on_or_after_for_slot": 7, "plus_days": 9}, "nominal": "Fri 2026-10-23", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "В пятницу утром", "said_on": "T-31d", "day": "T-28d", "form": "в + accusative"},
+    {"word": "со вторника", "said_on": "T-29d", "day": "T-31d", "form": "с + genitive"},
+    {"word": "сегодня", "said_on": "T-29d", "day": "T-29d", "form": "adverb"},
+    {"word": "завтра утром", "said_on": "T-29d", "day": "T-28d", "form": "adverb"},
+    {"word": "в выходной", "said_on": "T-29d", "day": "any Saturday or Sunday", "form": "в + accusative"},
+    {"word": "в субботу или воскресенье", "said_on": "T-28d", "day": "any Saturday or Sunday", "form": "в + accusative"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0004-4e00-8000-00000000a004",
+      "peer": {"id": "seedv1-browser-ru-0207", "name": "Посетитель сайта"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-ru-0207",
+        "name": "Посетитель сайта",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-31d", "at": "20:41:10", "status": "pending", "arrived_closed": true},
+      "timeline": [
+        {"n": 1, "day": "T-31d", "at": "20:41:10", "kind": "message", "from": "customer", "text": "Добрый вечер. Меня зовут Дарья, компания «Вкусный выезд», обслуживаемся у вас на Московском шоссе по договору."},
+        {"n": 2, "day": "T-31d", "at": "20:42:25", "kind": "message", "from": "customer", "text": "Нужна смета на две машины, до записи. Ford Transit 2019: передние тормоза, колодки и диски. Citroën Jumper 2017: аккумулятор под замену. С разбивкой, работы и запчасти отдельно. В пятницу утром директор согласует расходы."},
+        {"n": 3, "day": "T-31d", "at": "20:42:52", "kind": "message", "from": "assistant", "text": "Дарья, добрый вечер! Я виртуальный помощник «Ермак-Сервиса». Сейчас сервис закрыт, откроемся в 9:00. Смету на конкретные машины по договору я подготовить не могу и не хочу называть цены из общего прайса, которые могут не совпасть с вашими условиями. Передам запрос мастерам-приёмщикам на Московском шоссе, смету с разбивкой пришлют они. Напишите, пожалуйста, номер телефона для связи."},
+        {"n": 4, "day": "T-31d", "at": "20:43:30", "kind": "message", "from": "customer", "text": "+7 907 747-46-46"},
+        {"n": 5, "day": "T-31d", "at": "20:43:55", "kind": "message", "from": "assistant", "text": "Спасибо, Дарья. Запрос передал, с вами свяжутся в ближайшее время."},
+        {"n": 6, "day": "T-31d", "at": "20:43:56", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "escalation", "arguments": {"name": "Дарья", "phone": "+7 907 747-46-46", "site": "Московское шоссе", "context": "Дарья, компания «Вкусный выезд» (клиент по договору, Московское шоссе). Просит смету с разбивкой на работы и запчасти до записи: Ford Transit 2019 — передние тормозные колодки и диски; Citroën Jumper 2017 — замена аккумулятора. В пятницу утром расходы согласует директор. Цен я не называл."}}, "note": {"from": "assistant", "private": true, "text": "Дарья, компания «Вкусный выезд» (клиент по договору, Московское шоссе). Просит смету с разбивкой на работы и запчасти до записи: Ford Transit 2019 — передние тормозные колодки и диски; Citroën Jumper 2017 — замена аккумулятора. В пятницу утром расходы согласует директор. Цен я не называл."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "escalation", "priority": "high", "site": "main", "owner": null, "due": "T-30d 20:00, закрытие следующего рабочего дня"}},
+        {"n": 7, "day": "T-30d", "at": "09:12", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-30d", "at": "09:36", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 9, "day": "T-30d", "at": "12:10:30", "kind": "note", "from": "staff", "slot": 5, "mentions": [7], "text": "@Никита Ведяшкин посчитай смету вкусному выезду, 2 машины. цены по прайсу, договрных у них нет. я на выдаче зашиваюсь"},
+        {"n": 10, "day": "T-30d", "at": "12:16:10", "kind": "note", "from": "staff", "slot": 7, "text": "да-да, сделаю"},
+        {"n": 11, "day": "T-29d", "at": "11:05:20", "kind": "message", "from": "customer", "text": "Добрый день. Подскажите, пожалуйста, по смете: вопрос актуален, жду со вторника."},
+        {"n": 12, "day": "T-29d", "at": "11:06:00", "kind": "draft", "id": "d1", "text": "Дарья, добрый день! Приношу извинения за ожидание. Ваш запрос на смету по двум машинам у мастеров-приёмщиков, смету с разбивкой вам пришлют. Если пришлёте госномера или VIN, расчёт будет точным.", "why_a_draft": "the chat carries handoff, so the assistant no longer sends", "outcome": {"kind": "sent_as_is", "by": 7, "day": "T-29d", "at": "19:25:30", "became": 14}},
+        {"n": 13, "day": "T-29d", "at": "19:25:28", "kind": "activity", "what": "assigned", "derived": true, "to": 7, "by": 7, "how": "first reply"},
+        {"n": 14, "day": "T-29d", "at": "19:25:30", "kind": "message", "from": "staff", "slot": 7, "text": "Дарья, добрый день! Приношу извинения за ожидание. Ваш запрос на смету по двум машинам у мастеров-приёмщиков, смету с разбивкой вам пришлют. Если пришлёте госномера или VIN, расчёт будет точным.", "late": "story: the two days of card S01 (ledger s1.a6.quote_chat_waited_days)"},
+        {"n": 15, "day": "T-29d", "at": "19:25:31", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 7, "how": "a manager's reply takes it off"},
+        {"n": 16, "day": "T-29d", "at": "19:25:32", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 17, "day": "T-29d", "at": "19:26:10", "kind": "message", "from": "staff", "slot": 7, "text": "Считаю, сегодня должен отправить"},
+        {"n": 18, "day": "T-29d", "at": "19:31:15", "kind": "message", "from": "customer", "text": "Номера: К599МК73 и С152ХЕ173. Хорошо, жду. Напомню, что согласование завтра утром."},
+        {"n": 19, "day": "T-29d", "at": "19:31:40", "kind": "message", "from": "customer", "text": "И сразу два вопроса: отсрочка 30 дней по договору у нас сохраняется? И можно ли Transit принять в выходной? В будни он на линии."},
+        {"n": 20, "day": "T-29d", "at": "19:32:25", "kind": "draft", "id": "d2", "text": "Спасибо, Дарья, этих данных достаточно. По отсрочке и приёму в выходной уточню и отвечу вместе со сметой.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "discarded", "by": 7, "day": "T-29d", "at": "19:40:00", "because": "he sent his own text (n 21)"}},
+        {"n": 21, "day": "T-29d", "at": "19:40:00", "kind": "message", "from": "staff", "slot": 7, "text": "Да, отсрочка сохраняется!"},
+        {"n": 22, "day": "T-29d", "at": "19:40:30", "kind": "activity", "what": "label_added", "label": "юрлицо", "by": 7},
+        {"n": 23, "day": "T-29d", "at": "19:56:40", "kind": "message", "from": "staff", "slot": 7, "text": "Дарья, смета по двум машинам во вложении. Когда удобно пригнать?", "files": [{"kind": "file", "file": "Smeta_Vkusny_vyezd_Transit_Jumper.pdf", "pool": "estimate-pdf", "shows": "смета по прайсу на две машины: Ford Transit — замена передних тормозных дисков и колодок, 16 276 ₽; Citroën Jumper — замена аккумуляторной батареи, 11 274 ₽; расходные материалы отдельной строкой; итог — в том числе НДС 5 %"}]},
+        {"n": 24, "day": "T-28d", "at": "09:12:30", "kind": "message", "from": "customer", "text": "Получила, спасибо. Передаю директору."},
+        {"n": 25, "day": "T-28d", "at": "09:13:10", "kind": "draft", "id": "d3", "text": "Пожалуйста, Дарья! И по второму вопросу: сервис работает без выходных, с 9:00 до 20:00, так что Transit можно принять в субботу или воскресенье.", "why_a_draft": "the chat is owned by a person", "outcome": {"kind": "sent_as_is", "by": 6, "day": "T-28d", "at": "09:17:20", "became": 26}},
+        {"n": 26, "day": "T-28d", "at": "09:17:20", "kind": "message", "from": "staff", "slot": 6, "text": "Пожалуйста, Дарья! И по второму вопросу: сервис работает без выходных, с 9:00 до 20:00, так что Transit можно принять в субботу или воскресенье."},
+        {"n": 27, "day": "T-21d", "at": "09:17", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-29d", "at": "19:25:28", "to": 7, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 7,
+        "labels": ["юрлицо"],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 27},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 27},
+          {"asked": 4, "answered": 5, "by": "assistant", "wall_seconds": 25},
+          {"asked": 11, "answered": 14, "by": 7, "working_minutes": 1285.5, "wall_minutes": 2801.6, "measured_from": "n 6", "reply": "first", "late": "story: the two days of card S01 (ledger s1.a6.quote_chat_waited_days)"},
+          {"asked": 18, "answered": 21, "by": 7, "working_minutes": 8.8, "wall_minutes": 8.8, "measured_from": "n 18", "reply": "later"},
+          {"asked": 24, "answered": 26, "by": 6, "working_minutes": 4.8, "wall_minutes": 4.8, "measured_from": "n 24", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 7,
+          "n": 14,
+          "working_minutes": 1285.5,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 7, "assistant": 2, "manager": 5, "note": 3},
+        "resolutions": [
+          {"day": "T-21d", "at": "09:17", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_as_is", "manager": 7},
+          {"draft": "d2", "outcome": "discarded", "manager": 7},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 6}
+        ],
+        "operator_credit": "the chat's first answer is nobody's; slot 7: his first line 1285.5 working minutes after the hand-off, four replies, one draft sent as it was and one discarded, nothing resolved; slot 5: a note and no reply; slot 6: one reply in his chat, a draft sent as it was"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "company account: weekly bookings, quotes, documents",
+    "handled": "assistant first, handed over (escalation); slot 5's note; slot 7; one line by slot 6",
+    "outcome": "смета отправлена почти через двое суток после запроса; записи нет; закрыт по 7 дням тишины",
+    "facts": [
+      "asked on the Tuesday of week T-4 at 20:41, after closing; handed over at 20:43",
+      "the first line by a person came on Thursday at 19:25: almost two days, two full working days of slots 5 and 7",
+      "slot 5 read it on Wednesday and passed it to slot 7 in a private note",
+      "the estimate, at list prices, went out on Thursday at 19:56",
+      "of her two questions slot 7 answered one; the other was answered by the assistant's draft, sent by slot 6 the next morning",
+      "no visit followed"
+    ],
+    "questions": ["S1.3"]
+  },
+  "why": [
+    "Дарья пишет как человек из офиса: полными фразами, с номерами, с датой согласования. Реплики всё короче: представилась, «жду со вторника», «Хорошо, жду», «Получила, спасибо». Никто никому не грубит.",
+    "Дмитрий — в заметке, а не клиенту, наспех, с опечаткой («договрных»): как в cast.json.",
+    "Никита: «да-да, сделаю», «должен отправить», восклицательный знак на опоздавшем ответе, из двух вопросов ответ на первый.",
+    "Два через два: запрос приходит вечером чужой смены, два дня висит на своей, а на третий день хвост закрывает уже другая смена."
+  ],
+  "new_facts": [
+    "Смета — на машины № 7 (Ford Transit: передние диски и колодки, 16 276 по прайсу) и № 8 (Citroën Jumper: аккумулятор, 11 274 по прайсу); нужна к согласованию у директора в пятницу недели T-4.",
+    "ERP: смету из этого чата предлагается считать одной из пяти «медленных» смет A6 (ledger s1.a6), просрочена; заказа не было.",
+    "Файл Smeta_Vkusny_vyezd_Transit_Jumper.pdf (пул 'estimate-pdf').",
+    "Запрос пришёл во вторник в 20:41, после закрытия: так день карточки сохранён, а первая реплика человека приходится на смену слотов 5 и 7.",
+    "Смета звонка 22 (неделя T-9) была на машины № 2 (передние колодки и диски, 16 276) и № 5 (ТО); эта, на № 7 и № 8, — другая: обе входят в пять «медленных» смет A6."
+  ]
+}

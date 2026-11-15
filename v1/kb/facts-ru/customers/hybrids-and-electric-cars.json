@@ -1,0 +1,45 @@
+{
+ "path": "customers/hybrids-and-electric-cars.md",
+ "title": "Гибриды и электромобили",
+ "title_en": "Hybrids and electric cars",
+ "exists_in": "both",
+ "english_sheet": "facts/customers/hybrids-and-electric-cars.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "The stated limit of what the shops do on hybrids and EVs.",
+ "serves": [
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "tiny",
+ "words_ru": 44,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Same limits; the hybrid technician is slot 10 at the flagship."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,336 @@
+{
+  "slot": 23,
+  "name": "Chad Binkley",
+  "site": "west",
+  "role": "service advisor, the weak desk",
+  "tier": "curt",
+  "voice": "Flat, mumbling, sighs before he answers. 'Brennan Auto.' Long silences while he looks something up without saying so. A bare price, no question about the car, no time; lets the caller go. Weak by omission, never rude for effect: he writes up what is asked and nothing more, and promises a day to get off the phone.",
+  "style_sheet": {
+    "greeting": [
+      20,
+      65,
+      15
+    ],
+    "name_and_number": [
+      55,
+      35,
+      10
+    ],
+    "need_discovery": [
+      15,
+      65,
+      20
+    ],
+    "price_with_next_step": [
+      25,
+      60,
+      15
+    ],
+    "offered_time": [
+      45,
+      45,
+      10
+    ],
+    "asked_for_booking": [
+      35,
+      40,
+      25
+    ],
+    "recap": [
+      80,
+      15,
+      5
+    ],
+    "objection": [
+      65,
+      30,
+      5
+    ]
+  },
+  "habits": [
+    "Answers 'Brennan Auto.'; the silence before an answer is written '...'.",
+    "A bare price ('Uh... two-sixty' style) with nothing after it.",
+    "'I'll have to call you back', and the call log shows he does not (auto-fail, 50 %).",
+    "Says 'should be ready' and names a day without calling the parts house.",
+    "Never recommends work; leaves the caller to ask."
+  ],
+  "fillers": [
+    "Uh,",
+    "...",
+    "Yeah,",
+    "Mm,"
+  ],
+  "tokens": {
+    "a_ok": [
+      "Yeah",
+      "Okay"
+    ],
+    "a_yes": [
+      "Yeah",
+      "Uh-huh"
+    ],
+    "a_sorry": [
+      "Yeah",
+      "Sorry"
+    ]
+  },
+  "greeting_tails": [
+    "",
+    " Yeah?",
+    " ...Go ahead.",
+    " Hello?",
+    " ...Yeah, what you need?",
+    " Mm-hm?"
+  ],
+  "greetings": [
+    "Brennan Auto, Chad.",
+    "Uh, Brennan Auto, this is Chad.",
+    "Brennan Auto Care, this is Chad.",
+    "Brennan Auto... Chad speakin'.",
+    "Yeah, Brennan Auto, Chad.",
+    "Brennan Auto, Chad here."
+  ],
+  "address": [],
+  "checks": {
+    "greeting": {
+      "0": [
+        "Mm — yeah?",
+        "...Yeah, hello.",
+        "Front desk.",
+        "Yeah, go ahead."
+      ],
+      "1": [
+        "Brennan Auto.",
+        "Uh, Brennan Auto Care.",
+        "Brennan Auto, hold on — yeah.",
+        "Brennan Auto, yeah."
+      ],
+      "2": [
+        "Brennan Auto, this is Chad.",
+        "Brennan Auto Care, Chad.",
+        "Brennan Auto... this is Chad.",
+        "Brennan Auto Care, Chad speakin'."
+      ]
+    },
+    "name_and_number": {
+      "0": [
+        "<skip>",
+        "We'll get it when you come in.",
+        "Don't worry about that.",
+        "Just come on."
+      ],
+      "1": [
+        "Okay.",
+        "Yeah, got it.",
+        "Mm-hm. Okay.",
+        "Yeah, alright."
+      ],
+      "2": [
+        "{customer_phone_said}. Alright.",
+        "...{customer_phone_said}. Okay.",
+        "Lemme get that... {customer_phone_said}.",
+        "{customer_phone_said}, okay, got it."
+      ]
+    },
+    "need_discovery": {
+      "0": [
+        "...Yeah, hold on.",
+        "Uh-huh. Hold on.",
+        "Okay. Lemme look.",
+        "Yeah, we can do that, I guess."
+      ],
+      "1": [
+        "What kinda car?",
+        "...What car is it?",
+        "What year?",
+        "And it's a what?"
+      ],
+      "2": [
+        "...{job_question}",
+        "Uh. {job_question}",
+        "How long's the {car_model} been like that?",
+        "...Alright. {job_question}"
+      ]
+    },
+    "price_with_next_step": {
+      "0": [
+        "I'd have to look.",
+        "I'll have to call you back on that.",
+        "Don't know off hand.",
+        "Have to get the {car_model} in here first."
+      ],
+      "1": [
+        "Uh... {price}.",
+        "{price}.",
+        "{price}, plus tax.",
+        "Like {price}."
+      ],
+      "2": [
+        "Uh... {price_statement}. {depends} You can bring it in.",
+        "{price_statement}, I think. {depends} Want to bring it by?",
+        "Uh, {inspection_line} You'd have to bring it in.",
+        "Should be {price_statement}. {depends} I can get you in, I guess."
+      ]
+    },
+    "offered_time": {
+      "0": [
+        "We're open till {closing_time}.",
+        "Anytime.",
+        "Just come on in.",
+        "Whenever."
+      ],
+      "1": [
+        "When you wanna bring it?",
+        "{time_1}, maybe.",
+        "I guess {time_1}.",
+        "What day?"
+      ],
+      "2": [
+        "...{time_1}. Or {time_2}.",
+        "Could do {time_1} or {time_2}, I guess.",
+        "Uh, {time_1}? Or {time_2}.",
+        "Got {time_1}, or {time_2}."
+      ]
+    },
+    "asked_for_booking": {
+      "0": [
+        "Alright.",
+        "Okay. Bye.",
+        "Yeah. Okay.",
+        "Alright, call back about the {car_model}."
+      ],
+      "1": [
+        "You want me to put you down?",
+        "I'll have to call you back.",
+        "I'll call you when I know.",
+        "Guess I could put the {car_model} down."
+      ],
+      "2": [
+        "Alright, {time_chosen}. I'll put you down, it's Chad.",
+        "{time_chosen}, okay. Ask for Chad.",
+        "Yeah, I got you down {time_chosen}. I'll be up front.",
+        "Okay. {time_chosen}. I'll write it up — Chad."
+      ]
+    },
+    "recap": {
+      "0": [
+        "Alright. Yeah. See ya.",
+        "Okay then.",
+        "Yep. Bye now.",
+        "Mm-hm, see ya."
+      ],
+      "1": [
+        "{time_chosen}.",
+        "So {time_chosen}.",
+        "{time_chosen}, okay.",
+        "Okay, {time_chosen} then."
+      ],
+      "2": [
+        "So... {time_chosen}, {shop_address}, {job_said}.",
+        "{time_chosen}. {job_said}. Here at {shop_address}.",
+        "Okay, that's {time_chosen}, {shop_address}, for {job_said}.",
+        "Uh, {time_chosen}, at {shop_address}. The {job_said}."
+      ]
+    },
+    "objection": {
+      "0": [
+        "...Alright.",
+        "Yeah, well... okay.",
+        "Uh-huh, okay.",
+        "...Okay, then."
+      ],
+      "1": [
+        "It's what it costs.",
+        "It's got a warranty.",
+        "That's just the price on {job_said}.",
+        "It's good parts."
+      ],
+      "2": [
+        "...Yeah. {objection_answer}",
+        "I mean — {objection_answer}",
+        "Well, I guess — {objection_answer}",
+        "Yeah, I know. {objection_answer}"
+      ]
+    }
+  },
+  "moves": {
+    "ack": [
+      "...Yeah. Okay.",
+      "Uh-huh. Go ahead.",
+      "Yeah... we can look at it, I guess.",
+      "Mm. Okay."
+    ],
+    "ask_what": [
+      "...What's it doin', now?",
+      "Okay. What's wrong with it?",
+      "Uh. What's the problem?"
+    ],
+    "ask_name": [
+      "Name on it?",
+      "What's the name on it?",
+      "Who's this?",
+      "...And the name?"
+    ],
+    "ask_number": [
+      "Phone number?",
+      "Number for you?",
+      "And a number.",
+      "...And a number?",
+      "Uh, number?"
+    ],
+    "recognise": [
+      "...Yeah, {customer_first}.",
+      "Oh. {customer_first}. Yeah.",
+      "Yeah, {customer_first}. Okay."
+    ],
+    "lookup": [
+      "Hold on...",
+      "Lemme see... yeah.",
+      "...Okay. Here it is."
+    ],
+    "hold": [
+      "Hold on.",
+      "Lemme check."
+    ],
+    "back_from_hold": [
+      "Yeah, okay.",
+      "...Alright, I'm here."
+    ],
+    "explain": [
+      "Uh, {job_explain}, usually.",
+      "I mean, {job_explain}.",
+      "Uh, {job_explain}, I think."
+    ],
+    "duration": [
+      "Should be ready {ready_time}.",
+      "Uh, {job_duration}?",
+      "Don't know. Have to see."
+    ],
+    "probe": [
+      "...{objection_probe}",
+      "Uh, {objection_probe}"
+    ],
+    "outbound_open": [
+      "Yeah, this is Chad at Brennan Auto.",
+      "{customer_first}? Chad, Brennan Auto.",
+      "Uh, hey, it's Chad from Brennan's."
+    ],
+    "closing_booked": [
+      "Alright, bye.",
+      "Okay, {customer_first}. Bye.",
+      "See you.",
+      "Okay. See ya.",
+      "Okay. {time_chosen}. Bye.",
+      "Yeah. See you then, I guess."
+    ],
+    "closing_open": [
+      "Yeah. Bye.",
+      "Alright. Bye.",
+      "Okay, {customer_first}, bye now.",
+      "Yeah, okay. Bye, {customer_first}.",
+      "Alright. Call back, I guess.",
+      "Okay. Bye then.",
+      "Mm. Bye."
+    ]
+  }
+}

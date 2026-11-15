@@ -1,0 +1,106 @@
+check_calls.py ru: the hand-written story calls in calls/ru/ against calls/DESIGN.md, the seed files and the ledger
+
+1. Files and format
+  ok    36 files named NN-<story>-<short-name>.json, each valid JSON with its number and story
+  ok    every call of section 6 is there once: 1 to 36
+  ok    33 calls with text and 3 misses without (ledger proposed.calls.handwritten)
+  ok    every file has the keys of DESIGN.md section 7; scripts are numbered with rising times; stored lines are in the product's shape (no timing, no confidence); word counts and talk time agree
+
+2. Section 6: who, the verdict each call must earn
+  ok    this script's table of expectations is the table of DESIGN.md section 6 (story, slot or first desk, the words of each verdict cell)
+  ok    every call is by the slot of section 6 and earns its verdict: the score inside its band, or no score; the outcome, tags, auto-fails, quality and call-back state the row names
+        #  story   slot  score     verdict on the stored lines
+        1  S4      6     40.0      new_enquiry; customer_will_call; tags quoted; auto-fails -; asr ok; wanted (40.0, 40.0)
+        2  S4      6     53.3      new_enquiry; customer_will_call; tags quoted; auto-fails -; asr ok; wanted (50, 56)
+        3  S4      6     63.6      new_enquiry; visit_agreed; tags visit_agreed,quoted; auto-fails -; asr ok; wanted (59, 64)
+        4  S4      6     68.8      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (66, 70)
+        5  S4      6     92.9      new_enquiry; visit_agreed; tags visit_agreed,quoted; auto-fails -; asr ok; wanted (85, 94)
+        6  S4      6     71.9      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (71.9, 71.9)
+        7  S4      6     94.4      new_enquiry; callback_promised; tags callback_promised,quoted; auto-fails -; asr ok; wanted scored
+        8  S7      6     no score  outbound: not judged
+        9  S8      7     31.2      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection,wrong_promise; auto-fails wrong_promise; asr ok; wanted (31.2, 31.25)
+       10  S8      5     no score  existing_job; callback_promised; tags callback_promised,complaint,customer_angry; auto-fails -; asr ok; wanted no score
+       11  S8      4     no score  outbound: not judged
+       12  S12     7     40.0      new_enquiry; customer_will_call; tags quoted,wrong_promise; auto-fails wrong_promise; asr ok; wanted (37.0, 43.0)
+       13  people  7     36.7      new_enquiry; callback_promised; tags callback_promised,quoted; auto-fails -; asr ok; wanted (32.0, 38.0)
+       14  people  7     56.2      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (53.0, 59.0)
+       15  S6      23    25.0      new_enquiry; customer_will_call; tags quoted,wrong_promise,customer_angry,complaint; auto-fails wrong_promise; asr ok; wanted (25.0, 25.0)
+       16  S6      23    no score  existing_job; customer_will_call; tags complaint,repeat_caller; auto-fails -; asr ok; wanted no score
+       17  S1      22    no score  existing_job; callback_promised; tags callback_promised,complaint,warranty; auto-fails -; asr poor; wanted no score
+       18  S1      -     miss      no text; waiting
+       19  S1      -     miss      no text; waiting
+       20  S1      -     miss      no text; waiting
+       21  S1      5     75.0      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (72.0, 78.0)
+       22  S1      7     46.4      new_enquiry; callback_promised; tags callback_promised,quoted; auto-fails -; asr ok; wanted (42.0, 48.0)
+       23  S1      6     62.5      new_enquiry; visit_agreed; tags visit_agreed,quoted; auto-fails -; asr ok; wanted (57.0, 63.0)
+       24  S1      6     80.0      new_enquiry; visit_agreed; tags visit_agreed; auto-fails -; asr ok; wanted (77.0, 83.0)
+       25  S5      16    83.3      new_enquiry; visit_agreed; tags visit_agreed,quoted; auto-fails -; asr poor; wanted (83.3, 83.3)
+       26  S5      16    100.0     new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (93.8, 100.0)
+       27  S5      16    100.0     new_enquiry; visit_agreed; tags visit_agreed,quoted; auto-fails -; asr ok; wanted (93.8, 100.0)
+       28  S5      17    53.3      new_enquiry; customer_will_call; tags quoted; auto-fails -; asr ok; wanted (52.0, 58.0)
+       29  people  5     no score  existing_job; visit_agreed; tags visit_agreed,complaint,customer_angry; auto-fails -; asr poor; wanted no score
+       30  people  6     no score  existing_job; visit_agreed; tags visit_agreed,complaint; auto-fails -; asr ok; wanted no score
+       31  S3      5     84.4      new_enquiry; visit_agreed; tags visit_agreed,quoted,repeat_caller; auto-fails -; asr poor; wanted scored
+       32  S3      6     81.2      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (77.0, 83.0)
+       33  people  22    45.5      new_enquiry; customer_will_call; tags quoted; auto-fails -; asr poor; wanted (42.0, 48.0)
+       34  people  22    50.0      new_enquiry; customer_will_call; tags quoted,price_objection; auto-fails -; asr ok; wanted (47.0, 53.0)
+       35  people  24    60.0      new_enquiry; customer_will_call; tags quoted,price_objection; auto-fails -; asr ok; wanted (59.0, 65.0)
+       36  people  24    81.2      new_enquiry; visit_agreed; tags visit_agreed,quoted,price_objection; auto-fails -; asr ok; wanted (78.0, 84.0)
+
+3. The score follows from the levels by the rubric's weights
+  ok    weights 1, 2, 2, 2, 3, 3, 1, 2 are those of DESIGN.md section 3
+  ok    and those of the product's default scorecard (config/defaults/phonecalls_scorecard.json), with the same checks in the same order
+  ok    for each judged call: levels equal the judge answer's; score = round(100 x sum(weight x level / 2) / sum(weight), 1), none under three scored checks; each of the eight checks is scored, N/A or not applicable; tags as the product builds them; truth differs from the verdict only in calls 25 and 33; a 'why' per scored check
+  ok    --product: judge.verdict of the product makes the stored verdict from the judge answer and the stored lines, for all 31 judged calls
+
+4. Quotes
+  ok    all 221 quotes of the judge answers (checks, auto-fails, strengths) sit word for word on the stored line they name; above level 0 that line is the manager's; each coaching line quotes the transcript
+
+5. Names, numbers, plates, units, prices, desks and addresses against the seed files and the ledger
+  ok    advisors are the cast's people at their own desks, lines and shops; customers and contacts are the seed files' (name and number) or invented with a free fictional number and a name nobody in the seed has; one caller, one number across the set
+  ok    15 plates and 9 fleet units named in the files are the seed files' cars, on the caller's own account or record, with the year, make and plate of the file
+  ok    39 prices are catalogue.json's for the car's class, the parts tier and the price class at the hour in force on the call's day, and each figure said aloud is that price in round speech; 10 story amounts are the ledger's rows
+  ok    addresses said are the shop's own; every call is inside opening hours, on its rule-R6 anchor and on the date that anchor falls on for the nominal T; every weekday said aloud is listed with its offset; A5's three misses ring the ledger's desks first, 1, 6 and 9 days after call 17
+  ok    auto-fails by person agree with the ledger: slot 7 has exactly its two planted wrong promises, and the slots the ledger gives none have none; call 7's found work is over the driver's limit
+
+6. The recognition model of DESIGN.md section 4, over the set
+  ok    the rates this script holds for the language are the cells of the design's tables and the ledger's rows (profiles, rules R2 to R12, asr_quality poor)
+  ok    each call's profile, restoration tier and consensus score agree (above 0.55, from 0.2, below); each carries its counts
+  ok    profiles: light 24, marked 7, heavy 2 of 33; the design's shares give 23.8, 6.6, 2.0 (and 0.7 with no conversation, which a call with text cannot be)
+  ok    asr_quality poor: 5 of 31 judged calls (16.1 %; the design: 14 %); every heavy call is poor and no light call is (calls [17, 25, 29, 31, 33])
+  ok    word difference between script and stored lines (digits count as different from words): heavy 40.6 %, light 13.6 %, marked 19.2 %; mean 16.4 %; each call inside its profile's range and equal to the figure its file states
+  ok    each file's counts agree with its script and its list of applied rules (overlaps, swaps of 2 to 4 turns, hold, names, terms, spelled strings, invented lines)
+  ok    R1 hesitations dropped: 26 of 30 (86.7 %; the design: 85 % of hesitations)
+  ok    R1 fillers dropped: 26 of 93 (28.0 %; the design: 25 % of fillers)
+  ok    R2 surnames, companies and streets heard wrong: 18 of 90 (20.0 %; the design: 15 % of mentions)
+  ok    R2 first names heard wrong: 4 of 163 (2.5 %; the design: 4 % of mentions)
+  ok    R3 plates with a character wrong, dropped or regrouped: 5 of 11 (45.5 %; the design: 30 % of mentions)
+  ok    R3 order numbers: 2 of 6 (33.3 %; the design: 20 % of mentions)
+  note  R3 VINs: no VIN is read out in the set, so the 70 % has nothing to be read on
+  ok    R4 trade words, makes and models replaced: 25 of 152 (16.4 %; the design: 14 % of listed terms)
+  ok    R5 money, times and years as digits: 245 of 273 (89.7 %; the design: 80 %, words otherwise)
+  ok    R5 money and time mentions with a wrong value: 16 of 273 (5.9 %; the design: 9 % of mentions)
+  ok    R5 phone numbers that lose or change a digit: 1 of 10 (10.0 %; the design: 8 % of mentions)
+  ok    R6 noise bursts in light calls: 7 in 24 calls (0.29 a call; the design: 0.3)
+  ok    R6 noise bursts in marked calls: 33 in 7 calls (4.71 a call; the design: 3)
+  ok    R6 noise bursts in heavy calls: 32 in 2 calls (16.00 a call; the design: 8)
+  ok    R7 overlaps: 65 in 68 minutes of talk (0.96 a minute; the design: 1.5)
+  ok    R7 backchannels lost: 30 of 65 (46.2 %; the design: 50 % of overlaps)
+  ok    R7 neighbouring turns joined: 12 of 65 (18.5 %; the design: 20 % of overlaps)
+  ok    R8 speaker swaps in light calls: 0 of 24 (the design: 3 % of calls)
+  ok    R8 speaker swaps in marked calls: 1 of 7 (the design: 15 % of calls)
+  ok    R8 speaker swaps in heavy calls: 1 of 2 (the design: 35 % of calls)
+  ok    R9 calls with a hold: 2 of 33 (6.1 %; the design: 5 % of calls)
+  ok    R9 holds stored as a line of the manager's: 1 of 2 (50.0 %; the design: 35 % of holds)
+  ok    R10 bad mobile line: 2 of 33 (6.1 %; the design: 6 % of calls)
+  ok    R10 a call on a bad line is marked or heavy
+  ok    R11 profanity is the customer's, never the staff's: 2 call(s) carry it (calls [15, 29]); the design's 4 % is of existing-job calls in the whole seed, and the story set holds its angriest callers
+  ok    R12 a line the recogniser invented: 0 of 33 (0.0 %; the design: 0 % of calls)
+
+7. Unclear customers (design rule R13)
+  ok    the design names calls [16, 21] as the hand-written calls that carry it, and this script expects [16, 21]
+  ok    exactly those calls carry a clarification loop: [16, 21] of 33 calls with text (6 %; the ledger's 12 % is the background's rate, and the hand-written set carries it only where a card says so)
+  ok    call 21 is made clear after two questions and its need-discovery check is at level 2; call 16 is left unclear, not asked again, and ends as customer_will_call (left unclear: [16])
+
+33 calls with text, 3 misses; 31 judged, 2 outbound; 31 of 31 verdicts derived again by the product's judge.verdict.
+RESULT PASS

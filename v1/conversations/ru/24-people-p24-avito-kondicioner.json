@@ -1,0 +1,143 @@
+{
+  "format": "seed-conversation/1",
+  "id": "24-people-p24-avito-kondicioner",
+  "configuration": "ru",
+  "number": 24,
+  "story": "people",
+  "title": "Авито в июле: заправка кондиционера «сегодня реально попасть?»",
+  "demonstrates": "Avito carries a price question and a same-day request. Slot 24 edits the draft into her own: who she is and where, the price with what it covers, the morning is full and what she can do, and the one question that decides the job. The confirmation lists everything and names what happens if the system is empty. The closing draft goes out as it was; labelled and resolved.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Айдар",
+      "invented": true,
+      "first_time": true,
+      "note": "пишет по объявлению; Hyundai Solaris 2019"
+    },
+    "staff": [
+      {"slot": 24, "name": "Камила Шакирова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Человек по объявлению, в жару.",
+    "vehicle": "Hyundai Solaris 2019",
+    "what_happens": "Цена и «сегодня реально попасть?». Утро занято; 13:30 или 17:00. Он берёт 17:00.",
+    "facts": {
+      "booked": "T-120d 17:00, west",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "3 800 ₽", "amount": 3800.0, "what": "заправка кондиционера с вакуумированием (R134a)", "from": {"catalogue": "ac_recharge", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "900 ₽", "amount": 900.0, "what": "диагностика системы кондиционирования", "from": {"catalogue": "ac_performance_check", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-120d": {"anchor": "slot 24's first working day on or after the Tuesday of week T-17", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": 17, "on_or_after_for_slot": 24}, "nominal": "Thu 2026-07-16"}
+  },
+  "floating_days": [
+    {"word": "сегодня", "said_on": "T-120d", "day": "T-120d", "form": "adverb"},
+    {"word": "сегодня на 13:30 или на 17:00", "said_on": "T-120d", "day": "T-120d", "form": "adverb"},
+    {"word": "сегодня, 17:00", "said_on": "T-120d", "day": "T-120d", "form": "adverb"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "avito",
+      "bridge": "avito:default",
+      "inbox": "Avito",
+      "assistant_mode": "drafts",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "u2i-seedv1-0247-0001",
+      "peer": {"id": "900000000000247", "name": "Айдар"},
+      "contact": {
+        "identifier": "avito_900000000000247",
+        "name": "Айдар",
+        "phone": null,
+        "avatar": {"has": false}
+      },
+      "listing_context": {
+        "item_id": "900000000000063",
+        "title": "Заправка и ремонт автокондиционеров. Казань, Техническая",
+        "url": "https://avito.example/900000000000063"
+      },
+      "opened": {
+        "day": "T-120d",
+        "at": "09:40:10",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "a new Avito chat: one per listing and buyer"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-120d", "at": "09:40:10", "kind": "message", "from": "customer", "text": "Здравствуйте, заправка кондера сколько стоит? сегодня реально попасть?"},
+        {"n": 2, "day": "T-120d", "at": "09:40:55", "kind": "draft", "id": "d1", "text": "Здравствуйте! Заправка кондиционера с вакуумированием (R134a) стоит 3 800 ₽. Время на сегодня уточню. Какая у вас машина и какого года?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-120d", "at": "09:47:30", "became": 4}},
+        {"n": 3, "day": "T-120d", "at": "09:47:28", "kind": "activity", "what": "assigned", "derived": true, "to": 24, "by": 24, "how": "first reply"},
+        {"n": 4, "day": "T-120d", "at": "09:47:30", "kind": "message", "from": "staff", "slot": 24, "text": "Айдар, здравствуйте! Это Камила, «Ермак-Сервис» на Технической. Заправка с вакуумированием — 3 800 ₽, это для фреона R134a, занимает около часа. Утро занято, давайте сделаем так: сегодня на 13:30 или на 17:00. Какая у вас машина и какого года? От этого зависит фреон."},
+        {"n": 5, "day": "T-120d", "at": "09:52:15", "kind": "message", "from": "customer", "text": "солярис 2019. на 17 давайте"},
+        {"n": 6, "day": "T-120d", "at": "09:52:55", "kind": "draft", "id": "d2", "text": "Хорошо, Айдар. Сегодня в 17:00 ждём вас.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 24, "day": "T-120d", "at": "09:55:20", "became": 7}},
+        {"n": 7, "day": "T-120d", "at": "09:55:20", "kind": "message", "from": "staff", "slot": 24, "text": "Записала: сегодня, 17:00, заправка кондиционера, Solaris 2019, фреон R134a, 3 800 ₽. Адрес: Казань, улица Техническая, 30. Если кондиционер не холодит совсем, сначала проверим систему на утечку, диагностика 900 ₽; без вашего согласия ничего не делаем."},
+        {"n": 8, "day": "T-120d", "at": "09:57:05", "kind": "message", "from": "customer", "text": "ок"},
+        {"n": 9, "day": "T-120d", "at": "09:57:45", "kind": "draft", "id": "d3", "text": "До встречи в 17:00!", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_as_is", "by": 24, "day": "T-120d", "at": "09:58:30", "became": 10}},
+        {"n": 10, "day": "T-120d", "at": "09:58:30", "kind": "message", "from": "staff", "slot": 24, "text": "До встречи в 17:00!"},
+        {"n": 11, "day": "T-120d", "at": "09:58:50", "kind": "activity", "what": "label_added", "label": "запись", "by": 24},
+        {"n": 12, "day": "T-120d", "at": "09:59:10", "kind": "activity", "what": "resolved", "by": 24}
+      ],
+      "assignee_history": [
+        {"day": "T-120d", "at": "09:47:28", "to": 24, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 24,
+        "labels": ["запись"],
+        "priority": {"base": "normal", "shown": "normal"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 24, "working_minutes": 7.3},
+        "waits": [
+          {"asked": 1, "answered": 4, "by": 24, "working_minutes": 7.3, "wall_minutes": 7.3, "measured_from": "n 1", "reply": "first"},
+          {"asked": 5, "answered": 7, "by": 24, "working_minutes": 3.1, "wall_minutes": 3.1, "measured_from": "n 5", "reply": "later"},
+          {"asked": 8, "answered": 10, "by": 24, "working_minutes": 1.4, "wall_minutes": 1.4, "measured_from": "n 8", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 24,
+          "n": 4,
+          "working_minutes": 7.3,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 3, "note": 0},
+        "resolutions": [
+          {"day": "T-120d", "at": "09:59:10", "by": 24}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 24},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 24},
+          {"draft": "d3", "outcome": "sent_as_is", "manager": 24}
+        ],
+        "operator_credit": "slot 24: first answer 7.3 minutes (her ledger row is 7), three replies, two drafts edited and one sent as it was, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "what a job costs",
+    "handled": "slot 24; the assistant drafts",
+    "outcome": "заправка кондиционера в тот же день, 17:00, west; закрыт слотом 24",
+    "facts": [
+      "the price given is 3 800 for R134a",
+      "the morning was full; she offered 13:30 or 17:00",
+      "a leak check, 900, is named as the step if the system is empty"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Она называет себя и сервис: на Авито человек не знает, с кем говорит.",
+    "«Утро занято, давайте сделаем так»: отказ, который клиент слышит как согласие.",
+    "Вопрос про машину и год — не формальность: от него зависит фреон и цена."
+  ],
+  "new_facts": [
+    "Объявление сервиса на Авито «Заправка и ремонт автокондиционеров. Казань, Техническая».",
+    "«Айдар», Hyundai Solaris 2019: заправка кондиционера на west в первый рабочий день слота 24 начиная со вторника недели T-17, 17:00.",
+    "У контакта нет картинки."
+  ]
+}

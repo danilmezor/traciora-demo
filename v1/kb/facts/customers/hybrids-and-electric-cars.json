@@ -1,0 +1,45 @@
+{
+ "path": "customers/hybrids-and-electric-cars.md",
+ "title": "Hybrids and electric cars",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "2",
+ "purpose": "The stated limit of what the shops do on hybrids and EVs.",
+ "serves": [
+  "challenge:kb-does-not-say"
+ ],
+ "length_class": "tiny",
+ "words_en": 59,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Hybrids: basic service only; high-voltage battery, inverter and drive motor are not repaired (design 1.5).",
+  "EVs: tyres and brakes (design 1.5); alignment added as part of tyre work.",
+  "Hybrid work is done at East Main only, because slot 10 is the only technician trusted with hybrids (cast)."
+ ],
+ "tables": [],
+ "list_items": [],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [
+  "\"Hybrid work is done at East Main only\" for customers. Reason: follows from the cast; makes a question about a hybrid at Bonny Oaks or Charlotte Pike answerable."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Same limits. The trusted technician is slot 10 at the main shop."
+ ]
+}

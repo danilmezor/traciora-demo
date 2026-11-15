@@ -1,0 +1,757 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-05-junior-month-5",
+  "configuration": "ru",
+  "number": 5,
+  "story": "S4",
+  "title": "The junior operator in her fifth month: two times before the price, a full summary, no doubt voiced",
+  "purpose": "Story S4, period P5. A caller who knows what he needs. Alina asks whose parts, offers two times before he asks the price, gives the price with what it is made of, books and sums up with the address. The one thing missing: she does not say his number back.",
+  "cast": {
+    "advisor": {
+      "slot": 6,
+      "name": "Алина Хасанова",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Андрей Куликов",
+      "invented": true,
+      "first_time": true
+    }
+  },
+  "call": {
+    "day": "a working day of slot 6 in score period P5 (rule R6)",
+    "nominal_offset": "T-40d",
+    "nominal_date": "2026-10-04",
+    "local_start": "13:30",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "102",
+    "ring_s": 4,
+    "caller_phone": "+7 907 211-68-27",
+    "repeat_caller": false,
+    "talk_s": 115
+  },
+  "scenario": {
+    "who_calls": "A first-time caller, Андрей Куликов, who has looked under the car himself.",
+    "vehicle": "Lada Granta, 2018",
+    "job": "front stabiliser links, both sides",
+    "wants": "a price and a time",
+    "what_happens": "Alina confirms the job and why, asks whose parts, offers Thursday at ten or Friday at nine, gives the price and its parts when asked, books Friday, takes the name and number and repeats the day, the hour, the address, the work and the sum.",
+    "facts": {
+      "labour_hour_rub": 1900,
+      "sway_bar_links_rub": 3700,
+      "labour_rub": 1520,
+      "link_rub": 1090,
+      "offered": [
+        "call+4d 10:00",
+        "call+5d 09:00"
+      ],
+      "booked": "call+5d 09:00",
+      "note": "catalogue.json sway_bar_links, class car, standard parts (CTR): 0.8 h x 1 900 + 2 x 1 090 = 3 700. The call is on a Sunday; her next working days are the Thursday and the Friday.",
+      "prices": [
+        {
+          "job": "sway_bar_links",
+          "name": "Замена стоек стабилизатора передних (2 шт.)",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 3700.0,
+          "labour_hour_rub": 1900,
+          "said": "три семьсот",
+          "said_rub": 3700
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "на четверг",
+      "day": "call+4d",
+      "form": "на + accusative"
+    },
+    {
+      "word": "в четверг",
+      "day": "call+4d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "на пятницу",
+      "day": "call+5d",
+      "form": "на + accusative"
+    },
+    {
+      "word": "пятница",
+      "day": "call+5d",
+      "form": "nominative"
+    },
+    {
+      "word": "до пятницы",
+      "day": "call+5d",
+      "form": "до + genitive"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Алина, здравствуйте."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.2,
+      "said": "Здрасьте. Мне стойки стабилизатора поменять надо, передние. Гранта. Когда можно подъехать и сколько это?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 10.8,
+      "said": "Гранта, стойки стабилизатора, обе передние. А стучат уже или на осмотре сказали?"
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 17.9,
+      "said": "Стучат. На мелких кочках — как горох сыплется. Я сам глянул — у левой палец болтается."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 24.3,
+      "said": "Так.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 25.9,
+      "said": "Понятно, тогда точно пора. Запчасти наши ставим или свои привезёте?"
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 32.6,
+      "said": "Ваши. Только нормальные, не самые дешёвые."
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 36.9,
+      "said": "Хорошо. Смотрите, э-э, по времени: могу записать вас на четверг на десять утра или на пятницу на девять. Работы там меньше часа."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 49.6,
+      "said": "А по деньгам?"
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 52.4,
+      "said": "С нашими стойками — три семьсот: работа тысяча пятьсот двадцать и две стойки Си-Ти-Ар по тысяче девяносто. Если захотите подешевле или оригинал — сумма изменится, скажу на месте. Так на четверг или на пятницу?"
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 68.4,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 70.1,
+      "said": "Давайте на пятницу. В четверг я на работе."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 75.0,
+      "said": "Пятница, девять утра, записываю. Как вас записать?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 79.1,
+      "said": "Куликов Андрей."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 81.0,
+      "said": "Андрей, и номер ваш подскажите."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 84.5,
+      "said": "Девятьсот семь, двести одиннадцать, шестьдесят восемь, двадцать семь."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 89.8,
+      "said": "Записала: пятница, девять утра, принимать буду я, Алина."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 95.3,
+      "said": "Хорошо."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 97.0,
+      "said": "Андрей, тогда ещё раз: пятница, девять утра, Московское шоссе, сорок, Гранта — меняем обе передние стойки стабилизатора, три семьсот с запчастями."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 108.5,
+      "said": "Всё верно. Спасибо."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 111.4,
+      "said": "Спасибо за звонок, до пятницы!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.74,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R4",
+        "what": "a brand said letter by letter comes out in Latin",
+        "script_turn": 10,
+        "said": "Си-Ти-Ар",
+        "stored": "CTR",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turns": [
+          8,
+          10,
+          13,
+          17,
+          19
+        ],
+        "said": [
+          "на пятницу на девять",
+          "по тысяче девяносто",
+          "девять утра",
+          "девять утра",
+          "девять утра"
+        ],
+        "stored": [
+          "на пятницу на 9",
+          "по 1090",
+          "9 утра",
+          "9 утра",
+          "9 утра"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "small particles dropped and word-form slips of the kind recognition makes",
+        "script_turn": 2,
+        "said": "Здрасьте",
+        "stored": "Здравствуйте",
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          11
+        ],
+        "error": false
+      },
+      {
+        "rule": "R4",
+        "what": "a make or model said in Russian comes out in Latin in some lines and in Cyrillic in others",
+        "script_turns": [
+          2,
+          19
+        ],
+        "said": [
+          "Гранта",
+          "Гранта"
+        ],
+        "stored": [
+          "Granta",
+          "Granta"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          8,
+          10,
+          16,
+          19
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          8,
+          21
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 1,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 1,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 0,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 3,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 5,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 6,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 4,
+        "latin": 3
+      },
+      "money_time": {
+        "mentions": 14,
+        "as_digits": 14,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 185,
+    "stored_words": 175,
+    "strict_word_difference": 0.168
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 196,
+    "duration_s": 115.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Алина, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здравствуйте. Мне стойки стабилизатора поменять надо, передние. Granta. Когда можно подъехать и сколько это?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Гранта, стойки стабилизатора, обе передние. А стучат уже или на осмотре сказали?",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Стучат. На мелких кочках, как горох сыплется. Я сам глянул, у левой палец болтается.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно, тогда точно пора. Запчасти наши ставим или свои привезёте?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ваши. Только нормальные, не самые дешёвые.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо. Смотрите, по времени: могу записать вас на четверг на 10 утра или на пятницу на 9. Работы там меньше часа.",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "А по деньгам?",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "С нашими стойками — 3700: работа 1520 и две стойки CTR по 1090. Если захотите подешевле или оригинал, сумма изменится, скажу на месте. Так на четверг или на пятницу?",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте на пятницу. В четверг я на работе.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Пятница, 9 утра, записываю. Как вас записать?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Куликов Андрей.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Андрей, и номер ваш подскажите.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "907 211 68 27.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Записала: пятница, 9 утра, принимать буду я, Алина.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Андрей, тогда ещё раз: пятница, 9 утра, Московское шоссе, 40, Granta, меняем обе передние стойки стабилизатора, 3700 с запчастями.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё верно. Спасибо.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Спасибо за звонок, до пятницы.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Алина, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Андрей, и номер ваш подскажите.",
+        "level": 1,
+        "segment": 13
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Запчасти наши ставим или свои привезёте?",
+        "level": 2,
+        "segment": 5
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "С нашими стойками — 3700: работа 1520 и две стойки CTR по 1090. Если захотите подешевле или оригинал, сумма изменится, скажу на месте. Так на четверг или на пятницу?",
+        "level": 2,
+        "segment": 9
+      },
+      {
+        "key": "offered_time",
+        "quote": "Смотрите, по времени: могу записать вас на четверг на 10 утра или на пятницу на 9.",
+        "level": 2,
+        "segment": 7
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Записала: пятница, 9 утра, принимать буду я, Алина.",
+        "level": 2,
+        "segment": 15
+      },
+      {
+        "key": "recap",
+        "quote": "Андрей, тогда ещё раз: пятница, 9 утра, Московское шоссе, 40, Granta, меняем обе передние стойки стабилизатора, 3700 с запчастями.",
+        "level": 2,
+        "segment": 17
+      }
+    ],
+    "na": [
+      {
+        "key": "objection",
+        "why": "Клиент не высказал сомнений."
+      }
+    ],
+    "auto_fails": [],
+    "outcome": "visit_agreed",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted"
+    ],
+    "strength": {
+      "quote": "Смотрите, по времени: могу записать вас на четверг на 10 утра или на пятницу на 9.",
+      "why": "Назвала два времени раньше, чем клиент спросил цену. К цене он подошёл, уже выбирая день.",
+      "segment": 7
+    },
+    "try_next": {
+      "check": "name_and_number",
+      "instead_of": "Андрей, и номер ваш подскажите.",
+      "say": "Андрей, номер этот, с которого звоните? Девятьсот семь, двести одиннадцать, шестьдесят восемь, двадцать семь, верно?"
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 92.9,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 1,
+          "segment": 13
+        },
+        {
+          "key": "need_discovery",
+          "level": 2,
+          "segment": 5
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 2,
+          "segment": 9
+        },
+        {
+          "key": "offered_time",
+          "level": 2,
+          "segment": 7
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 2,
+          "segment": 15
+        },
+        {
+          "key": "recap",
+          "level": 2,
+          "segment": 17
+        }
+      ],
+      "na": [
+        "objection"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [],
+      "outcome": "visit_agreed",
+      "no_visit_reason": null,
+      "tags": [
+        "visit_agreed",
+        "quoted"
+      ],
+      "score": 92.9,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 7,
+      "try_next_check": "name_and_number",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Алина, здравствуйте",
+        "name_and_number": "Андрей, и номер ваш подскажите",
+        "need_discovery": "Запчасти наши ставим или свои привезёте?",
+        "price_with_next_step": "С нашими стойками — 3700: работа 1520 и две стойки CTR по 1090. Если захотите подешевле или оригинал, сумма изменится, скажу на месте. Так на четверг или на пятницу?",
+        "offered_time": "Смотрите, по времени: могу записать вас на четверг на 10 утра или на пятницу на 9",
+        "asked_for_booking": "Записала: пятница, 9 утра, принимать буду я, Алина",
+        "recap": "Андрей, тогда ещё раз: пятница, 9 утра, Московское шоссе, 40, Granta, меняем обе передние стойки стабилизатора, 3700 с запчастями"
+      },
+      "na": {
+        "objection": "Клиент не высказал сомнений."
+      },
+      "auto_fails": {},
+      "strength": {
+        "quote": "Смотрите, по времени: могу записать вас на четверг на 10 утра или на пятницу на 9",
+        "why": "Назвала два времени раньше, чем клиент спросил цену. К цене он подошёл, уже выбирая день."
+      },
+      "try_next": {
+        "check": "name_and_number",
+        "instead_of": "Андрей, и номер ваш подскажите.",
+        "say": "Андрей, номер этот, с которого звоните? Девятьсот семь, двести одиннадцать, шестьдесят восемь, двадцать семь, верно?"
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 1,
+      "need_discovery": 2,
+      "price_with_next_step": 2,
+      "offered_time": 2,
+      "asked_for_booking": 2,
+      "recap": 2,
+      "objection": "na"
+    },
+    "score": 92.9
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "1: имя и номер взяты, номер вслух не повторён. Единственное, чего не хватило до ста.",
+    "need_discovery": "2: машина, работа и обстоятельства: стойки уже стучат, запчасти ставим свои, «не самые дешёвые».",
+    "price_with_next_step": "2: сумма, из чего она складывается, что её изменит, и тут же вопрос «на четверг или на пятницу».",
+    "offered_time": "2: два конкретных варианта, день и час.",
+    "asked_for_booking": "2: день, час и кто принимает.",
+    "recap": "2: время, адрес и работа перед прощанием, плюс сумма.",
+    "objection": "Не применяется: сомнений не было.",
+    "score": "(1·2 + 2·1 + 2·2 + 2·2 + 3·2 + 3·2 + 1·2) / 2 = 13 из 14 весовых баллов = 92.9.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Новый клиент Андрей Куликов, Lada Granta 2018, телефон +7 907 211-68-27. Запись на пятницу после звонка (через пять дней), 9:00: замена передних стоек стабилизатора, 3 700."
+  ]
+}

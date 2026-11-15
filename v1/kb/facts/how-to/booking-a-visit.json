@@ -1,0 +1,134 @@
+{
+ "path": "how-to/booking-a-visit.md",
+ "title": "Booking a visit",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "How a booking is entered so the day works; step 6 is the read-back that the declined team note repeated (S4).",
+ "serves": [
+  "S4",
+  "S7",
+  "S5",
+  "challenge:three-page-procedure",
+  "operate:contradiction"
+ ],
+ "length_class": "medium",
+ "words_en": 330,
+ "links_to": [
+  "policies/customer-records.md",
+  "policies/cancellations-and-no-shows.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Eight steps: find by phone; which shop; car and complaint in the customer's words; job from the catalogue; slot rules; read-back; source; shuttle and fleet details.",
+  "Slots: drop-offs 7:30, 8:00, 8:30; waiters 9:00-14:00 for jobs of an hour or less; diagnostics in slot 10's or slot 18's column; nothing over three hours after 13:00; Monday before 9:30 at east is A2's.",
+  "Step 6, the read-back (day, time, shop, work), is the point of slot 6's team note \"Read the booking back before hanging up\", proposed on the Monday of week T-3 and declined by slot 4: \"the page 'Booking a visit' already says this; propose the wording there\" (stories/S04, ledger s4.notes).",
+  "Source of the booking is recorded (ERP appointment: phone, web chat, messenger, walk-in).",
+  "The assistant cannot book; it raises a hand-over card and an advisor books (design 7.2 S7).",
+  "Confirmation the day before by 15:00."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Booking a visit",
+   "item": "Find the customer by phone number. Do not make a new one if the phone is already there: Customer records."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Which shop. Say it out loud. People book East Main and drive to Bonny Oaks."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "The car and the complaint, in their words. \"Grinding from the front when braking, started Tuesday.\" Not \"brakes\"."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Pick the job from the catalogue so the booking has hours on it. A noise or a light is an inspection or a diagnosis, not a repair."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Pick the slot."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Drop-off appointments at 7:30, 8:00 and 8:30. Waiters between 9:00 and 2:00, for jobs of an hour or less."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Check-engine and electrical work goes in the diagnostic column (Kevin at East Main, Andre at Bonny Oaks). When the column is full, offer the next day."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Do not book a job longer than three hours after 1:00."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Mondays at Bonny Oaks before 9:30 belong to Millsaps."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Read it back: day, time, which shop, what we are doing. Every booking, every time, even to a regular. \"So that is Friday at eight, East Main Street, for a brake inspection.\""
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Where it came from: phone, web chat, messenger or walk-in. Fill it in. It is how we know what the chat is worth."
+  },
+  {
+   "section": "Booking a visit",
+   "item": "Shuttle needed? Say the times. Company vehicle? Unit number, and for Nickajack the purchase-order number."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Kevin",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Andre",
+   "role": "lead_technician",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-2mo|date}}"
+ ],
+ "new_facts": [
+  "Slot rules: drop-offs at 7:30, 8:00, 8:30; waiters 9:00-14:00; nothing over three hours after 13:00. ERP appointment times should follow them."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{T-2mo|date}}",
+   "what": "Travis's addition of the paragraph \"From the website assistant\" (proposed by slot 5, approved by slot 4); message: \"How chat bookings reach us.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian slots through the day 9:00-19:00; sources add VK and Avito. Same step 6."
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "path": "services/hybrids.md",
+ "title": "Гибриды",
+ "title_en": "Hybrids",
+ "exists_in": "both",
+ "english_sheet": "facts/services/hybrids.json",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "10",
+ "purpose": "What is and is not done on hybrids, for the counter.",
+ "serves": [
+  "S5",
+  "challenge:combine-policy-and-price",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_ru": 159,
+ "links_to": [
+  "customers/hybrids-and-electric-cars.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Hybrids are rare in the Russian parc: the page says so in its first line.",
+  "At the other two shops a hybrid gets tyre fitting and wipers only (as in English)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Гибриды",
+   "item": "Замену масла. Двигатель работает меньше, но масло всё равно стареет. Интервал — по регламенту."
+  },
+  {
+   "section": "Гибриды",
+   "item": "Тормоза. Колодки ходят долго, потому что тормозит в основном электромотор. Зато от простоя закисают направляющие. Их смотрим и обслуживаем, даже когда колодки толстые."
+  },
+  {
+   "section": "Гибриды",
+   "item": "Шины, сход-развал, подвеску, рулевое."
+  },
+  {
+   "section": "Гибриды",
+   "item": "12-вольтовый аккумулятор. Гибрид со слабым 12-вольтовым аккумулятором не заводится и показывает десяток не связанных между собой ошибок. Сначала проверяю его."
+  },
+  {
+   "section": "Гибриды",
+   "item": "Антифриз двигателя и, если так написано в регламенте, антифриз инвертора."
+  },
+  {
+   "section": "Гибриды",
+   "item": "Диагностику двигателя и обычной электрики."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Андрей Викторович Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

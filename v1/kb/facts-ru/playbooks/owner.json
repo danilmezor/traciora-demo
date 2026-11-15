@@ -1,0 +1,107 @@
+{
+ "path": "playbooks/owner.md",
+ "title": "Памятка: владелец и администратор",
+ "title_en": "Playbook: owner and administrator",
+ "exists_in": "both",
+ "english_sheet": "facts/playbooks/owner.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Administrator: the managing owner's own notes on running the product.",
+ "serves": [
+  "S10",
+  "S12",
+  "visibility:administrator",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 273,
+ "links_to": [
+  "team/who-is-who.md",
+  "prices/how-prices-change.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The four reports and their times are read from ledger s10.tasks.ru: company clients Monday 9:00, discounts Friday 18:00, Kazan against plan Monday 10:00, missed calls daily 20:15.",
+  "Folder names are the Russian display names."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Как у нас размечена база знаний",
+   "columns": [
+    "Раздел",
+    "Кто видит"
+   ],
+   "rows": [
+    {
+     "Раздел": "Клиентам, Цех, Услуги и прайс-лист",
+     "Кто видит": "Все — и помощник на сайте"
+    },
+    {
+     "Раздел": "Остальные страницы раздела «Цены», а также Правила, Корпоративные клиенты, Как мы работаем, Запчасти, Площадки, Команда",
+     "Кто видит": "Мастера-приёмщики и выше"
+    },
+    {
+     "Раздел": "Лимиты задолженности, Бухгалтерия",
+     "Кто видит": "Старшие мастера-приёмщики, бухгалтерия и выше"
+    },
+    {
+     "Раздел": "Руководству",
+     "Кто видит": "Руководители и выше"
+    },
+    {
+     "Раздел": "Владельцам, Памятки по должностям",
+     "Кто видит": "Я"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Мои отчёты",
+   "item": "По понедельникам в 9:00: «Корпоративные клиенты за неделю»."
+  },
+  {
+   "section": "Мои отчёты",
+   "item": "По пятницам в 18:00: «Скидки больше 10 %»."
+  },
+  {
+   "section": "Мои отчёты",
+   "item": "По понедельникам в 10:00: «Казань: план и факт»."
+  },
+  {
+   "section": "Мои отчёты",
+   "item": "Каждый день в 20:15: «Пропущенные звонки за день»."
+  }
+ ],
+ "prices": [],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@golive+2w|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "added the section \"When a price changes\"; message: \"After the timing belt.\"",
+   "message_ru": "После истории с ремнём ГРМ."
+  }
+ ],
+ "has_history": true
+}

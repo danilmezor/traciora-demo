@@ -1,0 +1,658 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-12-brakes-from-the-stale-page",
+  "configuration": "ru",
+  "number": 12,
+  "story": "S12",
+  "title": "The newcomer prices a brake job from the stale page",
+  "purpose": "Story S12, call 12. Nikita reads the price of front pads and discs off the page \"Вопросы о тормозах\", which still uses the hour from before the rise: 12,268 against 12,520 on the price list. Asked whether the price is exact, he says the page has not been updated for a long time \"but it should be the same\". The caller goes to compare.",
+  "cast": {
+    "advisor": {
+      "slot": 7,
+      "name": "Никита Ведяшкин",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Вероника Крылова",
+      "invented": true,
+      "first_time": true,
+      "note": "never named on the call"
+    }
+  },
+  "call": {
+    "day": "slot 7's first working day on or after the Tuesday of week T-5 (rule R6; card S12, call 12; for the nominal T that Tuesday is his working day)",
+    "nominal_offset": "T-38d",
+    "nominal_date": "2026-10-06",
+    "local_start": "16:25",
+    "site": "main",
+    "direction": "inbound",
+    "line": "100",
+    "answered_by": "103",
+    "ring_s": 12,
+    "caller_phone": "+7 907 549-79-22",
+    "repeat_caller": false,
+    "talk_s": 91
+  },
+  "scenario": {
+    "who_calls": "A first-time caller who has been quoted one price and charged another somewhere else.",
+    "vehicle": "Lada Vesta, 2018",
+    "job": "front brake pads and discs",
+    "wants": "an exact price",
+    "what_happens": "Nikita names 12,268 from the service page, admits the page is old and says the price should be the same, names the pad brand from his days in a parts shop, offers to book and asks when she could come. She says she will ring a couple of other places; he says \"of course\".",
+    "facts": {
+      "quoted_rub": 12268,
+      "list_price_rub": 12520,
+      "labour_hour_on_the_page_rub": 1760,
+      "labour_hour_now_rub": 1900,
+      "note": "Ledger s12.brake_price: stale 12 268, now 12 520 (catalogue.json front_pads_rotors, class car: 1.8 h + pads 2 660 + 2 discs x 3 220). Standard parts are Sangsin Hi-Q.",
+      "prices": [
+        {
+          "job": "front_pads_rotors",
+          "name": "Замена передних тормозных дисков и колодок",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 12520.0,
+          "labour_hour_rub": 1900
+        }
+      ],
+      "ledger": {
+        "s12.brake_price": {
+          "now": 12520,
+          "stale": 12268
+        }
+      }
+    }
+  },
+  "floating_days": [],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис, Никита, здравствуйте!"
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 2.8,
+      "said": "Здравствуйте. Подскажите, сколько у вас стоит поменять передние колодки вместе с дисками? Веста у меня."
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 11.4,
+      "said": "Да-да, конечно. Колодки и диски, перед... э-э... Секундочку, открою. Так. Двенадцать тысяч двести шестьдесят восемь, с запчастями."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 21.2,
+      "said": "Двенадцать двести шестьдесят восемь. Это точная цена? А то мне в одном месте назвали одну, приехала — оказалось другая."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 29.8,
+      "said": "Да-да.",
+      "overlap": true
+    },
+    {
+      "n": 6,
+      "who": "advisor",
+      "at_s": 31.4,
+      "said": "Да-да, это у нас на сайте, в разделе про тормоза. Страница, правда, давно не обновлялась, но должно быть так же, вроде бы."
+    },
+    {
+      "n": 7,
+      "who": "customer",
+      "at_s": 44.0,
+      "said": "Вроде бы?"
+    },
+    {
+      "n": 8,
+      "who": "advisor",
+      "at_s": 45.6,
+      "said": "Ну, э-э, цены у нас не скачут. Двенадцать двести шестьдесят восемь, без проблем."
+    },
+    {
+      "n": 9,
+      "who": "customer",
+      "at_s": 53.0,
+      "said": "Понятно. А колодки какие ставите?"
+    },
+    {
+      "n": 10,
+      "who": "advisor",
+      "at_s": 56.6,
+      "said": "Сангсин, корейские, Хай-Кью. И диски их же. Нормальные, я сам такие продавал, когда в магазине работал."
+    },
+    {
+      "n": 11,
+      "who": "customer",
+      "at_s": 64.1,
+      "said": "Угу.",
+      "overlap": true
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 66.5,
+      "said": "Ясно."
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 68.6,
+      "said": "Давайте запишу вас. Вам когда удобно подъехать?"
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 73.1,
+      "said": "Ой, не знаю пока. Мне ещё в пару мест позвонить надо, сравнить. Я подумаю."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 81.5,
+      "said": "Да-да, конечно, без проблем. Звоните!"
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 85.2,
+      "said": "Хорошо, спасибо. До свидания."
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 88.4,
+      "said": "До свидания!"
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.66,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R4",
+        "what": "a brand name heard approximately",
+        "script_turn": 10,
+        "said": "Сангсин",
+        "stored": "Санксин",
+        "error": true
+      },
+      {
+        "rule": "R4",
+        "what": "a brand said in Russian comes out in Latin",
+        "script_turn": 10,
+        "said": "Хай-Кью",
+        "stored": "Hi-Q",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "numbers as digits; no value is wrong",
+        "script_turn": 3,
+        "said": "Двенадцать тысяч двести шестьдесят восемь",
+        "stored": "12 268",
+        "error": false
+      },
+      {
+        "rule": "R6",
+        "what": "noise: a word form replaced by a plausible wrong one",
+        "script_turn": 4,
+        "said": "приехала — оказалось другая",
+        "stored": "приехала, оказалась другая",
+        "error": false
+      },
+      {
+        "rule": "R7",
+        "what": "a backchannel said over the other speaker is lost",
+        "script_turns": [
+          5,
+          11
+        ],
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "the company's name loses its hyphen",
+        "script_turns": [
+          1
+        ],
+        "said": "Ермак-Сервис",
+        "stored": "Ермак Сервис",
+        "error": false
+      },
+      {
+        "rule": "R5",
+        "what": "money, times, mileage and counts as digits",
+        "script_turns": [
+          4,
+          8
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "hesitations dropped, trailing-offs and exclamations smoothed, some opening fillers dropped",
+        "script_turns": [
+          1,
+          3,
+          8,
+          15,
+          17
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 2,
+        "lost": 2,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 2,
+        "dropped": 1
+      },
+      "fillers": {
+        "said": 1,
+        "dropped": 0
+      },
+      "names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 3,
+        "as_digits": 3,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 1,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 0,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 146,
+    "stored_words": 137,
+    "strict_word_difference": 0.144
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 152,
+    "duration_s": 91.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис, Никита, здравствуйте.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здравствуйте. Подскажите, сколько у вас стоит поменять передние колодки вместе с дисками? Веста у меня.",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, конечно. Колодки и диски, перед, э-э. Секундочку, открою. Так. 12 268, с запчастями.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "12 268. Это точная цена? А то мне в одном месте назвали одну, приехала, оказалась другая.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, это у нас на сайте, в разделе про тормоза. Страница, правда, давно не обновлялась, но должно быть так же, вроде бы.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Вроде бы?",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну, цены у нас не скачут. 12 268, без проблем.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Понятно. А колодки какие ставите?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Санксин, корейские, Hi-Q. И диски их же. Нормальные, я сам такие продавал, когда в магазине работал.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ясно.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Давайте запишу вас. Вам когда удобно подъехать?",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ой, не знаю пока. Мне ещё в пару мест позвонить надо, сравнить. Я подумаю.",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да-да, конечно, без проблем. Звоните.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо, спасибо. До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис, Никита, здравствуйте.",
+        "level": 2,
+        "segment": 0
+      },
+      {
+        "key": "name_and_number",
+        "quote": "Да-да, конечно, без проблем. Звоните.",
+        "level": 0,
+        "segment": 12
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Колодки и диски, перед, э-э.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "12 268, с запчастями.",
+        "level": 1,
+        "segment": 2
+      },
+      {
+        "key": "offered_time",
+        "quote": "Вам когда удобно подъехать?",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Давайте запишу вас.",
+        "level": 1,
+        "segment": 10
+      },
+      {
+        "key": "objection",
+        "quote": "Ой, не знаю пока. Мне ещё в пару мест позвонить надо, сравнить. Я подумаю.",
+        "level": 0,
+        "segment": 11
+      }
+    ],
+    "na": [
+      {
+        "key": "recap",
+        "why": "Ни о чём не договорились: клиентка сказала, что будет сравнивать."
+      }
+    ],
+    "auto_fails": [
+      {
+        "key": "wrong_promise",
+        "quote": "Страница, правда, давно не обновлялась, но должно быть так же, вроде бы.",
+        "segment": 4
+      }
+    ],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "wrong_promise"
+    ],
+    "strength": {
+      "quote": "Санксин, корейские, Hi-Q.",
+      "why": "На вопрос о колодках ответил сразу и по делу: марка, страна, линейка. Это то, что он знает лучше всех на приёмке.",
+      "segment": 8
+    },
+    "try_next": {
+      "check": "objection",
+      "instead_of": "Да-да, конечно, без проблем. Звоните.",
+      "say": "А с чем будете сравнивать: с ценой или с тем, какие запчасти ставят? Давайте я посчитаю вам по прайсу точную сумму с нашими колодками и дисками, запишете её и сравните уже с цифрой, а не на глаз."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 40.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "100",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 2,
+          "segment": 0
+        },
+        {
+          "key": "name_and_number",
+          "level": 0,
+          "segment": 12
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 2
+        },
+        {
+          "key": "offered_time",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 1,
+          "segment": 10
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 11
+        }
+      ],
+      "na": [
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [
+        {
+          "key": "wrong_promise",
+          "segment": 4
+        }
+      ],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted",
+        "wrong_promise"
+      ],
+      "score": 40.0,
+      "applicable": 7,
+      "asr_quality": "ok",
+      "strength_segment": 8,
+      "try_next_check": "objection",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис, Никита, здравствуйте",
+        "name_and_number": "Да-да, конечно, без проблем. Звоните",
+        "need_discovery": "Колодки и диски, перед, э-э",
+        "price_with_next_step": "12 268, с запчастями",
+        "offered_time": "Вам когда удобно подъехать?",
+        "asked_for_booking": "Давайте запишу вас",
+        "objection": "Ой, не знаю пока. Мне ещё в пару мест позвонить надо, сравнить. Я подумаю"
+      },
+      "na": {
+        "recap": "Ни о чём не договорились: клиентка сказала, что будет сравнивать."
+      },
+      "auto_fails": {
+        "wrong_promise": "Страница, правда, давно не обновлялась, но должно быть так же, вроде бы"
+      },
+      "strength": {
+        "quote": "Санксин, корейские, Hi-Q",
+        "why": "На вопрос о колодках ответил сразу и по делу: марка, страна, линейка. Это то, что он знает лучше всех на приёмке."
+      },
+      "try_next": {
+        "check": "objection",
+        "instead_of": "Да-да, конечно, без проблем. Звоните.",
+        "say": "А с чем будете сравнивать: с ценой или с тем, какие запчасти ставят? Давайте я посчитаю вам по прайсу точную сумму с нашими колодками и дисками, запишете её и сравните уже с цифрой, а не на глаз."
+      }
+    }
+  },
+  "truth": {
+    "note": "Чистая речь даёт те же уровни: распознавание этому звонку ничего не стоило.",
+    "levels": {
+      "greeting": 2,
+      "name_and_number": 0,
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": 1,
+      "asked_for_booking": 1,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 40.0
+  },
+  "why": {
+    "greeting": "2: компания и имя в первой фразе.",
+    "name_and_number": "0: не спросил ни имени, ни номера.",
+    "need_discovery": "1: машина и работа известны со слов клиентки; ни года, ни пробега, ни того, что с тормозами, он не спросил.",
+    "price_with_next_step": "1: сумма с запчастями, без слова о том, от чего она зависит, и без времени рядом.",
+    "offered_time": "1: спросил, когда удобно. Своего времени не назвал.",
+    "asked_for_booking": "1: запись предложил, клиентка ушла сравнивать.",
+    "recap": "Не применяется: ни о чём не договорились.",
+    "objection": "0: на «мне ещё в пару мест позвонить надо, сравнить» ответил «конечно, звоните».",
+    "auto_fails": "wrong_promise: цена названа без оснований, и это слышно в его же реплике: страница давно не обновлялась, «но должно быть так же, вроде бы». По прайсу работа стоит 12 520, он назвал 12 268.",
+    "order": "По датам это первое из двух неверных обещаний Никиты; второе — звонок 9, через месяц. Так их считают и карточки S08 и S12.",
+    "score": "(1·2 + 2·0 + 2·1 + 2·1 + 3·1 + 3·1 + 2·0) / 2 = 6 из 15 весовых баллов = 40.0.",
+    "carried_by": [
+      "offered_time",
+      "asked_for_booking"
+    ]
+  },
+  "new_facts": [
+    "Клиентка на Lada Vesta 2018, телефон +7 907 549-79-22. Имя на звонке не спрошено (в файле она Вероника Крылова); записи нет."
+  ]
+}

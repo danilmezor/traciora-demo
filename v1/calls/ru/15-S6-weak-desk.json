@@ -1,0 +1,782 @@
+{
+  "format": "seed-call/1",
+  "id": "ru-15-s6-weak-desk",
+  "configuration": "ru",
+  "number": 15,
+  "story": "S6",
+  "copied_from": "calls/samples/ru-3-weak-desk.json",
+  "title": "The weak desk at the bought shop: a date with nothing behind it, and work he is handed and does not take",
+  "purpose": "Story S6 in the Russian configuration. A customer whose car waits for a power-steering pump asks if it is ready. The advisor names a day without having called the supplier, and when the customer asks for an oil change while the car stands there, he says it needs a separate order and puts it off. The second request makes the call a new enquiry.",
+  "cast": {
+    "advisor": {
+      "slot": 23,
+      "name": "Вячеслав Крюков",
+      "fixed": true
+    },
+    "customer": {
+      "name": "Айрат Гизатуллин",
+      "ref": "named_customers.json ru.S6_waiting_nine_days",
+      "first_time": false
+    }
+  },
+  "call": {
+    "day": "slot 23's 3rd working day before T (rule R6; card S06, call 15)",
+    "nominal_offset": "T-5d",
+    "nominal_date": "2026-11-08",
+    "local_start": "16:10",
+    "site": "west",
+    "direction": "inbound",
+    "line": "300",
+    "answered_by": "302",
+    "ring_s": 24,
+    "caller_phone": "+7 907 526-98-79",
+    "repeat_caller": false,
+    "talk_s": 113
+  },
+  "scenario": {
+    "who_calls": "Айрат Гизатуллин, whose car has stood at the Kazan shop since T-9d waiting for a part.",
+    "vehicle": "Peugeot 308, 2011, О972НВ116",
+    "job": "the pump of the electro-hydraulic power steering (насос электрогидроусилителя руля), ordered from the supplier the shop kept after the purchase; then, asked on the call, an engine oil change",
+    "wants": "to know whether the car is ready; then a price for an oil change, done while the car is there",
+    "what_happens": "Vyacheslav says the pump comes tomorrow, the Monday the supplier last named, and the car is ready on Tuesday, and admits he has not called the supplier today. Asked to change the oil as well, he names the labour price, says it needs a separate order and puts it off. The customer drops the oil change and says he will call before he comes. The car is still there at T.",
+    "facts": {
+      "price_oil_change_labour_rub": 1330,
+      "promised_ready": "call+2d",
+      "actually_ready": "not by T",
+      "note": "The Russian shops are open on public holidays, so the car arrives on T-9d, a Wednesday in the nominal calendar; the call is on the Sunday, his own working day, with the chat's second message unanswered since 15:02 (conversations/ru/06). The price is catalogue.json oil_service labour at today's hour: 0.7 x 1 900 = 1 330.",
+      "prices": [
+        {
+          "job": "oil_service",
+          "name": "Замена масла в двигателе и масляного фильтра",
+          "vehicle_class": "car",
+          "parts_tier": "standard",
+          "price_class": "list",
+          "rub": 6700.0,
+          "labour_hour_rub": 1900
+        }
+      ]
+    }
+  },
+  "floating_days": [
+    {
+      "word": "в прошлую среду",
+      "day": "call-4d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "в четверг",
+      "day": "call-3d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "в субботу",
+      "day": "call-1d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "в понедельник",
+      "day": "call+1d",
+      "form": "в + accusative"
+    },
+    {
+      "word": "понедельник",
+      "day": "call+1d",
+      "form": "nominative"
+    },
+    {
+      "word": "во вторник",
+      "day": "call+2d",
+      "form": "во + accusative"
+    }
+  ],
+  "script": [
+    {
+      "n": 1,
+      "who": "advisor",
+      "at_s": 0.0,
+      "said": "Ермак-Сервис."
+    },
+    {
+      "n": 2,
+      "who": "customer",
+      "at_s": 1.4,
+      "said": "Алло, здравствуйте. Это Гизатуллин, у вас мой Пежо стоит, триста восьмой. Хотел узнать — готова машина?"
+    },
+    {
+      "n": 3,
+      "who": "advisor",
+      "at_s": 9.2,
+      "said": "Пежо триста восьмой... насос. А, да, Айрат. Нет, не готова ещё. Запчасть ждём."
+    },
+    {
+      "n": 4,
+      "who": "customer",
+      "at_s": 16.4,
+      "said": "Как ждём? Я её в прошлую среду пригнал."
+    },
+    {
+      "n": 5,
+      "who": "advisor",
+      "at_s": 20.6,
+      "said": "Ну да. Насос под заказ, заказан."
+    },
+    {
+      "n": 6,
+      "who": "customer",
+      "at_s": 24.3,
+      "said": "Так он в четверг был заказан! Мне сначала сказали — в субботу, потом — в понедельник. Завтра понедельник."
+    },
+    {
+      "n": 7,
+      "who": "advisor",
+      "at_s": 33.1,
+      "said": "Завтра придёт. Во вторник заберёте."
+    },
+    {
+      "n": 8,
+      "who": "customer",
+      "at_s": 36.3,
+      "said": "Это вам поставщик сказал, что завтра?"
+    },
+    {
+      "n": 9,
+      "who": "advisor",
+      "at_s": 40.0,
+      "said": "Да я им сегодня не звонил ещё. Ну сколько можно-то уже, придёт."
+    },
+    {
+      "n": 10,
+      "who": "customer",
+      "at_s": 46.7,
+      "said": "То есть вы не знаете. Слушайте, я уже думаю — забрать её к чёрту и в другой сервис отогнать."
+    },
+    {
+      "n": 11,
+      "who": "advisor",
+      "at_s": 56.5,
+      "said": "Завтра придёт. Во вторник всё будет."
+    },
+    {
+      "n": 12,
+      "who": "customer",
+      "at_s": 60.2,
+      "said": "...Ладно. Слушайте, ну раз она всё равно у вас стоит — масло мне заодно поменяйте. Сколько это будет?"
+    },
+    {
+      "n": 13,
+      "who": "advisor",
+      "at_s": 69.5,
+      "said": "Масло? Тысяча триста тридцать. Работа."
+    },
+    {
+      "n": 14,
+      "who": "customer",
+      "at_s": 71.7,
+      "said": "Тысяча триста тридцать. Ну и сделайте сразу, пока стоит."
+    },
+    {
+      "n": 15,
+      "who": "advisor",
+      "at_s": 75.9,
+      "said": "Это мне отдельный наряд открывать надо. Давайте сначала с насосом закончим, отдадим машину."
+    },
+    {
+      "n": 16,
+      "who": "customer",
+      "at_s": 83.1,
+      "said": "Да она у вас пятый день во дворе стоит, ни хрена с ней не делается!"
+    },
+    {
+      "n": 17,
+      "who": "advisor",
+      "at_s": 91.4,
+      "said": "Ну. Запчасть придёт — там видно будет."
+    },
+    {
+      "n": 18,
+      "who": "customer",
+      "at_s": 95.1,
+      "said": "Всё, не надо. С маслом я подумаю."
+    },
+    {
+      "n": 19,
+      "who": "advisor",
+      "at_s": 99.3,
+      "said": "Хорошо."
+    },
+    {
+      "n": 20,
+      "who": "customer",
+      "at_s": 100.7,
+      "said": "Я во вторник вам позвоню, прежде чем ехать. И чтоб готова была."
+    },
+    {
+      "n": 21,
+      "who": "advisor",
+      "at_s": 108.5,
+      "said": "Хорошо."
+    },
+    {
+      "n": 22,
+      "who": "customer",
+      "at_s": 109.9,
+      "said": "Всё, до свидания."
+    },
+    {
+      "n": 23,
+      "who": "advisor",
+      "at_s": 112.0,
+      "said": "До свидания."
+    }
+  ],
+  "recognition": {
+    "profile": "light",
+    "consensus_score": 0.66,
+    "restoration_tier": "high",
+    "applied": [
+      {
+        "rule": "R4",
+        "what": "a make said in Russian comes out in Latin in the caller's line and in Cyrillic in the advisor's",
+        "script_turn": 2,
+        "said": "Пежо",
+        "stored": "Peugeot",
+        "error": false
+      },
+      {
+        "rule": "R2",
+        "what": "one л lost in the surname; the hyphen lost in the company's name",
+        "script_turns": [
+          1,
+          2
+        ],
+        "said": [
+          "Ермак-Сервис",
+          "Гизатуллин"
+        ],
+        "stored": [
+          "Ермак Сервис",
+          "Гизатулин"
+        ],
+        "error": true
+      },
+      {
+        "rule": "R5",
+        "what": "the price, the model number and an ordinal as digits",
+        "script_turns": [
+          13,
+          14,
+          16
+        ],
+        "error": false
+      },
+      {
+        "rule": "R11",
+        "what": "the caller's profanity is kept as said",
+        "script_turns": [
+          10,
+          16
+        ],
+        "said": [
+          "к чёрту",
+          "ни хрена"
+        ],
+        "stored": [
+          "к чёрту",
+          "ни хрена"
+        ],
+        "error": false
+      },
+      {
+        "rule": "R1",
+        "what": "'Алло', the pauses and a particle dropped; small word-form slips of the kind recognition makes",
+        "script_turns": [
+          2,
+          3,
+          4,
+          5,
+          9,
+          10,
+          12,
+          20,
+          22
+        ],
+        "said": [
+          "заказан",
+          "можно-то",
+          "заодно",
+          "чтоб"
+        ],
+        "stored": [
+          "заказано",
+          "можно",
+          "за одно",
+          "чтобы"
+        ],
+        "error": false
+      }
+    ],
+    "counts": {
+      "overlaps": {
+        "said": 0,
+        "lost": 0,
+        "joined": 0
+      },
+      "hesitations": {
+        "said": 0,
+        "dropped": 0
+      },
+      "fillers": {
+        "said": 5,
+        "dropped": 1
+      },
+      "names": {
+        "mentions": 2,
+        "wrong": 1
+      },
+      "first_names": {
+        "mentions": 1,
+        "wrong": 0
+      },
+      "plates": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "vins": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "order_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "part_numbers": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "trade_terms": {
+        "mentions": 2,
+        "wrong": 0
+      },
+      "script_choice": {
+        "foreign_names": 2,
+        "latin": 1
+      },
+      "money_time": {
+        "mentions": 5,
+        "as_digits": 5,
+        "wrong": 0
+      },
+      "phones": {
+        "mentions": 0,
+        "wrong": 0
+      },
+      "noise_bursts": 0,
+      "speaker_swap_turns": 0,
+      "hold": false,
+      "bad_line": false,
+      "profanity": 2,
+      "invented_lines": 0,
+      "lines_with_a_marker": 0
+    },
+    "script_words": 197,
+    "stored_words": 186,
+    "strict_word_difference": 0.132
+  },
+  "transcript": {
+    "engine": "ensemble",
+    "engine_version": "tone+gigaam|tone=106f3b0b32a9e107eb613312e4ebc61ff3d53926|gigaam=7655ad717f8122257385bb4b2f373db3697e8680|restore=<restoration fingerprint, computed at seed time>",
+    "language": "ru",
+    "pii_state": "raw",
+    "word_count": 209,
+    "duration_s": 113.0,
+    "segments": [
+      {
+        "sequence": 0,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ермак Сервис.",
+        "confidence": null
+      },
+      {
+        "sequence": 1,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Здравствуйте. Это Гизатулин, у вас мой Peugeot стоит, 308-й. Хотел узнать, готова машина?",
+        "confidence": null
+      },
+      {
+        "sequence": 2,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Пежо 308-й, насос. Да, Айрат. Нет, не готова ещё. Запчасть ждём.",
+        "confidence": null
+      },
+      {
+        "sequence": 3,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Как ждём? Я в прошлую среду пригнал.",
+        "confidence": null
+      },
+      {
+        "sequence": 4,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну да. Насос под заказ, заказано.",
+        "confidence": null
+      },
+      {
+        "sequence": 5,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Так он в четверг был заказан. Мне сначала сказали в субботу, потом в понедельник. Завтра понедельник.",
+        "confidence": null
+      },
+      {
+        "sequence": 6,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Завтра придёт. Во вторник заберёте.",
+        "confidence": null
+      },
+      {
+        "sequence": 7,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Это вам поставщик сказал, что завтра?",
+        "confidence": null
+      },
+      {
+        "sequence": 8,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да я им сегодня не звонил ещё. Ну сколько можно уже, придёт.",
+        "confidence": null
+      },
+      {
+        "sequence": 9,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "То есть вы не знаете. Я уже думаю забрать её к чёрту и в другой сервис отогнать.",
+        "confidence": null
+      },
+      {
+        "sequence": 10,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Завтра придёт. Во вторник всё будет.",
+        "confidence": null
+      },
+      {
+        "sequence": 11,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ладно. Слушайте, раз она всё равно у вас стоит, масло мне за одно поменяйте. Сколько это будет?",
+        "confidence": null
+      },
+      {
+        "sequence": 12,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Масло? 1330. Работа.",
+        "confidence": null
+      },
+      {
+        "sequence": 13,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "1330. Ну сделайте сразу, пока стоит.",
+        "confidence": null
+      },
+      {
+        "sequence": 14,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Это мне отдельный наряд открывать надо. Давайте сначала с насосом закончим, отдадим машину.",
+        "confidence": null
+      },
+      {
+        "sequence": 15,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Да она у вас 5-й день во дворе стоит, ни хрена с ней не делается.",
+        "confidence": null
+      },
+      {
+        "sequence": 16,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Ну, запчасть придёт, там видно будет.",
+        "confidence": null
+      },
+      {
+        "sequence": 17,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Всё, не надо. С маслом я подумаю.",
+        "confidence": null
+      },
+      {
+        "sequence": 18,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 19,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Я во вторник вам позвоню, прежде чем ехать. И чтобы готова была.",
+        "confidence": null
+      },
+      {
+        "sequence": 20,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "Хорошо.",
+        "confidence": null
+      },
+      {
+        "sequence": 21,
+        "speaker_label": "customer",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      },
+      {
+        "sequence": 22,
+        "speaker_label": "manager",
+        "start_ms": null,
+        "end_ms": null,
+        "text": "До свидания.",
+        "confidence": null
+      }
+    ]
+  },
+  "judge_answer": {
+    "call_type": "new_enquiry",
+    "checks": [
+      {
+        "key": "greeting",
+        "quote": "Ермак Сервис.",
+        "level": 1,
+        "segment": 0
+      },
+      {
+        "key": "need_discovery",
+        "quote": "Масло? 1330. Работа.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "price_with_next_step",
+        "quote": "Масло? 1330. Работа.",
+        "level": 1,
+        "segment": 12
+      },
+      {
+        "key": "asked_for_booking",
+        "quote": "Давайте сначала с насосом закончим, отдадим машину.",
+        "level": 0,
+        "segment": 14
+      },
+      {
+        "key": "objection",
+        "quote": "Всё, не надо. С маслом я подумаю.",
+        "level": 0,
+        "segment": 17
+      }
+    ],
+    "na": [
+      {
+        "key": "name_and_number",
+        "why": "Клиент уже известен: менеджер узнал машину и работу и обратился по имени."
+      },
+      {
+        "key": "offered_time",
+        "why": "Визит не нужен: машина уже стоит в сервисе, клиент просил сделать работу заодно."
+      },
+      {
+        "key": "recap",
+        "why": "Ни о чём не договорились: от замены масла клиент отказался и сказал, что позвонит сам."
+      }
+    ],
+    "auto_fails": [
+      {
+        "key": "wrong_promise",
+        "quote": "Завтра придёт. Во вторник заберёте.",
+        "segment": 6
+      }
+    ],
+    "outcome": "customer_will_call",
+    "no_visit_reason": null,
+    "tags": [
+      "quoted",
+      "wrong_promise",
+      "customer_angry",
+      "complaint"
+    ],
+    "strength": {
+      "quote": "Нет, не готова ещё. Запчасть ждём.",
+      "why": "Ответил на вопрос сразу и прямо, клиенту не пришлось переспрашивать.",
+      "segment": 2
+    },
+    "try_next": {
+      "check": "asked_for_booking",
+      "instead_of": "Это мне отдельный наряд открывать надо. Давайте сначала с насосом закончим, отдадим машину.",
+      "say": "Да, давайте добавлю замену масла в заказ-наряд прямо сейчас: работа 1330, масло подберём или привезёте своё. Сделаем в тот же день, что и насос, заберёте машину один раз."
+    },
+    "asr_quality": "ok"
+  },
+  "verdict": {
+    "kind": "scorecard",
+    "score": 25.0,
+    "result_public": {
+      "scheme": "scorecard",
+      "scorecard": "dc3649f6496a",
+      "weights": "d134f89941cb",
+      "judged": true,
+      "call_type": "new_enquiry",
+      "line": "300",
+      "checks": [
+        {
+          "key": "greeting",
+          "level": 1,
+          "segment": 0
+        },
+        {
+          "key": "need_discovery",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "price_with_next_step",
+          "level": 1,
+          "segment": 12
+        },
+        {
+          "key": "asked_for_booking",
+          "level": 0,
+          "segment": 14
+        },
+        {
+          "key": "objection",
+          "level": 0,
+          "segment": 17
+        }
+      ],
+      "na": [
+        "name_and_number",
+        "offered_time",
+        "recap"
+      ],
+      "unverified": [],
+      "not_applicable": [],
+      "auto_fails": [
+        {
+          "key": "wrong_promise",
+          "segment": 6
+        }
+      ],
+      "outcome": "customer_will_call",
+      "no_visit_reason": null,
+      "tags": [
+        "quoted",
+        "wrong_promise",
+        "customer_angry",
+        "complaint"
+      ],
+      "score": 25.0,
+      "applicable": 5,
+      "asr_quality": "ok",
+      "strength_segment": 2,
+      "try_next_check": "asked_for_booking",
+      "media_version": 1
+    },
+    "result_enc_plain": {
+      "checks": {
+        "greeting": "Ермак Сервис",
+        "need_discovery": "Масло? 1330. Работа",
+        "price_with_next_step": "Масло? 1330. Работа",
+        "asked_for_booking": "Давайте сначала с насосом закончим, отдадим машину",
+        "objection": "Всё, не надо. С маслом я подумаю"
+      },
+      "na": {
+        "name_and_number": "Клиент уже известен: менеджер узнал машину и работу и обратился по имени.",
+        "offered_time": "Визит не нужен: машина уже стоит в сервисе, клиент просил сделать работу заодно.",
+        "recap": "Ни о чём не договорились: от замены масла клиент отказался и сказал, что позвонит сам."
+      },
+      "auto_fails": {
+        "wrong_promise": "Завтра придёт. Во вторник заберёте"
+      },
+      "strength": {
+        "quote": "Нет, не готова ещё. Запчасть ждём",
+        "why": "Ответил на вопрос сразу и прямо, клиенту не пришлось переспрашивать."
+      },
+      "try_next": {
+        "check": "asked_for_booking",
+        "instead_of": "Это мне отдельный наряд открывать надо. Давайте сначала с насосом закончим, отдадим машину.",
+        "say": "Да, давайте добавлю замену масла в заказ-наряд прямо сейчас: работа 1330, масло подберём или привезёте своё. Сделаем в тот же день, что и насос, заберёте машину один раз."
+      }
+    }
+  },
+  "truth": {
+    "note": "The clean script earns the same levels.",
+    "levels": {
+      "greeting": 1,
+      "name_and_number": "na",
+      "need_discovery": 1,
+      "price_with_next_step": 1,
+      "offered_time": "na",
+      "asked_for_booking": 0,
+      "recap": "na",
+      "objection": 0
+    },
+    "score": 25.0
+  },
+  "why": {
+    "call_type": "new_enquiry by the judge's rule 0: a customer with a job already agreed who also asks about new work. Without the oil-change question this is an existing_job call: only greeting and recap could be scored, two checks is under the three a score needs, and the call would show the auto-fail and no score.",
+    "greeting": "1: the company only.",
+    "name_and_number": "N/A: he places the car and the job and addresses the customer by his first name.",
+    "need_discovery": "1: the car and the job (an oil change) are known; he asks nothing: not which oil, not whose.",
+    "price_with_next_step": "1: a price for the labour, nothing about what the total depends on, no step.",
+    "offered_time": "N/A: the car is already at the shop.",
+    "asked_for_booking": "0: the customer says 'сделайте сразу' and is told it needs a separate order and can wait.",
+    "recap": "N/A: nothing was agreed. A judge that reads the Tuesday promise as an agreement scores it 0, and the call 22.7.",
+    "objection": "0: 'С маслом я подумаю' is the last doubt and gets 'Хорошо'.",
+    "auto_fails": "wrong_promise: a lead time with no basis, and the next lines show it: he has not called the supplier today.",
+    "score": "(1·1 + 2·1 + 2·1 + 3·0 + 2·0) / 2 = 2.5 of 10 weight points = 25.0.",
+    "carried_by": [
+      "asked_for_booking",
+      "objection"
+    ]
+  },
+  "new_facts": [],
+  "changes_against_the_sample": [
+    "number, story, copied_from; scenario.facts.prices; recognition.counts and an error flag on each applied rule; word counts by the checker's word list; new_facts",
+    "fix pass B: the call moved from west's 4th full open day before T (a day slot 23 is off) to his 3rd working day before T, a day earlier; the lines that named the day follow: turn 6 'Сегодня понедельник' is 'Завтра понедельник', turns 7 and 11 'В среду' is 'Во вторник', turn 16 'шестой день' is 'пятый день', turn 20 'в среду с утра' is 'во вторник' (he writes in the chat that Tuesday instead of ringing); the stored lines and the auto-fail's quote follow"
+  ]
+}

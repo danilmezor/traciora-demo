@@ -1,0 +1,160 @@
+# Assistant texts (ru) at T 2026-11-13 10:30: each loaded item's computed slots, the instant each was read at (UTC) and the value written into the text.
+
+
+## s2-discounts#1
+{{#by_advisor}} | #by_advisor | 2026-05-27 17:40 | 
+| Мастер-приёмщик | Наличных нарядов | Со скидкой от 10 % | Доля | Сумма скидок |
+|---|---|---|---|---|
+| Артур Назаров | 179 | 34 | 19 % | 92 208 ₽ |
+| Вячеслав Крюков | 120 | 3 | 3 % | 1 342 ₽ |
+| Камила Шакирова | 46 | 0 | 0 % | 0 ₽ |
+| Остальные мастера, три сервиса | 1 218 | 34 | 3 % | 56 182 ₽ |
+{{=orders.discounted|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|n:наличном наряде/наличных нарядах/наличных нарядах}} | orders.discounted | 2026-05-27 17:40 | 34 наличных нарядах
+{{=orders.discounted_share|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|pct}} | orders.discounted_share | 2026-05-27 17:40 | 19 %
+{{=orders.discounted_share|site=all&advisor=!F1&pay=cash&min=10|@now-12mo..@now|pct}} | orders.discounted_share | 2026-05-27 17:40 | 3 %
+
+## s2-discounts#2
+{{=orders.discounted|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|int}} | orders.discounted | 2026-05-27 17:42 | 34
+
+## s2-discounts#3
+{{=orders.on_walkin|site=west&advisor=F1&pay=cash&min=10|@now-12mo..@now|int}} | orders.on_walkin | 2026-05-27 17:43 | 34
+
+## s2-discounts#4
+{{=stock.issues_no_sale|site=west&person=F1|@now-12mo..@now|n:позиция/позиции/позиций}} | stock.issues_no_sale | 2026-05-27 17:45 | 44 позиции
+{{=stock.issues_no_sale_cost|site=west&person=F1|@now-12mo..@now|money0}} | stock.issues_no_sale_cost | 2026-05-27 17:45 | 96 000 ₽
+{{=stock.issues_no_sale_max_per_person|site=all&person=!F1|@now-12mo..@now|int}} | stock.issues_no_sale_max_per_person | 2026-05-27 17:45 | 0
+{{=labor.overclock_orders|site=west&advisor=F1|@now-12mo..@now|n:его наряде/его нарядах/его нарядах}} | labor.overclock_orders | 2026-05-27 17:45 | 22 его нарядах
+{{=labor.overclock_hours|site=west&advisor=F1|@now-12mo..@now|int}} | labor.overclock_hours | 2026-05-27 17:45 | 61
+
+## s2-cost#1
+{{=leak.total|site=west&advisor=F1|@leak_start..@now|money0}} | leak.total | 2026-06-01 18:05 | 296 768 ₽
+{{#by_month}} | #by_month | 2026-06-01 18:05 | 
+| Месяц | Скидки | Запчасти без продажи | Часы сверх наряда | Итого |
+|---|---|---|---|---|
+| декабрь 2025 | 19 285 ₽ | 5 430 ₽ | 16 368 ₽ | 41 083 ₽ |
+| январь 2026 | 10 523 ₽ | 10 800 ₽ | 12 426 ₽ | 33 748 ₽ |
+| февраль 2026 | 10 131 ₽ | 46 540 ₽ | 20 768 ₽ | 77 439 ₽ |
+| март 2026 | 17 676 ₽ | 8 550 ₽ | 20 627 ₽ | 46 853 ₽ |
+| апрель 2026 | 20 254 ₽ | 12 050 ₽ | 10 490 ₽ | 42 794 ₽ |
+| май 2026 | 14 340 ₽ | 13 830 ₽ | 26 682 ₽ | 54 851 ₽ |
+| июнь 2026 | 0 ₽ | 0 ₽ | 0 ₽ | 0 ₽ |
+| Итого | 92 208 ₽ | 97 200 ₽ | 107 360 ₽ | 296 768 ₽ |
+
+## s2-cost#2
+{{=orders.discounted_share|site=all&advisor=!F1&pay=cash&min=10|@leak_start..@now|pct}} | orders.discounted_share | 2026-06-01 18:07 | 3 %
+{{=stock.issues_no_sale_max_per_person|site=all&person=!F1|@leak_start..@now|int}} | stock.issues_no_sale_max_per_person | 2026-06-01 18:07 | 0
+{{=labor.overclock_orders_max_per_advisor|site=all&advisor=!F1|@leak_start..@now|int}} | labor.overclock_orders_max_per_advisor | 2026-06-01 18:07 | 0
+
+## s2-cost#3
+{{=leak.total|site=west&advisor=F1|@leak_start..@now|money0}} | leak.total | 2026-06-01 18:08 | 296 768 ₽
+
+## s2-rule#2
+{{=tasks.next_run|task=discounts-over-10|at|day}} | tasks.next_run | 2026-06-07 17:21 | суббота, 13 июня
+
+## s4-default-shop#1
+{{=bookings.count|site=main|next_day|int}} | bookings.count | 2026-05-29 14:40 | 8
+{{=bookings.count|site=east|next_day|int}} | bookings.count | 2026-05-29 14:40 | 6
+
+## s4-default-shop#3
+{{=bookings.first|site=main|next_day|text}} | bookings.first | 2026-05-29 14:43 | 9:00, Астахов Борис Кириллович, Сезонная замена шин: шиномонтаж 4 колёс с балансировкой
+
+## s4-money-dates#1
+{{=catalogue.list_price|job=oil_service&class=car&tier=standard|at|money0}} | catalogue.list_price | 2026-06-14 10:25 | 6 602 ₽
+
+## s4-money-dates#2
+{{=catalogue.list_price|job=oil_service&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-06-14 10:27 | 6 602,00 ₽
+
+## s4-prices-source#1
+{{=catalogue.price_at_old_hour|job=front_pads_rotors&class=car&tier=standard|at|money}} | catalogue.price_at_old_hour | 2026-09-27 06:35 | 12 268,00 ₽
+
+## s4-prices-source#2
+{{=catalogue.list_price|job=front_pads_rotors&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-09-27 06:36 | 12 520,00 ₽
+{{=catalogue.list_price|job=front_pads_rotors&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-09-27 06:37 | 12 520,00 ₽
+
+## s8-prices-source#1
+{{=catalogue.list_price|job=timing_belt_kit&class=car&tier=standard|at|money}} | catalogue.list_price | 2026-11-11 13:10 | 16 000,00 ₽
+{{=catalogue.price_at_old_hour|job=timing_belt_kit&class=car&tier=standard|at|money}} | catalogue.price_at_old_hour | 2026-11-11 13:10 | 15 552,00 ₽
+
+## accounts-this-week flagged/1 2026-11-02
+{{=acct.flagged|terms=yes|prev_week|int}} | acct.flagged | 2026-11-02 15:05 | 2
+{{#accounts}} | #accounts | 2026-11-02 15:05 | 
+| Клиент | Заездов за неделю | Обычная неделя | Сметы ждут ответа | Просрочено, с НДС | Дней без заезда |
+|---|---|---|---|---|---|
+| ООО «Идель-Электромонтаж» | 0 | 0 | 0 | 11 702 ₽ | 130 |
+| ООО «Симбирский гонец» | 6 | 6 | 0 | 226 627 ₽ | 0 |
+| ООО «Вкусный выезд» | 0 | 1 | 0 | 0 ₽ | 25 |
+| ООО «Чистый Венец» | 1 | 1 | 0 | 0 ₽ | 4 |
+| ООО «Автошкола «Первая передача»» | 2 | 1 | 0 | 0 ₽ | 4 |
+| ООО «Тёплый контур» | 8 | 6 | 0 | 0 ₽ | 0 |
+
+## accounts-this-week flagged/1 2026-11-09
+{{=acct.flagged|terms=yes|prev_week|int}} | acct.flagged | 2026-11-09 14:00 | 2
+{{#accounts}} | #accounts | 2026-11-09 14:00 | 
+| Клиент | Заездов за неделю | Обычная неделя | Сметы ждут ответа | Просрочено, с НДС | Дней без заезда |
+|---|---|---|---|---|---|
+| ООО «Идель-Электромонтаж» | 0 | 0 | 0 | 11 702 ₽ | 137 |
+| ООО «Симбирский гонец» | 5 | 6 | 0 | 318 911 ₽ | 0 |
+| ООО «Вкусный выезд» | 1 | 0 | 0 | 0 ₽ | 6 |
+| ООО «Тёплый контур» | 6 | 6 | 0 | 0 ₽ | 0 |
+| ООО «Чистый Венец» | 1 | 1 | 0 | 0 ₽ | 0 |
+| ООО «Автошкола «Первая передача»» | 1 | 1 | 0 | 0 ₽ | 0 |
+
+## discounts-over-10 unapproved/2 2026-10-23
+{{=orders.discounted|site=all&min_over=10|week|int}} | orders.discounted | 2026-10-23 22:00 | 1
+{{=orders.discounted|site=all&min_over=10&approved=no|week|int}} | orders.discounted | 2026-10-23 22:00 | 1
+{{#orders}} | #orders | 2026-10-23 22:00 | 
+| Сервис | Мастер | Дата | Сумма с НДС | Скидка | Согласовал |
+|---|---|---|---|---|---|
+| Техническая | Вячеслав Крюков | 19.10 | 7 668,23 ₽ | 12,0 % | — |
+
+## discounts-over-10 unapproved/2 2026-11-06
+{{=orders.discounted|site=all&min_over=10|week|int}} | orders.discounted | 2026-11-06 23:00 | 2
+{{=orders.discounted|site=all&min_over=10&approved=no|week|int}} | orders.discounted | 2026-11-06 23:00 | 1
+{{#orders}} | #orders | 2026-11-06 23:00 | 
+| Сервис | Мастер | Дата | Сумма с НДС | Скидка | Согласовал |
+|---|---|---|---|---|---|
+| Техническая | Вячеслав Крюков | 04.11 | 5 756,43 ₽ | 12,0 % | — |
+| Московское шоссе | Никита Ведяшкин | 04.11 | 11 086,52 ₽ | 12,2 % | Сергей Мельников |
+
+## charlotte-pike-against-plan open/1 2026-11-09
+{{=plan.orders_share|site=west|prev_week|pct}} | plan.orders_share | 2026-11-09 15:00 | 123 %
+{{=plan.revenue_share|site=west|prev_week|pct}} | plan.revenue_share | 2026-11-09 15:00 | 118 %
+{{#weeks}} | #weeks | 2026-11-09 15:00 | 
+| Неделя с | Нарядов | От плана | Выручка | От плана |
+|---|---|---|---|---|
+| 02.11 | 70 | 123 % | 768 189 ₽ | 118 % |
+| 26.10 | 78 | 137 % | 730 123 ₽ | 112 % |
+| 19.10 | 71 | 125 % | 583 823 ₽ | 90 % |
+| 12.10 | 67 | 118 % | 742 051 ₽ | 114 % |
+| 05.10 | 41 | 72 % | 449 026 ₽ | 69 % |
+{{=orders.closed|site=west|prev_week|int}} | orders.closed | 2026-11-09 15:00 | 70
+{{=orders.waiting_parts|site=west|at|int}} | orders.waiting_parts | 2026-11-09 15:00 | 3
+{{=orders.waiting_days_max|site=west|at|n:день/дня/дней}} | orders.waiting_days_max | 2026-11-09 15:00 | 5 дней
+
+## tomorrows-gaps nothing/1 2026-11-12
+{{=roster.on_shift|site=main|next_day|n:человек/человека/человек}} | roster.on_shift | 2026-11-12 23:30 | 6 человек
+{{=roster.on_shift|site=east|next_day|int}} | roster.on_shift | 2026-11-12 23:30 | 3
+
+## brief-1 at_t
+{{=board.days_overdue|card=s6.supplier_change|at|n:день/дня/дней}} | board.days_overdue | 2026-11-13 02:40 | 25 дней
+
+## brief-2 at_t
+{{=orders.waiting_days_max|site=west|at|n:день/дня/дней}} | orders.waiting_days_max | 2026-11-13 02:40 | 9 дней
+{{=board.days_overdue|card=s6.supplier_change|at|n:день/дня/дней}} | board.days_overdue | 2026-11-13 02:40 | 25 дней
+{{=orders.waiting_parts|site=west|at|int}} | orders.waiting_parts | 2026-11-13 02:40 | 5
+
+## brief-4 at_t
+{{=roster.uncovered_days|site=east&position=desk|next_two_weeks|int}} | roster.uncovered_days | 2026-11-13 04:55 | 2
+
+## Held back
+thread s4-two-times: undefined bookings.free_slot: no capacity per appointment time: kb.booking.slots names when a visit may be booked, not how many (loaded: its note turns alone)
+
+## Not in v1
+thread s3-missed-calls: reads what v1 does not load: calls.missed_share; calls.wait_median; roster.shifts (loaded: its note turns alone)
+thread s4-call-summary: her scored calls (01 to 07) are about a month apart, so her last shift before the thread has none, while the thread speaks of several (loaded: its note turns alone)
+job yesterday-three-numbers: reads what v1 does not load: calls.inbound; calls.missed; calls.missed_top_site; calls.out_of_hours; calls.waiting (loaded: not made)
+job missed-calls-today: reads what v1 does not load: calls.called_back; calls.inbound; calls.missed; calls.missed_share; calls.oldest_waiting; calls.out_of_hours; calls.waiting (loaded: not made)
+job my-call-backs: reads what v1 does not load: calls.oldest_waiting; calls.waiting (loaded: not made)
+brief-1 point 2: reads what v1 does not load: calls.waiting (loaded: brief-1 without it)
+brief-2 point 3: reads what v1 does not load: calls.missed_share (loaded: brief-2 without it)
+brief-6 point 2: reads what v1 does not load: calls.oldest_waiting; calls.waiting (loaded: brief-6 without it)

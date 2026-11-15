@@ -1,0 +1,112 @@
+{
+ "path": "services/tires/alignment.md",
+ "title": "Сход-развал",
+ "title_en": "Alignment",
+ "exists_in": "both",
+ "english_sheet": "facts/services/tires/alignment.json",
+ "first_revision_text": "ru/_history/services/tires/alignment.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Four-wheel alignment: when, price by vehicle class, which rack.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 150,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Регулировка углов установки колёс (сход-развал), две оси»: fixed 3 000 RUB for a car; crossover × 1.15, body-on-frame and van × 1.3.",
+  "Customers say «развал»."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Сход-развал",
+   "item": "С новыми шинами. Предлагайте всегда: с кривыми углами новый комплект съедается за год."
+  },
+  {
+   "section": "Сход-развал",
+   "item": "После замены любой детали рулевого или подвески: наконечников, шаровых, рычагов, стоек. Это часть сметы на ту работу, а не довесок."
+  },
+  {
+   "section": "Сход-развал",
+   "item": "Машину тянет в сторону, руль стоит криво, шину ест по краю."
+  },
+  {
+   "section": "Сход-развал",
+   "item": "После ямы, которую запомнил. Весной таких много."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "suv",
+   "when": "after_rise",
+   "value": 3450.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 3900.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Дмитрий Олегович Григорьев",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  3000.0,
+  3450.0,
+  3900.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

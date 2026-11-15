@@ -1,0 +1,168 @@
+{
+ "path": "management/owners/west-plan.md",
+ "title": "Charlotte Pike: the plan",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Administrator only: the managing owner's private plan for the bought shop.",
+ "serves": [
+  "S6",
+  "S9",
+  "visibility:administrator",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 342,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Seen from administrator: only slot 2 (and the assistant acting for her) reads it. Slot 22 (senior) and slot 4 (senior) get \"not found\".",
+  "Six items with owner, date and state: supplier move from V2 to V1 by {{@supplier_due}}, a week after this page's date, asked three times (S6: at T the board task is three weeks overdue); cheapest pad to be ACDelco; phones as slot 24 answers; roster by Thursday noon, kept about one week in three; monthly comeback review with slot 27 shown his numbers, not happening; Monday meeting, attended about one week in three (S9: 7 of 23).",
+  "Her reading of slot 22 (cast biography).",
+  "Plans: visit every week instead of twice a month (cast: slot 2 drives there twice a month); do the supplier move together; a decision point at T+2 months.",
+  "\"I have not asked why he misses Mondays\": nobody has raised the time-zone cause (S9)."
+ ],
+ "tables": [
+  {
+   "section": "Charlotte Pike: the plan",
+   "columns": [
+    "#",
+    "What",
+    "Who",
+    "By",
+    "Where it stands"
+   ],
+   "rows": [
+    {
+     "#": "1",
+     "What": "Parts ordering moved from Harpeth Valley Parts Supply to Sequoyah Parts Supply",
+     "Who": "Dale, with Marcus",
+     "By": "{{@supplier_due|date}}",
+     "Where it stands": "Asked three times. Not done"
+    },
+    {
+     "#": "2",
+     "What": "Cheapest brake pad fitted is the ACDelco. No more house-brand pads",
+     "Who": "Dale",
+     "By": "With 1",
+     "Where it stands": "Not done"
+    },
+    {
+     "#": "3",
+     "What": "Phone answered the way Jasmine answers it, by everyone",
+     "Who": "Dale",
+     "By": "{{T-1mo|date}}",
+     "Where it stands": "Her page is up. Chad has not changed"
+    },
+    {
+     "#": "4",
+     "What": "Schedule published by Thursday noon",
+     "Who": "Dale",
+     "By": "Every week",
+     "Where it stands": "About one week in three"
+    },
+    {
+     "#": "5",
+     "What": "Monthly comeback review, with Derek shown his own numbers",
+     "Who": "Dale",
+     "By": "Monthly",
+     "Where it stands": "Has not happened"
+    },
+    {
+     "#": "6",
+     "What": "Dale at the Monday meeting",
+     "Who": "Dale",
+     "By": "Every week",
+     "Where it stands": "Comes about one week in three"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "What I will do",
+   "item": "Go there every week instead of twice a month, and work a morning at the counter."
+  },
+  {
+   "section": "What I will do",
+   "item": "Stop sending tasks. Sit down with him and do number 1 together, in one afternoon, with Marcus on the phone."
+  },
+  {
+   "section": "What I will do",
+   "item": "If numbers 1, 4 and 5 are still where they are by {{T+2mo|date}}, it is a conversation about who manages the shop. I do not want that conversation."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Claire Brennan",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "22",
+   "written_as": "Dale",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "24",
+   "written_as": "Jasmine",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "23",
+   "written_as": "Chad",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Derek",
+   "role": "technician",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V2",
+   "name": "Harpeth Valley Parts Supply"
+  },
+  {
+   "vendor": "V1",
+   "name": "Sequoyah Parts Supply"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-1mo|date}}",
+  "{{@supplier_due|date}}",
+  "{{T+2mo|date}}"
+ ],
+ "new_facts": [
+  "Roster published on time \"about one week in three\"; the T+2 months decision point. The roster publish times of slot 22 must show about a third on time."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-1mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same plan; suppliers from the Russian vendors file."
+ ]
+}

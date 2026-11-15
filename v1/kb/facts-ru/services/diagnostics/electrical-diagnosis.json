@@ -1,0 +1,132 @@
+{
+ "path": "services/diagnostics/electrical-diagnosis.md",
+ "title": "Поиск неисправностей электрики",
+ "title_en": "Electrical diagnosis",
+ "exists_in": "both",
+ "english_sheet": "facts/services/diagnostics/electrical-diagnosis.json",
+ "first_revision_text": "ru/_history/services/diagnostics/electrical-diagnosis.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Electrical faults without a warning light.",
+ "serves": [
+  "smoke",
+  "challenge:customer-terms"
+ ],
+ "length_class": "short",
+ "words_ru": 187,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "«Поиск неисправности электрооборудования», 1.5 н/ч. The battery test is paid (300 RUB).",
+  "Typical additions on Russian cars: an alarm with remote start, a tow-bar socket.",
+  "Slot 13's own sentence from the cast: «Пока не проверю, обещать не буду»."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Поиск неисправностей электрики",
+   "item": "Электрика — работа небыстрая: прибором, по одной цепи за раз. Пока не проверю, обещать ничего не буду."
+  },
+  {
+   "section": "Поиск неисправностей электрики",
+   "item": "Спросите клиента, когда это случается и что в этот момент включено. «Всегда» и «только когда сыро» — разные неисправности."
+  },
+  {
+   "section": "Поиск неисправностей электрики",
+   "item": "Аккумулятор садится — сначала проверка аккумулятора, 300 ₽. В половине случаев дело в нём самом. Аккумулятор исправен — значит, утечка тока, а поиск утечки означает, что машина остаётся у нас на ночь."
+  },
+  {
+   "section": "Поиск неисправностей электрики",
+   "item": "Важно всё, что на машину ставили потом: сигнализация с автозапуском, магнитола, регистратор, фаркоп с розеткой, чужие лампы в фарах. Спросите и запишите."
+  },
+  {
+   "section": "Поиск неисправностей электрики",
+   "item": "Не нашёл за полтора часа — останавливаюсь, мастер-приёмщик звонит клиенту. Говорю, что я исключил."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "electrical_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2850.0
+  },
+  {
+   "catalogue_key": "battery_test",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 300.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Ильдар Фаритович Нуруллин",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Дима",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубину",
+   "role": "diagnostic_technician",
+   "site": "main"
+  },
+  {
+   "slot": "18",
+   "written_as": "Егорову",
+   "role": "lead_technician",
+   "site": "east"
+  },
+  {
+   "slot": "10",
+   "written_as": "Шубин",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  300.0,
+  2850.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}

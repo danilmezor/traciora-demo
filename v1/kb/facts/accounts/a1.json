@@ -1,0 +1,125 @@
+{
+ "path": "accounts/a1.md",
+ "title": "Nickajack Delivery",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "Standing instructions for the anchor account A1.",
+ "serves": [
+  "S1",
+  "S16",
+  "S4",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_en": 333,
+ "links_to": [
+  "services/maintenance/fleet-pm-service.md",
+  "accounts/company-account-terms.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Account A1: 35 vans, home shop main; contacts and phones from accounts.json (Lonnie Coffey fleet manager, Linda Qualls accounts payable, Stuart Haney director of operations).",
+  "The purchase-order number is required before work, given by the fleet manager at booking, entered in the order's purchase-order field (ERP repair_order.purchase-order number); invoices without it are returned unpaid.",
+  "Fleet: Transit 250, ProMaster 2500, Transit Connect, two Sprinters ND-34 and ND-35; units ND-01 to ND-35.",
+  "Fleet PM service A every 5,000 miles; due units sent weekly.",
+  "Sprinters are diesel: fluids, filters, brakes and tyres only.",
+  "Drop by 7:30, back by 15:00; a late van is reported by noon.",
+  "Driver limit 300 USD per visit (ledger s4.driver_limit).",
+  "Quarterly review: slots 4 and 2 with Lonnie Coffey and Stuart Haney; agenda: visits and spend by month, vans due, comebacks, days to pay (S16: the review meeting of ledger s16.card).",
+  "The page does not say that A1 pays later every month: that is in the data only."
+ ],
+ "tables": [
+  {
+   "section": "People",
+   "columns": [
+    "Who",
+    "What for",
+    "Phone"
+   ],
+   "rows": [
+    {
+     "Who": "Lonnie Coffey, fleet manager",
+     "What for": "Books vans, approves work",
+     "Phone": "(423) 555-0103"
+    },
+    {
+     "Who": "Linda Qualls, accounts payable",
+     "What for": "Statements, anything about a bill",
+     "Phone": "(423) 555-0159"
+    },
+    {
+     "Who": "Stuart Haney, director of operations",
+     "What for": "The quarterly review. Do not call him about a van",
+     "Phone": "(423) 555-0184"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "The fleet",
+   "item": "Fleet PM service A every 5,000 miles: what it includes. Lonnie sends the units that are due each week."
+  },
+  {
+   "section": "The fleet",
+   "item": "The Sprinters are diesel. We do their fluids, filters, brakes and tires. Engine and emissions work on them goes to the dealer; tell Lonnie, do not attempt it."
+  },
+  {
+   "section": "The fleet",
+   "item": "Vans are dropped by 7:30 and needed back by 3:00 for the afternoon routes. If one will not make 3:00, Lonnie hears by noon."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  },
+  {
+   "slot": "1",
+   "written_as": "Ray",
+   "role": "founder",
+   "site": "none"
+  },
+  {
+   "slot": "2",
+   "written_as": "Claire",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-4mo|date}}"
+ ],
+ "new_facts": [
+  "PM interval 5,000 miles; drop 7:30 and back by 15:00; noon warning. Reason: standing instructions a fleet page needs; the ERP's PM orders for A1 should recur about every 5,000 miles per van.",
+  "The Sprinters are diesel and limited to fluids, filters, brakes and tyres."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{T-4mo|date}}",
+   "what": "added the section \"The purchase-order number\", moved from a team note; message: \"PO number rule lives here now.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian anchor: «Симбирский гонец», служба доставки, 35 фургонов (ГАЗель etc. from the Russian accounts file). The purchase-order number is «номер заявки». Contacts from accounts.json ru."
+ ]
+}

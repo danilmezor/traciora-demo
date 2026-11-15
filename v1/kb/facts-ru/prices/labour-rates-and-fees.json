@@ -1,0 +1,291 @@
+{
+ "path": "prices/labour-rates-and-fees.md",
+ "title": "Нормо-час, сборы и классы автомобилей",
+ "title_en": "Labour rates, fees and vehicle classes",
+ "exists_in": "both",
+ "english_sheet": "facts/prices/labour-rates-and-fees.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "The posted and company-account hour, shop supplies, tax, tire fees, and how a price is scaled for bigger vehicles.",
+ "serves": [
+  "S12",
+  "S1",
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "medium",
+ "words_ru": 528,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Rates 1 900 (list) and 1 700 (contract, accounts A1 and A2) from the rise; 1 760 and 1 580 before.",
+  "The page carries the whole history of the hour: three rises in two years (ledger price.hour.history, price.hour.company_history).",
+  "Shop supplies 3 % up to 500 RUB; VAT 5 % from 1 January 2025 (ledger tax.ru_vat_from), inside every price and not among the things added to the bill (ledger tax.ru_price_basis); one tyre fee (disposal, 400 RUB a set); no state fee.",
+  "Class multipliers of the Russian catalogue: hours 1 / 1.15 / 1.3 / 1.3, parts 1 / 1.35 / 1.7 / 1.3; fluid and filter jobs keep the car's labour and scale their parts (catalogue parts_scale_with_class), diagnosis and inspections are flat; own multipliers for plugs, timing belt, valve-cover gasket and tyre fitting.",
+  "The planted slip is kept in its Russian form: \"three jobs have their own multiplier\" above a table of four rows.",
+  "Worked example: front discs and pads on a УАЗ Patriot (class truck)."
+ ],
+ "new_facts": [
+  "Two events of the Russian timeline: @price_rise_1 (the first open day on or after T-18 months, 1 500 to 1 620) and @price_rise_2 (the first open day on or after T-11 months, 1 620 to 1 760). The grammar is unchanged; the events are named in OUTLINE-ru.md.",
+  "1 January 2025 is written as a calendar date: it is a fact of law, not a story date."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Нормо-час",
+   "columns": [
+    "Ставка",
+    "За нормо-час",
+    "Кто платит"
+   ],
+   "rows": [
+    {
+     "Ставка": "Нормо-час по прайсу",
+     "За нормо-час": "1 900 ₽",
+     "Кто платит": "Все, кроме тех, кто в следующей строке"
+    },
+    {
+     "Ставка": "Договорной нормо-час",
+     "За нормо-час": "1 700 ₽",
+     "Кто платит": "Только «Симбирский гонец» и «Тёплый контур»"
+    }
+   ]
+  },
+  {
+   "section": "Нормо-час",
+   "columns": [
+    "С какого дня",
+    "По прайсу",
+    "Договорной"
+   ],
+   "rows": [
+    {
+     "С какого дня": "до {{@price_rise_1|date}}",
+     "По прайсу": "1 500 ₽",
+     "Договорной": "1 350 ₽"
+    },
+    {
+     "С какого дня": "с {{@price_rise_1|date}}",
+     "По прайсу": "1 620 ₽",
+     "Договорной": "1 460 ₽"
+    },
+    {
+     "С какого дня": "с {{@price_rise_2|date}}",
+     "По прайсу": "1 760 ₽",
+     "Договорной": "1 580 ₽"
+    },
+    {
+     "С какого дня": "с {{@price_rise|date}}",
+     "По прайсу": "1 900 ₽",
+     "Договорной": "1 700 ₽"
+    }
+   ]
+  },
+  {
+   "section": "Что добавляется к сумме",
+   "columns": [
+    "Что",
+    "Сколько",
+    "На что"
+   ],
+   "rows": [
+    {
+     "Что": "Расходные материалы",
+     "Сколько": "3 % от работы, не больше 500 ₽ на заказ-наряд",
+     "На что": "Только работы по нормо-часу. На фиксированные цены не начисляются"
+    },
+    {
+     "Что": "Утилизация шин",
+     "Сколько": "400 ₽ за комплект",
+     "На что": "Новые шины"
+    }
+   ]
+  },
+  {
+   "section": "Машины крупнее легковой",
+   "columns": [
+    "Класс",
+    "Примеры",
+    "Работа на тяжёлых узлах",
+    "Запчасти"
+   ],
+   "rows": [
+    {
+     "Класс": "Легковой",
+     "Примеры": "Granta, Solaris, Logan, Camry",
+     "Работа на тяжёлых узлах": "× 1",
+     "Запчасти": "× 1"
+    },
+    {
+     "Класс": "Кроссовер",
+     "Примеры": "Duster, Creta, RAV4, Niva, Jolion",
+     "Работа на тяжёлых узлах": "× 1,15",
+     "Запчасти": "× 1,35"
+    },
+    {
+     "Класс": "Рамный внедорожник, пикап",
+     "Примеры": "УАЗ Patriot, Land Cruiser Prado, Pajero, Hover",
+     "Работа на тяжёлых узлах": "× 1,3",
+     "Запчасти": "× 1,7"
+    },
+    {
+     "Класс": "Лёгкий коммерческий",
+     "Примеры": "ГАЗель, Соболь, Largus-фургон, Ducato, Transit",
+     "Работа на тяжёлых узлах": "× 1,3",
+     "Запчасти": "× 1,3"
+    }
+   ]
+  },
+  {
+   "section": "Машины крупнее легковой",
+   "columns": [
+    "Работа",
+    "Кроссовер",
+    "Рамный внедорожник",
+    "Фургон"
+   ],
+   "rows": [
+    {
+     "Работа": "Свечи зажигания (на V6 и на рамных дольше)",
+     "Кроссовер": "× 1,2",
+     "Рамный внедорожник": "× 2",
+     "Фургон": "× 1,2"
+    },
+    {
+     "Работа": "Ремень ГРМ",
+     "Кроссовер": "× 1,2",
+     "Рамный внедорожник": "× 1,5",
+     "Фургон": "× 1,2"
+    },
+    {
+     "Работа": "Прокладка клапанной крышки",
+     "Кроссовер": "× 1,2",
+     "Рамный внедорожник": "× 1,8",
+     "Фургон": "× 1,2"
+    },
+    {
+     "Работа": "Шиномонтаж, сезонный и новых шин",
+     "Кроссовер": "× 1,25",
+     "Рамный внедорожник": "× 1,45",
+     "Фургон": "× 1,3"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [
+  {
+   "catalogue_key": "configurations.ru.labour_rate.standard.after_rise",
+   "what": "labour hour",
+   "value": 1900
+  },
+  {
+   "catalogue_key": "configurations.ru.labour_rate.company_account.after_rise",
+   "what": "labour hour",
+   "value": 1700
+  },
+  {
+   "catalogue_key": "configurations.ru.labour_rate.standard.before_rise",
+   "what": "labour hour",
+   "value": 1760,
+   "stale_on_purpose": "S12"
+  },
+  {
+   "catalogue_key": "new_tyres_fitted",
+   "what": "fee: Утилизация старых шин (4 шт.)",
+   "value": 400
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "labour",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3420.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "labour",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 4446.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "parts and fluids total",
+   "tier": "standard",
+   "value": 9100.0
+  },
+  {
+   "catalogue_key": "front_pads_rotors",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "truck",
+   "when": "after_rise",
+   "value": 19916.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [
+  {
+   "account": "A1",
+   "name": "Симбирский гонец"
+  },
+  {
+   "account": "A2",
+   "name": "Тёплый контур"
+  }
+ ],
+ "dates": [
+  "{{@price_rise|date}}",
+  "{{@price_rise_1|date}}",
+  "{{@price_rise_2|date}}"
+ ],
+ "amounts": [
+  400.0,
+  500.0,
+  1350.0,
+  1460.0,
+  1500.0,
+  1580.0,
+  1620.0,
+  1700.0,
+  1760.0,
+  1900.0,
+  3420.0,
+  4446.0,
+  9100.0,
+  15470.0,
+  19916.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@price_rise|date}}",
+   "what": "posted rate 125.00 to 135.00, company rate 112.50 to 121.50; message: \"New prices from today. Labour hour $135.\"",
+   "message_ru": "Новые цены с сегодняшнего дня. Нормо-час 1 900."
+  }
+ ],
+ "has_history": true
+}

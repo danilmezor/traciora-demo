@@ -1,0 +1,337 @@
+{
+  "slot": 16,
+  "name": "Angie Holloway",
+  "site": "east",
+  "role": "lead advisor, the all-star",
+  "tier": "exact",
+  "voice": "Warm, unhurried and exact. Uses the customer's name twice in the first minute, remembers the car and what was declined, shows the worn part or a picture. 'Here's what I'd do if it were my car', then the price, then two times to choose from; asks for the yes and ends every call with a recap.",
+  "style_sheet": {
+    "greeting": [
+      0,
+      5,
+      95
+    ],
+    "name_and_number": [
+      0,
+      20,
+      80
+    ],
+    "need_discovery": [
+      0,
+      15,
+      85
+    ],
+    "price_with_next_step": [
+      0,
+      20,
+      80
+    ],
+    "offered_time": [
+      5,
+      30,
+      65
+    ],
+    "asked_for_booking": [
+      5,
+      20,
+      75
+    ],
+    "recap": [
+      5,
+      25,
+      70
+    ],
+    "objection": [
+      5,
+      45,
+      50
+    ]
+  },
+  "habits": [
+    "'Brennan Auto Care on Bonny Oaks, this is Angie.'",
+    "The caller's name early and again; 'Mr.' or 'Miss' with older callers.",
+    "'Here's what I'd do if it were my car.'",
+    "Price, then two times, then 'I'll check you in myself'.",
+    "Offers to text a picture; promises a call before anything past the quote, and makes it."
+  ],
+  "fillers": [
+    "Okay,",
+    "Mm-hm,",
+    "Now,",
+    "Alright,"
+  ],
+  "tokens": {
+    "a_ok": [
+      "Okay",
+      "Alright"
+    ],
+    "a_yes": [
+      "Absolutely",
+      "Yes"
+    ],
+    "a_sorry": [
+      "I'm sorry",
+      "I apologize"
+    ]
+  },
+  "greeting_tails": [
+    "",
+    " How can I help you?",
+    " How are you today?",
+    " What can I do for you?"
+  ],
+  "greetings": [
+    "Brennan Auto Care on Bonny Oaks, this is Angie, what can I do for you?",
+    "Thank you for calling Brennan Auto Care on Bonny Oaks, this is Angie.",
+    "Brennan Auto Care on Bonny Oaks, Angie speaking.",
+    "Good morning, Brennan Auto Care on Bonny Oaks, Angie speaking.",
+    "Brennan Auto Care on Bonny Oaks, this is Angie, how are you today?",
+    "Brennan Auto Care, Bonny Oaks, this is Angie."
+  ],
+  "address": [
+    ", {customer_first}"
+  ],
+  "checks": {
+    "greeting": {
+      "0": [
+        "Hi — sorry, I had somebody at the counter. Go ahead.",
+        "Hello, I'm here.",
+        "Yes? Go ahead, I can hear you now.",
+        "Hi there."
+      ],
+      "1": [
+        "Brennan Auto Care on Bonny Oaks.",
+        "Brennan Auto Care on Bonny Oaks, can you hold one moment? ... Thank you.",
+        "Bonny Oaks, Brennan Auto Care.",
+        "Brennan Auto Care, Bonny Oaks shop."
+      ],
+      "2": [
+        "Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "Good morning, Brennan Auto Care on Bonny Oaks, this is Angie.",
+        "Brennan Auto Care on Bonny Oaks, this is Angie, how can I help you?",
+        "Good afternoon, Brennan Auto Care on Bonny Oaks, this is Angie."
+      ]
+    },
+    "name_and_number": {
+      "0": [
+        "<skip>",
+        "I'll put you under the {car_model} and get the rest when you come in.",
+        "We'll take care of the paperwork at the counter.",
+        "I'll set it up under the {car_model} for now."
+      ],
+      "1": [
+        "Thank you, I've got that.",
+        "Okay, {customer_first}, that's on your file.",
+        "Got it, thank you so much.",
+        "Good, {customer_first}, I have it."
+      ],
+      "2": [
+        "{customer_phone_said}. Perfect, thank you, {customer_first}.",
+        "So that's {customer_phone_said}? Okay, {customer_first}, I've got you.",
+        "{customer_phone_said}. And that's a cell, so I can text you a picture?",
+        "Let me say it back — {customer_phone_said}. Good."
+      ]
+    },
+    "need_discovery": {
+      "0": [
+        "Let me look up what we'd charge for that.",
+        "One moment, I'll find the price.",
+        "Let me check the price for you.",
+        "I'll pull that up."
+      ],
+      "1": [
+        "What kind of car are we working on?",
+        "Okay. What year, make and model?",
+        "And what is it you drive?",
+        "What vehicle is this for?"
+      ],
+      "2": [
+        "Okay. And tell me what it's doing. {job_question}",
+        "Mm-hm. {job_question}",
+        "And when did you first notice it on the {car_model}?",
+        "Let me ask you a couple things first. {job_question}"
+      ]
+    },
+    "price_with_next_step": {
+      "0": [
+        "I don't want to quote you something I can't stand behind.",
+        "I wouldn't want to guess on {job_said}.",
+        "That's not one I can price blind.",
+        "I'd be guessing, and I don't like to guess."
+      ],
+      "1": [
+        "That's {price}, plus tax.",
+        "It's {price} on yours.",
+        "On yours, {price_statement}.",
+        "You're at {price} before tax."
+      ],
+      "2": [
+        "Here's what I'd do if it were my car. {price_statement}. {depends} And I'd like to get it in soon.",
+        "Okay. {price_statement}, plus tax. {depends} Let me see when I can get you in.",
+        "Honestly, {inspection_line} Then you'll know exactly, and I can get you right in.",
+        "So {price_statement}. {depends} Want me to find you a time this week?"
+      ]
+    },
+    "offered_time": {
+      "0": [
+        "We're here {shop_hours} every weekday.",
+        "Bring the {car_model} by whenever you can.",
+        "Any time we're open.",
+        "Just come on in when it suits."
+      ],
+      "1": [
+        "I can take you {time_1}. Does that work?",
+        "When's a good time for you?",
+        "I have {time_1} open.",
+        "What works better for you, mornings or afternoons?"
+      ],
+      "2": [
+        "I could look at it {time_1}, or {time_2}.",
+        "I can take it {time_1}, or {time_2}. Which is better for you?",
+        "I have {time_1} or {time_2}, whichever's easier for you.",
+        "Would {time_1} be good, or would {time_2} be better for you, {customer_first}?"
+      ]
+    },
+    "asked_for_booking": {
+      "0": [
+        "Okay. You call me when you're ready.",
+        "That's fine, I'll be here.",
+        "Okay. Call me when you're ready, and I'll get the {car_model} right in.",
+        "Okay, no problem at all."
+      ],
+      "1": [
+        "Want me to hold that for you?",
+        "Would you like me to put the {car_model} on the book?",
+        "I'll call you as soon as I have an opening, today if I can.",
+        "Can I pencil you in, and you call me if it changes?"
+      ],
+      "2": [
+        "{time_chosen}. I've got you down, and I'll check you in myself.",
+        "Perfect. I've got you down for {time_chosen}, and I'll write it up myself.",
+        "Okay, {customer_first}, you're on the book for {time_chosen}, and I'll be right here at the counter.",
+        "Good. {time_chosen}, and ask for Angie."
+      ]
+    },
+    "recap": {
+      "0": [
+        "Okay, see you soon.",
+        "Good. See you then, {customer_first}.",
+        "Alright, I'll see you.",
+        "We'll be looking for you."
+      ],
+      "1": [
+        "So that's {time_chosen} for {job_said}.",
+        "Okay, {time_chosen} on the {car_model}.",
+        "Good, {time_chosen}.",
+        "So I'll see you {time_chosen}."
+      ],
+      "2": [
+        "So that's {time_chosen}, here at {shop_address}, and we're doing {job_said} on your {car_model}.",
+        "Let me go over it: {time_chosen}, {shop_address}, {job_said}, and I call you before anything past that.",
+        "So, {time_chosen}, at {shop_address}. We're looking at {job_said} on the {car_model}.",
+        "Okay — {job_said}, {time_chosen}, here at {shop_address}. I'll call you with what we find."
+      ]
+    },
+    "objection": {
+      "0": [
+        "Okay. So {time_1} or {time_2}?",
+        "Mm-hm. Well, let me know what you decide.",
+        "Okay. Anything else I can help you with on the {car_model}?",
+        "I understand. Well, call me."
+      ],
+      "1": [
+        "I understand. Everything we do is warrantied, so you're covered.",
+        "I know it's a lot. I'd rather do it once and do it right.",
+        "We stand behind every job, {job_said} included, I promise you that.",
+        "I hear you. It's a fair price for what goes in it."
+      ],
+      "2": [
+        "I believe it. {objection_answer}",
+        "That's a fair question. {objection_answer}",
+        "Can I tell you what's in my number? {objection_answer}",
+        "I understand, {customer_first}. {objection_answer}"
+      ]
+    }
+  },
+  "moves": {
+    "ack": [
+      "I can sure help you with {job_said}.",
+      "Okay, we can sure take care of that.",
+      "Absolutely, let's figure it out.",
+      "Oh, okay. Let's see."
+    ],
+    "ask_what": [
+      "Okay. Tell me what it's doing.",
+      "Mm-hm — what's going on with it?",
+      "Let's start there. What are you noticing?"
+    ],
+    "ask_name": [
+      "And who am I speaking with?",
+      "And your name?",
+      "Can I get your name, please?",
+      "And who do I have?",
+      "And what's your name, so I can pull you up?"
+    ],
+    "ask_number": [
+      "What's a good number for you?",
+      "And the best number to reach you, {customer_first}?",
+      "A good number, in case I need to call you about it?",
+      "And {customer_first}, what's the best number for you?",
+      "Thank you, {customer_first}. And a good number?"
+    ],
+    "recognise": [
+      "Well, hey, {customer_first}! How are you? How's the family?",
+      "{customer_first}! I'd know your voice anywhere. What's going on?",
+      "Hi, {customer_first}. Let me pull you up... I've got your {car_model} right here."
+    ],
+    "lookup": [
+      "Let me pull you up...",
+      "Give me just a second, I've got it right here.",
+      "Okay, I've got your ticket up."
+    ],
+    "hold": [
+      "Can I put you on a quick hold? I want to check with the tech.",
+      "Hold one second for me, I'll ask {tech_name}."
+    ],
+    "back_from_hold": [
+      "Thank you for holding, {customer_first}.",
+      "Okay, I'm back. Here's what he said."
+    ],
+    "explain": [
+      "Here's what I'm thinking: {job_explain}.",
+      "Okay — {job_explain}.",
+      "Usually {job_explain}, and I'd rather check than guess."
+    ],
+    "duration": [
+      "It takes about {job_duration} once it's in the bay.",
+      "You're looking at {job_duration}. Do you want to wait, or do you want {other_advisor} to run you home?",
+      "It's {job_duration}, and I'll call you the minute it's done."
+    ],
+    "probe": [
+      "Can I ask you, {customer_first} — {objection_probe}",
+      "Let me ask you this: {objection_probe}"
+    ],
+    "outbound_open": [
+      "Hi, {customer_first}, it's Angie at Brennan Auto Care on Bonny Oaks.",
+      "{customer_title}? Hi, this is Angie Holloway at Brennan Auto Care.",
+      "Hey, {customer_first}, Angie here at Bonny Oaks. Do you have a minute?"
+    ],
+    "closing_booked": [
+      "Thank you, {customer_first}. See you {time_chosen}.",
+      "Alright, {customer_first}. Talk to you then.",
+      "You're welcome, {customer_first}. Drive careful.",
+      "Good. See you then, now.",
+      "Good. I'll see you {time_chosen}, {customer_first}.",
+      "Okay, we'll take good care of it. See you then."
+    ],
+    "closing_open": [
+      "Thank you for calling, and call me anytime.",
+      "Okay, {customer_first}, take care now.",
+      "Bye-bye, now.",
+      "Okay, {customer_first}, you call me anytime.",
+      "Thank you, {customer_first}. Bye-bye.",
+      "Okay, you take care, {customer_first}.",
+      "Thank you so much for calling, now."
+    ]
+  }
+}

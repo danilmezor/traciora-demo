@@ -1,0 +1,130 @@
+{
+ "path": "policies/README.md",
+ "title": "Правила",
+ "title_en": "Policies",
+ "exists_in": "both",
+ "english_sheet": "facts/policies/README.json",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "2",
+ "purpose": "Index of the policy pages.",
+ "serves": [
+  "operate:overview",
+  "challenge:near-duplicate"
+ ],
+ "length_class": "short",
+ "words_ru": 209,
+ "links_to": [
+  "policies/discounts.md",
+  "policies/warranty.md",
+  "policies/estimates-and-approvals.md",
+  "policies/diagnostic-fees.md",
+  "policies/customer-supplied-parts.md",
+  "policies/deposits.md",
+  "policies/cancellations-and-no-shows.md",
+  "policies/storage-of-uncollected-cars.md",
+  "policies/complaints.md",
+  "policies/voids-and-refunds.md",
+  "policies/customer-records.md",
+  "policies/service-standards.md",
+  "policies/documents-and-vat.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Thirteen rows: the twelve of the English index and the Russian-only page on documents and VAT.",
+  "\"Voids and refunds\" is «Работа мимо наряда, списания и возврат денег»: the Russian leak is work past the order and parts written off with no sale (R11)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Правила",
+   "columns": [
+    "Страница",
+    "Одной строкой"
+   ],
+   "rows": [
+    {
+     "Страница": "Скидки",
+     "Одной строкой": "Больше 10 % — только с руководителем и с отметкой в наряде"
+    },
+    {
+     "Страница": "Гарантия",
+     "Одной строкой": "30 дней на слесарные и электротехнические работы"
+    },
+    {
+     "Страница": "Смета и согласование работ",
+     "Одной строкой": "Письменно, по каждой работе, не больше согласованного"
+    },
+    {
+     "Страница": "Платная диагностика и осмотры",
+     "Одной строкой": "Оплачивается и в ремонт не засчитывается"
+    },
+    {
+     "Страница": "Запчасти клиента",
+     "Одной строкой": "Ставим; гарантия только на работу"
+    },
+    {
+     "Страница": "Предоплата",
+     "Одной строкой": "Под заказные запчасти и капремонт АКПП"
+    },
+    {
+     "Страница": "Отмена записи и неявка",
+     "Одной строкой": "Без штрафа; после двух неявок на время не записываем"
+    },
+    {
+     "Страница": "Невостребованные автомобили",
+     "Одной строкой": "Пять дней бесплатно"
+    },
+    {
+     "Страница": "Жалобы и претензии",
+     "Одной строкой": "Выслушать в тот же день, ответить за один"
+    },
+    {
+     "Страница": "Работа мимо наряда, списания и возврат денег",
+     "Одной строкой": "Нет строки в наряде — нет ни работы, ни детали"
+    },
+    {
+     "Страница": "Карточки клиентов",
+     "Одной строкой": "Один клиент — одна карточка, настоящее имя"
+    },
+    {
+     "Страница": "Стандарты обслуживания",
+     "Одной строкой": "Как быстро отвечаем, перезваниваем и считаем смету"
+    },
+    {
+     "Страница": "Документы клиенту и НДС",
+     "Одной строкой": "Заказ-наряд, акт, чек; НДС 5 % в цене"
+    }
+   ]
+  }
+ ],
+ "list_items": [],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false
+}

@@ -1,0 +1,99 @@
+{
+ "path": "office/till-and-deposits.md",
+ "title": "Расхождения по кассе и сдача выручки",
+ "title_en": "Till differences and deposits",
+ "exists_in": "both",
+ "english_sheet": "facts/office/till-and-deposits.json",
+ "first_revision_text": null,
+ "visibility": "middle",
+ "seen_from": "middle",
+ "voice_of_slot": "3",
+ "purpose": "The office side of the cash: the bag log, the bank, the differences book.",
+ "serves": [
+  "S2",
+  "visibility:middle",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_ru": 180,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The four signals are the Russian ones: discounted cash orders at one desk, stock issues with no order line, clocked time far above sold time, many small cash orders on a nameless customer (stories/S02, per market).",
+  "Sealed bags, the bag log, the cash book."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "У каждого сейф-пакета есть строка в журнале: дата, сумма на пакете, кто запечатал, кто вёз, кто принял."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Пакет Московского шоссе ночует в сейфе бухгалтерии. В банк я сдаю его на следующий рабочий день — вместе с пакетом Инженерного, который приезжает рейсом в 13:00. Техническая сдаёт выручку сама, каждый рабочий день, и Ринат Фаридович присылает мне фотографию квитанции."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Каждую квитанцию банка сверяю с наличной выручкой за этот день по программе и по отчёту кассы. Пакет, который не сходится со своим же листом пересчёта, вскрываем вдвоём."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Расхождения записываю в журнал: дата, сервис, кто закрывал смену. Кассовую книгу веду я."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Скидки на нарядах с оплатой наличными: на одной приёмке их больше, чем на остальных."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Выдачи со склада, под которыми нет строки наряда."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Наряды, где механики отметили намного больше времени, чем продано."
+  },
+  {
+   "section": "Расхождения по кассе и сдача выручки",
+   "item": "Много мелких наличных нарядов на клиенте без имени."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна Кудашкина",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}",
+  "{{@money_found|season}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "proposal",
+   "author_slot": "3",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created",
+   "proposer_slot": "3",
+   "approver_slot": "2"
+  }
+ ],
+ "has_history": true
+}

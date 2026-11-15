@@ -1,0 +1,1368 @@
+{
+ "_what": "the hand-written cards with their whole trail; anchors and times as DESIGN.md section 7",
+ "cards": [
+  {
+   "id": "S16-review",
+   "story": "S16",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Подготовить квартальный обзор по «Симбирскому гонцу»",
+   "description": "Встреча {day:S16meet} в 10:00, будут Екатерина Николаевна и я. Одна страница: заезды и выручка по месяцам с {month:G}, что чаще всего делали на их машинах и за сколько дней они теперь платят. Акт сверки у Ирины Владимировны, запчасти у Паши.",
+   "why_now": "Платят всё позже; Екатерина Николаевна хочет обсудить это на встрече.",
+   "created": {
+    "by": 4,
+    "at": "W-1.mon@o+1:10"
+   },
+   "owner": 6,
+   "due": "p6+2@12:00",
+   "state_at_t": "started",
+   "participants": [
+    {
+     "slot": 3,
+     "role": "participant",
+     "added_by": 4,
+     "part_done_at": null
+    },
+    {
+     "slot": 9,
+     "role": "participant",
+     "added_by": 4,
+     "part_done_at": "W-1.thu@o+6:20"
+    },
+    {
+     "slot": 2,
+     "role": "observer",
+     "added_by": 2,
+     "part_done_at": null
+    }
+   ],
+   "trail": [
+    {
+     "at": "W-1.mon@o+1:10",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W-1.mon@o+1:10",
+     "by": 4,
+     "verb": "assigned",
+     "to": 6
+    },
+    {
+     "at": "W-1.mon@o+1:10",
+     "by": 4,
+     "verb": "participant_added",
+     "who": 3,
+     "role": "participant"
+    },
+    {
+     "at": "W-1.mon@o+1:10",
+     "by": 4,
+     "verb": "participant_added",
+     "who": 9,
+     "role": "participant"
+    },
+    {
+     "at": "W-1.mon@o+2:05",
+     "by": 2,
+     "verb": "participant_added",
+     "who": 2,
+     "role": "observer"
+    },
+    {
+     "at": "W-1.mon>=p6@o+5:30",
+     "by": 6,
+     "verb": "moved",
+     "to": "started"
+    },
+    {
+     "at": "W-1.thu@o+3:00",
+     "by": 3,
+     "verb": "attached",
+     "file": "Акт сверки Симбирский гонец {month:T}.pdf",
+     "note": "generated per build: its numbers equal the ERP's at T (card S16)"
+    },
+    {
+     "at": "W-1.thu@o+6:15",
+     "by": 9,
+     "verb": "comment",
+     "body": "По их машинам с {month:G}: больше всего колодок, дальше аккумуляторы и щётки. Полный список по машинам — в отчёте по запчастям клиента. Моя часть готова."
+    },
+    {
+     "at": "W-1.thu@o+6:20",
+     "by": 9,
+     "verb": "part_done"
+    },
+    {
+     "at": "p6-2@o+4:10",
+     "by": 6,
+     "verb": "comment",
+     "body": "Заезды и выручка по месяцам уже в черновике. Не хватает одного: за сколько дней они платят, по месяцам."
+    },
+    {
+     "at": "p4-1@c-0:40",
+     "by": 4,
+     "verb": "comment",
+     "mentions": [
+      3
+     ],
+     "body": "@Ирина Владимировна Кудашкина, Хасановой нужна таблица по срокам оплаты до 12:00 {day:p6+2}. Акт сверки уже на карточке."
+    }
+   ]
+  },
+  {
+   "id": "S06-supplier",
+   "story": "S06",
+   "kind": "task",
+   "origin": "human",
+   "site": "west",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Перевести Техническую на ульяновского поставщика",
+   "description": "Заказы берёт на себя Мещеряков с Московского шоссе. «Казань-АвтоСнаб» остаётся для того, что «АвтоДеталь-Венец» не привезёт на следующий день. Предупредить «Казань-АвтоСнаб», поменять бланк заказа, начать с тормозов.",
+   "why_now": "«Казань-АвтоСнаб» привозит в срок шесть заказов из десяти, «АвтоДеталь-Венец» — девять.",
+   "created": {
+    "by": 2,
+    "at": "W-7.mon@o+1:20"
+   },
+   "owner": 22,
+   "due": "W-3.mon@c-0:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-7.mon@o+1:20",
+     "by": 2,
+     "verb": "created"
+    },
+    {
+     "at": "W-7.mon@o+1:20",
+     "by": 2,
+     "verb": "assigned",
+     "to": 22
+    },
+    {
+     "at": "W-5.mon@o+2:00",
+     "by": 2,
+     "verb": "comment",
+     "body": "Ринат Фаридович, прошло две недели. Что мешает? Мещеряков готов забрать заказы."
+    },
+    {
+     "at": "W-5.tue@o+4:00",
+     "by": 22,
+     "verb": "comment",
+     "body": "принял"
+    },
+    {
+     "at": "W0.mon@o+0:50",
+     "by": 2,
+     "verb": "comment",
+     "body": "Срок вышел три недели назад. Сегодня мне нужна от вас дата."
+    }
+   ]
+  },
+  {
+   "id": "S01-a5-callback",
+   "story": "S01",
+   "kind": "task",
+   "origin": "human",
+   "site": "west",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Перезвонить в «Идель-Электромонтаж»",
+   "description": "Рустем Ильгизович Фаттахов, заместитель директора по производству. Две их машины вернулись по тормозам, последний счёт оспорен и не оплачен, после этого он звонил и не дозвонился. Позвоните, выслушайте и напишите мне, чего он хочет.",
+   "why_now": "Одиннадцать машин, и ни одного заезда после последнего визита.",
+   "created": {
+    "by": 2,
+    "at": "W-18.mon@o+1:30"
+   },
+   "owner": 22,
+   "due": "W-18.wed@c-0:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-18.mon@o+1:30",
+     "by": 2,
+     "verb": "created"
+    },
+    {
+     "at": "W-18.mon@o+1:30",
+     "by": 2,
+     "verb": "assigned",
+     "to": 22
+    },
+    {
+     "at": "W-16.mon@o+2:10",
+     "by": 2,
+     "verb": "comment",
+     "body": "Ринат Фаридович, дозвонились до Фаттахова?"
+    },
+    {
+     "at": "W-16.tue@o+5:00",
+     "by": 22,
+     "verb": "comment",
+     "body": "позвоню"
+    },
+    {
+     "at": "W0.mon@o+0:55",
+     "by": 2,
+     "verb": "comment",
+     "body": "Карточка всё ещё открыта. Он звонил нам четыре раза за десять дней. Позвоните ему на этой неделе, или это сделаю я."
+    }
+   ]
+  },
+  {
+   "id": "Q-22-regulars",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "west",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Список постоянных клиентов Технической, не приезжавших полгода",
+   "description": "Имя, машина, дата последнего визита, что делали. Выгрузить может Камила; кому стоит позвонить, знаете вы.",
+   "why_now": "Прошло четырнадцать месяцев с покупки, а я до сих пор не вижу, кто перестал ездить.",
+   "created": {
+    "by": 2,
+    "at": "W-4.mon@o+1:40"
+   },
+   "owner": 22,
+   "due": "W-3.fri@c-0:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-4.mon@o+1:40",
+     "by": 2,
+     "verb": "created"
+    },
+    {
+     "at": "W-4.mon@o+1:40",
+     "by": 2,
+     "verb": "assigned",
+     "to": 22
+    },
+    {
+     "at": "W-4.tue@o+6:30",
+     "by": 22,
+     "verb": "comment",
+     "body": "сделаем"
+    }
+   ],
+   "quiet": {
+    "asked_at": "W-3.wed@05:30",
+    "asked_of": [
+     22
+    ],
+    "answered": null
+   }
+  },
+  {
+   "id": "Q-04-rack",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "east",
+   "priority": "low",
+   "origin_ref": null,
+   "template": null,
+   "title": "Инженерный: два предложения на второй стенд сход-развала",
+   "description": "Цена с монтажом и срок поставки от двух поставщиков. В загруженную неделю запись на развал там уходит на дни вперёд.",
+   "why_now": null,
+   "created": {
+    "by": 4,
+    "at": "W-3.wed@o+7:10"
+   },
+   "owner": 4,
+   "due": null,
+   "state_at_t": "backlog",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-3.wed@o+7:10",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W-3.wed@o+7:10",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    }
+   ],
+   "quiet": {
+    "asked_at": "W-2.thu@05:30",
+    "asked_of": [
+     4
+    ],
+    "answered": null
+   }
+  },
+  {
+   "id": "H-east-waiting",
+   "story": "board",
+   "kind": "escalation",
+   "origin": "model",
+   "site": "east",
+   "priority": "high",
+   "origin_ref": "chat:{session}",
+   "template": "Customer handover",
+   "title": "{visitor_name} просит связаться с сотрудником",
+   "description": "{visitor_name} просит соединить с сотрудником. Его слова: Лучше я с человеком поговорю. Стук в машине, словами не объяснишь.\n\nПерезвонить: {visitor_phone}.",
+   "why_now": "Попросил сотрудника в чате с помощником; пока никто не перезвонил.",
+   "created": {
+    "by": "A",
+    "at": "T@T-0:40"
+   },
+   "owner": null,
+   "due": "T@close",
+   "state_at_t": "backlog",
+   "participants": [],
+   "trail": [
+    {
+     "at": "T@T-0:40",
+     "by": "A",
+     "verb": "created"
+    }
+   ],
+   "rests_on": "the web chat handed over at east 40 minutes before T (conversations state at T); the name, the phone and the quoted line are that chat's, the words here are a stand-in",
+   "source": {
+    "event": "customer.handover_requested",
+    "role": "trigger"
+   }
+  },
+  {
+   "id": "S08-complaint",
+   "story": "S08",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Фомичёв, Logan: назвали {ledger:s8.price_quoted}, в наряде {ledger:s8.bill_list}",
+   "description": "Никита посчитал ремень ГРМ по странице услуги — {ledger:s8.price_quoted} — и пообещал отдать в тот же день. Машина была готова на день позже, в наряде {ledger:s8.bill_list}. Клиент ругался на приёмке и после обеда позвонил ещё раз. Я сказал, что завтра ему перезвонит руководитель. Хочет вернуть разницу.",
+   "why_now": "Обещан звонок на завтра.",
+   "created": {
+    "by": 5,
+    "at": "p7-4>p5@c-2:10"
+   },
+   "owner": 4,
+   "due": null,
+   "state_at_t": "completed",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p7-4>p5@c-2:10",
+     "by": 5,
+     "verb": "created"
+    },
+    {
+     "at": "p7-4>p5>p4@o+0:40",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    },
+    {
+     "at": "p7-4>p5>p4@o+0:41",
+     "by": 4,
+     "verb": "moved",
+     "to": "started"
+    },
+    {
+     "at": "p7-4>p5>p4@o+3:00",
+     "by": 4,
+     "verb": "comment",
+     "body": "Перезвонил Фомичёву до обеда. Снял {ledger:s8.discount}, отметка в наряде; к оплате {ledger:s8.paid_with_tax}, заберёт сегодня после работы. Ведяшкин: цены берём из прайса, карточка у тебя."
+    },
+    {
+     "at": "p7-4>p5>p4@o+3:05",
+     "by": 4,
+     "verb": "completed"
+    }
+   ]
+  },
+  {
+   "id": "S08-prices",
+   "story": "S08",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Цены — только из прайс-листа",
+   "description": "С сегодняшнего дня любую цену по телефону называешь со страницы прайс-листа, а не со страницы услуги. Прочитай её и отпишись здесь.",
+   "why_now": null,
+   "created": {
+    "by": 4,
+    "at": "p7-4>p5>p4@o+3:10"
+   },
+   "owner": 7,
+   "due": "p7-4>p5>p4>=p7@c-1:00",
+   "state_at_t": "completed",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p7-4>p5>p4@o+3:10",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "p7-4>p5>p4@o+3:10",
+     "by": 4,
+     "verb": "assigned",
+     "to": 7
+    },
+    {
+     "at": "p7-4>p5>p4>=p7@c-2:00",
+     "by": 7,
+     "verb": "comment",
+     "body": "Прочитал. Ещё сохранил заметку для помощника, чтобы напоминал. Перед Игорем Валентиновичем неудобно вышло."
+    },
+    {
+     "at": "p7-4>p5>p4>=p7@c-1:58",
+     "by": 7,
+     "verb": "completed"
+    }
+   ]
+  },
+  {
+   "id": "S03-early-desk",
+   "story": "S03",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Вторая смена на приёмке с открытия (Московское шоссе)",
+   "description": "С утра пропускаем три звонка из десяти, в остальное время — один из двенадцати. Оба мастера-приёмщика смены выходят с 9:00, норма на приёмке до 11:30 — двое. Новый шаблон смены, потом публикация.",
+   "why_now": "Один принимает машины, и телефон в это время никто не берёт.",
+   "created": {
+    "by": 4,
+    "at": "W-4.mon@o+3:00"
+   },
+   "owner": 4,
+   "due": "W-3.mon@o+1:00",
+   "state_at_t": "completed",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-4.mon@o+3:00",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W-4.mon@o+3:00",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    },
+    {
+     "at": "W-4.tue@o+1:00",
+     "by": 4,
+     "verb": "moved",
+     "to": "started"
+    },
+    {
+     "at": "W-3.mon@o+0:25",
+     "by": 4,
+     "verb": "comment",
+     "body": "С этой недели оба мастера смены с 9:00. Норма на приёмке изменена с сегодняшнего дня."
+    },
+    {
+     "at": "W-3.mon@o+0:30",
+     "by": 4,
+     "verb": "completed"
+    }
+   ]
+  },
+  {
+   "id": "S07-handover",
+   "story": "S07",
+   "kind": "task",
+   "origin": "model",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": "chat:{session}",
+   "template": "Customer handover",
+   "title": "Ольга просит связаться с сотрудником",
+   "description": "Ольга просит соединить с сотрудником. Её слова: Hyundai Solaris 2016. Скрежет спереди при нажатии на тормоз, в основном по утрам. Сначала спросила, сколько стоит «посмотреть шум»; я один раз уточнил, при торможении он или при повороте руля: при торможении. Муж считает, что это подшипник. Просит записать на диагностику тормозов в воскресенье с утра, Московское шоссе.\n\nПерезвонить: +7 907 378-60-35.",
+   "why_now": "Попросила сотрудника в чате с помощником; пока никто не перезвонил.",
+   "created": {
+    "by": "A",
+    "at": "p6-10>-1d@21:15"
+   },
+   "owner": 6,
+   "due": "p6-10@close",
+   "state_at_t": "completed",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p6-10>-1d@21:15",
+     "by": "A",
+     "verb": "created"
+    },
+    {
+     "at": "p6-10@o+0:20",
+     "by": 6,
+     "verb": "assigned",
+     "to": 6
+    },
+    {
+     "at": "p6-10@o+0:45",
+     "by": 6,
+     "verb": "comment",
+     "body": "Записала на завтра на 9:30, в чате она подтвердила. Днём ещё наберу."
+    },
+    {
+     "at": "p6-10@o+0:46",
+     "by": 6,
+     "verb": "completed"
+    }
+   ],
+   "rests_on": "S7's first web chat; the words are that chat's hand-off note (conversations/ru/01, n 12)",
+   "source": {
+    "event": "customer.handover_requested",
+    "role": "trigger"
+   }
+  },
+  {
+   "id": "F-recheck-call29",
+   "story": "people (call 29)",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Посмотреть ещё раз: Lancer, не затянуты гайки колеса",
+   "description": "Денис Маркелов, Lancer X 2011. Вчера Рябов менял передние колодки и диски, на левом переднем гайки не протянуты, клиент встал на объездной. Едет к нам потихоньку. Михалыч, сними оба колеса, проверь шпильки и диски, протяни всё ключом.",
+   "why_now": "Клиент будет в течение часа.",
+   "created": {
+    "by": 5,
+    "at": "W-10.fri@18:00"
+   },
+   "owner": 8,
+   "due": "W-10.fri@20:00",
+   "state_at_t": "completed",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-10.fri@18:00",
+     "by": 5,
+     "verb": "created"
+    },
+    {
+     "at": "W-10.fri@18:00",
+     "by": 5,
+     "verb": "assigned",
+     "to": 8
+    },
+    {
+     "at": "W-10.fri@19:20",
+     "by": 8,
+     "verb": "comment",
+     "body": "шпильки целые, диски в норме, протянул оба колеса. рябову сказал при всех"
+    },
+    {
+     "at": "W-10.fri@19:21",
+     "by": 8,
+     "verb": "completed"
+    }
+   ]
+  },
+  {
+   "id": "F-recheck-open",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Посмотреть ещё раз: Largus цветочного салона, греется задний тормоз",
+   "description": "Largus-фургон ИП Абрамовой. На днях Ваня менял задние колодки. Водитель говорит, справа сзади греется и пахнет минут через десять. Пригонят завтра к открытию. Михалыч, сними это колесо сам, до Вани.",
+   "why_now": "Завтра к открытию; к обеду у них доставка.",
+   "created": {
+    "by": 5,
+    "at": "p5-1@c-1:30"
+   },
+   "owner": 8,
+   "due": "p5-1>p8@c-1:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p5-1@c-1:30",
+     "by": 5,
+     "verb": "created"
+    },
+    {
+     "at": "p5-1@c-1:30",
+     "by": 5,
+     "verb": "assigned",
+     "to": 8
+    }
+   ],
+   "needs": "a warranty order at main opened on the due day for this van, pointing at slot 14's order (one of his planted comebacks, inside the pads' warranty; ledger board.second_look_open); when the due day falls after T, only an appointment at opening on that day"
+  },
+  {
+   "id": "J-estimate",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Смета для ИП Трофимова: ГАЗель Next, передняя подвеска",
+   "description": "Лёха нашёл на их ГАЗели люфт обеих нижних шаровых и левого рулевого наконечника. Посчитай со стандартными запчастями, добавь сход-развал и отправь им до трёх. Делать хотят на следующей неделе.",
+   "why_now": "Машина у нас, ждут сумму.",
+   "created": {
+    "by": 5,
+    "at": "p5-1@c-1:10"
+   },
+   "owner": 6,
+   "due": "T@15:00",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p5-1@c-1:10",
+     "by": 5,
+     "verb": "created"
+    },
+    {
+     "at": "p5-1@c-1:10",
+     "by": 5,
+     "verb": "assigned",
+     "to": 6
+    }
+   ]
+  },
+  {
+   "id": "J-confirm",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Подтвердить завтрашние записи до 17:00",
+   "description": "Каждому позвонить или написать. Неподтверждённую запись держим 30 минут, потом отдаём следующему из листа ожидания.",
+   "why_now": null,
+   "created": {
+    "by": 6,
+    "at": "T@o+0:15"
+   },
+   "owner": 6,
+   "due": "T@17:00",
+   "state_at_t": "started",
+   "participants": [],
+   "trail": [
+    {
+     "at": "T@o+0:15",
+     "by": 6,
+     "verb": "created"
+    },
+    {
+     "at": "T@o+0:15",
+     "by": 6,
+     "verb": "assigned",
+     "to": 6
+    },
+    {
+     "at": "T@o+0:16",
+     "by": 6,
+     "verb": "moved",
+     "to": "started"
+    }
+   ]
+  },
+  {
+   "id": "S07-return-handover",
+   "story": "S07",
+   "kind": "task",
+   "origin": "model",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": "chat:{session}",
+   "template": "Customer handover",
+   "title": "Ольга просит связаться с сотрудником",
+   "description": "Ольга просит соединить с сотрудником. Её слова: Ольга, Hyundai Solaris 2016, Московское шоссе. Хочет записаться на замену задних амортизаторов, которую отложила в прошлый визит, на этой неделе. Я назвал цену из прайса за пару, 11 720 ₽ с запчастями, время не называл.\n\nПерезвонить: +7 907 378-60-35.",
+   "why_now": "Попросила сотрудника в чате с помощником; пока никто не перезвонил.",
+   "created": {
+    "by": "A",
+    "at": "p6-1@15:41"
+   },
+   "owner": 6,
+   "due": null,
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p6-1@15:41",
+     "by": "A",
+     "verb": "created"
+    },
+    {
+     "at": "p6-1@16:05",
+     "by": 6,
+     "verb": "assigned",
+     "to": 6
+    },
+    {
+     "at": "p6-1@16:05",
+     "by": 6,
+     "verb": "rescheduled",
+     "field": "due",
+     "old": "p6-1@close",
+     "new": null
+    }
+   ],
+   "note": "the hand-over of S7's return chat (conversations/ru/03, n 6; event customer.handover_requested; the visitor is Ольга Сергеевна Тимофеева of named_customers.json, whose name the web contact does not hold): raised unowned at 15:41, taken by slot 6 at 16:05 when she answered the chat; she cleared the due date the product sets at the day's close, since the booking waits on the customer's answer"
+  },
+  {
+   "id": "J-po-numbers",
+   "story": "S01",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "«Симбирский гонец»: номера заявок в открытых заказ-нарядах",
+   "description": "В части их открытых заказ-нарядов нет номера заявки, а без него бухгалтерия «Гонца» документы не принимает. Прошу уточнить номера в транспортном отделе у Кравцова и внести в наряды.",
+   "why_now": "Без номера оплата опять задержится.",
+   "created": {
+    "by": 3,
+    "at": "p3-2@o+2:30"
+   },
+   "owner": 6,
+   "due": "p6+3@12:00",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p3-2@o+2:30",
+     "by": 3,
+     "verb": "created"
+    },
+    {
+     "at": "p3-2@o+2:30",
+     "by": 3,
+     "verb": "assigned",
+     "to": 6
+    }
+   ]
+  },
+  {
+   "id": "J-saved-replies",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "low",
+   "origin_ref": null,
+   "template": null,
+   "title": "Переписать шаблоны ответов про шины",
+   "description": "Переобувка, хранение, датчики давления. Три коротких.",
+   "why_now": null,
+   "created": {
+    "by": 6,
+    "at": "p6-2@o+6:00"
+   },
+   "owner": 6,
+   "due": null,
+   "state_at_t": "backlog",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p6-2@o+6:00",
+     "by": 6,
+     "verb": "created"
+    },
+    {
+     "at": "p6-2@o+6:00",
+     "by": 6,
+     "verb": "assigned",
+     "to": 6
+    }
+   ]
+  },
+  {
+   "id": "G-cover-week-off",
+   "story": "S05",
+   "kind": "task",
+   "origin": "human",
+   "site": "east",
+   "priority": "high",
+   "origin_ref": null,
+   "template": null,
+   "title": "Кто заменит Демидову на неделе её отпуска",
+   "description": "Её не будет с {day:S5} по {day:S5>+6d}. Две смены на этой неделе уже опубликованы и пока за ней; в черновике на её дни на приёмке никого. В свои выходные свободны Николаев, Хасанова и Пахомова.",
+   "why_now": "В четверг публикуем следующую неделю, а на Инженерном в её дни приёмка пустая.",
+   "created": {
+    "by": 4,
+    "at": "p16-3>=p4@c-1:00"
+   },
+   "owner": 4,
+   "due": "W+1.mon@12:00",
+   "state_at_t": "started",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p16-3>=p4@c-1:00",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "p16-3>=p4@c-1:00",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    },
+    {
+     "at": "p16-3>=p4@c-0:58",
+     "by": 4,
+     "verb": "moved",
+     "to": "started"
+    },
+    {
+     "at": "p16-2@o+2:20",
+     "by": 16,
+     "verb": "comment",
+     "body": "Сергей Анатольевич, открытые сметы и список по «Тёплому контуру» оставила Артёму. В первый день до обеда я ещё на связи."
+    }
+   ]
+  },
+  {
+   "id": "G-no-show-talk",
+   "story": "S14",
+   "kind": "task",
+   "origin": "human",
+   "site": "east",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Поговорить с Блиновым про неявку",
+   "description": "Не вышел, позвонил только к десяти. Подменил Аюпов. Думаю, вторая работа по вечерам, но надо спросить, а не гадать. По возможности до его следующей смены.",
+   "why_now": "Первый раз, и объяснить толком не смог.",
+   "created": {
+    "by": 4,
+    "at": "east-2<=p20@c-2:00"
+   },
+   "owner": 4,
+   "due": "p4+1@c-1:00",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "east-2<=p20@c-2:00",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "east-2<=p20@c-2:00",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    }
+   ]
+  },
+  {
+   "id": "G-open-shift",
+   "story": "S14",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Закрыть свободную смену механика на Московском ({day:W+1.tue})",
+   "description": "Опубликована без человека, никто не взял. Сначала спросить Карпова (у него выходной), потом Суркова.",
+   "why_now": "До смены несколько дней, а она всё ещё свободна.",
+   "created": {
+    "by": 4,
+    "at": "W0.thu@c-3:30"
+   },
+   "owner": 4,
+   "due": "W+1.mon@c-1:00",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W0.thu@c-3:30",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W0.thu@c-3:30",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    }
+   ]
+  },
+  {
+   "id": "G-stocktake",
+   "story": "S13",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Инвентаризация: кто считает и кто закрывает площадки в 12:00",
+   "description": "{day:stock} все три сервиса закрываются в 12:00. По два человека на пересчёт на площадку, последняя запись на 10:00, работы не длиннее двух нормо-часов. Ведомости ведёт Мещеряков; Казань присылает свои до 18:00 по Москве.",
+   "why_now": null,
+   "created": {
+    "by": 4,
+    "at": "W-1.thu@o+5:00"
+   },
+   "owner": 4,
+   "due": "W+1.wed@12:00",
+   "state_at_t": "started",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W-1.thu@o+5:00",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W-1.thu@o+5:00",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    },
+    {
+     "at": "W-1.thu@o+5:02",
+     "by": 4,
+     "verb": "moved",
+     "to": "started"
+    },
+    {
+     "at": "W0.wed@o+3:40",
+     "by": 9,
+     "verb": "comment",
+     "body": "Ведомости на все три площадки распечатал. Расхождение больше 2 000 ₽ по строке — пересчитываем."
+    }
+   ]
+  },
+  {
+   "id": "G-90-day-review",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Ведяшкин: итоги испытательного срока",
+   "description": "Три месяца прошло. Мне нужны оценки звонков по месяцам, два случая с неверной ценой и что изменилось после каждого, и твоя рекомендация. Одна страница.",
+   "why_now": "Три месяца истекли в этом месяце.",
+   "created": {
+    "by": 2,
+    "at": "W0.mon@o+1:05"
+   },
+   "owner": 4,
+   "due": "W+1.fri@c-0:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W0.mon@o+1:05",
+     "by": 2,
+     "verb": "created"
+    },
+    {
+     "at": "W0.mon@o+1:05",
+     "by": 2,
+     "verb": "assigned",
+     "to": 4
+    }
+   ]
+  },
+  {
+   "id": "G-listen-calls",
+   "story": "S04",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Прослушать пять звонков Ведяшкина за неделю",
+   "description": "Два утренних, три после обеда. Разобрать на ближайшем разборе звонков.",
+   "why_now": null,
+   "created": {
+    "by": 4,
+    "at": "W0.mon@o+1:30"
+   },
+   "owner": 4,
+   "due": "W0.fri@c-0:30",
+   "state_at_t": "started",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W0.mon@o+1:30",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W0.mon@o+1:30",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    },
+    {
+     "at": "W0.tue@o+6:00",
+     "by": 4,
+     "verb": "moved",
+     "to": "started"
+    }
+   ]
+  },
+  {
+   "id": "G-weekly-callers",
+   "story": "S01",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Сверка за неделю: кто из звонивших выпал из списка перезвонов",
+   "description": "История звонков за неделю по трём площадкам: кто не дозвонился и в списке уже не виден.",
+   "why_now": null,
+   "created": {
+    "by": 4,
+    "at": "W0.mon@o+1:32"
+   },
+   "owner": 4,
+   "due": "W0.fri@c-0:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "W0.mon@o+1:32",
+     "by": 4,
+     "verb": "created"
+    },
+    {
+     "at": "W0.mon@o+1:32",
+     "by": 4,
+     "verb": "assigned",
+     "to": 4
+    }
+   ]
+  },
+  {
+   "id": "G-standing-cover",
+   "story": "S05",
+   "kind": "task",
+   "origin": "human",
+   "site": "east",
+   "priority": "normal",
+   "origin_ref": null,
+   "template": null,
+   "title": "Приёмка на Инженерном: постоянное решение на дни без Демидовой",
+   "description": "Не про одну эту неделю, а на каждый раз: кто выходит, из какой смены и кто остаётся на Московском. Без неё на Инженерном соглашаются на пять рекомендаций из десяти, с ней — на семь.",
+   "why_now": "Каждый её выходной — это потерянные работы.",
+   "created": {
+    "by": 2,
+    "at": "p16-2@o+3:00"
+   },
+   "owner": 4,
+   "due": "W+2.mon@c-0:30",
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p16-2@o+3:00",
+     "by": 2,
+     "verb": "created"
+    },
+    {
+     "at": "p16-2@o+3:00",
+     "by": 2,
+     "verb": "assigned",
+     "to": 4
+    }
+   ]
+  },
+  {
+   "id": "M-chats-cover",
+   "story": "board",
+   "kind": "task",
+   "origin": "human",
+   "site": "main",
+   "priority": "low",
+   "origin_ref": null,
+   "template": null,
+   "title": "Чаты: кто отвечает, когда Алина на Инженерном",
+   "description": null,
+   "why_now": null,
+   "created": {
+    "by": 5,
+    "at": "p5-1@c-0:30"
+   },
+   "owner": 5,
+   "due": null,
+   "state_at_t": "unstarted",
+   "participants": [],
+   "trail": [
+    {
+     "at": "p5-1@c-0:30",
+     "by": 5,
+     "verb": "created"
+    },
+    {
+     "at": "p5-1@c-0:30",
+     "by": 5,
+     "verb": "assigned",
+     "to": 5
+    },
+    {
+     "at": "p5-1@c-0:28",
+     "by": 5,
+     "verb": "comment",
+     "mentions": [
+      6
+     ],
+     "body": "@Алина Рамилевна Хасанова, в какой день ты на следующей неделе на Инженерном? Чаты в этот день возьму на себя."
+    }
+   ]
+  }
+ ],
+ "bank_open_at_t": [
+  {
+   "owner": 22,
+   "giver": 2,
+   "source": "task",
+   "priority": "urgent",
+   "state": "unstarted",
+   "due_working_days": 1,
+   "last_line_days": 2
+  },
+  {
+   "owner": 22,
+   "giver": 22,
+   "source": "task",
+   "priority": "normal",
+   "state": "started",
+   "due_working_days": 3,
+   "last_line_days": 1
+  },
+  {
+   "owner": 5,
+   "giver": 4,
+   "source": "task",
+   "priority": "urgent",
+   "state": "started",
+   "due_working_days": 1,
+   "last_line_days": 1
+  },
+  {
+   "owner": 5,
+   "giver": 5,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 0
+  },
+  {
+   "owner": 5,
+   "giver": "A:5",
+   "source": "assistant",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": 2,
+   "last_line_days": 0
+  },
+  {
+   "owner": 7,
+   "giver": 5,
+   "source": "task",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": -2,
+   "last_line_days": 3
+  },
+  {
+   "owner": 7,
+   "giver": 7,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 0
+  },
+  {
+   "owner": 7,
+   "giver": 4,
+   "source": "task",
+   "priority": "urgent",
+   "state": "unstarted",
+   "due_working_days": 1,
+   "last_line_days": 1
+  },
+  {
+   "owner": 29,
+   "giver": 5,
+   "source": "task",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": 1,
+   "last_line_days": 2
+  },
+  {
+   "owner": 29,
+   "giver": 29,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 0
+  },
+  {
+   "owner": 16,
+   "giver": 4,
+   "source": "task",
+   "priority": "urgent",
+   "state": "started",
+   "due_working_days": 1,
+   "last_line_days": 1
+  },
+  {
+   "owner": 16,
+   "giver": 16,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 0
+  },
+  {
+   "owner": 16,
+   "giver": "A:16",
+   "source": "assistant",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": 4,
+   "last_line_days": 2
+  },
+  {
+   "owner": 17,
+   "giver": 16,
+   "source": "task",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": -1,
+   "last_line_days": 2
+  },
+  {
+   "owner": 17,
+   "giver": 17,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 1
+  },
+  {
+   "owner": 17,
+   "giver": 4,
+   "source": "task",
+   "priority": "low",
+   "state": "backlog",
+   "due_working_days": 5,
+   "last_line_days": 5
+  },
+  {
+   "owner": 23,
+   "giver": 22,
+   "source": "task",
+   "priority": "urgent",
+   "state": "unstarted",
+   "due_working_days": -3,
+   "last_line_days": 4
+  },
+  {
+   "owner": 23,
+   "giver": 22,
+   "source": "task",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": -6,
+   "last_line_days": 6
+  },
+  {
+   "owner": 23,
+   "giver": 23,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 1
+  },
+  {
+   "owner": 23,
+   "giver": 2,
+   "source": "task",
+   "priority": "normal",
+   "state": "unstarted",
+   "due_working_days": 2,
+   "last_line_days": 3
+  },
+  {
+   "owner": 24,
+   "giver": 22,
+   "source": "task",
+   "priority": "urgent",
+   "state": "started",
+   "due_working_days": 1,
+   "last_line_days": 0
+  },
+  {
+   "owner": 24,
+   "giver": 24,
+   "source": "handover",
+   "priority": "high",
+   "state": "started",
+   "due_working_days": 0,
+   "last_line_days": 0
+  },
+  {
+   "owner": 3,
+   "giver": 2,
+   "source": "task",
+   "priority": "normal",
+   "state": "started",
+   "due_working_days": 3,
+   "last_line_days": 2
+  },
+  {
+   "owner": 9,
+   "giver": 4,
+   "source": "task",
+   "priority": "normal",
+   "state": "started",
+   "due_working_days": 1,
+   "last_line_days": 1
+  }
+ ]
+}

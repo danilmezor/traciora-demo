@@ -1,0 +1,68 @@
+{
+ "path": "customers/check-engine-light.md",
+ "title": "Check engine light",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Public advice on a check engine light and what the diagnosis costs.",
+ "serves": [
+  "challenge:customer-terms",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_en": 204,
+ "links_to": [
+  "customers/towing.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Diagnosis = catalogue job check_engine_diag, 1.0 h at the posted hour.",
+  "The fee is charged whether or not the repair is approved; it is not credited (policies/diagnostic-fees.md).",
+  "More than one hour needs the customer's approval first."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Steady or flashing",
+   "item": "Steady light, car drives normally: safe to drive. Book a diagnosis within a week or two. Check that the gas cap is tight first; a loose cap is the cheapest cause there is."
+  },
+  {
+   "section": "Steady or flashing",
+   "item": "Flashing light, or the engine shakes: the engine is misfiring. Drive as little as you can and come in. A misfire can ruin the catalytic converter, and that is an expensive part."
+  },
+  {
+   "section": "Steady or flashing",
+   "item": "Light on with the temperature gauge high or the oil light on: stop the engine. Call us or have it towed."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "check_engine_diag",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 135.0
+  }
+ ],
+ "people": [],
+ "vendors": [],
+ "accounts": [],
+ "dates": [],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Russian computer diagnostics is a fixed 0.5 h job (1 200 RUB in the catalogue), cheaper relative to the hour; say what it includes."
+ ]
+}

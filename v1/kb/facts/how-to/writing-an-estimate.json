@@ -1,0 +1,123 @@
+{
+ "path": "how-to/writing-an-estimate.md",
+ "title": "Writing an estimate",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "5",
+ "purpose": "Step two of the inspection-to-approval procedure: turning inspection findings into an estimate.",
+ "serves": [
+  "challenge:three-page-procedure",
+  "S8",
+  "S12",
+  "S7"
+ ],
+ "length_class": "medium",
+ "words_en": 320,
+ "links_to": [
+  "shop-floor/courtesy-inspection.md",
+  "prices/price-list.md",
+  "prices/labour-rates-and-fees.md",
+  "how-to/getting-approval.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Step 2 of 3 (after shop-floor/courtesy-inspection.md, before how-to/getting-approval.md).",
+  "The requested job first; every Bad line becomes a catalogue job; Watch lines go in the notes with the measurement, except when they share labour with a Bad item.",
+  "Prices come from the price list only; service pages can be out of date (the rule slot 7 broke, S8).",
+  "Standard tier by default; vehicle class multipliers; ordering by safety, breakdown risk, cost of delay.",
+  "The total is read with tax.",
+  "Parts availability checked with slot 9 before any time is mentioned.",
+  "Sent the same working day.",
+  "Estimates over 1,000 USD get a second look from the lead advisor."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Writing an estimate",
+   "item": "Start with what the customer came for. That job first, even if the inspection found something bigger."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Every Bad line becomes a job on the estimate. Pick it from the catalogue. If the technician typed a job by hand that is in the catalogue, change it to the catalogue job."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Watch lines do not go on the estimate as jobs. They go in the notes with the measurement, so the customer sees them and we find them next visit. Exception: a Watch item that shares labour with a Bad one. Say so: \"while we are in there\"."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Price from the price list. Nowhere else. Not from memory, not from the last invoice, and not from a service page: those explain the job, and they can be out of date. The shop system prices a catalogue job for you; check it against the list if it looks odd."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Standard tier unless the customer asked otherwise. Have the economy and premium figures ready; do not lead with them."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Vehicle class. A pickup or a van is not a car: multipliers."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Order the jobs by what matters: safety, then what will strand them, then what will cost more if left, then the rest."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Shop supplies and tax are added by the system. Read the customer the total with tax, because that is what they pay."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Parts: ask Marcus whether they are on the shelf or on a run before you talk about time."
+  },
+  {
+   "section": "Writing an estimate",
+   "item": "Send it the same working day. Then get the approval."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  },
+  {
+   "slot": "9",
+   "written_as": "Marcus",
+   "role": "parts_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@belt_proposal|date}}"
+ ],
+ "new_facts": [
+  "The 1,000 USD second-look rule (habit, no data footprint)."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@belt_proposal|date}}",
+   "what": "step 4 rewritten after the timing-belt complaint (proposed by slot 5, approved by slot 4): \"not from a service page\" added; message: \"Price list only.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Russian estimate = предварительный заказ-наряд (смета); parts tier naming from the Russian catalogue."
+ ]
+}

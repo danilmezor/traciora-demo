@@ -1,0 +1,566 @@
+{
+ "_what": "the hand-written series, entries and notes",
+ "series": [
+  {
+   "id": "S09-managers-meeting",
+   "story": "S09",
+   "kind": "meeting",
+   "organiser": 2,
+   "site": null,
+   "repeat": "weekly",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO",
+   "starts": "G>=mon",
+   "written_through": "T>+14d",
+   "start": "08:15",
+   "end": "08:45",
+   "zone": "home",
+   "title": "Планёрка руководителей",
+   "agenda": "Цифры прошлой недели по площадкам, график на эту неделю, по одному открытому вопросу с каждого. Полчаса.",
+   "invitees": [
+    {
+     "slot": 4,
+     "role": "required",
+     "rule": "accepts and comes to every occurrence that is held"
+    },
+    {
+     "slot": 3,
+     "role": "required",
+     "rule": "accepts and comes to every occurrence that is held"
+    },
+    {
+     "slot": 5,
+     "role": "required",
+     "rule": "by_rota: accepts and comes on his working Mondays, declines the others"
+    },
+    {
+     "slot": 16,
+     "role": "required",
+     "rule": "by_rota: accepts and comes on her working Mondays, declines the others"
+    },
+    {
+     "slot": 22,
+     "role": "required",
+     "rule": "ledger s9.pattern: the cycle of eleven over the regular occurrences, in order; the moved week accepted and came; both future occurrences unanswered",
+     "answers_at": "the Sunday evening before, 20:40 his time, when he publishes his roster"
+    }
+   ],
+   "exceptions": [
+    {
+     "occurrence": "S9cancel",
+     "action": "cancel",
+     "by": 2,
+     "at": "S9cancel>-3d@o+2:00",
+     "why": "called off by the organiser (card S09)"
+    },
+    {
+     "occurrence": "every Monday that is a closed date (en)",
+     "action": "cancel",
+     "by": 2,
+     "why": "holiday Mondays are cancelled occurrences, written when the series is made"
+    },
+    {
+     "occurrence": "W-5.mon",
+     "action": "replace",
+     "start": "10:00",
+     "end": "10:30",
+     "by": 2,
+     "at": "W-6.thu@o+3:00",
+     "why": "the one week it was moved (card S09)"
+    }
+   ],
+   "future": {
+    "answered": [
+     4,
+     3,
+     5,
+     16
+    ],
+    "unanswered": [
+     22
+    ]
+   },
+   "notes": "no occurrence carries a note, a comment or a reason about its hour (question S9.4 is 'nothing')"
+  },
+  {
+   "id": "COACH-6",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "invitees": [
+    {
+     "slot": 6,
+     "role": "required"
+    }
+   ],
+   "repeat": null,
+   "rrule": null,
+   "starts": "W-23.wed",
+   "when": "single entries, not a series: one a week on her first working day of the week that is a weekday, 15:00-15:30",
+   "title": "Разбор звонков: Алина",
+   "notes_from": "coaching_notes below on the last occurrence of each score period; the bank on the others"
+  },
+  {
+   "id": "COACH-7",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "invitees": [
+    {
+     "slot": 7,
+     "role": "required"
+    }
+   ],
+   "repeat": null,
+   "rrule": null,
+   "starts": "W-13.wed",
+   "when": "single entries: his first working weekday of the week, 15:30-16:00",
+   "title": "Разбор звонков: Никита",
+   "notes_from": "the bank"
+  },
+  {
+   "id": "COACH-17",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "east",
+   "invitees": [
+    {
+     "slot": 17,
+     "role": "required"
+    }
+   ],
+   "repeat": null,
+   "rrule": null,
+   "starts": "W-23.thu",
+   "when": "single entries: his working Tuesday or Thursday of the week, else his first working weekday, 15:00-15:30",
+   "title": "Разбор звонков: Артём",
+   "notes_from": "the bank"
+  },
+  {
+   "id": "COACH-29",
+   "story": "S04",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "invitees": [
+    {
+     "slot": 29,
+     "role": "required"
+    }
+   ],
+   "repeat": null,
+   "starts": "W-23.mon",
+   "when": "single entries: her first working weekday of the week, 16:00-16:30",
+   "title": "Разбор звонков: Татьяна Геннадьевна",
+   "notes_from": "the bank"
+  },
+  {
+   "id": "STANDUP-main",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 8,
+   "site": "main",
+   "invitees": [],
+   "repeat": "weekdays",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
+   "starts": "G>=open",
+   "start": "08:50",
+   "end": "09:00",
+   "title": "Утренняя планёрка: Московское шоссе",
+   "notes_from": "the bank: three lines, one each from three themes; the story days below"
+  },
+  {
+   "id": "STANDUP-east",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 18,
+   "site": "east",
+   "invitees": [],
+   "repeat": "weekdays",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
+   "starts": "G>=open",
+   "start": "08:50",
+   "end": "09:00",
+   "title": "Утренняя планёрка: Инженерный",
+   "notes_from": "as main"
+  },
+  {
+   "id": "STANDUP-west",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 22,
+   "site": "west",
+   "invitees": [],
+   "repeat": "weekdays",
+   "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
+   "starts": "G>=open",
+   "start": "08:50",
+   "end": "09:00",
+   "zone": "west",
+   "title": "Утренняя планёрка: Техническая",
+   "notes_from": "as main; slot 22 writes a note on one day in three"
+  }
+ ],
+ "standup_notes": [
+  {
+   "series": "STANDUP-east",
+   "on": "east-2<=p20",
+   "by": 18,
+   "body": "— Блинова нет, не звонил; на подмену выходит Аюпов\n— До десяти два клиента ждут в зале, оба на замену масла\n— Стенд развала занят до двух: без записи не берём"
+  },
+  {
+   "series": "STANDUP-main",
+   "on": "W-3.mon",
+   "by": 8,
+   "body": "— С сегодняшнего дня оба мастера-приёмщика с 9:00: сначала телефон, потом стойка\n— Шубин до обеда на гибриде; зарядку и стартер берёт Нуруллин\n— Карпов и Сурков выходные: на подъёмниках сегодня четверо"
+  },
+  {
+   "series": "STANDUP-main",
+   "on": "W-10.mon",
+   "by": 8,
+   "body": "— Шубин с сегодняшнего дня две недели в отпуске: диагностику берём только ту, что потянет Нуруллин\n— Остальное — Егорову на Инженерный; записывает Григорьев, сразу туда\n— Гибриды до его возвращения не принимаем"
+  },
+  {
+   "series": "STANDUP-west",
+   "on": "west-1",
+   "by": 22,
+   "body": "— Насос ЭГУР на Peugeot: поставщик теперь говорит «на следующей неделе»\n— Четыре машины ждут запчасти; сначала берём тех, кто без записи\n— Булат завтра выходит позже, с утра у него пары"
+  }
+ ],
+ "coaching_notes_slot_6": [
+  {
+   "period": 1,
+   "body": "— Приветствие и данные машины — в каждом звонке, так держать\n— Называет цену и ждёт. На следующую неделю: сначала два времени, потом цена\n— Средняя за период: {ledger:p06.score_path.1}"
+  },
+  {
+   "period": 2,
+   "body": "— Уже спрашивает, когда клиенту удобно приехать\n— Не спрашивать, а предлагать: «завтра в 9:00 или послезавтра в 14:00»\n— Средняя: {ledger:p06.score_path.2}"
+  },
+  {
+   "period": 3,
+   "body": "— Запись берёт, когда клиент сам называет время\n— Итога пока нет. Перед тем как положить трубку: день, время, работа\n— Средняя: {ledger:p06.score_path.3}"
+  },
+  {
+   "period": 4,
+   "body": "— Итог есть почти в каждом звонке; новым клиентам добавлять адрес\n— На «дорого» сочувствует. Нужно отвечать: что входит в цену\n— Средняя: {ledger:p06.score_path.4}"
+  },
+  {
+   "period": 5,
+   "body": "— Два времени до цены и запись — это уже стандарт\n— Сомнение клиента: сказать, что будет, если отложить, и ещё раз предложить время\n— Средняя: {ledger:p06.score_path.5}"
+  },
+  {
+   "period": 6,
+   "body": "— Лучший период; звонок с водителем «Гонца» по чек-листу без замечаний\n— Правило про лимит водителя подала заметкой для команды — правильно\n— Слабое место то же: ответ на сомнение. Одна фраза «что входит в цену» — каждый раз"
+  }
+ ],
+ "entries": [
+  {
+   "id": "S16-meeting",
+   "story": "S16",
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "S16meet@10:00",
+   "end": "S16meet@11:00",
+   "booked": "W-1.mon@o+1:20",
+   "title": "Квартальный обзор: «Симбирский гонец»",
+   "agenda": "Приезжают Кравцов и Бикмаев. Алина показывает страницу; о сроках оплаты говорит Екатерина Николаевна.",
+   "invitees": [
+    {
+     "slot": 6,
+     "response": "accepted",
+     "at": "W-1.mon>=p6@o+5:35"
+    },
+    {
+     "slot": 2,
+     "response": "accepted",
+     "at": "W-1.mon@o+2:06"
+    }
+   ]
+  },
+  {
+   "id": "S16-block",
+   "story": "S16",
+   "kind": "block",
+   "organiser": 6,
+   "site": "main",
+   "show_as": "busy",
+   "card": "S16-review",
+   "start": "p6+1@14:00",
+   "end": "p6+1@15:30",
+   "booked": "p6-1@o+6:00",
+   "title": "Подготовка обзора: «Симбирский гонец»",
+   "invitees": []
+  },
+  {
+   "id": "S05-leave-10",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 10,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-10.mon",
+   "end": "W-9.fri",
+   "booked": "W-14.mon@o+0:10",
+   "title": "Отпуск",
+   "invitees": [],
+   "with_it": "availability 'unavailable' on each date and no shift (leave has no record of its own)"
+  },
+  {
+   "id": "S05-week-off-16",
+   "story": "S05",
+   "kind": "personal",
+   "organiser": 16,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "S5",
+   "end": "S5>+6d",
+   "booked": "p16-3@o+1:00",
+   "title": "Отпуск: свадьба дочери",
+   "invitees": [],
+   "with_it": "availability 'unavailable' on the seven dates; the two published shifts stand, each with an open request"
+  },
+  {
+   "id": "S13-stocktake",
+   "story": "S13",
+   "kind": "meeting",
+   "organiser": 9,
+   "site": "main",
+   "show_as": "busy",
+   "start": "stock@12:00",
+   "end": "stock@16:00",
+   "booked": "W-1.thu@o+5:20",
+   "title": "Инвентаризация: пересчёт с 12:00",
+   "agenda": "Сервисы закрываются в 12:00. Считаем по двое, ведомости сдаём Мещерякову до четырёх.",
+   "invitees": [
+    {
+     "slot": 4,
+     "response": "accepted",
+     "at": "W-1.thu@o+5:40"
+    },
+    {
+     "slot": 8,
+     "response": "accepted",
+     "at": "W-1.fri@o+0:30"
+    },
+    {
+     "slot": 3,
+     "response": "accepted",
+     "at": "W-1.fri@o+2:10"
+    }
+   ]
+  },
+  {
+   "id": "TRN-hybrid-10",
+   "story": null,
+   "kind": "personal",
+   "organiser": 10,
+   "site": null,
+   "show_as": "out_of_office",
+   "all_day": true,
+   "start": "W-21.wed",
+   "end": "W-21.wed",
+   "booked": "W-23.mon@o+0:15",
+   "title": "Курсы: высоковольтные системы гибридов (выездные)",
+   "invitees": [],
+   "with_it": "no shift that day; not an absence"
+  },
+  {
+   "id": "TRN-lifts",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 8,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-13.fri@09:00",
+   "end": "W-13.fri@09:30",
+   "booked": "W-14.fri@o+2:00",
+   "title": "Повторный инструктаж: подъёмники и страховочные стойки",
+   "invitees": [
+    {
+     "slot": 10,
+     "response": "by_rota"
+    },
+    {
+     "slot": 11,
+     "response": "by_rota"
+    },
+    {
+     "slot": 12,
+     "response": "by_rota"
+    },
+    {
+     "slot": 13,
+     "response": "by_rota"
+    },
+    {
+     "slot": 14,
+     "response": "by_rota"
+    },
+    {
+     "slot": 15,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "SUP-home-supplier",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 9,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-12.wed@o+3:00",
+   "end": "W-12.wed@o+3:45",
+   "booked": "W-13.mon@o+2:00",
+   "title": "«АвтоДеталь-Венец»: осенний заказ и возвраты",
+   "invitees": [
+    {
+     "slot": 4,
+     "response": "accepted",
+     "attended": true,
+     "at": "W-13.mon@o+4:00"
+    }
+   ]
+  },
+  {
+   "id": "SUP-tyres",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 9,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-8.tue@o+2:30",
+   "end": "W-8.tue@o+3:15",
+   "booked": "W-9.wed@o+1:00",
+   "title": "«ШинТорг-Волга»: зимний ассортимент и хранение шин",
+   "invitees": [
+    {
+     "slot": 4,
+     "response": "accepted",
+     "attended": true,
+     "at": "W-9.wed@o+3:00"
+    },
+    {
+     "slot": 8,
+     "response": "accepted",
+     "attended": true,
+     "at": "W-9.thu@o+0:20"
+    }
+   ]
+  },
+  {
+   "id": "INT-tech-1",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-19.tue@c-1:15",
+   "end": "W-19.tue@c-0:30",
+   "booked": "W-19.tue>-7d@o+2:00",
+   "title": "Собеседование: ученик автомеханика (1 из 3)",
+   "invitees": [
+    {
+     "slot": 8,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-tech-2",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-19.thu@c-1:15",
+   "end": "W-19.thu@c-0:30",
+   "booked": "W-19.thu>-7d@o+2:00",
+   "title": "Собеседование: ученик автомеханика (2 из 3)",
+   "invitees": [
+    {
+     "slot": 8,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-tech-3",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-18.wed@c-1:15",
+   "end": "W-18.wed@c-0:30",
+   "booked": "W-18.wed>-7d@o+2:00",
+   "title": "Собеседование: ученик автомеханика (3 из 3)",
+   "invitees": [
+    {
+     "slot": 8,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-adv-1",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-18.thu@c-1:15",
+   "end": "W-18.thu@c-0:30",
+   "booked": "W-18.thu>-7d@o+2:00",
+   "title": "Собеседование: мастер-приёмщик (1 из 3)",
+   "invitees": [
+    {
+     "slot": 5,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-adv-2",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-17.tue@c-1:15",
+   "end": "W-17.tue@c-0:30",
+   "booked": "W-17.tue>-7d@o+2:00",
+   "title": "Собеседование: мастер-приёмщик (2 из 3)",
+   "invitees": [
+    {
+     "slot": 5,
+     "response": "by_rota"
+    }
+   ]
+  },
+  {
+   "id": "INT-adv-3",
+   "story": null,
+   "kind": "meeting",
+   "organiser": 4,
+   "site": "main",
+   "show_as": "busy",
+   "start": "W-17.thu@c-1:15",
+   "end": "W-17.thu@c-0:30",
+   "booked": "W-17.thu>-7d@o+2:00",
+   "title": "Собеседование: мастер-приёмщик (3 из 3)",
+   "invitees": [
+    {
+     "slot": 5,
+     "response": "by_rota"
+    }
+   ]
+  }
+ ]
+}

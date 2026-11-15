@@ -1,0 +1,374 @@
+# Shop goldens (en) at T 2026-11-13 10:30, seed 1: each question and its reference query's rows.
+
+## shop-S01-accounts-lost
+Which company accounts have we lost or are losing?
+account_name
+Cumberland Bend Electric LLC
+Sourwood Catering Co. LLC
+(2 rows)
+
+## shop-S01-east-overdue
+Which accounts at Bonny Oaks have a bill overdue?
+account_name
+(0 rows)
+
+## shop-S02-brent-cost
+What did Brent Lassiter cost us at Charlotte Pike in his last 26 weeks: the discounts he gave, the cash he took on orders he then voided, the days his till came up 20 dollars or more short, and the three together?
+discounts_usd | voided_after_cash_usd | till_short_usd | estimated_total_usd
+4100.00 | 5600.00 | 1700.00 | 11400.00
+(1 row)
+
+## shop-S02-discount-rule-30d
+Which orders broke the discount rule in the last 30 days, and which advisor wrote each?
+order_number | advisor_name
+121938 | Chad Binkley
+122353 | Chad Binkley
+(2 rows)
+
+## shop-S02-west-leaks
+On which days was the Charlotte Pike till short by 20 dollars or more?
+business_day_yyyy_mm_dd
+2025-12-17
+2025-12-22
+2025-12-23
+2025-12-29
+2025-12-30
+2026-01-12
+2026-02-27
+2026-03-23
+2026-04-02
+2026-04-03
+2026-04-10
+2026-04-13
+2026-04-16
+2026-05-08
+2026-05-13
+(19 rows, the first 15 shown)
+
+## shop-S06-west-waiting-parts
+Whose cars are waiting for parts at Charlotte Pike now, and for how long?
+customer_name | vehicle_year | vehicle_make | vehicle_model | days_waiting_count
+Curtis Vaughn | 2012 | Volvo | XC60 T6 AWD | 9
+Melissa Perez | 2014 | Honda | CR-V | 7
+Sophia Allen | 2016 | Dodge | Grand Caravan | 4
+ROBERTSON, CHRISTOPHER | 2016 | Buick | Enclave | 2
+Stephanie Blackwood | 2009 | Ford | F-150 | 1
+(5 rows)
+
+## shop-S11-seasonal-hire-start
+For each season in our records, when did the air-conditioning season start, and when did our seasonal hire start?
+season_year | season_start_month_yyyy_mm | hire_started_on_yyyy_mm_dd
+2025 | 2025-05 | 2025-06-02
+2026 | 2026-05 | 2026-06-01
+(2 rows)
+
+## shop-S15-customer-count
+How many customers do we have?
+customers_count
+8912
+(1 row)
+
+## shop-S15-revenue-last-month
+What was last month's revenue?
+revenue_before_tax_usd
+427996.64
+(1 row)
+
+## shop-S15-average-order-by-shop
+What has the average order been at each shop over the last 12 months?
+shop_name | average_order_before_tax_usd
+East Main | 524.31
+Bonny Oaks | 563.26
+Charlotte Pike | 500.83
+(3 rows)
+
+## shop-S15-wrong-mileage
+Which orders have a mileage that cannot be right?
+order_number
+109887
+112214
+113139
+115164
+119624
+122210
+(6 rows)
+
+## shop-S15-open-over-60-days
+Which orders have been open for more than 60 days?
+order_number
+118153
+120140
+120542
+(3 rows)
+
+## shop-revenue-last-week
+How much did we make last week?
+revenue_before_tax_usd
+100546.58
+(1 row)
+
+## shop-revenue-30d-by-shop
+What's revenue been the last 30 days at each shop?
+shop_name | revenue_before_tax_usd
+East Main | 192330.01
+Bonny Oaks | 130002.16
+Charlotte Pike | 90010.62
+(3 rows)
+
+## shop-revenue-12-months
+What did we bring in over the last 12 months?
+revenue_before_tax_usd
+5003055.93
+(1 row)
+
+## shop-average-order-this-month
+What's the average ticket at each shop so far this month?
+shop_name | average_order_before_tax_usd
+East Main | 489.66
+Bonny Oaks | 561.91
+Charlotte Pike | 556.10
+(3 rows)
+
+## shop-top-jobs-90d
+What were the ten jobs that brought in the most money over the last 90 days?
+job_name | revenue_before_tax_usd
+Replace front brake pads & rotors | 120147.93
+Replace rear brake pads & rotors | 75444.01
+Full synthetic oil & filter change | 72720.71
+Replace front strut assemblies (pair) | 65373.60
+Mount & balance 4 new tires | 53007.52
+Check engine light - scan, test & diagnose (1 hr) | 35683.32
+Replace battery, clean terminals | 31860.12
+Remove & reinstall transmission - rebuild by transmission specialist (sublet) | 31445.05
+Four-wheel alignment | 29335.65
+Replace spark plugs | 28718.07
+(10 rows)
+
+## shop-cars-per-day
+On average, how many cars a weekday has each shop had over the last 12 months?
+shop_name | cars_per_day_avg
+East Main | 17.00
+Bonny Oaks | 10.98
+Charlotte Pike | 8.93
+(3 rows)
+
+## shop-busiest-weekday
+What's our busiest day of the week, and how many cars a day do we see on it?
+weekday_iso_1_7 | cars_per_day_avg
+1 | 37.18
+(1 row)
+
+## shop-open-orders-now
+How many jobs are still open at each shop?
+shop_name | open_orders_count
+East Main | 13
+Bonny Oaks | 8
+Charlotte Pike | 8
+(3 rows)
+
+## shop-west-early-arrivals
+How many cars came into Charlotte Pike before 9 our time last week?
+orders_count
+5
+(1 row)
+
+## shop-new-vs-returning-this-month
+How many new customers have we had this month, against ones who've been in before?
+new_customers_count | returning_customers_count
+112 | 208
+(1 row)
+
+## shop-top-customers
+Who are our ten best customers of all time?
+customer_name
+Nickajack Delivery LLC
+Millsaps Heating & Plumbing Inc.
+Sourwood Catering Co. LLC
+Moccasin Bend Janitorial Services LLC
+Missionary Ridge Driving School LLC
+Cumberland Bend Electric LLC
+Kirkland & Daughters Painting
+Apison Fence Company
+Dogwood Lane Florals
+Soddy Appliance Repair
+(10 rows)
+
+## shop-no-shows-west-last-month
+How many no-shows did Charlotte Pike have last month?
+no_shows_count
+13
+(1 row)
+
+## shop-oil-price
+What does a quart of each motor oil we use in oil changes cost for a passenger car today?
+oil_brand | list_price_usd_per_unit
+Valvoline Daily Protection synthetic blend (bulk) | 5.00
+Valvoline Advanced Full Synthetic (bulk) | 9.00
+Mobil 1 Extended Performance | 14.80
+(3 rows)
+
+## shop-oil-change-price
+What's the labor on an oil change?
+oil_change_labour_usd
+32.95
+(1 row)
+
+## shop-parts-waiting
+How many cars are waiting on parts right now at each shop, and how many days has the longest been waiting?
+shop_name | cars_waiting_count | longest_wait_days
+Charlotte Pike | 5 | 9
+East Main | 2 | 2
+Bonny Oaks | 1 | 1
+(3 rows)
+
+## shop-supplier-late
+How often is each supplier late?
+vendor_name | late_share_float_0_1
+Harpeth Valley Parts Supply LLC | 0.377
+Tellico Tire Distributors LLC | 0.160
+Ridge & Valley Import Parts Inc. | 0.119
+Hiwassee Battery & Electric Inc. | 0.095
+Sequoyah Parts Supply Inc. | 0.068
+(5 rows)
+
+## shop-parts-margin-last-month
+What was our margin on parts last month?
+parts_margin_float_0_1
+0.5085
+(1 row)
+
+## shop-mechanic-billed-hours
+How many hours did each mechanic bill last month?
+technician_name | billed_hours
+Dustin Swafford | 217.37
+Kevin Lawson | 197.00
+Andre Simmons | 172.59
+Brandon Sisk | 164.94
+Luis Herrera | 158.46
+Austin Crabtree | 154.08
+Jordan Akins | 142.43
+Gary Tidwell | 136.82
+Shane Maddox | 128.22
+Cody Gann | 124.32
+Terry Dotson | 114.76
+Hunter Varnell | 103.01
+Derek Hooper | 101.09
+Tyler Jarrell | 50.19
+(14 rows)
+
+## shop-recommended-sold-by-advisor
+How much of the recommended work has each advisor sold over the last 90 days?
+advisor_name | sold_share_float_0_1
+Angie Holloway | 0.710
+Travis Burnette | 0.578
+Jasmine Bolden | 0.571
+Maya Torres | 0.539
+Josh Tipton | 0.520
+Brenda Pickett | 0.500
+Chad Binkley | 0.381
+Caleb Sutton | 0.351
+(8 rows)
+
+## shop-tech-efficiency-this-month
+How efficient are the techs this month?
+technician_name | sold_over_clocked_float
+Dustin Swafford | 1.343
+Kevin Lawson | 1.171
+Gary Tidwell | 1.159
+Derek Hooper | 1.157
+Luis Herrera | 1.157
+Terry Dotson | 1.156
+Andre Simmons | 1.155
+Jordan Akins | 1.154
+Cody Gann | 1.153
+Shane Maddox | 1.151
+Austin Crabtree | 1.150
+Tyler Jarrell | 1.148
+Brandon Sisk | 1.146
+Hunter Varnell | 0.847
+(14 rows)
+
+## shop-comebacks-by-mechanic
+How many comebacks has each mechanic had over the last 12 months?
+technician_name | comebacks_count
+Derek Hooper | 45
+Dustin Swafford | 34
+Brandon Sisk | 19
+Wes Tate | 19
+Shane Maddox | 18
+Austin Crabtree | 16
+Gary Tidwell | 16
+Jordan Akins | 14
+Andre Simmons | 13
+Luis Herrera | 13
+Hunter Varnell | 11
+Terry Dotson | 10
+Cody Gann | 6
+Tyler Jarrell | 6
+Kevin Lawson | 5
+(15 rows)
+
+## shop-free-work-this-year
+How much warranty and goodwill work have we done free this year, at its prices?
+free_work_before_tax_usd
+67305.73
+(1 row)
+
+## shop-accounts-owed
+What do our company accounts owe right now, and how fast have they paid over the last six months?
+account_name | owed_usd | days_to_pay_avg
+Nickajack Delivery LLC | 39614.06 | 41.50
+Millsaps Heating & Plumbing Inc. | 14524.40 | 24.40
+Cumberland Bend Electric LLC | 4423.27 | 28.00
+Missionary Ridge Driving School LLC | 1997.64 | 14.00
+Sourwood Catering Co. LLC | 1129.83 | 28.60
+Moccasin Bend Janitorial Services LLC | 997.57 | 13.17
+(6 rows)
+
+## shop-account-revenue
+How much did each company account bring in over the last 12 months?
+account_name | revenue_before_tax_usd
+Nickajack Delivery LLC | 163059.08
+Millsaps Heating & Plumbing Inc. | 120826.22
+Sourwood Catering Co. LLC | 32479.24
+Cumberland Bend Electric LLC | 26407.55
+Moccasin Bend Janitorial Services LLC | 25786.34
+Missionary Ridge Driving School LLC | 19561.00
+(6 rows)
+
+## shop-unpaid-orders
+Which orders haven't been paid yet, leaving out the company accounts?
+order_number
+122468
+122556
+122554
+122522
+122558
+122563
+122537
+122559
+122520
+122562
+(10 rows)
+
+## shop-discounts-this-month
+How much have we given away in discounts this month?
+discounts_before_tax_usd
+1942.26
+(1 row)
+
+## shop-cash-last-week
+How much cash did each shop take in last week?
+shop_name | cash_taken_usd
+East Main | 10239.40
+Bonny Oaks | 7352.79
+Charlotte Pike | 1787.51
+(3 rows)
+
+## shop-labour-rate
+What are our hourly labor rates right now at each shop, the standard rate and the negotiated one?
+shop_name | standard_rate_usd | negotiated_rate_usd
+East Main | 135.00 | 121.50
+Bonny Oaks | 135.00 | 121.50
+Charlotte Pike | 135.00 | 121.50
+(3 rows)

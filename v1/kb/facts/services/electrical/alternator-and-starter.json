@@ -1,0 +1,173 @@
+{
+ "path": "services/electrical/alternator-and-starter.md",
+ "title": "Alternator and starter",
+ "first_revision_text": "en/_history/services/electrical/alternator-and-starter.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "13",
+ "purpose": "Charging and starting repairs.",
+ "serves": [
+  "challenge:customer-terms",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 198,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs alternator (1.6 h) and starter (1.5 h), three tier totals; reman units with cores.",
+  "Symptoms table for starter, battery, alternator, drain.",
+  "The free test comes first; a wrong diagnosis is the shop's cost (warranty page).",
+  "Non-returnable once fitted; supplied by V4 on the noon run."
+ ],
+ "tables": [
+  {
+   "section": "Alternator and starter",
+   "columns": [
+    "On the order",
+    "Hours",
+    "Economy / Standard / Premium"
+   ],
+   "rows": [
+    {
+     "On the order": "Replace alternator",
+     "Hours": "1.6",
+     "Economy / Standard / Premium": "$536.00 / $597.82 / $654.46"
+    },
+    {
+     "On the order": "Replace starter motor",
+     "Hours": "1.5",
+     "Economy / Standard / Premium": "$447.50 / $502.50 / $540.96"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Alternator and starter",
+   "item": "Clicks and will not crank, lights bright: starter."
+  },
+  {
+   "section": "Alternator and starter",
+   "item": "Cranks slowly, lights dim: battery, or an alternator that has not been charging it."
+  },
+  {
+   "section": "Alternator and starter",
+   "item": "Battery light on while driving: alternator, or its belt."
+  },
+  {
+   "section": "Alternator and starter",
+   "item": "Started fine yesterday, dead today, fine after a jump, dead again tomorrow: test all three, and think about a drain."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "alternator",
+   "what": "hours",
+   "class": "car",
+   "value": 1.6
+  },
+  {
+   "catalogue_key": "alternator",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 536.0
+  },
+  {
+   "catalogue_key": "alternator",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 597.82
+  },
+  {
+   "catalogue_key": "alternator",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 654.46
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "hours",
+   "class": "car",
+   "value": 1.5
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 447.5
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 502.5
+  },
+  {
+   "catalogue_key": "starter",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 540.96
+  }
+ ],
+ "people": [
+  {
+   "slot": "13",
+   "written_as": "Terry Dotson",
+   "role": "electrical_technician",
+   "site": "main"
+  },
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V4",
+   "name": "Hiwassee Battery & Electric"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "«Замена генератора», «замена стартера»; repair of the unit (ремонт генератора) is a common Russian alternative."
+ ]
+}

@@ -1,0 +1,133 @@
+{
+  "format": "seed-conversation/1",
+  "id": "15-people-p16-telegram-kondicioner",
+  "configuration": "ru",
+  "number": 15,
+  "story": "people",
+  "title": "Жалоба лучшему приёмщику: кондиционер заправили неделю назад, и он опять не холодит",
+  "demonstrates": "Slot 16 in writing: the customer's name and patronymic twice, «я бы на своей машине», two times to choose from, a summary with the address and who receives the car. She raises the chat to High herself and books a free check under the 30-day warranty. Two drafts edited; labelled and resolved.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Галина Петровна Сорокина",
+      "invented": true,
+      "first_time": false,
+      "note": "постоянная клиентка сервиса в Новом городе; LADA Granta 2020; неделю назад заправляли кондиционер"
+    },
+    "staff": [
+      {"slot": 16, "name": "Светлана Демидова"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Постоянная клиентка, которой неудобно жаловаться.",
+    "vehicle": "LADA Granta 2020",
+    "what_happens": "Кондиционер после заправки холодил три дня. Светлана благодарит, что написали, объясняет, что это утечка, а не заправка, предлагает сегодня к 14:00 или завтра к 9:30, бесплатно, по гарантии.",
+    "facts": {
+      "warranty": "30 дней на слесарные и электрические работы (ledger s12.warranty)",
+      "booked": "следующий день, 09:30, east: проверка на утечку по гарантии",
+      "public_pages_used": []
+    }
+  },
+  "days": {
+    "T-106d": {"anchor": "slot 16's first working day on or after the Wednesday of week T-15", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 15, "on_or_after_for_slot": 16}, "nominal": "Thu 2026-07-30"},
+    "T-105d": {"anchor": "1 calendar day after slot 16's first working day on or after the Wednesday of week T-15", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": 15, "on_or_after_for_slot": 16, "plus_days": 1}, "nominal": "Fri 2026-07-31", "what": "«завтра, пятница»"}
+  },
+  "floating_days": [
+    {"word": "на прошлой неделе", "said_on": "T-106d", "day": "the week T-16", "form": "на + prepositional"},
+    {"word": "сегодня к 14:00", "said_on": "T-106d", "day": "T-106d", "form": "adverb"},
+    {"word": "завтра к 9:30", "said_on": "T-106d", "day": "the next day", "form": "adverb"},
+    {"word": "завтра, пятница, 9:30", "said_on": "T-106d", "day": "the next day", "form": "adverb, nominative"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "east",
+      "thread_key": "4503599627371919",
+      "peer": {"id": "4503599627371919", "name": "Галина Петровна"},
+      "contact": {
+        "identifier": "telegram_4503599627371919",
+        "name": "Галина Петровна",
+        "phone": null,
+        "avatar": {"has": true, "kind": "view", "shows": "куст сирени у деревянного забора", "person_in_it": false}
+      },
+      "opened": {
+        "day": "T-106d",
+        "at": "09:20:15",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-106d", "at": "09:20:15", "kind": "message", "from": "customer", "text": "Светлана, здравствуйте. неудобно жаловаться, но кондиционер, который вы на прошлой неделе заправляли, опять не холодит"},
+        {"n": 2, "day": "T-106d", "at": "09:20:50", "kind": "message", "from": "customer", "text": "дня три подул холодным и всё"},
+        {"n": 3, "day": "T-106d", "at": "09:21:30", "kind": "draft", "id": "d1", "text": "Здравствуйте! Приносим извинения. Если кондиционер перестал холодить через несколько дней после заправки, в системе может быть утечка, это нужно проверить. Когда вам удобно подъехать?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-106d", "at": "09:26:40", "became": 5}},
+        {"n": 4, "day": "T-106d", "at": "09:26:38", "kind": "activity", "what": "assigned", "derived": true, "to": 16, "by": 16, "how": "first reply"},
+        {"n": 5, "day": "T-106d", "at": "09:26:40", "kind": "message", "from": "staff", "slot": 16, "text": "Галина Петровна, здравствуйте! И правильно, что написали, извиняться тут не за что. Если через три дня перестал холодить, значит, фреон уходит: где-то утечка, и сама заправка тут ни при чём. Я бы на своей машине второй раз не заправляла, пока не найдём, где течёт. Приезжайте сегодня к 14:00 или завтра к 9:30, проверим систему. Для вас это бесплатно, Галина Петровна: работа на гарантии."},
+        {"n": 6, "day": "T-106d", "at": "09:27:10", "kind": "activity", "what": "priority", "from": "normal", "to": "high", "by": 16, "how": "set by a manager: the base level"},
+        {"n": 7, "day": "T-106d", "at": "09:31:20", "kind": "message", "from": "customer", "text": "завтра к 9:30 смогу"},
+        {"n": 8, "day": "T-106d", "at": "09:32:00", "kind": "draft", "id": "d2", "text": "Хорошо, Галина Петровна. Завтра в 9:30 ждём вас.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "sent_edited", "by": 16, "day": "T-106d", "at": "09:34:10", "became": 9}},
+        {"n": 9, "day": "T-106d", "at": "09:34:10", "kind": "message", "from": "staff", "slot": 16, "text": "Записала, Галина Петровна: завтра, пятница, 9:30, проверка кондиционера на утечку, Granta, по гарантии, бесплатно. Мы на 10-м Инженерном проезде, 30. Принимаю я: найдём, где уходит, сразу покажу и скажу, сколько стоит это устранить."},
+        {"n": 10, "day": "T-106d", "at": "09:34:30", "kind": "activity", "what": "label_added", "label": "жалоба", "by": 16},
+        {"n": 11, "day": "T-106d", "at": "09:34:50", "kind": "activity", "what": "resolved", "by": 16}
+      ],
+      "assignee_history": [
+        {"day": "T-106d", "at": "09:26:38", "to": 16, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 16,
+        "labels": ["жалоба"],
+        "priority": {"base": "high", "shown": "high"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 16, "working_minutes": 6.4},
+        "waits": [
+          {"asked": 1, "answered": 5, "by": 16, "working_minutes": 6.4, "wall_minutes": 6.4, "measured_from": "n 1", "reply": "first"},
+          {"asked": 7, "answered": 9, "by": 16, "working_minutes": 2.8, "wall_minutes": 2.8, "measured_from": "n 7", "reply": "later"}
+        ],
+        "first_person_line": {
+          "by": 16,
+          "n": 5,
+          "working_minutes": 6.4,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-106d", "at": "09:34:50", "by": 16}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "sent_edited", "manager": 16},
+          {"draft": "d2", "outcome": "sent_edited", "manager": 16}
+        ],
+        "operator_credit": "slot 16: first answer 6.4 minutes (her ledger row is 6), two replies, two drafts edited, a base priority of High set by her, one resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "complaint, comeback, the bill",
+    "handled": "slot 16; the assistant drafts",
+    "outcome": "бесплатная проверка на утечку на следующий день, 09:30; закрыт слотом 16",
+    "facts": [
+      "the air conditioning stopped cooling three days after a recharge at east",
+      "slot 16 set the priority to High and booked a free leak check under the warranty",
+      "she did not offer a second recharge"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Она не защищает работу и не заправляет второй раз «на всякий случай»: сначала найти, где течёт.",
+    "Имя-отчество дважды, «я бы на своей машине», два времени, итог с адресом и словами «принимаю я».",
+    "Приоритет «Высокий» поставила она сама: жалобы у неё не ждут очереди."
+  ],
+  "new_facts": [
+    "Галина Петровна Сорокина, LADA Granta 2020, east: заправка кондиционера на неделе T-16; бесплатная проверка на утечку по гарантии на следующий день после чата, 09:30 (гарантийный заказ со ссылкой на первый).",
+    "Картинка контакта: куст сирени у забора."
+  ]
+}

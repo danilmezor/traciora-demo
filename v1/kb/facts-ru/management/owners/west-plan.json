@@ -1,0 +1,174 @@
+{
+ "path": "management/owners/west-plan.md",
+ "title": "Казань: план",
+ "title_en": "Charlotte Pike: the plan",
+ "exists_in": "both",
+ "english_sheet": "facts/management/owners/west-plan.json",
+ "first_revision_text": null,
+ "visibility": "administrator",
+ "seen_from": "administrator",
+ "voice_of_slot": "2",
+ "purpose": "Administrator only: the managing owner's private plan for the bought shop.",
+ "serves": [
+  "S6",
+  "S9",
+  "visibility:administrator",
+  "challenge:fact-in-table"
+ ],
+ "length_class": "medium",
+ "words_ru": 329,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Suppliers and the pad brands from the Russian files: V2 «Казань-АвтоСнаб» to V1 «АвтоДеталь-Венец»; the cheapest pad to be fitted is Marshall; no more BREMHOF.",
+  "She goes to Kazan twice a month (cast); the plan is every week.",
+  "Slot 22 came to the Monday meeting about one week in three (TIMELINE ru: 7 of 24)."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Казань: план",
+   "columns": [
+    "№",
+    "Что",
+    "Кто",
+    "Срок",
+    "Как сейчас"
+   ],
+   "rows": [
+    {
+     "№": "1",
+     "Что": "Перевести заказ запчастей с Казань-АвтоСнаб на АвтоДеталь-Венец",
+     "Кто": "Галиев, вместе с Пашей",
+     "Срок": "{{@supplier_due|date}}",
+     "Как сейчас": "Просили трижды. Не сделано"
+    },
+    {
+     "№": "2",
+     "Что": "Самые дешёвые колодки, которые ставим, — Marshall. Колодок BREMHOF больше не ставим",
+     "Кто": "Галиев",
+     "Срок": "Вместе с первым",
+     "Как сейчас": "Не сделано"
+    },
+    {
+     "№": "3",
+     "Что": "На звонки все отвечают так, как отвечает Камила",
+     "Кто": "Галиев",
+     "Срок": "{{T-1mo|date}}",
+     "Как сейчас": "Её страница опубликована. Слава не изменился"
+    },
+    {
+     "№": "4",
+     "Что": "График опубликован до полудня четверга",
+     "Кто": "Галиев",
+     "Срок": "Каждую неделю",
+     "Как сейчас": "Примерно раз в три недели"
+    },
+    {
+     "№": "5",
+     "Что": "Ежемесячный разбор возвратов. Виталию Сомову показать его цифры",
+     "Кто": "Галиев",
+     "Срок": "Каждый месяц",
+     "Как сейчас": "Не было ни разу"
+    },
+    {
+     "№": "6",
+     "Что": "Галиев на планёрке по понедельникам",
+     "Кто": "Галиев",
+     "Срок": "Каждую неделю",
+     "Как сейчас": "Бывает примерно раз в три недели"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Что я сделаю",
+   "item": "Буду ездить туда каждую неделю, а не два раза в месяц, и одно утро стоять на приёмке."
+  },
+  {
+   "section": "Что я сделаю",
+   "item": "Перестану ставить задачи. Сяду с ним и сделаю первый пункт вместе, за полдня, с Пашей на телефоне."
+  },
+  {
+   "section": "Что я сделаю",
+   "item": "Если первый, четвёртый и пятый пункты к {{T+2mo|date}} останутся там же, где сейчас, это будет разговор о том, кто руководит сервисом. Я этого разговора не хочу."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "22",
+   "written_as": "Галиев",
+   "role": "shop_manager",
+   "site": "west"
+  },
+  {
+   "slot": "9",
+   "written_as": "Пашей",
+   "role": "parts_manager",
+   "site": "main"
+  },
+  {
+   "slot": "24",
+   "written_as": "Камила",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "23",
+   "written_as": "Слава",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "27",
+   "written_as": "Виталию Сомову",
+   "role": "technician",
+   "site": "west"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [
+  {
+   "vendor": "V2",
+   "name": "Казань-АвтоСнаб"
+  },
+  {
+   "vendor": "V1",
+   "name": "АвтоДеталь-Венец"
+  }
+ ],
+ "accounts": [],
+ "dates": [
+  "{{T-1mo|date}}",
+  "{{@supplier_due|date}}",
+  "{{T+2mo|date}}"
+ ],
+ "amounts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{T-1mo|date}}",
+   "what": "page created"
+  }
+ ],
+ "has_history": true
+}

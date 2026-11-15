@@ -1,0 +1,140 @@
+{
+  "format": "seed-conversation/1",
+  "id": "21-people-p23-telegram-v-lyuboe-vremya",
+  "configuration": "ru",
+  "number": 21,
+  "story": "people",
+  "title": "Слабая приёмка на записи: «можно. приезжайте», «в любое время»",
+  "demonstrates": "Slot 23 in writing on an ordinary day: 44 minutes to a first reply, two words, no day and no time. Asked what time and whether he may bring his own oil, he answers both in five words twenty minutes before closing. Both drafts written over; nothing labelled, nothing resolved.",
+  "nominal_t": "2026-11-13 10:30 Europe/Ulyanovsk",
+  "cast": {
+    "customer": {
+      "name": "Ильдар",
+      "invented": true,
+      "first_time": false,
+      "note": "Volkswagen Polo 2015; в сервисе на Технической уже бывал"
+    },
+    "staff": [
+      {"slot": 23, "name": "Вячеслав Крюков"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "Клиент, который хочет поменять масло в выходные.",
+    "vehicle": "Volkswagen Polo 2015",
+    "what_happens": "«Можно. приезжайте». «А во сколько? и масло своё можно?» ждёт почти девять часов, с одним «ау» посередине, до «в любое время. можно своё». Приехал ли он — скажет учётная система.",
+    "facts": {
+      "hours": "без выходных, 9:00–20:00 (ledger site.open_days)",
+      "public_pages_used": [],
+      "prices": [
+        {"said": "6 700 ₽", "amount": 6700.0, "what": "замена масла и масляного фильтра, класс car, с маслом и фильтром (в черновике)", "from": {"catalogue": "oil_service", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}},
+        {"said": "1 330 ₽", "amount": 1330.0, "what": "только работа по замене масла: 0,7 нормо-часа (в черновике)", "from": {"labour_of": "oil_service", "class": "car"}}
+      ]
+    }
+  },
+  "days": {
+    "T-94d": {"anchor": "slot 23's first working day on or after the Monday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 13, "on_or_after_for_slot": 23}, "nominal": "Tue 2026-08-11"},
+    "T-87d": {"anchor": "7 calendar days after slot 23's first working day on or after the Monday of week T-13", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": 13, "on_or_after_for_slot": 23, "plus_days": 7}, "nominal": "Tue 2026-08-18", "what": "Chatwoot resolves the chat after 7 silent days"}
+  },
+  "floating_days": [
+    {"word": "на выходные", "said_on": "T-94d", "day": "the Saturday and Sunday of week T-13", "form": "на + accusative"},
+    {"word": "В субботу или в воскресенье", "said_on": "T-94d", "day": "the Saturday and Sunday of week T-13", "form": "в + accusative"},
+    {"word": "В субботу и воскресенье", "said_on": "T-94d", "day": "the Saturday and Sunday of week T-13", "form": "в + accusative"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "telegram",
+      "bridge": "telegram:default",
+      "inbox": "Telegram",
+      "assistant_mode": "drafts",
+      "clock": "west (Казань, UTC+3; на час меньше, чем в зоне компании)",
+      "thread_key": "4503599627373715",
+      "peer": {"id": "4503599627373715", "name": "Ильдар"},
+      "contact": {
+        "identifier": "telegram_4503599627373715",
+        "name": "Ильдар",
+        "phone": null,
+        "avatar": {"has": true, "kind": "pet", "shows": "овчарка на заднем сиденье машины", "person_in_it": false}
+      },
+      "opened": {
+        "day": "T-94d",
+        "at": "10:05:15",
+        "status": "open",
+        "arrived_closed": false,
+        "note": "in the full seed this is a later session of the customer's one conversation on this channel; here it stands alone"
+      },
+      "timeline": [
+        {"n": 1, "day": "T-94d", "at": "10:05:15", "kind": "message", "from": "customer", "text": "добрый день. на замену масла можно записаться на выходные?"},
+        {"n": 2, "day": "T-94d", "at": "10:06:00", "kind": "draft", "id": "d1", "text": "Добрый день! Да, сервис работает без выходных, с 9:00 до 20:00. Замена масла и фильтра стоит 6 700 ₽ с маслом и фильтром. В субботу или в воскресенье, и в какое время вам удобно?", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 23, "day": "T-94d", "at": "10:50:30", "because": "he sent his own text (n 6)"}},
+        {"n": 3, "day": "T-94d", "at": "10:17", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 4, "day": "T-94d", "at": "10:41", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 5, "day": "T-94d", "at": "10:50:28", "kind": "activity", "what": "assigned", "derived": true, "to": 23, "by": 23, "how": "first reply"},
+        {"n": 6, "day": "T-94d", "at": "10:50:30", "kind": "message", "from": "staff", "slot": 23, "text": "можно. приезжайте"},
+        {"n": 7, "day": "T-94d", "at": "10:50:32", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 8, "day": "T-94d", "at": "10:57:10", "kind": "message", "from": "customer", "text": "а во сколько? и масло своё можно?"},
+        {"n": 9, "day": "T-94d", "at": "10:57:50", "kind": "draft", "id": "d2", "text": "В субботу и воскресенье работаем с 9:00 до 20:00, время подтвержу. Со своим маслом можно: тогда оплачивается работа, 1 330 ₽, и фильтр.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "replaced_unseen", "by": null, "day": "T-94d", "at": "14:31:05", "because": "the customer wrote again and a newer draft took its place; nobody had acted on it"}},
+        {"n": 10, "day": "T-94d", "at": "11:21", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 11, "day": "T-94d", "at": "12:09", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "urgent", "by": "service", "how": "the wait"},
+        {"n": 12, "day": "T-94d", "at": "14:30:20", "kind": "message", "from": "customer", "text": "ау"},
+        {"n": 13, "day": "T-94d", "at": "14:31:05", "kind": "draft", "id": "d3", "text": "Прошу прощения за ожидание. В субботу и воскресенье работаем с 9:00 до 20:00, время подтвержу. Со своим маслом можно: тогда оплачивается работа, 1 330 ₽, и фильтр.", "why_a_draft": "the channel is set to drafts", "outcome": {"kind": "discarded", "by": 23, "day": "T-94d", "at": "19:40:20", "because": "he sent his own text (n 14)"}},
+        {"n": 14, "day": "T-94d", "at": "19:40:20", "kind": "message", "from": "staff", "slot": 23, "text": "в любое время. можно своё", "late": "под закрытие: его ответы приходят вечером (cast.json; ledger conv.slowest_tenth)"},
+        {"n": 15, "day": "T-94d", "at": "19:40:22", "kind": "activity", "what": "priority", "derived": true, "from": "urgent", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 16, "day": "T-87d", "at": "19:40", "kind": "activity", "what": "resolved", "by": null, "how": "7 silent days"}
+      ],
+      "assignee_history": [
+        {"day": "T-94d", "at": "10:50:28", "to": 23, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "resolved",
+        "owner": 23,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "normal", "peak": "urgent"},
+        "waiting_since": null,
+        "unread": 0,
+        "draft_in_box": null
+      },
+      "reads_back": {
+        "first_answer": {"by": 23, "working_minutes": 45.2},
+        "waits": [
+          {"asked": 1, "answered": 6, "by": 23, "working_minutes": 45.2, "wall_minutes": 45.2, "measured_from": "n 1", "reply": "first"},
+          {"asked": 8, "answered": 14, "by": 23, "working_minutes": 523.2, "wall_minutes": 523.2, "measured_from": "n 8", "reply": "later", "late": "под закрытие: его ответы приходят вечером (cast.json; ledger conv.slowest_tenth)"}
+        ],
+        "first_person_line": {
+          "by": 23,
+          "n": 6,
+          "working_minutes": 45.2,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 3, "assistant": 0, "manager": 2, "note": 0},
+        "resolutions": [
+          {"day": "T-87d", "at": "19:40", "by": null}
+        ],
+        "draft_outcomes": [
+          {"draft": "d1", "outcome": "discarded", "manager": 23},
+          {"draft": "d2", "outcome": "replaced_unseen", "manager": null},
+          {"draft": "d3", "outcome": "discarded", "manager": 23}
+        ],
+        "operator_credit": "slot 23: first answer 45.2 minutes (his ledger row is 40), two replies, two drafts discarded and one replaced before he looked, nothing resolved"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "slot 23; the assistant drafts",
+    "outcome": "время не назначено; закрыт по 7 дням тишины",
+    "facts": [
+      "no day and no time were offered; asked for one, slot 23 answered «в любое время» almost nine hours later",
+      "no draft was used, and each carried a price"
+    ],
+    "questions": []
+  },
+  "why": [
+    "Здесь нет ни грубости, ни ошибки, и нет записи.",
+    "Каждый черновик заканчивался вопросом, который закрепил бы время, и называл цену.",
+    "Рядом — файл 24: та же приёмка, такой же запрос, другой приёмщик."
+  ],
+  "new_facts": [
+    "«Ильдар», Volkswagen Polo 2015: спрашивал запись на замену масла на выходные на west; запись не сделана.",
+    "Картинка контакта: овчарка на заднем сиденье."
+  ]
+}

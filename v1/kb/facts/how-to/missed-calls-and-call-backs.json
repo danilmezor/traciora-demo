@@ -1,0 +1,99 @@
+{
+ "path": "how-to/missed-calls-and-call-backs.md",
+ "title": "Missed calls and call backs",
+ "first_revision_text": null,
+ "visibility": "staff",
+ "seen_from": "junior",
+ "voice_of_slot": "4",
+ "purpose": "How the missed-call list is worked; the standard after the early desk shift.",
+ "serves": [
+  "S3",
+  "S1",
+  "challenge:combine-kb-and-data"
+ ],
+ "length_class": "medium",
+ "words_en": 278,
+ "links_to": [
+  "shops/main/how-the-day-runs.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "The To call back list shows missed callers of the last seven days not reached since (product: the queue shows seven days).",
+  "Claiming raises a card on the claimer's board; the claim lapses after 30 minutes (product).",
+  "Standard: one hour, same day; three tries (message on the first, again after two hours, next morning).",
+  "A later answered call clears the miss automatically; only wrong numbers, robots and suppliers are dismissed.",
+  "Out-of-hours misses are not counted against a desk (S13) and are worked first by the early desk.",
+  "East Main 7:30-10:00: one advisor is phone-only; before {{@early_desk}} \"nearly one call in three\" was missed in those hours (S3: 31 %).",
+  "Promised call backs are the advisor's own; the calendar is suggested.",
+  "Callers older than seven days stay in the call history (S1: account A5's three misses are found there, not in the queue); slot 4 looks on Fridays."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Missed calls and call backs",
+   "item": "The To call back list shows every caller we missed in the last seven days who has not been reached since. Oldest first."
+  },
+  {
+   "section": "Missed calls and call backs",
+   "item": "Claim a caller before you dial, so two of us do not ring the same person. A claim puts a card on your board. If you have not called within 30 minutes the claim lapses and the caller goes back on the list."
+  },
+  {
+   "section": "Missed calls and call backs",
+   "item": "Standard: called back within one hour, and the same day without exception."
+  },
+  {
+   "section": "Missed calls and call backs",
+   "item": "No answer: leave a short message with your name and our number. Try again after two hours and once more the next morning. Three tries."
+  },
+  {
+   "section": "Missed calls and call backs",
+   "item": "If they got through to someone else in the meantime, the list clears it by itself."
+  },
+  {
+   "section": "Missed calls and call backs",
+   "item": "Dismiss only wrong numbers, robots and suppliers. Never a customer."
+  },
+  {
+   "section": "Missed calls and call backs",
+   "item": "A call missed while we were closed is not held against anybody's desk. It is still a customer: the early desk works those first."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "4",
+   "written_as": "Greg",
+   "role": "service_manager",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@early_desk|date}}"
+ ],
+ "new_facts": [
+  "Slot 4 checks the call history on Fridays for callers who fell off the list. Reason: explains how A5's misses could be found; it does not say he found them."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "4",
+   "text_date": "{{@early_desk|date}}",
+   "what": "standard changed from two hours to one, the East Main paragraph added; message: \"Early desk from today.\""
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same product rules; Russian rush 9:00-11:30."
+ ]
+}

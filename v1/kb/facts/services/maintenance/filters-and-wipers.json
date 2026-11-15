@@ -1,0 +1,198 @@
+{
+ "path": "services/maintenance/filters-and-wipers.md",
+ "title": "Filters and wipers",
+ "first_revision_text": "en/_history/services/maintenance/filters-and-wipers.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "5",
+ "purpose": "Engine air filter, cabin filter, wiper blades: small jobs sold from the inspection.",
+ "serves": [
+  "challenge:fact-in-table",
+  "smoke"
+ ],
+ "length_class": "short",
+ "words_en": 197,
+ "links_to": [
+  "services/maintenance/fuel-system-service.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Catalogue jobs engine_air_filter (0.2 h), cabin_air_filter (0.3 h), wiper_blades (menu, no labour).",
+  "Sold mostly from the inspection (recommended share 0.80 to 0.85).",
+  "Show the old filter; do not recommend a clean one.",
+  "Cabin filter interval 15,000 to 30,000 miles.",
+  "Advisors say up front that the customer can do it for less."
+ ],
+ "tables": [
+  {
+   "section": "Filters and wipers",
+   "columns": [
+    "Job",
+    "Time",
+    "Standard",
+    "Economy to premium"
+   ],
+   "rows": [
+    {
+     "Job": "Engine air filter",
+     "Time": "0.2 h",
+     "Standard": "$53.14",
+     "Economy to premium": "$45.75 to $58.73"
+    },
+    {
+     "Job": "Cabin air filter",
+     "Time": "0.3 h",
+     "Standard": "$64.36",
+     "Economy to premium": "$55.50 to $71.27"
+    },
+    {
+     "Job": "Wiper blades, pair",
+     "Time": "fitted free",
+     "Standard": "$47.73",
+     "Economy to premium": "$27.50 to $55.77"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Filters and wipers",
+   "item": "Show the old one. A grey cabin filter full of leaves sells itself. A clean one means we do not recommend it, and the customer remembers that we did not."
+  },
+  {
+   "section": "Filters and wipers",
+   "item": "Cabin filter: every 15,000 to 30,000 miles, sooner for anyone who parks under trees. If the A/C smells, this first."
+  },
+  {
+   "section": "Filters and wipers",
+   "item": "Wipers streaking or chattering. There is no labour charge to fit them."
+  },
+  {
+   "section": "Filters and wipers",
+   "item": "Customers know they can buy a filter at the parts store for less. Say so first: \"You can do this one yourself for about half. If you would rather we did it while it is here, it is ten minutes.\""
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "hours",
+   "class": "car",
+   "value": 0.2
+  },
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 53.14
+  },
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 45.75
+  },
+  {
+   "catalogue_key": "engine_air_filter",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 58.73
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "hours",
+   "class": "car",
+   "value": 0.3
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 64.36
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 55.5
+  },
+  {
+   "catalogue_key": "cabin_air_filter",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 71.27
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 47.73
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "total before tax",
+   "tier": "economy",
+   "class": "car",
+   "when": "after_rise",
+   "value": 27.5
+  },
+  {
+   "catalogue_key": "wiper_blades",
+   "what": "total before tax",
+   "tier": "premium",
+   "class": "car",
+   "when": "after_rise",
+   "value": 55.77
+  }
+ ],
+ "people": [
+  {
+   "slot": "5",
+   "written_as": "Travis Burnette",
+   "role": "lead_advisor",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "new_facts": [],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Travis's pass after the price rise: every dollar figure brought to the new list (proposed by slot 5, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "5",
+   "approver_slot": "4"
+  }
+ ],
+ "has_history": true,
+ "notes_for_russian_writer": [
+  "Same jobs; Russian wiper price is high relative to labour (2 570 RUB standard)."
+ ]
+}

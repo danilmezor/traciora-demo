@@ -1,0 +1,85 @@
+{
+ "path": "services/hybrids.md",
+ "title": "Hybrids",
+ "first_revision_text": null,
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "10",
+ "purpose": "What is and is not done on hybrids, for the counter.",
+ "serves": [
+  "S5",
+  "challenge:combine-policy-and-price",
+  "challenge:near-duplicate-shop-pages"
+ ],
+ "length_class": "short",
+ "words_en": 201,
+ "links_to": [
+  "customers/hybrids-and-electric-cars.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "facts": [
+  "Hybrid work is done at East Main by slot 10 only; when he is away it waits (S5).",
+  "Done: oil service, brakes (slides serviced), tyres, alignment, suspension, steering, 12-volt battery, engine and inverter coolant, engine-side and ordinary electrical diagnosis.",
+  "Not done: high-voltage battery, inverter, motor-generators, orange cables; the customer is referred to a dealer with the report.",
+  "Other shops: tyres and wipers only on a hybrid.",
+  "Slight difference from the public page, which lists brakes among what all shops do \"at East Main only\": consistent."
+ ],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Hybrids",
+   "item": "Oil service. The engine runs less, but the oil still ages; the interval is the maker's."
+  },
+  {
+   "section": "Hybrids",
+   "item": "Brakes. The pads last a long time, because the motor does much of the braking. The slides seize from lack of use instead. Inspect and service them even when the pads are thick."
+  },
+  {
+   "section": "Hybrids",
+   "item": "Tires, alignment, suspension, steering."
+  },
+  {
+   "section": "Hybrids",
+   "item": "The 12-volt battery. A hybrid with a weak 12-volt battery will not start and shows a dozen unrelated warnings. Test it first."
+  },
+  {
+   "section": "Hybrids",
+   "item": "Engine coolant, and inverter coolant where the maker lists it as a service."
+  },
+  {
+   "section": "Hybrids",
+   "item": "Diagnosis of the engine side and of ordinary electrical faults."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "10",
+   "written_as": "Kevin Lawson",
+   "role": "diagnostic_technician",
+   "site": "main"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{T-8mo|date}}"
+ ],
+ "new_facts": [
+  "At Bonny Oaks and Charlotte Pike a hybrid gets tyres and wipers only."
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  }
+ ],
+ "has_history": false,
+ "notes_for_russian_writer": [
+  "Hybrids are rare in the Russian parc; keep the page short."
+ ]
+}

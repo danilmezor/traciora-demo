@@ -1,0 +1,146 @@
+{
+  "format": "seed-conversation/1",
+  "id": "03-s7-web-return-draft-waiting",
+  "configuration": "en",
+  "number": 3,
+  "story": "S7",
+  "title": "She comes back for the shock absorbers: the assistant prices and hands over, the junior operator takes the chat; at T her answer is unread and a draft waits",
+  "demonstrates": "The live-demo chat. A returning visitor asks to book the deferred work. The assistant answers from the public price list, cannot book, hands over; from Maya's first line the chat is hers and the assistant only drafts. Thirty minutes before T the customer writes again: the chat is open, owned by slot 6, unread, with one draft in the box that is honest about what the assistant cannot see. Editing it (two free times, the total with tax) and sending it is the demo.",
+  "nominal_t": "2026-11-13 10:30 America/New_York",
+  "cast": {
+    "customer": {
+      "ref": "named_customers.json en.S7",
+      "name": "Rachel Dunlap",
+      "first_time": false,
+      "phone": "(423) 555-0131"
+    },
+    "staff": [
+      {"slot": 6, "name": "Maya Torres"}
+    ]
+  },
+  "scenario": {
+    "who_writes": "The same customer, from the same phone, 16 days after her visit.",
+    "vehicle": "2014 Honda CR-V EX AWD",
+    "wants": "To book the rear shock absorbers she declined, and to know the total.",
+    "what_happens": "Thursday 15:40 she asks the price and for a day next week. The assistant gives the price-list figure and hands over. Maya replies at 16:05 with two times. She does not answer that day. Friday at 10:00 she writes that neither time works and asks for Wednesday or Thursday early, and for the total with tax. The assistant drafts; nobody has opened it at T.",
+    "facts": {
+      "declined_at_the_visit": "rear shock absorbers, pair",
+      "with_supplies": 347.38,
+      "with_tax": 379.51,
+      "expected_reply": "two free times at main in the next seven days and the price: 339.28 plus shop supplies, 379.51 with tax (card S07, question S7.3)",
+      "public_pages_used": ["price list: rear shock absorbers"],
+      "note": "The Thursday she asks about is the stocktake day (S13): the shop closes at noon, so only its morning is free.",
+      "prices": [
+        {"said": "$339.28", "amount": 339.28, "what": "rear shock absorbers, pair, class car, standard parts, today's list", "from": {"catalogue": "rear_shocks_pair", "class": "car", "tier": "standard", "price_class": "list", "with_supplies": false, "with_tax": false}}
+      ]
+    }
+  },
+  "days": {
+    "T-1d": {"anchor": "slot 6's last working day before T", "rule": {"kind": "slot_working_day", "slot": 6, "n": -1}, "nominal": "Thu 2026-11-12", "what": "the return chat, 15:40; slot 6 replies at 16:05"},
+    "T": {"anchor": "T's date", "rule": {"kind": "T"}, "nominal": "Fri 2026-11-13", "what": "she writes again 30 minutes before T"},
+    "T+3d": {"anchor": "the Monday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Mon", "week": -1}, "nominal": "Mon 2026-11-16", "what": "'mon'"},
+    "T+4d": {"anchor": "the Tuesday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Tue", "week": -1}, "nominal": "Tue 2026-11-17", "what": "'tues'"},
+    "T+5d": {"anchor": "the Wednesday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Wed", "week": -1}, "nominal": "Wed 2026-11-18", "what": "'wed'"},
+    "T+6d": {"anchor": "the Thursday of week W+1", "rule": {"kind": "weekday_of_week", "weekday": "Thu", "week": -1}, "nominal": "Thu 2026-11-19", "what": "'thurs'; the stocktake day: every shop closes at 12:00"}
+  },
+  "floating_days": [
+    {"word": "next week", "said_on": "T-1d", "day": "the week W+1"},
+    {"word": "Monday at 8:00", "said_on": "T-1d", "day": "the Monday of week W+1 (T+3d)"},
+    {"word": "Tuesday at 8:30", "said_on": "T-1d", "day": "the Tuesday of week W+1 (T+4d)"},
+    {"word": "mon and tues", "said_on": "T", "day": "T+3d and T+4d"},
+    {"word": "wed or thurs", "said_on": "T", "day": "T+5d or T+6d"},
+    {"word": "Wednesday or Thursday", "said_on": "T", "day": "T+5d or T+6d"}
+  ],
+  "conversations": [
+    {
+      "key": "c1",
+      "channel": "chat",
+      "bridge": "chat:default",
+      "inbox": "Chat",
+      "assistant_mode": "sends",
+      "clock": "main",
+      "thread_key": "5eedc0de-0003-4e00-8000-00000000e003",
+      "peer": {"id": "seedv1-browser-en-0001", "name": "Website visitor"},
+      "contact": {
+        "identifier": "chat_seedv1-browser-en-0001",
+        "name": "Website visitor",
+        "phone": null,
+        "avatar": {"has": false, "why": "website visitors have no picture"}
+      },
+      "opened": {"day": "T-1d", "at": "15:40:05", "status": "pending", "arrived_closed": false},
+      "timeline": [
+        {"n": 1, "day": "T-1d", "at": "15:40:05", "kind": "message", "from": "customer", "text": "hi again its Rachel Dunlap with the CRV. im ready to do those rear shocks"},
+        {"n": 2, "day": "T-1d", "at": "15:40:22", "kind": "message", "from": "customer", "text": "what was the price again and can i get in next week"},
+        {"n": 3, "day": "T-1d", "at": "15:40:47", "kind": "message", "from": "assistant", "text": "Hi Rachel, welcome back! On our price list, replacing the rear shock absorbers as a pair is $339.28 for a car like the CR-V, before shop supplies and tax; the service desk has your exact estimate. I can't book a time myself, so I'll pass this to East Main and they'll confirm a day with you. Is (423) 555-0131 still the right number?"},
+        {"n": 4, "day": "T-1d", "at": "15:41:20", "kind": "message", "from": "customer", "text": "yep same number"},
+        {"n": 5, "day": "T-1d", "at": "15:41:44", "kind": "message", "from": "assistant", "text": "Thank you. Your request is with the team now, and somebody will get back to you as soon as possible."},
+        {"n": 6, "day": "T-1d", "at": "15:41:45", "kind": "handoff", "tool": {"name": "forward_to_manager", "type": "scheduling", "arguments": {"name": "Rachel Dunlap", "phone": "(423) 555-0131", "site": "East Main", "context": "Rachel Dunlap, 2014 Honda CR-V, East Main. She wants to book the rear shock absorbers she put off at her last visit, some time next week. I gave her the price-list figure for the pair, $339.28 before shop supplies and tax, and no time."}}, "note": {"from": "assistant", "private": true, "text": "Rachel Dunlap, 2014 Honda CR-V, East Main. She wants to book the rear shock absorbers she put off at her last visit, some time next week. I gave her the price-list figure for the pair, $339.28 before shop supplies and tax, and no time."}, "label_added": "handoff", "status": "pending -> open", "card": {"template": "Customer handover", "kind": "task", "priority": "normal", "site": "main", "owner": null, "due": "T-1d 17:30, the day's close"}},
+        {"n": 7, "day": "T-1d", "at": "15:53", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"},
+        {"n": 8, "day": "T-1d", "at": "16:05:08", "kind": "activity", "what": "assigned", "derived": true, "to": 6, "by": 6, "how": "first reply"},
+        {"n": 9, "day": "T-1d", "at": "16:05:10", "kind": "message", "from": "staff", "slot": 6, "text": "Hi Rachel, it's Maya, good to hear from you! Yes, let's get those rear shocks done. I can take the CR-V Monday at 8:00 or Tuesday at 8:30, and it's about an hour and a half either way. Which works better for you?", "late": "story: the card's 16:05 (ledger s7.thread.taken_by_6)"},
+        {"n": 10, "day": "T-1d", "at": "16:05:11", "kind": "activity", "what": "label_removed", "derived": true, "label": "handoff", "by": 6, "how": "a manager's reply takes it off"},
+        {"n": 11, "day": "T-1d", "at": "16:05:12", "kind": "activity", "what": "priority", "derived": true, "from": "high", "to": "normal", "by": "service", "how": "answered"},
+        {"n": 12, "day": "T", "at": "10:00:12", "kind": "message", "from": "customer", "text": "morning Maya, sorry just now seeing this. mon and tues dont work, im out of town for work"},
+        {"n": 13, "day": "T", "at": "10:00:41", "kind": "message", "from": "customer", "text": "anything wed or thurs, early? and whats my total with tax"},
+        {"n": 14, "day": "T", "at": "10:01:20", "kind": "draft", "id": "d1", "text": "Good morning, Rachel! No problem at all. The rear shock absorbers as a pair are $339.28 before shop supplies and tax. I'll confirm your exact total and an early time on Wednesday or Thursday and message you right back.", "why_a_draft": "the chat is owned by a person", "outcome": null},
+        {"n": 15, "day": "T", "at": "10:24", "kind": "activity", "what": "priority", "derived": true, "from": "normal", "to": "high", "by": "service", "how": "the wait"}
+      ],
+      "assignee_history": [
+        {"day": "T-1d", "at": "16:05:08", "to": 6, "how": "first reply"}
+      ],
+      "state_at_t": {
+        "status": "open",
+        "owner": 6,
+        "labels": [],
+        "priority": {"base": "normal", "shown": "high"},
+        "waiting_since": {"day": "T", "at": "10:00:12"},
+        "waited_working_minutes_at_t": 29.8,
+        "unread": 2,
+        "draft_in_box": "d1",
+        "contact_note": "One website visitor: the browser of the first chat, remembered for 30 days (ledger conv.web_visitor_memory_days). The contact holds no name and no phone; both are in the hand-off notes and on the cards.",
+        "live_demo": "a web chat owned by slot 6, so the waiting draft can be edited and sent in a live demo (ledger conv.live_demo, conv.open_at_t)"
+      },
+      "reads_back": {
+        "first_answer": {"by": "assistant", "wall_seconds": 25},
+        "waits": [
+          {"asked": 1, "answered": 3, "by": "assistant", "wall_seconds": 25},
+          {"asked": 4, "answered": 5, "by": "assistant", "wall_seconds": 24},
+          {"asked": 6, "answered": 9, "by": 6, "working_minutes": 23.4, "wall_minutes": 23.4, "measured_from": "n 6", "reply": "first", "late": "story: the card's 16:05 (ledger s7.thread.taken_by_6)"},
+          {"asked": 12, "answered": null, "note": "open at T"}
+        ],
+        "first_person_line": {
+          "by": 6,
+          "n": 9,
+          "working_minutes": 23.4,
+          "note": "the ledger's first chat reply (conv.first_reply.definition): the wait before the person's first line in the session"
+        },
+        "message_kinds": {"customer": 5, "assistant": 2, "manager": 1, "note": 1},
+        "resolutions": [],
+        "draft_outcomes": [],
+        "operator_credit": "the chat's first answer is nobody's; slot 6: one reply 23 minutes after the hand-off, nothing resolved; the second hand-over card was taken by her at 16:05"
+      }
+    }
+  ],
+  "truth": {
+    "reason": "to book or ask for a slot",
+    "handled": "assistant first, handed over (scheduling), slot 6; then drafts",
+    "outcome": "open at T, owned by slot 6, unread, one unsent draft",
+    "facts": [
+      "she asked on slot 6's last working day before T to book the rear shock absorbers she had declined",
+      "the assistant gave the list price, 339.28 before shop supplies and tax, and handed over",
+      "slot 6 offered drop-offs on Monday at 8:00 or Tuesday at 8:30; she cannot come either day and asks for Wednesday or Thursday early and for the total with tax",
+      "the right answer offers two free times and the price: 339.28 plus supplies, 379.51 with tax",
+      "nothing is sent without slot 6"
+    ],
+    "questions": ["S7.1", "S7.2", "S7.3"]
+  },
+  "why": [
+    "The draft says what the assistant knows (the list price) and promises only to find out the rest; the junior's edit is the two times and the total.",
+    "Maya's 16:05 line has no price in it: the time comes first, and the price had just been given.",
+    "At T this is one of the two chats that wait on the shop, and both are web chats."
+  ],
+  "new_facts": [
+    "Maya offered drop-offs on the Monday of week W+1 at 8:00 and the Tuesday at 8:30; the customer is out of town on both days.",
+    "A shock-absorber job is spoken of as 'about an hour and a half' (catalogue: 1.2 billed hours)."
+  ]
+}

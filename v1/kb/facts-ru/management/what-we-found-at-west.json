@@ -1,0 +1,136 @@
+{
+ "path": "management/what-we-found-at-west.md",
+ "title": "Что мы нашли в Казани",
+ "title_en": "What we found at Charlotte Pike",
+ "exists_in": "both",
+ "english_sheet": "facts/management/what-we-found-at-west.json",
+ "first_revision_text": null,
+ "visibility": "senior",
+ "seen_from": "senior",
+ "voice_of_slot": "2",
+ "purpose": "Senior rank: the managing owner's memo on the discounts, voids and till shortages (S2) and what was changed.",
+ "serves": [
+  "S2",
+  "visibility:senior",
+  "challenge:combine-kb-and-data",
+  "operate:find-what-changed"
+ ],
+ "length_class": "medium",
+ "words_ru": 413,
+ "links_to": [
+  "policies/discounts.md",
+  "policies/voids-and-refunds.md",
+  "shops/west/opening-and-closing.md"
+ ],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "The Russian signature of the leak (design R11; ledger s2.f1.discounted, s2.f1.discount_total, s2.f1.second, s2.f1.third, s2.total; stories/S02 per market): 35 unapproved discounts worth 96 000 RUB, 46 issues of parts with no sale worth 118 000 RUB at cost, 22 orders with 61 clocked hours above the hours sold worth 107 360 RUB; 321 360 RUB as the outside figure. Every figure is read from the ledger at build time.",
+  "Found through stock issues by person, not through the till.",
+  "The share of Kazan's cash orders with a discount of 10 % or more is the ledger's (13.8 % before, 2.7 % since), not a rounded pair as on the English page.",
+  "What changed: the discount rule, the rule on work past the order and write-offs, the locked stockroom with nightly time reconciliation and two counts in Kazan, monthly checks by person, the Friday list."
+ ],
+ "new_facts": [
+  "The memo names slot F1 to senior rank. Its numbers are the ledger's golden answers of S2.",
+  "NEW IN FIX PASS B: the section «Что с тех пор» was added by slot 2 on {{@early_desk+1w}} (the Monday of week T-2), as in English: the memo is dated the next full open day after the firing and could not state what followed. The walk-in record is «пара сотен нарядов» (240 at full size), so that a smaller build agrees."
+ ],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [],
+ "list_items": [
+  {
+   "section": "Что произошло",
+   "item": "Скидки, которые никто не согласовывал. На 35 его нарядах с оплатой наличными стоит скидка от 15 до 30 %. Это 22 % его наличных нарядов; у остальных мастеров-приёмщиков компании таких 3 %. Сумма скидок — 96 000 ₽."
+  },
+  {
+   "section": "Что произошло",
+   "item": "Запчасти со склада без продажи. 46 выдач под его фамилией, под которыми нет строки наряда. По закупочной цене — 118 000 ₽."
+  },
+  {
+   "section": "Что произошло",
+   "item": "Работа мимо наряда. 22 наряда, в которых механики отметили на 61 час больше, чем продано. По нормо-часу, который тогда действовал, это 107 360 ₽. Машину делали целиком, а в наряд попадала часть работы."
+  },
+  {
+   "section": "Что мы изменили",
+   "item": "Скидки: больше 10 % — только руководитель, с отметкой в наряде."
+  },
+  {
+   "section": "Что мы изменили",
+   "item": "Работа мимо наряда, списания и возврат денег: нет строки в наряде — нет ни работы, ни детали."
+  },
+  {
+   "section": "Что мы изменили",
+   "item": "На Технической склад заперт, запчасти выдаются под наряд, время сверяется каждый вечер, а кассу считают двое."
+  },
+  {
+   "section": "Что мы изменили",
+   "item": "Ирина Владимировна каждый месяц раскладывает выдачи, время и скидки по людям."
+  },
+  {
+   "section": "Что мы изменили",
+   "item": "Список скидок больше 10 % я получаю каждую пятницу."
+  }
+ ],
+ "prices": [],
+ "people": [
+  {
+   "slot": "2",
+   "written_as": "Екатерина Николаевна Ермолаева",
+   "role": "managing_owner",
+   "site": "none"
+  },
+  {
+   "slot": "F1",
+   "written_as": "Артур Назаров",
+   "role": "service_advisor",
+   "site": "west"
+  },
+  {
+   "slot": "3",
+   "written_as": "Ирина Владимировна",
+   "role": "office_manager",
+   "site": "main"
+  },
+  {
+   "slot": "22",
+   "written_as": "Ринат Фаридович",
+   "role": "shop_manager",
+   "site": "west"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@discount_rule|date}}",
+  "{{@leak_start|month}}",
+  "{{@f1_fired|month}}",
+  "{{@money_found|month}}",
+  "{{@f1_fired|date}}",
+  "{{@early_desk+1w|date}}"
+ ],
+ "amounts": [
+  96000.0,
+  107360.0,
+  118000.0,
+  321360.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@discount_rule|date}}",
+   "what": "page created"
+  },
+  {
+   "n": 2,
+   "kind": "edit",
+   "author_slot": "2",
+   "text_date": "{{@early_desk+1w|date}}",
+   "what": "section \"Since\" added: the share of discounted cash orders before and since, and the Friday list; message: \"What has happened since.\"",
+   "message_ru": "Что с тех пор."
+  }
+ ],
+ "has_history": true
+}

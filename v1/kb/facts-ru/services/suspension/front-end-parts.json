@@ -1,0 +1,227 @@
+{
+ "path": "services/suspension/front-end-parts.md",
+ "title": "Детали передней подвески",
+ "title_en": "Front-end parts",
+ "exists_in": "both",
+ "english_sheet": "facts/services/suspension/front-end-parts.json",
+ "first_revision_text": "ru/_history/services/suspension/front-end-parts.md",
+ "visibility": "public",
+ "seen_from": "worker",
+ "voice_of_slot": "16",
+ "purpose": "Sway bar links and bushings, control arms, ball joints, tie rods.",
+ "serves": [
+  "challenge:fact-in-table",
+  "challenge:combine-policy-and-price"
+ ],
+ "length_class": "short",
+ "words_ru": 239,
+ "links_to": [],
+ "broken_links_on_purpose": [],
+ "stale_on_purpose": null,
+ "differs_from_en": [
+  "Five jobs under their Russian order names; standard brand CTR.",
+  "The combined quote of C7.3 in Russian: both tie-rod ends and the alignment = 2 × 2 370 + 3 000 = 7 740 RUB before shop supplies, VAT inside."
+ ],
+ "new_facts": [],
+ "new_amounts": [],
+ "to_verify": [],
+ "settled": [],
+ "tables": [
+  {
+   "section": "Детали передней подвески",
+   "columns": [
+    "В наряде",
+    "Н/ч",
+    "Стандарт",
+    "Считается",
+    "Сход-развал после?"
+   ],
+   "rows": [
+    {
+     "В наряде": "Замена стоек стабилизатора передних (2 шт.)",
+     "Н/ч": "0,8",
+     "Стандарт": "3 700 ₽",
+     "Считается": "За пару",
+     "Сход-развал после?": "Нет"
+    },
+    {
+     "В наряде": "Замена втулок переднего стабилизатора (2 шт.)",
+     "Н/ч": "0,8",
+     "Стандарт": "2 420 ₽",
+     "Считается": "За пару",
+     "Сход-развал после?": "Нет"
+    },
+    {
+     "В наряде": "Замена рулевого наконечника (1 шт.)",
+     "Н/ч": "0,6",
+     "Стандарт": "2 370 ₽",
+     "Считается": "За сторону",
+     "Сход-развал после?": "Да"
+    },
+    {
+     "В наряде": "Замена шаровой опоры (1 шт.)",
+     "Н/ч": "1",
+     "Стандарт": "3 230 ₽",
+     "Считается": "За сторону",
+     "Сход-развал после?": "Да"
+    },
+    {
+     "В наряде": "Замена переднего нижнего рычага (1 шт.)",
+     "Н/ч": "1,2",
+     "Стандарт": "8 720 ₽",
+     "Считается": "За сторону",
+     "Сход-развал после?": "Да"
+    }
+   ]
+  }
+ ],
+ "list_items": [
+  {
+   "section": "Детали передней подвески",
+   "item": "Стойки стабилизатора — самое дешёвое и самое частое: дробный стук на мелких неровностях. Меняем обе."
+  },
+  {
+   "section": "Детали передней подвески",
+   "item": "Люфт в рулевом наконечнике или шаровой — это безопасность. Так и говорим, один раз и без драмы: «Это шарнир, который поворачивает колесо. Я бы с таким не ездила»."
+  },
+  {
+   "section": "Детали передней подвески",
+   "item": "На многих машинах шаровая идёт вместе с рычагом. Тогда работа — рычаг, а строка шаровой не нужна."
+  },
+  {
+   "section": "Детали передней подвески",
+   "item": "Ко всему, где стоит «Да», добавляйте сход-развал, 3 000 ₽. Одна регулировка закрывает всё, что сделано за этот заезд."
+  },
+  {
+   "section": "Детали передней подвески",
+   "item": "Стандарт — CTR. На машине с пробегом за двести тысяч оригинал никому не навязываем."
+  }
+ ],
+ "prices": [
+  {
+   "catalogue_key": "sway_bar_links",
+   "what": "hours",
+   "class": "car",
+   "value": 0.8
+  },
+  {
+   "catalogue_key": "sway_bar_links",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3700.0
+  },
+  {
+   "catalogue_key": "sway_bar_bushings",
+   "what": "hours",
+   "class": "car",
+   "value": 0.8
+  },
+  {
+   "catalogue_key": "sway_bar_bushings",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2420.0
+  },
+  {
+   "catalogue_key": "outer_tie_rod",
+   "what": "hours",
+   "class": "car",
+   "value": 0.6
+  },
+  {
+   "catalogue_key": "outer_tie_rod",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 2370.0
+  },
+  {
+   "catalogue_key": "ball_joint",
+   "what": "hours",
+   "class": "car",
+   "value": 1.0
+  },
+  {
+   "catalogue_key": "ball_joint",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3230.0
+  },
+  {
+   "catalogue_key": "lower_control_arm",
+   "what": "hours",
+   "class": "car",
+   "value": 1.2
+  },
+  {
+   "catalogue_key": "lower_control_arm",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 8720.0
+  },
+  {
+   "catalogue_key": "wheel_alignment",
+   "what": "total before tax",
+   "tier": "standard",
+   "class": "car",
+   "when": "after_rise",
+   "value": 3000.0
+  }
+ ],
+ "people": [
+  {
+   "slot": "16",
+   "written_as": "Светлана Юрьевна Демидова",
+   "role": "lead_advisor",
+   "site": "east"
+  },
+  {
+   "slot": "16",
+   "written_as": "Света",
+   "role": "lead_advisor",
+   "site": "east"
+  }
+ ],
+ "vendors": [],
+ "accounts": [],
+ "dates": [
+  "{{@price_rise+3wd:main|date}}"
+ ],
+ "amounts": [
+  2370.0,
+  2420.0,
+  3000.0,
+  3230.0,
+  3700.0,
+  8720.0
+ ],
+ "revisions": [
+  {
+   "n": 1,
+   "kind": "import",
+   "author": "operator (History shows \"Administrator\")",
+   "text_date": "{{@golive|date}}",
+   "what": "the page as it stood on the shared drive when Traciora went live; message \"Imported from the tenant's files\""
+  },
+  {
+   "n": 2,
+   "kind": "proposal",
+   "author_slot": "4",
+   "text_date": "{{@price_rise+3wd:main|date}}",
+   "what": "Angie's pass after the price rise: every dollar figure brought to the new list (proposed by slot 16, approved by slot 4); message: \"New labour rate.\"",
+   "proposer_slot": "16",
+   "approver_slot": "4",
+   "message_ru": "Новый нормо-час."
+  }
+ ],
+ "has_history": true
+}
