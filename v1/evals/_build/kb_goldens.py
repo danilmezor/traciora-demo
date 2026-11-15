@@ -4,6 +4,7 @@
 # A record enters only if every figure of its expected answer occurs literally on a page it names (spaces
 # normalised). Dates are left out; a figure the pages do not print (a computed sum) keeps the record out.
 # Nothing here types a value: each fact is a figure of the record's own answer, written as the page prints it.
+# Each golden carries its asker's sign-in name from cast.json (`username`); a customer's question has none.
 import json
 import os
 import re
@@ -50,7 +51,7 @@ def printed(figure, text, lang):
     return found.group(0) if found else None
 
 
-def convert(record, lang):
+def convert(record, lang, usernames):
     """(entry, None) when the record enters, (None, reason) when it does not."""
     if record["status"] != "ready":
         return None, "pending"
@@ -78,20 +79,24 @@ def convert(record, lang):
     for f, where in found.items():
         page = next(p for p in order if p in where)
         facts.append({"value": printed(f, pages[page], lang), "page": page})
-    return {"id": record["id"], "question": record["question"], "asker": str(record["asker"]["slot"]), "facts": facts,
+    slot = str(record["asker"]["slot"])
+    asker = {"asker": slot} if slot == "customer" else {"asker": slot, "username": usernames[slot]}
+    return {"id": record["id"], "question": record["question"], **asker, "facts": facts,
             "rule": order[0], "assertions": [{"type": "tool_call", "tool": "kb_read"}]}, None
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
     skipped, counts = [], {}
+    people = json.load(open(os.path.join(V1, "cast.json"), encoding="utf-8"))["people"]
     for lang in ("en", "ru"):
+        usernames = {p["slot"]: p[lang]["username"] for p in people}
         records = json.load(open(os.path.join(V1, "evals", f"questions.{lang}.json"), encoding="utf-8"))["questions"]
         entries = []
         for record in records:
             if record["area"] != "knowledge_base":
                 continue
-            entry, reason = convert(record, lang)
+            entry, reason = convert(record, lang, usernames)
             if entry:
                 entries.append(entry)
             else:

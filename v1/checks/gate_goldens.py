@@ -3,8 +3,10 @@
 D2: on a scratch database loaded from erp/schema.sql in the container traciora-test-pg, every statement of
 erp/checks.sql (once per configuration, its psql variables set to the header's example values) and every SQL of
 goldens/shop.*.yaml plans under EXPLAIN. EXPLAIN executes nothing. The scratch database is always dropped.
-D3: every fact of goldens/kb.*.yaml is printed on the page it names, read again here from kb/<lang>/.
+D3: every fact of goldens/kb.*.yaml is printed on the page it names, read again here from kb/<lang>/, and every
+golden's `username` is its asker's sign-in name in cast.json (none for a customer).
 """
+import json
 import os
 import re
 import shlex
@@ -43,7 +45,9 @@ def on_page(value, text, lang):
 
 def d3(root):
     failed, counts, ids, off = [], {}, {}, 0
+    people = json.load(open(os.path.join(root, "cast.json"), encoding="utf-8"))["people"]
     for lang in LANGS:
+        usernames = {p["slot"]: p[lang]["username"] for p in people}
         path = os.path.join(root, "goldens", f"kb.{lang}.yaml")
         if not os.path.exists(path):
             failed.append(f"D3 goldens/kb.{lang}.yaml is missing")
@@ -58,6 +62,8 @@ def d3(root):
         for q in questions:
             if not q.get("facts"):
                 failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: no facts")
+            if q.get("username") != usernames.get(q.get("asker")):
+                failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: username {q.get('username')!r} is not asker {q.get('asker')}'s")
             for fact in q.get("facts") or []:
                 text = page(root, lang, fact.get("page") or "")
                 if text is None or not on_page(fact.get("value", ""), text, lang):
