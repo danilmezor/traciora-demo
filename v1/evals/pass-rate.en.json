@@ -1,186 +1,50 @@
 {
  "seed": "v1",
  "cfg": "en",
- "seed_commit": "ce4ec16",
- "product_commit": "8a35955a9",
  "model": "deepseek-flash",
- "now": "2026-11-13 15:30:00+00:00",
- "passed": 20,
+ "now": "2026-11-13 10:30",
  "total": 40,
- "differs_from_product_test": [
-  "tool calls take turns on the connection",
-  "a tool error goes back to the agent",
-  "the question names the result columns"
+ "runs": [
+  33,
+  37,
+  35
  ],
+ "median": 35,
+ "instrument": "the product's apps/backend/tests/llm_eval/test_context_questions.py: the agent answers in its own words, a second call restates the answer in the golden's columns, compare_results scores it",
  "failed": {
-  "shop-S01-accounts-lost": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "WITH ref AS (SELECT max(opened_at) AS t FROM shop.repair_order),\no AS (\n  SELECT customer_id, opened_at\n  FROM shop.repair_order\n  WHERE status <> 'void'\n)\nSELECT c.name AS account_name,\n       to_char(max(o.opened_at),'YYYY-MM-DD') AS last_order_on_yyyy_mm_dd,\n       count(*) FILTER (WHERE o.opened_at >= (SELECT t FROM ref) - interval '30 days') AS orders_last_30_days_count,\n       count(*) FILTER (WHERE o.opened_at >= (SELECT t FROM ref) - interval '180 days'\n                          AND o.opened_at <  (SELECT t FROM ref) - interval '150 days') AS orders_180_to_150_days_ago_count\nFROM shop.customer c\nJOIN o ON o.customer_id = c.customer_id\nWHERE c.kind = 'company'\nGROUP BY c.customer_id, c.name\nHAVING count(*) FILTER (WHERE o.opened_at >= (SELECT t FROM ref) - interval '30 days') = 0\n   AND count(*) FILTER (WHERE o.opened_at >= (SELECT t FROM ref) - interval '180 days'\n                          AND o.opened_at <  (SELECT t FROM ref) - interval '150 days') > 0\nORDER BY orders_180_to_150_days_ago_count DESC, last_order_on_yyyy_mm_dd DESC"
-  },
-  "shop-S11-seasonal-hire-start": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "WITH s AS (\n  SELECT employee_id, title, hired_on, left_on\n  FROM shop.employee\n  WHERE title = 'Seasonal Shop Helper'\n)\nSELECT EXTRACT(YEAR FROM hired_on)::int AS season_year,\n       to_char(hired_on,'YYYY-MM') AS season_start_month_yyyy_mm,\n       to_char(hired_on,'YYYY-MM-DD') AS hire_started_on_yyyy_mm_dd\nFROM s\nWHERE EXTRACT(YEAR FROM hired_on) = (SELECT MAX(EXTRACT(YEAR FROM hired_on)) FROM s)\nORDER BY hired_on"
-  },
-  "shop-S15-average-order-by-shop": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "SELECT l.name AS shop_name,\n       ROUND(AVG(r.total - r.tax_total), 2) AS average_order_before_tax_usd,\n       COUNT(*) AS orders,\n       ROUND(SUM(r.total - r.tax_total), 2) AS rev\nFROM shop.repair_order r\nJOIN shop.location l ON l.location_id = r.location_id\nWHERE r.status <> 'void'\n  AND r.order_type = 'customer_pay'\n  AND r.status IN ('invoiced','paid')\nGROUP BY l.name\nORDER BY l.name;"
-  },
-  "shop-revenue-30d-by-shop": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "WITH inv AS (\n  SELECT repair_order_id, MIN(changed_at) AS first_invoiced\n  FROM shop.order_status_history WHERE status='invoiced' GROUP BY repair_order_id\n)\nSELECT o.location_id,\n       h.first_invoiced::date AS d,\n       count(*) AS n,\n       ROUND(SUM(o.total-o.tax_total),2) AS amt\nFROM shop.repair_order o\nJOIN inv h ON h.repair_order_id=o.repair_order_id\nWHERE o.order_type='customer_pay' AND o.status IN ('invoiced','paid')\n  AND h.first_invoiced >= '2026-10-13' AND h.first_invoiced < '2026-11-14'\nGROUP BY 1,2 ORDER BY 1,2"
-  },
-  "shop-top-jobs-90d": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "WITH inv AS (\n  SELECT repair_order_id, min(changed_at) AS invoiced_at\n  FROM shop.order_status_history WHERE status='invoiced' GROUP BY 1),\nelig AS (\n  SELECT ro.repair_order_id, ro.total-ro.tax_total AS net\n  FROM shop.repair_order ro JOIN inv ON inv.repair_order_id=ro.repair_order_id\n  WHERE ro.order_type='customer_pay' AND ro.status IN ('invoiced','paid')\n    AND inv.invoiced_at >= now() - interval '90 days' AND inv.invoiced_at < now()),\njl AS (\n  SELECT oj.order_job_id, oj.repair_order_id,\n    coalesce((SELECT sum(amount) FROM shop.order_labor ol WHERE ol.order_job_id=oj.order_job_id),0)\n   + coalesce((SELECT sum(op.quantity*op.unit_price) FROM shop.order_part op WHERE op.order_job_id=oj.order_job_id),0)\n   + coalesce((SELECT sum(os.price) FROM shop.order_sublet os WHERE os.order_job_id=oj.order_job_id),0) AS job_value\n  FROM shop.order_job oj JOIN elig e ON e.repair_order_id=oj.repair_order_id\n  WHERE oj.status='approved'),\nw AS (SELECT jl.*, sum(job_value) OVER (PARTITION BY repair_order_id) AS order_value FROM jl)\nSELECT round(sum(e.net * CASE WHEN w.order_value>0 THEN w.job_value/w.order_value ELSE 0 END),2) AS allocated,\n       count(*) AS jobs, count(DISTINCT w.repair_order_id) AS orders_with_jobs\nFROM w JOIN elig e ON e.repair_order_id=w.repair_order_id"
-  },
-  "shop-cars-per-day": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "with d as (\n  select l.name, o.opened_at::date as day, count(*) as visits, count(distinct o.vehicle_id) as cars\n  from shop.repair_order o join shop.location l using (location_id)\n  where o.status <> 'void' and extract(isodow from o.opened_at) between 1 and 5\n  group by 1,2\n)\nselect name,\n  count(*) as weekday_days,\n  sum(visits) as total_visits,\n  round(sum(visits)::numeric / count(*), 2) as avg_visits_per_weekday,\n  round(sum(cars)::numeric / count(*), 2) as avg_cars_per_weekday\nfrom d group by 1 order by 1"
-  },
-  "shop-busiest-weekday": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "WITH days AS (\n  SELECT d::date AS d, EXTRACT(ISODOW FROM d)::int AS dow\n  FROM (SELECT min(opened_at::date) mn, max(opened_at::date) mx FROM shop.repair_order WHERE status<>'void') s,\n       generate_series(s.mn, s.mx, interval '1 day') d\n), per_date AS (\n  SELECT opened_at::date AS d, count(*)::numeric c\n  FROM shop.repair_order WHERE status <> 'void' GROUP BY 1\n), agg AS (\n  SELECT days.dow, count(*) AS n_days, sum(coalesce(per_date.c,0)) AS orders\n  FROM days LEFT JOIN per_date ON per_date.d = days.d GROUP BY 1\n)\nSELECT dow AS weekday_iso_1_7, round(orders/n_days, 2) AS orders_per_day_avg\nFROM agg ORDER BY orders_per_day_avg DESC LIMIT 1"
-  },
-  "shop-new-vs-returning-this-month": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "WITH month_cust AS (\n  SELECT DISTINCT customer_id FROM shop.repair_order\n  WHERE status <> 'void' AND opened_at >= '2026-11-01' AND opened_at < '2026-12-01' AND customer_id <> 5511\n)\nSELECT\n  count(*) FILTER (WHERE EXISTS (SELECT 1 FROM shop.repair_order p WHERE p.customer_id=mc.customer_id AND p.status<>'void' AND p.opened_at < '2026-11-01')) AS returning,\n  count(*) FILTER (WHERE NOT EXISTS (SELECT 1 FROM shop.repair_order p WHERE p.customer_id=mc.customer_id AND p.status<>'void' AND p.opened_at < '2026-11-01')) AS new\nFROM month_cust mc"
-  },
-  "shop-oil-price": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "SELECT brand AS oil_brand, unit, list_price AS list_price_usd_per_unit\nFROM shop.part\nWHERE description = 'Engine oil 0W-20 / 5W-30'\nGROUP BY brand, unit, list_price\nORDER BY brand, list_price"
-  },
-  "shop-parts-waiting": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "WITH wp AS (\n  SELECT ro.repair_order_id, ro.location_id, ro.vehicle_id,\n         (SELECT max(h.changed_at) FROM shop.order_status_history h\n          WHERE h.repair_order_id = ro.repair_order_id AND h.status='waiting_parts') AS entered_waiting_parts\n  FROM shop.repair_order ro\n  WHERE ro.status = 'waiting_parts' AND ro.status <> 'void'\n)\nSELECT l.name AS shop_name,\n       COUNT(*) AS cars_waiting_count,\n       MAX(EXTRACT(EPOCH FROM ((now() AT TIME ZONE l.time_zone) - wp.entered_waiting_parts))/86400.0) AS longest_wait_days\nFROM wp\nJOIN shop.location l ON l.location_id = wp.location_id\nGROUP BY l.name, l.location_id\nORDER BY l.location_id;"
-  },
-  "shop-supplier-late": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "select v.name, count(*) n, avg(case when po.received_at > po.promised_at then 1 else 0 end) ts_share, avg(case when po.received_at::date > po.promised_at::date then 1 else 0 end) d_share\nfrom shop.purchase_order po join shop.vendor v on v.vendor_id=po.vendor_id\nwhere po.received_at is not null and po.status in ('received','ordered')\ngroup by v.name order by d_share desc"
-  },
-  "shop-parts-margin-last-month": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "with inv as (\n  select repair_order_id, min(changed_at) as first_inv\n  from shop.order_status_history where status='invoiced' group by repair_order_id\n),\nlines as (\n  select oj.repair_order_id,\n         sum(op.quantity*op.unit_price) as line_sales,\n         sum(op.quantity*op.unit_cost) as line_cost\n  from shop.order_job oj join shop.order_part op on op.order_job_id=oj.order_job_id\n  where oj.status='approved'\n  group by oj.repair_order_id\n),\nagg as (\n  select l.name as shop_name,\n         sum(ro.parts_total) as gross,\n         sum(case when (ro.labor_total+ro.parts_total+ro.sublet_total+ro.fees_total)>0\n             then ro.discount_total * ro.parts_total/(ro.labor_total+ro.parts_total+ro.sublet_total+ro.fees_total)\n             else 0 end) as disc_alloc,\n         sum(ln.line_cost) as cost\n  from shop.repair_order ro\n  join inv on inv.repair_order_id=ro.repair_order_id\n  join shop.location l on l.location_id=ro.location_id\n  left join lines ln on ln.repair_order_id=ro.repair_order_id\n  where ro.order_type='customer_pay' and ro.status in ('invoiced','paid')\n    and inv.first_inv >= '2026-10-01' and inv.first_inv < '2026-11-01'\n  group by l.name\n)\nselect shop_name,\n       round(gross-disc_alloc,2) as parts_sales_before_tax_usd,\n       round((gross-disc_alloc-cost)/(gross-disc_alloc),4) as parts_margin_float_0_1,\n       round(cost,2) as cost_check,\n       round((gross-cost)/gross,4) as margin_gross_discount\nfrom agg order by shop_name"
-  },
-  "shop-mechanic-billed-hours": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "select ol.technician_id, round(sum(ol.hours),2) as hrs\nfrom shop.repair_order ro\njoin shop.order_status_history osh on osh.repair_order_id=ro.repair_order_id and osh.status='invoiced'\njoin shop.order_job oj on oj.repair_order_id=ro.repair_order_id and oj.status='approved'\njoin shop.order_labor ol on ol.order_job_id=oj.order_job_id\nwhere ro.status <> 'void' and osh.changed_at >= '2026-10-01' and osh.changed_at < '2026-11-01'\ngroup by 1 order by hrs desc"
-  },
-  "shop-recommended-sold-by-advisor": {
-   "why": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
-   "last_sql": "with rec as (\n  select oj.order_job_id, oj.repair_order_id, oj.status\n  from shop.order_job oj\n  join (select distinct order_job_id from shop.inspection_item where order_job_id is not null) ii\n    on ii.order_job_id = oj.order_job_id\n)\nselect e.first_name || ' ' || e.last_name as advisor_name,\n       count(*)::int as recommended_jobs_count,\n       round((count(*) filter (where r.status='approved'))::numeric\n             / nullif(count(*) filter (where r.status in ('approved','declined')),0), 4)::float8 as sold_share_float_0_1\nfrom rec r\njoin shop.repair_order ro on ro.repair_order_id = r.repair_order_id\njoin shop.location l on l.location_id = ro.location_id\njoin shop.employee e on e.employee_id = ro.advisor_id\nwhere ro.status <> 'void'\n  and (ro.opened_at at time zone l.time_zone) >= now() - interval '90 days'\ngroup by e.employee_id, e.first_name, e.last_name\nhaving count(*) > 0\norder by advisor_name"
-  },
-  "shop-tech-efficiency-this-month": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "WITH sold AS (\n  SELECT ol.technician_id AS tech_id, sum(ol.hours) AS sold_hours\n  FROM shop.order_labor ol\n  JOIN shop.order_job oj ON oj.order_job_id = ol.order_job_id\n  JOIN shop.repair_order ro ON ro.repair_order_id = oj.repair_order_id\n  WHERE ol.technician_id IS NOT NULL\n    AND oj.status = 'approved'\n    AND ro.status <> 'void'\n    AND ro.opened_at >= DATE '2026-11-01' AND ro.opened_at < DATE '2026-12-01'\n  GROUP BY 1\n), clocked AS (\n  SELECT te.technician_id AS tech_id,\n         sum(EXTRACT(epoch FROM (te.clock_out - te.clock_in))/3600.0) AS clocked_hours\n  FROM shop.time_entry te\n  WHERE te.clock_out IS NOT NULL\n    AND te.clock_in >= DATE '2026-11-01' AND te.clock_in < DATE '2026-12-01'\n  GROUP BY 1\n)\nSELECT e.first_name || ' ' || e.last_name AS technician_name,\n       round(coalesce(s.sold_hours,0), 2) AS sold_hours,\n       round(coalesce(c.clocked_hours,0), 2) AS clocked_hours,\n       round(coalesce(s.sold_hours,0) / nullif(c.clocked_hours,0), 2) AS sold_over_clocked_float\nFROM clocked c\nLEFT JOIN sold s ON s.tech_id = c.tech_id\nJOIN shop.employee e ON e.employee_id = c.tech_id\nORDER BY sold_over_clocked_float DESC"
-  },
-  "shop-comebacks-by-mechanic": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "with worked as (\n  select ol.technician_id, oj.repair_order_id\n  from shop.order_labor ol\n  join shop.order_job oj on oj.order_job_id = ol.order_job_id\n  join shop.repair_order ro on ro.repair_order_id = oj.repair_order_id\n  where oj.status = 'approved' and ro.status <> 'void' and ol.technician_id is not null\n    and ro.opened_at >= current_date - interval '1 year'\n), per_tech as (select technician_id, count(distinct repair_order_id) as n from worked group by 1),\ncb as (select distinct c.repair_order_id, ol.technician_id from shop.repair_order c\n  join shop.order_job oj on oj.repair_order_id=c.comeback_of_id\n  join shop.order_labor ol on ol.order_job_id=oj.order_job_id\n  where c.comeback_of_id is not null and c.status<>'void' and c.opened_at >= current_date - interval '1 year' and ol.technician_id is not null),\ncb_agg as (select technician_id, count(*) as k from cb group by 1)\nselect e.first_name||' '||e.last_name as technician_name, p.n, coalesce(k,0) as comebacks,\n       round(coalesce(k,0)::numeric/nullif(p.n,0),4)::float8 as share\nfrom per_tech p join shop.employee e on e.employee_id=p.technician_id left join cb_agg c on c.technician_id=p.technician_id\norder by comebacks desc, share desc limit 5"
-  },
-  "shop-accounts-owed": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "with accts as (\n  select customer_id, name from shop.customer where payment_terms_days is not null\n), owed as (\n  select o.customer_id, sum(o.total) owed_usd,\n         sum(case when s.statement_id is not null and s.due_on < current_date and o.statement_id is not null then o.total else 0 end) overdue_on_stmt\n  from shop.repair_order o\n  left join shop.statement s on s.statement_id = o.statement_id\n  where o.status = 'invoiced' and o.order_type = 'customer_pay' and o.customer_id in (select customer_id from accts)\n  group by 1\n), ovd as (\n  select s.customer_id, sum(s.total - coalesce(p.paid,0)) overdue_usd\n  from shop.statement s\n  left join (select statement_id, sum(case when kind='refund' then -amount else amount end) paid from shop.payment where statement_id is not null group by 1) p on p.statement_id=s.statement_id\n  where s.status <> 'paid' and s.due_on < current_date\n  group by 1\n), dps as (\n  select s.customer_id, avg((p.received_at::date - s.issued_on)) avg_days, count(*) n\n  from shop.statement s join shop.payment p on p.statement_id = s.statement_id\n  where p.received_at >= now() - interval '6 months'\n  group by 1\n)\nselect a.name as account_name,\n       round(coalesce(o.owed_usd,0),2) as owed_usd,\n       round(coalesce(v.overdue_usd,0),2) as overdue_usd,\n       round(coalesce(d.avg_days,0),1) as days_to_pay_avg\nfrom accts a\nleft join owed o on o.customer_id=a.customer_id\nleft join ovd v on v.customer_id=a.customer_id\nleft join dps d on d.customer_id=a.customer_id\norder by a.name"
-  },
-  "shop-account-revenue": {
-   "why": "AssertionError: row count differs",
-   "last_sql": "with inv as (\n  select repair_order_id, min(changed_at) as invoiced_at\n  from shop.order_status_history where status='invoiced' group by repair_order_id\n)\nselect c.name, count(*) orders, sum(o.total-o.tax_total) rev\nfrom shop.repair_order o join inv using (repair_order_id) join shop.customer c using (customer_id)\nwhere c.kind='company' and o.order_type='customer_pay' and o.status in ('invoiced','paid')\n  and inv.invoiced_at >= timestamp '2026-01-01'\ngroup by 1 order by rev desc limit 5"
-  },
-  "shop-discounts-this-month": {
-   "why": "AssertionError: figure differs",
-   "last_sql": "SELECT l.name AS shop_name,\n       count(*) AS discounted_orders_count,\n       ROUND(sum(ro.discount_total),2) AS discounts_before_tax_usd\nFROM shop.repair_order ro\nJOIN shop.location l ON l.location_id = ro.location_id\nWHERE ro.opened_at >= '2026-11-01' AND ro.opened_at < '2026-12-01'\n  AND ro.discount_total > 0\n  AND ro.order_type = 'customer_pay'\n  AND ro.status <> 'void'\nGROUP BY l.name\nORDER BY discounts_before_tax_usd DESC;"
-  },
-  "shop-cash-last-week": {
-   "why": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
-   "last_sql": "select l.name, count(*) as closes, sum(c.expected_cash) as expected, sum(c.counted_cash) as counted, sum(c.difference) as diff\nfrom shop.cash_drawer_close c join shop.location l on l.location_id=c.location_id\nwhere c.business_date >= date '2026-11-02' and c.business_date <= date '2026-11-08'\ngroup by l.name order by 1"
-  }
+  "shop-cars-per-day": "3/3",
+  "shop-comebacks-by-mechanic": "2/3",
+  "shop-supplier-late": "2/3",
+  "shop-S01-accounts-lost": "1/3",
+  "shop-S02-west-leaks": "1/3",
+  "shop-account-revenue": "1/3",
+  "shop-cash-last-week": "1/3",
+  "shop-revenue-12-months": "1/3",
+  "shop-revenue-30d-by-shop": "1/3",
+  "shop-tech-efficiency-this-month": "1/3",
+  "shop-top-jobs-90d": "1/3"
  },
  "causes": [
   {
-   "cause": "the business definition is stated nowhere and the reference picks one of several readings",
-   "n": 5,
-   "fix": "golden",
    "ids": [
-    "shop-S01-accounts-lost",
-    "shop-S11-seasonal-hire-start",
-    "shop-top-jobs-90d",
-    "shop-parts-waiting",
-    "shop-accounts-owed"
-   ]
+    "shop-cars-per-day"
+   ],
+   "failed": "3/3",
+   "cause": "the agent answers with both the working-day and the weekday average, and the restated table takes the first",
+   "fix": "agent"
   },
   {
-   "cause": "row grain: the reference lists every row, the agent gave the top N or every price row",
-   "n": 3,
-   "fix": "golden",
    "ids": [
     "shop-comebacks-by-mechanic",
-    "shop-supplier-late",
-    "shop-oil-price"
-   ]
-  },
-  {
-   "cause": "which orders and dates count for money or hours other than revenue is not in the context",
-   "n": 3,
-   "fix": "context",
-   "ids": [
-    "shop-discounts-this-month",
-    "shop-mechanic-billed-hours",
-    "shop-tech-efficiency-this-month"
-   ]
-  },
-  {
-   "cause": "which orders are a visit and which days are days is not in the context",
-   "n": 2,
-   "fix": "context",
-   "ids": [
-    "shop-cars-per-day",
-    "shop-busiest-weekday"
-   ]
-  },
-  {
-   "cause": "the time window: the reference ends yesterday or spans 12 months and neither the question nor the notes say so",
-   "n": 2,
-   "fix": "context, golden",
-   "ids": [
-    "shop-revenue-30d-by-shop",
-    "shop-S15-average-order-by-shop"
-   ]
-  },
-  {
-   "cause": "a stated rule ignored",
-   "n": 2,
-   "fix": "agent",
-   "ids": [
-    "shop-new-vs-returning-this-month",
-    "shop-account-revenue"
-   ]
-  },
-  {
-   "cause": "the final message is not JSON",
-   "n": 2,
-   "fix": "harness",
-   "ids": [
-    "shop-recommended-sold-by-advisor",
-    "shop-cash-last-week"
-   ]
-  },
-  {
-   "cause": "the discount is spread over parts: only the dictionary says discount_total is the labour lines'",
-   "n": 1,
-   "fix": "context",
-   "ids": [
-    "shop-parts-margin-last-month"
-   ]
+    "shop-supplier-late"
+   ],
+   "failed": "2/3",
+   "cause": "the period's start is miscounted, or the answer gives a table the columns cannot be read from",
+   "fix": "agent"
   }
  ],
- "void_runs": [
-  "the product's test as it stands: 0/40 (parallel tool calls share one connection: 82 cursor errors)",
-  "tool calls taking turns: stopped at 3/35 (a tool's refusal ends the question)"
- ],
- "references_in_doubt": [
-  "shop-accounts-owed: trusts statement.status and leaves out invoiced orders not yet on a statement, against RULES.md",
-  "shop-S11-seasonal-hire-start: names the hire and two shops in the SQL and answers 'this year' with past seasons",
-  "every 'last N days' reference ends yesterday, against the core RULES.md 'include current partial periods'",
-  "shop-cars-per-day: counts orders as cars, and limits the days but not the orders to till-close days",
-  "most references read now() in the home zone for all three shops; the west shop is an hour behind"
+ "not_measured": [
+  "ten holdout questions",
+  "the knowledge-base goldens (the runner is the product's test_knowledge_questions.py)"
  ]
 }
