@@ -2,6 +2,8 @@
 
 The values are in `settings.en.json` and `settings.ru.json` (flat, as `runtime/config/settings.json` holds them). Every key is one `config/settings.schema.json` declares; `validate.py` checks the key, the type and the ledger value. Rule R9: the settings are part of the seed and versioned with it, so the files also **pin** the keys whose shipped default the stories rely on: a later product default cannot move a golden answer.
 
+The feature switches (`TRACIORA_FEATURE_*`) below are the seed's defaults: the tenant step fills a switch only where the install holds none, so the features an administrator chooses at setup stay as chosen through every build and rebuild.
+
 Ledger rows are `ledger.json` keys; every value below that rests on a row names it, `mem.retest_days` and `console.context_sync_at` among them.
 
 ## Set away from the shipped default

@@ -170,9 +170,10 @@ def write_folder(target, written, T, replace):
 
 def write_settings(cfg, client_id, replace):
     """The seed's settings into the host's settings.json, as the console writes it: under `replace` every key the seed
-    states, else only those the host lacks or holds empty. The product refusing a key or a value stops the step. The
-    keys the seed states under `replace` (whatever the host held before: a repeat build counts the same), else the
-    keys filled."""
+    states, else only those the host lacks or holds empty. A feature switch (`TRACIORA_FEATURE_*`) the host already
+    holds is the administrator's choice at setup and is never written over; the seed's value fills only a switch the
+    host lacks. The product refusing a key or a value stops the step. The keys the seed states under `replace`
+    (whatever the host held before: a repeat build counts the same), else the keys filled."""
     from traciora.core.common import host_config, launch_gate
 
     seed = {k: v for k, v in inputs.load(f"tenant/settings.{cfg}.json").items() if not k.startswith("_")}
@@ -182,7 +183,8 @@ def write_settings(cfg, client_id, replace):
         raise SystemExit(f"the product refuses tenant/settings.{cfg}.json: undeclared {unknown}; {problems}")
     env = {"RUNTIME_ROOT": str(runtime())}
     host = host_config.read(host_config.host_dir(launch_gate.ROOT, env) / "settings.json")
-    changed = {k: v for k, v in seed.items() if (replace or host.get(k) in (None, "")) and host.get(k) != v}
+    changed = {k: v for k, v in seed.items()
+               if ((replace and not k.startswith("TRACIORA_FEATURE_")) or host.get(k) in (None, "")) and host.get(k) != v}
     if changed:
         host_config.write(launch_gate.ROOT, client_id, "settings.json", host | changed, env)
     return len(seed) if replace else len(changed)

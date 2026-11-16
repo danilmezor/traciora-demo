@@ -3,7 +3,8 @@ loaded (as the step runs):
     python <seed>/v1/tenant/checks.py --cfg en|ru [--client-id demo]
 Checks: validate.py passes against the installed product; the tenant folder is provisioned for the T in force (the
 shop database's, else the one its marker states) and holds every page of kb/<cfg>/ as the step renders it for that T,
-no placeholder left anywhere in it, and the ladder documents; settings.json holds every value of settings.<cfg>.json.
+no placeholder left anywhere in it, and the ladder documents; settings.json holds every value of settings.<cfg>.json but the feature
+switches the administrator chose at setup.
 With a built shop database also: the sources erp, core and conversations hold the grants of sources.<cfg>.json and no
 earlier demo source is declared; `python -m traciora.cli.sources check --name erp` passes; the source's login reads
 every table of erp/schema.sql, nothing of schema seed, read-only; the context holds every one of those tables and every
@@ -57,7 +58,8 @@ def main():
     seed = {k: v for k, v in inputs.load(f"tenant/settings.{cfg}.json").items() if not k.startswith("_")}
     path = tenant.runtime() / "config" / "settings.json"
     host = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
-    differ = sorted(k for k, v in seed.items() if host.get(k) != v)
+    # a feature switch is the administrator's choice at setup: the seed fills it only where the host held none
+    differ = sorted(k for k, v in seed.items() if host.get(k) != v and not (k.startswith("TRACIORA_FEATURE_") and k in host))
     failed += [f"settings.json differs from settings.{cfg}.json on {differ[:5]} of {len(differ)}"] * bool(differ)
     said["settings"] = f"{len(seed) - len(differ)}/{len(seed)}"
 
