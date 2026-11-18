@@ -131,6 +131,7 @@ def tree_hash():
 EN_MONEY = re.compile(r"\$([0-9][0-9,]*(?:\.[0-9]{2})?)")
 RU_MONEY = re.compile(r"(?<![\d,])(\d{1,3}(?: \d{3})*(?:,\d{1,2})?) ₽")
 EN_HOURS = re.compile(r"(?<![\d.,:$])(\d+(?:\.\d+)?) (?:labou?r )?hours?\b")
+CYRILLIC = re.compile(r"[А-Яа-яЁё]")
 RU_HOURS = re.compile(r"(?<![\d.,:])(\d+(?:,\d+)?) (?:нормо-час|н/ч)")
 CLOCK = re.compile(r"(?<![\d:.,])(\d{1,2}):(\d{2})(?![\d:])(\s*(?:a\.m\.|p\.m\.|am\b|pm\b))?")
 BARE_EN_TIME = re.compile(r"(?<![\d:.,$])(\d{1,2})\s*(a\.m\.|p\.m\.)")
@@ -218,13 +219,16 @@ def run(say, ok):
             installed = russian_paths()
             installed_ranks = {"playbooks": "administrator", **russian_ranks()}
             link_diff = []
+            encoded_labels = []
             rank_diff = []
             for src, text in pages.items():
                 path = installed[src]
                 rewritten = russian_links(src, text)
-                linked = {posixpath.normpath(posixpath.join(posixpath.dirname(path), unquote(m)))
-                          for m in re.findall(r"\]\(([^)#\s]+)", rewritten)
-                          if "://" not in m and not m.startswith("mailto:")}
+                targets = [m for m in re.findall(r"\]\(([^)#\s]+)", rewritten)
+                           if "://" not in m and not m.startswith("mailto:")]
+                linked = {posixpath.normpath(posixpath.join(posixpath.dirname(path), unquote(m))) for m in targets}
+                if any(CYRILLIC.findall(m) != CYRILLIC.findall(unquote(m)) for m in targets):
+                    encoded_labels.append(path)
                 expected = {installed[l] for l in reg[src]["links_to"]}
                 if linked != expected:
                     link_diff.append((path, sorted(linked ^ expected)))
@@ -234,6 +238,7 @@ def run(say, ok):
                 if installed_ranks.get(parent, "worker") != seen[src]:
                     rank_diff.append(path)
             ok("kb", "the installed Russian links name the same pages and keep the planted missing page", not link_diff, str(link_diff[:5]))
+            ok("kb", "the installed Russian links keep Cyrillic readable in Markdown", not encoded_labels, str(encoded_labels[:5]))
             ok("kb", "the installed Russian pages keep the source ranks, including inherited folder ranks", not rank_diff, str(rank_diff[:5]))
 
         # ---- money, hours, clock times

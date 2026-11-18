@@ -76,7 +76,9 @@ def russian_links(source, text):
     def destination(match):
         target = posixpath.normpath(posixpath.join(posixpath.dirname(source), match["path"]))
         installed = posixpath.relpath(paths[target], posixpath.dirname(paths[source]) or ".")
-        return "](" + quote(installed, safe="/") + match["tail"] + ")"
+        # Markdown accepts Cyrillic IRIs. Escape reserved ASCII and whitespace in the destination.
+        iri = "".join(quote(char, safe="/") if char.isascii() or char.isspace() else char for char in installed)
+        return "](" + iri + match["tail"] + ")"
 
     return LOCAL_LINK.sub(destination, text)
 
