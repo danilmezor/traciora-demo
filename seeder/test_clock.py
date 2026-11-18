@@ -93,7 +93,7 @@ def failures(cfg, when):
 @pytest.mark.parametrize("cfg", ("en", "ru"))
 @pytest.mark.parametrize("when", tl.WHEN)
 def test_anchors_are_the_worked_examples(cfg, when):
-    got = rows(clock.anchors(cfg, when))
+    got = rows(clock.place(cfg, when))
     md = timeline_md(cfg, when)
     md["S9 counts"] = md["S9 counts"].split("; slot 22")[0]
     assert got == place(cfg, when)[0] == md
@@ -114,7 +114,7 @@ def test_a_year_of_instants_against_place(cfg):
             if failed:
                 assert not holds or set(failed) <= RULE_A_CHECKS, (when, failed)
                 continue
-            got = rows(clock.anchors(cfg, when))
+            got = rows(clock.place(cfg, when))
             t = dt.datetime.strptime(want["T"], "%a %Y-%m-%d %H:%M")
             if t < dt.datetime.combine(t.date() + dt.timedelta(3 - t.weekday()), dt.time(12)):
                 for k in RULE_A_ROWS:
@@ -124,7 +124,7 @@ def test_a_year_of_instants_against_place(cfg):
 
 @pytest.mark.parametrize("cfg", ("en", "ru"))
 def test_the_publish_at_thursday_noon_moves_L(cfg):
-    before, at = clock.anchors(cfg, dt.datetime(2026, 11, 19, 11, 59)), clock.anchors(cfg, dt.datetime(2026, 11, 19, 12))
+    before, at = clock.place(cfg, dt.datetime(2026, 11, 19, 11, 59)), clock.place(cfg, dt.datetime(2026, 11, 19, 12))
     assert (before["pub_week"], before["stocktake"]) == (dt.date(2026, 11, 16), dt.date(2026, 11, 19))
     assert at["pub_week"] == dt.date(2026, 11, 23)
 
@@ -134,13 +134,13 @@ def test_thanksgiving_week_en():
     on the Wednesday; from the Wednesday on, until the next publish, the anchors have the stocktake behind them and the
     build falls back to the Tuesday."""
     for day in (20, 21, 23, 24):
-        a = clock.anchors("en", dt.datetime(2026, 11, day, 10, 30))
+        a = clock.place("en", dt.datetime(2026, 11, day, 10, 30))
         assert (a["pub_week"], a["stocktake"], a["week_off"]) == (dt.date(2026, 11, 23), dt.date(2026, 11, 24), dt.date(2026, 11, 25)), day
     assert clock.anchors("en", dt.datetime(2026, 11, 22, 10, 30))["T"] == dt.datetime(2026, 11, 21, 13)
     for day in (25, 26):
         assert failures("en", dt.datetime(2026, 11, day, 10, 30)) == ["stocktake on or after T's date"], day
-        assert clock.anchors("en", dt.datetime(2026, 11, day, 10, 30))["at"] == dt.datetime(2026, 11, 24, 10, 30), day  # the build falls back
-    assert clock.anchors("en", dt.datetime(2026, 11, 27, 10, 30))["stocktake"] == dt.date(2026, 12, 3)
+        assert clock.anchors("en", dt.datetime(2026, 11, day, 10, 30))["at"] == dt.datetime(2026, 11, 22, 10, 30), day
+    assert clock.place("en", dt.datetime(2026, 11, 27, 10, 30))["stocktake"] == dt.date(2026, 12, 3)
 
 
 def test_new_years_eve_ru():
@@ -166,8 +166,8 @@ def test_story_days_fall_on_their_nominal_dates(cfg):
 
 
 @pytest.mark.parametrize("cfg", ("en", "ru"))
-def test_a_tuesday_build(cfg):
-    a = clock.anchors(cfg, TUESDAY)
+def test_tuesday_calendar_anchors(cfg):
+    a = clock.place(cfg, TUESDAY)
     T, L = a["T"].date(), a["pub_week"]
     for name, v in a.items():
         if name in ("T", "at", "asked", "calls", "conversations", "week_day", "works") or name in FUTURE:
@@ -195,6 +195,16 @@ def test_a_tuesday_build(cfg):
     conv8 = a["conversations"][8]["days"]
     booking = next(conv8[k] for k, day in inputs.STORY_FILES["conversations", cfg][8]["days"].items() if "her appointment" in day["what"])
     assert booking == a["booking"] and conv8["T-1d"] <= booking < a["week_off"] and L - dt.timedelta(3) <= booking <= L + dt.timedelta(4)
+
+
+def test_en_conversation_6_falls_back_when_open_days_cross_the_messages():
+    asked = dt.datetime(2026, 11, 18, 15, 59)
+    invalid = clock.place("en", asked)["conversations"][6]["days"]
+    assert invalid["T-4d"] < invalid["T-5d"]
+    a = clock.anchors("en", asked)
+    days = a["conversations"][6]["days"]
+    assert a["asked"] == asked and a["T"] == dt.datetime(2026, 11, 14, 13)
+    assert days["T-5d"] < days["T-4d"] == a["calls"][15]["day"] < days["T-3d"]
 
 
 @pytest.mark.parametrize("cfg", ("en", "ru"))

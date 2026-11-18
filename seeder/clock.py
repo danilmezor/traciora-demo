@@ -69,11 +69,19 @@ def ordinal(word):  # "last" is the 1st; "14th" the 14th
 
 
 def anchors(cfg, when):
-    """`place` at `when`, or, when the anchors' order cannot hold on that day, at the same hour of the latest of the 14 days
-    before on which it does: a build never stops on the clock. `at` is the instant placed, `asked` the one asked."""
-    for back in range(15):
+    """Place stories at the requested hour on the latest suitable day. The English story can
+    require looking back a month when holidays cross its calendar-day and open-day anchors.
+    `at` is the instant placed, `asked` the one asked."""
+    for back in range(32 if cfg == "en" else 15):
         try:
-            return place(cfg, when - back * DAY) | {"asked": when}
+            placed = place(cfg, when - back * DAY)
+            if cfg == "en":
+                # The second and third messages count calendar days. The call and the reply
+                # between them count open days. A weekend or holiday can put them out of order.
+                days = placed["conversations"][6]["days"]
+                if not days["T-5d"] < days["T-4d"] < days["T-3d"]:
+                    raise ValueError("conversation 6: call 15 must fall between messages 2 and 3")
+            return placed | {"asked": when}
         except ValueError as e:
             first = first if back else e
     raise first
