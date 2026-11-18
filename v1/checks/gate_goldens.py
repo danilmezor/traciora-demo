@@ -3,20 +3,24 @@
 D2: on a scratch database loaded from erp/schema.sql in the container traciora-test-pg, every statement of
 erp/checks.sql (once per configuration, its psql variables set to the header's example values) and every SQL of
 goldens/shop.*.yaml plans under EXPLAIN. EXPLAIN executes nothing. The scratch database is always dropped.
-D3: every fact of goldens/kb.*.yaml is printed on the page it names, read again here from kb/<lang>/, and every
+D3: every fact of goldens/kb.*.yaml is printed on the page it names, extracted from the nominal install, and every
 golden's `username` is its asker's sign-in name in cast.json (none for a customer).
 """
+from datetime import datetime
+from io import BytesIO
 import json
 import os
 import re
 import shlex
 import subprocess
-import sys
+from zipfile import ZipFile
+from xml.etree import ElementTree
 
 import yaml
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "kb"))
-from kb_paths import russian_sources
+from pypdf import PdfReader
+
+from seeder import clock, tenant
 
 CONTAINER = "traciora-test-pg"
 LANGS = ("en", "ru")
@@ -27,22 +31,24 @@ def spaces(text):
     return re.sub(r"\s+", " ", text)
 
 
-def page(root, lang, path):
-    """The page's printed text: the file, or a binary document's draft in _binaries.md; placeholders dropped."""
-    if lang == "ru":
-        path = russian_sources().get(path)
-        if path is None:
-            return None
-    file = os.path.join(root, "kb", lang, path)
-    if os.path.isfile(file):
-        text = open(file, encoding="utf-8").read()
-    else:
-        drafts = open(os.path.join(root, "kb", lang, "_binaries.md"), encoding="utf-8").read()
-        found = re.search(r"^## \d+\. `%s`\n(.*?)(?=^## \d+\. `|\Z)" % re.escape(path), drafts, re.S | re.M)
-        if not found:
-            return None
-        text = found.group(1)
-    return spaces(re.sub(r"\{\{[^}]*\}\}", " ", text))
+def installed_text(cfg):
+    """Extract grading evidence from the bytes delivered to this installation."""
+    rendered = tenant.files(cfg, clock.anchors(cfg, datetime(2026, 11, 13, 10, 30)))
+    texts = {}
+    for relative, content in rendered.items():
+        if relative.startswith("documents/"):
+            continue
+        path = relative.removeprefix("knowledge_base/")
+        if path.endswith(".pdf"):
+            text = " ".join(page.extract_text() for page in PdfReader(BytesIO(content)).pages)
+        elif path.endswith(".docx"):
+            with ZipFile(BytesIO(content)) as doc:
+                root = ElementTree.fromstring(doc.read("word/document.xml"))
+            text = " ".join(node.text or "" for node in root.findall(".//{*}t"))
+        else:
+            text = content if isinstance(content, str) else ""
+        texts[path] = spaces(text)
+    return texts
 
 
 def on_page(value, text, lang):
@@ -55,6 +61,7 @@ def d3(root):
     failed, counts, ids, off = [], {}, {}, 0
     people = json.load(open(os.path.join(root, "cast.json"), encoding="utf-8"))["people"]
     for lang in LANGS:
+        texts = installed_text(lang)
         usernames = {p["slot"]: p[lang]["username"] for p in people}
         path = os.path.join(root, "goldens", f"kb.{lang}.yaml")
         if not os.path.exists(path):
@@ -72,10 +79,10 @@ def d3(root):
                 failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: no facts")
             if q.get("username") != usernames.get(q.get("asker")):
                 failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: username {q.get('username')!r} is not asker {q.get('asker')}'s")
-            if page(root, lang, q.get("rule") or "") is None:
+            if q.get("rule") not in texts:
                 failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: no source for rule {q.get('rule')}")
             for fact in q.get("facts") or []:
-                text = page(root, lang, fact.get("page") or "")
+                text = texts.get(fact.get("page"))
                 if text is None or not on_page(fact.get("value", ""), text, lang):
                     off += 1
                     failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: {fact.get('value')!r} is not on {fact.get('page')}")

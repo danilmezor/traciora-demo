@@ -50,7 +50,8 @@ def main():
     if stated != f"{a['T']:{manifest.FORMAT}}":
         failed.append(f"the pages were written for T {stated}, the shop database is at T {a['T']:{manifest.FORMAT}}")
     wanted = tenant.files(cfg, a)
-    differ = [rel for rel, text in wanted.items() if not (target / rel).is_file() or (target / rel).read_text(encoding="utf-8") != text]
+    differ = [rel for rel, content in wanted.items() if not (target / rel).is_file()
+              or (target / rel).read_bytes() != (content if isinstance(content, bytes) else content.encode("utf-8"))]
     left = [p.relative_to(target).as_posix() for p in target.rglob("*.md") if ".git" not in p.parts and "{{" in p.read_text(encoding="utf-8")]
     failed += [f"files not as the step renders them for T {stated}: {differ[:3]} of {len(differ)}"] * bool(differ)
     failed += [f"placeholders left in {left[:3]} of {len(left)}"] * bool(left)

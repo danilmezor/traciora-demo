@@ -39,7 +39,6 @@ RU_FOLDERS = {
     "playbooks": ("Памятки по должностям", "administrator"),
 }
 RU_MISSING = {"shops/west/tow-trucks.md": "Эвакуаторы, с которыми работаем"}
-RANKS = {"public": "worker", "staff": "junior", "middle": "middle", "senior": "senior", "administrator": "administrator"}
 LOCAL_LINK = re.compile(r"\]\((?P<path>(?:[./]*[a-zA-Z0-9_-]+/)*[a-zA-Z0-9_-]+\.[a-zA-Z0-9]+)(?P<tail>[^)]*)\)")
 
 
@@ -83,17 +82,10 @@ def russian_links(source, text):
     return LOCAL_LINK.sub(destination, text)
 
 
-def russian_ranks():
-    """Folder defaults and file exceptions from the Russian outline and page registry."""
-    paths = russian_paths()
-    ranks = {path: rank for path, (_, rank) in RU_FOLDERS.items() if rank}
-    for path, record in russian_pages().items():
-        if not path.endswith(".md"):
-            continue  # the seed's binary drafts are not installed
-        parent = posixpath.dirname(path)
-        while parent and parent not in ranks:
-            parent = posixpath.dirname(parent)
-        rank = RANKS[record["visibility"]]
-        if rank != ranks.get(parent, "worker"):
-            ranks[path] = rank
-    return {paths[source]: rank for source, rank in ranks.items() if source != "playbooks"}
+def installed_ranks(cfg, folders, file_ranks):
+    """Translate the ledger's folder policy and file exceptions to installed paths."""
+    names = russian_paths() if cfg == "ru" else {}
+    by_folder = {entry["folder"]: entry["seen_from"] for entry in folders}
+    ranks = {path: rank for path, rank in by_folder.items() if path and path != "playbooks"
+             and ("/" not in path or rank != by_folder[posixpath.dirname(path)])}
+    return {names.get(path, path): rank for path, rank in (ranks | file_ranks).items()}

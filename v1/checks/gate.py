@@ -40,6 +40,8 @@ def main():
     work = tempfile.mkdtemp(prefix="seed-gate-")
     root = os.path.join(work, "v1")
     shutil.copytree(V1, root, ignore=shutil.ignore_patterns("__pycache__"))
+    shutil.copytree(os.path.join(os.path.dirname(V1), "seeder"), os.path.join(work, "seeder"),
+                    ignore=shutil.ignore_patterns("__pycache__"))
     failed, parts = [], []
     try:
         passed = 0
@@ -56,6 +58,7 @@ def main():
         goldens = os.path.join(root, "checks", "gate_goldens.py")
         if os.path.exists(goldens):
             spec = importlib.util.spec_from_file_location("gate_goldens", goldens)
+            sys.path.insert(0, work)  # run the generator against the copy being checked
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
             more_parts, more_failed = module.run(root)

@@ -50,7 +50,7 @@ alone takes the `asked` of the manifest.
 | Step | Module | Writes |
 |---|---|---|
 | erp | `seeder.erp` | schemas `shop` and `seed` of the shop database |
-| tenant | `seeder.tenant` | the tenant folder (template, knowledge pages with dates, playbooks, ladder), settings; with a shop database also its reader login, the source `erp`, the sources' grants, the context and its notes (`v1/tenant/checks.py` proves it) |
+| tenant | `seeder.tenant` | the tenant folder (template, dated knowledge pages and their five attachments, playbooks, ladder), settings; with a shop database also its reader login, the source `erp`, the sources' grants, the context and its notes (`v1/tenant/checks.py` proves it) |
 | people | `seeder.core.people` | core people, places, sign-ins. Stable across `--replace`: a person's id, `ids.uuid("person", slot, cfg)`; the rest is found by key: a shop by its `config_key` alias, a position by name, a login by `identity.login.person_id`, an account by its username |
 | calls | `seeder.core.calls` | the story calls: legs read by the product's call-log reader (provider `seed:pbx`, one read a call day, one at T), so calls, misses and follow-up come from its rules; each answered call's handler (the file's slot, by its desk extension), recording row (no audio), transcript and verdict. Stable across `--replace`: a call's id (the product's, from its first leg) |
 | chats | `seeder.chats` | the story chats: inboxes, bot, labels, agents through the product; contacts, conversations, messages, taggings, resolution events into Chatwoot's tables (v4.18.0 guard); bridge threads, drafts, the day's priority thresholds and the open set in auth.db |
@@ -106,6 +106,8 @@ head=$(git rev-parse --short HEAD)$([ -z "$(git status --porcelain)" ] || echo -
 gate0=$(<product>/.venv/bin/python v1/checks/gate.py | grep -E '^  FAIL|^SEED GATE')
 seeder/remote.sh python seeder/gate1.py --head "$head" --gate0 "$gate0"
 ```
+
+Gate 0 uses the product Python environment to render the nominal knowledge installation and check the source facts in the delivered pages and attachments. Both languages include two PDFs, a handbook (DOCX), a training deck (PPTX) and a fleet workbook (XLSX).
 
 Per configuration it builds at 10:30 of 22 days (the nominal T Friday 2026-11-13, Tuesday 2026-11-10, the 14 days
 after the nominal T and six later days), seeds 2 and 3 at the nominal T and a repeat of the nominal build under another

@@ -22,7 +22,7 @@ from psycopg import sql
 from psycopg.conninfo import conninfo_to_dict, make_conninfo
 
 from seeder import clock, inputs, manifest
-from v1.kb.kb_paths import russian_links, russian_paths, russian_ranks
+from v1.kb.kb_paths import installed_ranks, russian_links, russian_paths
 
 KB = inputs.SEED / "kb"
 DATES = inputs.load("tenant/dates.json")
@@ -139,17 +139,25 @@ def files(cfg, a):
         source = src.relative_to(KB / cfg).as_posix()
         text = fill(src.read_text(encoding="utf-8"), cfg, a, source)
         out[rel.as_posix()] = russian_links(source, text) if cfg == "ru" else text
+    from seeder.binaries import render
+
+    draft = (KB / cfg / "_binaries.md").read_text(encoding="utf-8")
+    names = russian_paths() if cfg == "ru" else {}
+    for source, content in render(cfg, fill(draft, cfg, a, "_binaries.md")).items():
+        out[f"knowledge_base/{names.get(source, source)}"] = content
     ladder = inputs.load("tenant/ladder.json")
     out.update({f"documents/{name}": json.dumps(ladder[key], ensure_ascii=False, indent=2) + "\n" for name, key in LADDER.items()})
-    if cfg == "ru":
-        out["documents/knowledge_import.json"] = json.dumps({"seen_from": russian_ranks()}, ensure_ascii=False, indent=2) + "\n"
+    folders = (inputs.value(key, cfg) for key in inputs.ROWS if key.startswith("kb.pages."))
+    ranks = installed_ranks(cfg, folders, inputs.value("kb.file_ranks", cfg))
+    out["documents/knowledge_import.json"] = json.dumps({"seen_from": ranks}, ensure_ascii=False, indent=2) + "\n"
     return out
 
 
 def put(root, written):
-    for rel, text in written.items():
-        (root / rel).parent.mkdir(parents=True, exist_ok=True)
-        (root / rel).write_text(text, encoding="utf-8")
+    for rel, content in written.items():
+        target = root / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content if isinstance(content, bytes) else content.encode("utf-8"))
 
 
 def write_folder(target, written, T, replace):

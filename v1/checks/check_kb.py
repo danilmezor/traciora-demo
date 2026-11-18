@@ -16,7 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.normpath(os.path.join(HERE, ".."))
 KB = os.path.join(SEED, "kb")
 sys.path.insert(0, KB)
-from kb_paths import russian_links, russian_paths, russian_ranks
+from kb_paths import russian_links, russian_paths, installed_ranks
 OLD_NAME = "Jersey" + " " + "Pike"  # written in two parts: no seed file may hold the name, this one included
 CLASSES = ("car", "suv", "truck", "van")
 TIERS = ("economy", "standard", "premium")
@@ -217,10 +217,7 @@ def run(say, ok):
 
         if cfg == "ru":
             installed = russian_paths()
-            installed_ranks = {"playbooks": "administrator", **russian_ranks()}
-            link_diff = []
-            encoded_labels = []
-            rank_diff = []
+            link_diff, encoded_labels = [], []
             for src, text in pages.items():
                 path = installed[src]
                 rewritten = russian_links(src, text)
@@ -232,14 +229,20 @@ def run(say, ok):
                 expected = {installed[l] for l in reg[src]["links_to"]}
                 if linked != expected:
                     link_diff.append((path, sorted(linked ^ expected)))
-                parent = path
-                while parent and parent not in installed_ranks:
-                    parent = posixpath.dirname(parent)
-                if installed_ranks.get(parent, "worker") != seen[src]:
-                    rank_diff.append(path)
             ok("kb", "the installed Russian links name the same pages and keep the planted missing page", not link_diff, str(link_diff[:5]))
             ok("kb", "the installed Russian links keep Cyrillic readable in Markdown", not encoded_labels, str(encoded_labels[:5]))
-            ok("kb", "the installed Russian pages keep the source ranks, including inherited folder ranks", not rank_diff, str(rank_diff[:5]))
+        names = russian_paths() if cfg == "ru" else {}
+        folders = (v(k, cfg) for k in KBROWS if k.startswith("kb.pages."))
+        installed_policy = {"playbooks": "administrator", **installed_ranks(cfg, folders, v("kb.file_ranks", cfg))}
+        rank_diff = []
+        for src, expected_rank in seen.items():
+            path = names.get(src, src)
+            parent = path
+            while parent and parent not in installed_policy:
+                parent = posixpath.dirname(parent)
+            if installed_policy.get(parent, "worker") != expected_rank:
+                rank_diff.append(path)
+        ok("kb", f"({cfg}) installed documents and pages keep their designed ranks", not rank_diff, str(rank_diff[:5]))
 
         # ---- money, hours, clock times
         cat_money, cat_hours = catalogue_money(CAT, cfg)
