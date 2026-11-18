@@ -10,7 +10,7 @@
 #   5. every number in a question's expected answer is the ledger's: each filled token is recomputed, and every
 #      numeral left in the text is found in the ledger rows, the knowledge pages or the seed files the record
 #      names, or in its own question; a knowledge-base answer's numeral is also the outline row's own;
-#   6. every page a record names exists under kb/en or kb/ru;
+#   6. every installed page a record names has a source under kb/en or kb/ru;
 #   7. each source holds as many questions as the set took from it, with the same asker, kind and small-size
 #      mark, and the source's wording is kept beside the question;
 #   8. no Russian in the English file's questions and answers, no English sentence in the Russian file's;
@@ -26,6 +26,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "evals", "_build"))
 import common  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "kb"))
+from kb_paths import russian_sources  # noqa: E402
 
 RANKS = {"worker", "junior", "middle", "senior", "admin"}
 STORES = {"erp", "core", "conversations", "knowledge_base", "memory", "account_store"}
@@ -140,6 +142,8 @@ class Pools:
 
     def page(self, page):
         cfg = self.cfg
+        if cfg == "ru":
+            page = russian_sources().get(page, page)
         facts = "kb/facts%s/%s.json" % ("" if cfg == "en" else "-ru", re.sub(r"\.md$", "", page))
         nums, clocks = set(), set()
         for path in ("kb/%s/%s" % (cfg, page), facts, "kb/%s/_history/%s" % (cfg, page)):
@@ -154,6 +158,10 @@ class Pools:
 
 
 def page_exists(cfg, page):
+    if cfg == "ru":
+        page = russian_sources().get(page)
+        if page is None:
+            return False
     if os.path.exists(os.path.join(ROOT, "kb", cfg, page)):
         return True
     facts = os.path.join(ROOT, "kb", "facts" if cfg == "en" else "facts-ru", page + ".json")
@@ -334,9 +342,10 @@ def check_record(q, cfg, ledger, pools, tiers, timeline, proposed_reason, outlin
                      % (field, n if kind == "clock" else ("%g" % n), value[:90]))
 
     # pages
-    for page in q["pages"]:
+    computed_pages = [page for c in defined.values() if c["store"] == "knowledge_base" for page in c["tables"]]
+    for page in dict.fromkeys([*q["pages"], *computed_pages]):
         if not page_exists(cfg, page):
-            fail(w, "page %s is not under kb/%s" % (page, cfg))
+            fail(w, "installed page %s has no source under kb/%s" % (page, cfg))
     for path in q["seed_files"]:
         if not os.path.exists(os.path.join(ROOT, path)):
             fail(w, "seed file %s does not exist" % path)

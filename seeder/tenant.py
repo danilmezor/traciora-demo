@@ -1,6 +1,6 @@
 """The step tenant: the demo tenant arrives the way a real tenant does. Always: the tenant folder (the product's
 `config/tenant-template`, the knowledge pages and playbooks of `kb/<cfg>/` with every date placeholder filled from the
-build's T, the ladder as the tenant's documents) and the seed's settings in `runtime/config/settings.json`. With a
+build's T, and the tenant's policy documents) and the seed's settings in `runtime/config/settings.json`. With a
 built shop database also: a read-only login on its schema `shop`, the source `erp` declared through the product's
 `cli.sources add`, the grants of `tenant/sources.<cfg>.json` on it and on the built-in sources, the context synced
 through `cli.context sync`, and the context notes of `tenant/context/` and `erp/context/` written over the synced tree.
@@ -22,6 +22,7 @@ from psycopg import sql
 from psycopg.conninfo import conninfo_to_dict, make_conninfo
 
 from seeder import clock, inputs, manifest
+from v1.kb.kb_paths import russian_links, russian_paths, russian_ranks
 
 KB = inputs.SEED / "kb"
 DATES = inputs.load("tenant/dates.json")
@@ -87,10 +88,12 @@ def pages(cfg):
     """(path in the tenant folder, source file) of every page: `playbooks/` to the tenant's playbooks, the rest to
     `knowledge_base/`. A name starting with `_` is the drafts' own (history texts, binaries, reading guide)."""
     root = KB / cfg
+    names = russian_paths() if cfg == "ru" else {}
     for path in sorted(root.rglob("*.md")):
         rel = path.relative_to(root)
         if not any(part.startswith("_") for part in rel.parts):
-            yield (rel if rel.parts[0] == "playbooks" else Path("knowledge_base") / rel), path
+            installed = Path(names[rel.as_posix()]) if names else rel
+            yield (installed if rel.parts[0] == "playbooks" else Path("knowledge_base") / installed), path
 
 
 def runtime():
@@ -131,9 +134,16 @@ def build(cfg, client_id):
 
 def files(cfg, a):
     """Every file the seed puts in the tenant folder, by its path there."""
-    out = {rel.as_posix(): fill(src.read_text(encoding="utf-8"), cfg, a, src.relative_to(KB / cfg).as_posix()) for rel, src in pages(cfg)}
+    out = {}
+    for rel, src in pages(cfg):
+        source = src.relative_to(KB / cfg).as_posix()
+        text = fill(src.read_text(encoding="utf-8"), cfg, a, source)
+        out[rel.as_posix()] = russian_links(source, text) if cfg == "ru" else text
     ladder = inputs.load("tenant/ladder.json")
-    return out | {f"documents/{name}": json.dumps(ladder[key], ensure_ascii=False, indent=2) + "\n" for name, key in LADDER.items()}
+    out.update({f"documents/{name}": json.dumps(ladder[key], ensure_ascii=False, indent=2) + "\n" for name, key in LADDER.items()})
+    if cfg == "ru":
+        out["documents/knowledge_import.json"] = json.dumps({"seen_from": russian_ranks()}, ensure_ascii=False, indent=2) + "\n"
+    return out
 
 
 def put(root, written):
@@ -283,6 +293,13 @@ def step(cfg, client_id, replace):
     written = write_folder(target, files(cfg, a), f"{a['T']:{manifest.FORMAT}}", replace) + write_settings(cfg, client_id, replace)
     if not built:
         return written
+    from traciora.core.core_db.bootstrap import seed_rows, write_policy_seeds
+    from traciora.core.core_db.engine import connect, tenant_dsn
+
+    # The core database can be prepared before the tenant folder is written.
+    with connect(tenant_dsn(client_id)) as conn:
+        write_policy_seeds(conn, seed_rows(client_id))
+
     conversations = declare(cfg, client_id, manifest.shop_dsn(client_id))
     for name in (SOURCE, "core", conversations):
         if name:  # each source's first sync copies the product's shipped notes, which the seed's notes then extend

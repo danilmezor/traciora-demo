@@ -1,6 +1,6 @@
 {
  "format": "seed-eval-questions/1",
- "eval_set": "v1.0",
+ "eval_set": "v1.0.1",
  "runs_on_seed": "v1",
  "configuration": "ru",
  "ledger_sha256": "693ab7f60e75f7bcae17bc41d30aacf59368cad1f1751ae159908d082d6c9792",
@@ -385,7 +385,7 @@
       "how": "the first Monday on or after T-150 calendar days; the price list's \"In force from\" date",
       "store": "knowledge_base",
       "tables": [
-       "prices/price-list.md"
+       "Цены/Прайс-лист.md"
       ],
       "nominal": {
        "t": "2026-11-13T10:30",
@@ -1395,7 +1395,7 @@
       "how": "the \"In force from\" date in the text of the page \"Discount policy\": the full open day after F1's firing (west's 16th full open day after G)",
       "store": "knowledge_base",
       "tables": [
-       "policies/discounts.md"
+       "Правила/Скидки.md"
       ],
       "nominal": {
        "t": "2026-11-13T10:30",
@@ -1449,7 +1449,7 @@
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -3289,7 +3289,7 @@
     }
    ],
    "pages": [
-    "how-to/booking-a-visit.md"
+    "Как мы работаем/Запись на ремонт.md"
    ],
    "seed_files": [],
    "sources": [
@@ -4949,7 +4949,7 @@
     }
    ],
    "pages": [
-    "prices/price-list.md"
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -5312,7 +5312,7 @@
       "how": "the first Monday on or after T-150 calendar days; the price list's \"In force from\" date",
       "store": "knowledge_base",
       "tables": [
-       "prices/price-list.md"
+       "Цены/Прайс-лист.md"
       ],
       "nominal": {
        "t": "2026-11-13T10:30",
@@ -5364,8 +5364,8 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md",
-    "prices/price-list.md"
+    "Услуги/Двигатель/Ремень ГРМ.md",
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -6357,7 +6357,7 @@
       "how": "the first Monday on or after T-150 calendar days; the price list's \"In force from\" date",
       "store": "knowledge_base",
       "tables": [
-       "prices/price-list.md"
+       "Цены/Прайс-лист.md"
       ],
       "nominal": {
        "t": "2026-11-13T10:30",
@@ -6421,8 +6421,8 @@
     }
    ],
    "pages": [
-    "prices/price-list.md",
-    "services/engine/timing-belt.md"
+    "Цены/Прайс-лист.md",
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [
     "named_customers.json"
@@ -6488,8 +6488,8 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md",
-    "services/brakes/brake-questions.md"
+    "Услуги/Двигатель/Ремень ГРМ.md",
+    "Услуги/Тормоза/Вопросы по тормозам.md"
    ],
    "seed_files": [],
    "sources": [
@@ -6557,8 +6557,8 @@
     }
    ],
    "pages": [
-    "customers/warranty.md",
-    "customers/warranty-policy.md"
+    "Клиентам/Наша гарантия.md",
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -6623,7 +6623,7 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md"
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -6687,7 +6687,7 @@
     }
    ],
    "pages": [
-    "management/pay-and-till.md"
+    "Руководству/Оплата труда и касса.md"
    ],
    "seed_files": [],
    "sources": [
@@ -8673,12 +8673,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/price-list.md` (Двигатель и система охлаждения), `services/engine/timing-belt.md`"
+     "where": "`Цены/Прайс-лист.md` (Двигатель и система охлаждения), `Услуги/Двигатель/Ремень ГРМ.md`"
     }
    ],
    "pages": [
-    "prices/price-list.md",
-    "services/engine/timing-belt.md"
+    "Цены/Прайс-лист.md",
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -8743,13 +8743,13 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "обе страницы; `prices/labour-rates-and-fees.md`"
+     "where": "обе страницы; `Цены/Нормо-час, сборы и классы автомобилей.md`"
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md",
-    "services/brakes/brake-questions.md",
-    "prices/labour-rates-and-fees.md"
+    "Услуги/Двигатель/Ремень ГРМ.md",
+    "Услуги/Тормоза/Вопросы по тормозам.md",
+    "Цены/Нормо-час, сборы и классы автомобилей.md"
    ],
    "seed_files": [],
    "sources": [
@@ -8798,8 +8798,8 @@
       {
        "source": "page",
        "pages": [
-        "prices/price-list.md",
-        "services/brakes/brake-questions.md"
+        "Цены/Прайс-лист.md",
+        "Услуги/Тормоза/Вопросы по тормозам.md"
        ]
       }
      ]
@@ -8809,12 +8809,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/price-list.md`, `services/brakes/brake-questions.md`"
+     "where": "`Цены/Прайс-лист.md`, `Услуги/Тормоза/Вопросы по тормозам.md`"
     }
    ],
    "pages": [
-    "prices/price-list.md",
-    "services/brakes/brake-questions.md"
+    "Цены/Прайс-лист.md",
+    "Услуги/Тормоза/Вопросы по тормозам.md"
    ],
    "seed_files": [],
    "sources": [
@@ -8863,9 +8863,9 @@
       {
        "source": "page",
        "pages": [
-        "parts/ordering-parts.md",
-        "how-to/taking-a-call.md",
-        "services/engine/timing-belt.md"
+        "Запчасти/Как заказать запчасть под работу.md",
+        "Как мы работаем/Как принять звонок.md",
+        "Услуги/Двигатель/Ремень ГРМ.md"
        ]
       }
      ]
@@ -8875,13 +8875,13 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`parts/ordering-parts.md`, `how-to/taking-a-call.md`, `services/engine/timing-belt.md`"
+     "where": "`Запчасти/Как заказать запчасть под работу.md`, `Как мы работаем/Как принять звонок.md`, `Услуги/Двигатель/Ремень ГРМ.md`"
     }
    ],
    "pages": [
-    "parts/ordering-parts.md",
-    "how-to/taking-a-call.md",
-    "services/engine/timing-belt.md"
+    "Запчасти/Как заказать запчасть под работу.md",
+    "Как мы работаем/Как принять звонок.md",
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -8932,8 +8932,8 @@
       "how": "the first Monday on or after T-150 calendar days (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "prices/labour-rates-and-fees.md",
-       "prices/how-prices-change.md"
+       "Цены/Нормо-час, сборы и классы автомобилей.md",
+       "Цены/Как меняются цены.md"
       ],
       "nominal": null,
       "design": null
@@ -8944,8 +8944,8 @@
       "how": "the first open day on or after T-18 months (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "prices/labour-rates-and-fees.md",
-       "prices/how-prices-change.md"
+       "Цены/Нормо-час, сборы и классы автомобилей.md",
+       "Цены/Как меняются цены.md"
       ],
       "nominal": null,
       "design": null
@@ -8956,8 +8956,8 @@
       "how": "the first full open day on or after T-335 days (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "prices/labour-rates-and-fees.md",
-       "prices/how-prices-change.md"
+       "Цены/Нормо-час, сборы и классы автомобилей.md",
+       "Цены/Как меняются цены.md"
       ],
       "nominal": null,
       "design": null
@@ -8968,8 +8968,8 @@
       {
        "source": "page",
        "pages": [
-        "prices/labour-rates-and-fees.md",
-        "prices/how-prices-change.md"
+        "Цены/Нормо-час, сборы и классы автомобилей.md",
+        "Цены/Как меняются цены.md"
        ]
       }
      ]
@@ -8979,12 +8979,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/labour-rates-and-fees.md`, `prices/how-prices-change.md`"
+     "where": "`Цены/Нормо-час, сборы и классы автомобилей.md`, `Цены/Как меняются цены.md`"
     }
    ],
    "pages": [
-    "prices/labour-rates-and-fees.md",
-    "prices/how-prices-change.md"
+    "Цены/Нормо-час, сборы и классы автомобилей.md",
+    "Цены/Как меняются цены.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9052,12 +9052,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/price-list.md`"
+     "where": "`Цены/Прайс-лист.md`"
     }
    ],
    "pages": [
-    "prices/price-list.md",
-    "services/engine/timing-belt.md"
+    "Цены/Прайс-лист.md",
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9109,9 +9109,9 @@
       {
        "source": "page",
        "pages": [
-        "customers/warranty.md",
-        "policies/warranty.md",
-        "customers/warranty-policy.md"
+        "Клиентам/Наша гарантия.md",
+        "Правила/Гарантия.md",
+        "Клиентам/Гарантийные обязательства.md"
        ]
       }
      ]
@@ -9121,13 +9121,13 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/warranty.md`, `policies/warranty.md`, `customers/warranty-policy.md`"
+     "where": "`Клиентам/Наша гарантия.md`, `Правила/Гарантия.md`, `Клиентам/Гарантийные обязательства.md`"
     }
    ],
    "pages": [
-    "customers/warranty.md",
-    "policies/warranty.md",
-    "customers/warranty-policy.md"
+    "Клиентам/Наша гарантия.md",
+    "Правила/Гарантия.md",
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9176,9 +9176,9 @@
       {
        "source": "page",
        "pages": [
-        "customers/warranty.md",
-        "policies/warranty.md",
-        "customers/warranty-policy.md"
+        "Клиентам/Наша гарантия.md",
+        "Правила/Гарантия.md",
+        "Клиентам/Гарантийные обязательства.md"
        ]
       }
      ]
@@ -9192,9 +9192,9 @@
     }
    ],
    "pages": [
-    "customers/warranty.md",
-    "policies/warranty.md",
-    "customers/warranty-policy.md"
+    "Клиентам/Наша гарантия.md",
+    "Правила/Гарантия.md",
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9243,9 +9243,9 @@
       {
        "source": "page",
        "pages": [
-        "customers/warranty.md",
-        "policies/warranty.md",
-        "customers/warranty-policy.md"
+        "Клиентам/Наша гарантия.md",
+        "Правила/Гарантия.md",
+        "Клиентам/Гарантийные обязательства.md"
        ]
       }
      ]
@@ -9259,9 +9259,9 @@
     }
    ],
    "pages": [
-    "customers/warranty.md",
-    "policies/warranty.md",
-    "customers/warranty-policy.md"
+    "Клиентам/Наша гарантия.md",
+    "Правила/Гарантия.md",
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9322,8 +9322,8 @@
       "how": "T-26 months (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "customers/warranty.md",
-       "policies/warranty.md"
+       "Клиентам/Наша гарантия.md",
+       "Правила/Гарантия.md"
       ],
       "nominal": null,
       "design": null
@@ -9334,8 +9334,8 @@
       "how": "T moved by calendar months or years (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "customers/warranty.md",
-       "policies/warranty.md"
+       "Клиентам/Наша гарантия.md",
+       "Правила/Гарантия.md"
       ],
       "nominal": null,
       "design": null
@@ -9346,8 +9346,8 @@
       "how": "T moved by calendar months or years (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "customers/warranty.md",
-       "policies/warranty.md"
+       "Клиентам/Наша гарантия.md",
+       "Правила/Гарантия.md"
       ],
       "nominal": null,
       "design": null
@@ -9358,8 +9358,8 @@
       "how": "T moved by calendar months or years (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "customers/warranty.md",
-       "policies/warranty.md"
+       "Клиентам/Наша гарантия.md",
+       "Правила/Гарантия.md"
       ],
       "nominal": null,
       "design": null
@@ -9374,9 +9374,9 @@
     }
    ],
    "pages": [
-    "customers/warranty.md",
-    "policies/warranty.md",
-    "customers/warranty-policy.md"
+    "Клиентам/Наша гарантия.md",
+    "Правила/Гарантия.md",
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9438,12 +9438,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/warranty.md`"
+     "where": "`Клиентам/Наша гарантия.md`"
     }
    ],
    "pages": [
-    "customers/warranty.md",
-    "customers/warranty-policy.md"
+    "Клиентам/Наша гарантия.md",
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9507,7 +9507,7 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md"
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9577,7 +9577,7 @@
       "how": "en: the full open day after the discount on the timing-belt bill; ru: slot 5's first working day after it (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "services/engine/timing-belt.md"
+       "Услуги/Двигатель/Ремень ГРМ.md"
       ],
       "nominal": null,
       "design": null
@@ -9592,7 +9592,7 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md"
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9641,7 +9641,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/service-standards.md"
+        "Правила/Стандарты обслуживания.md"
        ]
       }
      ]
@@ -9651,11 +9651,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/service-standards.md`"
+     "where": "`Правила/Стандарты обслуживания.md`"
     }
    ],
    "pages": [
-    "policies/service-standards.md"
+    "Правила/Стандарты обслуживания.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9704,8 +9704,8 @@
       {
        "source": "page",
        "pages": [
-        "services/engine/timing-belt.md",
-        "services/brakes/brake-questions.md"
+        "Услуги/Двигатель/Ремень ГРМ.md",
+        "Услуги/Тормоза/Вопросы по тормозам.md"
        ]
       }
      ]
@@ -9719,8 +9719,8 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md",
-    "services/brakes/brake-questions.md"
+    "Услуги/Двигатель/Ремень ГРМ.md",
+    "Услуги/Тормоза/Вопросы по тормозам.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9769,7 +9769,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/using-this-knowledge-base.md"
+        "Как мы работаем/Как пользоваться базой знаний и исправлять её.md"
        ]
       }
      ]
@@ -9779,11 +9779,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`how-to/using-this-knowledge-base.md`"
+     "where": "`Как мы работаем/Как пользоваться базой знаний и исправлять её.md`"
     }
    ],
    "pages": [
-    "how-to/using-this-knowledge-base.md"
+    "Как мы работаем/Как пользоваться базой знаний и исправлять её.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9834,7 +9834,7 @@
       "how": "the 16th full open day after G: the next full open day after F1's firing (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "policies/discounts.md"
+       "Правила/Скидки.md"
       ],
       "nominal": null,
       "design": null
@@ -9845,7 +9845,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/discounts.md"
+        "Правила/Скидки.md"
        ]
       }
      ]
@@ -9855,11 +9855,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/discounts.md`"
+     "where": "`Правила/Скидки.md`"
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9911,7 +9911,7 @@
       "how": "en: the full open day after the discount on the timing-belt bill; ru: slot 5's first working day after it (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "policies/discounts.md"
+       "Правила/Скидки.md"
       ],
       "nominal": null,
       "design": null
@@ -9922,7 +9922,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/discounts.md"
+        "Правила/Скидки.md"
        ]
       }
      ]
@@ -9936,7 +9936,7 @@
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -9985,7 +9985,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/discounts.md"
+        "Правила/Скидки.md"
        ]
       }
      ]
@@ -9995,11 +9995,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/discounts.md`"
+     "where": "`Правила/Скидки.md`"
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10086,7 +10086,7 @@
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10142,8 +10142,8 @@
       {
        "source": "page",
        "pages": [
-        "policies/discounts.md",
-        "how-to/price-objections.md"
+        "Правила/Скидки.md",
+        "Как мы работаем/Возражения по цене.md"
        ]
       }
      ]
@@ -10153,12 +10153,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/discounts.md`, `how-to/price-objections.md`"
+     "where": "`Правила/Скидки.md`, `Как мы работаем/Возражения по цене.md`"
     }
    ],
    "pages": [
-    "policies/discounts.md",
-    "how-to/price-objections.md"
+    "Правила/Скидки.md",
+    "Как мы работаем/Возражения по цене.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10212,11 +10212,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/what-we-found-at-west.md` (senior)"
+     "where": "`Руководству/Что мы нашли в Казани.md` (senior)"
     }
    ],
    "pages": [
-    "management/what-we-found-at-west.md"
+    "Руководству/Что мы нашли в Казани.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10287,11 +10287,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/what-we-found-at-west.md` (senior)"
+     "where": "`Руководству/Что мы нашли в Казани.md` (senior)"
     }
    ],
    "pages": [
-    "management/what-we-found-at-west.md"
+    "Руководству/Что мы нашли в Казани.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10348,7 +10348,7 @@
       {
        "source": "page",
        "pages": [
-        "shop-floor/courtesy-inspection.md"
+        "Цех/Осмотр по чек-листу.md"
        ]
       }
      ]
@@ -10358,11 +10358,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shop-floor/courtesy-inspection.md`"
+     "where": "`Цех/Осмотр по чек-листу.md`"
     }
    ],
    "pages": [
-    "shop-floor/courtesy-inspection.md"
+    "Цех/Осмотр по чек-листу.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10413,8 +10413,8 @@
       "how": "the 16th full open day after G: the next full open day after F1's firing (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "shops/west/opening-and-closing.md",
-       "policies/voids-and-refunds.md"
+       "Площадки/Техническая/Техническая: открытие и закрытие.md",
+       "Правила/Работа мимо наряда, списания и возврат денег.md"
       ],
       "nominal": null,
       "design": null
@@ -10425,8 +10425,8 @@
       {
        "source": "page",
        "pages": [
-        "shops/west/opening-and-closing.md",
-        "policies/voids-and-refunds.md"
+        "Площадки/Техническая/Техническая: открытие и закрытие.md",
+        "Правила/Работа мимо наряда, списания и возврат денег.md"
        ]
       }
      ]
@@ -10436,12 +10436,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shops/west/opening-and-closing.md`, `policies/voids-and-refunds.md`"
+     "where": "`Площадки/Техническая/Техническая: открытие и закрытие.md`, `Правила/Работа мимо наряда, списания и возврат денег.md`"
     }
    ],
    "pages": [
-    "shops/west/opening-and-closing.md",
-    "policies/voids-and-refunds.md"
+    "Площадки/Техническая/Техническая: открытие и закрытие.md",
+    "Правила/Работа мимо наряда, списания и возврат денег.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10490,8 +10490,8 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md",
-        "accounts/a1.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md",
+        "Корпоративные клиенты/Симбирский гонец.md"
        ]
       }
      ]
@@ -10501,12 +10501,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "таблица условий, `accounts/a1.md`"
+     "where": "таблица условий, `Корпоративные клиенты/Симбирский гонец.md`"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md",
-    "accounts/a1.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md",
+    "Корпоративные клиенты/Симбирский гонец.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10555,7 +10555,7 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md"
        ]
       }
      ]
@@ -10565,11 +10565,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/company-account-terms.md`, страница клиента"
+     "where": "`Корпоративные клиенты/Корпоративные клиенты.md`, страница клиента"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10618,7 +10618,7 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md"
        ]
       }
      ]
@@ -10628,11 +10628,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/company-account-terms.md`"
+     "where": "`Корпоративные клиенты/Корпоративные клиенты.md`"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10691,11 +10691,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/company-account-terms.md`"
+     "where": "`Корпоративные клиенты/Корпоративные клиенты.md`"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10752,8 +10752,8 @@
       "how": "T moved by calendar months or years (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "accounts/company-account-terms.md",
-       "accounts/a6.md"
+       "Корпоративные клиенты/Корпоративные клиенты.md",
+       "Корпоративные клиенты/Вкусный выезд.md"
       ],
       "nominal": null,
       "design": null
@@ -10764,8 +10764,8 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md",
-        "accounts/a6.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md",
+        "Корпоративные клиенты/Вкусный выезд.md"
        ]
       }
      ]
@@ -10775,12 +10775,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "таблица условий, `accounts/a6.md`"
+     "where": "таблица условий, `Корпоративные клиенты/Вкусный выезд.md`"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md",
-    "accounts/a6.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md",
+    "Корпоративные клиенты/Вкусный выезд.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10829,8 +10829,8 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md",
-        "services/maintenance/fleet-pm-service.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md",
+        "Услуги/ТО/ТО коммерческого автомобиля.md"
        ]
       }
      ]
@@ -10840,12 +10840,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/maintenance/fleet-pm-service.md`, таблица условий"
+     "where": "`Услуги/ТО/ТО коммерческого автомобиля.md`, таблица условий"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md",
-    "services/maintenance/fleet-pm-service.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md",
+    "Услуги/ТО/ТО коммерческого автомобиля.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10899,11 +10899,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/credit/credit-limits-and-collections.md`"
+     "where": "`Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md`"
     }
    ],
    "pages": [
-    "accounts/credit/credit-limits-and-collections.md"
+    "Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md"
    ],
    "seed_files": [],
    "sources": [
@@ -10952,7 +10952,7 @@
       {
        "source": "page",
        "pages": [
-        "accounts/credit/credit-limits-and-collections.md"
+        "Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md"
        ]
       }
      ]
@@ -10962,11 +10962,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/credit/credit-limits-and-collections.md`"
+     "where": "`Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md`"
     }
    ],
    "pages": [
-    "accounts/credit/credit-limits-and-collections.md"
+    "Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11015,8 +11015,8 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md",
-        "accounts/a2.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md",
+        "Корпоративные клиенты/Тёплый контур.md"
        ]
       }
      ]
@@ -11030,8 +11030,8 @@
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md",
-    "accounts/a2.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md",
+    "Корпоративные клиенты/Тёплый контур.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11080,8 +11080,8 @@
       {
        "source": "page",
        "pages": [
-        "office/statements-and-receivables.md",
-        "policies/documents-and-vat.md"
+        "Бухгалтерия/Счета, акты и дебиторка.md",
+        "Правила/Документы клиенту и НДС.md"
        ]
       }
      ]
@@ -11091,12 +11091,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`office/statements-and-receivables.md`, `policies/documents-and-vat.md`"
+     "where": "`Бухгалтерия/Счета, акты и дебиторка.md`, `Правила/Документы клиенту и НДС.md`"
     }
    ],
    "pages": [
-    "office/statements-and-receivables.md",
-    "policies/documents-and-vat.md"
+    "Бухгалтерия/Счета, акты и дебиторка.md",
+    "Правила/Документы клиенту и НДС.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11145,7 +11145,7 @@
       {
        "source": "page",
        "pages": [
-        "customers/hours-and-locations.md"
+        "Клиентам/Адреса и часы работы.md"
        ]
       }
      ]
@@ -11155,11 +11155,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/hours-and-locations.md`"
+     "where": "`Клиентам/Адреса и часы работы.md`"
     }
    ],
    "pages": [
-    "customers/hours-and-locations.md"
+    "Клиентам/Адреса и часы работы.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11208,7 +11208,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/stocktake-day.md"
+        "Как мы работаем/День инвентаризации.md"
        ]
       }
      ]
@@ -11218,11 +11218,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`how-to/stocktake-day.md`"
+     "where": "`Как мы работаем/День инвентаризации.md`"
     }
    ],
    "pages": [
-    "how-to/stocktake-day.md"
+    "Как мы работаем/День инвентаризации.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11271,9 +11271,9 @@
       {
        "source": "page",
        "pages": [
-        "customers/hours-and-locations.md",
-        "shops/README.md",
-        "shops/west/README.md"
+        "Клиентам/Адреса и часы работы.md",
+        "Площадки/Обзор.md",
+        "Площадки/Техническая/Обзор.md"
        ]
       }
      ]
@@ -11283,13 +11283,13 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/hours-and-locations.md`, `shops/README.md`, `shops/west/README.md`"
+     "where": "`Клиентам/Адреса и часы работы.md`, `Площадки/Обзор.md`, `Площадки/Техническая/Обзор.md`"
     }
    ],
    "pages": [
-    "customers/hours-and-locations.md",
-    "shops/README.md",
-    "shops/west/README.md"
+    "Клиентам/Адреса и часы работы.md",
+    "Площадки/Обзор.md",
+    "Площадки/Техническая/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11346,11 +11346,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/hours-and-locations.md`"
+     "where": "`Клиентам/Адреса и часы работы.md`"
     }
    ],
    "pages": [
-    "customers/hours-and-locations.md"
+    "Клиентам/Адреса и часы работы.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11399,7 +11399,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/stocktake-day.md"
+        "Как мы работаем/День инвентаризации.md"
        ]
       }
      ]
@@ -11409,11 +11409,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "история страницы, `how-to/stocktake-day.md`"
+     "where": "история страницы, `Как мы работаем/День инвентаризации.md`"
     }
    ],
    "pages": [
-    "how-to/stocktake-day.md"
+    "Как мы работаем/День инвентаризации.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11462,7 +11462,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/booking-a-visit.md"
+        "Как мы работаем/Запись на ремонт.md"
        ]
       }
      ]
@@ -11472,11 +11472,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`how-to/booking-a-visit.md`, решение"
+     "where": "`Как мы работаем/Запись на ремонт.md`, решение"
     }
    ],
    "pages": [
-    "how-to/booking-a-visit.md"
+    "Как мы работаем/Запись на ремонт.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11526,7 +11526,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/using-this-knowledge-base.md"
+        "Как мы работаем/Как пользоваться базой знаний и исправлять её.md"
        ]
       }
      ]
@@ -11536,11 +11536,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`how-to/using-this-knowledge-base.md`"
+     "where": "`Как мы работаем/Как пользоваться базой знаний и исправлять её.md`"
     }
    ],
    "pages": [
-    "how-to/using-this-knowledge-base.md"
+    "Как мы работаем/Как пользоваться базой знаний и исправлять её.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11589,7 +11589,7 @@
       {
        "source": "page",
        "pages": [
-        "customers/brake-noise.md"
+        "Клиентам/Скрип и скрежет при торможении.md"
        ]
       }
      ]
@@ -11599,11 +11599,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/brake-noise.md`"
+     "where": "`Клиентам/Скрип и скрежет при торможении.md`"
     }
    ],
    "pages": [
-    "customers/brake-noise.md"
+    "Клиентам/Скрип и скрежет при торможении.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11657,11 +11657,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/README.md`"
+     "where": "`Клиентам/Обзор.md`"
     }
    ],
    "pages": [
-    "customers/README.md"
+    "Клиентам/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11718,11 +11718,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/company-vehicles.md`"
+     "where": "`Клиентам/Автомобили организаций.md`"
     }
    ],
    "pages": [
-    "customers/company-vehicles.md"
+    "Клиентам/Автомобили организаций.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11778,11 +11778,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/dropping-off-and-picking-up.md`"
+     "where": "`Клиентам/Как сдать и забрать автомобиль.md`"
     }
    ],
    "pages": [
-    "customers/dropping-off-and-picking-up.md"
+    "Клиентам/Как сдать и забрать автомобиль.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11841,12 +11841,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/price-list.md`, `services/suspension/struts-and-shocks.md`"
+     "where": "`Цены/Прайс-лист.md`, `Услуги/Ходовая/Стойки и амортизаторы.md`"
     }
    ],
    "pages": [
-    "prices/price-list.md",
-    "services/suspension/struts-and-shocks.md"
+    "Цены/Прайс-лист.md",
+    "Услуги/Ходовая/Стойки и амортизаторы.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11898,7 +11898,7 @@
       {
        "source": "page",
        "pages": [
-        "shops/east/opening-and-closing.md"
+        "Площадки/Инженерный/Инженерный: открытие и закрытие.md"
        ]
       }
      ]
@@ -11908,11 +11908,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shops/east/opening-and-closing.md`"
+     "where": "`Площадки/Инженерный/Инженерный: открытие и закрытие.md`"
     }
    ],
    "pages": [
-    "shops/east/opening-and-closing.md"
+    "Площадки/Инженерный/Инженерный: открытие и закрытие.md"
    ],
    "seed_files": [],
    "sources": [
@@ -11961,7 +11961,7 @@
       {
        "source": "page",
        "pages": [
-        "shops/east/opening-and-closing.md"
+        "Площадки/Инженерный/Инженерный: открытие и закрытие.md"
        ]
       }
      ]
@@ -11975,7 +11975,7 @@
     }
    ],
    "pages": [
-    "shops/east/opening-and-closing.md"
+    "Площадки/Инженерный/Инженерный: открытие и закрытие.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12024,7 +12024,7 @@
       {
        "source": "page",
        "pages": [
-        "shops/east/hours-and-getting-here.md"
+        "Площадки/Инженерный/Инженерный: часы и как проехать.md"
        ]
       }
      ]
@@ -12034,11 +12034,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shops/east/hours-and-getting-here.md`"
+     "where": "`Площадки/Инженерный/Инженерный: часы и как проехать.md`"
     }
    ],
    "pages": [
-    "shops/east/hours-and-getting-here.md"
+    "Площадки/Инженерный/Инженерный: часы и как проехать.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12089,7 +12089,7 @@
       "how": "the 16th full open day after G: the next full open day after F1's firing (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "shops/west/opening-and-closing.md"
+       "Площадки/Техническая/Техническая: открытие и закрытие.md"
       ],
       "nominal": null,
       "design": null
@@ -12100,7 +12100,7 @@
       {
        "source": "page",
        "pages": [
-        "shops/west/opening-and-closing.md"
+        "Площадки/Техническая/Техническая: открытие и закрытие.md"
        ]
       }
      ]
@@ -12110,11 +12110,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shops/west/opening-and-closing.md`"
+     "where": "`Площадки/Техническая/Техническая: открытие и закрытие.md`"
     }
    ],
    "pages": [
-    "shops/west/opening-and-closing.md"
+    "Площадки/Техническая/Техническая: открытие и закрытие.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12163,7 +12163,7 @@
       {
        "source": "page",
        "pages": [
-        "services/transmission/transmission-fluid-service.md"
+        "Услуги/Трансмиссия/Замена масла в коробке.md"
        ]
       }
      ]
@@ -12173,11 +12173,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/transmission/transmission-fluid-service.md`"
+     "where": "`Услуги/Трансмиссия/Замена масла в коробке.md`"
     }
    ],
    "pages": [
-    "services/transmission/transmission-fluid-service.md"
+    "Услуги/Трансмиссия/Замена масла в коробке.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12226,7 +12226,7 @@
       {
        "source": "page",
        "pages": [
-        "prices/labour-rates-and-fees.md"
+        "Цены/Нормо-час, сборы и классы автомобилей.md"
        ]
       }
      ]
@@ -12236,11 +12236,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/labour-rates-and-fees.md`"
+     "where": "`Цены/Нормо-час, сборы и классы автомобилей.md`"
     }
    ],
    "pages": [
-    "prices/labour-rates-and-fees.md"
+    "Цены/Нормо-час, сборы и классы автомобилей.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12289,7 +12289,7 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md"
        ]
       }
      ]
@@ -12299,11 +12299,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/company-account-terms.md`"
+     "where": "`Корпоративные клиенты/Корпоративные клиенты.md`"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12352,7 +12352,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/service-standards.md"
+        "Правила/Стандарты обслуживания.md"
        ]
       }
      ]
@@ -12362,11 +12362,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/service-standards.md`"
+     "where": "`Правила/Стандарты обслуживания.md`"
     }
    ],
    "pages": [
-    "policies/service-standards.md"
+    "Правила/Стандарты обслуживания.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12415,7 +12415,7 @@
       {
        "source": "page",
        "pages": [
-        "prices/labour-rates-and-fees.md"
+        "Цены/Нормо-час, сборы и классы автомобилей.md"
        ]
       }
      ]
@@ -12425,11 +12425,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/labour-rates-and-fees.md`"
+     "where": "`Цены/Нормо-час, сборы и классы автомобилей.md`"
     }
    ],
    "pages": [
-    "prices/labour-rates-and-fees.md"
+    "Цены/Нормо-час, сборы и классы автомобилей.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12478,7 +12478,7 @@
       {
        "source": "page",
        "pages": [
-        "management/comeback-review.md"
+        "Руководству/Разбор возвратов.md"
        ]
       }
      ]
@@ -12488,11 +12488,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/comeback-review.md`"
+     "where": "`Руководству/Разбор возвратов.md`"
     }
    ],
    "pages": [
-    "management/comeback-review.md"
+    "Руководству/Разбор возвратов.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12541,7 +12541,7 @@
       {
        "source": "page",
        "pages": [
-        "prices/counter-price-sheet.pdf"
+        "Цены/Прайс для стойки.pdf"
        ]
       }
      ]
@@ -12551,11 +12551,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/counter-price-sheet.pdf`, страница 2"
+     "where": "`Цены/Прайс для стойки.pdf`, страница 2"
     }
    ],
    "pages": [
-    "prices/counter-price-sheet.pdf"
+    "Цены/Прайс для стойки.pdf"
    ],
    "seed_files": [],
    "sources": [
@@ -12604,8 +12604,8 @@
       {
        "source": "page",
        "pages": [
-        "team/staff-handbook.docx",
-        "shop-floor/README.md"
+        "Команда/Правила внутреннего трудового распорядка.docx",
+        "Цех/Обзор.md"
        ]
       }
      ]
@@ -12615,12 +12615,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`team/staff-handbook.docx`, раздел 4; `shop-floor/README.md`"
+     "where": "`Команда/Правила внутреннего трудового распорядка.docx`, раздел 4; `Цех/Обзор.md`"
     }
    ],
    "pages": [
-    "team/staff-handbook.docx",
-    "shop-floor/README.md"
+    "Команда/Правила внутреннего трудового распорядка.docx",
+    "Цех/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12674,12 +12674,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`team/staff-handbook.docx`, раздел 4; `shop-floor/README.md`"
+     "where": "`Команда/Правила внутреннего трудового распорядка.docx`, раздел 4; `Цех/Обзор.md`"
     }
    ],
    "pages": [
-    "team/staff-handbook.docx",
-    "shop-floor/README.md"
+    "Команда/Правила внутреннего трудового распорядка.docx",
+    "Цех/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -12737,11 +12737,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`team/the-call-in-eight-moves.pptx`, слайд 9"
+     "where": "`Команда/Звонок в восемь шагов.pptx`, слайд 9"
     }
    ],
    "pages": [
-    "team/the-call-in-eight-moves.pptx"
+    "Команда/Звонок в восемь шагов.pptx"
    ],
    "seed_files": [],
    "sources": [
@@ -12790,7 +12790,7 @@
       {
        "source": "page",
        "pages": [
-        "parts/fleet-fluid-sheet.pdf"
+        "Запчасти/Заправочные объёмы (распечатка).pdf"
        ]
       }
      ]
@@ -12800,11 +12800,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`parts/fleet-fluid-sheet.pdf`, страница 1"
+     "where": "`Запчасти/Заправочные объёмы (распечатка).pdf`, страница 1"
     }
    ],
    "pages": [
-    "parts/fleet-fluid-sheet.pdf"
+    "Запчасти/Заправочные объёмы (распечатка).pdf"
    ],
    "seed_files": [],
    "sources": [
@@ -12864,8 +12864,8 @@
     }
    ],
    "pages": [
-    "parts/fleet-fluid-sheet.pdf",
-    "parts/fleet-fluid-sheet.xlsx"
+    "Запчасти/Заправочные объёмы (распечатка).pdf",
+    "Запчасти/Заправочные объёмы (таблица).xlsx"
    ],
    "seed_files": [],
    "sources": [
@@ -12914,7 +12914,7 @@
       {
        "source": "page",
        "pages": [
-        "team/staff-handbook.docx"
+        "Команда/Правила внутреннего трудового распорядка.docx"
        ]
       }
      ]
@@ -12924,11 +12924,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`team/staff-handbook.docx`, раздел 2"
+     "where": "`Команда/Правила внутреннего трудового распорядка.docx`, раздел 2"
     }
    ],
    "pages": [
-    "team/staff-handbook.docx"
+    "Команда/Правила внутреннего трудового распорядка.docx"
    ],
    "seed_files": [],
    "sources": [
@@ -13003,9 +13003,9 @@
     }
    ],
    "pages": [
-    "shop-floor/courtesy-inspection.md",
-    "how-to/writing-an-estimate.md",
-    "how-to/getting-approval.md"
+    "Цех/Осмотр по чек-листу.md",
+    "Как мы работаем/Как составить смету.md",
+    "Как мы работаем/Как согласовать работы.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13054,7 +13054,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/getting-approval.md"
+        "Как мы работаем/Как согласовать работы.md"
        ]
       }
      ]
@@ -13064,11 +13064,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`how-to/getting-approval.md`"
+     "where": "`Как мы работаем/Как согласовать работы.md`"
     }
    ],
    "pages": [
-    "how-to/getting-approval.md"
+    "Как мы работаем/Как согласовать работы.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13117,7 +13117,7 @@
       {
        "source": "page",
        "pages": [
-        "how-to/writing-an-estimate.md"
+        "Как мы работаем/Как составить смету.md"
        ]
       }
      ]
@@ -13127,11 +13127,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`how-to/writing-an-estimate.md`"
+     "where": "`Как мы работаем/Как составить смету.md`"
     }
    ],
    "pages": [
-    "how-to/writing-an-estimate.md"
+    "Как мы работаем/Как составить смету.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13180,7 +13180,7 @@
       {
        "source": "page",
        "pages": [
-        "shop-floor/courtesy-inspection.md"
+        "Цех/Осмотр по чек-листу.md"
        ]
       }
      ]
@@ -13190,11 +13190,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shop-floor/courtesy-inspection.md`"
+     "where": "`Цех/Осмотр по чек-листу.md`"
     }
    ],
    "pages": [
-    "shop-floor/courtesy-inspection.md"
+    "Цех/Осмотр по чек-листу.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13243,7 +13243,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/storage-of-uncollected-cars.md"
+        "Правила/Невостребованные автомобили.md"
        ]
       }
      ]
@@ -13257,7 +13257,7 @@
     }
    ],
    "pages": [
-    "policies/storage-of-uncollected-cars.md"
+    "Правила/Невостребованные автомобили.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13323,7 +13323,7 @@
       "how": "T moved by calendar months or years (kb/OUTLINE.md section 1); filled as in the page text",
       "store": "knowledge_base",
       "tables": [
-       "policies/storage-of-uncollected-cars.md"
+       "Правила/Невостребованные автомобили.md"
       ],
       "nominal": null,
       "design": null
@@ -13338,7 +13338,7 @@
     }
    ],
    "pages": [
-    "policies/storage-of-uncollected-cars.md"
+    "Правила/Невостребованные автомобили.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13388,7 +13388,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/discounts.md"
+        "Правила/Скидки.md"
        ]
       }
      ]
@@ -13398,11 +13398,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/discounts.md`"
+     "where": "`Правила/Скидки.md`"
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13452,9 +13452,9 @@
       {
        "source": "page",
        "pages": [
-        "services/maintenance/spark-plugs.md",
-        "services/maintenance/scheduled-maintenance.md",
-        "prices/price-list.md"
+        "Услуги/ТО/Свечи зажигания.md",
+        "Услуги/ТО/ТО по регламенту.md",
+        "Цены/Прайс-лист.md"
        ]
       }
      ]
@@ -13464,13 +13464,13 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/maintenance/scheduled-maintenance.md`"
+     "where": "`Услуги/ТО/ТО по регламенту.md`"
     }
    ],
    "pages": [
-    "services/maintenance/spark-plugs.md",
-    "services/maintenance/scheduled-maintenance.md",
-    "prices/price-list.md"
+    "Услуги/ТО/Свечи зажигания.md",
+    "Услуги/ТО/ТО по регламенту.md",
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13519,8 +13519,8 @@
       {
        "source": "page",
        "pages": [
-        "services/ac/ac-check-and-recharge.md",
-        "parts/stock-we-keep.md"
+        "Услуги/Кондиционер/Диагностика и заправка кондиционера.md",
+        "Запчасти/Что держим на складе.md"
        ]
       }
      ]
@@ -13530,12 +13530,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/ac/ac-check-and-recharge.md`, `parts/stock-we-keep.md`"
+     "where": "`Услуги/Кондиционер/Диагностика и заправка кондиционера.md`, `Запчасти/Что держим на складе.md`"
     }
    ],
    "pages": [
-    "services/ac/ac-check-and-recharge.md",
-    "parts/stock-we-keep.md"
+    "Услуги/Кондиционер/Диагностика и заправка кондиционера.md",
+    "Запчасти/Что держим на складе.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13584,7 +13584,7 @@
       {
        "source": "page",
        "pages": [
-        "services/tires/alignment.md"
+        "Услуги/Шины/Сход-развал.md"
        ]
       }
      ]
@@ -13594,11 +13594,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/tires/alignment.md`"
+     "where": "`Услуги/Шины/Сход-развал.md`"
     }
    ],
    "pages": [
-    "services/tires/alignment.md"
+    "Услуги/Шины/Сход-развал.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13647,7 +13647,7 @@
       {
        "source": "page",
        "pages": [
-        "services/engine/drive-belt.md"
+        "Услуги/Двигатель/Ремень навесных агрегатов.md"
        ]
       }
      ]
@@ -13657,11 +13657,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/engine/drive-belt.md`"
+     "where": "`Услуги/Двигатель/Ремень навесных агрегатов.md`"
     }
    ],
    "pages": [
-    "services/engine/drive-belt.md"
+    "Услуги/Двигатель/Ремень навесных агрегатов.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13710,8 +13710,8 @@
       {
        "source": "page",
        "pages": [
-        "customers/brake-noise.md",
-        "services/tires/rotation-balance-and-flat-repair.md"
+        "Клиентам/Скрип и скрежет при торможении.md",
+        "Услуги/Шины/Балансировка, перестановка и ремонт прокола.md"
        ]
       }
      ]
@@ -13721,12 +13721,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/brake-noise.md`, `services/tires/rotation-balance-and-flat-repair.md`"
+     "where": "`Клиентам/Скрип и скрежет при торможении.md`, `Услуги/Шины/Балансировка, перестановка и ремонт прокола.md`"
     }
    ],
    "pages": [
-    "customers/brake-noise.md",
-    "services/tires/rotation-balance-and-flat-repair.md"
+    "Клиентам/Скрип и скрежет при торможении.md",
+    "Услуги/Шины/Балансировка, перестановка и ремонт прокола.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13775,7 +13775,7 @@
       {
        "source": "page",
        "pages": [
-        "services/tires/seasonal-changeover-and-storage.md"
+        "Услуги/Шины/Сезонный шиномонтаж и хранение шин.md"
        ]
       }
      ]
@@ -13785,11 +13785,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/tires/seasonal-changeover-and-storage.md`"
+     "where": "`Услуги/Шины/Сезонный шиномонтаж и хранение шин.md`"
     }
    ],
    "pages": [
-    "services/tires/seasonal-changeover-and-storage.md"
+    "Услуги/Шины/Сезонный шиномонтаж и хранение шин.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13838,7 +13838,7 @@
       {
        "source": "page",
        "pages": [
-        "services/tires/seasonal-changeover-and-storage.md"
+        "Услуги/Шины/Сезонный шиномонтаж и хранение шин.md"
        ]
       }
      ]
@@ -13852,7 +13852,7 @@
     }
    ],
    "pages": [
-    "services/tires/seasonal-changeover-and-storage.md"
+    "Услуги/Шины/Сезонный шиномонтаж и хранение шин.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13901,8 +13901,8 @@
       {
        "source": "page",
        "pages": [
-        "policies/customer-supplied-parts.md",
-        "prices/price-list.md"
+        "Правила/Запчасти клиента.md",
+        "Цены/Прайс-лист.md"
        ]
       }
      ]
@@ -13919,12 +13919,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/customer-supplied-parts.md`, `prices/price-list.md`"
+     "where": "`Правила/Запчасти клиента.md`, `Цены/Прайс-лист.md`"
     }
    ],
    "pages": [
-    "policies/customer-supplied-parts.md",
-    "prices/price-list.md"
+    "Правила/Запчасти клиента.md",
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -13976,8 +13976,8 @@
       {
        "source": "page",
        "pages": [
-        "policies/deposits.md",
-        "services/transmission/transmission-rebuild.md"
+        "Правила/Предоплата.md",
+        "Услуги/Трансмиссия/Капитальный ремонт АКПП.md"
        ]
       }
      ]
@@ -13987,12 +13987,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/deposits.md`, `services/transmission/transmission-rebuild.md`"
+     "where": "`Правила/Предоплата.md`, `Услуги/Трансмиссия/Капитальный ремонт АКПП.md`"
     }
    ],
    "pages": [
-    "policies/deposits.md",
-    "services/transmission/transmission-rebuild.md"
+    "Правила/Предоплата.md",
+    "Услуги/Трансмиссия/Капитальный ремонт АКПП.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14041,7 +14041,7 @@
       {
        "source": "page",
        "pages": [
-        "services/suspension/front-end-parts.md"
+        "Услуги/Ходовая/Детали передней подвески.md"
        ]
       }
      ]
@@ -14051,11 +14051,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/suspension/front-end-parts.md`"
+     "where": "`Услуги/Ходовая/Детали передней подвески.md`"
     }
    ],
    "pages": [
-    "services/suspension/front-end-parts.md"
+    "Услуги/Ходовая/Детали передней подвески.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14133,13 +14133,13 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/towing.md`, `prices/price-list.md`, `prices/labour-rates-and-fees.md`"
+     "where": "`Клиентам/Эвакуатор.md`, `Цены/Прайс-лист.md`, `Цены/Нормо-час, сборы и классы автомобилей.md`"
     }
    ],
    "pages": [
-    "customers/towing.md",
-    "prices/price-list.md",
-    "prices/labour-rates-and-fees.md"
+    "Клиентам/Эвакуатор.md",
+    "Цены/Прайс-лист.md",
+    "Цены/Нормо-час, сборы и классы автомобилей.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14191,8 +14191,8 @@
       {
        "source": "page",
        "pages": [
-        "services/maintenance/scheduled-maintenance.md",
-        "prices/price-list.md"
+        "Услуги/ТО/ТО по регламенту.md",
+        "Цены/Прайс-лист.md"
        ]
       }
      ]
@@ -14202,12 +14202,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/maintenance/scheduled-maintenance.md`, `prices/price-list.md`"
+     "where": "`Услуги/ТО/ТО по регламенту.md`, `Цены/Прайс-лист.md`"
     }
    ],
    "pages": [
-    "services/maintenance/scheduled-maintenance.md",
-    "prices/price-list.md"
+    "Услуги/ТО/ТО по регламенту.md",
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14256,8 +14256,8 @@
       {
        "source": "page",
        "pages": [
-        "accounts/company-account-terms.md",
-        "policies/warranty.md"
+        "Корпоративные клиенты/Корпоративные клиенты.md",
+        "Правила/Гарантия.md"
        ]
       }
      ]
@@ -14267,12 +14267,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/warranty.md`, таблица условий"
+     "where": "`Правила/Гарантия.md`, таблица условий"
     }
    ],
    "pages": [
-    "accounts/company-account-terms.md",
-    "policies/warranty.md"
+    "Корпоративные клиенты/Корпоративные клиенты.md",
+    "Правила/Гарантия.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14321,7 +14321,7 @@
       {
        "source": "page",
        "pages": [
-        "services/ac/ac-compressor-and-condenser.md"
+        "Услуги/Кондиционер/Компрессор и радиатор кондиционера.md"
        ]
       }
      ]
@@ -14331,11 +14331,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/ac/ac-compressor-and-condenser.md`"
+     "where": "`Услуги/Кондиционер/Компрессор и радиатор кондиционера.md`"
     }
    ],
    "pages": [
-    "services/ac/ac-compressor-and-condenser.md"
+    "Услуги/Кондиционер/Компрессор и радиатор кондиционера.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14400,12 +14400,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/documents-and-vat.md`, `prices/price-list.md`"
+     "where": "`Правила/Документы клиенту и НДС.md`, `Цены/Прайс-лист.md`"
     }
    ],
    "pages": [
-    "policies/documents-and-vat.md",
-    "prices/price-list.md"
+    "Правила/Документы клиенту и НДС.md",
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14465,12 +14465,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/transmission/transmission-rebuild.md`, `policies/warranty.md`"
+     "where": "`Услуги/Трансмиссия/Капитальный ремонт АКПП.md`, `Правила/Гарантия.md`"
     }
    ],
    "pages": [
-    "services/transmission/transmission-rebuild.md",
-    "policies/warranty.md"
+    "Услуги/Трансмиссия/Капитальный ремонт АКПП.md",
+    "Правила/Гарантия.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14524,12 +14524,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/towing.md`, `shops/west/README.md`"
+     "where": "`Клиентам/Эвакуатор.md`, `Площадки/Техническая/Обзор.md`"
     }
    ],
    "pages": [
-    "customers/towing.md",
-    "shops/west/README.md"
+    "Клиентам/Эвакуатор.md",
+    "Площадки/Техническая/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14583,11 +14583,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`prices/price-list.md`"
+     "where": "`Цены/Прайс-лист.md`"
     }
    ],
    "pages": [
-    "prices/price-list.md"
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14641,11 +14641,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/what-we-do.md`"
+     "where": "`Клиентам/Что мы делаем и чего не делаем.md`"
     }
    ],
    "pages": [
-    "customers/what-we-do.md"
+    "Клиентам/Что мы делаем и чего не делаем.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14699,11 +14699,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/pay-and-till.md`"
+     "where": "`Руководству/Оплата труда и касса.md`"
     }
    ],
    "pages": [
-    "management/pay-and-till.md"
+    "Руководству/Оплата труда и касса.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14757,11 +14757,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shop-floor/safety.md`"
+     "where": "`Цех/Техника безопасности.md`"
     }
    ],
    "pages": [
-    "shop-floor/safety.md"
+    "Цех/Техника безопасности.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14815,11 +14815,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/engine/mounts-and-exhaust.md`"
+     "where": "`Услуги/Двигатель/Опоры двигателя и глушитель.md`"
     }
    ],
    "pages": [
-    "services/engine/mounts-and-exhaust.md"
+    "Услуги/Двигатель/Опоры двигателя и глушитель.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14873,11 +14873,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`services/tires/seasonal-changeover-and-storage.md`"
+     "where": "`Услуги/Шины/Сезонный шиномонтаж и хранение шин.md`"
     }
    ],
    "pages": [
-    "services/tires/seasonal-changeover-and-storage.md"
+    "Услуги/Шины/Сезонный шиномонтаж и хранение шин.md"
    ],
    "seed_files": [],
    "sources": [
@@ -14926,7 +14926,7 @@
       {
        "source": "page",
        "pages": [
-        "prices/price-list.md"
+        "Цены/Прайс-лист.md"
        ]
       }
      ]
@@ -14940,7 +14940,7 @@
     }
    ],
    "pages": [
-    "prices/price-list.md"
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15005,7 +15005,7 @@
     }
    ],
    "pages": [
-    "prices/price-list.md"
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15054,7 +15054,7 @@
       {
        "source": "page",
        "pages": [
-        "shops/west/README.md"
+        "Площадки/Техническая/Обзор.md"
        ]
       }
      ]
@@ -15068,7 +15068,7 @@
     }
    ],
    "pages": [
-    "shops/west/README.md"
+    "Площадки/Техническая/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15127,11 +15127,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/a4.md`, ERP"
+     "where": "`Корпоративные клиенты/Автошкола «Первая передача».md`, ERP"
     }
    ],
    "pages": [
-    "accounts/a4.md"
+    "Корпоративные клиенты/Автошкола «Первая передача».md"
    ],
    "seed_files": [],
    "sources": [
@@ -15191,12 +15191,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`team/who-is-who.md`, `shops/west/README.md`"
+     "where": "`Команда/Кто есть кто.md`, `Площадки/Техническая/Обзор.md`"
     }
    ],
    "pages": [
-    "team/who-is-who.md",
-    "shops/west/README.md"
+    "Команда/Кто есть кто.md",
+    "Площадки/Техническая/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15280,11 +15280,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`policies/service-standards.md`, звонки"
+     "where": "`Правила/Стандарты обслуживания.md`, звонки"
     }
    ],
    "pages": [
-    "policies/service-standards.md"
+    "Правила/Стандарты обслуживания.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15339,7 +15339,7 @@
       {
        "source": "page",
        "pages": [
-        "accounts/a5.md"
+        "Корпоративные клиенты/Идель-Электромонтаж.md"
        ]
       }
      ]
@@ -15349,11 +15349,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/a5.md`, ERP"
+     "where": "`Корпоративные клиенты/Идель-Электромонтаж.md`, ERP"
     }
    ],
    "pages": [
-    "accounts/a5.md"
+    "Корпоративные клиенты/Идель-Электромонтаж.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15417,12 +15417,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/a6.md`, `policies/estimates-and-approvals.md`, ERP"
+     "where": "`Корпоративные клиенты/Вкусный выезд.md`, `Правила/Смета и согласование работ.md`, ERP"
     }
    ],
    "pages": [
-    "accounts/a6.md",
-    "policies/estimates-and-approvals.md"
+    "Корпоративные клиенты/Вкусный выезд.md",
+    "Правила/Смета и согласование работ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15477,11 +15477,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`shop-floor/README.md`"
+     "where": "`Цех/Обзор.md`"
     }
    ],
    "pages": [
-    "shop-floor/README.md"
+    "Цех/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15535,11 +15535,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/parts-pricing-matrix.md`"
+     "where": "`Руководству/Матрица наценок на запчасти.md`"
     }
    ],
    "pages": [
-    "management/parts-pricing-matrix.md"
+    "Руководству/Матрица наценок на запчасти.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15593,11 +15593,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/owners/west-plan.md`"
+     "where": "`Руководству/Владельцам/Казань: план.md`"
     }
    ],
    "pages": [
-    "management/owners/west-plan.md"
+    "Руководству/Владельцам/Казань: план.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15646,7 +15646,7 @@
       {
        "source": "page",
        "pages": [
-        "accounts/credit/credit-limits-and-collections.md"
+        "Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md"
        ]
       }
      ]
@@ -15656,11 +15656,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`accounts/credit/credit-limits-and-collections.md`"
+     "where": "`Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md`"
     }
    ],
    "pages": [
-    "accounts/credit/credit-limits-and-collections.md"
+    "Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15714,12 +15714,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`playbooks/advisor.md`, `how-to/README.md`"
+     "where": "`playbooks/Памятка: мастера-приёмщики.md`, `Как мы работаем/Обзор.md`"
     }
    ],
    "pages": [
-    "playbooks/advisor.md",
-    "how-to/README.md"
+    "playbooks/Памятка: мастера-приёмщики.md",
+    "Как мы работаем/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15771,7 +15771,7 @@
       {
        "source": "page",
        "pages": [
-        "customers/payment.md"
+        "Клиентам/Оплата.md"
        ]
       }
      ]
@@ -15781,11 +15781,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`customers/payment.md`"
+     "where": "`Клиентам/Оплата.md`"
     }
    ],
    "pages": [
-    "customers/payment.md"
+    "Клиентам/Оплата.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15839,11 +15839,11 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`management/pay-and-till.md`"
+     "where": "`Руководству/Оплата труда и касса.md`"
     }
    ],
    "pages": [
-    "management/pay-and-till.md"
+    "Руководству/Оплата труда и касса.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15901,9 +15901,9 @@
     }
    ],
    "pages": [
-    "services/brakes/brake-questions.md",
-    "prices/price-list.md",
-    "services/brakes/pads-and-rotors.md"
+    "Услуги/Тормоза/Вопросы по тормозам.md",
+    "Цены/Прайс-лист.md",
+    "Услуги/Тормоза/Колодки и диски.md"
    ],
    "seed_files": [],
    "sources": [
@@ -15963,7 +15963,7 @@
     }
    ],
    "pages": [
-    "services/brakes/brake-questions.md"
+    "Услуги/Тормоза/Вопросы по тормозам.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16024,7 +16024,7 @@
     }
    ],
    "pages": [
-    "accounts/a6.md"
+    "Корпоративные клиенты/Вкусный выезд.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16082,7 +16082,7 @@
     }
    ],
    "pages": [
-    "customers/hours-and-locations.md"
+    "Клиентам/Адреса и часы работы.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16140,7 +16140,7 @@
     }
    ],
    "pages": [
-    "customers/warranty-policy.md"
+    "Клиентам/Гарантийные обязательства.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16189,7 +16189,7 @@
       {
        "source": "page",
        "pages": [
-        "policies/discounts.md"
+        "Правила/Скидки.md"
        ]
       }
      ]
@@ -16203,7 +16203,7 @@
     }
    ],
    "pages": [
-    "policies/discounts.md"
+    "Правила/Скидки.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16266,7 +16266,7 @@
     }
    ],
    "pages": [
-    "shops/west/opening-and-closing.md"
+    "Площадки/Техническая/Техническая: открытие и закрытие.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16318,7 +16318,7 @@
       {
        "source": "page",
        "pages": [
-        "services/brakes/pads-and-rotors.md"
+        "Услуги/Тормоза/Колодки и диски.md"
        ]
       }
      ]
@@ -16332,7 +16332,7 @@
     }
    ],
    "pages": [
-    "services/brakes/pads-and-rotors.md"
+    "Услуги/Тормоза/Колодки и диски.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16395,7 +16395,7 @@
     }
    ],
    "pages": [
-    "team/who-is-who.md"
+    "Команда/Кто есть кто.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16522,7 +16522,7 @@
     }
    ],
    "pages": [
-    "services/engine/timing-belt.md"
+    "Услуги/Двигатель/Ремень ГРМ.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16589,8 +16589,8 @@
     }
    ],
    "pages": [
-    "customers/hours-and-locations.md",
-    "shops/west/README.md"
+    "Клиентам/Адреса и часы работы.md",
+    "Площадки/Техническая/Обзор.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16639,8 +16639,8 @@
       {
        "source": "page",
        "pages": [
-        "services/brakes/brake-questions.md",
-        "team/who-is-who.md"
+        "Услуги/Тормоза/Вопросы по тормозам.md",
+        "Команда/Кто есть кто.md"
        ]
       }
      ]
@@ -16650,12 +16650,12 @@
    "proof": [
     {
      "store": "knowledge_base",
-     "where": "`kb_links`, `team/who-is-who.md`"
+     "where": "`kb_links`, `Команда/Кто есть кто.md`"
     }
    ],
    "pages": [
-    "services/brakes/brake-questions.md",
-    "team/who-is-who.md"
+    "Услуги/Тормоза/Вопросы по тормозам.md",
+    "Команда/Кто есть кто.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16713,7 +16713,7 @@
     }
    ],
    "pages": [
-    "prices/price-list.md"
+    "Цены/Прайс-лист.md"
    ],
    "seed_files": [],
    "sources": [
@@ -16756,9 +16756,9 @@
     "definition": "The page or pages named as proof."
    },
    "expected": {
-    "answer": "Предложение к `customers/tires.md`: добавить, что в Казань шины приезжают по вторникам и пятницам",
+    "answer": "Предложение к странице «Шины, проколы и сход-развал»: добавить, что в Казань шины приезжают по вторникам и пятницам",
     "action": {
-     "proposes": "Предложение к `customers/tires.md`: добавить, что в Казань шины приезжают по вторникам и пятницам",
+     "proposes": "Предложение к странице «Шины, проколы и сход-развал»: добавить, что в Казань шины приезжают по вторникам и пятницам",
      "passes_if": "Пока она не подтвердила карточку, ничего не записывается; после подтверждения это предложение.",
      "writes_nothing_unconfirmed": true
     }
@@ -16771,7 +16771,7 @@
     }
    ],
    "pages": [
-    "customers/tires.md"
+    "Клиентам/Шины, проколы и сход-развал.md"
    ],
    "seed_files": [],
    "sources": [

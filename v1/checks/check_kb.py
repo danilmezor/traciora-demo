@@ -10,10 +10,13 @@
 # Not product code.
 import glob, hashlib, json, os, posixpath, re, subprocess, sys
 from decimal import Decimal, ROUND_HALF_UP
+from urllib.parse import unquote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SEED = os.path.normpath(os.path.join(HERE, ".."))
 KB = os.path.join(SEED, "kb")
+sys.path.insert(0, KB)
+from kb_paths import russian_links, russian_paths, russian_ranks
 OLD_NAME = "Jersey" + " " + "Pike"  # written in two parts: no seed file may hold the name, this one included
 CLASSES = ("car", "suv", "truck", "van")
 TIERS = ("economy", "standard", "premium")
@@ -210,6 +213,28 @@ def run(say, ok):
         raw = sorted({(p, m) for p, t in pages.items() for m in re.findall(r"\]\(([^)#\s]+)", t) if "://" not in m and not m.startswith("mailto:")
                       and posixpath.normpath(posixpath.join(posixpath.dirname(p), m)) not in reg})
         ok("kb", f"({cfg}) the links in the page text itself resolve the same way", raw == [(planted["page"], posixpath.basename(planted["target"]))] or [posixpath.normpath(posixpath.join(posixpath.dirname(a), b)) for a, b in raw] == [planted["target"]], str(raw[:5]))
+
+        if cfg == "ru":
+            installed = russian_paths()
+            installed_ranks = {"playbooks": "administrator", **russian_ranks()}
+            link_diff = []
+            rank_diff = []
+            for src, text in pages.items():
+                path = installed[src]
+                rewritten = russian_links(src, text)
+                linked = {posixpath.normpath(posixpath.join(posixpath.dirname(path), unquote(m)))
+                          for m in re.findall(r"\]\(([^)#\s]+)", rewritten)
+                          if "://" not in m and not m.startswith("mailto:")}
+                expected = {installed[l] for l in reg[src]["links_to"]}
+                if linked != expected:
+                    link_diff.append((path, sorted(linked ^ expected)))
+                parent = path
+                while parent and parent not in installed_ranks:
+                    parent = posixpath.dirname(parent)
+                if installed_ranks.get(parent, "worker") != seen[src]:
+                    rank_diff.append(path)
+            ok("kb", "the installed Russian links name the same pages and keep the planted missing page", not link_diff, str(link_diff[:5]))
+            ok("kb", "the installed Russian pages keep the source ranks, including inherited folder ranks", not rank_diff, str(rank_diff[:5]))
 
         # ---- money, hours, clock times
         cat_money, cat_hours = catalogue_money(CAT, cfg)

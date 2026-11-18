@@ -8,10 +8,14 @@
 import json
 import os
 import re
+import sys
 
 import yaml
 
 V1 = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(V1, "kb"))
+from kb_paths import russian_sources
+
 OUT = os.path.join(V1, "goldens")
 KINDS = ("value", "list")
 MONTHS = ("January|February|March|April|May|June|July|August|September|October|November|December|"
@@ -31,6 +35,10 @@ def spaces(text):
 
 def page_text(lang, path):
     """A page as printed: its Markdown, or a binary document's draft section in _binaries.md; placeholders dropped."""
+    if lang == "ru":
+        path = russian_sources().get(path)
+        if path is None:
+            return None
     file = os.path.join(V1, "kb", lang, path)
     if os.path.isfile(file):
         text = open(file, encoding="utf-8").read()

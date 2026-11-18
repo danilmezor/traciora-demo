@@ -5,7 +5,8 @@ Checks: validate.py passes against the installed product; the tenant folder is p
 shop database's, else the one its marker states) and holds every page of kb/<cfg>/ as the step renders it for that T,
 no placeholder left anywhere in it, and the ladder documents; settings.json holds every value of settings.<cfg>.json but the feature
 switches the administrator chose at setup.
-With a built shop database also: the sources erp, core and conversations hold the grants of sources.<cfg>.json and no
+With a built shop database also: the board states, task templates and call verdicts use the install's policy documents.
+The sources erp, core and conversations hold the grants of sources.<cfg>.json and no
 earlier demo source is declared; `python -m traciora.cli.sources check --name erp` passes; the source's login reads
 every table of erp/schema.sql, nothing of schema seed, read-only; the context holds every one of those tables and every
 note as the step writes it. One line out: TENANT <cfg> PASS ... or FAIL with the reasons; exit 0 or 1."""
@@ -67,6 +68,7 @@ def main():
         said["source"] = "absent"
     else:
         failed += source(cfg, client_id, target, said)
+        failed += workspace_policy(cfg, client_id)
     return report(cfg, said, failed)
 
 
@@ -74,6 +76,48 @@ def report(cfg, said, failed):
     line = " ".join(f"{k}={v}" for k, v in said.items())
     print(f"TENANT {cfg} PASS {line}" if not failed else f"TENANT {cfg} FAIL {line}\n" + "\n".join(f"  FAIL {x}" for x in failed))
     return 1 if failed else 0
+
+
+def workspace_policy(cfg, client_id):
+    """Read the policy used by the demo's work items and calls from the core database."""
+    from seeder.core.calls import PROVIDER
+    from traciora.core.common import settings
+    from traciora.core.core_db.bootstrap import seed_rows
+    from traciora.core.core_db.engine import connect, tenant_dsn
+    from traciora.core.phonecalls import scorecard
+
+    policy = seed_rows(client_id)
+    rubric = scorecard.parse(settings.document("PHONECALLS_SCORECARD", client_id=client_id))
+    wanted_states = sorted((row["state_group"], row["name"], row["sequence"], row["colour"], row["is_default"])
+                           for row in policy.work_states)
+    text_fields = ("title_template", "description_template", "reason_template")
+    wanted_templates = sorted((row["pack"], row["name"], *(row[field] for field in text_fields), row["default_priority"])
+                              for row in policy.work_item_templates)
+    with connect(tenant_dsn(client_id)) as conn:
+        held_states = sorted(conn.execute(
+            "select state_group, name, sequence, colour, is_default from work.work_state where active").fetchall())
+        held_templates = sorted(conn.execute(
+            "select pack, name, title_template, description_template, reason_template, default_priority"
+            " from work.work_item_template where active").fetchall())
+        held_rubrics = conn.execute(
+            "select distinct a.result_public->>'scorecard', a.result_public->>'weights'"
+            " from interactions.interaction_analysis a where a.kind = 'scorecard' and a.is_current"
+            " and exists (select 1 from interactions.call_leg l where l.interaction_id = a.interaction_id and l.provider = %s)",
+            (PROVIDER,)).fetchall()
+    failed = []
+    if held_states != wanted_states:
+        failed.append(f"board states do not match the install's document: {held_states}")
+    if held_templates != wanted_templates:
+        failed.append("task templates do not match the install's document")
+    if held_rubrics and held_rubrics != [(rubric.version, rubric.weights_version)]:
+        failed.append(f"call verdicts do not use the install's scorecard: {held_rubrics}")
+    if cfg == "ru":
+        visible = [row["name"] for row in policy.work_states]
+        visible += [row[field] for row in policy.work_item_templates for field in text_fields if row[field]]
+        visible += [row.name for row in (*rubric.checks, *rubric.auto_fails)]
+        if not all(re.search(r"[А-Яа-я]", text) for text in visible):
+            failed.append("the board, task templates or call scorecard have an untranslated label")
+    return failed
 
 
 def source(cfg, client_id, target, said):

@@ -7,7 +7,7 @@
 | Field | Holds |
 |---|---|
 | `format` | `seed-eval-questions/1` |
-| `eval_set` | the version of the question set, `v1.0` |
+| `eval_set` | the version of the question set, `v1.0.1` |
 | `runs_on_seed` | the seed version the set asks its questions of, `v1` |
 | `configuration` | `en` or `ru` |
 | `ledger_sha256` | the hash of `ledger.json` the numbers were filled from |
@@ -32,7 +32,7 @@
 | `expected` | the answer, below |
 | `numbers` | where each filled number came from: `shown` (as written), and `key` with `path` into a ledger row, or `formula` over ledger rows |
 | `proof` | where the answer can be read: `store` and `where` (table, screen or page) |
-| `pages` | knowledge pages the answer rests on, as paths under `kb/en` or `kb/ru` |
+| `pages` | knowledge pages the answer rests on, as installed paths. Russian paths resolve to their source keys with `kb/kb_paths.py` |
 | `seed_files` | seed files, other than the ledger, that hold a designed instance the answer names |
 | `sources` | the stores an agent needs: `erp` (the shop system), `core` (the core database: calls, roster, board, calendar, Inbox), `conversations` (Chatwoot), `knowledge_base`, `memory` (notes and proposals), `account_store` (scheduled tasks, runs, briefs, Ask threads) |
 | `ledger_keys` | every ledger row the answer rests on |

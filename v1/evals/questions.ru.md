@@ -1,6 +1,6 @@
 # Eval questions, Russian configuration
 
-Generated from `questions.ru.json` by `_build/render.py`; do not edit. Eval set v1.0, runs on seed v1. The record format is in `SCHEMA.md`. `{name}` is a value the seeder computes for its T; where `stories/TIMELINE.md` gives it for T = Fri 2026-11-13 10:30 it is shown after `=`. `pending` records are listed in `README.md` with their reasons.
+Generated from `questions.ru.json` by `_build/render.py`; do not edit. Eval set v1.0.1, runs on seed v1. The record format is in `SCHEMA.md`. `{name}` is a value the seeder computes for its T; where `stories/TIMELINE.md` gives it for T = Fri 2026-11-13 10:30 it is shown after `=`. `pending` records are listed in `README.md` with their reasons.
 
 | Area | Questions | value | list | explanation | action | nothing | cannot tell | refusal | smoke | stale | pending |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -228,7 +228,7 @@ Generated from `questions.ru.json` by `_build/render.py`; do not edit. Eval set 
 | KB.O12 | Екатерина Николаевна Ермолаева (2, admin) | Найди страницы, которые противоречат друг другу | list | Как минимум: «Наша гарантия» и «Гарантийные обязательства», обе открытые; прайс-лист и две устаревшие страницы; таблица условий и страница «Вкусного выезда»; «Кто есть кто» и страница часов против страницы Технической (приёмка; 19:00 против 20:00); страница для клиентов про шины («на следующий день») и страница поставщиков (в Казань — вторник и пятница); строка «в тот же день» на странице про ремень ГРМ и страница про заказ запчастей; страница о заправке кондиционера («на заправку без ремонта гарантии нет») и страница гарантии, где такого исключения нет | ready |
 | KB.O13 | Сергей Анатольевич Мельников (4, senior, main) | У какой страницы нет хозяина? | value | «Вопросы по тормозам»: подписана «В. С.», мастером-приёмщиком, который ушёл; ни один указатель на неё не ссылается | ready |
 | KB.O14 | Дмитрий Олегович Григорьев (5, middle, main) | Какие страницы ссылаются на прайс-лист? | list | 11 страниц, больше, чем на любую другую: «База знаний «Ермак-Сервиса»», «Чаты и сообщения», «Как принять звонок», «Сезон шиномонтажа», «Как пользоваться базой знаний и исправлять её», «Как составить смету», «Ценовые категории и бренды запчастей», «Работы подрядчиков», «Как меняются цены», «Услуги», «Новый мастер-приёмщик: первые две недели» | ready |
-| KB.O15 | Светлана Юрьевна Демидова (16, middle, east) | Клиенту в Казани сказали, что шины привезут на следующий день. Предложи правку | action | Предложение к `customers/tires.md`: добавить, что в Казань шины приезжают по вторникам и пятницам | ready |
+| KB.O15 | Светлана Юрьевна Демидова (16, middle, east) | Клиенту в Казани сказали, что шины привезут на следующий день. Предложи правку | action | Предложение к странице «Шины, проколы и сход-развал»: добавить, что в Казань шины приезжают по вторникам и пятницам | ready |
 
 ## Calls
 

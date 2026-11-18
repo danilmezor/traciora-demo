@@ -11,8 +11,12 @@ import os
 import re
 import shlex
 import subprocess
+import sys
 
 import yaml
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "kb"))
+from kb_paths import russian_sources
 
 CONTAINER = "traciora-test-pg"
 LANGS = ("en", "ru")
@@ -25,6 +29,10 @@ def spaces(text):
 
 def page(root, lang, path):
     """The page's printed text: the file, or a binary document's draft in _binaries.md; placeholders dropped."""
+    if lang == "ru":
+        path = russian_sources().get(path)
+        if path is None:
+            return None
     file = os.path.join(root, "kb", lang, path)
     if os.path.isfile(file):
         text = open(file, encoding="utf-8").read()
@@ -64,6 +72,8 @@ def d3(root):
                 failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: no facts")
             if q.get("username") != usernames.get(q.get("asker")):
                 failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: username {q.get('username')!r} is not asker {q.get('asker')}'s")
+            if page(root, lang, q.get("rule") or "") is None:
+                failed.append(f"D3 kb.{lang}.yaml {q.get('id')}: no source for rule {q.get('rule')}")
             for fact in q.get("facts") or []:
                 text = page(root, lang, fact.get("page") or "")
                 if text is None or not on_page(fact.get("value", ""), text, lang):

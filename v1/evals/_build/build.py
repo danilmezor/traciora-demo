@@ -20,11 +20,15 @@ for name in ("stories_a", "stories_b", "stories_c", "stories_d", "kb", "workday"
     __import__(name)
 import kb  # noqa: E402
 
-EVAL_SET = "v1.0"
+sys.path.insert(0, os.path.join(common.ROOT, "kb"))
+from kb_paths import russian_paths  # noqa: E402
+
+EVAL_SET = "v1.0.1"
 SEED = "v1"
 AREA = {"S": "story", "KB": "knowledge_base", "WD": "working_day", "AS": "assistant"}
 SLOT = re.compile(r"\{([a-z0-9_]+)\}")
 KB_SLOT = re.compile(r"`(@[a-z_0-9]+|T[-+]\d+(?:mo|y|w|d))`")
+PAGE_REFERENCE = re.compile(r"`([^`]+)`")
 
 ledger = common.Ledger()
 cast = {p["slot"]: p for p in common.load("cast.json")["people"]}
@@ -52,6 +56,14 @@ def build(rec, cfg):
     q = pick(rec["q"], cfg)
     if q is None or rec.get("only") not in (None, cfg):
         return None
+    installed = russian_paths() if cfg == "ru" else {}
+    pages = [installed.get(page, page) for page in rec.get("pages") or []]
+
+    def references(value):
+        if value is None or cfg != "ru":
+            return value
+        return PAGE_REFERENCE.sub(lambda match: "`" + installed.get(match[1], match[1]) + "`", value)
+
     numbers = []
     keys = []
     for key in rec.get("keys") or []:   # a named row counts where it holds a value for the configuration
@@ -111,8 +123,10 @@ def build(rec, cfg):
         c = defined[name]
         nominal = (c.get("nominal") or {}).get(cfg)
         design = c.get("design")
-        computed.append({"slot": name, "what": c["what"], "how": c["how"], "store": c["store"],
-                         "tables": c["tables"],
+        tables = c["tables"]
+        if c["store"] == "knowledge_base":
+            tables = [installed.get(page, page) for page in tables]
+        computed.append({"slot": name, "what": c["what"], "how": c["how"], "store": c["store"], "tables": tables,
                          "nominal": {"t": dsl.NOMINAL_T, "value": nominal[0], "quote": nominal[1]} if nominal else None,
                          "design": {"file": design[0], "quote": design[1]} if design else None})
     if computed:
@@ -131,7 +145,7 @@ def build(rec, cfg):
         if not items and keys:
             items = [{"source": "ledger", "key": k, "path": "", "shown": None} for k in keys]
         if not items and rec.get("pages"):
-            items = [{"source": "page", "pages": rec["pages"]}]
+            items = [{"source": "page", "pages": pages}]
         if not items and rec.get("seed_files"):
             items = [{"source": "seed_file", "files": [f.replace("{cfg}", cfg) for f in rec["seed_files"]]}]
         exp["value"] = {"items": items}
@@ -156,7 +170,7 @@ def build(rec, cfg):
     source = {"file": pick(rec["file"], cfg), "ref": rec["ref"], "text": src_q}
     if rec.get("notes"):
         source["notes"] = rec["notes"]
-    proof = [{"store": s, "where": pick(w, cfg)} for s, w in rec["proof"]]
+    proof = [{"store": s, "where": references(pick(w, cfg)) if s == "knowledge_base" else pick(w, cfg)} for s, w in rec["proof"]]
     seed_files = [f.replace("{cfg}", cfg) for f in rec.get("seed_files") or []]
     out = {
         "id": rec["id"], "source": source, "area": area, "story": rec.get("story"), "configuration": cfg,
@@ -165,7 +179,7 @@ def build(rec, cfg):
                     "depends_on": rec.get("depends_on"), "context": rec.get("context")},
         "kind": kind,
         "scope": {k: pick(v, cfg) for k, v in rec["scope"].items()},
-        "expected": exp, "numbers": numbers, "proof": proof, "pages": list(rec.get("pages") or []),
+        "expected": exp, "numbers": numbers, "proof": proof, "pages": pages,
         "seed_files": seed_files, "sources": list(rec["sources"]), "ledger_keys": keys,
         "small_size": rec.get("small"), "depends_on_t": bool(computed),
         "status": "pending" if reasons else "ready", "pending": reasons,

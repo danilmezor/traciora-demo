@@ -6,8 +6,8 @@ questions:
   username: smelnikov
   facts:
   - value: 1 760 ₽
-    page: services/engine/timing-belt.md
-  rule: services/engine/timing-belt.md
+    page: Услуги/Двигатель/Ремень ГРМ.md
+  rule: Услуги/Двигатель/Ремень ГРМ.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -17,10 +17,10 @@ questions:
   username: anikolaev
   facts:
   - value: 12 520 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 12 268 ₽
-    page: services/brakes/brake-questions.md
-  rule: prices/price-list.md
+    page: Услуги/Тормоза/Вопросы по тормозам.md
+  rule: Цены/Прайс-лист.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -30,20 +30,20 @@ questions:
   username: akhasanova
   facts:
   - value: 1 760 ₽
-    page: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
   - value: 1 900 ₽
-    page: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
   - value: 1 580 ₽
-    page: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
   - value: 1 700 ₽
-    page: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
   - value: 7,95 %
-    page: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
   - value: 1 500 ₽
-    page: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
   - value: 1 620 ₽
-    page: prices/labour-rates-and-fees.md
-  rule: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
+  rule: Цены/Нормо-час, сборы и классы автомобилей.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -52,10 +52,10 @@ questions:
   asker: customer
   facts:
   - value: 16 000 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 15 552 ₽
-    page: services/engine/timing-belt.md
-  rule: prices/price-list.md
+    page: Услуги/Двигатель/Ремень ГРМ.md
+  rule: Цены/Прайс-лист.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -65,10 +65,10 @@ questions:
   username: akhasanova
   facts:
   - value: '30'
-    page: customers/warranty.md
+    page: Клиентам/Наша гарантия.md
   - value: '14'
-    page: customers/warranty-policy.md
-  rule: customers/warranty.md
+    page: Клиентам/Гарантийные обязательства.md
+  rule: Клиентам/Наша гарантия.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -78,8 +78,8 @@ questions:
   username: nvedyashkin
   facts:
   - value: '30'
-    page: customers/warranty.md
-  rule: customers/warranty.md
+    page: Клиентам/Наша гарантия.md
+  rule: Клиентам/Наша гарантия.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -88,10 +88,10 @@ questions:
   asker: customer
   facts:
   - value: '30'
-    page: customers/warranty.md
+    page: Клиентам/Наша гарантия.md
   - value: '14'
-    page: customers/warranty-policy.md
-  rule: customers/warranty.md
+    page: Клиентам/Гарантийные обязательства.md
+  rule: Клиентам/Наша гарантия.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -101,8 +101,8 @@ questions:
   username: eermolaeva
   facts:
   - value: 10 %
-    page: policies/discounts.md
-  rule: policies/discounts.md
+    page: Правила/Скидки.md
+  rule: Правила/Скидки.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -112,8 +112,8 @@ questions:
   username: vkryukov
   facts:
   - value: 10 %
-    page: policies/discounts.md
-  rule: policies/discounts.md
+    page: Правила/Скидки.md
+  rule: Правила/Скидки.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -123,10 +123,10 @@ questions:
   username: akhasanova
   facts:
   - value: '30'
-    page: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
   - value: 1 700 ₽
-    page: accounts/company-account-terms.md
-  rule: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
+  rule: Корпоративные клиенты/Корпоративные клиенты.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -136,10 +136,10 @@ questions:
   username: anikolaev
   facts:
   - value: 8 000 ₽
-    page: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
   - value: 25 000 ₽
-    page: accounts/company-account-terms.md
-  rule: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
+  rule: Корпоративные клиенты/Корпоративные клиенты.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -149,8 +149,8 @@ questions:
   username: akhasanova
   facts:
   - value: 8 000 ₽
-    page: accounts/company-account-terms.md
-  rule: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
+  rule: Корпоративные клиенты/Корпоративные клиенты.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -160,8 +160,8 @@ questions:
   username: ikudashkina
   facts:
   - value: 700 000 ₽
-    page: accounts/credit/credit-limits-and-collections.md
-  rule: accounts/credit/credit-limits-and-collections.md
+    page: Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md
+  rule: Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -171,8 +171,8 @@ questions:
   username: sdemidova
   facts:
   - value: '9:00'
-    page: accounts/company-account-terms.md
-  rule: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
+  rule: Корпоративные клиенты/Корпоративные клиенты.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -182,8 +182,8 @@ questions:
   username: ikudashkina
   facts:
   - value: 5 %
-    page: policies/documents-and-vat.md
-  rule: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
+  rule: Правила/Документы клиенту и НДС.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -192,10 +192,10 @@ questions:
   asker: customer
   facts:
   - value: '12:00'
-    page: customers/hours-and-locations.md
+    page: Клиентам/Адреса и часы работы.md
   - value: '9:00'
-    page: customers/hours-and-locations.md
-  rule: customers/hours-and-locations.md
+    page: Клиентам/Адреса и часы работы.md
+  rule: Клиентам/Адреса и часы работы.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -205,10 +205,10 @@ questions:
   username: nvedyashkin
   facts:
   - value: '10:00'
-    page: how-to/stocktake-day.md
+    page: Как мы работаем/День инвентаризации.md
   - value: '12:00'
-    page: how-to/stocktake-day.md
-  rule: how-to/stocktake-day.md
+    page: Как мы работаем/День инвентаризации.md
+  rule: Как мы работаем/День инвентаризации.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -218,10 +218,10 @@ questions:
   username: kshakirova
   facts:
   - value: '20:00'
-    page: customers/hours-and-locations.md
+    page: Клиентам/Адреса и часы работы.md
   - value: '19:00'
-    page: shops/west/README.md
-  rule: customers/hours-and-locations.md
+    page: Площадки/Техническая/Обзор.md
+  rule: Клиентам/Адреса и часы работы.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -230,12 +230,12 @@ questions:
   asker: customer
   facts:
   - value: 700 ₽
-    page: customers/brake-noise.md
+    page: Клиентам/Скрип и скрежет при торможении.md
   - value: 9 640 ₽
-    page: customers/brake-noise.md
+    page: Клиентам/Скрип и скрежет при торможении.md
   - value: 16 030 ₽
-    page: customers/brake-noise.md
-  rule: customers/brake-noise.md
+    page: Клиентам/Скрип и скрежет при торможении.md
+  rule: Клиентам/Скрип и скрежет при торможении.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -245,8 +245,8 @@ questions:
   username: anikolaev
   facts:
   - value: '13:00'
-    page: shops/east/opening-and-closing.md
-  rule: shops/east/opening-and-closing.md
+    page: 'Площадки/Инженерный/Инженерный: открытие и закрытие.md'
+  rule: 'Площадки/Инженерный/Инженерный: открытие и закрытие.md'
   assertions:
   - type: tool_call
     tool: kb_read
@@ -256,10 +256,10 @@ questions:
   username: nvedyashkin
   facts:
   - value: 6 900 ₽
-    page: services/transmission/transmission-fluid-service.md
+    page: Услуги/Трансмиссия/Замена масла в коробке.md
   - value: 16 300 ₽
-    page: services/transmission/transmission-fluid-service.md
-  rule: services/transmission/transmission-fluid-service.md
+    page: Услуги/Трансмиссия/Замена масла в коробке.md
+  rule: Услуги/Трансмиссия/Замена масла в коробке.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -269,8 +269,8 @@ questions:
   username: nvedyashkin
   facts:
   - value: '2'
-    page: prices/labour-rates-and-fees.md
-  rule: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
+  rule: Цены/Нормо-час, сборы и классы автомобилей.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -280,8 +280,8 @@ questions:
   username: anikolaev
   facts:
   - value: 12 000 ₽
-    page: accounts/company-account-terms.md
-  rule: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
+  rule: Корпоративные клиенты/Корпоративные клиенты.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -291,8 +291,8 @@ questions:
   username: anikolaev
   facts:
   - value: 400 ₽
-    page: prices/labour-rates-and-fees.md
-  rule: prices/labour-rates-and-fees.md
+    page: Цены/Нормо-час, сборы и классы автомобилей.md
+  rule: Цены/Нормо-час, сборы и классы автомобилей.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -302,8 +302,8 @@ questions:
   username: dgrigoriev
   facts:
   - value: 16 276 ₽
-    page: prices/counter-price-sheet.pdf
-  rule: prices/counter-price-sheet.pdf
+    page: Цены/Прайс для стойки.pdf
+  rule: Цены/Прайс для стойки.pdf
   assertions:
   - type: tool_call
     tool: kb_read
@@ -313,8 +313,8 @@ questions:
   username: anikolaev
   facts:
   - value: '28'
-    page: team/staff-handbook.docx
-  rule: team/staff-handbook.docx
+    page: Команда/Правила внутреннего трудового распорядка.docx
+  rule: Команда/Правила внутреннего трудового распорядка.docx
   assertions:
   - type: tool_call
     tool: kb_read
@@ -324,8 +324,8 @@ questions:
   username: smelnikov
   facts:
   - value: '30'
-    page: team/staff-handbook.docx
-  rule: team/staff-handbook.docx
+    page: Команда/Правила внутреннего трудового распорядка.docx
+  rule: Команда/Правила внутреннего трудового распорядка.docx
   assertions:
   - type: tool_call
     tool: kb_read
@@ -335,10 +335,10 @@ questions:
   username: anikolaev
   facts:
   - value: '30'
-    page: how-to/getting-approval.md
+    page: Как мы работаем/Как согласовать работы.md
   - value: '18:00'
-    page: how-to/getting-approval.md
-  rule: how-to/getting-approval.md
+    page: Как мы работаем/Как согласовать работы.md
+  rule: Как мы работаем/Как согласовать работы.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -348,10 +348,10 @@ questions:
   username: nvedyashkin
   facts:
   - value: 2 850 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 6 700 ₽
-    page: prices/price-list.md
-  rule: prices/price-list.md
+    page: Цены/Прайс-лист.md
+  rule: Цены/Прайс-лист.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -361,14 +361,14 @@ questions:
   username: anikolaev
   facts:
   - value: R1234yf
-    page: services/ac/ac-check-and-recharge.md
+    page: Услуги/Кондиционер/Диагностика и заправка кондиционера.md
   - value: 10 800 ₽
-    page: services/ac/ac-check-and-recharge.md
+    page: Услуги/Кондиционер/Диагностика и заправка кондиционера.md
   - value: 900 ₽
-    page: services/ac/ac-check-and-recharge.md
+    page: Услуги/Кондиционер/Диагностика и заправка кондиционера.md
   - value: '13:00'
-    page: services/ac/ac-check-and-recharge.md
-  rule: services/ac/ac-check-and-recharge.md
+    page: Услуги/Кондиционер/Диагностика и заправка кондиционера.md
+  rule: Услуги/Кондиционер/Диагностика и заправка кондиционера.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -378,8 +378,8 @@ questions:
   username: vkryukov
   facts:
   - value: 3 900 ₽
-    page: services/tires/alignment.md
-  rule: services/tires/alignment.md
+    page: Услуги/Шины/Сход-развал.md
+  rule: Услуги/Шины/Сход-развал.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -389,8 +389,8 @@ questions:
   username: nvedyashkin
   facts:
   - value: 2 750 ₽
-    page: services/engine/drive-belt.md
-  rule: services/engine/drive-belt.md
+    page: Услуги/Двигатель/Ремень навесных агрегатов.md
+  rule: Услуги/Двигатель/Ремень навесных агрегатов.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -400,8 +400,8 @@ questions:
   username: akhasanova
   facts:
   - value: 700 ₽
-    page: customers/brake-noise.md
-  rule: customers/brake-noise.md
+    page: Клиентам/Скрип и скрежет при торможении.md
+  rule: Клиентам/Скрип и скрежет при торможении.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -411,8 +411,8 @@ questions:
   username: tpakhomova
   facts:
   - value: 3 750 ₽
-    page: services/tires/seasonal-changeover-and-storage.md
-  rule: services/tires/seasonal-changeover-and-storage.md
+    page: Услуги/Шины/Сезонный шиномонтаж и хранение шин.md
+  rule: Услуги/Шины/Сезонный шиномонтаж и хранение шин.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -422,8 +422,8 @@ questions:
   username: kshakirova
   facts:
   - value: 1 560 ₽
-    page: services/tires/seasonal-changeover-and-storage.md
-  rule: services/tires/seasonal-changeover-and-storage.md
+    page: Услуги/Шины/Сезонный шиномонтаж и хранение шин.md
+  rule: Услуги/Шины/Сезонный шиномонтаж и хранение шин.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -433,10 +433,10 @@ questions:
   username: anikolaev
   facts:
   - value: 42 500 ₽
-    page: services/transmission/transmission-rebuild.md
+    page: Услуги/Трансмиссия/Капитальный ремонт АКПП.md
   - value: 96 400 ₽
-    page: services/transmission/transmission-rebuild.md
-  rule: services/transmission/transmission-rebuild.md
+    page: Услуги/Трансмиссия/Капитальный ремонт АКПП.md
+  rule: Услуги/Трансмиссия/Капитальный ремонт АКПП.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -446,8 +446,8 @@ questions:
   username: akhasanova
   facts:
   - value: '30'
-    page: accounts/company-account-terms.md
-  rule: accounts/company-account-terms.md
+    page: Корпоративные клиенты/Корпоративные клиенты.md
+  rule: Корпоративные клиенты/Корпоративные клиенты.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -457,20 +457,20 @@ questions:
   username: akhasanova
   facts:
   - value: 13 322,60 ₽
-    page: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
   - value: 700 ₽
-    page: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
   - value: 12 520 ₽
-    page: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
   - value: 102,60 ₽
-    page: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
   - value: 5 %
-    page: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
   - value: 634,41 ₽
-    page: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
   - value: 12 688,19 ₽
-    page: policies/documents-and-vat.md
-  rule: policies/documents-and-vat.md
+    page: Правила/Документы клиенту и НДС.md
+  rule: Правила/Документы клиенту и НДС.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -480,8 +480,8 @@ questions:
   username: anikolaev
   facts:
   - value: 6 360 ₽
-    page: prices/price-list.md
-  rule: prices/price-list.md
+    page: Цены/Прайс-лист.md
+  rule: Цены/Прайс-лист.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -491,18 +491,18 @@ questions:
   username: dgrigoriev
   facts:
   - value: 6 900 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 16 300 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 3 320 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 26 550 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 7 470 ₽
-    page: prices/price-list.md
+    page: Цены/Прайс-лист.md
   - value: 96 400 ₽
-    page: prices/price-list.md
-  rule: prices/price-list.md
+    page: Цены/Прайс-лист.md
+  rule: Цены/Прайс-лист.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -512,8 +512,8 @@ questions:
   username: dgrigoriev
   facts:
   - value: 180 000 ₽
-    page: accounts/credit/credit-limits-and-collections.md
-  rule: accounts/credit/credit-limits-and-collections.md
+    page: Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md
+  rule: Корпоративные клиенты/Лимиты задолженности/Лимиты задолженности и просрочка.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -523,8 +523,8 @@ questions:
   username: eermolaeva
   facts:
   - value: 10 %
-    page: policies/discounts.md
-  rule: policies/discounts.md
+    page: Правила/Скидки.md
+  rule: Правила/Скидки.md
   assertions:
   - type: tool_call
     tool: kb_read
@@ -534,10 +534,10 @@ questions:
   username: eermolaeva
   facts:
   - value: '19:00'
-    page: shops/west/README.md
+    page: Площадки/Техническая/Обзор.md
   - value: '20:00'
-    page: customers/hours-and-locations.md
-  rule: customers/hours-and-locations.md
+    page: Клиентам/Адреса и часы работы.md
+  rule: Клиентам/Адреса и часы работы.md
   assertions:
   - type: tool_call
     tool: kb_read

@@ -15,7 +15,7 @@ After a change to the ledger, a manifest, a card, an outline or `PENDING.md`: `p
 
 ## Versions
 
-This is eval set **v1.0** and it asks its questions of seed **v1** only: the header of each file says `eval_set` and `runs_on_seed`, and `ledger_sha256` names the ledger the numbers were filled from. A result records the eval set version, the seed version and T from the build's manifest, and the product release (design 0.2). The set holds what does not depend on the build; an answer that does is a computed slot the seeder emits for its T. A question added with no answer changed makes v1.1; a wording fixed makes v1.0.1; a seed change that changes an expected answer is seed v2 and eval set v2.
+This is eval set **v1.0.1** and it asks its questions of seed **v1** only: the header of each file says `eval_set` and `runs_on_seed`, and `ledger_sha256` names the ledger the numbers were filled from. A result records the eval set version, the seed version and T from the build's manifest, and the product release (design 0.2). The set holds what does not depend on the build; an answer that does is a computed slot the seeder emits for its T. A question added with no answer changed makes v1.1; a wording fixed makes v1.0.1; a seed change that changes an expected answer is seed v2 and eval set v2.
 
 ## Counts, and what is pending
 

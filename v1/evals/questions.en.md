@@ -1,6 +1,6 @@
 # Eval questions, English configuration
 
-Generated from `questions.en.json` by `_build/render.py`; do not edit. Eval set v1.0, runs on seed v1. The record format is in `SCHEMA.md`. `{name}` is a value the seeder computes for its T; where `stories/TIMELINE.md` gives it for T = Fri 2026-11-13 10:30 it is shown after `=`. `pending` records are listed in `README.md` with their reasons.
+Generated from `questions.en.json` by `_build/render.py`; do not edit. Eval set v1.0.1, runs on seed v1. The record format is in `SCHEMA.md`. `{name}` is a value the seeder computes for its T; where `stories/TIMELINE.md` gives it for T = Fri 2026-11-13 10:30 it is shown after `=`. `pending` records are listed in `README.md` with their reasons.
 
 | Area | Questions | value | list | explanation | action | nothing | cannot tell | refusal | smoke | stale | pending |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|

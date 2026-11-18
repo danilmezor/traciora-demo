@@ -2,10 +2,13 @@
 """Writes kb/OUTLINE-ru.md: the Russian titles and display names per page key, the pages of one configuration only,
 the planted challenges with their Russian facts, and the eval questions in Russian with expected answers.
 Every amount is computed here from catalogue.json and ledger.json, so the outline follows the seed files."""
-import json, posixpath, os
+import json, posixpath, os, sys
 from collections import Counter
 from kbr import *
 import kbb, kbr
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from kb_paths import RU_FOLDERS
 
 reg_all = json.load(open(REG))
 reg = {p: r for p, r in reg_all.items() if not r.get('not_a_page')}
@@ -23,15 +26,11 @@ def an(aid):
     a = ACCOUNTS[aid]['name']; return a if '«' in a else '«' + a + '»'
 def pc(x, nd=1): return ('%g' % round(float(x), nd)).replace('.', ',')
 
-FOLDERS = [('', 'База знаний «Ермак-Сервиса»', 'worker (tenant setting); README.md itself junior'), ('customers', 'Клиентам', 'worker = public'), ('shop-floor', 'Цех', 'worker = public'),
-           ('services', 'Услуги', 'worker = public'), ('services/maintenance', 'ТО', None), ('services/brakes', 'Тормоза', None), ('services/tires', 'Шины', None),
-           ('services/diagnostics', 'Диагностика', None), ('services/suspension', 'Ходовая', None), ('services/ac', 'Кондиционер', None), ('services/electrical', 'Электрика', None),
-           ('services/engine', 'Двигатель', None), ('services/transmission', 'Трансмиссия', None), ('services/inspections', 'Осмотры', None),
-           ('prices', 'Цены', 'worker = public for the price list; the other three files junior'), ('policies', 'Правила', 'junior'), ('accounts', 'Корпоративные клиенты', 'junior'),
-           ('accounts/credit', 'Лимиты задолженности', 'middle'), ('how-to', 'Как мы работаем', 'junior'), ('parts', 'Запчасти', 'junior'), ('shops', 'Площадки', 'junior'),
-           ('shops/main', 'Московское шоссе', None), ('shops/east', 'Инженерный', None), ('shops/west', 'Техническая', None), ('team', 'Команда', 'junior'),
-           ('office', 'Бухгалтерия', 'middle'), ('management', 'Руководству', 'senior'), ('management/owners', 'Владельцам', 'administrator'),
-           ('playbooks', 'Памятки по должностям', 'administrator (pinned by the product\'s import)')]
+VISIBILITY = {"customers": "worker = public", "shop-floor": "worker = public", "services": "worker = public",
+              "prices": "worker = public for the price list; the other three files junior",
+              "playbooks": "administrator (pinned by the product's import)"}
+FOLDERS = [('', 'База знаний «Ермак-Сервиса»', 'worker (tenant setting); README.md itself junior')]
+FOLDERS.extend((path, name, VISIBILITY.get(path, seen)) for path, (name, seen) in RU_FOLDERS.items())
 vis_short = {'public': 'public', 'staff': 'staff', 'middle': 'middle', 'senior': 'senior', 'administrator': 'admin'}
 def voice(s):
     s = str(s)
@@ -418,7 +417,7 @@ No English page is absent in Russian. Six keys carry a different subject, becaus
 | O12 | Найди страницы, которые противоречат друг другу | {who(2,'admin')} | Как минимум: «Наша гарантия» и «Гарантийные обязательства», обе открытые; прайс-лист и две устаревшие страницы; таблица условий и страница «Вкусного выезда»; «Кто есть кто» и страница часов против страницы Технической (приёмка; 19:00 против 20:00); страница для клиентов про шины («на следующий день») и страница поставщиков (в Казань — вторник и пятница); строка «в тот же день» на странице про ремень ГРМ и страница про заказ запчастей; страница о заправке кондиционера («на заправку без ремонта гарантии нет») и страница гарантии, где такого исключения нет | `kb_search`, `kb_read` |
 | O13 | У какой страницы нет хозяина? | {who(4,'senior')} | «Вопросы по тормозам»: подписана «В. С.», мастером-приёмщиком, который ушёл; ни один указатель на неё не ссылается | `kb_links`, `team/who-is-who.md` |
 | O14 | Какие страницы ссылаются на прайс-лист? | {who(5,'middle')} | {len(to_price_list)} страниц, больше, чем на любую другую: {', '.join('«' + reg[p]['title'] + '»' for p in to_price_list)} | `kb_links`, `kb_overview` |
-| O15 | Клиенту в Казани сказали, что шины привезут на следующий день. Предложи правку | {who(16,'middle')} | Предложение к `customers/tires.md`: добавить, что в Казань шины приезжают по вторникам и пятницам | `kb_suggest`, открытая страница |
+| O15 | Клиенту в Казани сказали, что шины привезут на следующий день. Предложи правку | {who(16,'middle')} | Предложение к странице «{reg["customers/tires.md"]["title"]}»: добавить, что в Казань шины приезжают по вторникам и пятницам | `kb_suggest`, открытая страница |
 
 ## 7. New facts other stores must be made consistent with
 
