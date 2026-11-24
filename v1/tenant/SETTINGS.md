@@ -28,7 +28,7 @@ Ledger rows are `ledger.json` keys; every value below that rests on a row names 
 | `TRACIORA_FEATURE_TELEGRAM` | true | true | needed for the Telegram customer channel (ledger `conv.channels`); the staff bot stays off, below |
 | `TRACIORA_FEATURE_MEMORY` + `TRACIORA_MEMORY_ENABLED` | true + true | true + true | memory ships off; S2.4, S4.4, S4.5, design 4.5 |
 | `TRACIORA_FEATURE_KNOWLEDGE` | true | true | S8.3, S12, the website assistant's answers (S7) |
-| `TRACIORA_FEATURE_PII` + `PII_VIRTUALIZATION_ENABLED` | true + true | true + true | the personal-data mode, section below |
+| `TRACIORA_FEATURE_PII` | true | true | personal-data protection, section below |
 | `TRACIORA_FEATURE_MCP` | true | true | design 7.3: MCP tokens get a minimal footprint; with the grant off they would be invisible. An edge install must also supply `TRACIORA_DOMAIN_MCP` (operator's) |
 | `TRACIORA_MEMORY_RETEST_DAYS` | `"90"` | `"90"` | ledger `mem.retest_days`: at the shipped 180 no team note could come due inside 175 product days, and the assistant part plants five kept and one unverified |
 | `TRACIORA_KNOWLEDGE_ROOT_SEEN_FROM` | `worker` | `worker` | ledger `kb.settings`: the website assistant reads as worker, so the public folders must be seen from worker. Console-only key: the seeder sets it through the knowledge base's own control before any page lands (`kb/OUTLINE.md` section 2) |
@@ -56,7 +56,7 @@ Ledger rows are `ledger.json` keys; every value below that rests on a row names 
 | `CONVERSATIONS_PRIORITY_FLOOR_MINUTES`, `_CEILING_MINUTES` | 5, 60 | the shown priority of S6's chat ("urgent by its wait", `conv.open_at_t`) is computed with them |
 | `TRACIORA_PHONECALLS_PERFORMANCE_RANK` | `senior` | the rank that sees colleagues' phone performance: S4.2 (senior reads Maya's scores) and S4.6 (a junior is refused Caleb's) |
 | `TRACIORA_PHONECALLS_CALLBACK_MINUTES` | 60 | the To call back list's urgency of the nine waiting at T (ledger `calls.queue_at_t`) |
-| `PII_MASKING_ENABLED`, `PII_LEAK_GUARD_ENABLED`, `PII_SECOND_PASS`, `PII_LANGUAGE`, `PII_EXCLUDED_CATEGORIES` | true, true, `encoder`, `auto`, `["url"]` | the personal-data mode, below |
+| `PII_LEAK_GUARD_ENABLED`, `PII_SECOND_PASS`, `PII_LANGUAGE`, `PII_EXCLUDED_CATEGORIES` | true, `encoder`, `auto`, `["url"]` | personal-data protection, below; the second pass is off by default, and the seed turns it on so names and street addresses are protected too |
 | `TRACIORA_BOARD_ENABLED`, `TRACIORA_ROSTER_ENABLED`, `TRACIORA_CALENDAR_ENABLED`, `TRACIORA_SCHEDULED_TASKS_ENABLED` | true | the four workspace switches, pinned on |
 
 ## Product rules the stories rely on (no setting)
@@ -78,18 +78,18 @@ No key of `config/settings.schema.json` sets these; the seed relies on them as t
 | Audio playback | no setting gives it: a call's sheet draws a player only while the recording's bytes are in the media store (`docs/features/call-pipeline.md`, "One call"). The seed stores no bytes (`calls/DESIGN.md` section 1, `media_object.storage_ref_enc` empty), so no call plays |
 | Code sandbox | `TRACIORA_FEATURE_CODE_SANDBOX` false (default): no story needs it, and `run_bash` is then not registered |
 
-## The personal-data mode
+## Personal-data protection
 
-What each mode does to the model's view and to the cross-store questions (S1.2, S1.5, S6.5, S7.1: a customer found by phone in one store and looked up in another):
+What protection on and off do to the model's view and to the cross-store questions (S1.2, S1.5, S6.5, S7.1: a customer found by phone in one store and looked up in another):
 
-| | A (recommended): reversible tokens | B: protection off | C: one-way masking |
-|---|---|---|---|
-| Keys | `TRACIORA_FEATURE_PII` true, `PII_VIRTUALIZATION_ENABLED` true | `TRACIORA_FEATURE_PII` false | `TRACIORA_FEATURE_PII` true, `PII_VIRTUALIZATION_ENABLED` false |
-| What the model sees | names, phones, emails, plates, VINs as stable reference tokens; the person sees real values in the answer | everything as stored | type placeholders (`[PHONE]`) that cannot be turned back |
-| Cross-store questions | work: a token is resolved to the real value at the tool boundary, so `phone('<token>')` in SQL matches; the same value gives the same token inside a conversation, so the model can match a number seen in the ERP with one in a chat note | work | fail: a masked number cannot be passed to the next query |
-| What it costs | every turn runs the detector and the second pass (latency); a false positive (a car model or a street read as a name) can cost an answer, so a failed eval may be the detector's and not the agent's | the demo shows no protection, and the evals do not measure a configuration a privacy-bound tenant runs | breaks S1.2, S1.5, S6.5, S7.1 |
+| | A (seeded): protection on | B: protection off |
+|---|---|---|
+| Keys | `TRACIORA_FEATURE_PII` true | `TRACIORA_FEATURE_PII` false |
+| What the model sees | names, phones, emails, plates, VINs as stable reference tokens; every person reads the real values: answers, cards, titles, call transcripts | everything as stored |
+| Cross-store questions | work: a token is resolved to the real value at the tool boundary, so `phone('<token>')` in SQL matches; the same value gives the same token inside a conversation, so the model can match a number seen in the ERP with one in a chat note | work |
+| What it costs | every turn runs the detector and the second pass (latency); a false positive (a car model or a street read as a name) can cost an answer, so a failed eval may be the detector's and not the agent's | the demo shows no protection, and the evals do not measure a configuration a privacy-bound tenant runs |
 
-Recommendation: **A** for the seed, because it is the mode a tenant who must protect customers' data runs and it keeps every cross-store question answerable; run the eval set once with **B** as the control, so a drop between the two is read as the detector's. C is rejected. Context files: with `pii` on, the sync also masks phones and plates in every table's preview and profile (`docs/features/data-layer.md`), which the notes do not rely on.
+Recommendation: **A** for the seed, because it is what a tenant who must protect customers' data runs and it keeps every cross-store question answerable; run the eval set once with **B** as the control, so a drop between the two is read as the detector's. Context files: the sync copies values into every table's preview and profile as the source holds them, since personal data is tokenised only on the way to a model provider (`docs/features/data-layer.md`).
 
 ## History windows per rank
 
