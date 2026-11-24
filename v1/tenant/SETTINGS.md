@@ -89,7 +89,7 @@ What protection on and off do to the model's view and to the cross-store questio
 | Cross-store questions | work: a token is resolved to the real value at the tool boundary, so `phone('<token>')` in SQL matches; the same value gives the same token inside a conversation, so the model can match a number seen in the ERP with one in a chat note | work |
 | What it costs | every turn runs the detector and the second pass (latency); a false positive (a car model or a street read as a name) can cost an answer, so a failed eval may be the detector's and not the agent's | the demo shows no protection, and the evals do not measure a configuration a privacy-bound tenant runs |
 
-Recommendation: **A** for the seed, because it is what a tenant who must protect customers' data runs and it keeps every cross-store question answerable; run the eval set once with **B** as the control, so a drop between the two is read as the detector's. Context files: with `pii` on, the sync also masks phones and plates in every table's preview and profile (`docs/features/data-layer.md`), which the notes do not rely on.
+Recommendation: **A** for the seed, because it is what a tenant who must protect customers' data runs and it keeps every cross-store question answerable; run the eval set once with **B** as the control, so a drop between the two is read as the detector's. Context files: the sync copies values into every table's preview and profile as the source holds them, since personal data is tokenised only on the way to a model provider (`docs/features/data-layer.md`).
 
 ## History windows per rank
 
