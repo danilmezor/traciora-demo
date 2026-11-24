@@ -67,8 +67,6 @@
   "TRACIORA_PHONECALLS_CALLBACK_MINUTES": 60,
   "TRACIORA_STT_MODELS": ["parakeet", "faster_whisper"],
 
-  "PII_MASKING_ENABLED": true,
-  "PII_VIRTUALIZATION_ENABLED": true,
   "PII_LEAK_GUARD_ENABLED": true,
   "PII_SECOND_PASS": "encoder",
   "PII_LANGUAGE": "auto",
